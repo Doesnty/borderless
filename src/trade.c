@@ -1835,8 +1835,6 @@ static u8 PlayerHasEnoughPokemonToTrade_HandleMewDeoxys(u8 *flags, u8 partyCount
             count += flags[i];
     }
     species = GetMonData(&gEnemyParty[sTradeMenuResourcesPtr->otherPlayerCursorPosition % 6], MON_DATA_SPECIES);
-    if ((species == SPECIES_DEOXYS || species == SPECIES_MEW) && !GetMonData(&gEnemyParty[sTradeMenuResourcesPtr->otherPlayerCursorPosition % 6], MON_DATA_EVENT_LEGAL))
-        return 2;
     if (count != 0)
         count = 1;
     return count;
@@ -2637,14 +2635,6 @@ static u32 TestWhetherSelectedMonCanBeTraded(struct Pokemon * party, int partyCo
         }
     }
 
-    if (species[cursorPos] == SPECIES_DEOXYS || species[cursorPos] == SPECIES_MEW)
-    {
-        if (!GetMonData(&party[cursorPos], MON_DATA_EVENT_LEGAL))
-        {
-            return 4;
-        }
-    }
-
     for (i = 0; i < partyCount; i++)
     {
         if (species2[i] == SPECIES_EGG)
@@ -2720,16 +2710,6 @@ s32 Trade_CalcLinkPlayerCompatibilityParam(void)
     return 0;
 }
 
-static bool32 IsDeoxysOrMewUntradable(u16 species, bool8 isEventLegal)
-{
-    if (species == SPECIES_DEOXYS || species == SPECIES_MEW)
-    {
-        if (!isEventLegal)
-            return TRUE;
-    }
-    return FALSE;
-}
-
 int GetUnionRoomTradeMessageId(struct GFtgtGnameSub playerSub, struct GFtgtGnameSub partnerSub, u16 species1, u16 species2, u8 type, u16 species3, u8 isEventLegal)
 {
     u8 playerHasNationalDex = playerSub.hasNationalDex;
@@ -2757,11 +2737,6 @@ int GetUnionRoomTradeMessageId(struct GFtgtGnameSub playerSub, struct GFtgtGname
         {
             return 9;
         }
-    }
-
-    if (IsDeoxysOrMewUntradable(species3, isEventLegal))
-    {
-        return 4;
     }
 
     if (species2 == SPECIES_EGG)
@@ -2813,11 +2788,6 @@ int GetUnionRoomTradeMessageId(struct GFtgtGnameSub playerSub, struct GFtgtGname
 int CanRegisterMonForTradingBoard(struct GFtgtGnameSub playerSub, u16 species2, u16 species, u8 isEventLegal)
 {
     u8 canTradeEggAndNational = playerSub.hasNationalDex;
-
-    if (IsDeoxysOrMewUntradable(species, isEventLegal))
-    {
-        return 1;
-    }
 
     if (canTradeEggAndNational)
     {

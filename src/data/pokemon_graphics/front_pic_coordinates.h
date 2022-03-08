@@ -617,13 +617,13 @@ const struct MonCoords gMonFrontPicCoords[] =
 	},
 	[SPECIES_KOAKUMA] = 
 	{
-		.size = 0x68,
-		.y_offset = 1,
+		.size = 0x58,
+		.y_offset = 2,
 	},
 	[SPECIES_HKOAKUMA] = 
 	{
-		.size = 0x58,
-		.y_offset = 2,
+		.size = 0x68,
+		.y_offset = 1,
 	},
 	[SPECIES_CKOGASA] = 
 	{
@@ -1697,17 +1697,17 @@ const struct MonCoords gMonFrontPicCoords[] =
 	},
 	[SPECIES_SHIZUHA] = 
 	{
-		.size = 0x66,
+		.size = 0x47,
 		.y_offset = 2,
 	},
 	[SPECIES_SSHIZUHA] = 
 	{
-		.size = 0x47,
+		.size = 0x88,
 		.y_offset = 2,
 	},
 	[SPECIES_HSHIZUHA] = 
 	{
-		.size = 0x88,
+		.size = 0x66,
 		.y_offset = 2,
 	},
 	[SPECIES_ASHOU] = 
@@ -1967,13 +1967,13 @@ const struct MonCoords gMonFrontPicCoords[] =
 	},
 	[SPECIES_WAKASAGIHIME] = 
 	{
-		.size = 0x78,
-		.y_offset = 2,
-	},
-	[SPECIES_AWAKASAGIHIME] = 
-	{
 		.size = 0x77,
 		.y_offset = 5,
+	},
+	[SPECIES_DWAKASAGIHIME] = 
+	{
+		.size = 0x78,
+		.y_offset = 2,
 	},
 	[SPECIES_CWRIGGLE] = 
 	{
@@ -2192,13 +2192,13 @@ const struct MonCoords gMonFrontPicCoords[] =
 	},
 	[SPECIES_YUUKA] = 
 	{
-		.size = 0x47,
-		.y_offset = 4,
+		.size = 0x58,
+		.y_offset = 1,
 	},
 	[SPECIES_CYUUKA] = 
 	{
-		.size = 0x58,
-		.y_offset = 1,
+		.size = 0x47,
+		.y_offset = 4,
 	},
 	[SPECIES_TYUUKA] = 
 	{

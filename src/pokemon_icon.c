@@ -56,8 +56,8 @@ const u8 *const gMonIconTable[] = {
     [SPECIES_SMEILING] = gMonIcon_meiling_speed,
     [SPECIES_ADMEILING] = gMonIcon_meiling_advent,
     [SPECIES_CKOAKUMA] = gMonIcon_koakuma_chibi,
-    [SPECIES_KOAKUMA] = gMonIcon_koakuma_helper,
-    [SPECIES_HKOAKUMA] = gMonIcon_koakuma_neutral,
+    [SPECIES_KOAKUMA] = gMonIcon_koakuma_neutral,
+    [SPECIES_HKOAKUMA] = gMonIcon_koakuma_helper,
     [SPECIES_CPATCHOULI] = gMonIcon_patchouli_chibi,
     [SPECIES_PATCHOULI] = gMonIcon_patchouli_neutral,
     [SPECIES_APATCHOULI] = gMonIcon_patchouli_attack,
@@ -177,8 +177,8 @@ const u8 *const gMonIconTable[] = {
     [SPECIES_AMEDICINE] = gMonIcon_medicine_attack,
     [SPECIES_SMEDICINE] = gMonIcon_medicine_speed,
     [SPECIES_TMEDICINE] = gMonIcon_medicine_technical,
-    [SPECIES_CYUUKA] = gMonIcon_yuuka_neutral,
-    [SPECIES_YUUKA] = gMonIcon_yuuka_chibi,
+    [SPECIES_CYUUKA] = gMonIcon_yuuka_chibi,
+    [SPECIES_YUUKA] = gMonIcon_yuuka_neutral,
     [SPECIES_AYUUKA] = gMonIcon_yuuka_attack,
     [SPECIES_TYUUKA] = gMonIcon_yuuka_technical,
     [SPECIES_CKOMACHI] = gMonIcon_komachi_chibi,
@@ -191,13 +191,14 @@ const u8 *const gMonIconTable[] = {
     [SPECIES_DEIKI] = gMonIcon_eiki_defense,
     [SPECIES_AKYUU] = gMonIcon_akyuu,
     [SPECIES_CSHIZUHA] = gMonIcon_shizuha_chibi,
-    [SPECIES_SHIZUHA] = gMonIcon_shizuha_helper,
-    [SPECIES_SSHIZUHA] = gMonIcon_shizuha_neutral,
-    [SPECIES_HSHIZUHA] = gMonIcon_shizuha_speed,
+    [SPECIES_SHIZUHA] = gMonIcon_shizuha_neutral,
+    [SPECIES_SSHIZUHA] = gMonIcon_shizuha_speed,
+    [SPECIES_HSHIZUHA] = gMonIcon_shizuha_helper,
     [SPECIES_CMINORIKO] = gMonIcon_minoriko_chibi,
     [SPECIES_MINORIKO] = gMonIcon_minoriko_neutral,
     [SPECIES_AMINORIKO] = gMonIcon_minoriko_attack,
     [SPECIES_DMINORIKO] = gMonIcon_minoriko_defense,
+    [SPECIES_AKISISTERS] = gMonIcon_aki_sisters,
     [SPECIES_CHINA] = gMonIcon_hina_chibi,
     [SPECIES_HINA] = gMonIcon_hina_neutral,
     [SPECIES_AHINA] = gMonIcon_hina_attack,
@@ -352,8 +353,8 @@ const u8 *const gMonIconTable[] = {
     [SPECIES_AKOKORO] = gMonIcon_kokoro_attack,
     [SPECIES_TKOKORO] = gMonIcon_kokoro_technical,
     [SPECIES_CWAKASAGIHIME] = gMonIcon_wakasagihime_chibi,
-    [SPECIES_WAKASAGIHIME] = gMonIcon_wakasagihime_defense,
-    [SPECIES_AWAKASAGIHIME] = gMonIcon_wakasagihime_neutral,
+    [SPECIES_WAKASAGIHIME] = gMonIcon_wakasagihime_neutral,
+    [SPECIES_DWAKASAGIHIME] = gMonIcon_wakasagihime_defense,
     [SPECIES_CSEKIBANKI] = gMonIcon_sekibanki_chibi,
     [SPECIES_SEKIBANKI] = gMonIcon_sekibanki_neutral,
     [SPECIES_TSEKIBANKI] = gMonIcon_sekibanki_tech,
@@ -691,6 +692,8 @@ const u8 gMonIconPaletteIndices[] = {
     [SPECIES_AMINORIKO] = 2,
     [SPECIES_DMINORIKO] = 2,
     
+    [SPECIES_AKISISTERS] = 2,
+    
     [SPECIES_CHINA] = 0,
     [SPECIES_HINA] = 0,
     [SPECIES_AHINA] = 0,
@@ -889,7 +892,7 @@ const u8 gMonIconPaletteIndices[] = {
     
     [SPECIES_CWAKASAGIHIME] = 0,
     [SPECIES_WAKASAGIHIME] = 0,
-    [SPECIES_AWAKASAGIHIME] = 0,
+    [SPECIES_DWAKASAGIHIME] = 0,
     
     [SPECIES_CSEKIBANKI] = 0,
     [SPECIES_SEKIBANKI] = 0,
@@ -1210,59 +1213,24 @@ u16 GetIconSpecies(u16 species, u32 personality)
 {
     u16 result;
 
-    if (species == SPECIES_UNOWN)
-    {
-        u16 letter = GetUnownLetterByPersonality(personality);
-        if (letter == 0)
-            letter = SPECIES_UNOWN;
-        else
-            letter += (SPECIES_UNOWN_B - 1);
-        result = letter;
-    }
+    if (species > NUM_SPECIES)
+        result = SPECIES_NONE;
     else
-    {
-        if (species > NUM_SPECIES)
-            result = SPECIES_NONE;
-        else
-            result = species;
-    }
+        result = species;
 
     return result;
-}
-
-u16 GetUnownLetterByPersonality(u32 personality)
-{
-    if (!personality)
-        return 0;
-    else
-        return (((personality & 0x3000000) >> 18) | ((personality & 0x30000) >> 12) | ((personality & 0x300) >> 6) | (personality & 0x3)) % 0x1C;
 }
 
 u16 MailSpeciesToIconSpecies(u16 species)
 {
     u16 value;
 
-    if (MailSpeciesToSpecies(species, &value) == SPECIES_UNOWN)
-    {
-        if (value == 0)
-            value += SPECIES_UNOWN;
-        else
-            value += (SPECIES_UNOWN_B - 1);
-        return value;
-    }
-    else
-    {
-        if (species > (SPECIES_UNOWN_B - 1))
-            species = SPECIES_NONE;
-        return GetIconSpecies(species, 0);
-    }
+    return GetIconSpecies(species, 0);
 }
 
 const u8 *GetMonIconTiles(u16 species, bool32 extra)
 {
     const u8 *iconSprite = gMonIconTable[species];
-    if (species == SPECIES_DEOXYS && extra == TRUE)
-        iconSprite += 0x400;
     return iconSprite;
 }
 

@@ -144,16 +144,11 @@ static const u8 sFemaleTrainerGfx[] =
 };
 
 const u16 gBattleTowerBannedSpecies[] = {
-    SPECIES_MEW,
-    SPECIES_MEWTWO,
-    SPECIES_HO_OH,
-    SPECIES_LUGIA,
-    SPECIES_CELEBI,
-    SPECIES_KYOGRE,
-    SPECIES_GROUDON,
-    SPECIES_RAYQUAZA,
-    SPECIES_JIRACHI,
-    SPECIES_DEOXYS,
+    SPECIES_XSUWAKO,
+    SPECIES_XUTSUHO,
+    SPECIES_XTENSHI,
+    SPECIES_XTENMA,
+    SPECIES_XSENDAI,
     0xFFFF
 };
 
