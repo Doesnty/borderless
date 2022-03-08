@@ -5,2199 +5,2239 @@ const struct MonCoords gMonFrontPicCoords[] =
         .size = 0x88,
         .y_offset = 0x00,
     },
-    [SPECIES_BULBASAUR] =
-    {
-        .size = 0x55,
-        .y_offset = 0x10,
-    },
-    [SPECIES_IVYSAUR] =
-    {
-        .size = 0x66,
-        .y_offset = 0x0a,
-    },
-    [SPECIES_VENUSAUR] =
-    {
-        .size = 0x87,
-        .y_offset = 0x04,
-    },
-    [SPECIES_CHARMANDER] =
-    {
-        .size = 0x55,
-        .y_offset = 0x0d,
-    },
-    [SPECIES_CHARMELEON] =
-    {
-        .size = 0x76,
-        .y_offset = 0x09,
-    },
-    [SPECIES_CHARIZARD] =
-    {
-        .size = 0x88,
-        .y_offset = 0x01,
-    },
-    [SPECIES_SQUIRTLE] =
-    {
-        .size = 0x65,
-        .y_offset = 0x0c,
-    },
-    [SPECIES_WARTORTLE] =
-    {
-        .size = 0x76,
-        .y_offset = 0x09,
-    },
-    [SPECIES_BLASTOISE] =
-    {
-        .size = 0x87,
-        .y_offset = 0x05,
-    },
-    [SPECIES_CATERPIE] =
-    {
-        .size = 0x54,
-        .y_offset = 0x10,
-    },
-    [SPECIES_METAPOD] =
-    {
-        .size = 0x54,
-        .y_offset = 0x14,
-    },
-    [SPECIES_BUTTERFREE] =
-    {
-        .size = 0x76,
-        .y_offset = 0x09,
-    },
-    [SPECIES_WEEDLE] =
-    {
-        .size = 0x54,
-        .y_offset = 0x11,
-    },
-    [SPECIES_KAKUNA] =
-    {
-        .size = 0x45,
-        .y_offset = 0x0e,
-    },
-    [SPECIES_BEEDRILL] =
-    {
-        .size = 0x86,
-        .y_offset = 0x09,
-    },
-    [SPECIES_PIDGEY] =
-    {
-        .size = 0x55,
-        .y_offset = 0x0d,
-    },
-    [SPECIES_PIDGEOTTO] =
-    {
-        .size = 0x67,
-        .y_offset = 0x07,
-    },
-    [SPECIES_PIDGEOT] =
-    {
-        .size = 0x88,
-        .y_offset = 0x01,
-    },
-    [SPECIES_RATTATA] =
-    {
-        .size = 0x65,
-        .y_offset = 0x0e,
-    },
-    [SPECIES_RATICATE] =
-    {
-        .size = 0x76,
-        .y_offset = 0x0b,
-    },
-    [SPECIES_SPEAROW] =
-    {
-        .size = 0x55,
-        .y_offset = 0x0c,
-    },
-    [SPECIES_FEAROW] =
-    {
-        .size = 0x88,
-        .y_offset = 0x00,
-    },
-    [SPECIES_EKANS] =
-    {
-        .size = 0x65,
-        .y_offset = 0x0f,
-    },
-    [SPECIES_ARBOK] =
-    {
-        .size = 0x78,
-        .y_offset = 0x03,
-    },
-    [SPECIES_PIKACHU] =
-    {
-        .size = 0x67,
-        .y_offset = 0x09,
-    },
-    [SPECIES_RAICHU] =
-    {
-        .size = 0x88,
-        .y_offset = 0x00,
-    },
-    [SPECIES_SANDSHREW] =
-    {
-        .size = 0x56,
-        .y_offset = 0x0b,
-    },
-    [SPECIES_SANDSLASH] =
-    {
-        .size = 0x77,
-        .y_offset = 0x06,
-    },
-    [SPECIES_NIDORAN_F] =
-    {
-        .size = 0x54,
-        .y_offset = 0x10,
-    },
-    [SPECIES_NIDORINA] =
-    {
-        .size = 0x66,
-        .y_offset = 0x0b,
-    },
-    [SPECIES_NIDOQUEEN] =
-    {
-        .size = 0x78,
-        .y_offset = 0x02,
-    },
-    [SPECIES_NIDORAN_M] =
-    {
-        .size = 0x55,
-        .y_offset = 0x0c,
-    },
-    [SPECIES_NIDORINO] =
-    {
-        .size = 0x66,
-        .y_offset = 0x08,
-    },
-    [SPECIES_NIDOKING] =
-    {
-        .size = 0x88,
-        .y_offset = 0x02,
-    },
-    [SPECIES_CLEFAIRY] =
-    {
-        .size = 0x55,
-        .y_offset = 0x10,
-    },
-    [SPECIES_CLEFABLE] =
-    {
-        .size = 0x67,
-        .y_offset = 0x07,
-    },
-    [SPECIES_VULPIX] =
-    {
-        .size = 0x65,
-        .y_offset = 0x0c,
-    },
-    [SPECIES_NINETALES] =
-    {
-        .size = 0x88,
-        .y_offset = 0x03,
-    },
-    [SPECIES_JIGGLYPUFF] =
-    {
-        .size = 0x55,
-        .y_offset = 0x10,
-    },
-    [SPECIES_WIGGLYTUFF] =
-    {
-        .size = 0x67,
-        .y_offset = 0x08,
-    },
-    [SPECIES_ZUBAT] =
-    {
-        .size = 0x66,
-        .y_offset = 0x0d,
-    },
-    [SPECIES_GOLBAT] =
-    {
-        .size = 0x88,
-        .y_offset = 0x01,
-    },
-    [SPECIES_ODDISH] =
-    {
-        .size = 0x45,
-        .y_offset = 0x0c,
-    },
-    [SPECIES_GLOOM] =
-    {
-        .size = 0x66,
-        .y_offset = 0x08,
-    },
-    [SPECIES_VILEPLUME] =
-    {
-        .size = 0x76,
-        .y_offset = 0x0a,
-    },
-    [SPECIES_PARAS] =
-    {
-        .size = 0x64,
-        .y_offset = 0x12,
-    },
-    [SPECIES_PARASECT] =
-    {
-        .size = 0x86,
-        .y_offset = 0x08,
-    },
-    [SPECIES_VENONAT] =
-    {
-        .size = 0x57,
-        .y_offset = 0x0b,
-    },
-    [SPECIES_VENOMOTH] =
-    {
-        .size = 0x87,
-        .y_offset = 0x08,
-    },
-    [SPECIES_DIGLETT] =
-    {
-        .size = 0x54,
-        .y_offset = 0x11,
-    },
-    [SPECIES_DUGTRIO] =
-    {
-        .size = 0x75,
-        .y_offset = 0x0c,
-    },
-    [SPECIES_MEOWTH] =
-    {
-        .size = 0x55,
-        .y_offset = 0x0c,
-    },
-    [SPECIES_PERSIAN] =
-    {
-        .size = 0x76,
-        .y_offset = 0x0a,
-    },
-    [SPECIES_PSYDUCK] =
-    {
-        .size = 0x56,
-        .y_offset = 0x09,
-    },
-    [SPECIES_GOLDUCK] =
-    {
-        .size = 0x77,
-        .y_offset = 0x06,
-    },
-    [SPECIES_MANKEY] =
-    {
-        .size = 0x66,
-        .y_offset = 0x0e,
-    },
-    [SPECIES_PRIMEAPE] =
-    {
-        .size = 0x77,
-        .y_offset = 0x06,
-    },
-    [SPECIES_GROWLITHE] =
-    {
-        .size = 0x65,
-        .y_offset = 0x0c,
-    },
-    [SPECIES_ARCANINE] =
-    {
-        .size = 0x88,
-        .y_offset = 0x02,
-    },
-    [SPECIES_POLIWAG] =
-    {
-        .size = 0x74,
-        .y_offset = 0x10,
-    },
-    [SPECIES_POLIWHIRL] =
-    {
-        .size = 0x76,
-        .y_offset = 0x0b,
-    },
-    [SPECIES_POLIWRATH] =
-    {
-        .size = 0x77,
-        .y_offset = 0x07,
-    },
-    [SPECIES_ABRA] =
-    {
-        .size = 0x66,
-        .y_offset = 0x0b,
-    },
-    [SPECIES_KADABRA] =
-    {
-        .size = 0x87,
-        .y_offset = 0x04,
-    },
-    [SPECIES_ALAKAZAM] =
-    {
-        .size = 0x88,
-        .y_offset = 0x01,
-    },
-    [SPECIES_MACHOP] =
-    {
-        .size = 0x46,
-        .y_offset = 0x0b,
-    },
-    [SPECIES_MACHOKE] =
-    {
-        .size = 0x77,
-        .y_offset = 0x06,
-    },
-    [SPECIES_MACHAMP] =
-    {
-        .size = 0x88,
-        .y_offset = 0x03,
-    },
-    [SPECIES_BELLSPROUT] =
-    {
-        .size = 0x66,
-        .y_offset = 0x0f,
-    },
-    [SPECIES_WEEPINBELL] =
-    {
-        .size = 0x66,
-        .y_offset = 0x0b,
-    },
-    [SPECIES_VICTREEBEL] =
-    {
-        .size = 0x77,
-        .y_offset = 0x05,
-    },
-    [SPECIES_TENTACOOL] =
-    {
-        .size = 0x66,
-        .y_offset = 0x0b,
-    },
-    [SPECIES_TENTACRUEL] =
-    {
-        .size = 0x78,
-        .y_offset = 0x01,
-    },
-    [SPECIES_GEODUDE] =
-    {
-        .size = 0x74,
-        .y_offset = 0x12,
-    },
-    [SPECIES_GRAVELER] =
-    {
-        .size = 0x86,
-        .y_offset = 0x0b,
-    },
-    [SPECIES_GOLEM] =
-    {
-        .size = 0x87,
-        .y_offset = 0x07,
-    },
-    [SPECIES_PONYTA] =
-    {
-        .size = 0x67,
-        .y_offset = 0x07,
-    },
-    [SPECIES_RAPIDASH] =
-    {
-        .size = 0x88,
-        .y_offset = 0x00,
-    },
-    [SPECIES_SLOWPOKE] =
-    {
-        .size = 0x65,
-        .y_offset = 0x0d,
-    },
-    [SPECIES_SLOWBRO] =
-    {
-        .size = 0x88,
-        .y_offset = 0x02,
-    },
-    [SPECIES_MAGNEMITE] =
-    {
-        .size = 0x53,
-        .y_offset = 0x16,
-    },
-    [SPECIES_MAGNETON] =
-    {
-        .size = 0x75,
-        .y_offset = 0x10,
-    },
-    [SPECIES_FARFETCHD] =
-    {
-        .size = 0x76,
-        .y_offset = 0x0b,
-    },
-    [SPECIES_DODUO] =
-    {
-        .size = 0x67,
-        .y_offset = 0x07,
-    },
-    [SPECIES_DODRIO] =
-    {
-        .size = 0x88,
-        .y_offset = 0x01,
-    },
-    [SPECIES_SEEL] =
-    {
-        .size = 0x76,
-        .y_offset = 0x09,
-    },
-    [SPECIES_DEWGONG] =
-    {
-        .size = 0x87,
-        .y_offset = 0x07,
-    },
-    [SPECIES_GRIMER] =
-    {
-        .size = 0x66,
-        .y_offset = 0x0b,
-    },
-    [SPECIES_MUK] =
-    {
-        .size = 0x86,
-        .y_offset = 0x0a,
-    },
-    [SPECIES_SHELLDER] =
-    {
-        .size = 0x55,
-        .y_offset = 0x10,
-    },
-    [SPECIES_CLOYSTER] =
-    {
-        .size = 0x87,
-        .y_offset = 0x04,
-    },
-    [SPECIES_GASTLY] =
-    {
-        .size = 0x77,
-        .y_offset = 0x06,
-    },
-    [SPECIES_HAUNTER] =
-    {
-        .size = 0x87,
-        .y_offset = 0x07,
-    },
-    [SPECIES_GENGAR] =
-    {
-        .size = 0x76,
-        .y_offset = 0x09,
-    },
-    [SPECIES_ONIX] =
-    {
-        .size = 0x78,
-        .y_offset = 0x03,
-    },
-    [SPECIES_DROWZEE] =
-    {
-        .size = 0x66,
-        .y_offset = 0x09,
-    },
-    [SPECIES_HYPNO] =
-    {
-        .size = 0x87,
-        .y_offset = 0x04,
-    },
-    [SPECIES_KRABBY] =
-    {
-        .size = 0x75,
-        .y_offset = 0x0e,
-    },
-    [SPECIES_KINGLER] =
-    {
-        .size = 0x87,
-        .y_offset = 0x05,
-    },
-    [SPECIES_VOLTORB] =
-    {
-        .size = 0x44,
-        .y_offset = 0x13,
-    },
-    [SPECIES_ELECTRODE] =
-    {
-        .size = 0x55,
-        .y_offset = 0x0e,
-    },
-    [SPECIES_EXEGGCUTE] =
-    {
-        .size = 0x76,
-        .y_offset = 0x09,
-    },
-    [SPECIES_EXEGGUTOR] =
-    {
-        .size = 0x88,
-        .y_offset = 0x01,
-    },
-    [SPECIES_CUBONE] =
-    {
-        .size = 0x65,
-        .y_offset = 0x0d,
-    },
-    [SPECIES_MAROWAK] =
-    {
-        .size = 0x87,
-        .y_offset = 0x0d,
-    },
-    [SPECIES_HITMONLEE] =
-    {
-        .size = 0x77,
-        .y_offset = 0x04,
-    },
-    [SPECIES_HITMONCHAN] =
-    {
-        .size = 0x67,
-        .y_offset = 0x04,
-    },
-    [SPECIES_LICKITUNG] =
-    {
-        .size = 0x86,
-        .y_offset = 0x08,
-    },
-    [SPECIES_KOFFING] =
-    {
-        .size = 0x66,
-        .y_offset = 0x0b,
-    },
-    [SPECIES_WEEZING] =
-    {
-        .size = 0x88,
-        .y_offset = 0x07,
-    },
-    [SPECIES_RHYHORN] =
-    {
-        .size = 0x76,
-        .y_offset = 0x09,
-    },
-    [SPECIES_RHYDON] =
-    {
-        .size = 0x88,
-        .y_offset = 0x02,
-    },
-    [SPECIES_CHANSEY] =
-    {
-        .size = 0x76,
-        .y_offset = 0x09,
-    },
-    [SPECIES_TANGELA] =
-    {
-        .size = 0x66,
-        .y_offset = 0x08,
-    },
-    [SPECIES_KANGASKHAN] =
-    {
-        .size = 0x88,
-        .y_offset = 0x00,
-    },
-    [SPECIES_HORSEA] =
-    {
-        .size = 0x45,
-        .y_offset = 0x10,
-    },
-    [SPECIES_SEADRA] =
-    {
-        .size = 0x77,
-        .y_offset = 0x06,
-    },
-    [SPECIES_GOLDEEN] =
-    {
-        .size = 0x66,
-        .y_offset = 0x0a,
-    },
-    [SPECIES_SEAKING] =
-    {
-        .size = 0x77,
-        .y_offset = 0x04,
-    },
-    [SPECIES_STARYU] =
-    {
-        .size = 0x66,
-        .y_offset = 0x0d,
-    },
-    [SPECIES_STARMIE] =
-    {
-        .size = 0x67,
-        .y_offset = 0x0a,
-    },
-    [SPECIES_MR_MIME] =
-    {
-        .size = 0x76,
-        .y_offset = 0x08,
-    },
-    [SPECIES_SCYTHER] =
-    {
-        .size = 0x78,
-        .y_offset = 0x02,
-    },
-    [SPECIES_JYNX] =
-    {
-        .size = 0x66,
-        .y_offset = 0x08,
-    },
-    [SPECIES_ELECTABUZZ] =
-    {
-        .size = 0x88,
-        .y_offset = 0x04,
-    },
-    [SPECIES_MAGMAR] =
-    {
-        .size = 0x87,
-        .y_offset = 0x04,
-    },
-    [SPECIES_PINSIR] =
-    {
-        .size = 0x77,
-        .y_offset = 0x04,
-    },
-    [SPECIES_TAUROS] =
-    {
-        .size = 0x88,
-        .y_offset = 0x05,
-    },
-    [SPECIES_MAGIKARP] =
-    {
-        .size = 0x77,
-        .y_offset = 0x0b,
-    },
-    [SPECIES_GYARADOS] =
-    {
-        .size = 0x88,
-        .y_offset = 0x00,
-    },
-    [SPECIES_LAPRAS] =
-    {
-        .size = 0x87,
-        .y_offset = 0x04,
-    },
-    [SPECIES_DITTO] =
-    {
-        .size = 0x54,
-        .y_offset = 0x11,
-    },
-    [SPECIES_EEVEE] =
-    {
-        .size = 0x56,
-        .y_offset = 0x0d,
-    },
-    [SPECIES_VAPOREON] =
-    {
-        .size = 0x67,
-        .y_offset = 0x06,
-    },
-    [SPECIES_JOLTEON] =
-    {
-        .size = 0x66,
-        .y_offset = 0x0a,
-    },
-    [SPECIES_FLAREON] =
-    {
-        .size = 0x76,
-        .y_offset = 0x0b,
-    },
-    [SPECIES_PORYGON] =
-    {
-        .size = 0x56,
-        .y_offset = 0x0b,
-    },
-    [SPECIES_OMANYTE] =
-    {
-        .size = 0x45,
-        .y_offset = 0x0f,
-    },
-    [SPECIES_OMASTAR] =
-    {
-        .size = 0x67,
-        .y_offset = 0x07,
-    },
-    [SPECIES_KABUTO] =
-    {
-        .size = 0x54,
-        .y_offset = 0x14,
-    },
-    [SPECIES_KABUTOPS] =
-    {
-        .size = 0x88,
-        .y_offset = 0x03,
-    },
-    [SPECIES_AERODACTYL] =
-    {
-        .size = 0x88,
-        .y_offset = 0x01,
-    },
-    [SPECIES_SNORLAX] =
-    {
-        .size = 0x87,
-        .y_offset = 0x05,
-    },
-    [SPECIES_ARTICUNO] =
-    {
-        .size = 0x88,
-        .y_offset = 0x00,
-    },
-    [SPECIES_ZAPDOS] =
-    {
-        .size = 0x88,
-        .y_offset = 0x04,
-    },
-    [SPECIES_MOLTRES] =
-    {
-        .size = 0x88,
-        .y_offset = 0x06,
-    },
-    [SPECIES_DRATINI] =
-    {
-        .size = 0x75,
-        .y_offset = 0x0f,
-    },
-    [SPECIES_DRAGONAIR] =
-    {
-        .size = 0x87,
-        .y_offset = 0x06,
-    },
-    [SPECIES_DRAGONITE] =
-    {
-        .size = 0x88,
-        .y_offset = 0x00,
-    },
-    [SPECIES_MEWTWO] =
-    {
-        .size = 0x88,
-        .y_offset = 0x00,
-    },
-    [SPECIES_MEW] =
-    {
-        .size = 0x77,
-        .y_offset = 0x0d,
-    },
-    [SPECIES_CHIKORITA] =
-    {
-        .size = 0x75,
-        .y_offset = 0x0d,
-    },
-    [SPECIES_BAYLEEF] =
-    {
-        .size = 0x77,
-        .y_offset = 0x04,
-    },
-    [SPECIES_MEGANIUM] =
-    {
-        .size = 0x88,
-        .y_offset = 0x00,
-    },
-    [SPECIES_CYNDAQUIL] =
-    {
-        .size = 0x55,
-        .y_offset = 0x0e,
-    },
-    [SPECIES_QUILAVA] =
-    {
-        .size = 0x76,
-        .y_offset = 0x08,
-    },
-    [SPECIES_TYPHLOSION] =
-    {
-        .size = 0x78,
-        .y_offset = 0x00,
-    },
-    [SPECIES_TOTODILE] =
-    {
-        .size = 0x55,
-        .y_offset = 0x0f,
-    },
-    [SPECIES_CROCONAW] =
-    {
-        .size = 0x67,
-        .y_offset = 0x06,
-    },
-    [SPECIES_FERALIGATR] =
-    {
-        .size = 0x88,
-        .y_offset = 0x00,
-    },
-    [SPECIES_SENTRET] =
-    {
-        .size = 0x47,
-        .y_offset = 0x04,
-    },
-    [SPECIES_FURRET] =
-    {
-        .size = 0x67,
-        .y_offset = 0x07,
-    },
-    [SPECIES_HOOTHOOT] =
-    {
-        .size = 0x55,
-        .y_offset = 0x0d,
-    },
-    [SPECIES_NOCTOWL] =
-    {
-        .size = 0x58,
-        .y_offset = 0x03,
-    },
-    [SPECIES_LEDYBA] =
-    {
-        .size = 0x56,
-        .y_offset = 0x0c,
-    },
-    [SPECIES_LEDIAN] =
-    {
-        .size = 0x67,
-        .y_offset = 0x04,
-    },
-    [SPECIES_SPINARAK] =
-    {
-        .size = 0x54,
-        .y_offset = 0x13,
-    },
-    [SPECIES_ARIADOS] =
-    {
-        .size = 0x87,
-        .y_offset = 0x05,
-    },
-    [SPECIES_CROBAT] =
-    {
-        .size = 0x88,
-        .y_offset = 0x00,
-    },
-    [SPECIES_CHINCHOU] =
-    {
-        .size = 0x75,
-        .y_offset = 0x10,
-    },
-    [SPECIES_LANTURN] =
-    {
-        .size = 0x87,
-        .y_offset = 0x0b,
-    },
-    [SPECIES_PICHU] =
-    {
-        .size = 0x45,
-        .y_offset = 0x0c,
-    },
-    [SPECIES_CLEFFA] =
-    {
-        .size = 0x44,
-        .y_offset = 0x14,
-    },
-    [SPECIES_IGGLYBUFF] =
-    {
-        .size = 0x44,
-        .y_offset = 0x12,
-    },
-    [SPECIES_TOGEPI] =
-    {
-        .size = 0x34,
-        .y_offset = 0x14,
-    },
-    [SPECIES_TOGETIC] =
-    {
-        .size = 0x46,
-        .y_offset = 0x09,
-    },
-    [SPECIES_NATU] =
-    {
-        .size = 0x44,
-        .y_offset = 0x14,
-    },
-    [SPECIES_XATU] =
-    {
-        .size = 0x47,
-        .y_offset = 0x07,
-    },
-    [SPECIES_MAREEP] =
-    {
-        .size = 0x55,
-        .y_offset = 0x10,
-    },
-    [SPECIES_FLAAFFY] =
-    {
-        .size = 0x56,
-        .y_offset = 0x0a,
-    },
-    [SPECIES_AMPHAROS] =
-    {
-        .size = 0x77,
-        .y_offset = 0x05,
-    },
-    [SPECIES_BELLOSSOM] =
-    {
-        .size = 0x45,
-        .y_offset = 0x0e,
-    },
-    [SPECIES_MARILL] =
-    {
-        .size = 0x65,
-        .y_offset = 0x0e,
-    },
-    [SPECIES_AZUMARILL] =
-    {
-        .size = 0x76,
-        .y_offset = 0x09,
-    },
-    [SPECIES_SUDOWOODO] =
-    {
-        .size = 0x67,
-        .y_offset = 0x06,
-    },
-    [SPECIES_POLITOED] =
-    {
-        .size = 0x67,
-        .y_offset = 0x06,
-    },
-    [SPECIES_HOPPIP] =
-    {
-        .size = 0x66,
-        .y_offset = 0x0a,
-    },
-    [SPECIES_SKIPLOOM] =
-    {
-        .size = 0x55,
-        .y_offset = 0x0f,
-    },
-    [SPECIES_JUMPLUFF] =
-    {
-        .size = 0x77,
-        .y_offset = 0x07,
-    },
-    [SPECIES_AIPOM] =
-    {
-        .size = 0x58,
-        .y_offset = 0x03,
-    },
-    [SPECIES_SUNKERN] =
-    {
-        .size = 0x44,
-        .y_offset = 0x10,
-    },
-    [SPECIES_SUNFLORA] =
-    {
-        .size = 0x56,
-        .y_offset = 0x08,
-    },
-    [SPECIES_YANMA] =
-    {
-        .size = 0x86,
-        .y_offset = 0x0a,
-    },
-    [SPECIES_WOOPER] =
-    {
-        .size = 0x54,
-        .y_offset = 0x10,
-    },
-    [SPECIES_QUAGSIRE] =
-    {
-        .size = 0x77,
-        .y_offset = 0x07,
-    },
-    [SPECIES_ESPEON] =
-    {
-        .size = 0x66,
-        .y_offset = 0x08,
-    },
-    [SPECIES_UMBREON] =
-    {
-        .size = 0x67,
-        .y_offset = 0x08,
-    },
-    [SPECIES_MURKROW] =
-    {
-        .size = 0x66,
-        .y_offset = 0x0b,
-    },
-    [SPECIES_SLOWKING] =
-    {
-        .size = 0x58,
-        .y_offset = 0x01,
-    },
-    [SPECIES_MISDREAVUS] =
-    {
-        .size = 0x55,
-        .y_offset = 0x0c,
-    },
-    [SPECIES_UNOWN] =
-    {
-        .size = 0x35,
-        .y_offset = 0x0f,
-    },
-    [SPECIES_WOBBUFFET] =
-    {
-        .size = 0x77,
-        .y_offset = 0x06,
-    },
-    [SPECIES_GIRAFARIG] =
-    {
-        .size = 0x88,
-        .y_offset = 0x03,
-    },
-    [SPECIES_PINECO] =
-    {
-        .size = 0x56,
-        .y_offset = 0x0a,
-    },
-    [SPECIES_FORRETRESS] =
-    {
-        .size = 0x76,
-        .y_offset = 0x09,
-    },
-    [SPECIES_DUNSPARCE] =
-    {
-        .size = 0x74,
-        .y_offset = 0x11,
-    },
-    [SPECIES_GLIGAR] =
-    {
-        .size = 0x78,
-        .y_offset = 0x03,
-    },
-    [SPECIES_STEELIX] =
-    {
-        .size = 0x88,
-        .y_offset = 0x00,
-    },
-    [SPECIES_SNUBBULL] =
-    {
-        .size = 0x55,
-        .y_offset = 0x0d,
-    },
-    [SPECIES_GRANBULL] =
-    {
-        .size = 0x57,
-        .y_offset = 0x06,
-    },
-    [SPECIES_QWILFISH] =
-    {
-        .size = 0x56,
-        .y_offset = 0x0a,
-    },
-    [SPECIES_SCIZOR] =
-    {
-        .size = 0x88,
-        .y_offset = 0x00,
-    },
-    [SPECIES_SHUCKLE] =
-    {
-        .size = 0x66,
-        .y_offset = 0x09,
-    },
-    [SPECIES_HERACROSS] =
-    {
-        .size = 0x88,
-        .y_offset = 0x03,
-    },
-    [SPECIES_SNEASEL] =
-    {
-        .size = 0x67,
-        .y_offset = 0x05,
-    },
-    [SPECIES_TEDDIURSA] =
-    {
-        .size = 0x46,
-        .y_offset = 0x0b,
-    },
-    [SPECIES_URSARING] =
-    {
-        .size = 0x78,
-        .y_offset = 0x01,
-    },
-    [SPECIES_SLUGMA] =
-    {
-        .size = 0x45,
-        .y_offset = 0x0d,
-    },
-    [SPECIES_MAGCARGO] =
-    {
-        .size = 0x57,
-        .y_offset = 0x0d,
-    },
-    [SPECIES_SWINUB] =
-    {
-        .size = 0x43,
-        .y_offset = 0x14,
-    },
-    [SPECIES_PILOSWINE] =
-    {
-        .size = 0x66,
-        .y_offset = 0x08,
-    },
-    [SPECIES_CORSOLA] =
-    {
-        .size = 0x65,
-        .y_offset = 0x0c,
-    },
-    [SPECIES_REMORAID] =
-    {
-        .size = 0x55,
-        .y_offset = 0x0e,
-    },
-    [SPECIES_OCTILLERY] =
-    {
-        .size = 0x66,
-        .y_offset = 0x0a,
-    },
-    [SPECIES_DELIBIRD] =
-    {
-        .size = 0x56,
-        .y_offset = 0x08,
-    },
-    [SPECIES_MANTINE] =
-    {
-        .size = 0x88,
-        .y_offset = 0x01,
-    },
-    [SPECIES_SKARMORY] =
-    {
-        .size = 0x88,
-        .y_offset = 0x00,
-    },
-    [SPECIES_HOUNDOUR] =
-    {
-        .size = 0x56,
-        .y_offset = 0x0b,
-    },
-    [SPECIES_HOUNDOOM] =
-    {
-        .size = 0x77,
-        .y_offset = 0x05,
-    },
-    [SPECIES_KINGDRA] =
-    {
-        .size = 0x78,
-        .y_offset = 0x04,
-    },
-    [SPECIES_PHANPY] =
-    {
-        .size = 0x54,
-        .y_offset = 0x10,
-    },
-    [SPECIES_DONPHAN] =
-    {
-        .size = 0x86,
-        .y_offset = 0x08,
-    },
-    [SPECIES_PORYGON2] =
-    {
-        .size = 0x55,
-        .y_offset = 0x0f,
-    },
-    [SPECIES_STANTLER] =
-    {
-        .size = 0x88,
-        .y_offset = 0x00,
-    },
-    [SPECIES_SMEARGLE] =
-    {
-        .size = 0x77,
-        .y_offset = 0x06,
-    },
-    [SPECIES_TYROGUE] =
-    {
-        .size = 0x46,
-        .y_offset = 0x09,
-    },
-    [SPECIES_HITMONTOP] =
-    {
-        .size = 0x67,
-        .y_offset = 0x05,
-    },
-    [SPECIES_SMOOCHUM] =
-    {
-        .size = 0x35,
-        .y_offset = 0x0f,
-    },
-    [SPECIES_ELEKID] =
-    {
-        .size = 0x76,
-        .y_offset = 0x0a,
-    },
-    [SPECIES_MAGBY] =
-    {
-        .size = 0x45,
-        .y_offset = 0x0d,
-    },
-    [SPECIES_MILTANK] =
-    {
-        .size = 0x77,
-        .y_offset = 0x04,
-    },
-    [SPECIES_BLISSEY] =
-    {
-        .size = 0x77,
-        .y_offset = 0x06,
-    },
-    [SPECIES_RAIKOU] =
-    {
-        .size = 0x88,
-        .y_offset = 0x00,
-    },
-    [SPECIES_ENTEI] =
-    {
-        .size = 0x88,
-        .y_offset = 0x00,
-    },
-    [SPECIES_SUICUNE] =
-    {
-        .size = 0x88,
-        .y_offset = 0x00,
-    },
-    [SPECIES_LARVITAR] =
-    {
-        .size = 0x46,
-        .y_offset = 0x09,
-    },
-    [SPECIES_PUPITAR] =
-    {
-        .size = 0x56,
-        .y_offset = 0x09,
-    },
-    [SPECIES_TYRANITAR] =
-    {
-        .size = 0x88,
-        .y_offset = 0x00,
-    },
-    [SPECIES_LUGIA] =
-    {
-        .size = 0x88,
-        .y_offset = 0x00,
-    },
-    [SPECIES_HO_OH] =
-    {
-        .size = 0x88,
-        .y_offset = 0x00,
-    },
-    [SPECIES_CELEBI] =
-    {
-        .size = 0x55,
-        .y_offset = 0x0e,
-    },
-    [SPECIES_OLD_UNOWN_B] =
-    {
-        .size = 0x88,
-        .y_offset = 0x06,
-    },
-    [SPECIES_OLD_UNOWN_C] =
-    {
-        .size = 0x88,
-        .y_offset = 0x06,
-    },
-    [SPECIES_OLD_UNOWN_D] =
-    {
-        .size = 0x88,
-        .y_offset = 0x06
-    },
-    [SPECIES_OLD_UNOWN_E] =
-    {
-        .size = 0x88,
-        .y_offset = 0x06
-    },
-    [SPECIES_OLD_UNOWN_F] =
-    {
-        .size = 0x88,
-        .y_offset = 0x06
-    },
-    [SPECIES_OLD_UNOWN_G] =
-    {
-        .size = 0x88,
-        .y_offset = 0x06
-    },
-    [SPECIES_OLD_UNOWN_H] =
-    {
-        .size = 0x88,
-        .y_offset = 0x06
-    },
-    [SPECIES_OLD_UNOWN_I] =
-    {
-        .size = 0x88,
-        .y_offset = 0x06
-    },
-    [SPECIES_OLD_UNOWN_J] =
-    {
-        .size = 0x88,
-        .y_offset = 0x06
-    },
-    [SPECIES_OLD_UNOWN_K] =
-    {
-        .size = 0x88,
-        .y_offset = 0x06
-    },
-    [SPECIES_OLD_UNOWN_L] =
-    {
-        .size = 0x88,
-        .y_offset = 0x06
-    },
-    [SPECIES_OLD_UNOWN_M] =
-    {
-        .size = 0x88,
-        .y_offset = 0x06
-    },
-    [SPECIES_OLD_UNOWN_N] =
-    {
-        .size = 0x88,
-        .y_offset = 0x06
-    },
-    [SPECIES_OLD_UNOWN_O] =
-    {
-        .size = 0x88,
-        .y_offset = 0x06
-    },
-    [SPECIES_OLD_UNOWN_P] =
-    {
-        .size = 0x88,
-        .y_offset = 0x06
-    },
-    [SPECIES_OLD_UNOWN_Q] =
-    {
-        .size = 0x88,
-        .y_offset = 0x06
-    },
-    [SPECIES_OLD_UNOWN_R] =
-    {
-        .size = 0x88,
-        .y_offset = 0x06
-    },
-    [SPECIES_OLD_UNOWN_S] =
-    {
-        .size = 0x88,
-        .y_offset = 0x06
-    },
-    [SPECIES_OLD_UNOWN_T] =
-    {
-        .size = 0x88,
-        .y_offset = 0x06
-    },
-    [SPECIES_OLD_UNOWN_U] =
-    {
-        .size = 0x88,
-        .y_offset = 0x06
-    },
-    [SPECIES_OLD_UNOWN_V] =
-    {
-        .size = 0x88,
-        .y_offset = 0x06
-    },
-    [SPECIES_OLD_UNOWN_W] =
-    {
-        .size = 0x88,
-        .y_offset = 0x06
-    },
-    [SPECIES_OLD_UNOWN_X] =
-    {
-        .size = 0x88,
-        .y_offset = 0x06
-    },
-    [SPECIES_OLD_UNOWN_Y] =
-    {
-        .size = 0x88,
-        .y_offset = 0x06
-    },
-    [SPECIES_OLD_UNOWN_Z] =
-    {
-        .size = 0x88,
-        .y_offset = 0x06
-    },
-    [SPECIES_TREECKO] =
-    {
-        .size = 0x66,
-        .y_offset = 0x08,
-    },
-    [SPECIES_GROVYLE] =
-    {
-        .size = 0x87,
-        .y_offset = 0x04,
-    },
-    [SPECIES_SCEPTILE] =
-    {
-        .size = 0x88,
-        .y_offset = 0x00,
-    },
-    [SPECIES_TORCHIC] =
-    {
-        .size = 0x56,
-        .y_offset = 0x08,
-    },
-    [SPECIES_COMBUSKEN] =
-    {
-        .size = 0x88,
-        .y_offset = 0x01,
-    },
-    [SPECIES_BLAZIKEN] =
-    {
-        .size = 0x88,
-        .y_offset = 0x00,
-    },
-    [SPECIES_MUDKIP] =
-    {
-        .size = 0x56,
-        .y_offset = 0x0c,
-    },
-    [SPECIES_MARSHTOMP] =
-    {
-        .size = 0x67,
-        .y_offset = 0x06,
-    },
-    [SPECIES_SWAMPERT] =
-    {
-        .size = 0x88,
-        .y_offset = 0x00,
-    },
-    [SPECIES_POOCHYENA] =
-    {
-        .size = 0x55,
-        .y_offset = 0x0c,
-    },
-    [SPECIES_MIGHTYENA] =
-    {
-        .size = 0x87,
-        .y_offset = 0x04,
-    },
-    [SPECIES_ZIGZAGOON] =
-    {
-        .size = 0x85,
-        .y_offset = 0x0f,
-    },
-    [SPECIES_LINOONE] =
-    {
-        .size = 0x78,
-        .y_offset = 0x03,
-    },
-    [SPECIES_WURMPLE] =
-    {
-        .size = 0x45,
-        .y_offset = 0x0e,
-    },
-    [SPECIES_SILCOON] =
-    {
-        .size = 0x75,
-        .y_offset = 0x11,
-    },
-    [SPECIES_BEAUTIFLY] =
-    {
-        .size = 0x86,
-        .y_offset = 0x09,
-    },
-    [SPECIES_CASCOON] =
-    {
-        .size = 0x74,
-        .y_offset = 0x10,
-    },
-    [SPECIES_DUSTOX] =
-    {
-        .size = 0x86,
-        .y_offset = 0x0f,
-    },
-    [SPECIES_LOTAD] =
-    {
-        .size = 0x65,
-        .y_offset = 0x0e,
-    },
-    [SPECIES_LOMBRE] =
-    {
-        .size = 0x66,
-        .y_offset = 0x09,
-    },
-    [SPECIES_LUDICOLO] =
-    {
-        .size = 0x88,
-        .y_offset = 0x00,
-    },
-    [SPECIES_SEEDOT] =
-    {
-        .size = 0x46,
-        .y_offset = 0x10,
-    },
-    [SPECIES_NUZLEAF] =
-    {
-        .size = 0x56,
-        .y_offset = 0x08,
-    },
-    [SPECIES_SHIFTRY] =
-    {
-        .size = 0x88,
-        .y_offset = 0x02,
-    },
-    [SPECIES_NINCADA] =
-    {
-        .size = 0x74,
-        .y_offset = 0x12,
-    },
-    [SPECIES_NINJASK] =
-    {
-        .size = 0x86,
-        .y_offset = 0x0a,
-    },
-    [SPECIES_SHEDINJA] =
-    {
-        .size = 0x66,
-        .y_offset = 0x0a,
-    },
-    [SPECIES_TAILLOW] =
-    {
-        .size = 0x64,
-        .y_offset = 0x10,
-    },
-    [SPECIES_SWELLOW] =
-    {
-        .size = 0x87,
-        .y_offset = 0x06,
-    },
-    [SPECIES_SHROOMISH] =
-    {
-        .size = 0x54,
-        .y_offset = 0x10,
-    },
-    [SPECIES_BRELOOM] =
-    {
-        .size = 0x77,
-        .y_offset = 0x04,
-    },
-    [SPECIES_SPINDA] =
-    {
-        .size = 0x67,
-        .y_offset = 0x08,
-    },
-    [SPECIES_WINGULL] =
-    {
-        .size = 0x84,
-        .y_offset = 0x18,
-    },
-    [SPECIES_PELIPPER] =
-    {
-        .size = 0x77,
-        .y_offset = 0x04,
-    },
-    [SPECIES_SURSKIT] =
-    {
-        .size = 0x65,
-        .y_offset = 0x0f,
-    },
-    [SPECIES_MASQUERAIN] =
-    {
-        .size = 0x88,
-        .y_offset = 0x01,
-    },
-    [SPECIES_WAILMER] =
-    {
-        .size = 0x75,
-        .y_offset = 0x0f,
-    },
-    [SPECIES_WAILORD] =
-    {
-        .size = 0x87,
-        .y_offset = 0x0a,
-    },
-    [SPECIES_SKITTY] =
-    {
-        .size = 0x66,
-        .y_offset = 0x0b,
-    },
-    [SPECIES_DELCATTY] =
-    {
-        .size = 0x66,
-        .y_offset = 0x08,
-    },
-    [SPECIES_KECLEON] =
-    {
-        .size = 0x67,
-        .y_offset = 0x07,
-    },
-    [SPECIES_BALTOY] =
-    {
-        .size = 0x55,
-        .y_offset = 0x10,
-    },
-    [SPECIES_CLAYDOL] =
-    {
-        .size = 0x78,
-        .y_offset = 0x06,
-    },
-    [SPECIES_NOSEPASS] =
-    {
-        .size = 0x56,
-        .y_offset = 0x0c,
-    },
-    [SPECIES_TORKOAL] =
-    {
-        .size = 0x88,
-        .y_offset = 0x02,
-    },
-    [SPECIES_SABLEYE] =
-    {
-        .size = 0x66,
-        .y_offset = 0x09,
-    },
-    [SPECIES_BARBOACH] =
-    {
-        .size = 0x46,
-        .y_offset = 0x0b,
-    },
-    [SPECIES_WHISCASH] =
-    {
-        .size = 0x76,
-        .y_offset = 0x09,
-    },
-    [SPECIES_LUVDISC] =
-    {
-        .size = 0x46,
-        .y_offset = 0x18,
-    },
-    [SPECIES_CORPHISH] =
-    {
-        .size = 0x66,
-        .y_offset = 0x0c,
-    },
-    [SPECIES_CRAWDAUNT] =
-    {
-        .size = 0x88,
-        .y_offset = 0x01,
-    },
-    [SPECIES_FEEBAS] =
-    {
-        .size = 0x46,
-        .y_offset = 0x0d,
-    },
-    [SPECIES_MILOTIC] =
-    {
-        .size = 0x88,
-        .y_offset = 0x00,
-    },
-    [SPECIES_CARVANHA] =
-    {
-        .size = 0x67,
-        .y_offset = 0x06,
-    },
-    [SPECIES_SHARPEDO] =
-    {
-        .size = 0x78,
-        .y_offset = 0x03,
-    },
-    [SPECIES_TRAPINCH] =
-    {
-        .size = 0x54,
-        .y_offset = 0x10,
-    },
-    [SPECIES_VIBRAVA] =
-    {
-        .size = 0x86,
-        .y_offset = 0x0c,
-    },
-    [SPECIES_FLYGON] =
-    {
-        .size = 0x88,
-        .y_offset = 0x01,
-    },
-    [SPECIES_MAKUHITA] =
-    {
-        .size = 0x65,
-        .y_offset = 0x0c,
-    },
-    [SPECIES_HARIYAMA] =
-    {
-        .size = 0x88,
-        .y_offset = 0x01,
-    },
-    [SPECIES_ELECTRIKE] =
-    {
-        .size = 0x64,
-        .y_offset = 0x12,
-    },
-    [SPECIES_MANECTRIC] =
-    {
-        .size = 0x67,
-        .y_offset = 0x04,
-    },
-    [SPECIES_NUMEL] =
-    {
-        .size = 0x65,
-        .y_offset = 0x0f,
-    },
-    [SPECIES_CAMERUPT] =
-    {
-        .size = 0x87,
-        .y_offset = 0x09,
-    },
-    [SPECIES_SPHEAL] =
-    {
-        .size = 0x65,
-        .y_offset = 0x10,
-    },
-    [SPECIES_SEALEO] =
-    {
-        .size = 0x86,
-        .y_offset = 0x0a,
-    },
-    [SPECIES_WALREIN] =
-    {
-        .size = 0x88,
-        .y_offset = 0x01,
-    },
-    [SPECIES_CACNEA] =
-    {
-        .size = 0x74,
-        .y_offset = 0x10,
-    },
-    [SPECIES_CACTURNE] =
-    {
-        .size = 0x88,
-        .y_offset = 0x00,
-    },
-    [SPECIES_SNORUNT] =
-    {
-        .size = 0x56,
-        .y_offset = 0x0b,
-    },
-    [SPECIES_GLALIE] =
-    {
-        .size = 0x76,
-        .y_offset = 0x0a,
-    },
-    [SPECIES_LUNATONE] =
-    {
-        .size = 0x66,
-        .y_offset = 0x09,
-    },
-    [SPECIES_SOLROCK] =
-    {
-        .size = 0x88,
-        .y_offset = 0x01,
-    },
-    [SPECIES_AZURILL] =
-    {
-        .size = 0x55,
-        .y_offset = 0x0f,
-    },
-    [SPECIES_SPOINK] =
-    {
-        .size = 0x46,
-        .y_offset = 0x09,
-    },
-    [SPECIES_GRUMPIG] =
-    {
-        .size = 0x77,
-        .y_offset = 0x05,
-    },
-    [SPECIES_PLUSLE] =
-    {
-        .size = 0x56,
-        .y_offset = 0x0e,
-    },
-    [SPECIES_MINUN] =
-    {
-        .size = 0x66,
-        .y_offset = 0x0c,
-    },
-    [SPECIES_MAWILE] =
-    {
-        .size = 0x76,
-        .y_offset = 0x08,
-    },
-    [SPECIES_MEDITITE] =
-    {
-        .size = 0x65,
-        .y_offset = 0x0c,
-    },
-    [SPECIES_MEDICHAM] =
-    {
-        .size = 0x68,
-        .y_offset = 0x01,
-    },
-    [SPECIES_SWABLU] =
-    {
-        .size = 0x76,
-        .y_offset = 0x11,
-    },
-    [SPECIES_ALTARIA] =
-    {
-        .size = 0x88,
-        .y_offset = 0x02,
-    },
-    [SPECIES_WYNAUT] =
-    {
-        .size = 0x55,
-        .y_offset = 0x0c,
-    },
-    [SPECIES_DUSKULL] =
-    {
-        .size = 0x66,
-        .y_offset = 0x0a,
-    },
-    [SPECIES_DUSCLOPS] =
-    {
-        .size = 0x77,
-        .y_offset = 0x05,
-    },
-    [SPECIES_ROSELIA] =
-    {
-        .size = 0x76,
-        .y_offset = 0x08,
-    },
-    [SPECIES_SLAKOTH] =
-    {
-        .size = 0x74,
-        .y_offset = 0x12,
-    },
-    [SPECIES_VIGOROTH] =
-    {
-        .size = 0x78,
-        .y_offset = 0x00,
-    },
-    [SPECIES_SLAKING] =
-    {
-        .size = 0x86,
-        .y_offset = 0x08,
-    },
-    [SPECIES_GULPIN] =
-    {
-        .size = 0x55,
-        .y_offset = 0x12,
-    },
-    [SPECIES_SWALOT] =
-    {
-        .size = 0x66,
-        .y_offset = 0x08,
-    },
-    [SPECIES_TROPIUS] =
-    {
-        .size = 0x88,
-        .y_offset = 0x00,
-    },
-    [SPECIES_WHISMUR] =
-    {
-        .size = 0x55,
-        .y_offset = 0x0e,
-    },
-    [SPECIES_LOUDRED] =
-    {
-        .size = 0x78,
-        .y_offset = 0x03,
-    },
-    [SPECIES_EXPLOUD] =
-    {
-        .size = 0x88,
-        .y_offset = 0x01,
-    },
-    [SPECIES_CLAMPERL] =
-    {
-        .size = 0x55,
-        .y_offset = 0x0e,
-    },
-    [SPECIES_HUNTAIL] =
-    {
-        .size = 0x78,
-        .y_offset = 0x03,
-    },
-    [SPECIES_GOREBYSS] =
-    {
-        .size = 0x86,
-        .y_offset = 0x0b,
-    },
-    [SPECIES_ABSOL] =
-    {
-        .size = 0x68,
-        .y_offset = 0x00,
-    },
-    [SPECIES_SHUPPET] =
-    {
-        .size = 0x56,
-        .y_offset = 0x0e,
-    },
-    [SPECIES_BANETTE] =
-    {
-        .size = 0x55,
-        .y_offset = 0x0c,
-    },
-    [SPECIES_SEVIPER] =
-    {
-        .size = 0x77,
-        .y_offset = 0x08,
-    },
-    [SPECIES_ZANGOOSE] =
-    {
-        .size = 0x87,
-        .y_offset = 0x05,
-    },
-    [SPECIES_RELICANTH] =
-    {
-        .size = 0x77,
-        .y_offset = 0x0b,
-    },
-    [SPECIES_ARON] =
-    {
-        .size = 0x43,
-        .y_offset = 0x14,
-    },
-    [SPECIES_LAIRON] =
-    {
-        .size = 0x75,
-        .y_offset = 0x0d,
-    },
-    [SPECIES_AGGRON] =
-    {
-        .size = 0x88,
-        .y_offset = 0x00,
-    },
-    [SPECIES_CASTFORM] =
-    {
-        .size = 0x34,
-        .y_offset = 0x11,
-    },
-    [SPECIES_VOLBEAT] =
-    {
-        .size = 0x66,
-        .y_offset = 0x08,
-    },
-    [SPECIES_ILLUMISE] =
-    {
-        .size = 0x56,
-        .y_offset = 0x08,
-    },
-    [SPECIES_LILEEP] =
-    {
-        .size = 0x67,
-        .y_offset = 0x07,
-    },
-    [SPECIES_CRADILY] =
-    {
-        .size = 0x78,
-        .y_offset = 0x00,
-    },
-    [SPECIES_ANORITH] =
-    {
-        .size = 0x66,
-        .y_offset = 0x08,
-    },
-    [SPECIES_ARMALDO] =
-    {
-        .size = 0x88,
-        .y_offset = 0x00,
-    },
-    [SPECIES_RALTS] =
-    {
-        .size = 0x35,
-        .y_offset = 0x0f,
-    },
-    [SPECIES_KIRLIA] =
-    {
-        .size = 0x47,
-        .y_offset = 0x06,
-    },
-    [SPECIES_GARDEVOIR] =
-    {
-        .size = 0x78,
-        .y_offset = 0x01,
-    },
-    [SPECIES_BAGON] =
-    {
-        .size = 0x56,
-        .y_offset = 0x0b,
-    },
-    [SPECIES_SHELGON] =
-    {
-        .size = 0x66,
-        .y_offset = 0x09,
-    },
-    [SPECIES_SALAMENCE] =
-    {
-        .size = 0x87,
-        .y_offset = 0x04,
-    },
-    [SPECIES_BELDUM] =
-    {
-        .size = 0x55,
-        .y_offset = 0x0f,
-    },
-    [SPECIES_METANG] =
-    {
-        .size = 0x87,
-        .y_offset = 0x07,
-    },
-    [SPECIES_METAGROSS] =
-    {
-        .size = 0x87,
-        .y_offset = 0x06,
-    },
-    [SPECIES_REGIROCK] =
-    {
-        .size = 0x78,
-        .y_offset = 0x04,
-    },
-    [SPECIES_REGICE] =
-    {
-        .size = 0x88,
-        .y_offset = 0x02,
-    },
-    [SPECIES_REGISTEEL] =
-    {
-        .size = 0x88,
-        .y_offset = 0x03,
-    },
-    [SPECIES_KYOGRE] =
-    {
-        .size = 0x87,
-        .y_offset = 0x04,
-    },
-    [SPECIES_GROUDON] =
-    {
-        .size = 0x88,
-        .y_offset = 0x01,
-    },
-    [SPECIES_RAYQUAZA] =
-    {
-        .size = 0x88,
-        .y_offset = 0x00,
-    },
-    [SPECIES_LATIAS] =
-    {
-        .size = 0x88,
-        .y_offset = 0x01,
-    },
-    [SPECIES_LATIOS] =
-    {
-        .size = 0x88,
-        .y_offset = 0x02,
-    },
-    [SPECIES_JIRACHI] =
-    {
-        .size = 0x66,
-        .y_offset = 0x0d,
-    },
-    [SPECIES_DEOXYS] =
-    {
-        .size = 0x88,
-        .y_offset = 0x01,
-    },
-    [SPECIES_CHIMECHO] =
-    {
-        .size = 0x37,
-        .y_offset = 0x06,
-    },
+	[SPECIES_2HU] = 
+	{
+		.size = 0x68,
+		.y_offset = 0,
+	},
+	[SPECIES_AKYUU] = 
+	{
+		.size = 0x57,
+		.y_offset = 4,
+	},
+	[SPECIES_ADALICE] = 
+	{
+		.size = 0x78,
+		.y_offset = 1,
+	},
+	[SPECIES_AALICE] = 
+	{
+		.size = 0x88,
+		.y_offset = 0,
+	},
+	[SPECIES_CALICE] = 
+	{
+		.size = 0x67,
+		.y_offset = 2,
+	},
+	[SPECIES_DARK_ALICE] = 
+	{
+		.size = 0x58,
+		.y_offset = 0,
+	},
+	[SPECIES_ALICE] = 
+	{
+		.size = 0x88,
+		.y_offset = 1,
+	},
+	[SPECIES_TALICE] = 
+	{
+		.size = 0x68,
+		.y_offset = 1,
+	},
+	[SPECIES_CARISU] = 
+	{
+		.size = 0x46,
+		.y_offset = 2,
+	},
+	[SPECIES_ARISU] = 
+	{
+		.size = 0x87,
+		.y_offset = 1,
+	},
+	[SPECIES_CAYA] = 
+	{
+		.size = 0x56,
+		.y_offset = 4,
+	},
+	[SPECIES_AYA] = 
+	{
+		.size = 0x68,
+		.y_offset = 1,
+	},
+	[SPECIES_SAYA] = 
+	{
+		.size = 0x86,
+		.y_offset = 8,
+	},
+	[SPECIES_TAYA] = 
+	{
+		.size = 0x87,
+		.y_offset = 5,
+	},
+	[SPECIES_CBENBEN] = 
+	{
+		.size = 0x56,
+		.y_offset = 9,
+	},
+	[SPECIES_BENBEN] = 
+	{
+		.size = 0x76,
+		.y_offset = 4,
+	},
+	[SPECIES_CBYAKUREN] = 
+	{
+		.size = 0x57,
+		.y_offset = 6,
+	},
+	[SPECIES_DBYAKUREN] = 
+	{
+		.size = 0x88,
+		.y_offset = 0,
+	},
+	[SPECIES_BYAKUREN] = 
+	{
+		.size = 0x88,
+		.y_offset = 1,
+	},
+	[SPECIES_TBYAKUREN] = 
+	{
+		.size = 0x78,
+		.y_offset = 1,
+	},
+	[SPECIES_ADCHEN] = 
+	{
+		.size = 0x48,
+		.y_offset = 1,
+	},
+	[SPECIES_ACHEN] = 
+	{
+		.size = 0x57,
+		.y_offset = 3,
+	},
+	[SPECIES_CCHEN] = 
+	{
+		.size = 0x55,
+		.y_offset = 5,
+	},
+	[SPECIES_CHEN] = 
+	{
+		.size = 0x67,
+		.y_offset = 2,
+	},
+	[SPECIES_TCHEN] = 
+	{
+		.size = 0x66,
+		.y_offset = 8,
+	},
+	[SPECIES_CCHIYURI] = 
+	{
+		.size = 0x47,
+		.y_offset = 3,
+	},
+	[SPECIES_CHIYURI] = 
+	{
+		.size = 0x68,
+		.y_offset = 0,
+	},
+	[SPECIES_ADCIRNO] = 
+	{
+		.size = 0x78,
+		.y_offset = 1,
+	},
+	[SPECIES_CCIRNO] = 
+	{
+		.size = 0x66,
+		.y_offset = 2,
+	},
+	[SPECIES_CIRNO] = 
+	{
+		.size = 0x78,
+		.y_offset = 2,
+	},
+	[SPECIES_SCIRNO] = 
+	{
+		.size = 0x66,
+		.y_offset = 5,
+	},
+	[SPECIES_TCIRNO] = 
+	{
+		.size = 0x68,
+		.y_offset = 2,
+	},
+	[SPECIES_CCLOWNPIECE] = 
+	{
+		.size = 0x58,
+		.y_offset = 3,
+	},
+	[SPECIES_CLOWNPIECE] = 
+	{
+		.size = 0x68,
+		.y_offset = 2,
+	},
+	[SPECIES_ADAIYOUSEI] = 
+	{
+		.size = 0x78,
+		.y_offset = 0,
+	},
+	[SPECIES_CDAIYOUSEI] = 
+	{
+		.size = 0x66,
+		.y_offset = 4,
+	},
+	[SPECIES_DDAIYOUSEI] = 
+	{
+		.size = 0x78,
+		.y_offset = 1,
+	},
+	[SPECIES_DAIYOUSEI] = 
+	{
+		.size = 0x68,
+		.y_offset = 1,
+	},
+	[SPECIES_GOLIATH] = 
+	{
+		.size = 0x88,
+		.y_offset = 0,
+	},
+	[SPECIES_HOURAI] = 
+	{
+		.size = 0x78,
+		.y_offset = 0,
+	},
+	[SPECIES_SHANGHAI] = 
+	{
+		.size = 0x67,
+		.y_offset = 6,
+	},
+	[SPECIES_CDOREMY] = 
+	{
+		.size = 0x47,
+		.y_offset = 6,
+	},
+	[SPECIES_DOREMY] = 
+	{
+		.size = 0x58,
+		.y_offset = 2,
+	},
+	[SPECIES_AEIKI] = 
+	{
+		.size = 0x88,
+		.y_offset = 0,
+	},
+	[SPECIES_CEIKI] = 
+	{
+		.size = 0x46,
+		.y_offset = 7,
+	},
+	[SPECIES_DEIKI] = 
+	{
+		.size = 0x68,
+		.y_offset = 1,
+	},
+	[SPECIES_EIKI] = 
+	{
+		.size = 0x68,
+		.y_offset = 2,
+	},
+	[SPECIES_AEIRIN] = 
+	{
+		.size = 0x68,
+		.y_offset = 0,
+	},
+	[SPECIES_CEIRIN] = 
+	{
+		.size = 0x47,
+		.y_offset = 4,
+	},
+	[SPECIES_HEIRIN] = 
+	{
+		.size = 0x58,
+		.y_offset = 0,
+	},
+	[SPECIES_EIRIN] = 
+	{
+		.size = 0x68,
+		.y_offset = 0,
+	},
+	[SPECIES_CELIS] = 
+	{
+		.size = 0x77,
+		.y_offset = 6,
+	},
+	[SPECIES_ELIS] = 
+	{
+		.size = 0x88,
+		.y_offset = 3,
+	},
+	[SPECIES_CELLEN] = 
+	{
+		.size = 0x56,
+		.y_offset = 3,
+	},
+	[SPECIES_ELLEN] = 
+	{
+		.size = 0x58,
+		.y_offset = 1,
+	},
+	[SPECIES_CELLY] = 
+	{
+		.size = 0x67,
+		.y_offset = 3,
+	},
+	[SPECIES_ELLY] = 
+	{
+		.size = 0x68,
+		.y_offset = 1,
+	},
+	[SPECIES_AFLANDRE] = 
+	{
+		.size = 0x88,
+		.y_offset = 2,
+	},
+	[SPECIES_CFLANDRE] = 
+	{
+		.size = 0x66,
+		.y_offset = 3,
+	},
+	[SPECIES_FLANDRE] = 
+	{
+		.size = 0x87,
+		.y_offset = 3,
+	},
+	[SPECIES_SFLANDRE] = 
+	{
+		.size = 0x88,
+		.y_offset = 1,
+	},
+	[SPECIES_CFUTO] = 
+	{
+		.size = 0x57,
+		.y_offset = 0,
+	},
+	[SPECIES_FUTO] = 
+	{
+		.size = 0x87,
+		.y_offset = 9,
+	},
+	[SPECIES_TFUTO] = 
+	{
+		.size = 0x88,
+		.y_offset = 2,
+	},
+	[SPECIES_CGENGETSU] = 
+	{
+		.size = 0x56,
+		.y_offset = 3,
+	},
+	[SPECIES_GENGETSU] = 
+	{
+		.size = 0x77,
+		.y_offset = 4,
+	},
+	[SPECIES_GENJI] = 
+	{
+		.size = 0x74,
+		.y_offset = 8,
+	},
+	[SPECIES_CHAKUREI] = 
+	{
+		.size = 0x47,
+		.y_offset = 2,
+	},
+	[SPECIES_HAKUREI] = 
+	{
+		.size = 0x78,
+		.y_offset = 1,
+	},
+	[SPECIES_CHATATE] = 
+	{
+		.size = 0x56,
+		.y_offset = 9,
+	},
+	[SPECIES_DHATATE] = 
+	{
+		.size = 0x68,
+		.y_offset = 1,
+	},
+	[SPECIES_HATATE] = 
+	{
+		.size = 0x78,
+		.y_offset = 3,
+	},
+	[SPECIES_THATATE] = 
+	{
+		.size = 0x78,
+		.y_offset = 2,
+	},
+	[SPECIES_CHECATIA] = 
+	{
+		.size = 0x58,
+		.y_offset = 3,
+	},
+	[SPECIES_HECATIA] = 
+	{
+		.size = 0x78,
+		.y_offset = 0,
+	},
+	[SPECIES_AHINA] = 
+	{
+		.size = 0x68,
+		.y_offset = 1,
+	},
+	[SPECIES_CHINA] = 
+	{
+		.size = 0x47,
+		.y_offset = 5,
+	},
+	[SPECIES_DHINA] = 
+	{
+		.size = 0x78,
+		.y_offset = 1,
+	},
+	[SPECIES_HINA] = 
+	{
+		.size = 0x68,
+		.y_offset = 0,
+	},
+	[SPECIES_CICHIRIN] = 
+	{
+		.size = 0x67,
+		.y_offset = 4,
+	},
+	[SPECIES_DICHIRIN] = 
+	{
+		.size = 0x88,
+		.y_offset = 2,
+	},
+	[SPECIES_ICHIRIN] = 
+	{
+		.size = 0x78,
+		.y_offset = 1,
+	},
+	[SPECIES_TICHIRIN] = 
+	{
+		.size = 0x88,
+		.y_offset = 1,
+	},
+	[SPECIES_CIKU] = 
+	{
+		.size = 0x77,
+		.y_offset = 6,
+	},
+	[SPECIES_DIKU] = 
+	{
+		.size = 0x88,
+		.y_offset = 0,
+	},
+	[SPECIES_IKU] = 
+	{
+		.size = 0x88,
+		.y_offset = 0,
+	},
+	[SPECIES_TIKU] = 
+	{
+		.size = 0x78,
+		.y_offset = 0,
+	},
+	[SPECIES_JINYOU] = 
+	{
+		.size = 0x78,
+		.y_offset = 0,
+	},
+	[SPECIES_CJUNKO] = 
+	{
+		.size = 0x47,
+		.y_offset = 4,
+	},
+	[SPECIES_JUNKO] = 
+	{
+		.size = 0x68,
+		.y_offset = 0,
+	},
+	[SPECIES_CKAGEROU] = 
+	{
+		.size = 0x57,
+		.y_offset = 4,
+	},
+	[SPECIES_AKAGEROU] = 
+	{
+		.size = 0x88,
+		.y_offset = 0,
+	},
+	[SPECIES_KAGEROU] = 
+	{
+		.size = 0x77,
+		.y_offset = 5,
+	},
+	[SPECIES_AKAGUYA] = 
+	{
+		.size = 0x68,
+		.y_offset = 2,
+	},
+	[SPECIES_CKAGUYA] = 
+	{
+		.size = 0x55,
+		.y_offset = 6,
+	},
+	[SPECIES_DKAGUYA] = 
+	{
+		.size = 0x78,
+		.y_offset = 3,
+	},
+	[SPECIES_KAGUYA] = 
+	{
+		.size = 0x88,
+		.y_offset = 1,
+	},
+	[SPECIES_AKANAKO] = 
+	{
+		.size = 0x88,
+		.y_offset = 0,
+	},
+	[SPECIES_CKANAKO] = 
+	{
+		.size = 0x57,
+		.y_offset = 4,
+	},
+	[SPECIES_DKANAKO] = 
+	{
+		.size = 0x88,
+		.y_offset = 1,
+	},
+	[SPECIES_KANAKO] = 
+	{
+		.size = 0x78,
+		.y_offset = 2,
+	},
+	[SPECIES_CKANA] = 
+	{
+		.size = 0x66,
+		.y_offset = 6,
+	},
+	[SPECIES_KANA] = 
+	{
+		.size = 0x58,
+		.y_offset = 1,
+	},
+	[SPECIES_CKASEN] = 
+	{
+		.size = 0x77,
+		.y_offset = 3,
+	},
+	[SPECIES_HKASEN] = 
+	{
+		.size = 0x88,
+		.y_offset = 1,
+	},
+	[SPECIES_KASEN] = 
+	{
+		.size = 0x68,
+		.y_offset = 0,
+	},
+	[SPECIES_AKAZAMI] = 
+	{
+		.size = 0x78,
+		.y_offset = 2,
+	},
+	[SPECIES_CKAZAMI] = 
+	{
+		.size = 0x66,
+		.y_offset = 4,
+	},
+	[SPECIES_KAZAMI] = 
+	{
+		.size = 0x68,
+		.y_offset = 0,
+	},
+	[SPECIES_AKEINE] = 
+	{
+		.size = 0x88,
+		.y_offset = 1,
+	},
+	[SPECIES_CKEINE] = 
+	{
+		.size = 0x56,
+		.y_offset = 4,
+	},
+	[SPECIES_DKEINE] = 
+	{
+		.size = 0x87,
+		.y_offset = 3,
+	},
+	[SPECIES_HKEINE] = 
+	{
+		.size = 0x78,
+		.y_offset = 0,
+	},
+	[SPECIES_KEINE] = 
+	{
+		.size = 0x68,
+		.y_offset = 0,
+	},
+	[SPECIES_CKIKURI] = 
+	{
+		.size = 0x66,
+		.y_offset = 9,
+	},
+	[SPECIES_KIKURI] = 
+	{
+		.size = 0x77,
+		.y_offset = 5,
+	},
+	[SPECIES_CKIRISAME] = 
+	{
+		.size = 0x66,
+		.y_offset = 4,
+	},
+	[SPECIES_KIRISAME] = 
+	{
+		.size = 0x88,
+		.y_offset = 0,
+	},
+	[SPECIES_CKISUME] = 
+	{
+		.size = 0x44,
+		.y_offset = 14,
+	},
+	[SPECIES_KISUME] = 
+	{
+		.size = 0x66,
+		.y_offset = 11,
+	},
+	[SPECIES_TKISUME] = 
+	{
+		.size = 0x76,
+		.y_offset = 11,
+	},
+	[SPECIES_CKOAKUMA] = 
+	{
+		.size = 0x56,
+		.y_offset = 2,
+	},
+	[SPECIES_KOAKUMA] = 
+	{
+		.size = 0x68,
+		.y_offset = 1,
+	},
+	[SPECIES_HKOAKUMA] = 
+	{
+		.size = 0x58,
+		.y_offset = 2,
+	},
+	[SPECIES_CKOGASA] = 
+	{
+		.size = 0x66,
+		.y_offset = 5,
+	},
+	[SPECIES_KOGASA] = 
+	{
+		.size = 0x78,
+		.y_offset = 1,
+	},
+	[SPECIES_SKOGASA] = 
+	{
+		.size = 0x78,
+		.y_offset = 1,
+	},
+	[SPECIES_TKOGASA] = 
+	{
+		.size = 0x87,
+		.y_offset = 4,
+	},
+	[SPECIES_AKOISHI] = 
+	{
+		.size = 0x68,
+		.y_offset = 1,
+	},
+	[SPECIES_CKOISHI] = 
+	{
+		.size = 0x56,
+		.y_offset = 5,
+	},
+	[SPECIES_KOISHI] = 
+	{
+		.size = 0x68,
+		.y_offset = 1,
+	},
+	[SPECIES_SKOISHI] = 
+	{
+		.size = 0x78,
+		.y_offset = 2,
+	},
+	[SPECIES_AKOKORO] = 
+	{
+		.size = 0x88,
+		.y_offset = 2,
+	},
+	[SPECIES_CKOKORO] = 
+	{
+		.size = 0x68,
+		.y_offset = 2,
+	},
+	[SPECIES_KOKORO] = 
+	{
+		.size = 0x88,
+		.y_offset = 0,
+	},
+	[SPECIES_TKOKORO] = 
+	{
+		.size = 0x78,
+		.y_offset = 1,
+	},
+	[SPECIES_AKOMACHI] = 
+	{
+		.size = 0x88,
+		.y_offset = 1,
+	},
+	[SPECIES_CKOMACHI] = 
+	{
+		.size = 0x67,
+		.y_offset = 4,
+	},
+	[SPECIES_KOMACHI] = 
+	{
+		.size = 0x88,
+		.y_offset = 2,
+	},
+	[SPECIES_SKOMACHI] = 
+	{
+		.size = 0x88,
+		.y_offset = 1,
+	},
+	[SPECIES_CKONNGARA] = 
+	{
+		.size = 0x57,
+		.y_offset = 4,
+	},
+	[SPECIES_KONNGARA] = 
+	{
+		.size = 0x78,
+		.y_offset = 2,
+	},
+	[SPECIES_CKOSUZU] = 
+	{
+		.size = 0x66,
+		.y_offset = 7,
+	},
+	[SPECIES_KOSUZU] = 
+	{
+		.size = 0x58,
+		.y_offset = 2,
+	},
+	[SPECIES_CKOTOHIME] = 
+	{
+		.size = 0x56,
+		.y_offset = 2,
+	},
+	[SPECIES_KOTOHIME] = 
+	{
+		.size = 0x78,
+		.y_offset = 1,
+	},
+	[SPECIES_CKURUMI] = 
+	{
+		.size = 0x66,
+		.y_offset = 3,
+	},
+	[SPECIES_KURUMI] = 
+	{
+		.size = 0x87,
+		.y_offset = 3,
+	},
+	[SPECIES_CKYOUKO] = 
+	{
+		.size = 0x46,
+		.y_offset = 0,
+	},
+	[SPECIES_KYOUKO] = 
+	{
+		.size = 0x58,
+		.y_offset = 0,
+	},
+	[SPECIES_TKYOUKO] = 
+	{
+		.size = 0x58,
+		.y_offset = 0,
+	},
+	[SPECIES_CLAYLA] = 
+	{
+		.size = 0x77,
+		.y_offset = 2,
+	},
+	[SPECIES_LAYLA] = 
+	{
+		.size = 0x57,
+		.y_offset = 3,
+	},
+	[SPECIES_DLAYLA] = 
+	{
+		.size = 0x88,
+		.y_offset = 1,
+	},
+	[SPECIES_ADLETTY] = 
+	{
+		.size = 0x78,
+		.y_offset = 0,
+	},
+	[SPECIES_CLETTY] = 
+	{
+		.size = 0x46,
+		.y_offset = 3,
+	},
+	[SPECIES_DLETTY] = 
+	{
+		.size = 0x56,
+		.y_offset = 2,
+	},
+	[SPECIES_HLETTY] = 
+	{
+		.size = 0x58,
+		.y_offset = 1,
+	},
+	[SPECIES_LETTY] = 
+	{
+		.size = 0x58,
+		.y_offset = 1,
+	},
+	[SPECIES_ALILYBLACK] = 
+	{
+		.size = 0x87,
+		.y_offset = 6,
+	},
+	[SPECIES_CLILYBLACK] = 
+	{
+		.size = 0x56,
+		.y_offset = 6,
+	},
+	[SPECIES_LILYBLACK] = 
+	{
+		.size = 0x76,
+		.y_offset = 7,
+	},
+	[SPECIES_SLILYBLACK] = 
+	{
+		.size = 0x88,
+		.y_offset = 3,
+	},
+	[SPECIES_ALILYWHITE] = 
+	{
+		.size = 0x88,
+		.y_offset = 2,
+	},
+	[SPECIES_CLILYWHITE] = 
+	{
+		.size = 0x56,
+		.y_offset = 8,
+	},
+	[SPECIES_HLILYWHITE] = 
+	{
+		.size = 0x77,
+		.y_offset = 4,
+	},
+	[SPECIES_LILYWHITE] = 
+	{
+		.size = 0x66,
+		.y_offset = 9,
+	},
+	[SPECIES_CLOUISE] = 
+	{
+		.size = 0x56,
+		.y_offset = 2,
+	},
+	[SPECIES_LOUISE] = 
+	{
+		.size = 0x68,
+		.y_offset = 0,
+	},
+	[SPECIES_ALUNA] = 
+	{
+		.size = 0x78,
+		.y_offset = 2,
+	},
+	[SPECIES_CLUNA] = 
+	{
+		.size = 0x56,
+		.y_offset = 4,
+	},
+	[SPECIES_LUNA] = 
+	{
+		.size = 0x58,
+		.y_offset = 2,
+	},
+	[SPECIES_TLUNA] = 
+	{
+		.size = 0x88,
+		.y_offset = 1,
+	},
+	[SPECIES_CLUNASA] = 
+	{
+		.size = 0x56,
+		.y_offset = 3,
+	},
+	[SPECIES_HLUNASA] = 
+	{
+		.size = 0x88,
+		.y_offset = 0,
+	},
+	[SPECIES_LUNASA] = 
+	{
+		.size = 0x78,
+		.y_offset = 1,
+	},
+	[SPECIES_CLYRICA] = 
+	{
+		.size = 0x46,
+		.y_offset = 5,
+	},
+	[SPECIES_HLYRICA] = 
+	{
+		.size = 0x68,
+		.y_offset = 1,
+	},
+	[SPECIES_LYRICA] = 
+	{
+		.size = 0x68,
+		.y_offset = 2,
+	},
+	[SPECIES_CMAGAN] = 
+	{
+		.size = 0x78,
+		.y_offset = 1,
+	},
+	[SPECIES_MAGAN] = 
+	{
+		.size = 0x88,
+		.y_offset = 2,
+	},
+	[SPECIES_MAGISTONES] = 
+	{
+		.size = 0x87,
+		.y_offset = 13,
+	},
+	[SPECIES_CMAI] = 
+	{
+		.size = 0x46,
+		.y_offset = 2,
+	},
+	[SPECIES_MAI] = 
+	{
+		.size = 0x78,
+		.y_offset = 1,
+	},
+	[SPECIES_CMAMIZOU] = 
+	{
+		.size = 0x46,
+		.y_offset = 0,
+	},
+	[SPECIES_DMAMIZOU] = 
+	{
+		.size = 0x88,
+		.y_offset = 0,
+	},
+	[SPECIES_MAMIZOU] = 
+	{
+		.size = 0x78,
+		.y_offset = 0,
+	},
+	[SPECIES_ADMARISA] = 
+	{
+		.size = 0x58,
+		.y_offset = 1,
+	},
+	[SPECIES_AMARISA] = 
+	{
+		.size = 0x68,
+		.y_offset = 0,
+	},
+	[SPECIES_CMARISA] = 
+	{
+		.size = 0x66,
+		.y_offset = 2,
+	},
+	[SPECIES_LMARISA] = 
+	{
+		.size = 0x78,
+		.y_offset = 0,
+	},
+	[SPECIES_MARISA] = 
+	{
+		.size = 0x78,
+		.y_offset = 1,
+	},
+	[SPECIES_SMARISA] = 
+	{
+		.size = 0x77,
+		.y_offset = 6,
+	},
+	[SPECIES_AMEDICINE] = 
+	{
+		.size = 0x78,
+		.y_offset = 2,
+	},
+	[SPECIES_CMEDICINE] = 
+	{
+		.size = 0x55,
+		.y_offset = 6,
+	},
+	[SPECIES_MEDICINE] = 
+	{
+		.size = 0x78,
+		.y_offset = 2,
+	},
+	[SPECIES_SMEDICINE] = 
+	{
+		.size = 0x78,
+		.y_offset = 2,
+	},
+	[SPECIES_TMEDICINE] = 
+	{
+		.size = 0x78,
+		.y_offset = 3,
+	},
+	[SPECIES_ADMEILING] = 
+	{
+		.size = 0x68,
+		.y_offset = 0,
+	},
+	[SPECIES_CMEILING] = 
+	{
+		.size = 0x47,
+		.y_offset = 2,
+	},
+	[SPECIES_DMEILING] = 
+	{
+		.size = 0x58,
+		.y_offset = 0,
+	},
+	[SPECIES_MEILING] = 
+	{
+		.size = 0x58,
+		.y_offset = 0,
+	},
+	[SPECIES_SMEILING] = 
+	{
+		.size = 0x68,
+		.y_offset = 1,
+	},
+	[SPECIES_CMEIRA] = 
+	{
+		.size = 0x77,
+		.y_offset = 3,
+	},
+	[SPECIES_MEIRA] = 
+	{
+		.size = 0x88,
+		.y_offset = 0,
+	},
+	[SPECIES_CMERLIN] = 
+	{
+		.size = 0x56,
+		.y_offset = 4,
+	},
+	[SPECIES_HMERLIN] = 
+	{
+		.size = 0x68,
+		.y_offset = 1,
+	},
+	[SPECIES_MERLIN] = 
+	{
+		.size = 0x58,
+		.y_offset = 1,
+	},
+	[SPECIES_AMIKO] = 
+	{
+		.size = 0x88,
+		.y_offset = 0,
+	},
+	[SPECIES_CMIKO] = 
+	{
+		.size = 0x67,
+		.y_offset = 0,
+	},
+	[SPECIES_DMIKO] = 
+	{
+		.size = 0x88,
+		.y_offset = 0,
+	},
+	[SPECIES_MIKO] = 
+	{
+		.size = 0x78,
+		.y_offset = 0,
+	},
+	[SPECIES_CMIMA] = 
+	{
+		.size = 0x66,
+		.y_offset = 4,
+	},
+	[SPECIES_MIMA] = 
+	{
+		.size = 0x78,
+		.y_offset = 0,
+	},
+	[SPECIES_MIMI_CHAN] = 
+	{
+		.size = 0x75,
+		.y_offset = 8,
+	},
+	[SPECIES_AMINORIKO] = 
+	{
+		.size = 0x78,
+		.y_offset = 2,
+	},
+	[SPECIES_CMINORIKO] = 
+	{
+		.size = 0x45,
+		.y_offset = 6,
+	},
+	[SPECIES_DMINORIKO] = 
+	{
+		.size = 0x56,
+		.y_offset = 4,
+	},
+	[SPECIES_MINORIKO] = 
+	{
+		.size = 0x58,
+		.y_offset = 2,
+	},
+	[SPECIES_ADMOKOU] = 
+	{
+		.size = 0x78,
+		.y_offset = 0,
+	},
+	[SPECIES_AMOKUO] = 
+	{
+		.size = 0x88,
+		.y_offset = 0,
+	},
+	[SPECIES_CMOKOU] = 
+	{
+		.size = 0x66,
+		.y_offset = 4,
+	},
+	[SPECIES_DMOKOU] = 
+	{
+		.size = 0x88,
+		.y_offset = 0,
+	},
+	[SPECIES_MOKOU] = 
+	{
+		.size = 0x88,
+		.y_offset = 1,
+	},
+	[SPECIES_MOMIJI] = 
+	{
+		.size = 0x66,
+		.y_offset = 5,
+	},
+	[SPECIES_DMOMIJI] = 
+	{
+		.size = 0x88,
+		.y_offset = 1,
+	},
+	[SPECIES_CMOMIJI] = 
+	{
+		.size = 0x88,
+		.y_offset = 0,
+	},
+	[SPECIES_CMUGETSU] = 
+	{
+		.size = 0x56,
+		.y_offset = 2,
+	},
+	[SPECIES_MUGETSU] = 
+	{
+		.size = 0x48,
+		.y_offset = 1,
+	},
+	[SPECIES_AMURASA] = 
+	{
+		.size = 0x68,
+		.y_offset = 0,
+	},
+	[SPECIES_CMURASA] = 
+	{
+		.size = 0x77,
+		.y_offset = 3,
+	},
+	[SPECIES_DMURASA] = 
+	{
+		.size = 0x58,
+		.y_offset = 0,
+	},
+	[SPECIES_MURASA] = 
+	{
+		.size = 0x78,
+		.y_offset = 1,
+	},
+	[SPECIES_ADMYSTIA] = 
+	{
+		.size = 0x88,
+		.y_offset = 1,
+	},
+	[SPECIES_AMYSTIA] = 
+	{
+		.size = 0x88,
+		.y_offset = 1,
+	},
+	[SPECIES_CMYSTIA] = 
+	{
+		.size = 0x46,
+		.y_offset = 3,
+	},
+	[SPECIES_HMYSTIA] = 
+	{
+		.size = 0x78,
+		.y_offset = 2,
+	},
+	[SPECIES_MYSTIA] = 
+	{
+		.size = 0x68,
+		.y_offset = 2,
+	},
+	[SPECIES_NAMAZU] = 
+	{
+		.size = 0x87,
+		.y_offset = 7,
+	},
+	[SPECIES_CNAZRIN] = 
+	{
+		.size = 0x66,
+		.y_offset = 5,
+	},
+	[SPECIES_HNAZRIN] = 
+	{
+		.size = 0x87,
+		.y_offset = 3,
+	},
+	[SPECIES_NAZRIN] = 
+	{
+		.size = 0x78,
+		.y_offset = 1,
+	},
+	[SPECIES_TNAZRIN] = 
+	{
+		.size = 0x88,
+		.y_offset = 1,
+	},
+	[SPECIES_ANITORI] = 
+	{
+		.size = 0x78,
+		.y_offset = 0,
+	},
+	[SPECIES_CNITORI] = 
+	{
+		.size = 0x66,
+		.y_offset = 5,
+	},
+	[SPECIES_NITORI] = 
+	{
+		.size = 0x78,
+		.y_offset = 1,
+	},
+	[SPECIES_TNITORI] = 
+	{
+		.size = 0x88,
+		.y_offset = 2,
+	},
+	[SPECIES_ANUE] = 
+	{
+		.size = 0x78,
+		.y_offset = 2,
+	},
+	[SPECIES_CNUE] = 
+	{
+		.size = 0x66,
+		.y_offset = 6,
+	},
+	[SPECIES_NUE] = 
+	{
+		.size = 0x87,
+		.y_offset = 7,
+	},
+	[SPECIES_TNUE] = 
+	{
+		.size = 0x88,
+		.y_offset = 2,
+	},
+	[SPECIES_CORANGE] = 
+	{
+		.size = 0x46,
+		.y_offset = 2,
+	},
+	[SPECIES_ORANGE] = 
+	{
+		.size = 0x58,
+		.y_offset = 0,
+	},
+	[SPECIES_CPARSEE] = 
+	{
+		.size = 0x55,
+		.y_offset = 5,
+	},
+	[SPECIES_DPARSEE] = 
+	{
+		.size = 0x78,
+		.y_offset = 1,
+	},
+	[SPECIES_PARSEE] = 
+	{
+		.size = 0x88,
+		.y_offset = 2,
+	},
+	[SPECIES_TPARSEE] = 
+	{
+		.size = 0x77,
+		.y_offset = 1,
+	},
+	[SPECIES_APATCHOULI] = 
+	{
+		.size = 0x88,
+		.y_offset = 0,
+	},
+	[SPECIES_CPATCHOULI] = 
+	{
+		.size = 0x46,
+		.y_offset = 2,
+	},
+	[SPECIES_DPATCHOULI] = 
+	{
+		.size = 0x68,
+		.y_offset = 1,
+	},
+	[SPECIES_PATCHOULI] = 
+	{
+		.size = 0x58,
+		.y_offset = 0,
+	},
+	[SPECIES_ARAIKO] = 
+	{
+		.size = 0x88,
+		.y_offset = 0,
+	},
+	[SPECIES_CRAIKO] = 
+	{
+		.size = 0x76,
+		.y_offset = 8,
+	},
+	[SPECIES_RAIKO] = 
+	{
+		.size = 0x88,
+		.y_offset = 2,
+	},
+	[SPECIES_ADRAN] = 
+	{
+		.size = 0x58,
+		.y_offset = 0,
+	},
+	[SPECIES_ARAN] = 
+	{
+		.size = 0x88,
+		.y_offset = 0,
+	},
+	[SPECIES_CRAN] = 
+	{
+		.size = 0x57,
+		.y_offset = 4,
+	},
+	[SPECIES_HRAN] = 
+	{
+		.size = 0x77,
+		.y_offset = 2,
+	},
+	[SPECIES_RAN] = 
+	{
+		.size = 0x78,
+		.y_offset = 0,
+	},
+	[SPECIES_REISEN_II] = 
+	{
+		.size = 0x58,
+		.y_offset = 1,
+	},
+	[SPECIES_AREIMU] = 
+	{
+		.size = 0x88,
+		.y_offset = 1,
+	},
+	[SPECIES_CREIMU] = 
+	{
+		.size = 0x66,
+		.y_offset = 2,
+	},
+	[SPECIES_DREIMU] = 
+	{
+		.size = 0x88,
+		.y_offset = 0,
+	},
+	[SPECIES_REIMU] = 
+	{
+		.size = 0x68,
+		.y_offset = 0,
+	},
+	[SPECIES_ADREISEN] = 
+	{
+		.size = 0x88,
+		.y_offset = 1,
+	},
+	[SPECIES_CREISEN] = 
+	{
+		.size = 0x67,
+		.y_offset = 3,
+	},
+	[SPECIES_DREISEN] = 
+	{
+		.size = 0x78,
+		.y_offset = 2,
+	},
+	[SPECIES_REISEN] = 
+	{
+		.size = 0x68,
+		.y_offset = 2,
+	},
+	[SPECIES_TREISEN] = 
+	{
+		.size = 0x68,
+		.y_offset = 0,
+	},
+	[SPECIES_AREMILIA] = 
+	{
+		.size = 0x87,
+		.y_offset = 2,
+	},
+	[SPECIES_CREMILIA] = 
+	{
+		.size = 0x56,
+		.y_offset = 3,
+	},
+	[SPECIES_DREMILIA] = 
+	{
+		.size = 0x65,
+		.y_offset = 3,
+	},
+	[SPECIES_REMILIA] = 
+	{
+		.size = 0x78,
+		.y_offset = 1,
+	},
+	[SPECIES_CRIKAKO] = 
+	{
+		.size = 0x56,
+		.y_offset = 1,
+	},
+	[SPECIES_RIKAKO] = 
+	{
+		.size = 0x68,
+		.y_offset = 0,
+	},
+	[SPECIES_CRIKA] = 
+	{
+		.size = 0x55,
+		.y_offset = 4,
+	},
+	[SPECIES_RIKA] = 
+	{
+		.size = 0x88,
+		.y_offset = 0,
+	},
+	[SPECIES_CRINGO] = 
+	{
+		.size = 0x47,
+		.y_offset = 7,
+	},
+	[SPECIES_RINGO] = 
+	{
+		.size = 0x58,
+		.y_offset = 1,
+	},
+	[SPECIES_RINNOSUKE] = 
+	{
+		.size = 0x48,
+		.y_offset = 0,
+	},
+	[SPECIES_ARIN] = 
+	{
+		.size = 0x88,
+		.y_offset = 1,
+	},
+	[SPECIES_CRIN] = 
+	{
+		.size = 0x76,
+		.y_offset = 4,
+	},
+	[SPECIES_RIN] = 
+	{
+		.size = 0x88,
+		.y_offset = 2,
+	},
+	[SPECIES_SRIN] = 
+	{
+		.size = 0x76,
+		.y_offset = 6,
+	},
+	[SPECIES_ARUMIA] = 
+	{
+		.size = 0x87,
+		.y_offset = 3,
+	},
+	[SPECIES_CRUMIA] = 
+	{
+		.size = 0x75,
+		.y_offset = 6,
+	},
+	[SPECIES_RUMIA] = 
+	{
+		.size = 0x87,
+		.y_offset = 1,
+	},
+	[SPECIES_SRUMIA] = 
+	{
+		.size = 0x78,
+		.y_offset = 3,
+	},
+	[SPECIES_RUUKOTO] = 
+	{
+		.size = 0x78,
+		.y_offset = 2,
+	},
+	[SPECIES_CSAGUME] = 
+	{
+		.size = 0x46,
+		.y_offset = 7,
+	},
+	[SPECIES_SAGUME] = 
+	{
+		.size = 0x58,
+		.y_offset = 2,
+	},
+	[SPECIES_CSAKUYA] = 
+	{
+		.size = 0x46,
+		.y_offset = 3,
+	},
+	[SPECIES_HSAKUYA] = 
+	{
+		.size = 0x68,
+		.y_offset = 0,
+	},
+	[SPECIES_SAKUYA] = 
+	{
+		.size = 0x78,
+		.y_offset = 1,
+	},
+	[SPECIES_TSAKUYA] = 
+	{
+		.size = 0x87,
+		.y_offset = 2,
+	},
+	[SPECIES_ASANAE] = 
+	{
+		.size = 0x78,
+		.y_offset = 2,
+	},
+	[SPECIES_CSANAE] = 
+	{
+		.size = 0x46,
+		.y_offset = 4,
+	},
+	[SPECIES_JKSANAE] = 
+	{
+		.size = 0x58,
+		.y_offset = 1,
+	},
+	[SPECIES_SANAE] = 
+	{
+		.size = 0x78,
+		.y_offset = 1,
+	},
+	[SPECIES_TSANAE] = 
+	{
+		.size = 0x88,
+		.y_offset = 1,
+	},
+	[SPECIES_CSARA] = 
+	{
+		.size = 0x56,
+		.y_offset = 2,
+	},
+	[SPECIES_SARA] = 
+	{
+		.size = 0x78,
+		.y_offset = 1,
+	},
+	[SPECIES_CSARIEL] = 
+	{
+		.size = 0x66,
+		.y_offset = 4,
+	},
+	[SPECIES_SARIEL] = 
+	{
+		.size = 0x78,
+		.y_offset = 1,
+	},
+	[SPECIES_SSARIEL] = 
+	{
+		.size = 0x78,
+		.y_offset = 1,
+	},
+	[SPECIES_CSATORI] = 
+	{
+		.size = 0x46,
+		.y_offset = 5,
+	},
+	[SPECIES_DSATORI] = 
+	{
+		.size = 0x68,
+		.y_offset = 2,
+	},
+	[SPECIES_SATORI] = 
+	{
+		.size = 0x48,
+		.y_offset = 2,
+	},
+	[SPECIES_TSATORI] = 
+	{
+		.size = 0x66,
+		.y_offset = 4,
+	},
+	[SPECIES_CSEIGA] = 
+	{
+		.size = 0x77,
+		.y_offset = 0,
+	},
+	[SPECIES_SEIGA] = 
+	{
+		.size = 0x88,
+		.y_offset = 0,
+	},
+	[SPECIES_SSEIGA] = 
+	{
+		.size = 0x78,
+		.y_offset = 1,
+	},
+	[SPECIES_CSEIJA] = 
+	{
+		.size = 0x57,
+		.y_offset = 7,
+	},
+	[SPECIES_DSEIJA] = 
+	{
+		.size = 0x56,
+		.y_offset = 7,
+	},
+	[SPECIES_SEIJA] = 
+	{
+		.size = 0x58,
+		.y_offset = 1,
+	},
+	[SPECIES_CSEIRAN] = 
+	{
+		.size = 0x67,
+		.y_offset = 5,
+	},
+	[SPECIES_SEIRAN] = 
+	{
+		.size = 0x78,
+		.y_offset = 1,
+	},
+	[SPECIES_CSEKIBANKI] = 
+	{
+		.size = 0x56,
+		.y_offset = 8,
+	},
+	[SPECIES_SEKIBANKI] = 
+	{
+		.size = 0x48,
+		.y_offset = 1,
+	},
+	[SPECIES_TSEKIBANKI] = 
+	{
+		.size = 0x78,
+		.y_offset = 4,
+	},
+	[SPECIES_SENDAI] = 
+	{
+		.size = 0x78,
+		.y_offset = 1,
+	},
+	[SPECIES_CSHINGYOKU] = 
+	{
+		.size = 0x88,
+		.y_offset = 1,
+	},
+	[SPECIES_SHINGYOKUF] = 
+	{
+		.size = 0x88,
+		.y_offset = 1,
+	},
+	[SPECIES_SHINGOKYUM] = 
+	{
+		.size = 0x88,
+		.y_offset = 1,
+	},
+	[SPECIES_SHINGYOKUO] = 
+	{
+		.size = 0x88,
+		.y_offset = 1,
+	},
+	[SPECIES_CSHINKI] = 
+	{
+		.size = 0x57,
+		.y_offset = 2,
+	},
+	[SPECIES_SHINKI] = 
+	{
+		.size = 0x78,
+		.y_offset = 0,
+	},
+	[SPECIES_CSHIZUHA] = 
+	{
+		.size = 0x46,
+		.y_offset = 4,
+	},
+	[SPECIES_SHIZUHA] = 
+	{
+		.size = 0x66,
+		.y_offset = 2,
+	},
+	[SPECIES_SSHIZUHA] = 
+	{
+		.size = 0x47,
+		.y_offset = 2,
+	},
+	[SPECIES_HSHIZUHA] = 
+	{
+		.size = 0x88,
+		.y_offset = 2,
+	},
+	[SPECIES_ASHOU] = 
+	{
+		.size = 0x88,
+		.y_offset = 0,
+	},
+	[SPECIES_CSHOU] = 
+	{
+		.size = 0x57,
+		.y_offset = 3,
+	},
+	[SPECIES_SHOU] = 
+	{
+		.size = 0x88,
+		.y_offset = 1,
+	},
+	[SPECIES_TSHOU] = 
+	{
+		.size = 0x67,
+		.y_offset = 4,
+	},
+	[SPECIES_ASTAR] = 
+	{
+		.size = 0x68,
+		.y_offset = 1,
+	},
+	[SPECIES_CSTAR] = 
+	{
+		.size = 0x47,
+		.y_offset = 4,
+	},
+	[SPECIES_HSTAR] = 
+	{
+		.size = 0x78,
+		.y_offset = 1,
+	},
+	[SPECIES_STAR] = 
+	{
+		.size = 0x68,
+		.y_offset = 2,
+	},
+	[SPECIES_CSUIKA] = 
+	{
+		.size = 0x65,
+		.y_offset = 4,
+	},
+	[SPECIES_SUIKA] = 
+	{
+		.size = 0x67,
+		.y_offset = 3,
+	},
+	[SPECIES_ASUIKA] = 
+	{
+		.size = 0x66,
+		.y_offset = 5,
+	},
+	[SPECIES_TSUIKA] = 
+	{
+		.size = 0x87,
+		.y_offset = 2,
+	},
+	[SPECIES_ASUKUNA] = 
+	{
+		.size = 0x88,
+		.y_offset = 3,
+	},
+	[SPECIES_CSUKUNA] = 
+	{
+		.size = 0x66,
+		.y_offset = 9,
+	},
+	[SPECIES_SUKUNA] = 
+	{
+		.size = 0x88,
+		.y_offset = 1,
+	},
+	[SPECIES_CSUMIREKO] = 
+	{
+		.size = 0x46,
+		.y_offset = 6,
+	},
+	[SPECIES_SUMIREKO] = 
+	{
+		.size = 0x78,
+		.y_offset = 0,
+	},
+	[SPECIES_ASUNNY] = 
+	{
+		.size = 0x68,
+		.y_offset = 1,
+	},
+	[SPECIES_CSUNNY] = 
+	{
+		.size = 0x66,
+		.y_offset = 5,
+	},
+	[SPECIES_DSUNNY] = 
+	{
+		.size = 0x78,
+		.y_offset = 1,
+	},
+	[SPECIES_SUNNY] = 
+	{
+		.size = 0x78,
+		.y_offset = 2,
+	},
+	[SPECIES_ASUWAKO] = 
+	{
+		.size = 0x78,
+		.y_offset = 1,
+	},
+	[SPECIES_CSUWAKO] = 
+	{
+		.size = 0x45,
+		.y_offset = 7,
+	},
+	[SPECIES_DSUWAKO] = 
+	{
+		.size = 0x56,
+		.y_offset = 5,
+	},
+	[SPECIES_SUWAKO] = 
+	{
+		.size = 0x56,
+		.y_offset = 9,
+	},
+	[SPECIES_TENMA] = 
+	{
+		.size = 0x76,
+		.y_offset = 5,
+	},
+	[SPECIES_ATENSHI] = 
+	{
+		.size = 0x88,
+		.y_offset = 1,
+	},
+	[SPECIES_CTENSHI] = 
+	{
+		.size = 0x56,
+		.y_offset = 5,
+	},
+	[SPECIES_DTENSHI] = 
+	{
+		.size = 0x68,
+		.y_offset = 3,
+	},
+	[SPECIES_TENSHI] = 
+	{
+		.size = 0x58,
+		.y_offset = 2,
+	},
+	[SPECIES_TENSOKU] = 
+	{
+		.size = 0x68,
+		.y_offset = 1,
+	},
+	[SPECIES_ADTEWI] = 
+	{
+		.size = 0x68,
+		.y_offset = 2,
+	},
+	[SPECIES_ATEWI] = 
+	{
+		.size = 0x48,
+		.y_offset = 0,
+	},
+	[SPECIES_CTEWI] = 
+	{
+		.size = 0x45,
+		.y_offset = 7,
+	},
+	[SPECIES_DTEWI] = 
+	{
+		.size = 0x68,
+		.y_offset = 1,
+	},
+	[SPECIES_TEWI] = 
+	{
+		.size = 0x68,
+		.y_offset = 1,
+	},
+	[SPECIES_CTOJIKO] = 
+	{
+		.size = 0x57,
+		.y_offset = 5,
+	},
+	[SPECIES_TOJIKO] = 
+	{
+		.size = 0x77,
+		.y_offset = 5,
+	},
+	[SPECIES_STOJIKO] = 
+	{
+		.size = 0x68,
+		.y_offset = 1,
+	},
+	[SPECIES_ATOKIKO] = 
+	{
+		.size = 0x68,
+		.y_offset = 2,
+	},
+	[SPECIES_CTOKIKO] = 
+	{
+		.size = 0x65,
+		.y_offset = 11,
+	},
+	[SPECIES_TOKIKO] = 
+	{
+		.size = 0x68,
+		.y_offset = 1,
+	},
+	[SPECIES_TORI] = 
+	{
+		.size = 0x77,
+		.y_offset = 5,
+	},
+	[SPECIES_CTOYOHIME] = 
+	{
+		.size = 0x56,
+		.y_offset = 4,
+	},
+	[SPECIES_TOYOHIME] = 
+	{
+		.size = 0x58,
+		.y_offset = 0,
+	},
+	[SPECIES_TTOYOHIME] = 
+	{
+		.size = 0x77,
+		.y_offset = 4,
+	},
+	[SPECIES_AUTSUHO] = 
+	{
+		.size = 0x88,
+		.y_offset = 1,
+	},
+	[SPECIES_CUTSUHO] = 
+	{
+		.size = 0x67,
+		.y_offset = 7,
+	},
+	[SPECIES_UTSUHO] = 
+	{
+		.size = 0x88,
+		.y_offset = 1,
+	},
+	[SPECIES_SUTSUHO] = 
+	{
+		.size = 0x88,
+		.y_offset = 2,
+	},
+	[SPECIES_CWAKASAGIHIME] = 
+	{
+		.size = 0x67,
+		.y_offset = 7,
+	},
+	[SPECIES_WAKASAGIHIME] = 
+	{
+		.size = 0x78,
+		.y_offset = 2,
+	},
+	[SPECIES_AWAKASAGIHIME] = 
+	{
+		.size = 0x77,
+		.y_offset = 5,
+	},
+	[SPECIES_CWRIGGLE] = 
+	{
+		.size = 0x55,
+		.y_offset = 5,
+	},
+	[SPECIES_DWRIGGLE] = 
+	{
+		.size = 0x78,
+		.y_offset = 1,
+	},
+	[SPECIES_WRIGGLE] = 
+	{
+		.size = 0x68,
+		.y_offset = 1,
+	},
+	[SPECIES_SWRIGGLE] = 
+	{
+		.size = 0x88,
+		.y_offset = 0,
+	},
+	[SPECIES_XSENDAI] = 
+	{
+		.size = 0x78,
+		.y_offset = 1,
+	},
+	[SPECIES_XSUWAKO] = 
+	{
+		.size = 0x78,
+		.y_offset = 0,
+	},
+	[SPECIES_XTENMA] = 
+	{
+		.size = 0x88,
+		.y_offset = 0,
+	},
+	[SPECIES_XTENSHI] = 
+	{
+		.size = 0x88,
+		.y_offset = 0,
+	},
+	[SPECIES_XUTSUHO] = 
+	{
+		.size = 0x88,
+		.y_offset = 0,
+	},
+	[SPECIES_CYAMAME] = 
+	{
+		.size = 0x54,
+		.y_offset = 6,
+	},
+	[SPECIES_YAMAME] = 
+	{
+		.size = 0x58,
+		.y_offset = 2,
+	},
+	[SPECIES_SYAMAME] = 
+	{
+		.size = 0x88,
+		.y_offset = 2,
+	},
+	[SPECIES_TYAMAME] = 
+	{
+		.size = 0x48,
+		.y_offset = 0,
+	},
+	[SPECIES_CYATSUHASHI] = 
+	{
+		.size = 0x36,
+		.y_offset = 10,
+	},
+	[SPECIES_YATSUHASHI] = 
+	{
+		.size = 0x77,
+		.y_offset = 3,
+	},
+	[SPECIES_CYORIHIME] = 
+	{
+		.size = 0x57,
+		.y_offset = 4,
+	},
+	[SPECIES_YORIHIME] = 
+	{
+		.size = 0x78,
+		.y_offset = 0,
+	},
+	[SPECIES_SYORIHIME] = 
+	{
+		.size = 0x78,
+		.y_offset = 0,
+	},
+	[SPECIES_CYOSHIKA] = 
+	{
+		.size = 0x36,
+		.y_offset = 0,
+	},
+	[SPECIES_YOSHIKA] = 
+	{
+		.size = 0x58,
+		.y_offset = 1,
+	},
+	[SPECIES_HYOSHIKA] = 
+	{
+		.size = 0x48,
+		.y_offset = 0,
+	},
+	[SPECIES_YOUKI] = 
+	{
+		.size = 0x78,
+		.y_offset = 0,
+	},
+	[SPECIES_CYOUMU] = 
+	{
+		.size = 0x56,
+		.y_offset = 4,
+	},
+	[SPECIES_DYOUMU] = 
+	{
+		.size = 0x77,
+		.y_offset = 2,
+	},
+	[SPECIES_LYOUMU] = 
+	{
+		.size = 0x88,
+		.y_offset = 1,
+	},
+	[SPECIES_YOUMU] = 
+	{
+		.size = 0x88,
+		.y_offset = 1,
+	},
+	[SPECIES_SYOUMU] = 
+	{
+		.size = 0x77,
+		.y_offset = 4,
+	},
+	[SPECIES_ADYUKARI] = 
+	{
+		.size = 0x77,
+		.y_offset = 6,
+	},
+	[SPECIES_CYUKARI] = 
+	{
+		.size = 0x75,
+		.y_offset = 14,
+	},
+	[SPECIES_DYUKARI] = 
+	{
+		.size = 0x88,
+		.y_offset = 0,
+	},
+	[SPECIES_YUKARI] = 
+	{
+		.size = 0x67,
+		.y_offset = 5,
+	},
+	[SPECIES_TYUKARI] = 
+	{
+		.size = 0x77,
+		.y_offset = 4,
+	},
+	[SPECIES_CYUKI] = 
+	{
+		.size = 0x57,
+		.y_offset = 1,
+	},
+	[SPECIES_YUKI] = 
+	{
+		.size = 0x88,
+		.y_offset = 0,
+	},
+	[SPECIES_CYUMEKO] = 
+	{
+		.size = 0x56,
+		.y_offset = 2,
+	},
+	[SPECIES_YUMEKO] = 
+	{
+		.size = 0x58,
+		.y_offset = 0,
+	},
+	[SPECIES_CYUMEMI] = 
+	{
+		.size = 0x67,
+		.y_offset = 1,
+	},
+	[SPECIES_YUMEMI] = 
+	{
+		.size = 0x78,
+		.y_offset = 0,
+	},
+	[SPECIES_AYUUGI] = 
+	{
+		.size = 0x78,
+		.y_offset = 1,
+	},
+	[SPECIES_CYUUGI] = 
+	{
+		.size = 0x67,
+		.y_offset = 3,
+	},
+	[SPECIES_DYUUGI] = 
+	{
+		.size = 0x68,
+		.y_offset = 0,
+	},
+	[SPECIES_YUUGI] = 
+	{
+		.size = 0x56,
+		.y_offset = 4,
+	},
+	[SPECIES_AYUUKA] = 
+	{
+		.size = 0x58,
+		.y_offset = 0,
+	},
+	[SPECIES_YUUKA] = 
+	{
+		.size = 0x47,
+		.y_offset = 4,
+	},
+	[SPECIES_CYUUKA] = 
+	{
+		.size = 0x58,
+		.y_offset = 1,
+	},
+	[SPECIES_TYUUKA] = 
+	{
+		.size = 0x57,
+		.y_offset = 2,
+	},
+	[SPECIES_AYUYUKO] = 
+	{
+		.size = 0x88,
+		.y_offset = 1,
+	},
+	[SPECIES_CYUYUKO] = 
+	{
+		.size = 0x46,
+		.y_offset = 6,
+	},
+	[SPECIES_DYUYUKO] = 
+	{
+		.size = 0x88,
+		.y_offset = 2,
+	},
+	[SPECIES_LYUYUKO] = 
+	{
+		.size = 0x88,
+		.y_offset = 1,
+	},
+	[SPECIES_YUYUKO] = 
+	{
+		.size = 0x77,
+		.y_offset = 4,
+	},
+	[SPECIES_ZFAIRY] = 
+	{
+		.size = 0x57,
+		.y_offset = 7,
+	},
     [SPECIES_EGG] =
     {
         .size = 0x33,
         .y_offset = 0x14,
-    },
-    [SPECIES_UNOWN_B] =
-    {
-        .size = 0x34,
-        .y_offset = 0x10,
-    },
-    [SPECIES_UNOWN_C] =
-    {
-        .size = 0x44,
-        .y_offset = 0x10,
-    },
-    [SPECIES_UNOWN_D] =
-    {
-        .size = 0x44,
-        .y_offset = 0x10,
-    },
-    [SPECIES_UNOWN_E] =
-    {
-        .size = 0x44,
-        .y_offset = 0x11,
-    },
-    [SPECIES_UNOWN_F] =
-    {
-        .size = 0x44,
-        .y_offset = 0x11,
-    },
-    [SPECIES_UNOWN_G] =
-    {
-        .size = 0x35,
-        .y_offset = 0x0e,
-    },
-    [SPECIES_UNOWN_H] =
-    {
-        .size = 0x44,
-        .y_offset = 0x10,
-    },
-    [SPECIES_UNOWN_I] =
-    {
-        .size = 0x34,
-        .y_offset = 0x10,
-    },
-    [SPECIES_UNOWN_J] =
-    {
-        .size = 0x34,
-        .y_offset = 0x11,
-    },
-    [SPECIES_UNOWN_K] =
-    {
-        .size = 0x44,
-        .y_offset = 0x11,
-    },
-    [SPECIES_UNOWN_L] =
-    {
-        .size = 0x34,
-        .y_offset = 0x13,
-    },
-    [SPECIES_UNOWN_M] =
-    {
-        .size = 0x44,
-        .y_offset = 0x13,
-    },
-    [SPECIES_UNOWN_N] =
-    {
-        .size = 0x43,
-        .y_offset = 0x14,
-    },
-    [SPECIES_UNOWN_O] =
-    {
-        .size = 0x44,
-        .y_offset = 0x10,
-    },
-    [SPECIES_UNOWN_P] =
-    {
-        .size = 0x34,
-        .y_offset = 0x13,
-    },
-    [SPECIES_UNOWN_Q] =
-    {
-        .size = 0x43,
-        .y_offset = 0x15,
-    },
-    [SPECIES_UNOWN_R] =
-    {
-        .size = 0x34,
-        .y_offset = 0x13,
-    },
-    [SPECIES_UNOWN_S] =
-    {
-        .size = 0x45,
-        .y_offset = 0x0c,
-    },
-    [SPECIES_UNOWN_T] =
-    {
-        .size = 0x34,
-        .y_offset = 0x12,
-    },
-    [SPECIES_UNOWN_U] =
-    {
-        .size = 0x44,
-        .y_offset = 0x12,
-    },
-    [SPECIES_UNOWN_V] =
-    {
-        .size = 0x44,
-        .y_offset = 0x12,
-    },
-    [SPECIES_UNOWN_W] =
-    {
-        .size = 0x44,
-        .y_offset = 0x13,
-    },
-    [SPECIES_UNOWN_X] =
-    {
-        .size = 0x33,
-        .y_offset = 0x15,
-    },
-    [SPECIES_UNOWN_Y] =
-    {
-        .size = 0x34,
-        .y_offset = 0x11,
-    },
-    [SPECIES_UNOWN_Z] =
-    {
-        .size = 0x34,
-        .y_offset = 0x10,
-    },
-    [SPECIES_UNOWN_EMARK] =
-    {
-        .size = 0x35,
-        .y_offset = 0x0f,
-    },
-    [SPECIES_UNOWN_QMARK] =
-    {
-        .size = 0x35,
-        .y_offset = 0x0d,
     },
 };
