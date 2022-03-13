@@ -183,15 +183,15 @@ static const struct OamData gOamData_8260270 = {
 
 static const struct SpriteTemplate sHealthboxPlayerSpriteTemplates[] = {
     {
-        .tileTag = 55039,
-        .paletteTag = 55039,
+        .tileTag = TAG_HEALTHBOX_PLAYER1_TILE,
+        .paletteTag = TAG_HEALTHBOX_PAL,
         .oam = &gOamData_8260270,
         .anims = gDummySpriteAnimTable,
         .affineAnims = gDummySpriteAffineAnimTable,
         .callback = SpriteCallbackDummy
     }, {
-        .tileTag = 55040,
-        .paletteTag = 55039,
+        .tileTag = TAG_HEALTHBOX_PLAYER2_TILE,
+        .paletteTag = TAG_HEALTHBOX_PAL,
         .oam = &gOamData_8260270,
         .anims = gDummySpriteAnimTable,
         .affineAnims = gDummySpriteAffineAnimTable,
@@ -201,15 +201,15 @@ static const struct SpriteTemplate sHealthboxPlayerSpriteTemplates[] = {
 
 static const struct SpriteTemplate sHealthboxOpponentSpriteTemplates[] = {
     {
-        .tileTag = 55041,
-        .paletteTag = 55039,
+        .tileTag = TAG_HEALTHBOX_OPPONENT1_TILE,
+        .paletteTag = TAG_HEALTHBOX_PAL,
         .oam = &gOamData_8260270,
         .anims = gDummySpriteAnimTable,
         .affineAnims = gDummySpriteAffineAnimTable,
         .callback = SpriteCallbackDummy
     }, {
-        .tileTag = 55042,
-        .paletteTag = 55039,
+        .tileTag = TAG_HEALTHBOX_OPPONENT2_TILE,
+        .paletteTag = TAG_HEALTHBOX_PAL,
         .oam = &gOamData_8260270,
         .anims = gDummySpriteAnimTable,
         .affineAnims = gDummySpriteAffineAnimTable,
@@ -220,7 +220,7 @@ static const struct SpriteTemplate sHealthboxOpponentSpriteTemplates[] = {
 static const struct SpriteTemplate sHealthboxSafariSpriteTemplate =
 {
     .tileTag = 55051,
-    .paletteTag = 55039,
+    .paletteTag = TAG_HEALTHBOX_PAL,
     .oam = &gOamData_8260270,
     .anims = gDummySpriteAnimTable,
     .affineAnims = gDummySpriteAffineAnimTable,
@@ -483,6 +483,7 @@ static void sub_8047B0C(s16 number, u16 *dest, bool8 unk)
     }
 }
 
+// unused
 static void sub_8047CAC(s16 num1, s16 num2, u16 *dest)
 {
     dest[4] = 0x1E;
@@ -711,10 +712,10 @@ void InitBattlerHealthboxCoords(u8 battler)
         switch (GetBattlerPosition(battler))
         {
         case B_POSITION_PLAYER_LEFT:
-            x = 159, y = 75;
+            x = 151, y = 75;
             break;
         case B_POSITION_PLAYER_RIGHT:
-            x = 171, y = 100;
+            x = 163, y = 100;
             break;
         case B_POSITION_OPPONENT_LEFT:
             x = 44, y = 19;
@@ -735,9 +736,15 @@ static void UpdateLvlInHealthbox(u8 healthboxSpriteId, u8 lvl)
     u8 text[16] = _("{LV_2}");
     u32 xPos;
     u8 *objVram;
-
-    objVram = ConvertIntToDecimalStringN(text + 2, lvl, STR_CONV_MODE_LEFT_ALIGN, 3);
-    xPos = 5 * (3 - (objVram - (text + 2)));
+    
+    if (lvl == 100)
+        objVram = ConvertIntToDecimalStringN(text, lvl, STR_CONV_MODE_LEFT_ALIGN, 3);
+    else if (lvl > 9)
+        objVram = ConvertIntToDecimalStringN(text + 1, lvl, STR_CONV_MODE_LEFT_ALIGN, 3);
+    else
+        objVram = ConvertIntToDecimalStringN(text + 2, lvl, STR_CONV_MODE_LEFT_ALIGN, 3);
+    
+    xPos = 2;
 
     windowTileData = AddTextPrinterAndCreateWindowOnHealthbox(text, xPos, 3, &windowId);
     spriteTileNum = gSprites[healthboxSpriteId].oam.tileNum * TILE_SIZE_4BPP;
@@ -746,16 +753,16 @@ static void UpdateLvlInHealthbox(u8 healthboxSpriteId, u8 lvl)
     {
         objVram = (void*)(OBJ_VRAM0);
         if (!IsDoubleBattle())
-            objVram += spriteTileNum + 0x820;
+            objVram += spriteTileNum + 0x860;
         else
-            objVram += spriteTileNum + 0x420;
+            objVram += spriteTileNum + 0x460;
     }
     else
     {
         objVram = (void*)(OBJ_VRAM0);
-        objVram += spriteTileNum + 0x400;
+        objVram += spriteTileNum + 0x440;
     }
-    TextIntoHealthboxObject(objVram, windowTileData, 3);
+    TextIntoHealthboxObject(objVram, windowTileData, 2);
     RemoveWindowOnHealthbox(windowId);
 }
 
@@ -1466,16 +1473,13 @@ void UpdateNickInHealthbox(u8 healthboxSpriteId, struct Pokemon *mon)
 
     ptr = StringCopy(gDisplayedStringBattle, gUnknown_8260556);
     GetMonData(mon, MON_DATA_NICKNAME, nickname);
-    StringGetEnd10(nickname);
+    StringGetEndN(nickname, POKEMON_NAME_LENGTH);
     ptr = StringCopy(ptr, nickname);
     *ptr++ = EXT_CTRL_CODE_BEGIN;
     *ptr++ = EXT_CTRL_CODE_COLOR;
 
     gender = GetMonGender(mon);
     species = GetMonData(mon, MON_DATA_SPECIES);
-
-    if ((species == SPECIES_NIDORAN_F || species == SPECIES_NIDORAN_M) && StringCompare(nickname, gSpeciesNames[species]) == 0)
-        gender = 100;
 
     if (CheckBattleTypeGhost(mon, gSprites[healthboxSpriteId].hMain_Battler))
         gender = 100;
@@ -1513,11 +1517,15 @@ void UpdateNickInHealthbox(u8 healthboxSpriteId, struct Pokemon *mon)
             ptr += spriteTileNum + 0x800;
         else
             ptr += spriteTileNum + 0x400;
-        TextIntoHealthboxObject(ptr, windowTileData + 0xC0, 1);
+        TextIntoHealthboxObject(ptr, windowTileData + 0xC0, 3);
     }
     else
     {
         TextIntoHealthboxObject((void*)(OBJ_VRAM0 + 0x20 + spriteTileNum), windowTileData, 7);
+        ptr = (void*)(OBJ_VRAM0);
+        
+        ptr += spriteTileNum + 0x400;
+        TextIntoHealthboxObject(ptr, windowTileData + 0xE0, 2);
     }
 
     RemoveWindowOnHealthbox(windowId);
@@ -2141,7 +2149,7 @@ static const struct WindowTemplate sHealthboxWindowTemplate = {
     .bg = 0,
     .tilemapLeft = 0,
     .tilemapTop = 0,
-    .width = 8,
+    .width = 16,
     .height = 2,
     .paletteNum = 0,
     .baseBlock = 0x000
@@ -2174,8 +2182,10 @@ static void RemoveWindowOnHealthbox(u32 windowId)
 
 static void TextIntoHealthboxObject(void *dest, u8 *windowTileData, s32 windowWidth)
 {
-    CpuCopy32(windowTileData + 256, dest + 256, windowWidth * TILE_SIZE_4BPP);
+    // copy the bottom part
+    CpuCopy32(windowTileData + 512, dest + 256, windowWidth * TILE_SIZE_4BPP);
 // + 256 as that prevents the top 4 blank rows of sHealthboxWindowTemplate from being copied
+    // copy the top row, avoiding the top 4 blank rows
     if (windowWidth > 0)
     {
         do

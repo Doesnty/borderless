@@ -100,8 +100,6 @@ const u8 gEnemyMonElevation[NUM_SPECIES] =
     [SPECIES_RAIKO] = 4,
     [SPECIES_ARAIKO] = 4,
     
-    [SPECIES_DREIMU] = 4,
-    
     [SPECIES_REISEN] = 2,
     [SPECIES_DREISEN] = 3,
     [SPECIES_ADREISEN] = 4,

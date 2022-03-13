@@ -54,6 +54,18 @@ u8 *StringCopy10(u8 *dest, const u8 *src)
     return &dest[i];
 }
 
+u8 *StringGetEndN(u8 *str, const u32 limit)
+{
+    u8 i;
+
+    for (i = 0; i < limit; i++)
+        if (str[i] == EOS)
+            return &str[i];
+
+    str[i] = EOS;
+    return &str[i];
+}
+
 u8 *StringGetEnd10(u8 *str)
 {
     u8 i;

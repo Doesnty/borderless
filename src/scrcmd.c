@@ -1615,7 +1615,7 @@ bool8 ScrCmd_bufferpartymonnick(struct ScriptContext * ctx)
     u16 partyIndex = VarGet(ScriptReadHalfword(ctx));
 
     GetMonData(&gPlayerParty[partyIndex], MON_DATA_NICKNAME, sScriptStringVars[stringVarIndex]);
-    StringGetEnd10(sScriptStringVars[stringVarIndex]);
+    StringGetEndN(sScriptStringVars[stringVarIndex], POKEMON_NAME_LENGTH);
     return FALSE;
 }
 

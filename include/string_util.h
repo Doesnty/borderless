@@ -11,6 +11,7 @@ enum StringConvertMode
 };
 
 u8 *StringCopy10(u8 *dest, const u8 *src);
+u8 *StringGetEndN(u8 *str, const u32 limit);
 u8 *StringGetEnd10(u8 *str);
 u8 *StringCopy7(u8 *dest, const u8 *src);
 u8 *StringCopy(u8 *dest, const u8 *src);

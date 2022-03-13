@@ -286,12 +286,12 @@ static const struct WindowTemplate gUnknown_83E22A0[6] = {
         .width = 19,
         .height = 8,
         .paletteNum = 10,
-        .baseBlock = 0x00c8
+        .baseBlock = 0x00cc
     }, {
         .bg = 3,
         .tilemapLeft = 8,
         .tilemapTop = 6,
-        .width = 14,
+        .width = 15,
         .height = 2,
         .paletteNum = 10,
         .baseBlock = 0x0030
@@ -302,7 +302,7 @@ static const struct WindowTemplate gUnknown_83E22A0[6] = {
         .width = 16,
         .height = 2,
         .paletteNum = 10,
-        .baseBlock = 0x004c
+        .baseBlock = 0x0050
     }, {
         .bg = 0,
         .tilemapLeft = 0,
@@ -310,7 +310,7 @@ static const struct WindowTemplate gUnknown_83E22A0[6] = {
         .width = 30,
         .height = 2,
         .paletteNum = 11,
-        .baseBlock = 0x006c
+        .baseBlock = 0x0070
     }, DUMMY_WIN_TEMPLATE
 };
 
@@ -1666,7 +1666,7 @@ static void AddGenderIconFunc_Yes(void)
             StringCopy(genderSymbol, gText_FemaleSymbol);
             gender = FEMALE;
         }
-        AddTextPrinterParameterized3(sNamingScreenData->windows[2], 2, 0x68, 1, sGenderColors[gender], TEXT_SPEED_FF, genderSymbol);
+        AddTextPrinterParameterized3(sNamingScreenData->windows[2], 2, 0x72, 1, sGenderColors[gender], TEXT_SPEED_FF, genderSymbol);
     }
 }
 

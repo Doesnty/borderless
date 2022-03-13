@@ -1239,17 +1239,17 @@ static void TradeBufferOTnameAndNicknames(void)
         mpId = GetMultiplayerId();
         StringCopy(gStringVar1, gLinkPlayers[mpId ^ 1].name);
         GetMonData(&gEnemyParty[gSelectedTradeMonPositions[1] % 6], MON_DATA_NICKNAME, nickname);
-        StringCopy10(gStringVar3, nickname);
+        StringCopyN(gStringVar3, nickname, POKEMON_NAME_LENGTH);
         GetMonData(&gPlayerParty[gSelectedTradeMonPositions[0]], MON_DATA_NICKNAME, nickname);
-        StringCopy10(gStringVar2, nickname);
+        StringCopyN(gStringVar2, nickname, POKEMON_NAME_LENGTH);
     }
     else
     {
         inGameTrade = &sInGameTrades[gSpecialVar_0x8004];
         StringCopy(gStringVar1, inGameTrade->otName);
-        StringCopy10(gStringVar3, inGameTrade->nickname);
+        StringCopyN(gStringVar3, inGameTrade->nickname, POKEMON_NAME_LENGTH);
         GetMonData(&gPlayerParty[gSpecialVar_0x8005], MON_DATA_NICKNAME, nickname);
-        StringCopy10(gStringVar2, nickname);
+        StringCopyN(gStringVar2, nickname, POKEMON_NAME_LENGTH);
     }
 }
 
@@ -2424,7 +2424,7 @@ static void BufferInGameTradeMonName(void)
     u8 nickname[30];
     const struct InGameTrade * inGameTrade = &sInGameTrades[gSpecialVar_0x8004];
     GetMonData(&gPlayerParty[gSpecialVar_0x8005], MON_DATA_NICKNAME, nickname);
-    StringCopy10(gStringVar1, nickname);
+    StringCopyN(gStringVar1, nickname, POKEMON_NAME_LENGTH);
     StringCopy(gStringVar2, gSpeciesNames[inGameTrade->species]);
 }
 

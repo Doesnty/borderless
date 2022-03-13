@@ -1663,7 +1663,7 @@ static void ChangePokemonNickname_CB(void)
 void BufferMonNickname(void)
 {
     GetMonData(&gPlayerParty[gSpecialVar_0x8004], MON_DATA_NICKNAME, gStringVar1);
-    StringGetEnd10(gStringVar1);
+    StringGetEndN(gStringVar1, POKEMON_NAME_LENGTH);
 }
 
 void IsMonOTIDNotPlayers(void)
