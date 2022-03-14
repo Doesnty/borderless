@@ -425,6 +425,7 @@ void TrySetUpQuestLogScenes_ElseContinueFromSave(u8 taskId)
             sNumScenes++;
     }
 
+    /*
     if (sNumScenes != 0)
     {
         gHelpSystemEnabled = FALSE;
@@ -432,10 +433,10 @@ void TrySetUpQuestLogScenes_ElseContinueFromSave(u8 taskId)
         DestroyTask(taskId);
     }
     else
-    {
-        SetMainCallback2(CB2_ContinueSavedGame);
-        DestroyTask(taskId);
-    }
+    { */
+    SetMainCallback2(CB2_ContinueSavedGame);
+    DestroyTask(taskId);
+    //}
 }
 
 static void Task_BeginQuestLogPlayback(u8 taskId)
