@@ -1,7 +1,9 @@
 #include <string.h>
 #include "gba/m4a_internal.h"
+#include "global.h"
 
 extern const u8 gCgb3Vol[];
+
 
 #define BSS_CODE __attribute__((section(".bss.code")))
 
@@ -19,6 +21,13 @@ struct MusicPlayerInfo gMPlayInfo_SE1;
 struct MusicPlayerInfo gMPlayInfo_SE2;
 struct MusicPlayerInfo gMPlayInfo_SE3;
 u8 gMPlayMemAccArea[0x10];
+
+static const struct Song* getSongTable()
+{
+    if (gSaveBlock2Ptr->optionsMusic)
+        return gSongTable;
+    return g18SongTable;
+} 
 
 u32 MidiKeyToFreq(struct WaveData *wav, u8 key, u8 fineAdjust)
 {
@@ -107,9 +116,11 @@ void m4aSoundMain(void)
 void m4aSongNumStart(u16 n)
 {
     const struct MusicPlayer *mplayTable = gMPlayTable;
-    const struct Song *songTable = gSongTable;
+    const struct Song *songTable = getSongTable(); 
     const struct Song *song = &songTable[n];
     const struct MusicPlayer *mplay = &mplayTable[song->ms];
+    
+
 
     MPlayStart(mplay->info, song->header);
 }
@@ -117,7 +128,7 @@ void m4aSongNumStart(u16 n)
 void m4aSongNumStartOrChange(u16 n)
 {
     const struct MusicPlayer *mplayTable = gMPlayTable;
-    const struct Song *songTable = gSongTable;
+    const struct Song *songTable = getSongTable();
     const struct Song *song = &songTable[n];
     const struct MusicPlayer *mplay = &mplayTable[song->ms];
 
@@ -138,7 +149,7 @@ void m4aSongNumStartOrChange(u16 n)
 void m4aSongNumStartOrContinue(u16 n)
 {
     const struct MusicPlayer *mplayTable = gMPlayTable;
-    const struct Song *songTable = gSongTable;
+    const struct Song *songTable = getSongTable();
     const struct Song *song = &songTable[n];
     const struct MusicPlayer *mplay = &mplayTable[song->ms];
 
@@ -153,7 +164,7 @@ void m4aSongNumStartOrContinue(u16 n)
 void m4aSongNumStop(u16 n)
 {
     const struct MusicPlayer *mplayTable = gMPlayTable;
-    const struct Song *songTable = gSongTable;
+    const struct Song *songTable = getSongTable();
     const struct Song *song = &songTable[n];
     const struct MusicPlayer *mplay = &mplayTable[song->ms];
 
@@ -164,7 +175,7 @@ void m4aSongNumStop(u16 n)
 void m4aSongNumContinue(u16 n)
 {
     const struct MusicPlayer *mplayTable = gMPlayTable;
-    const struct Song *songTable = gSongTable;
+    const struct Song *songTable = getSongTable();
     const struct Song *song = &songTable[n];
     const struct MusicPlayer *mplay = &mplayTable[song->ms];
 
