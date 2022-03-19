@@ -343,7 +343,7 @@ BattleScript_EffectAbsorb::
 	waitmessage 0x40
 	negativedamage
 	orword gHitMarker, HITMARKER_IGNORE_SUBSTITUTE
-	jumpifability BS_TARGET, ABILITY_LIQUID_OOZE, BattleScript_AbsorbLiquidOoze
+	jumpifability BS_TARGET, ABILITY_STRANGE_MIST, BattleScript_AbsorbLiquidOoze
 	setbyte cMULTISTRING_CHOOSER, 0
 	goto BattleScript_AbsorbUpdateHp
 
@@ -600,7 +600,7 @@ BattleScript_EffectRoar::
 	attackcanceler
 	attackstring
 	ppreduce
-	jumpifability BS_TARGET, ABILITY_SUCTION_CUPS, BattleScript_AbilityPreventsPhasingOut
+	jumpifability BS_TARGET, ABILITY_GATE_KEEPER, BattleScript_AbilityPreventsPhasingOut
 	jumpifstatus3 BS_TARGET, STATUS3_ROOTED, BattleScript_PrintMonIsRooted
 	accuracycheck BattleScript_ButItFailed, NO_ACC_CALC_CHECK_LOCK_ON
 	accuracycheck BattleScript_MoveMissedPause, ACC_CURR_MOVE
@@ -1910,7 +1910,7 @@ BattleScript_EffectFlinchMinimizeHit::
 
 BattleScript_EffectSolarbeam::
 	jumpifabilitypresent ABILITY_CLOUD_NINE, BattleScript_SolarbeamDecideTurn
-	jumpifabilitypresent ABILITY_AIR_LOCK, BattleScript_SolarbeamDecideTurn
+	jumpifabilitypresent ABILITY_HISOUTEN, BattleScript_SolarbeamDecideTurn
 	jumpifhalfword CMP_COMMON_BITS, gBattleWeather, 96, BattleScript_SolarbeamOnFirstTurn
 BattleScript_SolarbeamDecideTurn::
 	jumpifstatus2 BS_ATTACKER, STATUS2_MULTIPLETURNS, BattleScript_TwoTurnMovesSecondTurn
@@ -3242,7 +3242,7 @@ BattleScript_LeechSeedTurnDrain::
 	healthbarupdate BS_ATTACKER
 	datahpupdate BS_ATTACKER
 	copyword gBattleMoveDamage, gHpDealt
-	jumpifability BS_ATTACKER, ABILITY_LIQUID_OOZE, BattleScript_LeechSeedLiquidOoze
+	jumpifability BS_ATTACKER, ABILITY_STRANGE_MIST, BattleScript_LeechSeedLiquidOoze
 	manipulatedamage 0
 	setbyte cMULTISTRING_CHOOSER, 3
 	goto BattleScript_LeechSeedTurnPrintAndUpdateHp
@@ -4006,9 +4006,9 @@ BattleScript_IntimidateActivates::
 BattleScript_IntimidateActivationAnimLoop::
 	trygetintimidatetarget BattleScript_IntimidateEnd
 	jumpifstatus2 BS_TARGET, STATUS2_SUBSTITUTE, BattleScript_IntimidateFail
-	jumpifability BS_TARGET, ABILITY_CLEAR_BODY, BattleScript_IntimidateAbilityFail
-	jumpifability BS_TARGET, ABILITY_HYPER_CUTTER, BattleScript_IntimidateAbilityFail
-	jumpifability BS_TARGET, ABILITY_WHITE_SMOKE, BattleScript_IntimidateAbilityFail
+	jumpifability BS_TARGET, ABILITY_HAKUREI_MIKO, BattleScript_IntimidateAbilityFail
+	jumpifability BS_TARGET, ABILITY_HI_STRENGTH, BattleScript_IntimidateAbilityFail
+	jumpifability BS_TARGET, ABILITY_MAGIC_BARRIER, BattleScript_IntimidateAbilityFail
 	statbuffchange STAT_CHANGE_BS_PTR | STAT_CHANGE_NOT_PROTECT_AFFECTED, BattleScript_IntimidateFail
 	jumpifbyte CMP_GREATER_THAN, cMULTISTRING_CHOOSER, 1, BattleScript_IntimidateFail
 	setgraphicalstatchangevalues

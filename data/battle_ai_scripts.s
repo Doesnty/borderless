@@ -61,7 +61,7 @@ AI_CBM_CheckIfNegatesType::
 	if_equal ABILITY_VOLT_ABSORB, CheckIfVoltAbsorbCancelsElectric
 	if_equal ABILITY_WATER_ABSORB, CheckIfWaterAbsorbCancelsWater
 	if_equal ABILITY_FLASH_FIRE, CheckIfFlashFireCancelsFire
-	if_equal ABILITY_WONDER_GUARD, CheckIfWonderGuardCancelsMove
+	if_equal ABILITY_PLAY_GHOST, CheckIfWonderGuardCancelsMove
 	if_equal ABILITY_LEVITATE, CheckIfLevitateCancelsGroundMove
 	goto AI_CheckBadMove_CheckSoundproof
 
@@ -278,7 +278,7 @@ AI_CBM_EvasionUp:: @ 81DA056
 AI_CBM_AttackDown:: @ 81DA05F
 	if_stat_level_equal AI_TARGET, STAT_ATK, 0, Score_Minus10
 	get_ability AI_TARGET
-	if_equal ABILITY_HYPER_CUTTER, Score_Minus10
+	if_equal ABILITY_HI_STRENGTH, Score_Minus10
 	goto CheckIfAbilityBlocksStatChange
 
 AI_CBM_DefenseDown:: @ 81DA074
@@ -310,8 +310,8 @@ AI_CBM_EvasionDown:: @ 81DA0BD
 
 CheckIfAbilityBlocksStatChange:: @ 81DA0C5
 	get_ability AI_TARGET
-	if_equal ABILITY_CLEAR_BODY, Score_Minus10
-	if_equal ABILITY_WHITE_SMOKE, Score_Minus10
+	if_equal ABILITY_HAKUREI_MIKO, Score_Minus10
+	if_equal ABILITY_MAGIC_BARRIER, Score_Minus10
 	end
 
 AI_CBM_Haze:: @ 81DA0D4
@@ -338,7 +338,7 @@ AI_CBM_Roar:: @ 81DA14A
 	count_alive_pokemon AI_TARGET
 	if_equal 0, Score_Minus10
 	get_ability AI_TARGET
-	if_equal ABILITY_SUCTION_CUPS, Score_Minus10
+	if_equal ABILITY_GATE_KEEPER, Score_Minus10
 	end
 
 AI_CBM_Poison:: @ 81DA15B
@@ -372,7 +372,7 @@ AI_CBM_Magnitude:: @ 81DA1AA
 AI_CBM_HighRiskForDamage:: @ 81DA1B2
 	if_type_effectiveness AI_EFFECTIVENESS_x0, Score_Minus10
 	get_ability AI_TARGET
-	if_not_equal ABILITY_WONDER_GUARD, AI_CBM_HighRiskForDamage_End
+	if_not_equal ABILITY_PLAY_GHOST, AI_CBM_HighRiskForDamage_End
 	if_type_effectiveness AI_EFFECTIVENESS_x2, AI_CBM_HighRiskForDamage_End
 	goto Score_Minus10
 
@@ -548,7 +548,7 @@ AI_CBM_HelpingHand:: @ 81DA37E
 
 AI_CBM_TrickAndKnockOff:: @ 81DA386
 	get_ability AI_TARGET
-	if_equal ABILITY_STICKY_HOLD, Score_Minus10
+	if_equal ABILITY_COLLECTOR, Score_Minus10
 	end
 
 AI_CBM_Ingrain:: @ 81DA38F
@@ -2502,21 +2502,21 @@ AI_CV_ChangeSelfAbility_End:: @ 81DB80E
 
 AI_CV_ChangeSelfAbility_AbilitiesToEncourage:: @ 81DB80F
 	.byte ABILITY_SPEED_BOOST
-	.byte ABILITY_BATTLE_ARMOR
+	.byte ABILITY_GUARD_ARMOR
 	.byte ABILITY_SAND_VEIL
 	.byte ABILITY_STATIC
 	.byte ABILITY_FLASH_FIRE
-	.byte ABILITY_WONDER_GUARD
-	.byte ABILITY_EFFECT_SPORE
+	.byte ABILITY_PLAY_GHOST
+	.byte ABILITY_INFECTIOUS
 	.byte ABILITY_SWIFT_SWIM
-	.byte ABILITY_HUGE_POWER
+	.byte ABILITY_UNZAN
 	.byte ABILITY_RAIN_DISH
 	.byte ABILITY_CUTE_CHARM
-	.byte ABILITY_SHED_SKIN
-	.byte ABILITY_MARVEL_SCALE
+	.byte ABILITY_MAINTENANCE
+	.byte ABILITY_SPRING_CHARM
 	.byte ABILITY_PURE_POWER
 	.byte ABILITY_CHLOROPHYLL
-	.byte ABILITY_SHIELD_DUST
+	.byte ABILITY_FLAWLESS
 	.byte -1
 
 AI_CV_Superpower:: @ 81DB820
@@ -3230,8 +3230,6 @@ AI_Roaming:: @ 81DBCA8
 	if_equal ABILITY_SHADOW_TAG, AI_Roaming_End
 	get_ability AI_USER
 	if_equal ABILITY_LEVITATE, AI_Roaming_Flee
-	get_ability AI_TARGET
-	if_equal ABILITY_ARENA_TRAP, AI_Roaming_End
 
 AI_Roaming_Flee:: @ 81DBCD4
 	flee

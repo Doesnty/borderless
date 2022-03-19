@@ -1144,7 +1144,7 @@ bool8 HandleFaintedMonActions(void)
                 gBattleStruct->faintedActionsState = 4;
             break;
         case 6:
-            if (AbilityBattleEffects(ABILITYEFFECT_INTIMIDATE1, 0, 0, 0, 0) || AbilityBattleEffects(ABILITYEFFECT_TRACE, 0, 0, 0, 0) || ItemBattleEffects(1, 0, TRUE) || AbilityBattleEffects(ABILITYEFFECT_FORECAST, 0, 0, 0, 0))
+            if (AbilityBattleEffects(ABILITYEFFECT_INTIMIDATE1, 0, 0, 0, 0) || AbilityBattleEffects(ABILITYEFFECT_TRACE, 0, 0, 0, 0) || ItemBattleEffects(1, 0, TRUE))
                 return TRUE;
             ++gBattleStruct->faintedActionsState;
             break;
@@ -1543,7 +1543,10 @@ enum
 u8 CastformDataTypeChange(u8 battler)
 {
     u8 formChange = 0;
-    if (gBattleMons[battler].species != SPECIES_CASTFORM || gBattleMons[battler].ability != ABILITY_FORECAST || gBattleMons[battler].hp == 0)
+    return CASTFORM_NO_CHANGE;
+    // lol
+    /*
+    if (gBattleMons[battler].species != SPECIES_CASTFORM || gBattleMons[battler].hp == 0)
         return CASTFORM_NO_CHANGE;
     if (!WEATHER_HAS_EFFECT && !IS_BATTLER_OF_TYPE(battler, TYPE_NORMAL))
     {
@@ -1572,7 +1575,7 @@ u8 CastformDataTypeChange(u8 battler)
         SET_BATTLER_TYPE(battler, TYPE_ICE);
         formChange = CASTFORM_TO_ICE;
     }
-    return formChange;
+    return formChange; */
 }
 
 u8 AbilityBattleEffects(u8 caseID, u8 battler, u8 ability, u8 special, u16 moveArg)
@@ -1698,6 +1701,7 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u8 ability, u8 special, u16 moveA
                     gSpecialStatuses[battler].intimidatedMon = 1;
                 }
                 break;
+            /*
             case ABILITY_FORECAST:
                 effect = CastformDataTypeChange(battler);
                 if (effect != 0)
@@ -1706,7 +1710,7 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u8 ability, u8 special, u16 moveA
                     gBattleScripting.battler = battler;
                     *(&gBattleStruct->formToChangeInto) = effect - 1;
                 }
-                break;
+                break; */
             case ABILITY_TRACE:
                 if (!(gSpecialStatuses[battler].traced))
                 {
@@ -1715,7 +1719,7 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u8 ability, u8 special, u16 moveA
                 }
                 break;
             case ABILITY_CLOUD_NINE:
-            case ABILITY_AIR_LOCK:
+            case ABILITY_HISOUTEN:
                 {
                     for (target1 = 0; target1 < gBattlersCount; ++target1)
                     {
@@ -1751,7 +1755,7 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u8 ability, u8 special, u16 moveA
                         ++effect;
                     }
                     break;
-                case ABILITY_SHED_SKIN:
+                case ABILITY_MAINTENANCE:
                     if ((gBattleMons[battler].status1 & STATUS1_ANY) && (Random() % 3) == 0)
                     {
                         if (gBattleMons[battler].status1 & (STATUS1_POISON | STATUS1_TOXIC_POISON))
@@ -1877,7 +1881,7 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u8 ability, u8 special, u16 moveA
         case ABILITYEFFECT_MOVE_END: // Think contact abilities.
             switch (gLastUsedAbility)
             {
-            case ABILITY_COLOR_CHANGE:
+            case ABILITY_MYSTERIOUS:
                 if (!(gMoveResultFlags & MOVE_RESULT_NO_EFFECT)
                  && moveArg != MOVE_STRUGGLE
                  && gBattleMoves[moveArg].power != 0
@@ -1892,7 +1896,7 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u8 ability, u8 special, u16 moveA
                     ++effect;
                 }
                 break;
-            case ABILITY_ROUGH_SKIN:
+            case ABILITY_DOLL_WALL:
                 if (!(gMoveResultFlags & MOVE_RESULT_NO_EFFECT)
                  && gBattleMons[gBattlerAttacker].hp != 0
                  && !gProtectStructs[gBattlerAttacker].confusionSelfDmg
@@ -1907,7 +1911,7 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u8 ability, u8 special, u16 moveA
                     ++effect;
                 }
                 break;
-            case ABILITY_EFFECT_SPORE:
+            case ABILITY_INFECTIOUS:
                 if (!(gMoveResultFlags & MOVE_RESULT_NO_EFFECT)
                  && gBattleMons[gBattlerAttacker].hp != 0
                  && !gProtectStructs[gBattlerAttacker].confusionSelfDmg
@@ -1928,7 +1932,7 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u8 ability, u8 special, u16 moveA
                     ++effect;
                 }
                 break;
-            case ABILITY_POISON_POINT:
+            case ABILITY_POISON_BODY:
                 if (!(gMoveResultFlags & MOVE_RESULT_NO_EFFECT)
                  && gBattleMons[gBattlerAttacker].hp != 0
                  && !gProtectStructs[gBattlerAttacker].confusionSelfDmg
@@ -2037,7 +2041,7 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u8 ability, u8 special, u16 moveA
                         effect = 1;
                     }
                     break;
-                case ABILITY_MAGMA_ARMOR:
+                case ABILITY_FIRE_VEIL:
                     if (gBattleMons[battler].status1 & STATUS1_FREEZE)
                     {
                         StringCopy(gBattleTextBuff1, gStatusConditionString_IceJpn);
@@ -2080,6 +2084,7 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u8 ability, u8 special, u16 moveA
         case ABILITYEFFECT_FORECAST: // 6
             for (battler = 0; battler < gBattlersCount; ++battler)
             {
+                /*
                 if (gBattleMons[battler].ability == ABILITY_FORECAST)
                 {
                     effect = CastformDataTypeChange(battler);
@@ -2090,7 +2095,7 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u8 ability, u8 special, u16 moveA
                         *(&gBattleStruct->formToChangeInto) = effect - 1;
                         return effect;
                     }
-                }
+                } */
             }
             break;
         case ABILITYEFFECT_SYNCHRONIZE: // 7

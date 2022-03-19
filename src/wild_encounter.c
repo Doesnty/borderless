@@ -297,9 +297,9 @@ static u8 GetAbilityEncounterRateModType(void)
     if (!GetMonData(&gPlayerParty[0], MON_DATA_SANITY_IS_EGG))
     {
         u8 ability = GetMonAbility(&gPlayerParty[0]);
-        if (ability == ABILITY_STENCH)
+        if (ability == ABILITY_JEALOUSY)
             sWildEncounterData.abilityEffect = 1;
-        else if (ability == ABILITY_ILLUMINATE)
+        else if (ability == ABILITY_DIVA)
             sWildEncounterData.abilityEffect = 2;
     }
     return sWildEncounterData.abilityEffect;

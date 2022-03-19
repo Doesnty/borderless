@@ -2915,6 +2915,7 @@ u8 IsRunningFromBattleImpossible(void)
             gBattleCommunication[MULTISTRING_CHOOSER] = 2;
             return BATTLE_RUN_FAILURE;
         }
+        /*
         if (side != GetBattlerSide(i)
          && gBattleMons[gActiveBattler].ability != ABILITY_LEVITATE
          && !IS_BATTLER_OF_TYPE(gActiveBattler, TYPE_FLYING)
@@ -2924,16 +2925,16 @@ u8 IsRunningFromBattleImpossible(void)
             gLastUsedAbility = gBattleMons[i].ability;
             gBattleCommunication[MULTISTRING_CHOOSER] = 2;
             return BATTLE_RUN_FAILURE;
-        }
+        } */
     }
-    i = AbilityBattleEffects(ABILITYEFFECT_CHECK_FIELD_EXCEPT_BATTLER, gActiveBattler, ABILITY_MAGNET_PULL, 0, 0);
+    /*i = AbilityBattleEffects(ABILITYEFFECT_CHECK_FIELD_EXCEPT_BATTLER, gActiveBattler, ABILITY_MAGNET_PULL, 0, 0);
     if (i != 0 && IS_BATTLER_OF_TYPE(gActiveBattler, TYPE_STEEL))
     {
         gBattleScripting.battler = i - 1;
         gLastUsedAbility = gBattleMons[i - 1].ability;
         gBattleCommunication[MULTISTRING_CHOOSER] = 2;
         return BATTLE_RUN_FAILURE;
-    }
+    } */
     if ((gBattleMons[gActiveBattler].status2 & (STATUS2_ESCAPE_PREVENTION | STATUS2_WRAPPED))
      || (gStatuses3[gActiveBattler] & STATUS3_ROOTED))
     {
@@ -3089,12 +3090,7 @@ static void HandleTurnActionSelectionState(void)
                     {
                         BtlController_EmitChoosePokemon(0, PARTY_ACTION_CANT_SWITCH, 6, ABILITY_NONE, gBattleStruct->battlerPartyOrders[gActiveBattler]);
                     }
-                    else if ((i = ABILITY_ON_OPPOSING_FIELD(gActiveBattler, ABILITY_SHADOW_TAG))
-                          || ((i = ABILITY_ON_OPPOSING_FIELD(gActiveBattler, ABILITY_ARENA_TRAP))
-                              && !IS_BATTLER_OF_TYPE(gActiveBattler, TYPE_FLYING)
-                              && gBattleMons[gActiveBattler].ability != ABILITY_LEVITATE)
-                          || ((i = AbilityBattleEffects(ABILITYEFFECT_CHECK_FIELD_EXCEPT_BATTLER, gActiveBattler, ABILITY_MAGNET_PULL, 0, 0))
-                              && IS_BATTLER_OF_TYPE(gActiveBattler, TYPE_STEEL)))
+                    else if ((i = ABILITY_ON_OPPOSING_FIELD(gActiveBattler, ABILITY_SHADOW_TAG)))
                     {
                         BtlController_EmitChoosePokemon(0, ((i - 1) << 4) | PARTY_ACTION_ABILITY_PREVENTS, 6, gLastUsedAbility, gBattleStruct->battlerPartyOrders[gActiveBattler]);
                     }
