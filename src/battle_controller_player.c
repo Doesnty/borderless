@@ -2924,8 +2924,6 @@ static void PreviewDeterminativeMoveTargets(void)
             case MOVE_RAIN_DANCE:
             case MOVE_SUNNY_DAY:
             case MOVE_HAIL:
-            case MOVE_MUD_SPORT:
-            case MOVE_WATER_SPORT:
                 bitMask = 0xF0000;
                 break;
             case MOVE_SAFEGUARD:

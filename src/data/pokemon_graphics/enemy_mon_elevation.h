@@ -129,7 +129,7 @@ const u8 gEnemyMonElevation[NUM_SPECIES] =
     
     [SPECIES_SHINKI] = 3,
     
-    [SPECIES_ASUKUNA] = 5,
+    [SPECIES_ASHINMYOUMARU] = 5,
     
     [SPECIES_CTOJIKO] = 7,
     [SPECIES_TOJIKO] = 9,

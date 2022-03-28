@@ -1984,7 +1984,7 @@ BattleScript_EffectSemiInvulnerable::
 	jumpifstatus2 BS_ATTACKER, STATUS2_MULTIPLETURNS, BattleScript_SecondTurnSemiInvulnerable
 	jumpifword CMP_COMMON_BITS, gHitMarker, HITMARKER_NO_ATTACKSTRING, BattleScript_SecondTurnSemiInvulnerable
 	jumpifmove MOVE_FLY, BattleScript_FlyFirstTurn
-	jumpifmove MOVE_DIVE, BattleScript_DiveFirstTurn
+	jumpifmove MOVE_SHADOW_FORCE, BattleScript_DiveFirstTurn
 	jumpifmove MOVE_BOUNCE, BattleScript_BounceFirstTurn
 	@ MOVE_DIG
 	setbyte sTWOTURN_STRINGID, 5
@@ -3477,11 +3477,11 @@ BattleScript_MonTookFutureAttack::
 	printstring STRINGID_PKMNTOOKATTACK
 	waitmessage 0x40
 	jumpifbyte CMP_NOT_EQUAL, cMULTISTRING_CHOOSER, 0, BattleScript_CheckDoomDesireMiss
-	accuracycheck BattleScript_FutureAttackMiss, MOVE_FUTURE_SIGHT
+	accuracycheck BattleScript_FutureAttackMiss, MOVE_APOLLON
 	goto BattleScript_FutureAttackAnimate
 
 BattleScript_CheckDoomDesireMiss::
-	accuracycheck BattleScript_FutureAttackMiss, MOVE_DOOM_DESIRE
+	accuracycheck BattleScript_FutureAttackMiss, MOVE_APOLLON
 BattleScript_FutureAttackAnimate::
 	adjustnormaldamage2
 	jumpifbyte CMP_NOT_EQUAL, cMULTISTRING_CHOOSER, 0, BattleScript_FutureHitAnimDoomDesire

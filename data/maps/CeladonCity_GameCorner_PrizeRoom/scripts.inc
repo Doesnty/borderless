@@ -278,7 +278,7 @@ CeladonCity_GameCorner_PrizeRoom_EventScript_TM13:: @ 816CEA5
 CeladonCity_GameCorner_PrizeRoom_EventScript_TM23:: @ 816CEB9
 	setvar VAR_TEMP_1, ITEM_TM23
 	setvar VAR_TEMP_2, 3500
-	getmovename 1, MOVE_IRON_TAIL
+	getmovename 1, MOVE_STEEL_FIST
 	goto CeladonCity_GameCorner_PrizeRoom_EventScript_ConfirmPrizeTM
 	end
 

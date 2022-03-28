@@ -207,7 +207,7 @@ struct BaseStats
  /* 0x06 */ u8 type1;
  /* 0x07 */ u8 type2;
  /* 0x08 */ u8 catchRate;
- /* 0x09 */ u8 expYield;
+ /* 0x09 */ u8 hiddenAbility;
  /* 0x0A */ u16 evYield_HP:2;
  /* 0x0A */ u16 evYield_Attack:2;
  /* 0x0A */ u16 evYield_Defense:2;
@@ -226,13 +226,16 @@ struct BaseStats
  /* 0x18 */ u8 safariZoneFleeRate;
  /* 0x19 */ u8 bodyColor : 7;
             u8 noFlip : 1;
+ /* 0x20 */ u16 expYield;
+ /* 0x22 */ u8 cost;
 };
 
 struct BattleMove
 {
     u8 effect;
-    u8 power;
+    u16 power;
     u8 type;
+    u8 moveClass;
     u8 accuracy;
     u8 pp;
     u8 secondaryEffectChance;
@@ -243,12 +246,16 @@ struct BattleMove
 
 extern const struct BattleMove gBattleMoves[];
 
+#define CLASS_PHYSICAL 0x0
+#define CLASS_SPECIAL 0x1
+#define CLASS_STATUS 0x2
+
 #define FLAG_MAKES_CONTACT          0x1
 #define FLAG_PROTECT_AFFECTED       0x2
 #define FLAG_MAGICCOAT_AFFECTED     0x4
 #define FLAG_SNATCH_AFFECTED        0x8
-#define FLAG_MIRROR_MOVE_AFFECTED   0x10
-#define FLAG_KINGSROCK_AFFECTED     0x20
+#define FLAG_PUNCHING               0x10
+#define FLAG_HIGH_CRIT              0x20
 
 struct SpindaSpot
 {

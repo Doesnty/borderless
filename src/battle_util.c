@@ -29,8 +29,8 @@
 
 static const u16 sSoundMovesTable[] =
 {
-    MOVE_GROWL, MOVE_ROAR, MOVE_SING, MOVE_SUPERSONIC, MOVE_SCREECH, MOVE_SNORE,
-    MOVE_UPROAR, MOVE_METAL_SOUND, MOVE_GRASS_WHISTLE, MOVE_HYPER_VOICE, 0xFFFF
+    MOVE_GROWL, MOVE_ROAR, MOVE_SING, MOVE_JAMMING, MOVE_SCREECH, MOVE_SNORE,
+    MOVE_PERFORMANCE, MOVE_BINDING_VOICE, MOVE_NATURE_SOUND, MOVE_HYPER_VOICE, 0xFFFF
 };
 
 u8 GetBattlerForBattleScript(u8 caseId)
@@ -1023,7 +1023,7 @@ bool8 HandleWishPerishSongOnTurnEnd(void)
              && --gWishFutureKnock.futureSightCounter[gActiveBattler] == 0
              && gBattleMons[gActiveBattler].hp != 0)
             {
-                if (gWishFutureKnock.futureSightMove[gActiveBattler] == MOVE_FUTURE_SIGHT)
+                if (gWishFutureKnock.futureSightMove[gActiveBattler] == MOVE_NONE)
                     gBattleCommunication[MULTISTRING_CHOOSER] = 0;
                 else
                     gBattleCommunication[MULTISTRING_CHOOSER] = 1;
@@ -1424,12 +1424,13 @@ u8 AtkCanceller_UnableToUseMove(void)
                 {
                     if (gTakenDmg[gBattlerAttacker])
                     {
-                        gCurrentMove = MOVE_BIDE;
+                        // should be unreachable
+                        /*gCurrentMove = MOVE_NONE;
                         *bideDmg = gTakenDmg[gBattlerAttacker] * 2;
                         gBattlerTarget = gTakenDmgByBattler[gBattlerAttacker];
                         if (gAbsentBattlerFlags & gBitTable[gBattlerTarget])
                             gBattlerTarget = GetMoveTarget(MOVE_BIDE, 1);
-                        gBattlescriptCurrInstr = BattleScript_BideAttack;
+                        gBattlescriptCurrInstr = BattleScript_BideAttack; */
                     }
                     else
                     {
@@ -2976,7 +2977,7 @@ u8 ItemBattleEffects(u8 caseID, u8 battlerId, bool8 moveTurn)
                 if (!(gMoveResultFlags & MOVE_RESULT_NO_EFFECT)
                  && TARGET_TURN_DAMAGED
                  && (Random() % 100) < battlerHoldEffectParam
-                 && gBattleMoves[gCurrentMove].flags & FLAG_KINGSROCK_AFFECTED
+                 //&& gBattleMoves[gCurrentMove].flags & FLAG_KINGSROCK_AFFECTED
                  && gBattleMons[gBattlerTarget].hp)
                 {
                     gBattleCommunication[MOVE_EFFECT_BYTE] = MOVE_EFFECT_FLINCH;

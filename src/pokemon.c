@@ -1606,7 +1606,7 @@ static const s8 sFriendshipEventDeltas[][3] =
 static const u16 sHMMoves[] = 
 {
     MOVE_CUT, MOVE_FLY, MOVE_SURF, MOVE_STRENGTH, MOVE_FLASH,
-    MOVE_ROCK_SMASH, MOVE_WATERFALL, MOVE_DIVE, 0xFFFF
+    MOVE_ROCK_SMASH, MOVE_WATERFALL, 0xFFFF
 };
 
 const u16 gLinkPlayerFacilityClasses[] = 
@@ -2571,7 +2571,7 @@ s32 CalculateBaseDamage(struct BattlePokemon *attacker, struct BattlePokemon *de
             }
 
             // any weather except sun weakens solar beam
-            if ((gBattleWeather & (WEATHER_RAIN_ANY | WEATHER_SANDSTORM_ANY | WEATHER_HAIL)) && gCurrentMove == MOVE_SOLAR_BEAM)
+            if ((gBattleWeather & (WEATHER_RAIN_ANY | WEATHER_SANDSTORM_ANY | WEATHER_HAIL)) && gCurrentMove == MOVE_SOLARBEAM)
                 damage /= 2;
 
             // sunny

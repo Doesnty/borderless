@@ -50,8 +50,6 @@ gBattleAI_ScriptsTable:: @ 81D9BF4
 	.4byte AI_FirstBattle
 
 AI_CheckBadMove:: @ 81D9C74
-@	if_move MOVE_FISSURE, AI_CBM_CheckIfNegatesType  @ Improvement in Emerald
-@	if_move MOVE_HORN_DRILL, AI_CBM_CheckIfNegatesType
 	get_how_powerful_move_is
 	if_equal MOVE_POWER_DISCOURAGED, AI_CheckBadMove_CheckSoundproof
 
@@ -94,12 +92,12 @@ AI_CheckBadMove_CheckSoundproof:: @ 81D9CE0
 	if_move MOVE_GROWL, Score_Minus10
 	if_move MOVE_ROAR, Score_Minus10
 	if_move MOVE_SING, Score_Minus10
-	if_move MOVE_SUPERSONIC, Score_Minus10
+	if_move MOVE_JAMMING, Score_Minus10
 	if_move MOVE_SCREECH, Score_Minus10
 	if_move MOVE_SNORE, Score_Minus10
-	if_move MOVE_UPROAR, Score_Minus10
-	if_move MOVE_METAL_SOUND, Score_Minus10
-	if_move MOVE_GRASS_WHISTLE, Score_Minus10
+	if_move MOVE_PERFORMANCE, Score_Minus10
+	if_move MOVE_BINDING_VOICE, Score_Minus10
+	if_move MOVE_NATURE_SOUND, Score_Minus10
 
 AI_CheckBadMove_CheckEffect:: @ 81D9D27
 	if_effect EFFECT_SLEEP, AI_CBM_Sleep
@@ -862,44 +860,6 @@ AI_CV_MirrorMove_End:: @ 81DA7F5
 AI_CV_MirrorMove_EncouragedMovesToMirror:: @ 81DA7F8
 	.align 1
 	.2byte MOVE_SLEEP_POWDER
-	.2byte MOVE_LOVELY_KISS
-	.2byte MOVE_SPORE
-	.2byte MOVE_HYPNOSIS
-	.2byte MOVE_SING
-	.2byte MOVE_GRASS_WHISTLE
-	.2byte MOVE_SHADOW_PUNCH
-	.2byte MOVE_SAND_ATTACK
-	.2byte MOVE_SMOKESCREEN
-	.2byte MOVE_TOXIC
-	.2byte MOVE_GUILLOTINE
-	.2byte MOVE_HORN_DRILL
-	.2byte MOVE_FISSURE
-	.2byte MOVE_SHEER_COLD
-	.2byte MOVE_CROSS_CHOP
-	.2byte MOVE_AEROBLAST
-	.2byte MOVE_CONFUSE_RAY
-	.2byte MOVE_SWEET_KISS
-	.2byte MOVE_SCREECH
-	.2byte MOVE_COTTON_SPORE
-	.2byte MOVE_SCARY_FACE
-	.2byte MOVE_FAKE_TEARS
-	.2byte MOVE_METAL_SOUND
-	.2byte MOVE_THUNDER_WAVE
-	.2byte MOVE_GLARE
-	.2byte MOVE_POISON_POWDER
-	.2byte MOVE_SHADOW_BALL
-	.2byte MOVE_DYNAMIC_PUNCH
-	.2byte MOVE_HYPER_BEAM
-	.2byte MOVE_EXTREME_SPEED
-	.2byte MOVE_THIEF
-	.2byte MOVE_COVET
-	.2byte MOVE_ATTRACT
-	.2byte MOVE_SWAGGER
-	.2byte MOVE_TORMENT
-	.2byte MOVE_FLATTER
-	.2byte MOVE_TRICK
-	.2byte MOVE_SUPERPOWER
-	.2byte MOVE_SKILL_SWAP
 	.2byte -1
 
 AI_CV_AttackUp:: @ 81DA848

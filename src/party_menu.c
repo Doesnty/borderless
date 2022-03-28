@@ -1813,12 +1813,6 @@ static u16 GetTutorMove(u8 tutor)
 {
     switch (tutor)
     {
-    case TUTOR_MOVE_FRENZY_PLANT:
-        return MOVE_FRENZY_PLANT;
-    case TUTOR_MOVE_BLAST_BURN:
-        return MOVE_BLAST_BURN;
-    case TUTOR_MOVE_HYDRO_CANNON:
-        return MOVE_HYDRO_CANNON;
     default:
         return sTutorMoves[tutor];
     }
@@ -3852,7 +3846,7 @@ static void CursorCB_FieldMove(u8 taskId)
     PartyMenuRemoveWindow(&sPartyMenuInternal->windowId[1]);
     if (MenuHelpers_LinkSomething() == TRUE || InUnionRoom() == TRUE)
     {
-        if (fieldMove == FIELD_MOVE_MILK_DRINK || fieldMove == FIELD_MOVE_SOFT_BOILED)
+        if (fieldMove == FIELD_MOVE_SOFT_BOILED)
             DisplayPartyMenuStdMessage(PARTY_MSG_CANT_USE_HERE);
         else
             DisplayPartyMenuStdMessage(sFieldMoveCursorCallbacks[fieldMove].msgId);
@@ -3870,7 +3864,6 @@ static void CursorCB_FieldMove(u8 taskId)
         {
             switch (fieldMove)
             {
-            case FIELD_MOVE_MILK_DRINK:
             case FIELD_MOVE_SOFT_BOILED:
                 ChooseMonForSoftboiled(taskId);
                 break;

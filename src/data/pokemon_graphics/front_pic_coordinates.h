@@ -460,7 +460,7 @@ const struct MonCoords gMonFrontPicCoords[] =
 		.size = 0x57,
 		.y_offset = 4,
 	},
-	[SPECIES_AKAGEROU] = 
+	[SPECIES_HKAGEROU] = 
 	{
 		.size = 0x88,
 		.y_offset = 0,
@@ -767,13 +767,13 @@ const struct MonCoords gMonFrontPicCoords[] =
 	},
 	[SPECIES_LAYLA] = 
 	{
-		.size = 0x57,
-		.y_offset = 3,
+		.size = 0x88,
+		.y_offset = 1,
 	},
 	[SPECIES_DLAYLA] = 
 	{
-		.size = 0x88,
-		.y_offset = 1,
+		.size = 0x57,
+		.y_offset = 3,
 	},
 	[SPECIES_ADLETTY] = 
 	{
@@ -1770,17 +1770,17 @@ const struct MonCoords gMonFrontPicCoords[] =
 		.size = 0x87,
 		.y_offset = 2,
 	},
-	[SPECIES_ASUKUNA] = 
+	[SPECIES_ASHINMYOUMARU] = 
 	{
 		.size = 0x88,
 		.y_offset = 3,
 	},
-	[SPECIES_CSUKUNA] = 
+	[SPECIES_CSHINMYOUMARU] = 
 	{
 		.size = 0x66,
 		.y_offset = 9,
 	},
-	[SPECIES_SUKUNA] = 
+	[SPECIES_SHINMYOUMARU] = 
 	{
 		.size = 0x88,
 		.y_offset = 1,

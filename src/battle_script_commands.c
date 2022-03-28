@@ -765,13 +765,11 @@ static const u16 sMovesForbiddenToCopy[] =
     MIMIC_FORBIDDEN_END,
     MOVE_COUNTER,
     MOVE_MIRROR_COAT,
-    MOVE_PROTECT,
     MOVE_DETECT,
     MOVE_ENDURE,
     MOVE_DESTINY_BOND,
     MOVE_SLEEP_TALK,
     MOVE_THIEF,
-    MOVE_FOLLOW_ME,
     MOVE_SNATCH,
     MOVE_HELPING_HAND,
     MOVE_COVET,
@@ -797,7 +795,7 @@ static const u16 sNaturePowerMoves[] =
     MOVE_EARTHQUAKE,
     MOVE_HYDRO_PUMP,
     MOVE_SURF,
-    MOVE_BUBBLE_BEAM,
+    MOVE_BUBBLEBEAM,
     MOVE_ROCK_SLIDE,
     MOVE_SHADOW_BALL,
     MOVE_SWIFT,
@@ -4186,7 +4184,7 @@ static void atk49_moveend(void)
         case ATK49_MIRROR_MOVE: // mirror move
             if (!(gAbsentBattlerFlags & gBitTable[gBattlerAttacker])
              && !(gBattleStruct->absentBattlerFlags & gBitTable[gBattlerAttacker])
-             && gBattleMoves[originallyUsedMove].flags & FLAG_MIRROR_MOVE_AFFECTED
+             //&& gBattleMoves[originallyUsedMove].flags & FLAG_MIRROR_MOVE_AFFECTED
              && gHitMarker & HITMARKER_OBEYS
              && gBattlerAttacker != gBattlerTarget
              && !(gHitMarker & HITMARKER_FAINTED(gBattlerTarget))
@@ -5996,7 +5994,7 @@ static void atk77_setprotectlike(void)
     bool8 notLastTurn = TRUE;
     u16 lastMove = gLastResultingMoves[gBattlerAttacker];
 
-    if (lastMove != MOVE_PROTECT && lastMove != MOVE_DETECT && lastMove != MOVE_ENDURE)
+    if (lastMove != MOVE_DETECT && lastMove != MOVE_ENDURE)
         gDisableStructs[gBattlerAttacker].protectUses = 0;
     if (gCurrentTurnActionNumber == (gBattlersCount - 1))
         notLastTurn = FALSE;
@@ -7325,8 +7323,7 @@ static void atkA4_trysetencore(void)
         if (gBattleMons[gBattlerTarget].moves[i] == gLastMoves[gBattlerTarget])
             break;
     if (gLastMoves[gBattlerTarget] == MOVE_STRUGGLE
-     || gLastMoves[gBattlerTarget] == MOVE_ENCORE
-     || gLastMoves[gBattlerTarget] == MOVE_MIRROR_MOVE)
+     || gLastMoves[gBattlerTarget] == MOVE_ENCORE)
         i = 4;
     if (gDisableStructs[gBattlerTarget].encoredMove == MOVE_NONE
      && i != 4
@@ -7489,7 +7486,7 @@ static bool8 IsTwoTurnsMove(u16 move)
 static bool8 IsInvalidForSleepTalkOrAssist(u16 move)
 {
     if (move == MOVE_NONE || move == MOVE_SLEEP_TALK || move == MOVE_ASSIST
-     || move == MOVE_MIRROR_MOVE || move == MOVE_METRONOME)
+     || move == MOVE_METRONOME)
         return TRUE;
     else
         return FALSE;
@@ -7521,7 +7518,7 @@ static void atkA9_trychoosesleeptalkmove(void)
     {
         if (IsInvalidForSleepTalkOrAssist(gBattleMons[gBattlerAttacker].moves[i])
          || gBattleMons[gBattlerAttacker].moves[i] == MOVE_FOCUS_PUNCH
-         || gBattleMons[gBattlerAttacker].moves[i] == MOVE_UPROAR
+         || gBattleMons[gBattlerAttacker].moves[i] == MOVE_PERFORMANCE
          || IsTwoTurnsMove(gBattleMons[gBattlerAttacker].moves[i]))
         {
             unusableMovesBits |= gBitTable[i];
@@ -8149,7 +8146,7 @@ static void atkC3_trysetfutureattack(void)
                                                                               gBattlerTarget);
         if (gProtectStructs[gBattlerAttacker].helpingHand)
             gWishFutureKnock.futureSightDmg[gBattlerTarget] = gWishFutureKnock.futureSightDmg[gBattlerTarget] * 15 / 10;
-        if (gCurrentMove == MOVE_DOOM_DESIRE)
+        if (gCurrentMove == MOVE_APOLLON)
             gBattleCommunication[MULTISTRING_CHOOSER] = 1;
         else
             gBattleCommunication[MULTISTRING_CHOOSER] = 0;
@@ -8212,7 +8209,7 @@ static void atkC5_setsemiinvulnerablebit(void)
     case MOVE_DIG:
         gStatuses3[gBattlerAttacker] |= STATUS3_UNDERGROUND;
         break;
-    case MOVE_DIVE:
+    case MOVE_SHADOW_FORCE:
         gStatuses3[gBattlerAttacker] |= STATUS3_UNDERWATER;
         break;
     }
@@ -8230,7 +8227,7 @@ static void atkC6_clearsemiinvulnerablebit(void)
     case MOVE_DIG:
         gStatuses3[gBattlerAttacker] &= ~STATUS3_UNDERGROUND;
         break;
-    case MOVE_DIVE:
+    case MOVE_SHADOW_FORCE:
         gStatuses3[gBattlerAttacker] &= ~STATUS3_UNDERWATER;
         break;
     }

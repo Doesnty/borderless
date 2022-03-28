@@ -460,7 +460,7 @@ const struct MonCoords gMonBackPicCoords[] =
 		.size = 0x56,
 		.y_offset = 1,
 	},
-	[SPECIES_AKAGEROU] = 
+	[SPECIES_HKAGEROU] = 
 	{
 		.size = 0x78,
 		.y_offset = 0,
@@ -1775,17 +1775,17 @@ const struct MonCoords gMonBackPicCoords[] =
 		.size = 0x84,
 		.y_offset = 0,
 	},
-	[SPECIES_ASUKUNA] = 
+	[SPECIES_ASHINMYOUMARU] = 
 	{
 		.size = 0x87,
 		.y_offset = 3,
 	},
-	[SPECIES_CSUKUNA] = 
+	[SPECIES_CSHINMYOUMARU] = 
 	{
 		.size = 0x85,
 		.y_offset = 14,
 	},
-	[SPECIES_SUKUNA] = 
+	[SPECIES_SHINMYOUMARU] = 
 	{
 		.size = 0x87,
 		.y_offset = 4,

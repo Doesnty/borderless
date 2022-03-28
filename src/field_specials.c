@@ -2234,6 +2234,8 @@ bool8 CapeBrinkGetMoveToTeachLeadPokemon(void)
     }
     if (i == NELEMS(sCapeBrinkCompatibleSpecies) || GetMonData(&gPlayerParty[leadMonSlot], MON_DATA_FRIENDSHIP) != 255)
         return FALSE;
+    return FALSE;
+    /*
     if (tutorMonId == 0)
     {
         StringCopy(gStringVar2, gMoveNames[MOVE_FRENZY_PLANT]);
@@ -2264,7 +2266,7 @@ bool8 CapeBrinkGetMoveToTeachLeadPokemon(void)
     if (GetMonData(&gPlayerParty[leadMonSlot], MON_DATA_MOVE4) != MOVE_NONE)
         numMovesKnown++;
     gSpecialVar_0x8006 = numMovesKnown;
-    return TRUE;
+    return TRUE; */
 }
 
 bool8 HasLearnedAllMovesFromCapeBrinkTutor(void)

@@ -216,50 +216,6 @@ Text_UseWaterfall:: @ 81BE33F
 Text_MonUsedWaterfall:: @ 81BE378
 	.string "{STR_VAR_1} used WATERFALL.$"
 
-@ Unused leftover from R/S
-EventScript_DeepWater:: @ 81BE38B
-	lockall
-	checkpartymove MOVE_DIVE
-	compare VAR_RESULT, PARTY_SIZE
-	goto_if_eq EventScript_MayGoUnderwater
-	getpartymonname 0, VAR_RESULT
-	setfieldeffectarg 0, VAR_RESULT
-	setfieldeffectarg 1, 1
-	msgbox Text_SeaIsDeepUseDive, MSGBOX_YESNO
-	compare VAR_RESULT, NO
-	goto_if_eq EventScript_EndDive
-	msgbox Text_MonUsedDive
-	dofieldeffect FLDEFF_USE_DIVE
-	goto EventScript_EndDive
-
-EventScript_CantDive:: @ 81BE3C9
-	lockall
-EventScript_MayGoUnderwater:
-	msgbox Text_MonMayGoUnderwater
-EventScript_EndDive:
-	releaseall
-	end
-
-EventScript_TrySurface:: @ 81BE3D4
-	lockall
-	checkpartymove MOVE_DIVE
-	compare VAR_RESULT, PARTY_SIZE
-	goto_if_eq EventScript_CantSurface
-	getpartymonname 0, VAR_RESULT
-	setfieldeffectarg 0, VAR_RESULT
-	setfieldeffectarg 1, 1
-	msgbox Text_LightFilteringUseDive, MSGBOX_YESNO
-	compare VAR_RESULT, NO
-	goto_if_eq EventScript_EndSurface
-	msgbox Text_MonUsedDive
-	dofieldeffect FLDEFF_USE_DIVE
-	goto EventScript_EndSurface
-
-EventScript_CantSurface:: @ 81BE412
-	lockall
-	msgbox Text_MonMaySurface
-	goto EventScript_EndSurface
-
 EventScript_ObstacleCantSurface:: @ 81BE420
 	lockall
 	msgbox Text_DiveCantBeUsedHere
