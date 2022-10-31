@@ -7,7 +7,6 @@ const u16 gEggMoves[] = {
               MOVE_LIGHT_SCREEN,
               MOVE_SKULL_BASH,
               MOVE_SAFEGUARD,
-              MOVE_CHARM,
               MOVE_PETAL_STORM,
               MOVE_MAGICAL_LEAF,
               MOVE_NATURE_SOUND,

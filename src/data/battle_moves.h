@@ -975,7 +975,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .flags = FLAG_PROTECT_AFFECTED | FLAG_HIGH_CRIT,
     },
 
-    [MOVE_SOLARBEAM] = 
+    [MOVE_SOLAR_BEAM] = 
     {
         .effect = EFFECT_SOLARBEAM,
         .power = 120,
@@ -1048,7 +1048,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .moveClass = CLASS_SPECIAL,
         .accuracy = 90,
         .pp = 25,
-        .secondaryEffectChance = 40,
+        .secondaryEffectChance = 20,
         .priority = 0,
         .flags = FLAG_PROTECT_AFFECTED,
     },
@@ -1534,7 +1534,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .flags = 0,
     },
 
-    [MOVE_PROFLIGATE] = 
+    [MOVE_DEBT_SPIRAL] = 
     {
         .effect = EFFECT_NEW,
         .power = 100,
@@ -1547,7 +1547,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .flags = FLAG_MAKES_CONTACT | FLAG_PROTECT_AFFECTED,
     },
 
-    [MOVE_SELFDESTRUCT] = 
+    [MOVE_SELF_DESTRUCT] = 
     {
         .effect = EFFECT_EXPLOSION,
         .power = 300,
@@ -2275,7 +2275,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .flags = FLAG_MAKES_CONTACT | FLAG_PROTECT_AFFECTED,
     },
 
-    [MOVE_CONVERSION2] = 
+    [MOVE_CONVERSION_2] = 
     {
         .effect = EFFECT_CONVERSION_2,
         .power = 0,
@@ -2566,7 +2566,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .effect = EFFECT_MULTI_HIT,
         .power = 25,
         .type = TYPE_DARK,
-        .moveClass = CLASS_SPECIAL,
+        .moveClass = CLASS_PHYSICAL,
         .accuracy = 95,
         .pp = 15,
         .secondaryEffectChance = 0,
@@ -2639,7 +2639,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .flags = 0,
     },
 
-    [MOVE_CHARM] = 
+    [MOVE_SMILE] = 
     {
         .effect = EFFECT_ATTACK_DOWN_2,
         .power = 0,
@@ -2743,7 +2743,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .flags = FLAG_MAKES_CONTACT | FLAG_PROTECT_AFFECTED,
     },
 
-    [MOVE_DEATH] = 
+    [MOVE_LURE_OF_DEATH] = 
     {
         .effect = EFFECT_OHKO,
         .power = 1,
@@ -2912,7 +2912,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .flags = FLAG_MAKES_CONTACT | FLAG_PROTECT_AFFECTED,
     },
 
-    [MOVE_LAVA_STREAM] = 
+    [MOVE_LAVA_PLUME] = 
     {
         .effect = EFFECT_THAW_HIT,
         .power = 80,
@@ -3172,7 +3172,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .flags = 0,
     },
 
-    [MOVE_EXTREMESPEED] = 
+    [MOVE_EXTREME_SPEED] = 
     {
         .effect = EFFECT_QUICK_ATTACK,
         .power = 80,
@@ -3991,7 +3991,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .flags = FLAG_MAKES_CONTACT | FLAG_PROTECT_AFFECTED,
     },
 
-    [MOVE_DAM_BREAKAGE] = 
+    [MOVE_DAM_BREACH] = 
     {
         .effect = EFFECT_OVERHEAT,
         .power = 140,
@@ -4316,7 +4316,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .flags = FLAG_MAKES_CONTACT | FLAG_PROTECT_AFFECTED,
     },
 
-    [MOVE_ICICLE_SPEAR] = 
+    [MOVE_ICE_SHARD] = 
     {
         .effect = EFFECT_QUICK_ATTACK,
         .power = 40,
@@ -4904,7 +4904,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
     [MOVE_MISHAGUJI] = 
     {
         .effect = EFFECT_NEW,
-        .power = 40,
+        .power = 20,
         .type = TYPE_GHOST,
         .moveClass = CLASS_PHYSICAL,
         .accuracy = 100,
@@ -4956,7 +4956,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
     [MOVE_FIRE_FANG] = 
     {
         .effect = EFFECT_NEW,
-        .power = 65,
+        .power = 80,
         .type = TYPE_FIRE,
         .moveClass = CLASS_PHYSICAL,
         .accuracy = 95,
@@ -4969,7 +4969,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
     [MOVE_ICE_FANG] = 
     {
         .effect = EFFECT_NEW,
-        .power = 65,
+        .power = 80,
         .type = TYPE_ICE,
         .moveClass = CLASS_PHYSICAL,
         .accuracy = 95,
@@ -4982,7 +4982,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
     [MOVE_THUNDER_FANG] = 
     {
         .effect = EFFECT_NEW,
-        .power = 65,
+        .power = 80,
         .type = TYPE_ELECTRIC,
         .moveClass = CLASS_PHYSICAL,
         .accuracy = 95,
@@ -5016,5 +5016,96 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .secondaryEffectChance = 0,
         .priority = 0,
         .flags = FLAG_MAKES_CONTACT | FLAG_PROTECT_AFFECTED,
+    },
+
+    [MOVE_MANASHOCK] = 
+    {
+        .effect = EFFECT_HIT,
+        .power = 80,
+        .type = TYPE_REASON,
+        .moveClass = CLASS_SPECIAL,
+        .accuracy = 100,
+        .pp = 10,
+        .secondaryEffectChance = 0,
+        .priority = 0,
+        .flags = FLAG_PROTECT_AFFECTED,
+    },
+
+    [MOVE_FLAME_CHARGE] = 
+    {
+        .effect = EFFECT_NEW,
+        .power = 50,
+        .type = TYPE_FIRE,
+        .moveClass = CLASS_PHYSICAL,
+        .accuracy = 100,
+        .pp = 20,
+        .secondaryEffectChance = 100,
+        .priority = 0,
+        .flags = FLAG_MAKES_CONTACT | FLAG_PROTECT_AFFECTED,
+    },
+
+    [MOVE_CHARGE_BEAM] = 
+    {
+        .effect = EFFECT_NEW,
+        .power = 50,
+        .type = TYPE_HEART,
+        .moveClass = CLASS_SPECIAL,
+        .accuracy = 90,
+        .pp = 10,
+        .secondaryEffectChance = 70,
+        .priority = 0,
+        .flags = FLAG_PROTECT_AFFECTED,
+    },
+
+    [MOVE_PSYCHO_SHIFT] = 
+    {
+        .effect = EFFECT_NEW,
+        .power = 0,
+        .type = TYPE_REASON,
+        .moveClass = CLASS_STATUS,
+        .accuracy = 100,
+        .pp = 10,
+        .secondaryEffectChance = 0,
+        .priority = 0,
+        .flags = FLAG_PROTECT_AFFECTED,
+    },
+
+    [MOVE_BESTOW] = 
+    {
+        .effect = EFFECT_NEW,
+        .power = 0,
+        .type = TYPE_NORMAL,
+        .moveClass = CLASS_STATUS,
+        .accuracy = 0,
+        .pp = 15,
+        .secondaryEffectChance = 0,
+        .priority = 0,
+        .flags = 0,
+    },
+
+    [MOVE_HEX] = 
+    {
+        .effect = EFFECT_HIT,
+        .power = 65,
+        .type = TYPE_GHOST,
+        .moveClass = CLASS_SPECIAL,
+        .accuracy = 100,
+        .pp = 10,
+        .secondaryEffectChance = 0,
+        .priority = 0,
+        .flags = FLAG_PROTECT_AFFECTED,
+    },
+
+    [MOVE_ME_FIRST] = 
+    {
+        .effect = EFFECT_NEW,
+        .power = 0,
+        .type = TYPE_NORMAL,
+        .moveClass = CLASS_STATUS,
+        .accuracy = 20,
+        .pp = 20,
+        .secondaryEffectChance = 0,
+        .priority = 0,
+        .flags = FLAG_PROTECT_AFFECTED,
     },
 };

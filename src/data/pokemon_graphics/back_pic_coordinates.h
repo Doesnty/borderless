@@ -910,7 +910,7 @@ const struct MonCoords gMonBackPicCoords[] =
 		.size = 0x88,
 		.y_offset = 0,
 	},
-	[SPECIES_MAGISTONES] = 
+	[SPECIES_MAGIC_STONES] = 
 	{
 		.size = 0x66,
 		.y_offset = 0,
@@ -1110,7 +1110,7 @@ const struct MonCoords gMonBackPicCoords[] =
 		.size = 0x78,
 		.y_offset = 1,
 	},
-	[SPECIES_AMOKUO] = 
+	[SPECIES_AMOKOU] = 
 	{
 		.size = 0x78,
 		.y_offset = 1,
@@ -1354,6 +1354,11 @@ const struct MonCoords gMonBackPicCoords[] =
 	{
 		.size = 0x77,
 		.y_offset = 0,
+	},	
+    [SPECIES_CREISEN_II] = 
+	{
+		.size = 0x86,
+		.y_offset = 1,
 	},
 	[SPECIES_REISEN_II] = 
 	{
@@ -2238,6 +2243,246 @@ const struct MonCoords gMonBackPicCoords[] =
 	[SPECIES_ZFAIRY] = 
 	{
 		.size = 0x77,
+		.y_offset = 0,
+	},
+    	[SPECIES_CAUNN] = 
+	{
+		.size = 0x87,
+		.y_offset = 4,
+	},
+	[SPECIES_AUNN] = 
+	{
+		.size = 0x87,
+		.y_offset = 4,
+	},
+	[SPECIES_CCHIMATA] = 
+	{
+		.size = 0x88,
+		.y_offset = 0,
+	},
+	[SPECIES_CHIMATA] = 
+	{
+		.size = 0x88,
+		.y_offset = 0,
+	},
+	[SPECIES_CMAI_AND_SATONO] = 
+	{
+		.size = 0x87,
+		.y_offset = 4,
+	},
+	[SPECIES_MAI_AND_SATONO] = 
+	{
+		.size = 0x87,
+		.y_offset = 4,
+	},
+	[SPECIES_CEIKA] = 
+	{
+		.size = 0x88,
+		.y_offset = 0,
+	},
+	[SPECIES_EIKA] = 
+	{
+		.size = 0x88,
+		.y_offset = 0,
+	},
+	[SPECIES_CETERNITY] = 
+	{
+		.size = 0x65,
+		.y_offset = 11,
+	},
+	[SPECIES_ETERNITY] = 
+	{
+		.size = 0x76,
+		.y_offset = 5,
+	},
+	[SPECIES_CJOON] = 
+	{
+		.size = 0x87,
+		.y_offset = 4,
+	},
+	[SPECIES_JOON] = 
+	{
+		.size = 0x87,
+		.y_offset = 4,
+	},
+	[SPECIES_CKEIKI] = 
+	{
+		.size = 0x88,
+		.y_offset = 0,
+	},
+	[SPECIES_KEIKI] = 
+	{
+		.size = 0x88,
+		.y_offset = 0,
+	},
+	[SPECIES_CKUTAKA] = 
+	{
+		.size = 0x88,
+		.y_offset = 0,
+	},
+	[SPECIES_KUTAKA] = 
+	{
+		.size = 0x88,
+		.y_offset = 0,
+	},
+	[SPECIES_CMAYUMI] = 
+	{
+		.size = 0x88,
+		.y_offset = 0,
+	},
+	[SPECIES_MAYUMI] = 
+	{
+		.size = 0x88,
+		.y_offset = 0,
+	},
+	[SPECIES_CMEGUMU] = 
+	{
+		.size = 0x88,
+		.y_offset = 0,
+	},
+	[SPECIES_MEGUMU] = 
+	{
+		.size = 0x88,
+		.y_offset = 0,
+	},
+	[SPECIES_CMIKE] = 
+	{
+		.size = 0x88,
+		.y_offset = 0,
+	},
+	[SPECIES_MIKE] = 
+	{
+		.size = 0x88,
+		.y_offset = 0,
+	},
+	[SPECIES_CMISUMARU] = 
+	{
+		.size = 0x88,
+		.y_offset = 0,
+	},
+	[SPECIES_MISUMARU] = 
+	{
+		.size = 0x88,
+		.y_offset = 0,
+	},
+	[SPECIES_CMOMOYO] = 
+	{
+		.size = 0x88,
+		.y_offset = 0,
+	},
+	[SPECIES_MOMOYO] = 
+	{
+		.size = 0x88,
+		.y_offset = 0,
+	},
+	[SPECIES_CNARUMI] = 
+	{
+		.size = 0x55,
+		.y_offset = 11,
+	},
+	[SPECIES_NARUMI] = 
+	{
+		.size = 0x77,
+		.y_offset = 4,
+	},
+	[SPECIES_CNEMUNO] = 
+	{
+		.size = 0x55,
+		.y_offset = 14,
+	},
+	[SPECIES_NEMUNO] = 
+	{
+		.size = 0x76,
+		.y_offset = 4,
+	},
+	[SPECIES_COKINA] = 
+	{
+		.size = 0x56,
+		.y_offset = 5,
+	},
+	[SPECIES_OKINA] = 
+	{
+		.size = 0x87,
+		.y_offset = 4,
+	},
+	[SPECIES_CSAKI] = 
+	{
+		.size = 0x88,
+		.y_offset = 0,
+	},
+	[SPECIES_SAKI] = 
+	{
+		.size = 0x88,
+		.y_offset = 0,
+	},
+	[SPECIES_CSANNYO] = 
+	{
+		.size = 0x88,
+		.y_offset = 0,
+	},
+	[SPECIES_SANNYO] = 
+	{
+		.size = 0x88,
+		.y_offset = 0,
+	},
+	[SPECIES_CSHION] = 
+	{
+		.size = 0x87,
+		.y_offset = 4,
+	},
+	[SPECIES_SHION] = 
+	{
+		.size = 0x87,
+		.y_offset = 4,
+	},
+	[SPECIES_CTAKANE] = 
+	{
+		.size = 0x88,
+		.y_offset = 0,
+	},
+	[SPECIES_TAKANE] = 
+	{
+		.size = 0x88,
+		.y_offset = 0,
+	},
+	[SPECIES_CTSUKASA] = 
+	{
+		.size = 0x88,
+		.y_offset = 0,
+	},
+	[SPECIES_TSUKASA] = 
+	{
+		.size = 0x88,
+		.y_offset = 0,
+	},
+	[SPECIES_CURUMI] = 
+	{
+		.size = 0x88,
+		.y_offset = 0,
+	},
+	[SPECIES_URUMI] = 
+	{
+		.size = 0x88,
+		.y_offset = 0,
+	},
+	[SPECIES_CYACHIE] = 
+	{
+		.size = 0x88,
+		.y_offset = 0,
+	},
+	[SPECIES_YACHIE] = 
+	{
+		.size = 0x88,
+		.y_offset = 0,
+	},
+	[SPECIES_CYUUMA] = 
+	{
+		.size = 0x88,
+		.y_offset = 0,
+	},
+	[SPECIES_YUUMA] = 
+	{
+		.size = 0x88,
 		.y_offset = 0,
 	},
     [SPECIES_EGG] =

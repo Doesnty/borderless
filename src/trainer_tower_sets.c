@@ -1408,7 +1408,7 @@ static const struct TrainerTowerFloor sTrainerTowerFloor_Knockout_1 = {
 				{
 					.species = SPECIES_CLEFFA,
 					.heldItem = ITEM_LAX_INCENSE,
-					.moves = {MOVE_ATTRACT, MOVE_CHARM, MOVE_SECRET_POWER, MOVE_FLASH},
+					.moves = {MOVE_ATTRACT, MOVE_SMILE, MOVE_SECRET_POWER, MOVE_FLASH},
 					.hpEV = 210,
 					.attackEV = 210,
 					.defenseEV = 30,
@@ -1430,7 +1430,7 @@ static const struct TrainerTowerFloor sTrainerTowerFloor_Knockout_1 = {
 				{
 					.species = SPECIES_IGGLYBUFF,
 					.heldItem = ITEM_LAX_INCENSE,
-					.moves = {MOVE_SING, MOVE_HIDDEN_POWER, MOVE_CHARM, MOVE_DOUBLE_TEAM},
+					.moves = {MOVE_SING, MOVE_HIDDEN_POWER, MOVE_SMILE, MOVE_DOUBLE_TEAM},
 					.hpEV = 210,
 					.attackEV = 0,
 					.defenseEV = 45,
@@ -2419,7 +2419,7 @@ static const struct TrainerTowerFloor sTrainerTowerFloor_Single_8 = {
 				{
 					.species = SPECIES_CLEFAIRY,
 					.heldItem = ITEM_SITRUS_BERRY,
-					.moves = {MOVE_CHARM, MOVE_METRONOME, MOVE_EXPLOSION, MOVE_REST},
+					.moves = {MOVE_SMILE, MOVE_METRONOME, MOVE_EXPLOSION, MOVE_REST},
 					.hpEV = 255,
 					.attackEV = 255,
 					.defenseEV = 0,
@@ -2441,7 +2441,7 @@ static const struct TrainerTowerFloor sTrainerTowerFloor_Single_8 = {
 				{
 					.species = SPECIES_TOGEPI,
 					.heldItem = ITEM_SITRUS_BERRY,
-					.moves = {MOVE_CHARM, MOVE_METRONOME, MOVE_EXPLOSION, MOVE_REST},
+					.moves = {MOVE_SMILE, MOVE_METRONOME, MOVE_EXPLOSION, MOVE_REST},
 					.hpEV = 255,
 					.attackEV = 255,
 					.defenseEV = 0,
@@ -2463,7 +2463,7 @@ static const struct TrainerTowerFloor sTrainerTowerFloor_Single_8 = {
 				{
 					.species = SPECIES_MEOWTH,
 					.heldItem = ITEM_SILK_SCARF,
-					.moves = {MOVE_CHARM, MOVE_ASSIST, MOVE_EXPLOSION, MOVE_REST},
+					.moves = {MOVE_SMILE, MOVE_ASSIST, MOVE_EXPLOSION, MOVE_REST},
 					.hpEV = 255,
 					.attackEV = 255,
 					.defenseEV = 0,
@@ -2485,7 +2485,7 @@ static const struct TrainerTowerFloor sTrainerTowerFloor_Single_8 = {
 				{
 					.species = SPECIES_JIGGLYPUFF,
 					.heldItem = ITEM_SILK_SCARF,
-					.moves = {MOVE_CHARM, MOVE_EXPLOSION, MOVE_EXPLOSION, MOVE_REST},
+					.moves = {MOVE_SMILE, MOVE_EXPLOSION, MOVE_EXPLOSION, MOVE_REST},
 					.hpEV = 255,
 					.attackEV = 255,
 					.defenseEV = 0,
@@ -2507,7 +2507,7 @@ static const struct TrainerTowerFloor sTrainerTowerFloor_Single_8 = {
 				{
 					.species = SPECIES_SNORLAX,
 					.heldItem = ITEM_LEFTOVERS,
-					.moves = {MOVE_CHARM, MOVE_EXPLOSION, MOVE_EXPLOSION, MOVE_REST},
+					.moves = {MOVE_SMILE, MOVE_EXPLOSION, MOVE_EXPLOSION, MOVE_REST},
 					.hpEV = 255,
 					.attackEV = 255,
 					.defenseEV = 0,
@@ -2529,7 +2529,7 @@ static const struct TrainerTowerFloor sTrainerTowerFloor_Single_8 = {
 				{
 					.species = SPECIES_SNUBBULL,
 					.heldItem = ITEM_LEFTOVERS,
-					.moves = {MOVE_CHARM, MOVE_LICK, MOVE_EXPLOSION, MOVE_REST},
+					.moves = {MOVE_SMILE, MOVE_LICK, MOVE_EXPLOSION, MOVE_REST},
 					.hpEV = 255,
 					.attackEV = 255,
 					.defenseEV = 0,

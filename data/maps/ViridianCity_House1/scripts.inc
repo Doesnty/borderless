@@ -35,17 +35,17 @@ ViridianCity_House1_EventScript_Cheat:
 ViridianCity_House1_EventScript_GiveFirst200::
 	setvar VAR_TEMP_1, 0x1
 loop1start:
-	givemon VAR_TEMP_1, 5, ITEM_NONE
+	givemon VAR_TEMP_1, 60, ITEM_NONE
 	addvar VAR_TEMP_1, 0x1
-	compare VAR_TEMP_1, 200
+	compare VAR_TEMP_1, 250
 	goto_if_lt loop1start
 	release
 	end
     
 ViridianCity_House1_EventScript_GivePast200::
-	setvar VAR_TEMP_1, 201
+	setvar VAR_TEMP_1, 251
 loop2start:
-	givemon VAR_TEMP_1, 5, ITEM_NONE
+	givemon VAR_TEMP_1, 60, ITEM_NONE
 	addvar VAR_TEMP_1, 0x1
 	compare VAR_TEMP_1, NUM_SPECIES
 	goto_if_lt loop2start
