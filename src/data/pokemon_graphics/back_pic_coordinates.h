@@ -1100,7 +1100,7 @@ const struct MonCoords gMonBackPicCoords[] =
 		.size = 0x67,
 		.y_offset = 0,
 	},
-	[SPECIES_AKISISTERS] = 
+	[SPECIES_AKI_SISTERS] = 
 	{
 		.size = 0x87,
 		.y_offset = 0,
@@ -1680,7 +1680,7 @@ const struct MonCoords gMonBackPicCoords[] =
 		.size = 0x88,
 		.y_offset = 0,
 	},
-	[SPECIES_SHINGOKYUM] = 
+	[SPECIES_SHINGYOKUM] = 
 	{
 		.size = 0x88,
 		.y_offset = 0,

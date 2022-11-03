@@ -198,7 +198,7 @@ const u8 *const gMonIconTable[] = {
     [SPECIES_MINORIKO] = gMonIcon_minoriko_neutral,
     [SPECIES_AMINORIKO] = gMonIcon_minoriko_attack,
     [SPECIES_DMINORIKO] = gMonIcon_minoriko_defense,
-    [SPECIES_AKISISTERS] = gMonIcon_aki_sisters,
+    [SPECIES_AKI_SISTERS] = gMonIcon_aki_sisters,
     [SPECIES_CHINA] = gMonIcon_hina_chibi,
     [SPECIES_HINA] = gMonIcon_hina_neutral,
     [SPECIES_AHINA] = gMonIcon_hina_attack,
@@ -450,7 +450,7 @@ const u8 *const gMonIconTable[] = {
     [SPECIES_KIRISAME] = gMonIcon_kirisame_neutral,
     [SPECIES_CSHINGYOKU] = gMonIcon_shingyoku_chibi,
     [SPECIES_SHINGYOKUF] = gMonIcon_shingyoku_female,
-    [SPECIES_SHINGOKYUM] = gMonIcon_shingyoku_male,
+    [SPECIES_SHINGYOKUM] = gMonIcon_shingyoku_male,
     [SPECIES_SHINGYOKUO] = gMonIcon_shingyoku_orb,
     [SPECIES_CMAGAN] = gMonIcon_magan_chibi,
     [SPECIES_MAGAN] = gMonIcon_magan_neutral,
@@ -743,7 +743,7 @@ const u8 gMonIconPaletteIndices[] = {
     [SPECIES_AMINORIKO] = 2,
     [SPECIES_DMINORIKO] = 2,
     
-    [SPECIES_AKISISTERS] = 2,
+    [SPECIES_AKI_SISTERS] = 2,
     
     [SPECIES_CHINA] = 0,
     [SPECIES_HINA] = 0,
@@ -1071,7 +1071,7 @@ const u8 gMonIconPaletteIndices[] = {
     
     [SPECIES_CSHINGYOKU] = 0,
     [SPECIES_SHINGYOKUF] = 0,
-    [SPECIES_SHINGOKYUM] = 0,
+    [SPECIES_SHINGYOKUM] = 0,
     [SPECIES_SHINGYOKUO] = 0,
     
     [SPECIES_CMAGAN] = 1,

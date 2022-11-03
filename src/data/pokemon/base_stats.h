@@ -4312,7 +4312,7 @@ const struct BaseStats gBaseStats[] =
         .safariZoneFleeRate = 0,
         .noFlip = FALSE,
     },
-    [SPECIES_AKISISTERS] = 
+    [SPECIES_AKI_SISTERS] = 
     {
         .baseHP = 75,
         .baseAttack = 125,
@@ -10612,7 +10612,7 @@ const struct BaseStats gBaseStats[] =
         .safariZoneFleeRate = 0,
         .noFlip = FALSE,
     },
-    [SPECIES_SHINGOKYUM] = 
+    [SPECIES_SHINGYOKUM] = 
     {
         .baseHP = 80,
         .baseAttack = 45,

@@ -374,9 +374,9 @@ static const u16 sPrizeList[] = {
     ITEM_CHOICE_BAND,
     ITEM_KINGS_ROCK,
     ITEM_SCOPE_LENS,
-    ITEM_METAL_COAT,
+    ITEM_MAID_UNIFORM,
     ITEM_DRAGON_SCALE,
-    ITEM_UP_GRADE
+    ITEM_BLOOMERS,
 };
 
 static const u16 sTrainerTowerEncounterMusic[] = {

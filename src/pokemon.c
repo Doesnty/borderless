@@ -1438,22 +1438,23 @@ static const u8 sFiller = _("");
 
 static const u8 sHoldEffectToType[][2] = 
 {
-    {HOLD_EFFECT_BUG_POWER, TYPE_BUG},
+    {HOLD_EFFECT_HEART_POWER, TYPE_HEART},
     {HOLD_EFFECT_STEEL_POWER, TYPE_STEEL},
-    {HOLD_EFFECT_GROUND_POWER, TYPE_GROUND},
-    {HOLD_EFFECT_ROCK_POWER, TYPE_ROCK},
+    {HOLD_EFFECT_EARTH_POWER, TYPE_EARTH},
+    {HOLD_EFFECT_BEAST_POWER, TYPE_BEAST},
     {HOLD_EFFECT_GRASS_POWER, TYPE_GRASS},
     {HOLD_EFFECT_DARK_POWER, TYPE_DARK},
     {HOLD_EFFECT_FIGHTING_POWER, TYPE_FIGHTING},
     {HOLD_EFFECT_ELECTRIC_POWER, TYPE_ELECTRIC},
     {HOLD_EFFECT_WATER_POWER, TYPE_WATER},
-    {HOLD_EFFECT_FLYING_POWER, TYPE_FLYING},
-    {HOLD_EFFECT_POISON_POWER, TYPE_POISON},
+    {HOLD_EFFECT_WIND_POWER, TYPE_WIND},
+    {HOLD_EFFECT_MIASMA_POWER, TYPE_MIASMA},
     {HOLD_EFFECT_ICE_POWER, TYPE_ICE},
     {HOLD_EFFECT_GHOST_POWER, TYPE_GHOST},
-    {HOLD_EFFECT_PSYCHIC_POWER, TYPE_PSYCHIC},
+    {HOLD_EFFECT_REASON_POWER, TYPE_REASON},
     {HOLD_EFFECT_FIRE_POWER, TYPE_FIRE},
-    {HOLD_EFFECT_DRAGON_POWER, TYPE_DRAGON},
+    {HOLD_EFFECT_FAITH_POWER, TYPE_FAITH},
+    {HOLD_EFFECT_ILLUSION_POWER, TYPE_ILLUSION},
     {HOLD_EFFECT_NORMAL_POWER, TYPE_NORMAL},
 };
 
@@ -2422,17 +2423,28 @@ s32 CalculateBaseDamage(struct BattlePokemon *attacker, struct BattlePokemon *de
         spAttack = (150 * spAttack) / 100;
     if (defenderHoldEffect == HOLD_EFFECT_SOUL_DEW && !(gBattleTypeFlags & (BATTLE_TYPE_BATTLE_TOWER)) && (defender->species == SPECIES_LATIAS || defender->species == SPECIES_LATIOS))
         spDefense = (150 * spDefense) / 100;
-    /*
-    if (attackerHoldEffect == HOLD_EFFECT_DEEP_SEA_TOOTH && attacker->species == SPECIES_CLAMPERL)
+    if (attackerHoldEffect == HOLD_EFFECT_DEEP_SEA_TOOTH && attacker->species == SPECIES_RINNOSUKE)
+    {
+        attack *= 2;
         spAttack *= 2;
-    if (defenderHoldEffect == HOLD_EFFECT_DEEP_SEA_SCALE && defender->species == SPECIES_CLAMPERL)
-        spDefense *= 2;
-    if (attackerHoldEffect == HOLD_EFFECT_LIGHT_BALL && attacker->species == SPECIES_PIKACHU)
-        spAttack *= 2;
-    if (defenderHoldEffect == HOLD_EFFECT_METAL_POWDER && defender->species == SPECIES_DITTO)
+    }
+    if (defenderHoldEffect == HOLD_EFFECT_DEEP_SEA_SCALE && defender->species == SPECIES_RINNOSUKE)
+    {
         defense *= 2;
-    if (attackerHoldEffect == HOLD_EFFECT_THICK_CLUB && (attacker->species == SPECIES_CUBONE || attacker->species == SPECIES_MAROWAK))
-        attack *= 2; */
+        spDefense *= 2;
+    }
+    if (attackerHoldEffect == HOLD_EFFECT_LIGHT_BALL && attacker->species == SPECIES_CCIRNO)
+    {
+        attack *= 2;
+        spAttack *= 2;
+    }
+    /*
+    if (defenderHoldEffect == HOLD_EFFECT_METAL_POWDER && defender->species == SPECIES_DITTO)
+        defense *= 2; */
+    if (attackerHoldEffect == HOLD_EFFECT_THICK_CLUB && 
+        (attacker->species == SPECIES_CHINA || attacker->species == SPECIES_HINA ||
+         attacker->species == SPECIES_AHINA || attacker->species == SPECIES_DHINA))
+        attack *= 2;
     if (defender->ability == ABILITY_WALL_OF_ICE && (type == TYPE_FIRE || type == TYPE_ICE))
     {
         attack /= 2;

@@ -2039,7 +2039,7 @@ static void ExpandBattleTextBuffPlaceholders(const u8 *src, u8 *dst)
 {
     u32 srcId = 1;
     u32 value = 0;
-    u8 text[12];
+    u8 text[14];
     u16 hword;
 
     *dst = EOS;

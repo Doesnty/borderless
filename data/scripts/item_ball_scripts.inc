@@ -39,7 +39,7 @@ MtMoon_1F_EventScript_ItemEscapeRope:: @ 81BE603
 	end
 
 MtMoon_1F_EventScript_ItemMoonStone:: @ 81BE610
-	finditem ITEM_MOON_STONE
+	finditem ITEM_PP_UP
 	end
 
 MtMoon_B2F_EventScript_ItemStarPiece:: @ 81BE61D
@@ -107,7 +107,7 @@ RocketHideout_B2F_EventScript_ItemXSpeed:: @ 81BE6E0
 	end
 
 RocketHideout_B2F_EventScript_ItemMoonStone:: @ 81BE6ED
-	finditem ITEM_MOON_STONE
+	finditem ITEM_PP_UP
 	end
 
 RocketHideout_B2F_EventScript_ItemTM12:: @ 81BE6FA
@@ -195,7 +195,7 @@ SafariZone_East_EventScript_ItemTM11:: @ 81BE7FE
 	end
 
 SafariZone_East_EventScript_ItemLeafStone:: @ 81BE80B
-	finditem ITEM_LEAF_STONE
+	finditem ITEM_PP_UP
 	end
 
 SafariZone_North_EventScript_ItemProtein:: @ 81BE818
@@ -291,7 +291,7 @@ PowerPlant_EventScript_ItemTM25:: @ 81BE936
 	end
 
 PowerPlant_EventScript_ItemThunderStone:: @ 81BE943
-	finditem ITEM_THUNDER_STONE
+	finditem ITEM_PP_UP
 	end
 
 PowerPlant_EventScript_ItemElixir:: @ 81BE950
@@ -491,7 +491,7 @@ CeladonCity_EventScript_ItemEther:: @ 81BEBC0
 	end
 
 RocketHideout_B3F_EventScript_ItemBlackGlasses:: @ 81BEBCD
-	finditem ITEM_BLACK_GLASSES
+	finditem ITEM_MISTRESS
 	end
 
 SafariZone_North_EventScript_ItemQuickClaw:: @ 81BEBDA
@@ -503,7 +503,7 @@ SeafoamIslands_1F_EventScript_ItemIceHeal:: @ 81BEBE7
 	end
 
 SeafoamIslands_B1F_EventScript_ItemWaterStone:: @ 81BEBF4
-	finditem ITEM_WATER_STONE
+	finditem ITEM_PP_UP
 	end
 
 SeafoamIslands_B1F_EventScript_ItemRevive:: @ 81BEC01
@@ -547,7 +547,7 @@ FiveIsland_Meadow_EventScript_ItemPPUp:: @ 81BEC76
 	end
 
 FiveIsland_MemorialPillar_EventScript_ItemMetalCoat:: @ 81BEC83
-	finditem ITEM_METAL_COAT
+	finditem ITEM_MAID_UNIFORM
 	end
 
 SixIsland_OutcastIsland_EventScript_ItemPPUp:: @ 81BEC90
@@ -571,7 +571,7 @@ SixIsland_RuinValley_EventScript_ItemHPUp:: @ 81BECC4
 	end
 
 SixIsland_RuinValley_EventScript_ItemSunStone:: @ 81BECD1
-	finditem ITEM_SUN_STONE
+	finditem ITEM_PP_MAX
 	end
 
 SevenIsland_SevaultCanyon_EventScript_ItemKingsRock:: @ 81BECDE
@@ -603,7 +603,7 @@ MtEmber_Exterior_EventScript_ItemUltraBall:: @ 81BED2C
 	end
 
 MtEmber_Exterior_EventScript_ItemFireStone:: @ 81BED39
-	finditem ITEM_FIRE_STONE
+	finditem ITEM_PP_UP
 	end
 
 MtEmber_Exterior_EventScript_ItemDireHit:: @ 81BED46
@@ -623,7 +623,7 @@ FourIsland_IcefallCave_B1F_EventScript_ItemFullRestore:: @ 81BED6D
 	end
 
 FourIsland_IcefallCave_B1F_EventScript_ItemNeverMeltIce:: @ 81BED7A
-	finditem ITEM_NEVER_MELT_ICE
+	finditem ITEM_THICK_FUR
 	end
 
 FiveIsland_RocketWarehouse_EventScript_ItemBigPearl:: @ 81BED87
@@ -639,11 +639,11 @@ FiveIsland_RocketWarehouse_EventScript_ItemPearl:: @ 81BEDA1
 	end
 
 FiveIsland_RocketWarehouse_EventScript_ItemUpGrade:: @ 81BEDAE
-	finditem ITEM_UP_GRADE
+	finditem ITEM_PP_MAX
 	end
 
 FiveIsland_LostCave_Room10_EventScript_ItemSilkScarf:: @ 81BEDBB
-	finditem ITEM_SILK_SCARF
+	finditem ITEM_BRIDAL_GOWN
 	end
 
 FiveIsland_LostCave_Room11_EventScript_ItemLaxIncense:: @ 81BEDC8

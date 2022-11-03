@@ -3575,13 +3575,13 @@ static const struct TrainerMonItemDefaultMoves sParty_BlackBeltKoichi[] = {
         .iv = 100,
         .lvl = 37,
         .species = SPECIES_HITMONLEE,
-        .heldItem = ITEM_BLACK_BELT,
+        .heldItem = ITEM_CHINA_DRESS,
     },
     {
         .iv = 100,
         .lvl = 37,
         .species = SPECIES_HITMONCHAN,
-        .heldItem = ITEM_BLACK_BELT,
+        .heldItem = ITEM_CHINA_DRESS,
     },
 };
 
@@ -3590,19 +3590,19 @@ static const struct TrainerMonItemDefaultMoves sParty_BlackBeltMike[] = {
         .iv = 100,
         .lvl = 31,
         .species = SPECIES_MANKEY,
-        .heldItem = ITEM_BLACK_BELT,
+        .heldItem = ITEM_CHINA_DRESS,
     },
     {
         .iv = 100,
         .lvl = 31,
         .species = SPECIES_MANKEY,
-        .heldItem = ITEM_BLACK_BELT,
+        .heldItem = ITEM_CHINA_DRESS,
     },
     {
         .iv = 100,
         .lvl = 31,
         .species = SPECIES_PRIMEAPE,
-        .heldItem = ITEM_BLACK_BELT,
+        .heldItem = ITEM_CHINA_DRESS,
     },
 };
 
@@ -3611,13 +3611,13 @@ static const struct TrainerMonItemDefaultMoves sParty_BlackBeltHideki[] = {
         .iv = 100,
         .lvl = 32,
         .species = SPECIES_MACHOP,
-        .heldItem = ITEM_BLACK_BELT,
+        .heldItem = ITEM_CHINA_DRESS,
     },
     {
         .iv = 100,
         .lvl = 32,
         .species = SPECIES_MACHOKE,
-        .heldItem = ITEM_BLACK_BELT,
+        .heldItem = ITEM_CHINA_DRESS,
     },
 };
 
@@ -3626,7 +3626,7 @@ static const struct TrainerMonItemDefaultMoves sParty_BlackBeltAaron[] = {
         .iv = 100,
         .lvl = 36,
         .species = SPECIES_PRIMEAPE,
-        .heldItem = ITEM_BLACK_BELT,
+        .heldItem = ITEM_CHINA_DRESS,
     },
 };
 
@@ -3635,19 +3635,19 @@ static const struct TrainerMonItemDefaultMoves sParty_BlackBeltHitoshi[] = {
         .iv = 100,
         .lvl = 31,
         .species = SPECIES_MACHOP,
-        .heldItem = ITEM_BLACK_BELT,
+        .heldItem = ITEM_CHINA_DRESS,
     },
     {
         .iv = 100,
         .lvl = 31,
         .species = SPECIES_MANKEY,
-        .heldItem = ITEM_BLACK_BELT,
+        .heldItem = ITEM_CHINA_DRESS,
     },
     {
         .iv = 100,
         .lvl = 31,
         .species = SPECIES_PRIMEAPE,
-        .heldItem = ITEM_BLACK_BELT,
+        .heldItem = ITEM_CHINA_DRESS,
     },
 };
 
@@ -3656,13 +3656,13 @@ static const struct TrainerMonItemDefaultMoves sParty_BlackBeltAtsushi[] = {
         .iv = 100,
         .lvl = 40,
         .species = SPECIES_MACHOP,
-        .heldItem = ITEM_BLACK_BELT,
+        .heldItem = ITEM_CHINA_DRESS,
     },
     {
         .iv = 100,
         .lvl = 40,
         .species = SPECIES_MACHOKE,
-        .heldItem = ITEM_BLACK_BELT,
+        .heldItem = ITEM_CHINA_DRESS,
     },
 };
 
@@ -3671,7 +3671,7 @@ static const struct TrainerMonItemDefaultMoves sParty_BlackBeltKiyo[] = {
         .iv = 100,
         .lvl = 43,
         .species = SPECIES_MACHOKE,
-        .heldItem = ITEM_BLACK_BELT,
+        .heldItem = ITEM_CHINA_DRESS,
     },
 };
 
@@ -3680,19 +3680,19 @@ static const struct TrainerMonItemDefaultMoves sParty_BlackBeltTakashi[] = {
         .iv = 100,
         .lvl = 38,
         .species = SPECIES_MACHOKE,
-        .heldItem = ITEM_BLACK_BELT,
+        .heldItem = ITEM_CHINA_DRESS,
     },
     {
         .iv = 100,
         .lvl = 38,
         .species = SPECIES_MACHOP,
-        .heldItem = ITEM_BLACK_BELT,
+        .heldItem = ITEM_CHINA_DRESS,
     },
     {
         .iv = 100,
         .lvl = 38,
         .species = SPECIES_MACHOKE,
-        .heldItem = ITEM_BLACK_BELT,
+        .heldItem = ITEM_CHINA_DRESS,
     },
 };
 
@@ -3701,19 +3701,19 @@ static const struct TrainerMonItemDefaultMoves sParty_BlackBeltDaisuke[] = {
         .iv = 100,
         .lvl = 43,
         .species = SPECIES_MACHOKE,
-        .heldItem = ITEM_BLACK_BELT,
+        .heldItem = ITEM_CHINA_DRESS,
     },
     {
         .iv = 100,
         .lvl = 43,
         .species = SPECIES_MACHOP,
-        .heldItem = ITEM_BLACK_BELT,
+        .heldItem = ITEM_CHINA_DRESS,
     },
     {
         .iv = 100,
         .lvl = 43,
         .species = SPECIES_MACHOKE,
-        .heldItem = ITEM_BLACK_BELT,
+        .heldItem = ITEM_CHINA_DRESS,
     },
 };
 
@@ -6894,13 +6894,13 @@ static const struct TrainerMonItemDefaultMoves sParty_CrushKinRonMya[] = {
         .iv = 50,
         .lvl = 29,
         .species = SPECIES_HITMONCHAN,
-        .heldItem = ITEM_BLACK_BELT,
+        .heldItem = ITEM_CHINA_DRESS,
     },
     {
         .iv = 50,
         .lvl = 29,
         .species = SPECIES_HITMONLEE,
-        .heldItem = ITEM_BLACK_BELT,
+        .heldItem = ITEM_CHINA_DRESS,
     },
 };
 
@@ -7179,13 +7179,13 @@ static const struct TrainerMonItemDefaultMoves sParty_CrushGirlSharon[] = {
         .iv = 50,
         .lvl = 37,
         .species = SPECIES_MANKEY,
-        .heldItem = ITEM_BLACK_BELT,
+        .heldItem = ITEM_CHINA_DRESS,
     },
     {
         .iv = 50,
         .lvl = 37,
         .species = SPECIES_PRIMEAPE,
-        .heldItem = ITEM_BLACK_BELT,
+        .heldItem = ITEM_CHINA_DRESS,
     },
 };
 
@@ -7726,13 +7726,13 @@ static const struct TrainerMonItemDefaultMoves sParty_CrushGirlTanya[] = {
         .iv = 50,
         .lvl = 38,
         .species = SPECIES_HITMONLEE,
-        .heldItem = ITEM_BLACK_BELT,
+        .heldItem = ITEM_CHINA_DRESS,
     },
     {
         .iv = 50,
         .lvl = 38,
         .species = SPECIES_HITMONCHAN,
-        .heldItem = ITEM_BLACK_BELT,
+        .heldItem = ITEM_CHINA_DRESS,
     },
 };
 
@@ -7741,13 +7741,13 @@ static const struct TrainerMonItemDefaultMoves sParty_BlackBeltShea[] = {
         .iv = 100,
         .lvl = 38,
         .species = SPECIES_MACHOP,
-        .heldItem = ITEM_BLACK_BELT,
+        .heldItem = ITEM_CHINA_DRESS,
     },
     {
         .iv = 100,
         .lvl = 38,
         .species = SPECIES_MACHOKE,
-        .heldItem = ITEM_BLACK_BELT,
+        .heldItem = ITEM_CHINA_DRESS,
     },
 };
 
@@ -7756,13 +7756,13 @@ static const struct TrainerMonItemDefaultMoves sParty_BlackBeltHugh[] = {
         .iv = 100,
         .lvl = 37,
         .species = SPECIES_MACHOP,
-        .heldItem = ITEM_BLACK_BELT,
+        .heldItem = ITEM_CHINA_DRESS,
     },
     {
         .iv = 100,
         .lvl = 37,
         .species = SPECIES_MACHOKE,
-        .heldItem = ITEM_BLACK_BELT,
+        .heldItem = ITEM_CHINA_DRESS,
     },
 };
 
@@ -7812,13 +7812,13 @@ static const struct TrainerMonItemDefaultMoves sParty_CrushKinMikKia[] = {
         .iv = 50,
         .lvl = 39,
         .species = SPECIES_MACHOKE,
-        .heldItem = ITEM_BLACK_BELT,
+        .heldItem = ITEM_CHINA_DRESS,
     },
     {
         .iv = 50,
         .lvl = 39,
         .species = SPECIES_PRIMEAPE,
-        .heldItem = ITEM_BLACK_BELT,
+        .heldItem = ITEM_CHINA_DRESS,
     },
 };
 
@@ -8281,19 +8281,19 @@ static const struct TrainerMonItemDefaultMoves sParty_CrushGirlCyndy[] = {
         .iv = 50,
         .lvl = 48,
         .species = SPECIES_PRIMEAPE,
-        .heldItem = ITEM_BLACK_BELT,
+        .heldItem = ITEM_CHINA_DRESS,
     },
     {
         .iv = 50,
         .lvl = 48,
         .species = SPECIES_HITMONTOP,
-        .heldItem = ITEM_BLACK_BELT,
+        .heldItem = ITEM_CHINA_DRESS,
     },
     {
         .iv = 50,
         .lvl = 48,
         .species = SPECIES_MACHOKE,
-        .heldItem = ITEM_BLACK_BELT,
+        .heldItem = ITEM_CHINA_DRESS,
     },
 };
 
@@ -8302,13 +8302,13 @@ static const struct TrainerMonItemDefaultMoves sParty_CrushGirlJocelyn[] = {
         .iv = 50,
         .lvl = 38,
         .species = SPECIES_HITMONCHAN,
-        .heldItem = ITEM_BLACK_BELT,
+        .heldItem = ITEM_CHINA_DRESS,
     },
     {
         .iv = 50,
         .lvl = 38,
         .species = SPECIES_HITMONCHAN,
-        .heldItem = ITEM_BLACK_BELT,
+        .heldItem = ITEM_CHINA_DRESS,
     },
 };
 
@@ -9580,13 +9580,13 @@ static const struct TrainerMonItemDefaultMoves sParty_CrushKinRonMya2[] = {
         .iv = 110,
         .lvl = 33,
         .species = SPECIES_HITMONCHAN,
-        .heldItem = ITEM_BLACK_BELT,
+        .heldItem = ITEM_CHINA_DRESS,
     },
     {
         .iv = 110,
         .lvl = 33,
         .species = SPECIES_HITMONLEE,
-        .heldItem = ITEM_BLACK_BELT,
+        .heldItem = ITEM_CHINA_DRESS,
     },
 };
 
@@ -9595,13 +9595,13 @@ static const struct TrainerMonItemDefaultMoves sParty_CrushKinRonMya3[] = {
         .iv = 130,
         .lvl = 51,
         .species = SPECIES_HITMONCHAN,
-        .heldItem = ITEM_BLACK_BELT,
+        .heldItem = ITEM_CHINA_DRESS,
     },
     {
         .iv = 130,
         .lvl = 51,
         .species = SPECIES_HITMONLEE,
-        .heldItem = ITEM_BLACK_BELT,
+        .heldItem = ITEM_CHINA_DRESS,
     },
 };
 
@@ -9610,13 +9610,13 @@ static const struct TrainerMonItemDefaultMoves sParty_CrushKinRonMya4[] = {
         .iv = 170,
         .lvl = 56,
         .species = SPECIES_HITMONCHAN,
-        .heldItem = ITEM_BLACK_BELT,
+        .heldItem = ITEM_CHINA_DRESS,
     },
     {
         .iv = 170,
         .lvl = 56,
         .species = SPECIES_HITMONLEE,
-        .heldItem = ITEM_BLACK_BELT,
+        .heldItem = ITEM_CHINA_DRESS,
     },
 };
 
@@ -9878,13 +9878,13 @@ static const struct TrainerMonItemDefaultMoves sParty_CrushGirlSharon2[] = {
         .iv = 130,
         .lvl = 50,
         .species = SPECIES_MANKEY,
-        .heldItem = ITEM_BLACK_BELT,
+        .heldItem = ITEM_CHINA_DRESS,
     },
     {
         .iv = 130,
         .lvl = 50,
         .species = SPECIES_PRIMEAPE,
-        .heldItem = ITEM_BLACK_BELT,
+        .heldItem = ITEM_CHINA_DRESS,
     },
 };
 
@@ -9893,13 +9893,13 @@ static const struct TrainerMonItemDefaultMoves sParty_CrushGirlSharon3[] = {
         .iv = 170,
         .lvl = 55,
         .species = SPECIES_PRIMEAPE,
-        .heldItem = ITEM_BLACK_BELT,
+        .heldItem = ITEM_CHINA_DRESS,
     },
     {
         .iv = 170,
         .lvl = 55,
         .species = SPECIES_PRIMEAPE,
-        .heldItem = ITEM_BLACK_BELT,
+        .heldItem = ITEM_CHINA_DRESS,
     },
 };
 
@@ -9908,13 +9908,13 @@ static const struct TrainerMonItemDefaultMoves sParty_CrushGirlTanya2[] = {
         .iv = 130,
         .lvl = 50,
         .species = SPECIES_HITMONLEE,
-        .heldItem = ITEM_BLACK_BELT,
+        .heldItem = ITEM_CHINA_DRESS,
     },
     {
         .iv = 130,
         .lvl = 50,
         .species = SPECIES_HITMONCHAN,
-        .heldItem = ITEM_BLACK_BELT,
+        .heldItem = ITEM_CHINA_DRESS,
     },
 };
 
@@ -9923,13 +9923,13 @@ static const struct TrainerMonItemDefaultMoves sParty_CrushGirlTanya3[] = {
         .iv = 170,
         .lvl = 55,
         .species = SPECIES_HITMONLEE,
-        .heldItem = ITEM_BLACK_BELT,
+        .heldItem = ITEM_CHINA_DRESS,
     },
     {
         .iv = 170,
         .lvl = 55,
         .species = SPECIES_HITMONCHAN,
-        .heldItem = ITEM_BLACK_BELT,
+        .heldItem = ITEM_CHINA_DRESS,
     },
 };
 
@@ -9938,13 +9938,13 @@ static const struct TrainerMonItemDefaultMoves sParty_BlackBeltShea2[] = {
         .iv = 180,
         .lvl = 50,
         .species = SPECIES_MACHOKE,
-        .heldItem = ITEM_BLACK_BELT,
+        .heldItem = ITEM_CHINA_DRESS,
     },
     {
         .iv = 180,
         .lvl = 50,
         .species = SPECIES_MACHOKE,
-        .heldItem = ITEM_BLACK_BELT,
+        .heldItem = ITEM_CHINA_DRESS,
     },
 };
 
@@ -9953,13 +9953,13 @@ static const struct TrainerMonItemDefaultMoves sParty_BlackBeltShea3[] = {
         .iv = 220,
         .lvl = 55,
         .species = SPECIES_MACHOKE,
-        .heldItem = ITEM_BLACK_BELT,
+        .heldItem = ITEM_CHINA_DRESS,
     },
     {
         .iv = 220,
         .lvl = 55,
         .species = SPECIES_MACHAMP,
-        .heldItem = ITEM_BLACK_BELT,
+        .heldItem = ITEM_CHINA_DRESS,
     },
 };
 
@@ -9968,13 +9968,13 @@ static const struct TrainerMonItemDefaultMoves sParty_BlackBeltHugh2[] = {
         .iv = 180,
         .lvl = 50,
         .species = SPECIES_MACHOKE,
-        .heldItem = ITEM_BLACK_BELT,
+        .heldItem = ITEM_CHINA_DRESS,
     },
     {
         .iv = 180,
         .lvl = 50,
         .species = SPECIES_MACHOKE,
-        .heldItem = ITEM_BLACK_BELT,
+        .heldItem = ITEM_CHINA_DRESS,
     },
 };
 
@@ -9983,13 +9983,13 @@ static const struct TrainerMonItemDefaultMoves sParty_BlackBeltHugh3[] = {
         .iv = 220,
         .lvl = 55,
         .species = SPECIES_MACHOKE,
-        .heldItem = ITEM_BLACK_BELT,
+        .heldItem = ITEM_CHINA_DRESS,
     },
     {
         .iv = 220,
         .lvl = 55,
         .species = SPECIES_MACHAMP,
-        .heldItem = ITEM_BLACK_BELT,
+        .heldItem = ITEM_CHINA_DRESS,
     },
 };
 
@@ -9998,13 +9998,13 @@ static const struct TrainerMonItemDefaultMoves sParty_CrushKinMikKia2[] = {
         .iv = 130,
         .lvl = 51,
         .species = SPECIES_MACHOKE,
-        .heldItem = ITEM_BLACK_BELT,
+        .heldItem = ITEM_CHINA_DRESS,
     },
     {
         .iv = 130,
         .lvl = 51,
         .species = SPECIES_PRIMEAPE,
-        .heldItem = ITEM_BLACK_BELT,
+        .heldItem = ITEM_CHINA_DRESS,
     },
 };
 
@@ -10013,13 +10013,13 @@ static const struct TrainerMonItemDefaultMoves sParty_CrushKinMikKia3[] = {
         .iv = 170,
         .lvl = 56,
         .species = SPECIES_MACHAMP,
-        .heldItem = ITEM_BLACK_BELT,
+        .heldItem = ITEM_CHINA_DRESS,
     },
     {
         .iv = 170,
         .lvl = 56,
         .species = SPECIES_PRIMEAPE,
-        .heldItem = ITEM_BLACK_BELT,
+        .heldItem = ITEM_CHINA_DRESS,
     },
 };
 
@@ -10323,19 +10323,19 @@ static const struct TrainerMonItemDefaultMoves sParty_CrushGirlCyndy2[] = {
         .iv = 170,
         .lvl = 54,
         .species = SPECIES_PRIMEAPE,
-        .heldItem = ITEM_BLACK_BELT,
+        .heldItem = ITEM_CHINA_DRESS,
     },
     {
         .iv = 170,
         .lvl = 54,
         .species = SPECIES_HITMONTOP,
-        .heldItem = ITEM_BLACK_BELT,
+        .heldItem = ITEM_CHINA_DRESS,
     },
     {
         .iv = 170,
         .lvl = 54,
         .species = SPECIES_MACHAMP,
-        .heldItem = ITEM_BLACK_BELT,
+        .heldItem = ITEM_CHINA_DRESS,
     },
 };
 

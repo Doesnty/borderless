@@ -430,8 +430,8 @@ const u32 gFile_graphics_items_icon_palettes_leftovers_palette[] = INCBIN_U32("g
 const u32 gFile_graphics_items_icons_dragon_scale_sheet[] = INCBIN_U32("graphics/items/icons/dragon_scale.4bpp.lz");
 const u32 gFile_graphics_items_icon_palettes_dragon_scale_palette[] = INCBIN_U32("graphics/items/icon_palettes/dragon_scale.gbapal.lz");
 
-const u32 gFile_graphics_items_icons_light_ball_sheet[] = INCBIN_U32("graphics/items/icons/light_ball.4bpp.lz");
-const u32 gFile_graphics_items_icon_palettes_light_ball_palette[] = INCBIN_U32("graphics/items/icon_palettes/light_ball.gbapal.lz");
+const u32 gFile_graphics_items_icons_ice_ball_sheet[] = INCBIN_U32("graphics/items/icons/ice_ball.4bpp.lz");
+const u32 gFile_graphics_items_icon_palettes_ice_ball_palette[] = INCBIN_U32("graphics/items/icon_palettes/ice_ball.gbapal.lz");
 
 const u32 gFile_graphics_items_icons_soft_sand_sheet[] = INCBIN_U32("graphics/items/icons/soft_sand.4bpp.lz");
 const u32 gFile_graphics_items_icon_palettes_soft_sand_palette[] = INCBIN_U32("graphics/items/icon_palettes/soft_sand.gbapal.lz");
@@ -670,3 +670,77 @@ const u32 gFile_graphics_items_icon_palettes_powder_jar_palette[] = INCBIN_U32("
 const u32 gFile_graphics_items_icon_palettes_ruby_palette[] = INCBIN_U32("graphics/items/icon_palettes/ruby.gbapal.lz");
 const u32 gFile_graphics_items_icons_gem_sheet[] = INCBIN_U32("graphics/items/icons/gem.4bpp.lz");
 const u32 gFile_graphics_items_icon_palettes_sapphire_palette[] = INCBIN_U32("graphics/items/icon_palettes/sapphire.gbapal.lz");
+
+const u32 gFile_graphics_items_icon_palettes_autumn_leaf_palette[] = INCBIN_U32("graphics/items/icon_palettes/autumn_leaf.gbapal.lz");
+const u32 gFile_graphics_items_icons_autumn_leaf_sheet[] = INCBIN_U32("graphics/items/icons/autumn_leaf.4bpp.lz");
+
+const u32 gFile_graphics_items_icon_palettes_dubious_tome_palette[] = INCBIN_U32("graphics/items/icon_palettes/dubious_tome.gbapal.lz");
+const u32 gFile_graphics_items_icons_dubious_tome_sheet[] = INCBIN_U32("graphics/items/icons/dubious_tome.4bpp.lz");
+
+const u32 gFile_graphics_items_icon_palettes_old_textbook_palette[] = INCBIN_U32("graphics/items/icon_palettes/old_textbook.gbapal.lz");
+const u32 gFile_graphics_items_icons_old_textbook_sheet[] = INCBIN_U32("graphics/items/icons/old_textbook.4bpp.lz");
+
+const u32 gFile_graphics_items_icon_palettes_seal_crystal_palette[] = INCBIN_U32("graphics/items/icon_palettes/seal_crystal.gbapal.lz");
+const u32 gFile_graphics_items_icons_seal_crystal_sheet[] = INCBIN_U32("graphics/items/icons/seal_crystal.4bpp.lz");
+
+const u32 gFile_graphics_items_icons_blazer_sheet[] = INCBIN_U32("graphics/items/icons/blazer.4bpp.lz");
+const u32 gFile_graphics_items_icon_palettes_blazer_palette[] = INCBIN_U32("graphics/items/icon_palettes/blazer.gbapal.lz");
+
+const u32 gFile_graphics_items_icons_bridal_gown_sheet[] = INCBIN_U32("graphics/items/icons/bridal_gown.4bpp.lz");
+const u32 gFile_graphics_items_icon_palettes_bridal_gown_palette[] = INCBIN_U32("graphics/items/icon_palettes/bridal_gown.gbapal.lz");
+
+const u32 gFile_graphics_items_icons_bunny_suit_sheet[] = INCBIN_U32("graphics/items/icons/bunny_suit.4bpp.lz");
+const u32 gFile_graphics_items_icon_palettes_bunny_suit_palette[] = INCBIN_U32("graphics/items/icon_palettes/bunny_suit.gbapal.lz");
+
+const u32 gFile_graphics_items_icons_camouflage_sheet[] = INCBIN_U32("graphics/items/icons/camouflage.4bpp.lz");
+const u32 gFile_graphics_items_icon_palettes_camouflage_palette[] = INCBIN_U32("graphics/items/icon_palettes/camouflage.gbapal.lz");
+
+const u32 gFile_graphics_items_icons_china_dress_sheet[] = INCBIN_U32("graphics/items/icons/china_dress.4bpp.lz");
+const u32 gFile_graphics_items_icon_palettes_china_dress_palette[] = INCBIN_U32("graphics/items/icon_palettes/china_dress.gbapal.lz");
+
+const u32 gFile_graphics_items_icons_gothic_dress_sheet[] = INCBIN_U32("graphics/items/icons/gothic_dress.4bpp.lz");
+const u32 gFile_graphics_items_icon_palettes_gothic_dress_palette[] = INCBIN_U32("graphics/items/icon_palettes/gothic_dress.gbapal.lz");
+
+const u32 gFile_graphics_items_icons_gym_sweater_sheet[] = INCBIN_U32("graphics/items/icons/gym_sweater.4bpp.lz");
+const u32 gFile_graphics_items_icon_palettes_gym_sweater_palette[] = INCBIN_U32("graphics/items/icon_palettes/gym_sweater.gbapal.lz");
+
+const u32 gFile_graphics_items_icons_kimono_sheet[] = INCBIN_U32("graphics/items/icons/kimono.4bpp.lz");
+const u32 gFile_graphics_items_icon_palettes_kimono_palette[] = INCBIN_U32("graphics/items/icon_palettes/kimono.gbapal.lz");
+
+const u32 gFile_graphics_items_icons_maid_uniform_sheet[] = INCBIN_U32("graphics/items/icons/maid_uniform.4bpp.lz");
+const u32 gFile_graphics_items_icon_palettes_maid_uniform_palette[] = INCBIN_U32("graphics/items/icon_palettes/maid_uniform.gbapal.lz");
+
+const u32 gFile_graphics_items_icons_mistress_sheet[] = INCBIN_U32("graphics/items/icons/mistress.4bpp.lz");
+const u32 gFile_graphics_items_icon_palettes_mistress_palette[] = INCBIN_U32("graphics/items/icon_palettes/mistress.gbapal.lz");
+
+const u32 gFile_graphics_items_icons_ninja_suit_sheet[] = INCBIN_U32("graphics/items/icons/ninja_suit.4bpp.lz");
+const u32 gFile_graphics_items_icon_palettes_ninja_suit_palette[] = INCBIN_U32("graphics/items/icon_palettes/ninja_suit.gbapal.lz");
+
+const u32 gFile_graphics_items_icons_nurse_outfit_sheet[] = INCBIN_U32("graphics/items/icons/nurse_outfit.4bpp.lz");
+const u32 gFile_graphics_items_icon_palettes_nurse_outfit_palette[] = INCBIN_U32("graphics/items/icon_palettes/nurse_outfit.gbapal.lz");
+
+const u32 gFile_graphics_items_icons_miko_uniform_sheet[] = INCBIN_U32("graphics/items/icons/miko_uniform.4bpp.lz");
+const u32 gFile_graphics_items_icon_palettes_miko_uniform_palette[] = INCBIN_U32("graphics/items/icon_palettes/miko_uniform.gbapal.lz");
+
+const u32 gFile_graphics_items_icons_stewardess_sheet[] = INCBIN_U32("graphics/items/icons/stewardess.4bpp.lz");
+const u32 gFile_graphics_items_icon_palettes_stewardess_palette[] = INCBIN_U32("graphics/items/icon_palettes/stewardess.gbapal.lz");
+
+const u32 gFile_graphics_items_icons_swimsuit_sheet[] = INCBIN_U32("graphics/items/icons/swimsuit.4bpp.lz");
+const u32 gFile_graphics_items_icon_palettes_swimsuit_palette[] = INCBIN_U32("graphics/items/icon_palettes/swimsuit.gbapal.lz");
+
+const u32 gFile_graphics_items_icons_thick_fur_sheet[] = INCBIN_U32("graphics/items/icons/thick_fur.4bpp.lz");
+const u32 gFile_graphics_items_icon_palettes_thick_fur_palette[] = INCBIN_U32("graphics/items/icon_palettes/thick_fur.gbapal.lz");
+
+const u32 gFile_graphics_items_icons_witchs_robe_sheet[] = INCBIN_U32("graphics/items/icons/witchs_robe.4bpp.lz");
+const u32 gFile_graphics_items_icon_palettes_witchs_robe_palette[] = INCBIN_U32("graphics/items/icon_palettes/witchs_robe.gbapal.lz");
+
+const u32 gFile_graphics_items_icons_bloomers_sheet[] = INCBIN_U32("graphics/items/icons/bloomers.4bpp.lz");
+const u32 gFile_graphics_items_icon_palettes_bloomers_palette[] = INCBIN_U32("graphics/items/icon_palettes/bloomers.gbapal.lz");
+
+const u32 gFile_graphics_items_icons_kusanagi_sheet[] = INCBIN_U32("graphics/items/icons/kusanagi.4bpp.lz");
+const u32 gFile_graphics_items_icon_palettes_kusanagi_palette[] = INCBIN_U32("graphics/items/icon_palettes/kusanagi.gbapal.lz");
+
+const u32 gFile_graphics_items_icons_yata_mirror_sheet[] = INCBIN_U32("graphics/items/icons/yata_mirror.4bpp.lz");
+const u32 gFile_graphics_items_icon_palettes_yata_mirror_palette[] = INCBIN_U32("graphics/items/icon_palettes/yata_mirror.gbapal.lz");
+
+

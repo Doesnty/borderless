@@ -206,7 +206,7 @@
       "x": 20,
       "y": 16,
       "elevation": 3,
-      "item": "ITEM_MOON_STONE",
+      "item": "ITEM_PP_UP",
       "flag": "HIDDEN_ITEM_MT_MOON_B2F_MOON_STONE",
       "quantity": 1,
       "underfoot": false

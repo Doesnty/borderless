@@ -1675,7 +1675,7 @@ const struct MonCoords gMonFrontPicCoords[] =
 		.size = 0x88,
 		.y_offset = 1,
 	},
-	[SPECIES_SHINGOKYUM] = 
+	[SPECIES_SHINGYOKUM] = 
 	{
 		.size = 0x88,
 		.y_offset = 1,

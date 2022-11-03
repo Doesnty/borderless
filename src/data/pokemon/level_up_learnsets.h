@@ -8747,7 +8747,7 @@ static const u16 sShingyokuFLevelUpLearnset[] = {
     LEVEL_UP_END
 };
 
-static const u16 sShingokyuMLevelUpLearnset[] = {
+static const u16 sShingyokuMLevelUpLearnset[] = {
     LEVEL_UP_END
 };
 

@@ -737,6 +737,11 @@ static void UpdateLvlInHealthbox(u8 healthboxSpriteId, u8 lvl)
     u32 xPos;
     u8 *objVram;
     
+    if (lvl > 9 && lvl < 100)
+    {
+        text[0] = CHAR_L;
+    }
+    
     if (lvl == 100)
         objVram = ConvertIntToDecimalStringN(text, lvl, STR_CONV_MODE_LEFT_ALIGN, 3);
     else if (lvl > 9)

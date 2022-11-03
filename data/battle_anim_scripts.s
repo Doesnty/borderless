@@ -57,7 +57,7 @@ gBattleAnims_Moves::
 	.4byte Move_ICE_PUNCH
 	.4byte Move_THUNDER_PUNCH
 	.4byte Move_SCRATCH
-	.4byte Move_VICE_GRIP
+	.4byte Move_NIGHT_SLASH
 	.4byte Move_GUILLOTINE
 	.4byte Move_RAZOR_WIND
 	.4byte Move_SWORDS_DANCE
@@ -11099,3 +11099,23 @@ Special_SubstituteToMon:: @ 81D6594
 Special_MonToSubstitute:: @ 81D659E
 	createvisualtask AnimTask_SwapMonSpriteToFromSubstitute, 2, 0
 	end
+
+Move_NIGHT_SLASH::
+	loadspritegfx ANIM_TAG_SLASH
+	monbg ANIM_ATTACKER
+	fadetobg 1
+	waitbgfadein
+	delay 0
+	createsprite gSlashSliceSpriteTemplate, ANIM_TARGET, 2, 1, -8, 0
+	playsewithpan SE_M_RAZOR_WIND, 63
+	delay 4
+	createsprite gSlashSliceSpriteTemplate, ANIM_TARGET, 2, 1, 8, 0
+	createvisualtask AnimTask_ShakeMon2, 2, 1, 4, 0, 18, 1
+	playsewithpan SE_M_RAZOR_WIND, 63
+	waitforvisualfinish
+	clearmonbg ANIM_ATTACKER
+	delay 1
+	restorebg
+	waitbgfadein
+	end
+
