@@ -1113,6 +1113,9 @@ static void atk01_accuracycheck(void)
 
         if (holdEffect == HOLD_EFFECT_EVASION_UP)
             calc = (calc * (100 - param)) / 100;
+        
+        if (moveAcc == 0) // never-miss moves
+            calc = 100;
         // final calculation
         if ((Random() % 100 + 1) > calc)
         {
@@ -2420,10 +2423,18 @@ void SetMoveEffect(bool8 primary, u8 certain)
             case MOVE_EFFECT_PAYDAY:
                 if (GET_BATTLER_SIDE(gBattlerAttacker) == B_SIDE_PLAYER)
                 {
-                    u16 PayDay = gPaydayMoney;
-                    gPaydayMoney += (gBattleMons[gBattlerAttacker].level * 5);
-                    if (PayDay > gPaydayMoney)
-                        gPaydayMoney = 0xFFFF;
+                    if (gCurrentMove == MOVE_PAY_DAY) {
+                        u16 PayDay = gPaydayMoney;
+                        gPaydayMoney += (gBattleMons[gBattlerAttacker].level * 5);
+                        if (PayDay > gPaydayMoney)
+                            gPaydayMoney = 0xFFFF;
+                    }
+                    else {
+                        u16 PayDay = gDebtSpiralMoney;
+                        gDebtSpiralMoney += (gBattleMons[gBattlerAttacker].level * 20);
+                        if (PayDay > gDebtSpiralMoney)
+                            gDebtSpiralMoney = 0xFFFF;
+                    }
                 }
                 BattleScriptPush(gBattlescriptCurrInstr + 1);
                 gBattlescriptCurrInstr = sMoveEffectBS_Ptrs[gBattleCommunication[MOVE_EFFECT_BYTE]];
@@ -6770,14 +6781,24 @@ static void atk90_tryconversiontypechange(void) // randomly changes user's type 
 
 static void atk91_givepaydaymoney(void)
 {
-    if (!(gBattleTypeFlags & BATTLE_TYPE_LINK) && gPaydayMoney != 0)
+    if (!(gBattleTypeFlags & BATTLE_TYPE_LINK) && (gPaydayMoney != 0 || gDebtSpiralMoney != 0))
     {
-        u32 bonusMoney = gPaydayMoney * gBattleStruct->moneyMultiplier;
+        s32 bonusMoney = (gPaydayMoney * gBattleStruct->moneyMultiplier) - gDebtSpiralMoney;
+        u8 negative = (bonusMoney < 0);
+        if (negative)
+            bonusMoney *= -1;
 
-        AddMoney(&gSaveBlock1Ptr->money, bonusMoney);
+        if (!negative)
+            AddMoney(&gSaveBlock1Ptr->money, bonusMoney);
+        else
+            RemoveMoney(&gSaveBlock1Ptr->money, bonusMoney);
+
         PREPARE_HWORD_NUMBER_BUFFER(gBattleTextBuff1, 5, bonusMoney)
         BattleScriptPush(gBattlescriptCurrInstr + 1);
-        gBattlescriptCurrInstr = BattleScript_PrintPayDayMoneyString;
+        if (negative)
+            gBattlescriptCurrInstr = BattleScript_PrintDebtSpiralMoneyString;
+        else
+            gBattlescriptCurrInstr = BattleScript_PrintPayDayMoneyString;
     }
     else
     {

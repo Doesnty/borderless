@@ -45,7 +45,7 @@ loop1start:
 ViridianCity_House1_EventScript_GivePast200::
 	setvar VAR_TEMP_1, 251
 loop2start:
-	givemon VAR_TEMP_1, 60, ITEM_NONE
+	givemon VAR_TEMP_1, 59, ITEM_NONE
 	addvar VAR_TEMP_1, 0x1
 	compare VAR_TEMP_1, NUM_SPECIES
 	goto_if_lt loop2start

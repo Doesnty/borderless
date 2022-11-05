@@ -708,6 +708,7 @@ extern u16 gLastHitByType[MAX_BATTLERS_COUNT];
 extern s32 gHpDealt;
 extern u16 gPauseCounterBattle;
 extern u16 gPaydayMoney;
+extern u16 gDebtSpiralMoney;
 extern u16 gLockedMoves[MAX_BATTLERS_COUNT];
 extern u8 gCurrentTurnActionNumber;
 extern u16 gExpShareExp;

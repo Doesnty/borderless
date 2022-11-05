@@ -10,6 +10,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 35,
         .secondaryEffectChance = 0,
         .priority = 0,
+        .target = MOVE_TARGET_SELECTED,
         .flags = FLAG_MAKES_CONTACT | FLAG_PROTECT_AFFECTED,
     },
 
@@ -23,6 +24,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 25,
         .secondaryEffectChance = 0,
         .priority = 0,
+        .target = MOVE_TARGET_SELECTED,
         .flags = FLAG_MAKES_CONTACT | FLAG_PROTECT_AFFECTED | FLAG_HIGH_CRIT,
     },
 
@@ -36,6 +38,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 10,
         .secondaryEffectChance = 0,
         .priority = 2,
+        .target = MOVE_TARGET_SELECTED,
         .flags = FLAG_MAKES_CONTACT,
     },
 
@@ -49,6 +52,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 15,
         .secondaryEffectChance = 0,
         .priority = 0,
+        .target = MOVE_TARGET_SELECTED,
         .flags = FLAG_MAKES_CONTACT | FLAG_PROTECT_AFFECTED | FLAG_PUNCHING,
     },
 
@@ -62,6 +66,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 20,
         .secondaryEffectChance = 0,
         .priority = 0,
+        .target = MOVE_TARGET_SELECTED,
         .flags = FLAG_MAKES_CONTACT | FLAG_PROTECT_AFFECTED | FLAG_PUNCHING,
     },
 
@@ -75,6 +80,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 20,
         .secondaryEffectChance = 100,
         .priority = 0,
+        .target = MOVE_TARGET_SELECTED,
         .flags = FLAG_PROTECT_AFFECTED,
     },
 
@@ -88,6 +94,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 15,
         .secondaryEffectChance = 10,
         .priority = 0,
+        .target = MOVE_TARGET_SELECTED,
         .flags = FLAG_MAKES_CONTACT | FLAG_PROTECT_AFFECTED | FLAG_PUNCHING,
     },
 
@@ -101,6 +108,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 15,
         .secondaryEffectChance = 10,
         .priority = 0,
+        .target = MOVE_TARGET_SELECTED,
         .flags = FLAG_MAKES_CONTACT | FLAG_PROTECT_AFFECTED | FLAG_PUNCHING,
     },
 
@@ -114,6 +122,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 15,
         .secondaryEffectChance = 10,
         .priority = 0,
+        .target = MOVE_TARGET_SELECTED,
         .flags = FLAG_MAKES_CONTACT | FLAG_PROTECT_AFFECTED | FLAG_PUNCHING,
     },
 
@@ -127,6 +136,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 35,
         .secondaryEffectChance = 0,
         .priority = 0,
+        .target = MOVE_TARGET_SELECTED,
         .flags = FLAG_MAKES_CONTACT | FLAG_PROTECT_AFFECTED,
     },
 
@@ -140,6 +150,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 15,
         .secondaryEffectChance = 0,
         .priority = 0,
+        .target = MOVE_TARGET_SELECTED,
         .flags = FLAG_MAKES_CONTACT | FLAG_PROTECT_AFFECTED | FLAG_HIGH_CRIT,
     },
 
@@ -153,6 +164,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 5,
         .secondaryEffectChance = 0,
         .priority = 0,
+        .target = MOVE_TARGET_SELECTED,
         .flags = FLAG_PROTECT_AFFECTED,
     },
 
@@ -166,6 +178,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 20,
         .secondaryEffectChance = 0,
         .priority = 0,
+        .target = MOVE_TARGET_SELECTED,
         .flags = FLAG_PROTECT_AFFECTED | FLAG_HIGH_CRIT,
     },
 
@@ -179,6 +192,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 20,
         .secondaryEffectChance = 0,
         .priority = 0,
+        .target = MOVE_TARGET_USER,
         .flags = FLAG_SNATCH_AFFECTED,
     },
 
@@ -192,6 +206,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 20,
         .secondaryEffectChance = 0,
         .priority = 0,
+        .target = MOVE_TARGET_SELECTED,
         .flags = FLAG_MAKES_CONTACT | FLAG_PROTECT_AFFECTED,
     },
 
@@ -205,6 +220,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 35,
         .secondaryEffectChance = 0,
         .priority = 0,
+        .target = MOVE_TARGET_SELECTED,
         .flags = FLAG_PROTECT_AFFECTED,
     },
 
@@ -218,6 +234,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 25,
         .secondaryEffectChance = 30,
         .priority = 0,
+        .target = MOVE_TARGET_SELECTED,
         .flags = FLAG_MAKES_CONTACT | FLAG_PROTECT_AFFECTED,
     },
 
@@ -231,6 +248,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 20,
         .secondaryEffectChance = 0,
         .priority = -6,
+        .target = MOVE_TARGET_SELECTED,
         .flags = FLAG_MAGICCOAT_AFFECTED,
     },
 
@@ -244,6 +262,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 15,
         .secondaryEffectChance = 0,
         .priority = 0,
+        .target = MOVE_TARGET_SELECTED,
         .flags = FLAG_MAKES_CONTACT | FLAG_PROTECT_AFFECTED,
     },
 
@@ -257,6 +276,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 15,
         .secondaryEffectChance = 100,
         .priority = 0,
+        .target = MOVE_TARGET_SELECTED,
         .flags = FLAG_MAKES_CONTACT | FLAG_PROTECT_AFFECTED,
     },
 
@@ -270,6 +290,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 5,
         .secondaryEffectChance = 20,
         .priority = 0,
+        .target = MOVE_TARGET_SELECTED,
         .flags = FLAG_MAKES_CONTACT | FLAG_PROTECT_AFFECTED,
     },
 
@@ -283,6 +304,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 35,
         .secondaryEffectChance = 0,
         .priority = 0,
+        .target = MOVE_TARGET_SELECTED,
         .flags = FLAG_MAKES_CONTACT | FLAG_PROTECT_AFFECTED,
     },
 
@@ -296,6 +318,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 20,
         .secondaryEffectChance = 30,
         .priority = 0,
+        .target = MOVE_TARGET_SELECTED,
         .flags = FLAG_MAKES_CONTACT | FLAG_PROTECT_AFFECTED,
     },
 
@@ -309,6 +332,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 25,
         .secondaryEffectChance = 0,
         .priority = 0,
+        .target = MOVE_TARGET_SELECTED,
         .flags = FLAG_MAKES_CONTACT | FLAG_PROTECT_AFFECTED,
     },
 
@@ -322,6 +346,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 5,
         .secondaryEffectChance = 0,
         .priority = 0,
+        .target = MOVE_TARGET_SELECTED,
         .flags = FLAG_MAKES_CONTACT | FLAG_PROTECT_AFFECTED,
     },
 
@@ -335,6 +360,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 10,
         .secondaryEffectChance = 0,
         .priority = 0,
+        .target = MOVE_TARGET_SELECTED,
         .flags = FLAG_MAKES_CONTACT | FLAG_PROTECT_AFFECTED,
     },
 
@@ -348,6 +374,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 15,
         .secondaryEffectChance = 0,
         .priority = 20,
+        .target = MOVE_TARGET_SELECTED,
         .flags = FLAG_MAKES_CONTACT | FLAG_PROTECT_AFFECTED,
     },
 
@@ -361,6 +388,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 15,
         .secondaryEffectChance = 0,
         .priority = 0,
+        .target = MOVE_TARGET_SELECTED,
         .flags = FLAG_MAGICCOAT_AFFECTED,
     },
 
@@ -374,6 +402,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 15,
         .secondaryEffectChance = 20,
         .priority = 0,
+        .target = MOVE_TARGET_SELECTED,
         .flags = FLAG_MAKES_CONTACT | FLAG_PROTECT_AFFECTED,
     },
 
@@ -387,6 +416,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 25,
         .secondaryEffectChance = 0,
         .priority = 0,
+        .target = MOVE_TARGET_SELECTED,
         .flags = FLAG_PROTECT_AFFECTED,
     },
 
@@ -400,6 +430,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 15,
         .secondaryEffectChance = 0,
         .priority = 0,
+        .target = MOVE_TARGET_SELECTED,
         .flags = FLAG_PROTECT_AFFECTED,
     },
 
@@ -413,6 +444,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 10,
         .secondaryEffectChance = 0,
         .priority = 0,
+        .target = MOVE_TARGET_SELECTED,
         .flags = 0,
     },
 
@@ -426,6 +458,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 35,
         .secondaryEffectChance = 0,
         .priority = 0,
+        .target = MOVE_TARGET_SELECTED,
         .flags = FLAG_MAKES_CONTACT | FLAG_PROTECT_AFFECTED,
     },
 
@@ -439,6 +472,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 15,
         .secondaryEffectChance = 30,
         .priority = 0,
+        .target = MOVE_TARGET_SELECTED,
         .flags = FLAG_MAKES_CONTACT | FLAG_PROTECT_AFFECTED,
     },
 
@@ -452,6 +486,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 15,
         .secondaryEffectChance = 100,
         .priority = 0,
+        .target = MOVE_TARGET_SELECTED,
         .flags = FLAG_MAKES_CONTACT | FLAG_PROTECT_AFFECTED,
     },
 
@@ -465,12 +500,13 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 15,
         .secondaryEffectChance = 0,
         .priority = 0,
+        .target = MOVE_TARGET_SELECTED,
         .flags = FLAG_MAKES_CONTACT | FLAG_PROTECT_AFFECTED,
     },
 
     [MOVE_THRASH] = 
     {
-        .effect = EFFECT_NEW,
+        .effect = EFFECT_THRASH,
         .power = 100,
         .type = TYPE_DARK,
         .moveClass = CLASS_PHYSICAL,
@@ -478,6 +514,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 10,
         .secondaryEffectChance = 0,
         .priority = 0,
+        .target = MOVE_TARGET_SELECTED,
         .flags = FLAG_MAKES_CONTACT | FLAG_PROTECT_AFFECTED,
     },
 
@@ -491,6 +528,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 10,
         .secondaryEffectChance = 0,
         .priority = 0,
+        .target = MOVE_TARGET_SELECTED,
         .flags = FLAG_MAKES_CONTACT | FLAG_PROTECT_AFFECTED,
     },
 
@@ -504,6 +542,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 30,
         .secondaryEffectChance = 0,
         .priority = 0,
+        .target = MOVE_TARGET_SELECTED,
         .flags = FLAG_PROTECT_AFFECTED | FLAG_MAGICCOAT_AFFECTED,
     },
 
@@ -517,6 +556,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 30,
         .secondaryEffectChance = 30,
         .priority = 0,
+        .target = MOVE_TARGET_SELECTED,
         .flags = FLAG_MAKES_CONTACT | FLAG_PROTECT_AFFECTED,
     },
 
@@ -530,6 +570,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 25,
         .secondaryEffectChance = 30,
         .priority = 0,
+        .target = MOVE_TARGET_SELECTED,
         .flags = FLAG_PROTECT_AFFECTED,
     },
 
@@ -543,6 +584,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 15,
         .secondaryEffectChance = 0,
         .priority = 0,
+        .target = MOVE_TARGET_SELECTED,
         .flags = FLAG_PROTECT_AFFECTED,
     },
 
@@ -556,6 +598,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 30,
         .secondaryEffectChance = 0,
         .priority = 0,
+        .target = MOVE_TARGET_SELECTED,
         .flags = FLAG_PROTECT_AFFECTED | FLAG_MAGICCOAT_AFFECTED,
     },
 
@@ -569,6 +612,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 25,
         .secondaryEffectChance = 30,
         .priority = 0,
+        .target = MOVE_TARGET_SELECTED,
         .flags = FLAG_MAKES_CONTACT | FLAG_PROTECT_AFFECTED,
     },
 
@@ -582,6 +626,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 40,
         .secondaryEffectChance = 0,
         .priority = 0,
+        .target = MOVE_TARGET_SELECTED,
         .flags = FLAG_PROTECT_AFFECTED | FLAG_MAGICCOAT_AFFECTED,
     },
 
@@ -595,6 +640,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 20,
         .secondaryEffectChance = 0,
         .priority = -6,
+        .target = MOVE_TARGET_SELECTED,
         .flags = FLAG_MAGICCOAT_AFFECTED,
     },
 
@@ -608,6 +654,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 15,
         .secondaryEffectChance = 0,
         .priority = 0,
+        .target = MOVE_TARGET_SELECTED,
         .flags = FLAG_PROTECT_AFFECTED | FLAG_MAGICCOAT_AFFECTED,
     },
 
@@ -621,6 +668,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 5,
         .secondaryEffectChance = 0,
         .priority = 0,
+        .target = MOVE_TARGET_SELECTED,
         .flags = FLAG_MAGICCOAT_AFFECTED,
     },
 
@@ -634,6 +682,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 10,
         .secondaryEffectChance = 10,
         .priority = 0,
+        .target = MOVE_TARGET_SELECTED,
         .flags = FLAG_PROTECT_AFFECTED | FLAG_MAGICCOAT_AFFECTED,
     },
 
@@ -647,6 +696,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 10,
         .secondaryEffectChance = 0,
         .priority = 0,
+        .target = MOVE_TARGET_SELECTED,
         .flags = FLAG_PROTECT_AFFECTED | FLAG_MAGICCOAT_AFFECTED,
     },
 
@@ -660,6 +710,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 30,
         .secondaryEffectChance = 10,
         .priority = 0,
+        .target = MOVE_TARGET_BOTH,
         .flags = FLAG_PROTECT_AFFECTED,
     },
 
@@ -673,6 +724,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 25,
         .secondaryEffectChance = 10,
         .priority = 0,
+        .target = MOVE_TARGET_SELECTED,
         .flags = FLAG_PROTECT_AFFECTED,
     },
 
@@ -686,6 +738,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 15,
         .secondaryEffectChance = 10,
         .priority = 0,
+        .target = MOVE_TARGET_SELECTED,
         .flags = FLAG_PROTECT_AFFECTED,
     },
 
@@ -699,6 +752,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 30,
         .secondaryEffectChance = 0,
         .priority = 0,
+        .target = MOVE_TARGET_USER,
         .flags = FLAG_SNATCH_AFFECTED,
     },
 
@@ -712,6 +766,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 30,
         .secondaryEffectChance = 0,
         .priority = 0,
+        .target = MOVE_TARGET_SELECTED,
         .flags = FLAG_PROTECT_AFFECTED,
     },
 
@@ -725,6 +780,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 5,
         .secondaryEffectChance = 0,
         .priority = 0,
+        .target = MOVE_TARGET_SELECTED,
         .flags = FLAG_PROTECT_AFFECTED,
     },
 
@@ -738,6 +794,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 15,
         .secondaryEffectChance = 0,
         .priority = 0,
+        .target = MOVE_TARGET_FOES_AND_ALLY,
         .flags = FLAG_PROTECT_AFFECTED,
     },
 
@@ -751,6 +808,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 10,
         .secondaryEffectChance = 10,
         .priority = 0,
+        .target = MOVE_TARGET_SELECTED,
         .flags = FLAG_PROTECT_AFFECTED,
     },
 
@@ -764,6 +822,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 5,
         .secondaryEffectChance = 10,
         .priority = 0,
+        .target = MOVE_TARGET_BOTH,
         .flags = FLAG_PROTECT_AFFECTED,
     },
 
@@ -777,6 +836,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 20,
         .secondaryEffectChance = 30,
         .priority = 0,
+        .target = MOVE_TARGET_SELECTED,
         .flags = FLAG_PROTECT_AFFECTED,
     },
 
@@ -790,6 +850,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 20,
         .secondaryEffectChance = 30,
         .priority = 0,
+        .target = MOVE_TARGET_SELECTED,
         .flags = FLAG_PROTECT_AFFECTED,
     },
 
@@ -803,6 +864,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 20,
         .secondaryEffectChance = 30,
         .priority = 0,
+        .target = MOVE_TARGET_SELECTED,
         .flags = FLAG_PROTECT_AFFECTED,
     },
 
@@ -816,6 +878,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 5,
         .secondaryEffectChance = 20,
         .priority = 0,
+        .target = MOVE_TARGET_SELECTED,
         .flags = FLAG_PROTECT_AFFECTED,
     },
 
@@ -829,6 +892,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 35,
         .secondaryEffectChance = 0,
         .priority = 0,
+        .target = MOVE_TARGET_SELECTED,
         .flags = FLAG_MAKES_CONTACT | FLAG_PROTECT_AFFECTED,
     },
 
@@ -842,6 +906,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 15,
         .secondaryEffectChance = 0,
         .priority = 0,
+        .target = MOVE_TARGET_SELECTED,
         .flags = FLAG_MAKES_CONTACT | FLAG_PROTECT_AFFECTED,
     },
 
@@ -855,6 +920,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 20,
         .secondaryEffectChance = 0,
         .priority = 0,
+        .target = MOVE_TARGET_SELECTED,
         .flags = FLAG_MAKES_CONTACT | FLAG_PROTECT_AFFECTED,
     },
 
@@ -868,6 +934,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 25,
         .secondaryEffectChance = 30,
         .priority = 0,
+        .target = MOVE_TARGET_SELECTED,
         .flags = FLAG_MAKES_CONTACT | FLAG_PROTECT_AFFECTED,
     },
 
@@ -881,6 +948,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 20,
         .secondaryEffectChance = 0,
         .priority = -5,
+        .target = MOVE_TARGET_DEPENDS,
         .flags = FLAG_MAKES_CONTACT | FLAG_PROTECT_AFFECTED,
     },
 
@@ -894,6 +962,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 20,
         .secondaryEffectChance = 0,
         .priority = 0,
+        .target = MOVE_TARGET_SELECTED,
         .flags = FLAG_MAKES_CONTACT | FLAG_PROTECT_AFFECTED,
     },
 
@@ -907,6 +976,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 15,
         .secondaryEffectChance = 10,
         .priority = 0,
+        .target = MOVE_TARGET_SELECTED,
         .flags = FLAG_MAKES_CONTACT | FLAG_PROTECT_AFFECTED,
     },
 
@@ -920,6 +990,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 25,
         .secondaryEffectChance = 0,
         .priority = 0,
+        .target = MOVE_TARGET_SELECTED,
         .flags = FLAG_PROTECT_AFFECTED,
     },
 
@@ -933,6 +1004,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 15,
         .secondaryEffectChance = 0,
         .priority = 0,
+        .target = MOVE_TARGET_SELECTED,
         .flags = FLAG_PROTECT_AFFECTED,
     },
 
@@ -946,12 +1018,13 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 10,
         .secondaryEffectChance = 0,
         .priority = 0,
+        .target = MOVE_TARGET_SELECTED,
         .flags = FLAG_PROTECT_AFFECTED | FLAG_MAGICCOAT_AFFECTED,
     },
 
     [MOVE_GROWTH] = 
     {
-        .effect = EFFECT_NEW,
+        .effect = EFFECT_GROWTH,
         .power = 0,
         .type = TYPE_NATURE,
         .moveClass = CLASS_STATUS,
@@ -959,6 +1032,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 20,
         .secondaryEffectChance = 0,
         .priority = 0,
+        .target = MOVE_TARGET_USER,
         .flags = FLAG_SNATCH_AFFECTED,
     },
 
@@ -972,6 +1046,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 25,
         .secondaryEffectChance = 0,
         .priority = 0,
+        .target = MOVE_TARGET_BOTH,
         .flags = FLAG_PROTECT_AFFECTED | FLAG_HIGH_CRIT,
     },
 
@@ -985,6 +1060,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 10,
         .secondaryEffectChance = 0,
         .priority = 0,
+        .target = MOVE_TARGET_SELECTED,
         .flags = FLAG_PROTECT_AFFECTED,
     },
 
@@ -998,6 +1074,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 35,
         .secondaryEffectChance = 0,
         .priority = 0,
+        .target = MOVE_TARGET_SELECTED,
         .flags = FLAG_PROTECT_AFFECTED | FLAG_MAGICCOAT_AFFECTED,
     },
 
@@ -1011,6 +1088,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 30,
         .secondaryEffectChance = 0,
         .priority = 0,
+        .target = MOVE_TARGET_SELECTED,
         .flags = FLAG_PROTECT_AFFECTED | FLAG_MAGICCOAT_AFFECTED,
     },
 
@@ -1024,6 +1102,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 15,
         .secondaryEffectChance = 0,
         .priority = 0,
+        .target = MOVE_TARGET_SELECTED,
         .flags = FLAG_PROTECT_AFFECTED | FLAG_MAGICCOAT_AFFECTED,
     },
 
@@ -1037,6 +1116,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 10,
         .secondaryEffectChance = 20,
         .priority = 0,
+        .target = MOVE_TARGET_SELECTED,
         .flags = FLAG_MAKES_CONTACT | FLAG_PROTECT_AFFECTED,
     },
 
@@ -1050,6 +1130,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 25,
         .secondaryEffectChance = 20,
         .priority = 0,
+        .target = MOVE_TARGET_SELECTED,
         .flags = FLAG_PROTECT_AFFECTED,
     },
 
@@ -1063,6 +1144,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 15,
         .secondaryEffectChance = 20,
         .priority = 0,
+        .target = MOVE_TARGET_SELECTED,
         .flags = FLAG_PROTECT_AFFECTED,
     },
 
@@ -1076,6 +1158,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 15,
         .secondaryEffectChance = 100,
         .priority = 0,
+        .target = MOVE_TARGET_SELECTED,
         .flags = FLAG_PROTECT_AFFECTED,
     },
 
@@ -1089,6 +1172,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 30,
         .secondaryEffectChance = 10,
         .priority = 0,
+        .target = MOVE_TARGET_SELECTED,
         .flags = FLAG_PROTECT_AFFECTED,
     },
 
@@ -1102,6 +1186,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 15,
         .secondaryEffectChance = 10,
         .priority = 0,
+        .target = MOVE_TARGET_SELECTED,
         .flags = FLAG_PROTECT_AFFECTED,
     },
 
@@ -1115,6 +1200,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 20,
         .secondaryEffectChance = 0,
         .priority = 0,
+        .target = MOVE_TARGET_SELECTED,
         .flags = FLAG_PROTECT_AFFECTED | FLAG_MAGICCOAT_AFFECTED,
     },
 
@@ -1128,6 +1214,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 10,
         .secondaryEffectChance = 30,
         .priority = 0,
+        .target = MOVE_TARGET_SELECTED,
         .flags = FLAG_PROTECT_AFFECTED,
     },
 
@@ -1141,6 +1228,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 5,
         .secondaryEffectChance = 20,
         .priority = 0,
+        .target = MOVE_TARGET_SELECTED,
         .flags = FLAG_PROTECT_AFFECTED,
     },
 
@@ -1154,6 +1242,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 10,
         .secondaryEffectChance = 0,
         .priority = 0,
+        .target = MOVE_TARGET_FOES_AND_ALLY,
         .flags = FLAG_PROTECT_AFFECTED,
     },
 
@@ -1167,6 +1256,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 5,
         .secondaryEffectChance = 0,
         .priority = 0,
+        .target = MOVE_TARGET_SELECTED,
         .flags = FLAG_PROTECT_AFFECTED,
     },
 
@@ -1180,6 +1270,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 10,
         .secondaryEffectChance = 0,
         .priority = 0,
+        .target = MOVE_TARGET_SELECTED,
         .flags = FLAG_MAKES_CONTACT | FLAG_PROTECT_AFFECTED,
     },
 
@@ -1193,6 +1284,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 10,
         .secondaryEffectChance = 0,
         .priority = 0,
+        .target = MOVE_TARGET_SELECTED,
         .flags = FLAG_PROTECT_AFFECTED | FLAG_MAGICCOAT_AFFECTED,
     },
 
@@ -1206,6 +1298,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 25,
         .secondaryEffectChance = 10,
         .priority = 0,
+        .target = MOVE_TARGET_SELECTED,
         .flags = FLAG_PROTECT_AFFECTED,
     },
 
@@ -1219,6 +1312,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 10,
         .secondaryEffectChance = 10,
         .priority = 0,
+        .target = MOVE_TARGET_SELECTED,
         .flags = FLAG_PROTECT_AFFECTED,
     },
 
@@ -1232,6 +1326,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 20,
         .secondaryEffectChance = 0,
         .priority = 0,
+        .target = MOVE_TARGET_SELECTED,
         .flags = FLAG_PROTECT_AFFECTED | FLAG_MAGICCOAT_AFFECTED,
     },
 
@@ -1245,6 +1340,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 15,
         .secondaryEffectChance = 20,
         .priority = 0,
+        .target = MOVE_TARGET_SELECTED,
         .flags = FLAG_MAKES_CONTACT | FLAG_PROTECT_AFFECTED,
     },
 
@@ -1258,6 +1354,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 20,
         .secondaryEffectChance = 0,
         .priority = 0,
+        .target = MOVE_TARGET_USER,
         .flags = FLAG_SNATCH_AFFECTED,
     },
 
@@ -1271,12 +1368,13 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 30,
         .secondaryEffectChance = 0,
         .priority = 1,
+        .target = MOVE_TARGET_SELECTED,
         .flags = FLAG_MAKES_CONTACT | FLAG_PROTECT_AFFECTED,
     },
 
     [MOVE_RAGE] = 
     {
-        .effect = EFFECT_NEW,
+        .effect = EFFECT_RAGE,
         .power = 60,
         .type = TYPE_DARK,
         .moveClass = CLASS_PHYSICAL,
@@ -1284,6 +1382,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 15,
         .secondaryEffectChance = 100,
         .priority = 0,
+        .target = MOVE_TARGET_SELECTED,
         .flags = FLAG_MAKES_CONTACT | FLAG_PROTECT_AFFECTED,
     },
 
@@ -1297,6 +1396,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 20,
         .secondaryEffectChance = 0,
         .priority = 0,
+        .target = MOVE_TARGET_USER,
         .flags = 0,
     },
 
@@ -1310,6 +1410,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 20,
         .secondaryEffectChance = 0,
         .priority = 0,
+        .target = MOVE_TARGET_SELECTED,
         .flags = FLAG_PROTECT_AFFECTED,
     },
 
@@ -1323,6 +1424,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 10,
         .secondaryEffectChance = 0,
         .priority = 0,
+        .target = MOVE_TARGET_SELECTED,
         .flags = 0,
     },
 
@@ -1336,6 +1438,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 20,
         .secondaryEffectChance = 0,
         .priority = 0,
+        .target = MOVE_TARGET_SELECTED,
         .flags = FLAG_PROTECT_AFFECTED | FLAG_MAGICCOAT_AFFECTED,
     },
 
@@ -1349,6 +1452,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 15,
         .secondaryEffectChance = 0,
         .priority = 0,
+        .target = MOVE_TARGET_USER,
         .flags = FLAG_SNATCH_AFFECTED,
     },
 
@@ -1362,6 +1466,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 10,
         .secondaryEffectChance = 0,
         .priority = 0,
+        .target = MOVE_TARGET_USER,
         .flags = FLAG_SNATCH_AFFECTED,
     },
 
@@ -1375,6 +1480,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 30,
         .secondaryEffectChance = 0,
         .priority = 0,
+        .target = MOVE_TARGET_USER,
         .flags = FLAG_SNATCH_AFFECTED,
     },
 
@@ -1388,6 +1494,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 10,
         .secondaryEffectChance = 0,
         .priority = 0,
+        .target = MOVE_TARGET_USER,
         .flags = FLAG_SNATCH_AFFECTED,
     },
 
@@ -1401,6 +1508,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 20,
         .secondaryEffectChance = 0,
         .priority = 0,
+        .target = MOVE_TARGET_SELECTED,
         .flags = FLAG_PROTECT_AFFECTED | FLAG_MAGICCOAT_AFFECTED,
     },
 
@@ -1414,6 +1522,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 10,
         .secondaryEffectChance = 0,
         .priority = 0,
+        .target = MOVE_TARGET_SELECTED,
         .flags = FLAG_PROTECT_AFFECTED | FLAG_MAGICCOAT_AFFECTED,
     },
 
@@ -1427,6 +1536,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 40,
         .secondaryEffectChance = 0,
         .priority = 0,
+        .target = MOVE_TARGET_USER,
         .flags = FLAG_SNATCH_AFFECTED,
     },
 
@@ -1440,6 +1550,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 40,
         .secondaryEffectChance = 0,
         .priority = 0,
+        .target = MOVE_TARGET_USER,
         .flags = FLAG_SNATCH_AFFECTED,
     },
 
@@ -1453,6 +1564,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 20,
         .secondaryEffectChance = 0,
         .priority = 0,
+        .target = MOVE_TARGET_USER,
         .flags = FLAG_SNATCH_AFFECTED,
     },
 
@@ -1466,6 +1578,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 20,
         .secondaryEffectChance = 0,
         .priority = 0,
+        .target = MOVE_TARGET_USER,
         .flags = FLAG_SNATCH_AFFECTED,
     },
 
@@ -1479,6 +1592,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 30,
         .secondaryEffectChance = 0,
         .priority = 0,
+        .target = MOVE_TARGET_USER,
         .flags = 0,
     },
 
@@ -1492,6 +1606,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 20,
         .secondaryEffectChance = 0,
         .priority = 0,
+        .target = MOVE_TARGET_USER,
         .flags = FLAG_SNATCH_AFFECTED,
     },
 
@@ -1505,12 +1620,13 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 20,
         .secondaryEffectChance = 0,
         .priority = 0,
+        .target = MOVE_TARGET_USER,
         .flags = FLAG_SNATCH_AFFECTED,
     },
 
     [MOVE_WORK_UP] = 
     {
-        .effect = EFFECT_NEW,
+        .effect = EFFECT_GROWTH,
         .power = 0,
         .type = TYPE_HEART,
         .moveClass = CLASS_STATUS,
@@ -1518,6 +1634,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 20,
         .secondaryEffectChance = 0,
         .priority = 0,
+        .target = MOVE_TARGET_USER,
         .flags = FLAG_SNATCH_AFFECTED,
     },
 
@@ -1531,19 +1648,21 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 40,
         .secondaryEffectChance = 0,
         .priority = 0,
+        .target = MOVE_TARGET_DEPENDS,
         .flags = 0,
     },
 
     [MOVE_DEBT_SPIRAL] = 
     {
-        .effect = EFFECT_NEW,
+        .effect = EFFECT_PAY_DAY,
         .power = 100,
         .type = TYPE_MIASMA,
         .moveClass = CLASS_PHYSICAL,
         .accuracy = 100,
         .pp = 30,
-        .secondaryEffectChance = 0,
+        .secondaryEffectChance = 100,
         .priority = 0,
+        .target = MOVE_TARGET_SELECTED,
         .flags = FLAG_MAKES_CONTACT | FLAG_PROTECT_AFFECTED,
     },
 
@@ -1557,6 +1676,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 5,
         .secondaryEffectChance = 0,
         .priority = 0,
+        .target = MOVE_TARGET_FOES_AND_ALLY,
         .flags = FLAG_PROTECT_AFFECTED,
     },
 
@@ -1570,6 +1690,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 20,
         .secondaryEffectChance = 0,
         .priority = 0,
+        .target = MOVE_TARGET_SELECTED,
         .flags = FLAG_PROTECT_AFFECTED,
     },
 
@@ -1583,6 +1704,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 25,
         .secondaryEffectChance = 30,
         .priority = 0,
+        .target = MOVE_TARGET_SELECTED,
         .flags = FLAG_MAKES_CONTACT | FLAG_PROTECT_AFFECTED,
     },
 
@@ -1596,6 +1718,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 20,
         .secondaryEffectChance = 40,
         .priority = 0,
+        .target = MOVE_TARGET_SELECTED,
         .flags = FLAG_PROTECT_AFFECTED,
     },
 
@@ -1609,6 +1732,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 5,
         .secondaryEffectChance = 30,
         .priority = 0,
+        .target = MOVE_TARGET_SELECTED,
         .flags = FLAG_PROTECT_AFFECTED,
     },
 
@@ -1622,6 +1746,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 10,
         .secondaryEffectChance = 0,
         .priority = 0,
+        .target = MOVE_TARGET_SELECTED,
         .flags = FLAG_MAKES_CONTACT | FLAG_PROTECT_AFFECTED,
     },
 
@@ -1635,6 +1760,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 5,
         .secondaryEffectChance = 10,
         .priority = 0,
+        .target = MOVE_TARGET_SELECTED,
         .flags = FLAG_PROTECT_AFFECTED,
     },
 
@@ -1648,6 +1774,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 15,
         .secondaryEffectChance = 20,
         .priority = 0,
+        .target = MOVE_TARGET_SELECTED,
         .flags = FLAG_MAKES_CONTACT | FLAG_PROTECT_AFFECTED,
     },
 
@@ -1661,6 +1788,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 40,
         .secondaryEffectChance = 0,
         .priority = 0,
+        .target = MOVE_TARGET_USER,
         .flags = FLAG_SNATCH_AFFECTED,
     },
 
@@ -1674,6 +1802,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 20,
         .secondaryEffectChance = 0,
         .priority = 0,
+        .target = MOVE_TARGET_BOTH,
         .flags = FLAG_PROTECT_AFFECTED,
     },
 
@@ -1687,6 +1816,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 10,
         .secondaryEffectChance = 0,
         .priority = 0,
+        .target = MOVE_TARGET_SELECTED,
         .flags = FLAG_MAKES_CONTACT | FLAG_PROTECT_AFFECTED,
     },
 
@@ -1700,6 +1830,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 20,
         .secondaryEffectChance = 0,
         .priority = 0,
+        .target = MOVE_TARGET_SELECTED,
         .flags = FLAG_PROTECT_AFFECTED,
     },
 
@@ -1713,6 +1844,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 20,
         .secondaryEffectChance = 0,
         .priority = 0,
+        .target = MOVE_TARGET_SELECTED,
         .flags = FLAG_PROTECT_AFFECTED | FLAG_MAGICCOAT_AFFECTED,
     },
 
@@ -1726,6 +1858,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 20,
         .secondaryEffectChance = 0,
         .priority = 0,
+        .target = MOVE_TARGET_USER,
         .flags = FLAG_SNATCH_AFFECTED,
     },
 
@@ -1739,6 +1872,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 5,
         .secondaryEffectChance = 100,
         .priority = 0,
+        .target = MOVE_TARGET_SELECTED,
         .flags = FLAG_PROTECT_AFFECTED,
     },
 
@@ -1752,6 +1886,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 10,
         .secondaryEffectChance = 0,
         .priority = 0,
+        .target = MOVE_TARGET_USER,
         .flags = FLAG_SNATCH_AFFECTED,
     },
 
@@ -1765,6 +1900,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 10,
         .secondaryEffectChance = 0,
         .priority = 0,
+        .target = MOVE_TARGET_SELECTED,
         .flags = FLAG_MAKES_CONTACT | FLAG_PROTECT_AFFECTED,
     },
 
@@ -1778,6 +1914,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 40,
         .secondaryEffectChance = 0,
         .priority = 0,
+        .target = MOVE_TARGET_SELECTED,
         .flags = FLAG_PROTECT_AFFECTED | FLAG_MAGICCOAT_AFFECTED,
     },
 
@@ -1791,6 +1928,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 10,
         .secondaryEffectChance = 0,
         .priority = 0,
+        .target = MOVE_TARGET_SELECTED,
         .flags = FLAG_PROTECT_AFFECTED,
     },
 
@@ -1804,6 +1942,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 20,
         .secondaryEffectChance = 30,
         .priority = 0,
+        .target = MOVE_TARGET_SELECTED,
         .flags = FLAG_PROTECT_AFFECTED,
     },
 
@@ -1817,6 +1956,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 15,
         .secondaryEffectChance = 0,
         .priority = 0,
+        .target = MOVE_TARGET_SELECTED,
         .flags = FLAG_PROTECT_AFFECTED,
     },
 
@@ -1830,6 +1970,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 15,
         .secondaryEffectChance = 0,
         .priority = 0,
+        .target = MOVE_TARGET_SELECTED,
         .flags = FLAG_MAKES_CONTACT | FLAG_PROTECT_AFFECTED,
     },
 
@@ -1843,6 +1984,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 10,
         .secondaryEffectChance = 0,
         .priority = 0,
+        .target = MOVE_TARGET_SELECTED,
         .flags = FLAG_PROTECT_AFFECTED | FLAG_MAGICCOAT_AFFECTED,
     },
 
@@ -1856,6 +1998,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 5,
         .secondaryEffectChance = 80,
         .priority = 0,
+        .target = MOVE_TARGET_SELECTED,
         .flags = FLAG_MAKES_CONTACT | FLAG_PROTECT_AFFECTED,
     },
 
@@ -1869,6 +2012,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 10,
         .secondaryEffectChance = 0,
         .priority = 0,
+        .target = MOVE_TARGET_SELECTED,
         .flags = 0,
     },
 
@@ -1882,6 +2026,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 25,
         .secondaryEffectChance = 10,
         .priority = 0,
+        .target = MOVE_TARGET_SELECTED,
         .flags = FLAG_PROTECT_AFFECTED,
     },
 
@@ -1895,6 +2040,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 15,
         .secondaryEffectChance = 20,
         .priority = 0,
+        .target = MOVE_TARGET_SELECTED,
         .flags = FLAG_MAKES_CONTACT | FLAG_PROTECT_AFFECTED,
     },
 
@@ -1908,6 +2054,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 15,
         .secondaryEffectChance = 0,
         .priority = 0,
+        .target = MOVE_TARGET_SELECTED,
         .flags = FLAG_PROTECT_AFFECTED | FLAG_MAGICCOAT_AFFECTED,
     },
 
@@ -1921,6 +2068,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 15,
         .secondaryEffectChance = 30,
         .priority = 0,
+        .target = MOVE_TARGET_SELECTED,
         .flags = FLAG_PROTECT_AFFECTED,
     },
 
@@ -1934,6 +2082,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 20,
         .secondaryEffectChance = 0,
         .priority = 0,
+        .target = MOVE_TARGET_SELECTED,
         .flags = FLAG_PROTECT_AFFECTED,
     },
 
@@ -1947,6 +2096,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 40,
         .secondaryEffectChance = 0,
         .priority = 0,
+        .target = MOVE_TARGET_USER,
         .flags = 0,
     },
 
@@ -1960,6 +2110,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 20,
         .secondaryEffectChance = 0,
         .priority = 0,
+        .target = MOVE_TARGET_USER,
         .flags = FLAG_SNATCH_AFFECTED,
     },
 
@@ -1973,6 +2124,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 30,
         .secondaryEffectChance = 0,
         .priority = 1,
+        .target = MOVE_TARGET_SELECTED,
         .flags = FLAG_MAKES_CONTACT | FLAG_PROTECT_AFFECTED,
     },
 
@@ -1986,6 +2138,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 5,
         .secondaryEffectChance = 0,
         .priority = 0,
+        .target = MOVE_TARGET_FOES_AND_ALLY,
         .flags = FLAG_PROTECT_AFFECTED,
     },
 
@@ -1999,6 +2152,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 15,
         .secondaryEffectChance = 0,
         .priority = 0,
+        .target = MOVE_TARGET_SELECTED,
         .flags = FLAG_MAKES_CONTACT | FLAG_PROTECT_AFFECTED,
     },
 
@@ -2012,6 +2166,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 5,
         .secondaryEffectChance = 0,
         .priority = 1,
+        .target = MOVE_TARGET_SELECTED,
         .flags = FLAG_MAKES_CONTACT | FLAG_PROTECT_AFFECTED,
     },
 
@@ -2025,6 +2180,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 10,
         .secondaryEffectChance = 0,
         .priority = 0,
+        .target = MOVE_TARGET_USER,
         .flags = FLAG_SNATCH_AFFECTED,
     },
 
@@ -2038,6 +2194,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 15,
         .secondaryEffectChance = 30,
         .priority = 0,
+        .target = MOVE_TARGET_BOTH,
         .flags = FLAG_PROTECT_AFFECTED,
     },
 
@@ -2051,6 +2208,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 10,
         .secondaryEffectChance = 20,
         .priority = 0,
+        .target = MOVE_TARGET_SELECTED,
         .flags = FLAG_MAKES_CONTACT | FLAG_PROTECT_AFFECTED,
     },
 
@@ -2064,6 +2222,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 30,
         .secondaryEffectChance = 0,
         .priority = 0,
+        .target = MOVE_TARGET_USER,
         .flags = FLAG_SNATCH_AFFECTED,
     },
 
@@ -2077,6 +2236,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 30,
         .secondaryEffectChance = 0,
         .priority = 0,
+        .target = MOVE_TARGET_USER,
         .flags = FLAG_SNATCH_AFFECTED,
     },
 
@@ -2090,6 +2250,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 10,
         .secondaryEffectChance = 20,
         .priority = 0,
+        .target = MOVE_TARGET_SELECTED,
         .flags = FLAG_PROTECT_AFFECTED,
     },
 
@@ -2103,6 +2264,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 10,
         .secondaryEffectChance = 0,
         .priority = 0,
+        .target = MOVE_TARGET_SELECTED,
         .flags = FLAG_MAKES_CONTACT | FLAG_PROTECT_AFFECTED,
     },
 
@@ -2116,6 +2278,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 10,
         .secondaryEffectChance = 0,
         .priority = 0,
+        .target = MOVE_TARGET_SELECTED,
         .flags = FLAG_PROTECT_AFFECTED | FLAG_HIGH_CRIT,
     },
 
@@ -2129,6 +2292,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 10,
         .secondaryEffectChance = 0,
         .priority = 0,
+        .target = MOVE_TARGET_USER,
         .flags = FLAG_SNATCH_AFFECTED,
     },
 
@@ -2142,6 +2306,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 1,
         .secondaryEffectChance = 0,
         .priority = 0,
+        .target = MOVE_TARGET_SELECTED,
         .flags = FLAG_MAKES_CONTACT | FLAG_PROTECT_AFFECTED,
     },
 
@@ -2155,6 +2320,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 1,
         .secondaryEffectChance = 0,
         .priority = 0,
+        .target = MOVE_TARGET_SELECTED,
         .flags = 0,
     },
 
@@ -2168,6 +2334,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 30,
         .secondaryEffectChance = 0,
         .priority = 1,
+        .target = MOVE_TARGET_SELECTED,
         .flags = FLAG_MAKES_CONTACT | FLAG_PROTECT_AFFECTED,
     },
 
@@ -2181,6 +2348,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 40,
         .secondaryEffectChance = 100,
         .priority = 0,
+        .target = MOVE_TARGET_SELECTED,
         .flags = FLAG_MAKES_CONTACT | FLAG_PROTECT_AFFECTED,
     },
 
@@ -2194,6 +2362,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 10,
         .secondaryEffectChance = 100,
         .priority = 0,
+        .target = MOVE_TARGET_SELECTED,
         .flags = FLAG_PROTECT_AFFECTED,
     },
 
@@ -2207,6 +2376,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 20,
         .secondaryEffectChance = 0,
         .priority = 0,
+        .target = MOVE_TARGET_SELECTED,
         .flags = FLAG_PROTECT_AFFECTED | FLAG_SNATCH_AFFECTED,
     },
 
@@ -2220,6 +2390,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 10,
         .secondaryEffectChance = 10,
         .priority = 0,
+        .target = MOVE_TARGET_SELECTED,
         .flags = FLAG_PROTECT_AFFECTED,
     },
 
@@ -2233,6 +2404,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 20,
         .secondaryEffectChance = 30,
         .priority = 0,
+        .target = MOVE_TARGET_SELECTED,
         .flags = FLAG_MAKES_CONTACT | FLAG_PROTECT_AFFECTED,
     },
 
@@ -2246,6 +2418,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 15,
         .secondaryEffectChance = 30,
         .priority = 0,
+        .target = MOVE_TARGET_SELECTED,
         .flags = FLAG_PROTECT_AFFECTED,
     },
 
@@ -2259,6 +2432,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 10,
         .secondaryEffectChance = 0,
         .priority = 0,
+        .target = MOVE_TARGET_SELECTED,
         .flags = 0,
     },
 
@@ -2272,6 +2446,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 15,
         .secondaryEffectChance = 0,
         .priority = 0,
+        .target = MOVE_TARGET_SELECTED,
         .flags = FLAG_MAKES_CONTACT | FLAG_PROTECT_AFFECTED,
     },
 
@@ -2285,6 +2460,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 30,
         .secondaryEffectChance = 0,
         .priority = 0,
+        .target = MOVE_TARGET_USER,
         .flags = 0,
     },
 
@@ -2298,6 +2474,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 10,
         .secondaryEffectChance = 0,
         .priority = 0,
+        .target = MOVE_TARGET_SELECTED,
         .flags = FLAG_PROTECT_AFFECTED | FLAG_HIGH_CRIT,
     },
 
@@ -2311,6 +2488,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 40,
         .secondaryEffectChance = 0,
         .priority = 0,
+        .target = MOVE_TARGET_SELECTED,
         .flags = FLAG_PROTECT_AFFECTED | FLAG_MAGICCOAT_AFFECTED,
     },
 
@@ -2324,6 +2502,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 15,
         .secondaryEffectChance = 0,
         .priority = 0,
+        .target = MOVE_TARGET_SELECTED,
         .flags = FLAG_MAKES_CONTACT | FLAG_PROTECT_AFFECTED,
     },
 
@@ -2337,6 +2516,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 40,
         .secondaryEffectChance = 0,
         .priority = 0,
+        .target = MOVE_TARGET_SELECTED,
         .flags = FLAG_PROTECT_AFFECTED | FLAG_MAGICCOAT_AFFECTED,
     },
 
@@ -2350,6 +2530,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 25,
         .secondaryEffectChance = 10,
         .priority = 0,
+        .target = MOVE_TARGET_BOTH,
         .flags = FLAG_PROTECT_AFFECTED,
     },
 
@@ -2363,6 +2544,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 10,
         .secondaryEffectChance = 0,
         .priority = 0,
+        .target = MOVE_TARGET_USER,
         .flags = FLAG_PROTECT_AFFECTED | FLAG_SNATCH_AFFECTED,
     },
 
@@ -2376,6 +2558,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 30,
         .secondaryEffectChance = 0,
         .priority = 1,
+        .target = MOVE_TARGET_SELECTED,
         .flags = FLAG_MAKES_CONTACT | FLAG_PROTECT_AFFECTED | FLAG_PUNCHING,
     },
 
@@ -2389,6 +2572,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 10,
         .secondaryEffectChance = 0,
         .priority = 0,
+        .target = MOVE_TARGET_SELECTED,
         .flags = FLAG_PROTECT_AFFECTED | FLAG_MAGICCOAT_AFFECTED,
     },
 
@@ -2402,6 +2586,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 20,
         .secondaryEffectChance = 0,
         .priority = 0,
+        .target = MOVE_TARGET_SELECTED,
         .flags = FLAG_MAKES_CONTACT | FLAG_PROTECT_AFFECTED,
     },
 
@@ -2415,6 +2600,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 10,
         .secondaryEffectChance = 0,
         .priority = 0,
+        .target = MOVE_TARGET_SELECTED,
         .flags = FLAG_PROTECT_AFFECTED | FLAG_MAGICCOAT_AFFECTED,
     },
 
@@ -2428,6 +2614,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 10,
         .secondaryEffectChance = 0,
         .priority = 0,
+        .target = MOVE_TARGET_USER,
         .flags = FLAG_SNATCH_AFFECTED,
     },
 
@@ -2441,6 +2628,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 15,
         .secondaryEffectChance = 20,
         .priority = 0,
+        .target = MOVE_TARGET_SELECTED,
         .flags = FLAG_PROTECT_AFFECTED,
     },
 
@@ -2454,6 +2642,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 10,
         .secondaryEffectChance = 100,
         .priority = 0,
+        .target = MOVE_TARGET_SELECTED,
         .flags = FLAG_PROTECT_AFFECTED,
     },
 
@@ -2467,6 +2656,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 25,
         .secondaryEffectChance = 20,
         .priority = 0,
+        .target = MOVE_TARGET_SELECTED,
         .flags = FLAG_PROTECT_AFFECTED,
     },
 
@@ -2480,6 +2670,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 20,
         .secondaryEffectChance = 0,
         .priority = 0,
+        .target = MOVE_TARGET_OPPONENTS_FIELD,
         .flags = FLAG_MAGICCOAT_AFFECTED,
     },
 
@@ -2493,6 +2684,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 15,
         .secondaryEffectChance = 30,
         .priority = 0,
+        .target = MOVE_TARGET_BOTH,
         .flags = FLAG_PROTECT_AFFECTED,
     },
 
@@ -2506,6 +2698,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 40,
         .secondaryEffectChance = 0,
         .priority = 0,
+        .target = MOVE_TARGET_SELECTED,
         .flags = FLAG_PROTECT_AFFECTED | FLAG_MAGICCOAT_AFFECTED,
     },
 
@@ -2519,6 +2712,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 5,
         .secondaryEffectChance = 0,
         .priority = 0,
+        .target = MOVE_TARGET_USER,
         .flags = 0,
     },
 
@@ -2532,6 +2726,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 5,
         .secondaryEffectChance = 0,
         .priority = 0,
+        .target = MOVE_TARGET_USER,
         .flags = 0,
     },
 
@@ -2545,6 +2740,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 15,
         .secondaryEffectChance = 100,
         .priority = 0,
+        .target = MOVE_TARGET_BOTH,
         .flags = FLAG_PROTECT_AFFECTED,
     },
 
@@ -2558,6 +2754,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 10,
         .secondaryEffectChance = 0,
         .priority = 4,
+        .target = MOVE_TARGET_USER,
         .flags = 0,
     },
 
@@ -2571,6 +2768,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 15,
         .secondaryEffectChance = 0,
         .priority = 0,
+        .target = MOVE_TARGET_SELECTED,
         .flags = FLAG_PROTECT_AFFECTED,
     },
 
@@ -2584,6 +2782,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 15,
         .secondaryEffectChance = 0,
         .priority = 0,
+        .target = MOVE_TARGET_SELECTED,
         .flags = FLAG_SNATCH_AFFECTED,
     },
 
@@ -2597,6 +2796,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 5,
         .secondaryEffectChance = 20,
         .priority = 0,
+        .target = MOVE_TARGET_SELECTED,
         .flags = FLAG_MAKES_CONTACT | FLAG_PROTECT_AFFECTED,
     },
 
@@ -2610,6 +2810,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 10,
         .secondaryEffectChance = 0,
         .priority = 0,
+        .target = MOVE_TARGET_USER,
         .flags = 0,
     },
 
@@ -2623,6 +2824,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 10,
         .secondaryEffectChance = 0,
         .priority = 0,
+        .target = MOVE_TARGET_SELECTED,
         .flags = FLAG_PROTECT_AFFECTED,
     },
 
@@ -2636,6 +2838,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 10,
         .secondaryEffectChance = 0,
         .priority = 4,
+        .target = MOVE_TARGET_USER,
         .flags = 0,
     },
 
@@ -2649,6 +2852,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 20,
         .secondaryEffectChance = 0,
         .priority = 0,
+        .target = MOVE_TARGET_SELECTED,
         .flags = FLAG_PROTECT_AFFECTED | FLAG_MAGICCOAT_AFFECTED,
     },
 
@@ -2662,6 +2866,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 20,
         .secondaryEffectChance = 0,
         .priority = 0,
+        .target = MOVE_TARGET_SELECTED,
         .flags = FLAG_PROTECT_AFFECTED,
     },
 
@@ -2675,6 +2880,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 40,
         .secondaryEffectChance = 0,
         .priority = 0,
+        .target = MOVE_TARGET_SELECTED,
         .flags = FLAG_MAKES_CONTACT | FLAG_PROTECT_AFFECTED,
     },
 
@@ -2688,6 +2894,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 10,
         .secondaryEffectChance = 0,
         .priority = 0,
+        .target = MOVE_TARGET_SELECTED,
         .flags = FLAG_PROTECT_AFFECTED | FLAG_MAGICCOAT_AFFECTED,
     },
 
@@ -2701,6 +2908,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 5,
         .secondaryEffectChance = 0,
         .priority = 0,
+        .target = MOVE_TARGET_SELECTED,
         .flags = FLAG_PROTECT_AFFECTED | FLAG_MAGICCOAT_AFFECTED,
     },
 
@@ -2714,6 +2922,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 20,
         .secondaryEffectChance = 30,
         .priority = 0,
+        .target = MOVE_TARGET_SELECTED,
         .flags = FLAG_MAKES_CONTACT | FLAG_PROTECT_AFFECTED,
     },
 
@@ -2727,6 +2936,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 20,
         .secondaryEffectChance = 0,
         .priority = 0,
+        .target = MOVE_TARGET_SELECTED,
         .flags = FLAG_MAKES_CONTACT | FLAG_PROTECT_AFFECTED,
     },
 
@@ -2740,6 +2950,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 15,
         .secondaryEffectChance = 10,
         .priority = 0,
+        .target = MOVE_TARGET_SELECTED,
         .flags = FLAG_MAKES_CONTACT | FLAG_PROTECT_AFFECTED,
     },
 
@@ -2753,6 +2964,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 5,
         .secondaryEffectChance = 0,
         .priority = 0,
+        .target = MOVE_TARGET_SELECTED,
         .flags = FLAG_PROTECT_AFFECTED,
     },
 
@@ -2766,6 +2978,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 15,
         .secondaryEffectChance = 0,
         .priority = 0,
+        .target = MOVE_TARGET_SELECTED,
         .flags = FLAG_PROTECT_AFFECTED | FLAG_MAGICCOAT_AFFECTED,
     },
 
@@ -2779,6 +2992,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 10,
         .secondaryEffectChance = 0,
         .priority = 0,
+        .target = MOVE_TARGET_DEPENDS,
         .flags = 0,
     },
 
@@ -2792,6 +3006,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 5,
         .secondaryEffectChance = 0,
         .priority = 0,
+        .target = MOVE_TARGET_USER,
         .flags = FLAG_SNATCH_AFFECTED,
     },
 
@@ -2805,6 +3020,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 5,
         .secondaryEffectChance = 0,
         .priority = 0,
+        .target = MOVE_TARGET_SELECTED,
         .flags = FLAG_PROTECT_AFFECTED,
     },
 
@@ -2818,6 +3034,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 10,
         .secondaryEffectChance = 0,
         .priority = 0,
+        .target = MOVE_TARGET_SELECTED,
         .flags = FLAG_PROTECT_AFFECTED,
     },
 
@@ -2831,6 +3048,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 15,
         .secondaryEffectChance = 0,
         .priority = 0,
+        .target = MOVE_TARGET_SELECTED,
         .flags = FLAG_MAKES_CONTACT | FLAG_PROTECT_AFFECTED,
     },
 
@@ -2844,6 +3062,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 25,
         .secondaryEffectChance = 0,
         .priority = 0,
+        .target = MOVE_TARGET_USER,
         .flags = FLAG_SNATCH_AFFECTED,
     },
 
@@ -2857,6 +3076,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 20,
         .secondaryEffectChance = 0,
         .priority = 0,
+        .target = MOVE_TARGET_SELECTED,
         .flags = 0,
     },
 
@@ -2870,6 +3090,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 10,
         .secondaryEffectChance = 20,
         .priority = 0,
+        .target = MOVE_TARGET_SELECTED,
         .flags = FLAG_PROTECT_AFFECTED,
     },
 
@@ -2883,6 +3104,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 30,
         .secondaryEffectChance = 0,
         .priority = 0,
+        .target = MOVE_TARGET_FOES_AND_ALLY,
         .flags = FLAG_PROTECT_AFFECTED,
     },
 
@@ -2896,6 +3118,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 5,
         .secondaryEffectChance = 20,
         .priority = 0,
+        .target = MOVE_TARGET_SELECTED,
         .flags = FLAG_MAKES_CONTACT | FLAG_PROTECT_AFFECTED | FLAG_PUNCHING,
     },
 
@@ -2909,6 +3132,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 10,
         .secondaryEffectChance = 0,
         .priority = 0,
+        .target = MOVE_TARGET_SELECTED,
         .flags = FLAG_MAKES_CONTACT | FLAG_PROTECT_AFFECTED,
     },
 
@@ -2922,6 +3146,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 20,
         .secondaryEffectChance = 30,
         .priority = 0,
+        .target = MOVE_TARGET_BOTH,
         .flags = FLAG_PROTECT_AFFECTED,
     },
 
@@ -2935,6 +3160,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 40,
         .secondaryEffectChance = 0,
         .priority = 0,
+        .target = MOVE_TARGET_USER,
         .flags = 0,
     },
 
@@ -2948,6 +3174,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 5,
         .secondaryEffectChance = 0,
         .priority = 0,
+        .target = MOVE_TARGET_SELECTED,
         .flags = FLAG_PROTECT_AFFECTED | FLAG_MAGICCOAT_AFFECTED,
     },
 
@@ -2961,6 +3188,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 10,
         .secondaryEffectChance = 0,
         .priority = 0,
+        .target = MOVE_TARGET_SELECTED,
         .flags = FLAG_MAKES_CONTACT | FLAG_PROTECT_AFFECTED,
     },
 
@@ -2974,6 +3202,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 30,
         .secondaryEffectChance = 0,
         .priority = 0,
+        .target = MOVE_TARGET_SELECTED,
         .flags = FLAG_MAKES_CONTACT | FLAG_PROTECT_AFFECTED,
     },
 
@@ -2987,6 +3216,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 20,
         .secondaryEffectChance = 0,
         .priority = 0,
+        .target = MOVE_TARGET_SELECTED,
         .flags = FLAG_PROTECT_AFFECTED,
     },
 
@@ -3000,6 +3230,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 10,
         .secondaryEffectChance = 30,
         .priority = 0,
+        .target = MOVE_TARGET_SELECTED,
         .flags = FLAG_MAKES_CONTACT | FLAG_PROTECT_AFFECTED,
     },
 
@@ -3013,6 +3244,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 20,
         .secondaryEffectChance = 10,
         .priority = 0,
+        .target = MOVE_TARGET_SELECTED,
         .flags = FLAG_MAKES_CONTACT | FLAG_PROTECT_AFFECTED,
     },
 
@@ -3026,6 +3258,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 10,
         .secondaryEffectChance = 100,
         .priority = -1,
+        .target = MOVE_TARGET_SELECTED,
         .flags = FLAG_MAKES_CONTACT | FLAG_PROTECT_AFFECTED,
     },
 
@@ -3039,6 +3272,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 15,
         .secondaryEffectChance = 10,
         .priority = 0,
+        .target = MOVE_TARGET_SELECTED,
         .flags = FLAG_PROTECT_AFFECTED,
     },
 
@@ -3052,6 +3286,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 5,
         .secondaryEffectChance = 0,
         .priority = 0,
+        .target = MOVE_TARGET_USER,
         .flags = FLAG_SNATCH_AFFECTED,
     },
 
@@ -3065,6 +3300,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 5,
         .secondaryEffectChance = 20,
         .priority = 0,
+        .target = MOVE_TARGET_SELECTED,
         .flags = FLAG_PROTECT_AFFECTED,
     },
 
@@ -3078,6 +3314,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 30,
         .secondaryEffectChance = 0,
         .priority = 0,
+        .target = MOVE_TARGET_SELECTED,
         .flags = FLAG_PROTECT_AFFECTED,
     },
 
@@ -3091,6 +3328,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 10,
         .secondaryEffectChance = 0,
         .priority = 0,
+        .target = MOVE_TARGET_SELECTED,
         .flags = FLAG_MAKES_CONTACT | FLAG_PROTECT_AFFECTED | FLAG_HIGH_CRIT,
     },
 
@@ -3104,6 +3342,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 30,
         .secondaryEffectChance = 100,
         .priority = 0,
+        .target = MOVE_TARGET_SELECTED,
         .flags = FLAG_MAKES_CONTACT | FLAG_PROTECT_AFFECTED,
     },
 
@@ -3117,6 +3356,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 5,
         .secondaryEffectChance = 0,
         .priority = 0,
+        .target = MOVE_TARGET_USER,
         .flags = 0,
     },
 
@@ -3130,6 +3370,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 5,
         .secondaryEffectChance = 0,
         .priority = 0,
+        .target = MOVE_TARGET_USER,
         .flags = 0,
     },
 
@@ -3143,6 +3384,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 15,
         .secondaryEffectChance = 0,
         .priority = 0,
+        .target = MOVE_TARGET_SELECTED,
         .flags = FLAG_MAKES_CONTACT | FLAG_PROTECT_AFFECTED,
     },
 
@@ -3156,6 +3398,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 20,
         .secondaryEffectChance = 0,
         .priority = -5,
+        .target = MOVE_TARGET_DEPENDS,
         .flags = FLAG_PROTECT_AFFECTED,
     },
 
@@ -3169,6 +3412,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 10,
         .secondaryEffectChance = 0,
         .priority = 0,
+        .target = MOVE_TARGET_SELECTED,
         .flags = 0,
     },
 
@@ -3182,6 +3426,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 5,
         .secondaryEffectChance = 0,
         .priority = 2,
+        .target = MOVE_TARGET_SELECTED,
         .flags = FLAG_MAKES_CONTACT | FLAG_PROTECT_AFFECTED,
     },
 
@@ -3195,6 +3440,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 5,
         .secondaryEffectChance = 20,
         .priority = 0,
+        .target = MOVE_TARGET_SELECTED,
         .flags = FLAG_PROTECT_AFFECTED,
     },
 
@@ -3208,6 +3454,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 15,
         .secondaryEffectChance = 10,
         .priority = 0,
+        .target = MOVE_TARGET_SELECTED,
         .flags = FLAG_PROTECT_AFFECTED,
     },
 
@@ -3221,6 +3468,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 20,
         .secondaryEffectChance = 0,
         .priority = 0,
+        .target = MOVE_TARGET_SELECTED,
         .flags = FLAG_PROTECT_AFFECTED | FLAG_HIGH_CRIT,
     },
 
@@ -3234,6 +3482,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 20,
         .secondaryEffectChance = 50,
         .priority = 0,
+        .target = MOVE_TARGET_SELECTED,
         .flags = FLAG_MAKES_CONTACT | FLAG_PROTECT_AFFECTED,
     },
 
@@ -3247,6 +3496,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 15,
         .secondaryEffectChance = 100,
         .priority = 0,
+        .target = MOVE_TARGET_SELECTED,
         .flags = FLAG_PROTECT_AFFECTED,
     },
 
@@ -3260,6 +3510,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 15,
         .secondaryEffectChance = 0,
         .priority = 0,
+        .target = MOVE_TARGET_SELECTED,
         .flags = FLAG_MAKES_CONTACT | FLAG_PROTECT_AFFECTED | FLAG_HIGH_CRIT,
     },
 
@@ -3273,6 +3524,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 10,
         .secondaryEffectChance = 100,
         .priority = 3,
+        .target = MOVE_TARGET_SELECTED,
         .flags = FLAG_MAKES_CONTACT | FLAG_PROTECT_AFFECTED,
     },
 
@@ -3286,6 +3538,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 10,
         .secondaryEffectChance = 100,
         .priority = 0,
+        .target = MOVE_TARGET_RANDOM,
         .flags = FLAG_PROTECT_AFFECTED,
     },
 
@@ -3299,6 +3552,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 20,
         .secondaryEffectChance = 0,
         .priority = 0,
+        .target = MOVE_TARGET_USER,
         .flags = FLAG_SNATCH_AFFECTED,
     },
 
@@ -3312,6 +3566,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 15,
         .secondaryEffectChance = 30,
         .priority = 0,
+        .target = MOVE_TARGET_SELECTED,
         .flags = FLAG_PROTECT_AFFECTED,
     },
 
@@ -3325,6 +3580,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 20,
         .secondaryEffectChance = 0,
         .priority = 0,
+        .target = MOVE_TARGET_USER,
         .flags = FLAG_SNATCH_AFFECTED,
     },
 
@@ -3338,6 +3594,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 10,
         .secondaryEffectChance = 10,
         .priority = 0,
+        .target = MOVE_TARGET_BOTH,
         .flags = FLAG_PROTECT_AFFECTED,
     },
 
@@ -3351,6 +3608,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 5,
         .secondaryEffectChance = 0,
         .priority = 0,
+        .target = MOVE_TARGET_USER,
         .flags = 0,
     },
 
@@ -3364,6 +3622,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 15,
         .secondaryEffectChance = 0,
         .priority = 0,
+        .target = MOVE_TARGET_SELECTED,
         .flags = FLAG_PROTECT_AFFECTED | FLAG_MAGICCOAT_AFFECTED,
     },
 
@@ -3377,6 +3636,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 20,
         .secondaryEffectChance = 0,
         .priority = 0,
+        .target = MOVE_TARGET_USER,
         .flags = FLAG_SNATCH_AFFECTED,
     },
 
@@ -3390,6 +3650,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 15,
         .secondaryEffectChance = 0,
         .priority = 0,
+        .target = MOVE_TARGET_SELECTED,
         .flags = FLAG_PROTECT_AFFECTED | FLAG_MAGICCOAT_AFFECTED,
     },
 
@@ -3403,6 +3664,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 10,
         .secondaryEffectChance = 0,
         .priority = 0,
+        .target = MOVE_TARGET_SELECTED,
         .flags = FLAG_PROTECT_AFFECTED,
     },
 
@@ -3416,6 +3678,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 15,
         .secondaryEffectChance = 0,
         .priority = 0,
+        .target = MOVE_TARGET_SELECTED,
         .flags = FLAG_MAKES_CONTACT | FLAG_PROTECT_AFFECTED,
     },
 
@@ -3429,6 +3692,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 20,
         .secondaryEffectChance = 0,
         .priority = -3,
+        .target = MOVE_TARGET_SELECTED,
         .flags = FLAG_MAKES_CONTACT | FLAG_PROTECT_AFFECTED | FLAG_PUNCHING,
     },
 
@@ -3442,6 +3706,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 15,
         .secondaryEffectChance = 0,
         .priority = 0,
+        .target = MOVE_TARGET_SELECTED,
         .flags = FLAG_MAKES_CONTACT | FLAG_PROTECT_AFFECTED,
     },
 
@@ -3455,6 +3720,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 20,
         .secondaryEffectChance = 0,
         .priority = 0,
+        .target = MOVE_TARGET_DEPENDS,
         .flags = 0,
     },
 
@@ -3468,6 +3734,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 30,
         .secondaryEffectChance = 0,
         .priority = 1,
+        .target = MOVE_TARGET_SELECTED,
         .flags = FLAG_PROTECT_AFFECTED,
     },
 
@@ -3481,6 +3748,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 40,
         .secondaryEffectChance = 0,
         .priority = 0,
+        .target = MOVE_TARGET_USER,
         .flags = FLAG_SNATCH_AFFECTED,
     },
 
@@ -3494,6 +3762,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 20,
         .secondaryEffectChance = 0,
         .priority = 0,
+        .target = MOVE_TARGET_SELECTED,
         .flags = FLAG_PROTECT_AFFECTED | FLAG_MAGICCOAT_AFFECTED,
     },
 
@@ -3507,6 +3776,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 20,
         .secondaryEffectChance = 0,
         .priority = 5,
+        .target = MOVE_TARGET_USER,
         .flags = 0,
     },
 
@@ -3520,6 +3790,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 10,
         .secondaryEffectChance = 0,
         .priority = 0,
+        .target = MOVE_TARGET_SELECTED,
         .flags = FLAG_PROTECT_AFFECTED,
     },
 
@@ -3533,6 +3804,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 10,
         .secondaryEffectChance = 0,
         .priority = 0,
+        .target = MOVE_TARGET_SELECTED,
         .flags = 0,
     },
 
@@ -3546,6 +3818,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 10,
         .secondaryEffectChance = 0,
         .priority = 0,
+        .target = MOVE_TARGET_USER,
         .flags = FLAG_SNATCH_AFFECTED,
     },
 
@@ -3559,6 +3832,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 20,
         .secondaryEffectChance = 0,
         .priority = 0,
+        .target = MOVE_TARGET_DEPENDS,
         .flags = 0,
     },
 
@@ -3572,6 +3846,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 20,
         .secondaryEffectChance = 0,
         .priority = 0,
+        .target = MOVE_TARGET_USER,
         .flags = FLAG_SNATCH_AFFECTED,
     },
 
@@ -3585,6 +3860,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 5,
         .secondaryEffectChance = 0,
         .priority = 0,
+        .target = MOVE_TARGET_SELECTED,
         .flags = FLAG_MAKES_CONTACT | FLAG_PROTECT_AFFECTED,
     },
 
@@ -3598,6 +3874,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 15,
         .secondaryEffectChance = 0,
         .priority = 4,
+        .target = MOVE_TARGET_USER,
         .flags = 0,
     },
 
@@ -3611,6 +3888,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 10,
         .secondaryEffectChance = 0,
         .priority = 0,
+        .target = MOVE_TARGET_USER,
         .flags = FLAG_SNATCH_AFFECTED,
     },
 
@@ -3624,6 +3902,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 10,
         .secondaryEffectChance = 0,
         .priority = -4,
+        .target = MOVE_TARGET_SELECTED,
         .flags = FLAG_MAKES_CONTACT | FLAG_PROTECT_AFFECTED,
     },
 
@@ -3637,6 +3916,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 15,
         .secondaryEffectChance = 0,
         .priority = 0,
+        .target = MOVE_TARGET_SELECTED,
         .flags = FLAG_MAKES_CONTACT | FLAG_PROTECT_AFFECTED,
     },
 
@@ -3650,6 +3930,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 10,
         .secondaryEffectChance = 0,
         .priority = 0,
+        .target = MOVE_TARGET_SELECTED,
         .flags = FLAG_PROTECT_AFFECTED | FLAG_MAGICCOAT_AFFECTED,
     },
 
@@ -3663,6 +3944,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 20,
         .secondaryEffectChance = 100,
         .priority = 0,
+        .target = MOVE_TARGET_SELECTED,
         .flags = FLAG_MAKES_CONTACT | FLAG_PROTECT_AFFECTED,
     },
 
@@ -3676,6 +3958,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 5,
         .secondaryEffectChance = 0,
         .priority = 0,
+        .target = MOVE_TARGET_SELECTED,
         .flags = FLAG_MAKES_CONTACT | FLAG_PROTECT_AFFECTED,
     },
 
@@ -3689,6 +3972,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 5,
         .secondaryEffectChance = 0,
         .priority = 0,
+        .target = MOVE_TARGET_BOTH,
         .flags = FLAG_PROTECT_AFFECTED,
     },
 
@@ -3702,6 +3986,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 10,
         .secondaryEffectChance = 0,
         .priority = 0,
+        .target = MOVE_TARGET_SELECTED,
         .flags = FLAG_PROTECT_AFFECTED,
     },
 
@@ -3715,6 +4000,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 10,
         .secondaryEffectChance = 0,
         .priority = 0,
+        .target = MOVE_TARGET_USER,
         .flags = FLAG_SNATCH_AFFECTED,
     },
 
@@ -3728,6 +4014,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 20,
         .secondaryEffectChance = 0,
         .priority = 0,
+        .target = MOVE_TARGET_USER,
         .flags = FLAG_SNATCH_AFFECTED,
     },
 
@@ -3741,6 +4028,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 15,
         .secondaryEffectChance = 100,
         .priority = 0,
+        .target = MOVE_TARGET_RANDOM,
         .flags = FLAG_MAKES_CONTACT | FLAG_PROTECT_AFFECTED,
     },
 
@@ -3754,6 +4042,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 10,
         .secondaryEffectChance = 0,
         .priority = 4,
+        .target = MOVE_TARGET_USER,
         .flags = 0,
     },
 
@@ -3767,6 +4056,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 20,
         .secondaryEffectChance = 30,
         .priority = 0,
+        .target = MOVE_TARGET_SELECTED,
         .flags = FLAG_PROTECT_AFFECTED,
     },
 
@@ -3780,6 +4070,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 5,
         .secondaryEffectChance = 0,
         .priority = 0,
+        .target = MOVE_TARGET_SELECTED,
         .flags = FLAG_MAKES_CONTACT,
     },
 
@@ -3793,6 +4084,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 15,
         .secondaryEffectChance = 20,
         .priority = 0,
+        .target = MOVE_TARGET_SELECTED,
         .flags = FLAG_MAKES_CONTACT | FLAG_PROTECT_AFFECTED,
     },
 
@@ -3806,6 +4098,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 20,
         .secondaryEffectChance = 0,
         .priority = 0,
+        .target = MOVE_TARGET_USER,
         .flags = FLAG_SNATCH_AFFECTED,
     },
 
@@ -3819,6 +4112,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 20,
         .secondaryEffectChance = 0,
         .priority = 0,
+        .target = MOVE_TARGET_USER,
         .flags = FLAG_SNATCH_AFFECTED,
     },
 
@@ -3832,6 +4126,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 5,
         .secondaryEffectChance = 20,
         .priority = 0,
+        .target = MOVE_TARGET_SELECTED,
         .flags = FLAG_PROTECT_AFFECTED,
     },
 
@@ -3845,6 +4140,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 5,
         .secondaryEffectChance = 30,
         .priority = 0,
+        .target = MOVE_TARGET_SELECTED,
         .flags = FLAG_PROTECT_AFFECTED,
     },
 
@@ -3858,6 +4154,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 10,
         .secondaryEffectChance = 0,
         .priority = 0,
+        .target = MOVE_TARGET_USER,
         .flags = FLAG_SNATCH_AFFECTED,
     },
 
@@ -3871,6 +4168,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 20,
         .secondaryEffectChance = 0,
         .priority = 0,
+        .target = MOVE_TARGET_FOES_AND_ALLY,
         .flags = FLAG_PROTECT_AFFECTED,
     },
 
@@ -3884,6 +4182,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 15,
         .secondaryEffectChance = 10,
         .priority = 0,
+        .target = MOVE_TARGET_SELECTED,
         .flags = FLAG_MAKES_CONTACT | FLAG_PROTECT_AFFECTED | FLAG_HIGH_CRIT,
     },
 
@@ -3897,6 +4196,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 10,
         .secondaryEffectChance = 10,
         .priority = 0,
+        .target = MOVE_TARGET_SELECTED,
         .flags = FLAG_PROTECT_AFFECTED,
     },
 
@@ -3910,6 +4210,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 10,
         .secondaryEffectChance = 10,
         .priority = 0,
+        .target = MOVE_TARGET_SELECTED,
         .flags = FLAG_PROTECT_AFFECTED,
     },
 
@@ -3923,6 +4224,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 15,
         .secondaryEffectChance = 20,
         .priority = 0,
+        .target = MOVE_TARGET_SELECTED,
         .flags = FLAG_MAKES_CONTACT | FLAG_PROTECT_AFFECTED,
     },
 
@@ -3936,6 +4238,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 10,
         .secondaryEffectChance = 0,
         .priority = 0,
+        .target = MOVE_TARGET_USER,
         .flags = FLAG_SNATCH_AFFECTED,
     },
 
@@ -3949,6 +4252,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 10,
         .secondaryEffectChance = 0,
         .priority = 0,
+        .target = MOVE_TARGET_BOTH,
         .flags = FLAG_PROTECT_AFFECTED,
     },
 
@@ -3962,6 +4266,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 20,
         .secondaryEffectChance = 10,
         .priority = 0,
+        .target = MOVE_TARGET_SELECTED,
         .flags = FLAG_MAKES_CONTACT | FLAG_PROTECT_AFFECTED | FLAG_HIGH_CRIT,
     },
 
@@ -3975,6 +4280,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 10,
         .secondaryEffectChance = 50,
         .priority = 0,
+        .target = MOVE_TARGET_SELECTED,
         .flags = FLAG_MAKES_CONTACT | FLAG_PROTECT_AFFECTED,
     },
 
@@ -3988,6 +4294,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 10,
         .secondaryEffectChance = 10,
         .priority = 0,
+        .target = MOVE_TARGET_SELECTED,
         .flags = FLAG_MAKES_CONTACT | FLAG_PROTECT_AFFECTED,
     },
 
@@ -4001,6 +4308,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 5,
         .secondaryEffectChance = 100,
         .priority = 0,
+        .target = MOVE_TARGET_SELECTED,
         .flags = FLAG_PROTECT_AFFECTED,
     },
 
@@ -4014,6 +4322,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 5,
         .secondaryEffectChance = 30,
         .priority = 0,
+        .target = MOVE_TARGET_SELECTED,
         .flags = FLAG_MAKES_CONTACT | FLAG_PROTECT_AFFECTED | FLAG_PUNCHING,
     },
 
@@ -4027,6 +4336,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 25,
         .secondaryEffectChance = 30,
         .priority = 0,
+        .target = MOVE_TARGET_SELECTED,
         .flags = FLAG_MAKES_CONTACT | FLAG_PROTECT_AFFECTED,
     },
 
@@ -4040,6 +4350,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 10,
         .secondaryEffectChance = 0,
         .priority = 0,
+        .target = MOVE_TARGET_SELECTED,
         .flags = FLAG_PROTECT_AFFECTED,
     },
 
@@ -4053,6 +4364,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 5,
         .secondaryEffectChance = 0,
         .priority = 0,
+        .target = MOVE_TARGET_USER,
         .flags = FLAG_SNATCH_AFFECTED,
     },
 
@@ -4066,6 +4378,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 20,
         .secondaryEffectChance = 0,
         .priority = 0,
+        .target = MOVE_TARGET_SELECTED,
         .flags = FLAG_PROTECT_AFFECTED | FLAG_MAGICCOAT_AFFECTED,
     },
 
@@ -4079,6 +4392,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 15,
         .secondaryEffectChance = 0,
         .priority = 0,
+        .target = MOVE_TARGET_SELECTED,
         .flags = FLAG_PROTECT_AFFECTED,
     },
 
@@ -4092,6 +4406,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 5,
         .secondaryEffectChance = 100,
         .priority = 0,
+        .target = MOVE_TARGET_SELECTED,
         .flags = FLAG_PROTECT_AFFECTED,
     },
 
@@ -4105,6 +4420,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 15,
         .secondaryEffectChance = 0,
         .priority = 0,
+        .target = MOVE_TARGET_SELECTED,
         .flags = FLAG_MAKES_CONTACT | FLAG_PROTECT_AFFECTED | FLAG_HIGH_CRIT,
     },
 
@@ -4118,6 +4434,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 15,
         .secondaryEffectChance = 100,
         .priority = 0,
+        .target = MOVE_TARGET_SELECTED,
         .flags = FLAG_PROTECT_AFFECTED,
     },
 
@@ -4131,6 +4448,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 5,
         .secondaryEffectChance = 30,
         .priority = 0,
+        .target = MOVE_TARGET_SELECTED,
         .flags = FLAG_PROTECT_AFFECTED,
     },
 
@@ -4144,6 +4462,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 15,
         .secondaryEffectChance = 20,
         .priority = 0,
+        .target = MOVE_TARGET_SELECTED,
         .flags = FLAG_PROTECT_AFFECTED,
     },
 
@@ -4157,6 +4476,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 15,
         .secondaryEffectChance = 0,
         .priority = 0,
+        .target = MOVE_TARGET_SELECTED,
         .flags = FLAG_PROTECT_AFFECTED,
     },
 
@@ -4170,6 +4490,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 20,
         .secondaryEffectChance = 0,
         .priority = 0,
+        .target = MOVE_TARGET_SELECTED,
         .flags = FLAG_PROTECT_AFFECTED | FLAG_MAGICCOAT_AFFECTED,
     },
 
@@ -4183,6 +4504,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 5,
         .secondaryEffectChance = 100,
         .priority = 0,
+        .target = MOVE_TARGET_SELECTED,
         .flags = FLAG_PROTECT_AFFECTED,
     },
 
@@ -4196,6 +4518,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 5,
         .secondaryEffectChance = 0,
         .priority = 0,
+        .target = MOVE_TARGET_BOTH,
         .flags = FLAG_PROTECT_AFFECTED,
     },
 
@@ -4209,6 +4532,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 15,
         .secondaryEffectChance = 10,
         .priority = 0,
+        .target = MOVE_TARGET_SELECTED,
         .flags = FLAG_PROTECT_AFFECTED,
     },
 
@@ -4222,6 +4546,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 20,
         .secondaryEffectChance = 0,
         .priority = 0,
+        .target = MOVE_TARGET_SELECTED,
         .flags = FLAG_MAKES_CONTACT | FLAG_PROTECT_AFFECTED | FLAG_PUNCHING,
     },
 
@@ -4235,6 +4560,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 15,
         .secondaryEffectChance = 20,
         .priority = 0,
+        .target = MOVE_TARGET_SELECTED,
         .flags = FLAG_PROTECT_AFFECTED,
     },
 
@@ -4248,6 +4574,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 15,
         .secondaryEffectChance = 0,
         .priority = 0,
+        .target = MOVE_TARGET_SELECTED,
         .flags = FLAG_MAKES_CONTACT | FLAG_PROTECT_AFFECTED,
     },
 
@@ -4261,6 +4588,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 15,
         .secondaryEffectChance = 100,
         .priority = 0,
+        .target = MOVE_TARGET_SELECTED,
         .flags = FLAG_PROTECT_AFFECTED,
     },
 
@@ -4274,6 +4602,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 5,
         .secondaryEffectChance = 100,
         .priority = 0,
+        .target = MOVE_TARGET_SELECTED,
         .flags = FLAG_PROTECT_AFFECTED,
     },
 
@@ -4287,6 +4616,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 15,
         .secondaryEffectChance = 30,
         .priority = 0,
+        .target = MOVE_TARGET_BOTH,
         .flags = FLAG_PROTECT_AFFECTED,
     },
 
@@ -4300,6 +4630,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 15,
         .secondaryEffectChance = 0,
         .priority = 0,
+        .target = MOVE_TARGET_SELECTED,
         .flags = FLAG_PROTECT_AFFECTED,
     },
 
@@ -4313,6 +4644,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 30,
         .secondaryEffectChance = 0,
         .priority = 0,
+        .target = MOVE_TARGET_SELECTED,
         .flags = FLAG_MAKES_CONTACT | FLAG_PROTECT_AFFECTED,
     },
 
@@ -4326,6 +4658,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 30,
         .secondaryEffectChance = 0,
         .priority = 1,
+        .target = MOVE_TARGET_SELECTED,
         .flags = FLAG_PROTECT_AFFECTED,
     },
 
@@ -4339,6 +4672,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 20,
         .secondaryEffectChance = 0,
         .priority = 0,
+        .target = MOVE_TARGET_USER,
         .flags = FLAG_SNATCH_AFFECTED,
     },
 
@@ -4352,6 +4686,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 5,
         .secondaryEffectChance = 0,
         .priority = 0,
+        .target = MOVE_TARGET_SELECTED,
         .flags = FLAG_MAGICCOAT_AFFECTED,
     },
 
@@ -4365,6 +4700,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 40,
         .secondaryEffectChance = 0,
         .priority = 0,
+        .target = MOVE_TARGET_USER,
         .flags = FLAG_SNATCH_AFFECTED,
     },
 
@@ -4378,6 +4714,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 20,
         .secondaryEffectChance = 0,
         .priority = 0,
+        .target = MOVE_TARGET_SELECTED,
         .flags = FLAG_MAKES_CONTACT | FLAG_PROTECT_AFFECTED,
     },
 
@@ -4391,6 +4728,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 5,
         .secondaryEffectChance = 100,
         .priority = 0,
+        .target = MOVE_TARGET_SELECTED,
         .flags = FLAG_PROTECT_AFFECTED,
     },
 
@@ -4404,6 +4742,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 20,
         .secondaryEffectChance = 0,
         .priority = 0,
+        .target = MOVE_TARGET_USER,
         .flags = FLAG_SNATCH_AFFECTED,
     },
 
@@ -4417,6 +4756,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 10,
         .secondaryEffectChance = 30,
         .priority = 0,
+        .target = MOVE_TARGET_SELECTED,
         .flags = FLAG_MAKES_CONTACT | FLAG_PROTECT_AFFECTED,
     },
 
@@ -4430,6 +4770,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 15,
         .secondaryEffectChance = 30,
         .priority = 0,
+        .target = MOVE_TARGET_SELECTED,
         .flags = FLAG_PROTECT_AFFECTED,
     },
 
@@ -4443,6 +4784,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 20,
         .secondaryEffectChance = 30,
         .priority = 0,
+        .target = MOVE_TARGET_SELECTED,
         .flags = FLAG_MAKES_CONTACT | FLAG_PROTECT_AFFECTED,
     },
 
@@ -4456,6 +4798,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 40,
         .secondaryEffectChance = 100,
         .priority = 0,
+        .target = MOVE_TARGET_SELECTED,
         .flags = FLAG_MAKES_CONTACT | FLAG_PROTECT_AFFECTED,
     },
 
@@ -4469,6 +4812,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 10,
         .secondaryEffectChance = 10,
         .priority = 0,
+        .target = MOVE_TARGET_SELECTED,
         .flags = FLAG_MAKES_CONTACT | FLAG_PROTECT_AFFECTED,
     },
 
@@ -4482,6 +4826,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 20,
         .secondaryEffectChance = 0,
         .priority = 0,
+        .target = MOVE_TARGET_SELECTED,
         .flags = FLAG_PROTECT_AFFECTED,
     },
 
@@ -4495,6 +4840,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 10,
         .secondaryEffectChance = 0,
         .priority = -4,
+        .target = MOVE_TARGET_SELECTED,
         .flags = FLAG_MAKES_CONTACT | FLAG_PROTECT_AFFECTED,
     },
 
@@ -4508,6 +4854,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 20,
         .secondaryEffectChance = 0,
         .priority = 0,
+        .target = MOVE_TARGET_USER,
         .flags = FLAG_SNATCH_AFFECTED,
     },
 
@@ -4521,6 +4868,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 10,
         .secondaryEffectChance = 0,
         .priority = 0,
+        .target = MOVE_TARGET_SELECTED,
         .flags = FLAG_MAKES_CONTACT | FLAG_PROTECT_AFFECTED | FLAG_HIGH_CRIT,
     },
 
@@ -4534,6 +4882,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 20,
         .secondaryEffectChance = 0,
         .priority = 0,
+        .target = MOVE_TARGET_USER,
         .flags = FLAG_SNATCH_AFFECTED,
     },
 
@@ -4547,6 +4896,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 15,
         .secondaryEffectChance = 0,
         .priority = 0,
+        .target = MOVE_TARGET_SELECTED,
         .flags = FLAG_PROTECT_AFFECTED,
     },
 
@@ -4560,6 +4910,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 20,
         .secondaryEffectChance = 0,
         .priority = 0,
+        .target = MOVE_TARGET_SELECTED,
         .flags = FLAG_PROTECT_AFFECTED,
     },
 
@@ -4573,6 +4924,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 20,
         .secondaryEffectChance = 30,
         .priority = 0,
+        .target = MOVE_TARGET_SELECTED,
         .flags = FLAG_PROTECT_AFFECTED,
     },
 
@@ -4586,6 +4938,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 5,
         .secondaryEffectChance = 0,
         .priority = 0,
+        .target = MOVE_TARGET_SELECTED,
         .flags = 0,
     },
 
@@ -4599,6 +4952,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 5,
         .secondaryEffectChance = 0,
         .priority = 0,
+        .target = MOVE_TARGET_SELECTED,
         .flags = FLAG_PROTECT_AFFECTED,
     },
 
@@ -4612,6 +4966,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 10,
         .secondaryEffectChance = 0,
         .priority = 0,
+        .target = MOVE_TARGET_SELECTED,
         .flags = FLAG_MAKES_CONTACT | FLAG_PROTECT_AFFECTED | FLAG_PUNCHING,
     },
 
@@ -4625,6 +4980,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 20,
         .secondaryEffectChance = 0,
         .priority = 0,
+        .target = MOVE_TARGET_SELECTED,
         .flags = FLAG_PROTECT_AFFECTED,
     },
 
@@ -4638,6 +4994,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 5,
         .secondaryEffectChance = 10,
         .priority = 0,
+        .target = MOVE_TARGET_SELECTED,
         .flags = FLAG_PROTECT_AFFECTED,
     },
 
@@ -4651,6 +5008,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 20,
         .secondaryEffectChance = 0,
         .priority = 0,
+        .target = MOVE_TARGET_SELECTED,
         .flags = FLAG_MAKES_CONTACT | FLAG_PROTECT_AFFECTED,
     },
 
@@ -4664,6 +5022,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 20,
         .secondaryEffectChance = 0,
         .priority = 0,
+        .target = MOVE_TARGET_SELECTED,
         .flags = FLAG_PROTECT_AFFECTED,
     },
 
@@ -4677,6 +5036,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 30,
         .secondaryEffectChance = 0,
         .priority = 1,
+        .target = MOVE_TARGET_SELECTED,
         .flags = FLAG_PROTECT_AFFECTED,
     },
 
@@ -4690,6 +5050,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 10,
         .secondaryEffectChance = 0,
         .priority = 0,
+        .target = MOVE_TARGET_SELECTED,
         .flags = FLAG_MAKES_CONTACT | FLAG_PROTECT_AFFECTED,
     },
 
@@ -4703,6 +5064,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 15,
         .secondaryEffectChance = 0,
         .priority = 0,
+        .target = MOVE_TARGET_SELECTED,
         .flags = FLAG_PROTECT_AFFECTED,
     },
 
@@ -4716,6 +5078,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 20,
         .secondaryEffectChance = 10,
         .priority = 0,
+        .target = MOVE_TARGET_SELECTED,
         .flags = FLAG_PROTECT_AFFECTED,
     },
 
@@ -4729,6 +5092,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 20,
         .secondaryEffectChance = 0,
         .priority = 0,
+        .target = MOVE_TARGET_USER,
         .flags = FLAG_SNATCH_AFFECTED,
     },
 
@@ -4742,6 +5106,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 10,
         .secondaryEffectChance = 0,
         .priority = 0,
+        .target = MOVE_TARGET_USER,
         .flags = FLAG_SNATCH_AFFECTED,
     },
 
@@ -4755,6 +5120,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 5,
         .secondaryEffectChance = 0,
         .priority = 0,
+        .target = MOVE_TARGET_USER,
         .flags = FLAG_SNATCH_AFFECTED,
     },
 
@@ -4768,6 +5134,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 5,
         .secondaryEffectChance = 100,
         .priority = 0,
+        .target = MOVE_TARGET_SELECTED,
         .flags = FLAG_MAKES_CONTACT | FLAG_PROTECT_AFFECTED,
     },
 
@@ -4781,6 +5148,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 5,
         .secondaryEffectChance = 0,
         .priority = 0,
+        .target = MOVE_TARGET_SELECTED,
         .flags = FLAG_PROTECT_AFFECTED | FLAG_MAGICCOAT_AFFECTED,
     },
 
@@ -4794,6 +5162,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 5,
         .secondaryEffectChance = 0,
         .priority = -7,
+        .target = MOVE_TARGET_USER,
         .flags = 0,
     },
 
@@ -4807,6 +5176,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 15,
         .secondaryEffectChance = 0,
         .priority = 0,
+        .target = MOVE_TARGET_USER,
         .flags = FLAG_SNATCH_AFFECTED,
     },
 
@@ -4820,6 +5190,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 20,
         .secondaryEffectChance = 0,
         .priority = 0,
+        .target = MOVE_TARGET_SELECTED,
         .flags = FLAG_MAKES_CONTACT | FLAG_PROTECT_AFFECTED,
     },
 
@@ -4833,6 +5204,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 20,
         .secondaryEffectChance = 0,
         .priority = 0,
+        .target = MOVE_TARGET_SELECTED,
         .flags = FLAG_PROTECT_AFFECTED,
     },
 
@@ -4846,6 +5218,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 20,
         .secondaryEffectChance = 0,
         .priority = 0,
+        .target = MOVE_TARGET_SELECTED,
         .flags = FLAG_PROTECT_AFFECTED,
     },
 
@@ -4859,6 +5232,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 10,
         .secondaryEffectChance = 0,
         .priority = 0,
+        .target = MOVE_TARGET_SELECTED,
         .flags = FLAG_MAKES_CONTACT | FLAG_PROTECT_AFFECTED,
     },
 
@@ -4872,6 +5246,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 10,
         .secondaryEffectChance = 0,
         .priority = 0,
+        .target = MOVE_TARGET_USER,
         .flags = FLAG_SNATCH_AFFECTED,
     },
 
@@ -4885,6 +5260,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 30,
         .secondaryEffectChance = 0,
         .priority = 1,
+        .target = MOVE_TARGET_SELECTED,
         .flags = FLAG_PROTECT_AFFECTED,
     },
 
@@ -4898,6 +5274,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 5,
         .secondaryEffectChance = 0,
         .priority = 0,
+        .target = MOVE_TARGET_FOES_AND_ALLY,
         .flags = FLAG_PROTECT_AFFECTED,
     },
 
@@ -4911,6 +5288,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 10,
         .secondaryEffectChance = 0,
         .priority = 0,
+        .target = MOVE_TARGET_SELECTED,
         .flags = FLAG_MAKES_CONTACT | FLAG_PROTECT_AFFECTED,
     },
 
@@ -4924,6 +5302,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 5,
         .secondaryEffectChance = 0,
         .priority = 0,
+        .target = MOVE_TARGET_USER,
         .flags = FLAG_SNATCH_AFFECTED,
     },
 
@@ -4937,6 +5316,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 10,
         .secondaryEffectChance = 0,
         .priority = 0,
+        .target = MOVE_TARGET_SELECTED,
         .flags = FLAG_MAKES_CONTACT | FLAG_PROTECT_AFFECTED,
     },
 
@@ -4950,6 +5330,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 10,
         .secondaryEffectChance = 0,
         .priority = 0,
+        .target = MOVE_TARGET_SELECTED,
         .flags = FLAG_PROTECT_AFFECTED,
     },
 
@@ -4963,6 +5344,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 15,
         .secondaryEffectChance = 10,
         .priority = 0,
+        .target = MOVE_TARGET_SELECTED,
         .flags = FLAG_MAKES_CONTACT | FLAG_PROTECT_AFFECTED,
     },
 
@@ -4976,6 +5358,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 15,
         .secondaryEffectChance = 10,
         .priority = 0,
+        .target = MOVE_TARGET_SELECTED,
         .flags = FLAG_MAKES_CONTACT | FLAG_PROTECT_AFFECTED,
     },
 
@@ -4989,6 +5372,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 15,
         .secondaryEffectChance = 10,
         .priority = 0,
+        .target = MOVE_TARGET_SELECTED,
         .flags = FLAG_MAKES_CONTACT | FLAG_PROTECT_AFFECTED,
     },
 
@@ -5002,6 +5386,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 30,
         .secondaryEffectChance = 0,
         .priority = 0,
+        .target = MOVE_TARGET_USER,
         .flags = FLAG_SNATCH_AFFECTED,
     },
 
@@ -5015,6 +5400,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 10,
         .secondaryEffectChance = 0,
         .priority = 0,
+        .target = MOVE_TARGET_SELECTED,
         .flags = FLAG_MAKES_CONTACT | FLAG_PROTECT_AFFECTED,
     },
 
@@ -5028,6 +5414,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 10,
         .secondaryEffectChance = 0,
         .priority = 0,
+        .target = MOVE_TARGET_SELECTED,
         .flags = FLAG_PROTECT_AFFECTED,
     },
 
@@ -5041,6 +5428,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 20,
         .secondaryEffectChance = 100,
         .priority = 0,
+        .target = MOVE_TARGET_SELECTED,
         .flags = FLAG_MAKES_CONTACT | FLAG_PROTECT_AFFECTED,
     },
 
@@ -5054,6 +5442,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 10,
         .secondaryEffectChance = 70,
         .priority = 0,
+        .target = MOVE_TARGET_SELECTED,
         .flags = FLAG_PROTECT_AFFECTED,
     },
 
@@ -5067,6 +5456,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 10,
         .secondaryEffectChance = 0,
         .priority = 0,
+        .target = MOVE_TARGET_SELECTED,
         .flags = FLAG_PROTECT_AFFECTED,
     },
 
@@ -5080,6 +5470,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 15,
         .secondaryEffectChance = 0,
         .priority = 0,
+        .target = MOVE_TARGET_SELECTED,
         .flags = 0,
     },
 
@@ -5093,7 +5484,134 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 10,
         .secondaryEffectChance = 0,
         .priority = 0,
+        .target = MOVE_TARGET_SELECTED,
         .flags = FLAG_PROTECT_AFFECTED,
+    },
+
+    [MOVE_POWER_WHIP] = 
+    {
+        .effect = EFFECT_HIT,
+        .power = 120,
+        .type = TYPE_NATURE,
+        .moveClass = CLASS_PHYSICAL,
+        .accuracy = 85,
+        .pp = 5,
+        .secondaryEffectChance = 0,
+        .priority = 0,
+        .target = MOVE_TARGET_SELECTED,
+        .flags = FLAG_MAKES_CONTACT | FLAG_PROTECT_AFFECTED,
+    },
+
+    [MOVE_HAMMER_ARM] = 
+    {
+        .effect = EFFECT_NEW,
+        .power = 100,
+        .type = TYPE_FIGHTING,
+        .moveClass = CLASS_PHYSICAL,
+        .accuracy = 100,
+        .pp = 10,
+        .secondaryEffectChance = 0,
+        .priority = 0,
+        .target = MOVE_TARGET_SELECTED,
+        .flags = FLAG_MAKES_CONTACT | FLAG_PROTECT_AFFECTED,
+    },
+
+    [MOVE_BOLT_STRIKE] = 
+    {
+        .effect = EFFECT_PARALYZE_HIT,
+        .power = 120,
+        .type = TYPE_ELECTRIC,
+        .moveClass = CLASS_PHYSICAL,
+        .accuracy = 80,
+        .pp = 5,
+        .secondaryEffectChance = 10,
+        .priority = 0,
+        .target = MOVE_TARGET_SELECTED,
+        .flags = FLAG_MAKES_CONTACT | FLAG_PROTECT_AFFECTED,
+    },
+
+    [MOVE_ANCHOR_SHOT] = 
+    {
+        .effect = EFFECT_HIT,
+        .power = 130,
+        .type = TYPE_STEEL,
+        .moveClass = CLASS_PHYSICAL,
+        .accuracy = 100,
+        .pp = 20,
+        .secondaryEffectChance = 0,
+        .priority = 0,
+        .target = MOVE_TARGET_SELECTED,
+        .flags = FLAG_PROTECT_AFFECTED,
+    },
+
+    [MOVE_SUTRA] = 
+    {
+        .effect = EFFECT_NEW,
+        .power = 70,
+        .type = TYPE_FAITH,
+        .moveClass = CLASS_SPECIAL,
+        .accuracy = 100,
+        .pp = 20,
+        .secondaryEffectChance = 0,
+        .priority = 0,
+        .target = MOVE_TARGET_BOTH,
+        .flags = FLAG_PROTECT_AFFECTED,
+    },
+
+    [MOVE_PRISTINE_SHOT] = 
+    {
+        .effect = EFFECT_HIT,
+        .power = 150,
+        .type = TYPE_NORMAL,
+        .moveClass = CLASS_SPECIAL,
+        .accuracy = 0,
+        .pp = 1,
+        .secondaryEffectChance = 0,
+        .priority = 0,
+        .target = MOVE_TARGET_SELECTED,
+        .flags = 0,
+    },
+
+    [MOVE_DESTITUTION] = 
+    {
+        .effect = EFFECT_TRAP,
+        .power = 60,
+        .type = TYPE_MIASMA,
+        .moveClass = CLASS_SPECIAL,
+        .accuracy = 90,
+        .pp = 15,
+        .secondaryEffectChance = 100,
+        .priority = 0,
+        .target = MOVE_TARGET_SELECTED,
+        .flags = FLAG_PROTECT_AFFECTED,
+    },
+
+    [MOVE_EARTH_PRESS] = 
+    {
+        .effect = EFFECT_HIT,
+        .power = 80,
+        .type = TYPE_EARTH,
+        .moveClass = CLASS_PHYSICAL,
+        .accuracy = 100,
+        .pp = 10,
+        .secondaryEffectChance = 0,
+        .priority = 0,
+        .target = MOVE_TARGET_SELECTED,
+        .flags = FLAG_MAKES_CONTACT | FLAG_PROTECT_AFFECTED,
+    },
+
+    [MOVE_HAPPY_HOUR] = 
+    {
+        .effect = EFFECT_NEW,
+        .power = 0,
+        .type = TYPE_NORMAL,
+        .moveClass = CLASS_STATUS,
+        .accuracy = 0,
+        .pp = 10,
+        .secondaryEffectChance = 0,
+        .priority = 0,
+        .target = MOVE_TARGET_USER,
+        .flags = 0,
     },
 
     [MOVE_ME_FIRST] = 
@@ -5106,6 +5624,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 20,
         .secondaryEffectChance = 0,
         .priority = 0,
+        .target = MOVE_TARGET_SELECTED,
         .flags = FLAG_PROTECT_AFFECTED,
     },
 };

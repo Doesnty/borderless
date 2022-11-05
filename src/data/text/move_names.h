@@ -118,7 +118,7 @@ const u8 gMoveNames[][13] = {
     _("Focus Energy"),
     _("Work Up"),
     _("Metronome"),
-    _("Profligate"),
+    _("Debt Spiral"),
     _("SelfDestruct"),
     _("Mind Bomb"),
     _("Lick"),

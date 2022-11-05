@@ -58,7 +58,7 @@ gBattleAnims_Moves::
 	.4byte Move_THUNDER_PUNCH
 	.4byte Move_SCRATCH
 	.4byte Move_NIGHT_SLASH
-	.4byte Move_GUILLOTINE
+	.4byte Move_JUDGMENT
 	.4byte Move_RAZOR_WIND
 	.4byte Move_SWORDS_DANCE
 	.4byte Move_CUT
@@ -165,7 +165,7 @@ gBattleAnims_Moves::
 	.4byte Move_FOCUS_ENERGY
 	.4byte Move_BIDE
 	.4byte Move_METRONOME
-	.4byte Move_MIRROR_MOVE
+	.4byte Move_DEBT_SPIRAL
 	.4byte Move_SELF_DESTRUCT
 	.4byte Move_EGG_BOMB
 	.4byte Move_LICK
@@ -10819,6 +10819,7 @@ General_FutureSightHit:: @ 81D60A9
 	end
 
 General_DoomDesireHit:: @ 81D6108
+Move_JUDGMENT::
 	createvisualtask AnimTask_SetAnimTargetToBattlerTarget, 2, 
 	loadspritegfx ANIM_TAG_EXPLOSION
 	createsprite gSimplePaletteBlendSpriteTemplate, ANIM_ATTACKER, 2, 1, 3, 0, 16, RGB_WHITE
@@ -11117,5 +11118,37 @@ Move_NIGHT_SLASH::
 	delay 1
 	restorebg
 	waitbgfadein
+	end
+
+Move_DEBT_SPIRAL::
+	loadspritegfx ANIM_TAG_COIN
+	loadspritegfx ANIM_TAG_HANDS_AND_FEET
+	loadspritegfx ANIM_TAG_IMPACT
+	monbg 1
+	setalpha 12, 8
+	call DizzyPunchLunge
+	createsprite gFistFootSpriteTemplate, ANIM_TARGET, 5, 16, 8, 20, 1, 0
+	createsprite gBasicHitSplatSpriteTemplate, ANIM_TARGET, 4, 16, 0, 1, 1
+	playsewithpan SE_M_COMET_PUNCH, 63
+	createsprite gDebtSpiralSpriteTemplate, ANIM_TARGET, 3, 16, 8, 160, -32
+	createsprite gDebtSpiralSpriteTemplate, ANIM_TARGET, 3, 16, 8, -256, -40
+	createsprite gDebtSpiralSpriteTemplate, ANIM_TARGET, 3, 16, 8, 128, -16
+	createsprite gDebtSpiralSpriteTemplate, ANIM_TARGET, 3, 16, 8, 416, -38
+	createsprite gDebtSpiralSpriteTemplate, ANIM_TARGET, 3, 16, 8, -128, -22
+	createsprite gDebtSpiralSpriteTemplate, ANIM_TARGET, 3, 16, 8, -384, -31
+	delay 10
+	call DizzyPunchLunge
+	createsprite gFistFootSpriteTemplate, ANIM_TARGET, 5, -16, -8, 20, 1, 0
+	createsprite gBasicHitSplatSpriteTemplate, ANIM_TARGET, 4, -16, -16, 1, 1
+	playsewithpan SE_M_VITAL_THROW2, 63
+	createsprite gDebtSpiralSpriteTemplate, ANIM_TARGET, 3, -16, -8, 160, -32
+	createsprite gDebtSpiralSpriteTemplate, ANIM_TARGET, 3, -16, -8, -256, -40
+	createsprite gDebtSpiralSpriteTemplate, ANIM_TARGET, 3, -16, -8, 128, -16
+	createsprite gDebtSpiralSpriteTemplate, ANIM_TARGET, 3, -16, -8, 416, -38
+	createsprite gDebtSpiralSpriteTemplate, ANIM_TARGET, 3, -16, -8, -128, -22
+	createsprite gDebtSpiralSpriteTemplate, ANIM_TARGET, 3, -16, -8, -384, -31
+	waitforvisualfinish
+	clearmonbg 1
+	blendoff
 	end
 
