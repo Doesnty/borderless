@@ -75,13 +75,13 @@ gBattleScriptsForMoveEffects::
 	.4byte BattleScript_EffectSpeedUp2
 	.4byte BattleScript_EffectSpecialAttackUp2
 	.4byte BattleScript_EffectSpecialDefenseUp2
-	.4byte BattleScript_EffectHit
+	.4byte BattleScript_EffectAccuracyUp2
 	.4byte BattleScript_EffectHit
 	.4byte BattleScript_EffectTransform
 	.4byte BattleScript_EffectAttackDown2
 	.4byte BattleScript_EffectDefenseDown2
 	.4byte BattleScript_EffectSpeedDown2
-	.4byte BattleScript_EffectHit
+	.4byte BattleScript_EffectSpecialAttackDown2
 	.4byte BattleScript_EffectSpecialDefenseDown2
 	.4byte BattleScript_EffectHit
 	.4byte BattleScript_EffectHit
@@ -127,7 +127,7 @@ gBattleScriptsForMoveEffects::
 	.4byte BattleScript_EffectTripleKick
 	.4byte BattleScript_EffectThief
 	.4byte BattleScript_EffectMeanLook
-	.4byte BattleScript_EffectNightmare
+	.4byte BattleScript_EffectSleepHit
 	.4byte BattleScript_EffectMinimize
 	.4byte BattleScript_EffectCurse
 	.4byte BattleScript_EffectHit
@@ -236,6 +236,10 @@ gBattleScriptsForMoveEffects::
 	.4byte BattleScript_EffectCamouflage
     .4byte BattleScript_EffectThrash
     .4byte BattleScript_EffectGrowth
+    .4byte BattleScript_EffectTopsyTurvy
+    .4byte BattleScript_EffectSuckerPunch
+    .4byte BattleScript_EffectAquaRing
+    .4byte BattleScript_EffectCopycat
 
 BattleScript_EffectHit::
 	jumpifnotmove MOVE_SURF, BattleScript_HitFromAtkCanceler
@@ -373,6 +377,10 @@ BattleScript_EffectFreezeHit::
 
 BattleScript_EffectParalyzeHit::
 	setmoveeffect MOVE_EFFECT_PARALYSIS
+	goto BattleScript_EffectHit
+
+BattleScript_EffectSleepHit::
+	setmoveeffect MOVE_EFFECT_SLEEP
 	goto BattleScript_EffectHit
 
 BattleScript_EffectExplosion::
@@ -951,6 +959,10 @@ BattleScript_EffectSpecialDefenseUp2::
 	setstatchanger STAT_SPDEF, 2, FALSE
 	goto BattleScript_EffectStatUp
 
+BattleScript_EffectAccuracyUp2::
+	setstatchanger STAT_ACC, 2, FALSE
+	goto BattleScript_EffectStatUp
+
 BattleScript_EffectTransform::
 	attackcanceler
 	attackstring
@@ -972,6 +984,10 @@ BattleScript_EffectDefenseDown2::
 
 BattleScript_EffectSpeedDown2::
 	setstatchanger STAT_SPEED, 2, TRUE
+	goto BattleScript_EffectStatDown
+
+BattleScript_EffectSpecialAttackDown2::
+	setstatchanger STAT_SPATK, 2, TRUE
 	goto BattleScript_EffectStatDown
 
 BattleScript_EffectSpecialDefenseDown2::
@@ -2591,6 +2607,8 @@ BattleScript_EffectSecretPower::
 	goto BattleScript_EffectHit
 
 BattleScript_EffectDoubleEdge::
+    jumpifmove MOVE_FLARE_BLITZ, BattleScript_EffectFlareBlitz
+    jumpifmove MOVE_VOLT_TACKLE, BattleScript_EffectVoltTackle
 	setmoveeffect MOVE_EFFECT_RECOIL_33 | MOVE_EFFECT_AFFECTS_USER | MOVE_EFFECT_CERTAIN
 	goto BattleScript_EffectHit
 
@@ -4486,3 +4504,145 @@ BattleScript_Growth2TrySpAtk:
 
 BattleScript_Growth2End:
 	goto BattleScript_MoveEnd
+
+BattleScript_EffectTopsyTurvy::
+	attackcanceler
+	attackstring
+	ppreduce
+	accuracycheck BattleScript_ButItFailed, ACC_CURR_MOVE
+    jumpifstat BS_ATTACKER, CMP_NOT_EQUAL, STAT_ATK, 6, BattleScript_EffectTopsyTurvyExecute
+    jumpifstat BS_ATTACKER, CMP_NOT_EQUAL, STAT_DEF, 6, BattleScript_EffectTopsyTurvyExecute
+    jumpifstat BS_ATTACKER, CMP_NOT_EQUAL, STAT_SPATK, 6, BattleScript_EffectTopsyTurvyExecute
+    jumpifstat BS_ATTACKER, CMP_NOT_EQUAL, STAT_SPDEF, 6, BattleScript_EffectTopsyTurvyExecute
+    jumpifstat BS_ATTACKER, CMP_NOT_EQUAL, STAT_SPEED, 6, BattleScript_EffectTopsyTurvyExecute
+    jumpifstat BS_ATTACKER, CMP_NOT_EQUAL, STAT_ACC, 6, BattleScript_EffectTopsyTurvyExecute
+    jumpifstat BS_ATTACKER, CMP_EQUAL, STAT_EVASION, 6, BattleScript_EffectTopsyTurvyExecute
+    goto BattleScript_ButItFailed
+    
+BattleScript_EffectTopsyTurvyExecute::
+    special 0x0
+	attackanimation
+	waitanimation
+	printstring STRINGID_TOPSYTURVY
+	waitmessage 0x40
+	goto BattleScript_MoveEnd
+
+BattleScript_EffectSuckerPunch::
+	attackcanceler
+	attackstring
+	ppreduce
+	special 0x1
+	accuracycheck BattleScript_MoveMissedPause, ACC_CURR_MOVE
+	goto BattleScript_HitFromCritCalc
+
+BattleScript_EffectFinalGambit:
+	attackcanceler
+	accuracycheck BattleScript_PrintMoveMissed, ACC_CURR_MOVE
+	attackstring
+	ppreduce
+	typecalc
+	bicbyte gMoveResultFlags, MOVE_RESULT_SUPER_EFFECTIVE | MOVE_RESULT_NOT_VERY_EFFECTIVE
+	special 0x2
+	setatkhptozero
+	adjustsetdamage
+	attackanimation
+	waitanimation
+	effectivenesssound
+	hitanimation BS_TARGET
+	waitstate
+	healthbarupdate BS_TARGET
+	datahpupdate BS_TARGET
+	critmessage
+	waitmessage 64
+	resultmessage
+	waitmessage 64
+	seteffectwithchance
+	tryfaintmon BS_ATTACKER, FALSE, NULL
+	tryfaintmon BS_TARGET, FALSE, 0
+	moveendall
+	end
+
+BattleScript_EffectAquaRing::
+	attackcanceler
+	attackstring
+	ppreduce
+	accuracycheck BattleScript_ButItFailed, ACC_CURR_MOVE
+    special 0x3
+	attackanimation
+	waitanimation
+	printstring STRINGID_AQUARINGSET
+	waitmessage 0x40
+	goto BattleScript_MoveEnd
+
+BattleScript_AquaRingTurnHeal::
+	printstring STRINGID_HEALEDBYAQUARING
+	waitmessage 0x40
+	orword gHitMarker, HITMARKER_IGNORE_SUBSTITUTE
+	healthbarupdate BS_ATTACKER
+	datahpupdate BS_ATTACKER
+	end2
+
+BattleScript_EffectCopycat::
+	attackcanceler
+	attackstring
+	pause 64
+	special 0x4
+	ppreduce
+	goto BattleScript_ButItFailed
+	end
+
+BattleScript_EffectFlareBlitz::
+	attackcanceler
+	accuracycheck BattleScript_PrintMoveMissed, ACC_CURR_MOVE
+	attackstring
+	ppreduce
+	critcalc
+	damagecalc
+	typecalc
+	adjustnormaldamage
+	attackanimation
+	waitanimation
+	effectivenesssound
+	hitanimation BS_TARGET
+	waitstate
+	healthbarupdate BS_TARGET
+	datahpupdate BS_TARGET
+	critmessage
+	waitmessage 64
+	resultmessage
+	waitmessage 64
+	setmoveeffect MOVE_EFFECT_BURN
+	seteffectwithchance
+	setmoveeffect MOVE_EFFECT_RECOIL_33 | MOVE_EFFECT_AFFECTS_USER | MOVE_EFFECT_CERTAIN
+	seteffectwithchance
+	tryfaintmon BS_TARGET, FALSE, 0
+    moveendall
+    end
+
+BattleScript_EffectVoltTackle::
+	attackcanceler
+	accuracycheck BattleScript_PrintMoveMissed, ACC_CURR_MOVE
+	attackstring
+	ppreduce
+	critcalc
+	damagecalc
+	typecalc
+	adjustnormaldamage
+	attackanimation
+	waitanimation
+	effectivenesssound
+	hitanimation BS_TARGET
+	waitstate
+	healthbarupdate BS_TARGET
+	datahpupdate BS_TARGET
+	critmessage
+	waitmessage 64
+	resultmessage
+	waitmessage 64
+	setmoveeffect MOVE_EFFECT_PARALYSIS
+	seteffectwithchance
+	setmoveeffect MOVE_EFFECT_RECOIL_33 | MOVE_EFFECT_AFFECTS_USER | MOVE_EFFECT_CERTAIN
+	seteffectwithchance
+	tryfaintmon BS_TARGET, FALSE, 0
+    moveendall
+    end

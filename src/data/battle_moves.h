@@ -1836,7 +1836,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
 
     [MOVE_TOPSY_TURVY] = 
     {
-        .effect = EFFECT_NEW,
+        .effect = EFFECT_TOPSY_TURVY,
         .power = 0,
         .type = TYPE_HEART,
         .moveClass = CLASS_STATUS,
@@ -2158,7 +2158,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
 
     [MOVE_SUCKER_PUNCH] = 
     {
-        .effect = EFFECT_NEW,
+        .effect = EFFECT_SUCKER_PUNCH,
         .power = 80,
         .type = TYPE_DARK,
         .moveClass = CLASS_PHYSICAL,
@@ -2382,7 +2382,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
 
     [MOVE_NIGHTMARE] = 
     {
-        .effect = EFFECT_NEW,
+        .effect = EFFECT_SLEEP_HIT,
         .power = 85,
         .type = TYPE_GHOST,
         .moveClass = CLASS_SPECIAL,
@@ -2774,7 +2774,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
 
     [MOVE_LOCK_ON] = 
     {
-        .effect = EFFECT_NEW,
+        .effect = EFFECT_ACCURACY_UP_2,
         .power = 0,
         .type = TYPE_REASON,
         .moveClass = CLASS_STATUS,
@@ -3572,7 +3572,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
 
     [MOVE_AQUA_RING] = 
     {
-        .effect = EFFECT_NEW,
+        .effect = EFFECT_AQUA_RING,
         .power = 0,
         .type = TYPE_WATER,
         .moveClass = CLASS_STATUS,
@@ -3712,7 +3712,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
 
     [MOVE_COPYCAT] = 
     {
-        .effect = EFFECT_NEW,
+        .effect = EFFECT_COPYCAT,
         .power = 0,
         .type = TYPE_NORMAL,
         .moveClass = CLASS_STATUS,
@@ -4370,7 +4370,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
 
     [MOVE_FAKE_TEARS] = 
     {
-        .effect = EFFECT_NEW,
+        .effect = EFFECT_SPECIAL_ATTACK_DOWN_2,
         .power = 0,
         .type = TYPE_DARK,
         .moveClass = CLASS_STATUS,
@@ -4804,7 +4804,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
 
     [MOVE_VOLT_TACKLE] = 
     {
-        .effect = EFFECT_NEW,
+        .effect = EFFECT_DOUBLE_EDGE,
         .power = 120,
         .type = TYPE_ELECTRIC,
         .moveClass = CLASS_PHYSICAL,
@@ -5000,7 +5000,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
 
     [MOVE_HEART_BREAK] = 
     {
-        .effect = EFFECT_NEW,
+        .effect = EFFECT_HIT,
         .power = 70,
         .type = TYPE_DARK,
         .moveClass = CLASS_PHYSICAL,

@@ -157,7 +157,6 @@ AI_CheckBadMove_CheckEffect:: @ 81D9D27
 	if_effect EFFECT_SLEEP_TALK, AI_CBM_DamageDuringSleep
 	if_effect EFFECT_FLAIL, AI_CBM_HighRiskForDamage
 	if_effect EFFECT_MEAN_LOOK, AI_CBM_CantEscape
-	if_effect EFFECT_NIGHTMARE, AI_CBM_Nightmare
 	if_effect EFFECT_MINIMIZE, AI_CBM_EvasionUp
 	if_effect EFFECT_CURSE, AI_CBM_Curse
 	if_effect EFFECT_SPIKES, AI_CBM_Spikes
@@ -230,11 +229,6 @@ AI_CBM_Explosion:: @ 81D9FCF
 	goto Score_Minus1
 
 AI_CBM_Explosion_End:: @ 81D9FF2
-	end
-
-AI_CBM_Nightmare:: @ 81D9FF3
-	if_status2 AI_TARGET, STATUS2_NIGHTMARE, Score_Minus10
-	if_not_status AI_TARGET, STATUS1_SLEEP, Score_Minus8
 	end
 
 AI_CBM_DreamEater:: @ 81DA008
@@ -775,7 +769,6 @@ AI_CheckViability:: @ 81DA445
 
 AI_CV_Sleep:: @ 81DA71C
 	if_has_move_with_effect AI_TARGET, EFFECT_DREAM_EATER, AI_CV_SleepEncourageSlpDamage
-	if_has_move_with_effect AI_TARGET, EFFECT_NIGHTMARE, AI_CV_SleepEncourageSlpDamage
 	goto AI_CV_Sleep_End
 
 AI_CV_SleepEncourageSlpDamage:: @ 81DA72F
@@ -1793,7 +1786,6 @@ AI_CV_Encore_EncouragedMovesToEncore:: @ 81DB164
 	.byte EFFECT_LOCK_ON
 	.byte EFFECT_HEAL_BELL
 	.byte EFFECT_MEAN_LOOK
-	.byte EFFECT_NIGHTMARE
 	.byte EFFECT_PROTECT
 	.byte EFFECT_SKILL_SWAP
 	.byte EFFECT_FORESIGHT

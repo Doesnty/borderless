@@ -305,6 +305,7 @@ static void atkF4_subattackerhpbydmg(void);
 static void atkF5_removeattackerstatus1(void);
 static void atkF6_finishaction(void);
 static void atkF7_finishturn(void);
+static void atkF8_special(void);
 
 void (* const gBattleScriptingCommandsTable[])(void) =
 {
@@ -556,6 +557,7 @@ void (* const gBattleScriptingCommandsTable[])(void) =
     atkF5_removeattackerstatus1,
     atkF6_finishaction,
     atkF7_finishturn,
+    atkF8_special,
 };
 
 struct StatFractions
@@ -1139,6 +1141,8 @@ static void atk02_attackstring(void)
         {
             PrepareStringBattle(STRINGID_USEDMOVE, gBattlerAttacker);
             gHitMarker |= HITMARKER_ATTACKSTRING_PRINTED;
+            if (gCurrentMove != MOVE_COPYCAT)
+                gBattleStruct->copycatTracker = gCurrentMove;
         }
         ++gBattlescriptCurrInstr;
         gBattleCommunication[MSG_DISPLAY] = 0;
@@ -9405,4 +9409,139 @@ static void atkF7_finishturn(void)
 {
     gCurrentActionFuncId = B_ACTION_FINISHED;
     gCurrentTurnActionNumber = gBattlersCount;
+}
+
+static void sp00_topsyturvy(void);
+static void sp01_suckerpunch(void);
+static void sp02_finalgambit(void);
+static void sp03_aquaring(void);
+static void sp04_copycat(void);
+
+void (* const gBattleScriptingSpecialsTable[])(void) =
+{
+    sp00_topsyturvy,
+    sp01_suckerpunch,
+    sp02_finalgambit,
+    sp03_aquaring,
+    sp04_copycat,
+};
+
+static void atkF8_special(void)
+{
+    u8 index = gBattlescriptCurrInstr[1];
+    gBattlescriptCurrInstr += 2;
+    gBattleScriptingSpecialsTable[index]();
+}
+
+static void sp00_topsyturvy(void)
+{
+    u8 i = 0;
+    
+    for (i = 0; i < BATTLE_STATS_NO; i++)
+        gBattleMons[gBattlerTarget].statStages[i] = 12 - gBattleMons[gBattlerTarget].statStages[i];
+}
+
+static void sp01_suckerpunch(void)
+{
+    u8 i = 0;
+	u8 success = 1;
+	
+	// Sucker Punch only works if:
+	// The target is using a move
+	// The move the target is using is not status
+	// The attacker goes before the target
+	
+	if (gActionsByTurnOrder[gBattlerTarget] != B_ACTION_USE_MOVE)
+		success = 0;
+	else if (!(gProtectStructs[gBattlerTarget].noValidMoves) && 
+			gBattleMoves[gBattleMons[gBattlerTarget].moves[*(gBattleStruct->chosenMovePositions + gBattlerTarget)]].moveClass == 2)
+		success = 0;
+	else
+	{
+		for (i = 0; i < 4; i++)
+		{
+			if (gBattlerByTurnOrder[i] == gBattlerAttacker)
+				break;
+			if (gBattlerByTurnOrder[i] == gBattlerTarget)
+			{
+				success = 0;
+				break;
+			}
+		}
+	}
+	
+	if (!success)
+		gBattlescriptCurrInstr = BattleScript_ButItFailed;
+}
+
+static void sp02_finalgambit(void)
+{
+    if (gBattleControllerExecFlags)
+        return;    
+    gActiveBattler = gBattlerAttacker;
+    gBattleMoveDamage = gBattleMons[gActiveBattler].hp;
+    BtlController_EmitHealthBarUpdate(0, INSTANT_HP_BAR_DROP);
+    MarkBattlerForControllerExec(gActiveBattler);
+}
+
+static void sp03_aquaring(void)
+{
+    if (gDisableStructs[gBattlerAttacker].aquaRingSet)
+    {
+		gBattlescriptCurrInstr = BattleScript_ButItFailed;
+    }
+    gDisableStructs[gBattlerAttacker].aquaRingSet = 1;
+}
+
+static const u16 sMovesForbiddenToCopycat[] =
+{
+	 MOVE_ASSIST,
+	 MOVE_BESTOW,
+	 MOVE_COPYCAT,
+	 MOVE_COUNTER,
+	 MOVE_COVET,
+	 MOVE_DESTINY_BOND,
+	 MOVE_DETECT,
+	 MOVE_ENDURE,
+	 MOVE_FEINT,
+	 MOVE_FOCUS_PUNCH,
+	 MOVE_HELPING_HAND,
+	 MOVE_ME_FIRST,
+	 MOVE_METRONOME,
+	 MOVE_MIMIC,
+	 MOVE_MIRROR_COAT,
+     MOVE_RECOLLECTION,
+	 MOVE_ROAR,
+	 MOVE_SKETCH,
+	 MOVE_SLEEP_TALK,
+	 MOVE_SNATCH,
+	 MOVE_STRUGGLE,
+	 MOVE_THIEF,
+	 MOVE_TRANSFORM,
+	 MOVE_TRICK,
+	 MOVE_WHIRLWIND,
+	 0,
+};
+
+static void sp04_copycat(void)
+{
+    u8 i = 0;
+    while (sMovesForbiddenToCopycat[i] != 0)
+    {
+        if (sMovesForbiddenToCopycat[i] == gBattleStruct->copycatTracker)
+            gBattleStruct->copycatTracker = 0;
+        i++;
+    }
+    
+    if (gBattleStruct->copycatTracker != 0)
+    {
+        gHitMarker &= ~(HITMARKER_ATTACKSTRING_PRINTED);
+        gCurrentMove = gBattleStruct->copycatTracker;
+        gBattlerTarget = GetMoveTarget(gCurrentMove, 0);
+        gBattlescriptCurrInstr = gBattleScriptsForMoveEffects[gBattleMoves[gCurrentMove].effect];
+    }
+    else
+    {
+		gBattlescriptCurrInstr = BattleScript_ButItFailed;
+    }
 }
