@@ -227,7 +227,7 @@
 #define ITEM_METAL_POWDER 223
 #define ITEM_DARK_RIBBON 224
 #define ITEM_STICK 225
-#define ITEM_0E2 226
+#define ITEM_STONE_BABY 226
 #define ITEM_0E3 227
 #define ITEM_0E4 228
 #define ITEM_0E5 229

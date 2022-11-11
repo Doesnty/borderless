@@ -232,7 +232,7 @@ static const u8 sText_PkmnMadeWish[] = _("{B_ATK_NAME_WITH_PREFIX} made a WISH!"
 static const u8 sText_PkmnWishCameTrue[] = _("{B_BUFF1}'s WISH\ncame true!");
 static const u8 sText_PkmnPlantedRoots[] = _("{B_ATK_NAME_WITH_PREFIX} planted its roots!");
 static const u8 sText_PkmnAbsorbedNutrients[] = _("{B_ATK_NAME_WITH_PREFIX} absorbed\nnutrients with its roots!");
-static const u8 sText_PkmnAnchoredItself[] = _("{B_DEF_NAME_WITH_PREFIX} anchored\nitself with its roots!");
+static const u8 sText_PkmnAnchoredItself[] = _("{B_DEF_NAME_WITH_PREFIX} anchored\nitself to the spot!");
 static const u8 sText_PkmnWasMadeDrowsy[] = _("{B_ATK_NAME_WITH_PREFIX} made\n{B_DEF_NAME_WITH_PREFIX} drowsy!");
 static const u8 sText_PkmnKnockedOff[] = _("{B_ATK_NAME_WITH_PREFIX} knocked off\n{B_DEF_NAME_WITH_PREFIX}'s {B_LAST_ITEM}!");
 static const u8 sText_PkmnSwappedAbilities[] = _("{B_ATK_NAME_WITH_PREFIX} swapped abilities\nwith its opponent!");
@@ -298,6 +298,7 @@ static const u8 sText_PkmnsXCuredItsYProblem[] = _("{B_SCR_ACTIVE_NAME_WITH_PREF
 static const u8 sText_PkmnsXHadNoEffectOnY[] = _("{B_SCR_ACTIVE_NAME_WITH_PREFIX}'s {B_SCR_ACTIVE_ABILITY}\nhad no effect on {B_EFF_NAME_WITH_PREFIX}!");
 static const u8 sText_TooScaredToMove[] = _("{B_ATK_NAME_WITH_PREFIX} is too scared to move!");
 static const u8 sText_GetOutGetOut[] = _("GHOST: Get out…… Get out……");
+static const u8 sText_StatDrastically[] = _("drastically ");
 static const u8 sText_StatSharply[] = _("sharply ");
 const u8 gBattleText_Rose[] = _("rose!");
 static const u8 sText_StatHarshly[] = _("harshly ");
@@ -517,7 +518,18 @@ const u8 sText_DebtSpiralDepletion[] = _("{B_PLAYER_NAME} lost ¥{B_BUFF1}\nto p
 const u8 sText_TopsyTurvy[] = _("{B_DEF_NAME_WITH_PREFIX}'s\nstat changes were inverted!");
 const u8 sText_AquaRingSet[] = _("{B_ATK_NAME_WITH_PREFIX} surrounded itself\nwith a veil of water!");
 const u8 sText_HealedByAquaRing[] = _("{B_ATK_NAME_WITH_PREFIX} was\nhealed by Aqua Ring!");
-
+const u8 sText_TrickRoomSet[] = _("{B_ATK_NAME_WITH_PREFIX} twisted\nthe dimensions!");
+const u8 sText_TrickRoomEnds[] = _("The twisted dimensions returned\nto normal!");
+const u8 sText_TailwindSet[]  = _("A Tailwind blows from behind\n{B_ATK_PREFIX2}'s team!");
+const u8 sText_TailwindEnds[] = _("{B_ATK_PREFIX1}'s Tailwind\npetered out!");
+const u8 sText_WentBackToTrainer[] = _("{B_ATK_NAME_WITH_PREFIX} went back\nto its trainer!");
+const u8 sText_Purified[] = _("{B_DEF_NAME_WITH_PREFIX} was\ntransformed into the Normal type!");
+const u8 sText_HealingWishCameTrue[] = _("The Healing Wish came true!");
+const u8 sText_TargetCursed[] = _("{B_DEF_NAME_WITH_PREFIX} was cursed!");
+const u8 sText_BeginsRegenerating[] = _("{B_ATK_NAME_WITH_PREFIX} anchors\nitself and starts regenerating!");
+const u8 sText_RegeneratesHP[] = _("{B_ATK_NAME_WITH_PREFIX} regenerates\nthrough holy power!");
+const u8 sText_BestowedItem[] = _("{B_DEF_NAME_WITH_PREFIX} recieved\n{B_BUFF2} from {B_ATK_NAME_WITH_PREFIX}.");
+const u8 sText_HappyHour[] = _("Everyone is caught up in\nthe happy atmosphere!");
 
 const u8 *const gBattleStringsTable[] = {
     [STRINGID_TRAINER1LOSETEXT - 12]              = sText_Trainer1LoseText,
@@ -899,6 +911,19 @@ const u8 *const gBattleStringsTable[] = {
     [STRINGID_TOPSYTURVY - 12]                    = sText_TopsyTurvy,
     [STRINGID_AQUARINGSET - 12]                   = sText_AquaRingSet,
     [STRINGID_HEALEDBYAQUARING - 12]              = sText_HealedByAquaRing,
+    [STRINGID_TRICKROOMSET - 12]                  = sText_TrickRoomSet,
+    [STRINGID_TRICKROOMENDS - 12]                 = sText_TrickRoomEnds,
+    [STRINGID_TAILWINDSET - 12]                   = sText_TailwindSet,
+    [STRINGID_TAILWINDENDS - 12]                  = sText_TailwindEnds,
+    [STRINGID_WENTBACKTOTRAINER - 12]             = sText_WentBackToTrainer,
+    [STRINGID_PURIFIED - 12]                      = sText_Purified,
+    [STRINGID_HEALINGWISHCAMETRUE - 12]           = sText_HealingWishCameTrue,
+    [STRINGID_TARGETCURSED - 12]                  = sText_TargetCursed,
+    [STRINGID_DRASTICALLY - 12]                   = sText_StatDrastically,
+    [STRINGID_BEGINSREGENERATING - 12]            = sText_BeginsRegenerating,
+    [STRINGID_REGENERATESHP - 12]                 = sText_RegeneratesHP,
+    [STRINGID_BESTOWEDITEM - 12]                  = sText_BestowedItem,
+    [STRINGID_HAPPYHOUR - 12]                     = sText_HappyHour,
 };
 
 const u16 gMissStringIds[] = {
@@ -923,7 +948,9 @@ const u16 gMoveWeatherChangeStringIds[] = {
     STRINGID_BUTITFAILED,
     STRINGID_SANDSTORMBREWED,
     STRINGID_SUNLIGHTGOTBRIGHT,
-    STRINGID_STARTEDHAIL
+    STRINGID_STARTEDHAIL,
+    STRINGID_TRICKROOMSET,
+    STRINGID_TRICKROOMENDS,
 };
 
 const u16 gSandstormHailContinuesStringIds[] = {

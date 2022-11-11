@@ -243,7 +243,8 @@ struct SideTimer
     /*0x08*/ u8 followmeTimer;
     /*0x09*/ u8 followmeTarget;
     /*0x0A*/ u8 spikesAmount;
-    /*0x0B*/ u8 fieldB;
+    /*0x0B*/ u8 tailwindTimer;
+    /*0x0C*/ u8 healingWish;
 };
 
 extern struct SideTimer gSideTimers[];
@@ -257,6 +258,7 @@ struct WishFutureKnock
     u8 wishCounter[MAX_BATTLERS_COUNT];
     u8 wishMonId[MAX_BATTLERS_COUNT];
     u8 weatherDuration;
+    u8 trickRoomDuration;
     u8 knockedOffMons[2];
 };
 
@@ -397,7 +399,7 @@ struct BattleStruct
     u8 battlerPartyOrders[MAX_BATTLERS_COUNT][3];
     u8 runTries;
     u8 caughtMonNick[POKEMON_NAME_LENGTH + 1];
-    u8 field_78; // unused
+    u8 meFirstTracker; // unused
     u8 safariGoNearCounter;
     u8 safariPkblThrowCounter;
     u8 safariEscapeFactor;

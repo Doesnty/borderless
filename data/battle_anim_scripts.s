@@ -401,6 +401,82 @@ gBattleAnims_Moves::
 	.4byte Move_WATER_PULSE
 	.4byte Move_DOOM_DESIRE
 	.4byte Move_PSYCHO_BOOST
+	.4byte Move_POUND
+	.4byte Move_POUND
+	.4byte Move_POUND
+	.4byte Move_POUND
+	.4byte Move_POUND
+	.4byte Move_POUND
+	.4byte Move_POUND
+	.4byte Move_POUND
+	.4byte Move_POUND
+	.4byte Move_POUND
+	.4byte Move_POUND
+	.4byte Move_POUND
+	.4byte Move_POUND
+	.4byte Move_POUND
+	.4byte Move_POUND
+	.4byte Move_POUND
+	.4byte Move_POUND
+	.4byte Move_POUND
+	.4byte Move_POUND
+	.4byte Move_POUND
+	.4byte Move_POUND
+	.4byte Move_POUND
+	.4byte Move_POUND
+	.4byte Move_POUND
+	.4byte Move_POUND
+	.4byte Move_POUND
+	.4byte Move_POUND
+	.4byte Move_POUND
+	.4byte Move_POUND
+	.4byte Move_POUND
+	.4byte Move_POUND
+	.4byte Move_POUND
+	.4byte Move_POUND
+	.4byte Move_POUND
+	.4byte Move_POUND
+	.4byte Move_POUND
+	.4byte Move_POUND
+	.4byte Move_POUND
+	.4byte Move_POUND
+	.4byte Move_POUND
+	.4byte Move_POUND
+	.4byte Move_POUND
+	.4byte Move_POUND
+	.4byte Move_POUND
+	.4byte Move_POUND
+	.4byte Move_POUND
+	.4byte Move_POUND
+	.4byte Move_POUND
+	.4byte Move_POUND
+	.4byte Move_POUND
+	.4byte Move_POUND
+	.4byte Move_POUND
+	.4byte Move_POUND
+	.4byte Move_POUND
+	.4byte Move_POUND
+	.4byte Move_POUND
+	.4byte Move_POUND
+	.4byte Move_POUND
+	.4byte Move_POUND
+	.4byte Move_POUND
+	.4byte Move_POUND
+	.4byte Move_POUND
+	.4byte Move_POUND
+	.4byte Move_POUND
+	.4byte Move_POUND
+	.4byte Move_POUND
+	.4byte Move_POUND
+	.4byte Move_POUND
+	.4byte Move_POUND
+	.4byte Move_POUND
+	.4byte Move_POUND
+	.4byte Move_POUND
+	.4byte Move_POUND
+	.4byte Move_POUND
+	.4byte Move_POUND
+	.4byte Move_POUND
 	.4byte Move_COUNT
 
 gBattleAnims_StatusConditions::
@@ -443,6 +519,7 @@ gBattleAnims_General::
 	.4byte General_SilphScoped
 	.4byte General_SafariRockThrow
 	.4byte General_SafariReaction
+    .4byte General_ReturnToTrainer
 
 gBattleAnims_Special::
 	.4byte Special_LevelUp
@@ -11152,3 +11229,8 @@ Move_DEBT_SPIRAL::
 	blendoff
 	end
 
+General_ReturnToTrainer::
+	playsewithpan SE_M_STRING_SHOT, 63
+	createvisualtask AnimTask_SlideOffScreen, 5, 0, 8
+	waitforvisualfinish
+	end

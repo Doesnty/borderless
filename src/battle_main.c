@@ -310,127 +310,139 @@ static const s8 sPlayerThrowXTranslation[] = { -32, -16, -16, -32, -32, 0, 0, 0 
 // 10 is ×1.0 TYPE_MUL_NORMAL
 // 05 is ×0.5 TYPE_MUL_NOT_EFFECTIVE
 // 00 is ×0.0 TYPE_MUL_NO_EFFECT
-const u8 gTypeEffectiveness[336] =
+const u8 gTypeEffectiveness[20][20] = 
 {
-    TYPE_NORMAL, TYPE_FIGHTING, TYPE_MUL_NOT_EFFECTIVE,
-    TYPE_NORMAL, TYPE_DARK, TYPE_MUL_NOT_EFFECTIVE,
+    // Normal, Fighting, Wind, Miasma, Earth
+    // Beast, Heart, Ghost, Steel, Illusion
+    // Fire, Water, Nature, Electric, Reason
+    // Ice, Faith, Dark, --, --
     
-    TYPE_FIRE, TYPE_BEAST, TYPE_MUL_SUPER_EFFECTIVE,
-    TYPE_FIRE, TYPE_ICE, TYPE_MUL_SUPER_EFFECTIVE,
-    TYPE_FIRE, TYPE_STEEL, TYPE_MUL_SUPER_EFFECTIVE,
-    TYPE_FIRE, TYPE_NATURE, TYPE_MUL_SUPER_EFFECTIVE,
-    TYPE_FIRE, TYPE_FIRE, TYPE_MUL_NOT_EFFECTIVE,
-    TYPE_FIRE, TYPE_WATER, TYPE_MUL_NOT_EFFECTIVE,
-    TYPE_FIRE, TYPE_EARTH, TYPE_MUL_NOT_EFFECTIVE,
-    TYPE_FIRE, TYPE_FAITH, TYPE_MUL_NOT_EFFECTIVE,
+    { // Normal
+        10,  5, 10, 10, 10,
+        10, 10,  1, 10, 10,
+        10, 10, 10, 10, 10,
+        10, 10,  5, 10, 10,
+    },
+    { // Fighting
+        10, 10,  5,  5, 10,
+        10, 20,  1, 20, 10,
+        10, 10, 10, 10,  5,
+        10, 10, 20, 10, 10,
+    },
+    { // Wind
+        10, 20, 10, 10, 10,
+        20, 10, 10,  5, 10,
+        10, 10, 20,  5, 10,
+         5, 10, 10, 10, 10,
+    },
+    { // Miasma
+        10, 10, 10,  5,  5,
+        10, 10,  5,  0, 10,
+        10, 20, 20, 10,  5,
+        10, 10, 10, 10, 10,
+    },
+    { // Earth
+        10, 10,  0, 20, 10,
+         5, 10, 10, 20, 10,
+        20, 10,  5, 20, 10,
+        10, 10, 10, 10, 10,
+    },
+    { // Beast
+        10, 10,  5, 10, 10,
+        10, 10, 20, 10, 10,
+        10, 10,  5, 10, 10,
+        10, 20, 10, 10, 10,
+    },
+    { // Heart
+        10,  5, 10,  5, 10,
+        10,  5, 10, 10, 10,
+        10, 10, 10, 10, 20,
+        10,  5, 20, 10, 10,
+    },
+    { // Ghost
+         2, 10, 10, 10, 10,
+         5,  5, 20, 10, 10,
+        10, 10, 10, 10, 20,
+        10, 10,  5, 10, 10
+    },
+    { // Steel
+        10, 10, 20, 10, 10,
+        10, 10, 10,  5, 10,
+         5,  5, 10, 10, 10,
+        20, 10, 20, 10, 10,
+    },
+    { // Illusion
+        10, 10, 10, 10, 10,
+        10, 10, 10, 10, 10,
+        10, 10, 10, 10, 10,
+        10, 10, 10, 10, 10,
+    },
     
-    TYPE_WATER, TYPE_FIRE, TYPE_MUL_SUPER_EFFECTIVE,
-    TYPE_WATER, TYPE_EARTH, TYPE_MUL_SUPER_EFFECTIVE,
-    TYPE_WATER, TYPE_BEAST, TYPE_MUL_SUPER_EFFECTIVE,
-    TYPE_WATER, TYPE_WATER, TYPE_MUL_NOT_EFFECTIVE,
-    TYPE_WATER, TYPE_NATURE, TYPE_MUL_NOT_EFFECTIVE,
-    TYPE_WATER, TYPE_FAITH, TYPE_MUL_NOT_EFFECTIVE,
+    // Normal, Fighting, Wind, Miasma, Earth
+    // Beast, Heart, Ghost, Steel, Illusion
+    // Fire, Water, Nature, Electric, Reason
+    // Ice, Faith, Dark, --, --
     
-    TYPE_ELECTRIC, TYPE_WATER, TYPE_MUL_SUPER_EFFECTIVE,
-    TYPE_ELECTRIC, TYPE_WIND, TYPE_MUL_SUPER_EFFECTIVE,
-    TYPE_ELECTRIC, TYPE_ELECTRIC, TYPE_MUL_NOT_EFFECTIVE,
-    TYPE_ELECTRIC, TYPE_GRASS, TYPE_MUL_NOT_EFFECTIVE,
-    TYPE_ELECTRIC, TYPE_FAITH, TYPE_MUL_NOT_EFFECTIVE,
-    TYPE_ELECTRIC, TYPE_EARTH, TYPE_MUL_NO_EFFECT,
-    
-    TYPE_NATURE, TYPE_WATER, TYPE_MUL_SUPER_EFFECTIVE,
-    TYPE_NATURE, TYPE_EARTH, TYPE_MUL_SUPER_EFFECTIVE,
-    TYPE_NATURE, TYPE_FIRE, TYPE_MUL_NOT_EFFECTIVE,
-    TYPE_NATURE, TYPE_NATURE, TYPE_MUL_NOT_EFFECTIVE,
-    TYPE_NATURE, TYPE_POISON, TYPE_MUL_NOT_EFFECTIVE,
-    TYPE_NATURE, TYPE_WIND, TYPE_MUL_NOT_EFFECTIVE,
-    
-    TYPE_ICE, TYPE_NATURE, TYPE_MUL_SUPER_EFFECTIVE,
-    TYPE_ICE, TYPE_WIND, TYPE_MUL_SUPER_EFFECTIVE,
-    TYPE_ICE, TYPE_WATER, TYPE_MUL_NOT_EFFECTIVE,
-    TYPE_ICE, TYPE_ICE, TYPE_MUL_NOT_EFFECTIVE,
-    
-    TYPE_FIGHTING, TYPE_WIND, TYPE_MUL_NOT_EFFECTIVE,
-    TYPE_FIGHTING, TYPE_MIASMA, TYPE_MUL_NOT_EFFECTIVE,
-    TYPE_FIGHTING, TYPE_REASON, TYPE_MUL_NOT_EFFECTIVE,
-    TYPE_FIGHTING, TYPE_DARK, TYPE_MUL_SUPER_EFFECTIVE,
-    TYPE_FIGHTING, TYPE_STEEL, TYPE_MUL_SUPER_EFFECTIVE,
-    TYPE_FIGHTING, TYPE_HEART, TYPE_MUL_SUPER_EFFECTIVE,
-    
-    TYPE_MIASMA, TYPE_GRASS, TYPE_MUL_SUPER_EFFECTIVE,
-    TYPE_MIASMA, TYPE_WATER, TYPE_MUL_SUPER_EFFECTIVE,
-    TYPE_MIASMA, TYPE_GHOST, TYPE_MUL_NOT_EFFECTIVE,
-    TYPE_MIASMA, TYPE_MIASMA, TYPE_MUL_NOT_EFFECTIVE,
-    TYPE_MIASMA, TYPE_EARTH, TYPE_MUL_NOT_EFFECTIVE,
-    TYPE_MIASMA, TYPE_REASON, TYPE_MUL_NOT_EFFECTIVE,
-    TYPE_MIASMA, TYPE_STEEL, TYPE_MUL_NO_EFFECT,
-    
-    TYPE_EARTH, TYPE_FIRE, TYPE_MUL_SUPER_EFFECTIVE,
-    TYPE_EARTH, TYPE_ELECTRIC, TYPE_MUL_SUPER_EFFECTIVE,
-    TYPE_EARTH, TYPE_MIASMA, TYPE_MUL_SUPER_EFFECTIVE,
-    TYPE_EARTH, TYPE_STEEL, TYPE_MUL_SUPER_EFFECTIVE,
-    TYPE_EARTH, TYPE_BEAST, TYPE_MUL_NOT_EFFECTIVE,
-    TYPE_EARTH, TYPE_NATURE, TYPE_MUL_NOT_EFFECTIVE,
-    TYPE_EARTH, TYPE_WIND, TYPE_MUL_NO_EFFECT,
-    
-    TYPE_WIND, TYPE_NATURE, TYPE_MUL_SUPER_EFFECTIVE,
-    TYPE_WIND, TYPE_FIGHTING, TYPE_MUL_SUPER_EFFECTIVE,
-    TYPE_WIND, TYPE_BEAST, TYPE_MUL_SUPER_EFFECTIVE,
-    TYPE_WIND, TYPE_ELECTRIC, TYPE_MUL_NOT_EFFECTIVE,
-    TYPE_WIND, TYPE_ICE, TYPE_MUL_NOT_EFFECTIVE,
-    TYPE_WIND, TYPE_STEEL, TYPE_MUL_NOT_EFFECTIVE,
-    
-    TYPE_REASON, TYPE_FIGHTING, TYPE_MUL_SUPER_EFFECTIVE,
-    TYPE_REASON, TYPE_MIASMA, TYPE_MUL_SUPER_EFFECTIVE,
-    TYPE_REASON, TYPE_FAITH, TYPE_MUL_NOT_EFFECTIVE,
-    TYPE_REASON, TYPE_HEART, TYPE_MUL_NOT_EFFECTIVE,
-    TYPE_REASON, TYPE_DARK, TYPE_MUL_NO_EFFECT,
-    TYPE_REASON, TYPE_STEEL, TYPE_MUL_NOT_EFFECTIVE,
-    
-    TYPE_HEART, TYPE_REASON, TYPE_MUL_SUPER_EFFECTIVE,
-    TYPE_HEART, TYPE_DARK, TYPE_MUL_SUPER_EFFECTIVE,
-    TYPE_HEART, TYPE_POISON, TYPE_MUL_NOT_EFFECTIVE,
-    TYPE_HEART, TYPE_FAITH, TYPE_MUL_NOT_EFFECTIVE,
-    TYPE_HEART, TYPE_FIGHTING, TYPE_MUL_NOT_EFFECTIVE,
-    TYPE_HEART, TYPE_HEART, TYPE_MUL_NOT_EFFECTIVE,
-    
-    TYPE_BEAST, TYPE_FAITH, TYPE_MUL_SUPER_EFFECTIVE,
-    TYPE_BEAST, TYPE_GHOST, TYPE_MUL_SUPER_EFFECTIVE,
-    TYPE_BEAST, TYPE_WIND, TYPE_MUL_NOT_EFFECTIVE,
-    TYPE_BEAST, TYPE_NATURE, TYPE_MUL_NOT_EFFECTIVE,
-    
-    TYPE_GHOST, TYPE_PSYCHIC, TYPE_MUL_SUPER_EFFECTIVE,
-    TYPE_GHOST, TYPE_GHOST, TYPE_MUL_SUPER_EFFECTIVE,
-    TYPE_GHOST, TYPE_DARK, TYPE_MUL_NOT_EFFECTIVE,
-    TYPE_GHOST, TYPE_BEAST, TYPE_MUL_NOT_EFFECTIVE,
-    TYPE_GHOST, TYPE_HEART, TYPE_MUL_NOT_EFFECTIVE,
-    TYPE_GHOST, TYPE_NORMAL, TYPE_MUL_NO_EFFECT,
-    
-    TYPE_FAITH, TYPE_HEART, TYPE_MUL_SUPER_EFFECTIVE,
-    TYPE_FAITH, TYPE_DARK, TYPE_MUL_SUPER_EFFECTIVE,
-    TYPE_FAITH, TYPE_REASON, TYPE_MUL_NOT_EFFECTIVE,
-    TYPE_FAITH, TYPE_MIASMA, TYPE_MUL_NOT_EFFECTIVE,
-    TYPE_FAITH, TYPE_NORMAL, TYPE_MUL_NOT_EFFECTIVE,
-    
-    TYPE_DARK, TYPE_PSYCHIC, TYPE_MUL_SUPER_EFFECTIVE,
-    TYPE_DARK, TYPE_NORMAL, TYPE_MUL_SUPER_EFFECTIVE,
-    TYPE_DARK, TYPE_DARK, TYPE_MUL_NOT_EFFECTIVE,
-    TYPE_DARK, TYPE_HEART, TYPE_MUL_NOT_EFFECTIVE,
-    TYPE_DARK, TYPE_FIGHTING, TYPE_MUL_NOT_EFFECTIVE,
-    TYPE_DARK, TYPE_GHOST, TYPE_MUL_NOT_EFFECTIVE,
-    
-    TYPE_STEEL, TYPE_ICE, TYPE_MUL_SUPER_EFFECTIVE,
-    TYPE_STEEL, TYPE_WIND, TYPE_MUL_SUPER_EFFECTIVE,
-    TYPE_STEEL, TYPE_DARK, TYPE_MUL_NOT_EFFECTIVE,
-    TYPE_STEEL, TYPE_STEEL, TYPE_MUL_NOT_EFFECTIVE,
-    TYPE_STEEL, TYPE_FIRE, TYPE_MUL_NOT_EFFECTIVE,
-    TYPE_STEEL, TYPE_WATER, TYPE_MUL_NOT_EFFECTIVE,
-    
-    TYPE_FORESIGHT, TYPE_FORESIGHT, TYPE_MUL_NO_EFFECT,
-    
-    TYPE_NORMAL, TYPE_GHOST, TYPE_MUL_NO_EFFECT,
-    TYPE_FIGHTING, TYPE_GHOST, TYPE_MUL_NO_EFFECT,
-    TYPE_ENDTABLE, TYPE_ENDTABLE, TYPE_MUL_NO_EFFECT
+    { // Fire
+        10, 10, 10, 10,  5,
+        20, 10, 10, 20, 10,
+         5,  5, 20, 10, 10,
+        20,  5, 10, 10, 10,
+    },
+    { // Water
+        10, 10, 10, 10, 20,
+        20, 10, 10, 10, 10,
+        20,  5,  5, 10, 10,
+        10,  5, 10, 10, 10,
+    },
+    { // Nature
+        10, 10,  5,  5, 20,
+        10, 10, 10, 10, 10,
+         5, 20,  5, 10, 10,
+        10, 10, 10, 10, 10,
+    },
+    { // Electric
+        10, 10, 20, 10,  0,
+        10, 10, 10, 10, 10,
+        10, 20,  5,  5, 10,
+        10,  5, 10, 10, 10,
+    },
+    { // Reason
+        10, 20, 10, 20, 10,
+        10,  5, 10,  5, 10,
+        10, 10, 10, 10, 10,
+        10, 20,  5, 10, 10,
+    },
+    { // Ice
+        10, 10, 20, 10, 10,
+        10, 10, 10, 10, 10,
+        10,  3, 20, 10, 10,
+         5, 10, 10, 10, 10,
+    },
+    { // Faith
+         5, 10, 10,  5, 10,
+        10, 20, 10, 10, 10,
+        10, 10, 10, 10,  5,
+        10, 10, 20, 10, 10
+    },
+    { // Dark
+        20,  5, 10, 10, 10,
+        10,  3,  5, 10, 10,
+        10, 10, 10, 10, 20,
+        10, 10,  5, 10, 10,
+    },
+    { // --
+        10, 10, 10, 10, 10,
+        10, 10, 10, 10, 10,
+        10, 10, 10, 10, 10,
+        10, 10, 10, 10, 10,
+    },
+    { // --
+        10, 10, 10, 10, 10,
+        10, 10, 10, 10, 10,
+        10, 10, 10, 10, 10,
+        10, 10, 10, 10, 10,
+    },
 };
 
 const u8 gTypeNames[][TYPE_NAME_LENGTH + 1] =
@@ -2208,7 +2220,8 @@ static void BattleStartClearSetData(void)
     if (gBattleStruct->safariEscapeFactor <= 1)
         gBattleStruct->safariEscapeFactor = 2;
     gBattleStruct->wildVictorySong = 0;
-    gBattleStruct->moneyMultiplier = 1;
+    gBattleStruct->moneyMultiplier = 0;
+    gBattleStruct->meFirstTracker = 0;
     for (i = 0; i < 8; ++i)
     {
         *((u8 *)gBattleStruct->lastTakenMove + i) = MOVE_NONE;
@@ -3285,36 +3298,69 @@ void SwapTurnOrder(u8 id1, u8 id2)
     SWAP(gBattlerByTurnOrder[id1], gBattlerByTurnOrder[id2], temp);
 }
 
+u32 GetBattlerSpeed(u8 battler)
+{
+    u8 holdEffect, holdEffectParam;
+    u8 speed = 0;
+    u8 weatherMultiplier = 1;
+    if (WEATHER_HAS_EFFECT)
+    {
+        if ((gBattleMons[battler].ability == ABILITY_SWIFT_SWIM && gBattleWeather & WEATHER_RAIN_ANY)
+         || (gBattleMons[battler].ability == ABILITY_CHLOROPHYLL && gBattleWeather & WEATHER_SUN_ANY)
+         || (gBattleMons[battler].ability == ABILITY_SAND_RUSH && gBattleWeather & WEATHER_SANDSTORM_ANY)
+         || (gBattleMons[battler].ability == ABILITY_SLUSH_RUSH && gBattleWeather & WEATHER_HAIL))
+            weatherMultiplier = 2;
+    }
+    speed = (gBattleMons[battler].speed * weatherMultiplier)
+                    * (gStatStageRatios[gBattleMons[battler].statStages[STAT_SPEED]][0])
+                    / (gStatStageRatios[gBattleMons[battler].statStages[STAT_SPEED]][1]);
+    
+    if (gBattleMons[battler].item == ITEM_ENIGMA_BERRY)
+    {
+        holdEffect = gEnigmaBerries[battler].holdEffect;
+        holdEffectParam = gEnigmaBerries[battler].holdEffectParam;
+    }
+    else
+    {
+        holdEffect = ItemId_GetHoldEffect(gBattleMons[battler].item);
+        holdEffectParam = ItemId_GetHoldEffectParam(gBattleMons[battler].item);
+    }
+    
+    if (gSideTimers[GET_BATTLER_SIDE(battler)].tailwindTimer)
+        speed *= 2;
+    
+    if (gBattleMons[battler].ability == ABILITY_QUICK_FEET && gBattleMons[battler].status1)
+        speed = (speed * 15) / 10;
+    
+    if (holdEffect == HOLD_EFFECT_MACHO_BRACE)
+        speed /= 2;
+    
+    if (gBattleMons[battler].status1 & STATUS1_PARALYSIS && (gBattleMons[battler].ability != ABILITY_QUICK_FEET))
+        speed /= 4;
+    
+    return speed;
+}
+
 u8 GetWhoStrikesFirst(u8 battler1, u8 battler2, bool8 ignoreChosenMoves)
 {
     u8 strikesFirst = 0;
-    u8 speedMultiplierBattler1 = 0, speedMultiplierBattler2 = 0;
     u32 speedBattler1 = 0, speedBattler2 = 0;
     u8 holdEffect = 0;
     u8 holdEffectParam = 0;
     u16 moveBattler1 = 0, moveBattler2 = 0;
+    
+    speedBattler1 = GetBattlerSpeed(battler1);
+    speedBattler2 = GetBattlerSpeed(battler2);
 
-    if (WEATHER_HAS_EFFECT)
+
+    if (gWishFutureKnock.trickRoomDuration)
     {
-        if ((gBattleMons[battler1].ability == ABILITY_SWIFT_SWIM && gBattleWeather & WEATHER_RAIN_ANY)
-         || (gBattleMons[battler1].ability == ABILITY_CHLOROPHYLL && gBattleWeather & WEATHER_SUN_ANY))
-            speedMultiplierBattler1 = 2;
-        else
-            speedMultiplierBattler1 = 1;
-        if ((gBattleMons[battler2].ability == ABILITY_SWIFT_SWIM && gBattleWeather & WEATHER_RAIN_ANY)
-         || (gBattleMons[battler2].ability == ABILITY_CHLOROPHYLL && gBattleWeather & WEATHER_SUN_ANY))
-            speedMultiplierBattler2 = 2;
-        else
-            speedMultiplierBattler2 = 1;
+        u32 buffer = speedBattler1;
+        speedBattler1 = speedBattler2;
+        speedBattler2 = buffer;
     }
-    else
-    {
-        speedMultiplierBattler1 = 1;
-        speedMultiplierBattler2 = 1;
-    }
-    speedBattler1 = (gBattleMons[battler1].speed * speedMultiplierBattler1)
-                    * (gStatStageRatios[gBattleMons[battler1].statStages[STAT_SPEED]][0])
-                    / (gStatStageRatios[gBattleMons[battler1].statStages[STAT_SPEED]][1]);
+
+    // quick claws
     if (gBattleMons[battler1].item == ITEM_ENIGMA_BERRY)
     {
         holdEffect = gEnigmaBerries[battler1].holdEffect;
@@ -3325,21 +3371,10 @@ u8 GetWhoStrikesFirst(u8 battler1, u8 battler2, bool8 ignoreChosenMoves)
         holdEffect = ItemId_GetHoldEffect(gBattleMons[battler1].item);
         holdEffectParam = ItemId_GetHoldEffectParam(gBattleMons[battler1].item);
     }
-    // badge boost
-    if (!(gBattleTypeFlags & BATTLE_TYPE_LINK)
-     && FlagGet(FLAG_BADGE03_GET)
-     && GetBattlerSide(battler1) == B_SIDE_PLAYER)
-        speedBattler1 = (speedBattler1 * 110) / 100;
-    if (holdEffect == HOLD_EFFECT_MACHO_BRACE)
-        speedBattler1 /= 2;
-    if (gBattleMons[battler1].status1 & STATUS1_PARALYSIS)
-        speedBattler1 /= 4;
     if (holdEffect == HOLD_EFFECT_QUICK_CLAW && gRandomTurnNumber < (0xFFFF * holdEffectParam) / 100)
         speedBattler1 = UINT_MAX;
-    // check second battlerId's speed
-    speedBattler2 = (gBattleMons[battler2].speed * speedMultiplierBattler2)
-                    * (gStatStageRatios[gBattleMons[battler2].statStages[STAT_SPEED]][0])
-                    / (gStatStageRatios[gBattleMons[battler2].statStages[STAT_SPEED]][1]);
+    else if (holdEffect == HOLD_EFFECT_LAGGING_TAIL)
+        speedBattler1 = 0;
     if (gBattleMons[battler2].item == ITEM_ENIGMA_BERRY)
     {
         holdEffect = gEnigmaBerries[battler2].holdEffect;
@@ -3350,17 +3385,11 @@ u8 GetWhoStrikesFirst(u8 battler1, u8 battler2, bool8 ignoreChosenMoves)
         holdEffect = ItemId_GetHoldEffect(gBattleMons[battler2].item);
         holdEffectParam = ItemId_GetHoldEffectParam(gBattleMons[battler2].item);
     }
-    // badge boost
-    if (!(gBattleTypeFlags & BATTLE_TYPE_LINK)
-     && FlagGet(FLAG_BADGE03_GET)
-     && GetBattlerSide(battler2) == B_SIDE_PLAYER)
-        speedBattler2 = (speedBattler2 * 110) / 100;
-    if (holdEffect == HOLD_EFFECT_MACHO_BRACE)
-        speedBattler2 /= 2;
-    if (gBattleMons[battler2].status1 & STATUS1_PARALYSIS)
-        speedBattler2 /= 4;
     if (holdEffect == HOLD_EFFECT_QUICK_CLAW && gRandomTurnNumber < (0xFFFF * holdEffectParam) / 100)
         speedBattler2 = UINT_MAX;
+    else if (holdEffect == HOLD_EFFECT_LAGGING_TAIL)
+        speedBattler2 = 0;
+
     if (ignoreChosenMoves)
     {
         moveBattler1 = MOVE_NONE;

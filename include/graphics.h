@@ -3481,6 +3481,8 @@ extern const u8 gFile_graphics_items_icons_thick_club_sheet[];
 extern const u8 gFile_graphics_items_icon_palettes_thick_club_palette[];
 extern const u8 gFile_graphics_items_icons_stick_sheet[];
 extern const u8 gFile_graphics_items_icon_palettes_stick_palette[];
+extern const u8 gFile_graphics_items_icons_stone_baby_sheet[];
+extern const u8 gFile_graphics_items_icon_palettes_stone_baby_palette[];
 extern const u8 gFile_graphics_items_icons_question_mark_sheet[];
 extern const u8 gFile_graphics_items_icon_palettes_question_mark_palette[];
 extern const u8 gFile_graphics_items_icons_question_mark_sheet[];

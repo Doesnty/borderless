@@ -7,6 +7,7 @@
 #include "data.h"
 #include "battle.h"
 #include "battle_anim.h"
+#include "battle_interface.h"
 #include "item.h"
 #include "event_data.h"
 #include "util.h"
@@ -2325,6 +2326,62 @@ static void DeleteFirstMoveAndGiveMoveToBoxMon(struct BoxPokemon *boxMon, u16 mo
     (var) /= (gStatStageRatios[statValue][1]);                \
 }
 
+static const u8 sFlailHpScaleToPowerTable[] =
+{
+    1, 200,
+    4, 150,
+    9, 100,
+    16, 80,
+    32, 40,
+    48, 20
+};
+
+
+u32 getVariableBasePower(struct BattlePokemon *attacker, struct BattlePokemon *defender, u32 move, u8 battlerIdAtk, u8 battlerIdDef)
+{
+    u32 power = 0;
+    u8 i;
+
+    switch (move)
+    {
+        case MOVE_STOMP:
+            if (gStatuses3[battlerIdDef] & STATUS3_MINIMIZED)
+                return 120;
+            return 60;
+        case MOVE_NATURE_POWER:
+            return gBaseStats[defender->species].cost;
+        case MOVE_FLAIL:
+        case MOVE_REVERSAL:
+        {
+            s32 hpFraction = GetScaledHPFraction(gBattleMons[battlerIdAtk].hp, gBattleMons[battlerIdAtk].maxHP, 48);
+            for (i = 0; i < (s32)sizeof(sFlailHpScaleToPowerTable); i += 2)
+            {
+                if (hpFraction <= sFlailHpScaleToPowerTable[i])
+                    break;
+            }
+            power = sFlailHpScaleToPowerTable[i + 1];
+            return power;
+        }
+        case MOVE_ERUPTION:
+        case MOVE_AQUA_SHOWER:
+            power = gBattleMoves[move].power;
+            power = gBattleMons[battlerIdAtk].hp * power / gBattleMons[battlerIdAtk].maxHP;
+            return power;
+        case MOVE_FACADE:
+            power = gBattleMoves[move].power;
+            if (gBattleMons[battlerIdAtk].status1)
+                power *= 2;
+            return power;
+        case MOVE_HEX:
+            power = gBattleMoves[move].power;
+            if (gBattleMons[battlerIdDef].status1)
+                power *= 2;
+            return power;
+    }
+    
+    return 0;
+}
+
 s32 CalculateBaseDamage(struct BattlePokemon *attacker, struct BattlePokemon *defender, u32 move, u16 sideStatus, u16 powerOverride, u8 typeOverride, u8 battlerIdAtk, u8 battlerIdDef)
 {
     u32 i;
@@ -2340,8 +2397,11 @@ s32 CalculateBaseDamage(struct BattlePokemon *attacker, struct BattlePokemon *de
     u8 attackerHoldEffectParam;
     u8 atkStatMod;
     u8 defStatMod;
+    u8 variablePower = getVariableBasePower(attacker, defender, move, battlerIdAtk, battlerIdDef);
 
-    if (!powerOverride)
+    if (variablePower)
+        gBattleMovePower = variablePower;
+    else if (!powerOverride)
         gBattleMovePower = gBattleMoves[move].power;
     else
         gBattleMovePower = powerOverride;
@@ -2469,6 +2529,11 @@ s32 CalculateBaseDamage(struct BattlePokemon *attacker, struct BattlePokemon *de
         gBattleMovePower /= 2;
     if (type == TYPE_FIRE && AbilityBattleEffects(ABILITYEFFECT_FIELD_SPORT, 0, 0, 0xFE, 0))
         gBattleMovePower /= 2;
+    if (gBattleStruct->meFirstTracker)
+    {
+        gBattleMovePower *= 15;
+        gBattleMovePower /= 10;
+    }
     /*
     if (type == TYPE_GRASS && attacker->ability == ABILITY_OVERGROW && attacker->hp <= (attacker->maxHP / 3))
         gBattleMovePower = (150 * gBattleMovePower) / 100;

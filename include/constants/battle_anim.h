@@ -375,6 +375,7 @@
 #define B_ANIM_SILPH_SCOPED             0x19
 #define B_ANIM_ROCK_THROW               0x1A
 #define B_ANIM_SAFARI_REACTION          0x1B
+#define B_ANIM_RETURN_TO_TRAINER        0x1C
 
 // special animations table
 #define B_ANIM_LVL_UP                   0x0

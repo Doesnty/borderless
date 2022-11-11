@@ -8261,34 +8261,34 @@
             "encounter_rate": 21,
             "mons": [
               {
-                "min_level": 3,
-                "max_level": 3,
-                "species": "SPECIES_PIDGEY"
+                "min_level": 40,
+                "max_level": 40,
+                "species": "SPECIES_MIKE"
               },
               {
-                "min_level": 3,
-                "max_level": 3,
-                "species": "SPECIES_RATTATA"
+                "min_level": 40,
+                "max_level": 40,
+                "species": "SPECIES_MIKE"
               },
               {
-                "min_level": 3,
-                "max_level": 3,
-                "species": "SPECIES_PIDGEY"
+                "min_level": 40,
+                "max_level": 40,
+                "species": "SPECIES_MIKE"
               },
               {
-                "min_level": 3,
-                "max_level": 3,
-                "species": "SPECIES_RATTATA"
+                "min_level": 40,
+                "max_level": 40,
+                "species": "SPECIES_MIKE"
               },
               {
-                "min_level": 2,
-                "max_level": 2,
-                "species": "SPECIES_PIDGEY"
+                "min_level": 40,
+                "max_level": 40,
+                "species": "SPECIES_MIKE"
               },
               {
-                "min_level": 2,
-                "max_level": 2,
-                "species": "SPECIES_RATTATA"
+                "min_level": 40,
+                "max_level": 40,
+                "species": "SPECIES_MIKE"
               },
               {
                 "min_level": 3,

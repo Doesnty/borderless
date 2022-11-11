@@ -153,6 +153,7 @@
 #define STATUS3_UNDERWATER              0x40000
 #define STATUS3_INTIMIDATE_POKES        0x80000
 #define STATUS3_TRACE                   0x100000
+#define STATUS3_AEGIS_MERGE             0x200000
 #define STATUS3_SEMI_INVULNERABLE       (STATUS3_UNDERGROUND | STATUS3_ON_AIR | STATUS3_UNDERWATER)
 
 // Not really sure what a "hitmarker" is.
@@ -275,7 +276,7 @@
 #define MOVE_EFFECT_EVS_MINUS_2         0x34
 #define MOVE_EFFECT_THRASH              0x35
 #define MOVE_EFFECT_KNOCK_OFF           0x36
-#define MOVE_EFFECT_NOTHING_37          0x37
+#define MOVE_EFFECT_CURSE               0x37
 #define MOVE_EFFECT_NOTHING_38          0x38
 #define MOVE_EFFECT_NOTHING_39          0x39
 #define MOVE_EFFECT_NOTHING_3A          0x3A
@@ -313,5 +314,8 @@
 #define BATTLE_RUN_SUCCESS        0
 #define BATTLE_RUN_FORBIDDEN      1
 #define BATTLE_RUN_FAILURE        2
+
+#define MONEY_MULTIPLIER_AMULET_COIN 0x01
+#define MONEY_MULTIPLIER_HAPPY_HOUR  0x02
 
 #endif // GUARD_CONSTANTS_BATTLE_H

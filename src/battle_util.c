@@ -411,11 +411,13 @@ enum
     ENDTURN_LIGHT_SCREEN,
     ENDTURN_MIST,
     ENDTURN_SAFEGUARD,
+    ENDTURN_TAILWIND,
     ENDTURN_WISH,
     ENDTURN_RAIN,
     ENDTURN_SANDSTORM,
     ENDTURN_SUN,
     ENDTURN_HAIL,
+    ENDTURN_TRICK_ROOM,
     ENDTURN_FIELD_COUNT,
 };
 
@@ -512,6 +514,27 @@ u8 DoFieldEndTurnEffects(void)
                     BattleScriptExecute(BattleScript_SideStatusWoreOff);
                     gBattleCommunication[MULTISTRING_CHOOSER] = side;
                     PREPARE_MOVE_BUFFER(gBattleTextBuff1, MOVE_MIST);
+                    ++effect;
+                }
+                ++gBattleStruct->turnSideTracker;
+                if (effect)
+                    break;
+            }
+            if (!effect)
+            {
+                ++gBattleStruct->turnCountersTracker;
+                gBattleStruct->turnSideTracker = 0;
+            }
+            break;
+        case ENDTURN_TAILWIND:
+            while (gBattleStruct->turnSideTracker < 2)
+            {
+                side = gBattleStruct->turnSideTracker;
+                gActiveBattler = gBattlerAttacker = side;
+                if (gSideTimers[side].tailwindTimer != 0 && --gSideTimers[side].tailwindTimer == 0)
+                {
+                    BattleScriptExecute(BattleScript_SideTailwindWoreOff);
+                    gBattleCommunication[MULTISTRING_CHOOSER] = side;
                     ++effect;
                 }
                 ++gBattleStruct->turnSideTracker;
@@ -648,6 +671,18 @@ u8 DoFieldEndTurnEffects(void)
                 gBattleCommunication[MULTISTRING_CHOOSER] = 1;
                 BattleScriptExecute(gBattlescriptCurrInstr);
                 ++effect;
+            }
+            ++gBattleStruct->turnCountersTracker;
+            break;
+        case ENDTURN_TRICK_ROOM:
+            if (gWishFutureKnock.trickRoomDuration)
+            {
+                if (--gWishFutureKnock.trickRoomDuration == 0)
+                {
+                    gBattlescriptCurrInstr = BattleScript_TrickRoomEnds;
+                    BattleScriptExecute(gBattlescriptCurrInstr);
+                    ++effect;
+                }
             }
             ++gBattleStruct->turnCountersTracker;
             break;
@@ -2426,7 +2461,7 @@ u8 ItemBattleEffects(u8 caseID, u8 battlerId, bool8 moveTurn)
         switch (battlerHoldEffect)
         {
         case HOLD_EFFECT_DOUBLE_PRIZE:
-            gBattleStruct->moneyMultiplier = 2;
+            gBattleStruct->moneyMultiplier |= MONEY_MULTIPLIER_AMULET_COIN;
             break;
         case HOLD_EFFECT_RESTORE_STATS:
             for (i = 0; i < NUM_BATTLE_STATS; ++i)

@@ -5084,7 +5084,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
 
     [MOVE_HONE_CLAWS] = 
     {
-        .effect = EFFECT_NEW,
+        .effect = EFFECT_ATTACK_UP,
         .power = 0,
         .type = TYPE_DARK,
         .moveClass = CLASS_STATUS,
@@ -5098,7 +5098,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
 
     [MOVE_QUIVER_DANCE] = 
     {
-        .effect = EFFECT_NEW,
+        .effect = EFFECT_CALM_MIND,
         .power = 0,
         .type = TYPE_NATURE,
         .moveClass = CLASS_STATUS,
@@ -5112,7 +5112,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
 
     [MOVE_SHELL_SMASH] = 
     {
-        .effect = EFFECT_NEW,
+        .effect = EFFECT_SHELL_SMASH,
         .power = 0,
         .type = TYPE_WATER,
         .moveClass = CLASS_STATUS,
@@ -5126,7 +5126,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
 
     [MOVE_CLOSE_COMBAT] = 
     {
-        .effect = EFFECT_NEW,
+        .effect = EFFECT_CLOSE_COMBAT,
         .power = 120,
         .type = TYPE_FIGHTING,
         .moveClass = CLASS_PHYSICAL,
@@ -5154,7 +5154,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
 
     [MOVE_TRICK_ROOM] = 
     {
-        .effect = EFFECT_NEW,
+        .effect = EFFECT_TRICK_ROOM,
         .power = 0,
         .type = TYPE_REASON,
         .moveClass = CLASS_STATUS,
@@ -5168,7 +5168,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
 
     [MOVE_TAILWIND] = 
     {
-        .effect = EFFECT_NEW,
+        .effect = EFFECT_TAILWIND,
         .power = 0,
         .type = TYPE_WIND,
         .moveClass = CLASS_STATUS,
@@ -5182,7 +5182,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
 
     [MOVE_U_TURN] = 
     {
-        .effect = EFFECT_NEW,
+        .effect = EFFECT_U_TURN,
         .power = 70,
         .type = TYPE_NORMAL,
         .moveClass = CLASS_PHYSICAL,
@@ -5196,7 +5196,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
 
     [MOVE_VOLT_SWITCH] = 
     {
-        .effect = EFFECT_NEW,
+        .effect = EFFECT_U_TURN,
         .power = 70,
         .type = TYPE_ELECTRIC,
         .moveClass = CLASS_SPECIAL,
@@ -5210,7 +5210,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
 
     [MOVE_PURIFY] = 
     {
-        .effect = EFFECT_NEW,
+        .effect = EFFECT_PURIFY,
         .power = 0,
         .type = TYPE_NORMAL,
         .moveClass = CLASS_STATUS,
@@ -5238,7 +5238,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
 
     [MOVE_HEALING_WISH] = 
     {
-        .effect = EFFECT_NEW,
+        .effect = EFFECT_HEALING_WISH,
         .power = 0,
         .type = TYPE_HEART,
         .moveClass = CLASS_STATUS,
@@ -5280,13 +5280,13 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
 
     [MOVE_MISHAGUJI] = 
     {
-        .effect = EFFECT_NEW,
+        .effect = EFFECT_MISHAGUJI,
         .power = 20,
         .type = TYPE_GHOST,
         .moveClass = CLASS_PHYSICAL,
         .accuracy = 100,
         .pp = 10,
-        .secondaryEffectChance = 0,
+        .secondaryEffectChance = 100,
         .priority = 0,
         .target = MOVE_TARGET_SELECTED,
         .flags = FLAG_MAKES_CONTACT | FLAG_PROTECT_AFFECTED,
@@ -5294,7 +5294,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
 
     [MOVE_AEGIS_MERGE] = 
     {
-        .effect = EFFECT_NEW,
+        .effect = EFFECT_AEGIS_MERGE,
         .power = 0,
         .type = TYPE_FAITH,
         .moveClass = CLASS_STATUS,
@@ -5336,7 +5336,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
 
     [MOVE_FIRE_FANG] = 
     {
-        .effect = EFFECT_NEW,
+        .effect = EFFECT_ELEMENTAL_FANG,
         .power = 80,
         .type = TYPE_FIRE,
         .moveClass = CLASS_PHYSICAL,
@@ -5350,7 +5350,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
 
     [MOVE_ICE_FANG] = 
     {
-        .effect = EFFECT_NEW,
+        .effect = EFFECT_ELEMENTAL_FANG,
         .power = 80,
         .type = TYPE_ICE,
         .moveClass = CLASS_PHYSICAL,
@@ -5364,7 +5364,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
 
     [MOVE_THUNDER_FANG] = 
     {
-        .effect = EFFECT_NEW,
+        .effect = EFFECT_ELEMENTAL_FANG,
         .power = 80,
         .type = TYPE_ELECTRIC,
         .moveClass = CLASS_PHYSICAL,
@@ -5378,7 +5378,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
 
     [MOVE_ACUPRESSURE] = 
     {
-        .effect = EFFECT_NEW,
+        .effect = EFFECT_ACUPRESSURE,
         .power = 0,
         .type = TYPE_STEEL,
         .moveClass = CLASS_STATUS,
@@ -5420,7 +5420,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
 
     [MOVE_FLAME_CHARGE] = 
     {
-        .effect = EFFECT_NEW,
+        .effect = EFFECT_SPEED_UP_HIT,
         .power = 50,
         .type = TYPE_FIRE,
         .moveClass = CLASS_PHYSICAL,
@@ -5434,7 +5434,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
 
     [MOVE_CHARGE_BEAM] = 
     {
-        .effect = EFFECT_NEW,
+        .effect = EFFECT_SPATK_UP_HIT,
         .power = 50,
         .type = TYPE_HEART,
         .moveClass = CLASS_SPECIAL,
@@ -5448,7 +5448,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
 
     [MOVE_PSYCHO_SHIFT] = 
     {
-        .effect = EFFECT_NEW,
+        .effect = EFFECT_PSYCHO_SHIFT,
         .power = 0,
         .type = TYPE_REASON,
         .moveClass = CLASS_STATUS,
@@ -5462,7 +5462,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
 
     [MOVE_BESTOW] = 
     {
-        .effect = EFFECT_NEW,
+        .effect = EFFECT_BESTOW,
         .power = 0,
         .type = TYPE_NORMAL,
         .moveClass = CLASS_STATUS,
@@ -5504,7 +5504,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
 
     [MOVE_HAMMER_ARM] = 
     {
-        .effect = EFFECT_NEW,
+        .effect = EFFECT_HAMMER_ARM,
         .power = 100,
         .type = TYPE_FIGHTING,
         .moveClass = CLASS_PHYSICAL,
@@ -5602,7 +5602,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
 
     [MOVE_HAPPY_HOUR] = 
     {
-        .effect = EFFECT_NEW,
+        .effect = EFFECT_HAPPY_HOUR,
         .power = 0,
         .type = TYPE_NORMAL,
         .moveClass = CLASS_STATUS,
@@ -5616,7 +5616,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
 
     [MOVE_ME_FIRST] = 
     {
-        .effect = EFFECT_NEW,
+        .effect = EFFECT_ME_FIRST,
         .power = 0,
         .type = TYPE_NORMAL,
         .moveClass = CLASS_STATUS,
