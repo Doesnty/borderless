@@ -2349,6 +2349,8 @@ u32 getVariableBasePower(struct BattlePokemon *attacker, struct BattlePokemon *d
                 return 120;
             return 60;
         case MOVE_NATURE_POWER:
+        case MOVE_MIND_BOMB:
+        case MOVE_HEAT_CLAW:
             return gBaseStats[defender->species].cost;
         case MOVE_FLAIL:
         case MOVE_REVERSAL:
@@ -2369,7 +2371,7 @@ u32 getVariableBasePower(struct BattlePokemon *attacker, struct BattlePokemon *d
             return power;
         case MOVE_FACADE:
             power = gBattleMoves[move].power;
-            if (gBattleMons[battlerIdAtk].status1)
+            if (gBattleMons[battlerIdAtk].status1 & (STATUS1_POISON | STATUS1_BURN | STATUS1_PARALYSIS | STATUS1_TOXIC_POISON))
                 power *= 2;
             return power;
         case MOVE_HEX:
@@ -2419,6 +2421,8 @@ s32 CalculateBaseDamage(struct BattlePokemon *attacker, struct BattlePokemon *de
     spDefense = defender->spDefense;
     if (move == MOVE_FOUL_PLAY)
         attack = defender->attack;
+    else if (move == MOVE_EARTH_PRESS)
+        attack = attacker->defense;
 
     if (attacker->item == ITEM_ENIGMA_BERRY)
     {
@@ -2545,6 +2549,10 @@ s32 CalculateBaseDamage(struct BattlePokemon *attacker, struct BattlePokemon *de
         gBattleMovePower = (150 * gBattleMovePower) / 100;
     if (gBattleMoves[gCurrentMove].effect == EFFECT_EXPLOSION)
         defense /= 2; */
+        
+        
+    if ((attacker->status1 & STATUS1_BURN) && attacker->ability != ABILITY_GUTS && move != MOVE_FACADE)
+        attack /= 2;
 
     if (moveClass == CLASS_PHYSICAL)
     {
@@ -2552,6 +2560,8 @@ s32 CalculateBaseDamage(struct BattlePokemon *attacker, struct BattlePokemon *de
         defStatMod = defender->statStages[STAT_DEF];
         if (move == MOVE_FOUL_PLAY)
             atkStatMod = defender->statStages[STAT_ATK];
+        else if (move == MOVE_EARTH_PRESS)
+            atkStatMod = attacker->statStages[STAT_DEF];
         if (gCritMultiplier == 2 && atkStatMod < 6)
         {
             damage = attack;
@@ -2569,8 +2579,6 @@ s32 CalculateBaseDamage(struct BattlePokemon *attacker, struct BattlePokemon *de
         else
             APPLY_STAT_MOD(damageHelper, defense, defStatMod)
 
-        if ((attacker->status1 & STATUS1_BURN) && attacker->ability != ABILITY_GUTS)
-            damage /= 2;
 
         if ((sideStatus & SIDE_STATUS_REFLECT) && gCritMultiplier == 1)
         {
@@ -2584,6 +2592,12 @@ s32 CalculateBaseDamage(struct BattlePokemon *attacker, struct BattlePokemon *de
     {
         u8 atkStatMod = attacker->statStages[STAT_SPATK];
         u8 defStatMod = defender->statStages[STAT_SPDEF];
+        if (move == MOVE_MANASHOCK)
+        {
+            defStatMod = defender->statStages[STAT_DEF];
+            spDefense = defense;
+        }
+        
         if (gCritMultiplier == 2 && atkStatMod < 6)
         {
             damage = spAttack;
@@ -2599,7 +2613,7 @@ s32 CalculateBaseDamage(struct BattlePokemon *attacker, struct BattlePokemon *de
             damageHelper = spDefense;
         }
         else
-            APPLY_STAT_MOD(damageHelper, spDefense, defStatMod)
+            APPLY_STAT_MOD(damageHelper, spDefense, defStatMod);
     }
 
     damage = (damage / damageHelper);

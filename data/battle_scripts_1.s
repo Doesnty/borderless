@@ -259,10 +259,6 @@ gBattleScriptsForMoveEffects::
     .4byte BattleScript_EffectMeFirst
 
 BattleScript_EffectHit::
-	jumpifnotmove MOVE_SURF, BattleScript_HitFromAtkCanceler
-	jumpifnostatus3 BS_TARGET, STATUS3_UNDERWATER, BattleScript_HitFromAtkCanceler
-	orword gHitMarker, HITMARKER_IGNORE_UNDERWATER
-	setbyte sDMG_MULTIPLIER, 2
 BattleScript_HitFromAtkCanceler::
 	attackcanceler
 BattleScript_HitFromAccCheck::

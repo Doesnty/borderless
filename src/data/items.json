@@ -4656,7 +4656,7 @@
       "battleUsage": 0,
       "battleUseFunc": "NULL",
       "secondaryId": 0,
-      "moveId": "DragonClaw"
+      "moveId": "Frustration"
     },
     {
       "english": "TM03",
@@ -4979,7 +4979,7 @@
       "battleUsage": 0,
       "battleUseFunc": "NULL",
       "secondaryId": 0,
-      "moveId": "Frustration"
+      "moveId": "Curse"
     },
     {
       "english": "TM22",
@@ -5013,7 +5013,7 @@
       "battleUsage": 0,
       "battleUseFunc": "NULL",
       "secondaryId": 0,
-      "moveId": "IronTail"
+      "moveId": "SteelFist"
     },
     {
       "english": "TM24",
@@ -5081,7 +5081,7 @@
       "battleUsage": 0,
       "battleUseFunc": "NULL",
       "secondaryId": 0,
-      "moveId": "Return"
+      "moveId": "MegaPunch"
     },
     {
       "english": "TM28",
@@ -5115,7 +5115,7 @@
       "battleUsage": 0,
       "battleUseFunc": "NULL",
       "secondaryId": 0,
-      "moveId": "Psychic"
+      "moveId": "ManaBurst"
     },
     {
       "english": "TM30",
@@ -5302,7 +5302,7 @@
       "battleUsage": 0,
       "battleUseFunc": "NULL",
       "secondaryId": 0,
-      "moveId": "AerialAce"
+      "moveId": "RazorWind"
     },
     {
       "english": "TM41",
@@ -5608,7 +5608,7 @@
       "battleUsage": 0,
       "battleUseFunc": "NULL",
       "secondaryId": 0,
-      "moveId": "Dive"
+      "moveId": "ShadowForce"
     },
     {
       "english": "????????",

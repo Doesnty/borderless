@@ -530,6 +530,7 @@ const u8 sText_BeginsRegenerating[] = _("{B_ATK_NAME_WITH_PREFIX} anchors\nitsel
 const u8 sText_RegeneratesHP[] = _("{B_ATK_NAME_WITH_PREFIX} regenerates\nthrough holy power!");
 const u8 sText_BestowedItem[] = _("{B_DEF_NAME_WITH_PREFIX} recieved\n{B_BUFF2} from {B_ATK_NAME_WITH_PREFIX}.");
 const u8 sText_HappyHour[] = _("Everyone is caught up in\nthe happy atmosphere!");
+const u8 sText_PkmnTrappedInDestitution[] = _("{B_DEF_NAME_WITH_PREFIX} was trapped\nbelow the poverty line!");
 
 const u8 *const gBattleStringsTable[] = {
     [STRINGID_TRAINER1LOSETEXT - 12]              = sText_Trainer1LoseText,
@@ -924,6 +925,7 @@ const u8 *const gBattleStringsTable[] = {
     [STRINGID_REGENERATESHP - 12]                 = sText_RegeneratesHP,
     [STRINGID_BESTOWEDITEM - 12]                  = sText_BestowedItem,
     [STRINGID_HAPPYHOUR - 12]                     = sText_HappyHour,
+    [STRINGID_PKMNTRAPPEDINDESTITUTION - 12]      = sText_PkmnTrappedInDestitution,
 };
 
 const u16 gMissStringIds[] = {
@@ -1061,7 +1063,8 @@ const u16 gWrappedStringIds[] = {
     STRINGID_PKMNTRAPPEDINVORTEX,
     STRINGID_PKMNCLAMPED,
     STRINGID_PKMNTRAPPEDINVORTEX,
-    STRINGID_PKMNTRAPPEDBYSANDTOMB
+    STRINGID_PKMNTRAPPEDBYSANDTOMB,
+    STRINGID_PKMNTRAPPEDINDESTITUTION,
 };
 
 const u16 gMistUsedStringIds[] = {
@@ -1250,6 +1253,7 @@ const u16 gTrappingMoves[] = {
     MOVE_MANA_SHIELD,
     MOVE_WHIRLPOOL,
     MOVE_SAND_TOMB,
+    MOVE_DESTITUTION,
     0xFFFF
 };
 

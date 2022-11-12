@@ -749,9 +749,18 @@ static const struct SpriteTemplate sSpriteTemplate_MonIconOnLvlUpBox =
 static const u16 sProtectSuccessRates[] =
 { 
     USHRT_MAX,
-    USHRT_MAX / 2, 
-    USHRT_MAX / 4, 
-    USHRT_MAX / 8
+    USHRT_MAX / 3, 
+    USHRT_MAX / 9, 
+    USHRT_MAX / 27,
+    USHRT_MAX / (27 * 3),
+    USHRT_MAX / (27 * 9),
+    USHRT_MAX / (27 * 27),
+    USHRT_MAX / (27 * 27 * 3),
+    USHRT_MAX / (27 * 27 * 9),
+    USHRT_MAX / (27 * 27 * 27),
+    USHRT_MAX / (27 * 27 * 27 * 3), // this is 3/65535
+    USHRT_MAX / (27 * 27 * 27 * 9), // this is 1
+    0,
 };
 
 #define MIMIC_FORBIDDEN_END             0xFFFE
@@ -1018,7 +1027,8 @@ static bool8 AccuracyCalcHelper(u16 move)
     }
     gHitMarker &= ~HITMARKER_IGNORE_UNDERWATER;
     if ((WEATHER_HAS_EFFECT && (gBattleWeather & WEATHER_RAIN_ANY) && gBattleMoves[move].effect == EFFECT_THUNDER)
-     || (gBattleMoves[move].effect == EFFECT_ALWAYS_HIT || gBattleMoves[move].effect == EFFECT_VITAL_THROW))
+     || (WEATHER_HAS_EFFECT && (gBattleWeather & WEATHER_HAIL) && move == MOVE_BLIZZARD)
+     || (gBattleMoves[move].accuracy == 0))
     {
         JumpIfMoveFailed(7, move);
         return TRUE;
@@ -1106,8 +1116,6 @@ static void atk01_accuracycheck(void)
         if (holdEffect == HOLD_EFFECT_EVASION_UP)
             calc = (calc * (100 - param)) / 100;
         
-        if (moveAcc == 0) // never-miss moves
-            calc = 100;
         // final calculation
         if ((Random() % 100 + 1) > calc)
         {
@@ -2373,13 +2381,16 @@ void SetMoveEffect(bool8 primary, u8 certain)
                     gBattlescriptCurrInstr = sMoveEffectBS_Ptrs[gBattleCommunication[MOVE_EFFECT_BYTE]];
                     for (gBattleCommunication[MULTISTRING_CHOOSER] = 0; ; ++gBattleCommunication[MULTISTRING_CHOOSER])
                     {
-                        if (gBattleCommunication[MULTISTRING_CHOOSER] > 4 || gTrappingMoves[gBattleCommunication[MULTISTRING_CHOOSER]] == gCurrentMove)
+                        u16 move = gTrappingMoves[gBattleCommunication[MULTISTRING_CHOOSER]];
+                        if (move == 0xFFFF || move == gCurrentMove)
                             break;
                     }
                 }
                 break;
             case MOVE_EFFECT_RECOIL_25: // 25% recoil
                 gBattleMoveDamage = (gHpDealt) / 4;
+                if (gCurrentMove == MOVE_STRUGGLE)
+                    gBattleMoveDamage = gBattleMons[gEffectBattler].maxHP / 4;
                 if (gBattleMoveDamage == 0)
                     gBattleMoveDamage = 1;
                 BattleScriptPush(gBattlescriptCurrInstr + 1);
@@ -6223,7 +6234,10 @@ static void atk87_stockpiletohpheal(void)
 
 static void atk88_negativedamage(void)
 {
-    gBattleMoveDamage = -(gHpDealt / 2);
+    if (gCurrentMove == MOVE_OBLIVION_WING)
+        gBattleMoveDamage = -((gHpDealt * 3) / 4);
+    else
+        gBattleMoveDamage = -(gHpDealt / 2);
     if (gBattleMoveDamage == 0)
         gBattleMoveDamage = -1;
     ++gBattlescriptCurrInstr;
@@ -6571,53 +6585,18 @@ static void atk90_tryconversiontypechange(void) // randomly changes user's type 
 {
     u8 validMoves = 0;
     u8 moveChecked;
-    u8 moveType;
+    u8 moveType = gBattleMoves[gBattleMons[gBattlerAttacker].moves[0]].type;
 
-    while (validMoves < MAX_MON_MOVES)
+    if (moveType != gBattleMons[gBattlerAttacker].type1
+     || moveType != gBattleMons[gBattlerAttacker].type2)
     {
-        if (gBattleMons[gBattlerAttacker].moves[validMoves] == MOVE_NONE)
-            break;
-        ++validMoves;
-    }
-    for (moveChecked = 0; moveChecked < validMoves; ++moveChecked)
-    {
-        moveType = gBattleMoves[gBattleMons[gBattlerAttacker].moves[moveChecked]].type;
-        if (moveType == TYPE_MYSTERY)
-        {
-            if (IS_BATTLER_OF_TYPE(gBattlerAttacker, TYPE_GHOST))
-                moveType = TYPE_GHOST;
-            else
-                moveType = TYPE_NORMAL;
-        }
-        if (moveType != gBattleMons[gBattlerAttacker].type1
-            && moveType != gBattleMons[gBattlerAttacker].type2)
-        {
-            break;
-        }
-    }
-    if (moveChecked == validMoves)
-    {
-        gBattlescriptCurrInstr = T1_READ_PTR(gBattlescriptCurrInstr + 1);
-    }
-    else
-    {
-        do
-        {
-            while ((moveChecked = Random() & 3) >= validMoves);
-            moveType = gBattleMoves[gBattleMons[gBattlerAttacker].moves[moveChecked]].type;
-            if (moveType == TYPE_MYSTERY)
-            {
-                if (IS_BATTLER_OF_TYPE(gBattlerAttacker, TYPE_GHOST))
-                    moveType = TYPE_GHOST;
-                else
-                    moveType = TYPE_NORMAL;
-            }
-        }
-        while (moveType == gBattleMons[gBattlerAttacker].type1
-            || moveType == gBattleMons[gBattlerAttacker].type2);
         SET_BATTLER_TYPE(gBattlerAttacker, moveType);
         PREPARE_TYPE_BUFFER(gBattleTextBuff1, moveType);
         gBattlescriptCurrInstr += 5;
+    }
+    else
+    {
+        gBattlescriptCurrInstr = T1_READ_PTR(gBattlescriptCurrInstr + 1);
     }
 }
 
@@ -7199,7 +7178,7 @@ static void atkA4_trysetencore(void)
     {
         gDisableStructs[gBattlerTarget].encoredMove = gBattleMons[gBattlerTarget].moves[i];
         gDisableStructs[gBattlerTarget].encoredMovePos = i;
-        gDisableStructs[gBattlerTarget].encoreTimer = (Random() & 3) + 3;
+        gDisableStructs[gBattlerTarget].encoreTimer = 3;
         gDisableStructs[gBattlerTarget].encoreTimerStartValue = gDisableStructs[gBattlerTarget].encoreTimer;
         gBattlescriptCurrInstr += 5;
     }
@@ -8149,8 +8128,8 @@ static void atkD0_settaunt(void)
 {
     if (gDisableStructs[gBattlerTarget].tauntTimer == 0)
     {
-        gDisableStructs[gBattlerTarget].tauntTimer = 2;
-        gDisableStructs[gBattlerTarget].tauntTimer2 = 2;
+        gDisableStructs[gBattlerTarget].tauntTimer = 3;
+        gDisableStructs[gBattlerTarget].tauntTimer2 = 3;
         gBattlescriptCurrInstr += 5;
     }
     else
