@@ -73,7 +73,8 @@ struct PokemonSubstruct3
  /* 0x0B */ u32 nationalRibbon:1;
  /* 0x0B */ u32 earthRibbon:1;
  /* 0x0B */ u32 worldRibbon:1; // distributed during Pokémon Festa '04 and '05 to tournament winners
- /* 0x0B */ u32 filler:4;
+ /* 0x0B */ u32 hiddenAbility:1;
+ /* 0x0B */ u32 filler:3;
  /* 0x0B */ u32 eventLegal:1; // controls Mew & Deoxys obedience; if set, Pokémon is a fateful encounter in FRLG & Gen 4+ summary screens; set for in-game event island legendaries, some distributed events, and Pokémon from XD: Gale of Darkness.
 };
 
@@ -391,7 +392,7 @@ u8 GiveMonToPlayer(struct Pokemon *mon);
 u8 CalculatePlayerPartyCount(void);
 u8 CalculateEnemyPartyCount(void);
 u8 GetMonsStateToDoubles(void);
-u8 GetAbilityBySpecies(u16 species, bool8 abilityNum);
+u8 GetAbilityBySpecies(u16 species, bool8 abilityNum, bool8 hiddenAbility);
 u8 GetMonAbility(struct Pokemon *mon);
 u8 GetSecretBaseTrainerPicIndex(void);
 u8 GetSecretBaseTrainerNameIndex(void);
@@ -409,7 +410,6 @@ u8 GetNature(struct Pokemon *mon);
 u16 GetEvolutionTargetSpecies(struct Pokemon *mon, u8 type, u16 evolutionItem);
 u16 NationalPokedexNumToSpecies(u16 nationalNum);
 u16 SpeciesToNationalPokedexNum(u16 species);
-u16 HoennToNationalOrder(u16 hoennNum);
 u16 SpeciesToCryId(u16 species);
 void DrawSpindaSpots(u16 species, u32 personality, u8 *dest, bool8 isFrontPic);
 void EvolutionRenameMon(struct Pokemon *mon, u16 oldSpecies, u16 newSpecies);

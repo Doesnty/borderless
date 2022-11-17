@@ -1,9 +1,9 @@
 #ifndef GUARD_POKEDEX_H
 #define GUARD_POKEDEX_H
 
-#define KANTO_DEX_COUNT 151
+#define KANTO_DEX_COUNT 500
 #define HOENN_DEX_COUNT 202
-#define NATIONAL_DEX_COUNT 386
+#define NATIONAL_DEX_COUNT 500
 
 enum
 {
@@ -21,7 +21,7 @@ enum
 
 struct PokedexEntry
 {
-    /*0x00*/ u8 categoryName[12];
+    /*0x00*/ u8 categoryName[16];
     /*0x0C*/ u16 height; //in decimeters
     /*0x0E*/ u16 weight; //in hectograms
     /*0x10*/ const u8 *description;
@@ -43,7 +43,6 @@ u8 CreateDexDisplayMonDataTask(u16 dexNum, u32 trainerId, u32 personality);
 s8 GetSetPokedexFlag(u16 nationalNum, u8 caseId);
 u16 GetNationalPokedexCount(u8);
 u16 GetKantoPokedexCount(u8);
-bool16 HasAllHoennMons(void);
 bool16 HasAllKantoMons(void);
 bool16 HasAllMons(void);
 

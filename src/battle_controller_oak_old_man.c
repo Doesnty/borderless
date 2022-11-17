@@ -1032,6 +1032,7 @@ static u32 CopyOakOldManMonData(u8 monId, u8 *dst)
         battleMon.spDefense = GetMonData(&gPlayerParty[monId], MON_DATA_SPDEF);
         battleMon.isEgg = GetMonData(&gPlayerParty[monId], MON_DATA_IS_EGG);
         battleMon.abilityNum = GetMonData(&gPlayerParty[monId], MON_DATA_ABILITY_NUM);
+        battleMon.ability = GetMonAbility(&gPlayerParty[monId]);
         battleMon.otId = GetMonData(&gPlayerParty[monId], MON_DATA_OT_ID);
         GetMonData(&gPlayerParty[monId], MON_DATA_NICKNAME, nickname);
         StringCopyN(battleMon.nickname, nickname, POKEMON_NAME_LENGTH);

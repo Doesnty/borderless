@@ -5309,3 +5309,22 @@ BattleScript_EffectMeFirst:
 	ppreduce
 	goto BattleScript_ButItFailed
 	end
+
+BattleScript_ObliviousPreventsTaunt::
+	pause 0x20
+	printstring STRINGID_OBLIVIOUSPREVENTSTAUNT
+	waitmessage 0x40
+	goto BattleScript_MoveEnd
+
+BattleScript_MoveSAtkDrain_PPLoss::
+	ppreduce
+BattleScript_MoveSAtkDrain::
+	attackstring
+	pause 0x20
+	
+	playanimation BS_TARGET, B_ANIM_STATS_CHANGE, sB_ANIM_ARG1
+	
+	printstring STRINGID_PKMNRAISEDSPATK
+	waitmessage 64
+	orbyte gMoveResultFlags, MOVE_RESULT_DOESNT_AFFECT_FOE
+	goto BattleScript_MoveEnd

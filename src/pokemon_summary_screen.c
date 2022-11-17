@@ -240,7 +240,7 @@ struct PokemonSummaryScreenData
     struct Sprite * markingSprite;
 
     u8 ALIGNED(4) lastPageFlipDirection; /* 0x3300 */
-    u8 ALIGNED(4) unk3304; /* 0x3304 */
+    u8 ALIGNED(4) hiddenAbility; /* 0x3304 */
 };
 
 struct Struct203B144
@@ -914,6 +914,13 @@ static const u8 sLevelNickTextColors[][3] =
     {0, 5, 4},
     {0, 2, 3},
     {0, 11, 10},
+};
+
+static const u8 sMoveAbilityDescriptionTextColors[][3] = 
+{
+    {0, 14, 10},
+    {0, 1, 2},
+    {0, 7, 6},
 };
 
 static const u8 ALIGNED(4) sMultiBattlePartyOrder[] =
@@ -2229,7 +2236,8 @@ static void BufferMonSkills(void)
     ConvertIntToDecimalStringN(sMonSummaryScreen->summary.expToNextLevelStrBuf, expToNextLevel, STR_CONV_MODE_LEFT_ALIGN, 7);
     sMonSkillsPrinterXpos->toNextLevel = GetNumberRightAlign63(sMonSummaryScreen->summary.expToNextLevelStrBuf);
 
-    type = GetAbilityBySpecies(GetMonData(&sMonSummaryScreen->currentMon, MON_DATA_SPECIES), GetMonData(&sMonSummaryScreen->currentMon, MON_DATA_ABILITY_NUM));
+    type = GetMonAbility(&sMonSummaryScreen->currentMon);
+    sMonSummaryScreen->hiddenAbility = GetMonData(&sMonSummaryScreen->currentMon, MON_DATA_HIDDEN_ABILITY);
     StringCopy(sMonSummaryScreen->summary.abilityNameStrBuf, gAbilityNames[type]);
     StringCopy(sMonSummaryScreen->summary.abilityDescStrBuf, gAbilityDescriptionPointers[type]);
 
@@ -2899,11 +2907,17 @@ static void PokeSum_PrintAbilityNameAndDesc(void)
 {
     FillWindowPixelBuffer(sMonSummaryScreen->windowIds[5], 0);
 
-    AddTextPrinterParameterized3(sMonSummaryScreen->windowIds[5], 2,
-                                 66, 1, sLevelNickTextColors[0], TEXT_SPEED_FF, sMonSummaryScreen->summary.abilityNameStrBuf);
+    if (sMonSummaryScreen->hiddenAbility)
+    {
+        AddTextPrinterParameterized3(sMonSummaryScreen->windowIds[5], 2,
+                                 66, 1, sMoveAbilityDescriptionTextColors[2], TEXT_SPEED_FF, sMonSummaryScreen->summary.abilityNameStrBuf);
+    }
+    else
+        AddTextPrinterParameterized3(sMonSummaryScreen->windowIds[5], 2,
+                                 66, 1, sMoveAbilityDescriptionTextColors[0], TEXT_SPEED_FF, sMonSummaryScreen->summary.abilityNameStrBuf);
 
     AddTextPrinterParameterized3(sMonSummaryScreen->windowIds[5], 2,
-                                 2, 15, sLevelNickTextColors[0], TEXT_SPEED_FF,
+                                 2, 15, sMoveAbilityDescriptionTextColors[0], TEXT_SPEED_FF,
                                  sMonSummaryScreen->summary.abilityDescStrBuf);
 
 }

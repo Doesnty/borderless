@@ -1687,27 +1687,30 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u8 ability, u8 special, u16 moveA
                 case WEATHER_DOWNPOUR:
                     if (!(gBattleWeather & WEATHER_RAIN_ANY))
                     {
-                        gBattleWeather = (WEATHER_RAIN_TEMPORARY | WEATHER_RAIN_PERMANENT);
+                        gBattleWeather = (WEATHER_RAIN_TEMPORARY);
                         gBattleScripting.animArg1 = B_ANIM_RAIN_CONTINUES;
                         gBattleScripting.battler = battler;
+                        gWishFutureKnock.weatherDuration = 5;
                         ++effect;
                     }
                     break;
                 case WEATHER_SANDSTORM:
                     if (!(gBattleWeather & WEATHER_SANDSTORM_ANY))
                     {
-                        gBattleWeather = (WEATHER_SANDSTORM_PERMANENT | WEATHER_SANDSTORM_TEMPORARY);
+                        gBattleWeather = (WEATHER_SANDSTORM_TEMPORARY);
                         gBattleScripting.animArg1 = B_ANIM_SANDSTORM_CONTINUES;
                         gBattleScripting.battler = battler;
+                        gWishFutureKnock.weatherDuration = 5;
                         ++effect;
                     }
                     break;
                 case WEATHER_DROUGHT:
                     if (!(gBattleWeather & WEATHER_SUN_ANY))
                     {
-                        gBattleWeather = (WEATHER_SUN_PERMANENT | WEATHER_SUN_TEMPORARY);
+                        gBattleWeather = (WEATHER_SUN_TEMPORARY);
                         gBattleScripting.animArg1 = B_ANIM_SUN_CONTINUES;
                         gBattleScripting.battler = battler;
+                        gWishFutureKnock.weatherDuration = 5;
                         ++effect;
                     }
                     break;
@@ -1724,6 +1727,7 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u8 ability, u8 special, u16 moveA
                     gBattleWeather = (WEATHER_RAIN_PERMANENT | WEATHER_RAIN_TEMPORARY);
                     BattleScriptPushCursorAndCallback(BattleScript_DrizzleActivates);
                     gBattleScripting.battler = battler;
+                    gWishFutureKnock.weatherDuration = 5;
                     ++effect;
                 }
                 break;
@@ -1733,6 +1737,7 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u8 ability, u8 special, u16 moveA
                     gBattleWeather = (WEATHER_SANDSTORM_PERMANENT | WEATHER_SANDSTORM_TEMPORARY);
                     BattleScriptPushCursorAndCallback(BattleScript_SandstreamActivates);
                     gBattleScripting.battler = battler;
+                    gWishFutureKnock.weatherDuration = 5;
                     ++effect;
                 }
                 break;
@@ -1742,6 +1747,7 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u8 ability, u8 special, u16 moveA
                     gBattleWeather = (WEATHER_SUN_PERMANENT | WEATHER_SUN_TEMPORARY);
                     BattleScriptPushCursorAndCallback(BattleScript_DroughtActivates);
                     gBattleScripting.battler = battler;
+                    gWishFutureKnock.weatherDuration = 5;
                     ++effect;
                 }
                 break;
@@ -1866,7 +1872,7 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u8 ability, u8 special, u16 moveA
                 switch (gLastUsedAbility)
                 {
                 case ABILITY_VOLT_ABSORB:
-                    if (moveType == TYPE_ELECTRIC && gBattleMoves[moveArg].power != 0)
+                    if (moveType == TYPE_ELECTRIC)
                     {
                         if (gProtectStructs[gBattlerAttacker].notFirstStrike)
                             gBattlescriptCurrInstr = BattleScript_MoveHPDrain;
@@ -1876,7 +1882,7 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u8 ability, u8 special, u16 moveA
                     }
                     break;
                 case ABILITY_WATER_ABSORB:
-                    if (moveType == TYPE_WATER && gBattleMoves[moveArg].power != 0)
+                    if (moveType == TYPE_WATER)
                     {
                         if (gProtectStructs[gBattlerAttacker].notFirstStrike)
                             gBattlescriptCurrInstr = BattleScript_MoveHPDrain;
@@ -1909,6 +1915,30 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u8 ability, u8 special, u16 moveA
                         }
                     }
                     break;
+                case ABILITY_LIGHTNING_ROD:
+                    if (moveType == TYPE_ELECTRIC)
+                    {
+                        gBattleScripting.battler = gBattlerTarget;
+                        if (gBattleMons[gBattlerTarget].statStages[STAT_SPATK] == 12)
+                        {
+                            if ((gProtectStructs[gBattlerAttacker].notFirstStrike))
+								gBattlescriptCurrInstr = BattleScript_MonMadeMoveUseless;
+							else
+								gBattlescriptCurrInstr = BattleScript_MonMadeMoveUseless_PPLoss;
+                        }
+                        else
+                        {
+                            gBattleMons[gBattlerTarget].statStages[STAT_SPATK]++;
+                            gBattleScripting.animArg1 = 0xE + STAT_SPATK;
+							gBattleScripting.animArg2 = 0;
+							if (gProtectStructs[gBattlerAttacker].notFirstStrike)
+								gBattlescriptCurrInstr = BattleScript_MoveSAtkDrain;
+							else
+								gBattlescriptCurrInstr = BattleScript_MoveSAtkDrain_PPLoss;
+                        }
+                        
+                    }
+                    effect = 2;
                 }
                 if (effect == 1)
                 {

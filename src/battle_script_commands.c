@@ -1099,7 +1099,7 @@ static void atk01_accuracycheck(void)
             calc = (calc * 130) / 100; // 1.3 compound eyes boost
         if (WEATHER_HAS_EFFECT && gBattleMons[gBattlerTarget].ability == ABILITY_SAND_VEIL && gBattleWeather & WEATHER_SANDSTORM_ANY)
             calc = (calc * 80) / 100; // 1.2 sand veil loss
-        if (gBattleMons[gBattlerAttacker].ability == ABILITY_HUSTLE && IS_TYPE_PHYSICAL(type))
+        if (gBattleMons[gBattlerAttacker].ability == ABILITY_HUSTLE && gBattleMoves[move].moveClass == 0)
             calc = (calc * 80) / 100; // 1.2 hustle loss
         if (gBattleMons[gBattlerTarget].item == ITEM_ENIGMA_BERRY)
         {
@@ -4230,7 +4230,7 @@ static void atk4D_switchindataupdate(void)
         }
         gBattleMons[gActiveBattler].type1 = gBaseStats[gBattleMons[gActiveBattler].species].type1;
         gBattleMons[gActiveBattler].type2 = gBaseStats[gBattleMons[gActiveBattler].species].type2;
-        gBattleMons[gActiveBattler].ability = GetAbilityBySpecies(gBattleMons[gActiveBattler].species, gBattleMons[gActiveBattler].abilityNum);
+        //gBattleMons[gActiveBattler].ability = GetAbilityBySpecies(gBattleMons[gActiveBattler].species, gBattleMons[gActiveBattler].abilityNum);
         // check knocked off item
         i = GetBattlerSide(gActiveBattler);
         if (gWishFutureKnock.knockedOffMons[i] & gBitTable[gBattlerPartyIndexes[gActiveBattler]])
@@ -5800,12 +5800,10 @@ static void atk76_various(void)
         for (i = 0; i < PARTY_SIZE; ++i)
         {
             species = GetMonData(&gPlayerParty[i], MON_DATA_SPECIES2);
-            abilityNum = GetMonData(&gPlayerParty[i], MON_DATA_ABILITY_NUM);
             status = GetMonData(&gPlayerParty[i], MON_DATA_STATUS);
             if (species != SPECIES_NONE
              && species != SPECIES_EGG
-             && status & AILMENT_FNT
-             && GetAbilityBySpecies(species, abilityNum) != ABILITY_SOUNDPROOF)
+             && status & AILMENT_FNT)
                 monToCheck |= (1 << i);
         }
         if (monToCheck)
@@ -5820,13 +5818,11 @@ static void atk76_various(void)
         for (i = 0; i < PARTY_SIZE; ++i)
         {
             species = GetMonData(&gEnemyParty[i], MON_DATA_SPECIES2);
-            abilityNum = GetMonData(&gEnemyParty[i], MON_DATA_ABILITY_NUM);
             status = GetMonData(&gEnemyParty[i], MON_DATA_STATUS);
 
             if (species != SPECIES_NONE
              && species != SPECIES_EGG
-             && status & AILMENT_FNT
-             && GetAbilityBySpecies(species, abilityNum) != ABILITY_SOUNDPROOF)
+             && status & AILMENT_FNT)
                 monToCheck |= (1 << i);
         }
         if (monToCheck)
@@ -7453,22 +7449,10 @@ static void atkAE_healpartystatus(void)
         for (i = 0; i < PARTY_SIZE; ++i)
         {
             u16 species = GetMonData(&party[i], MON_DATA_SPECIES2);
-            u8 abilityNum = GetMonData(&party[i], MON_DATA_ABILITY_NUM);
 
             if (species != SPECIES_NONE && species != SPECIES_EGG)
             {
-                u8 ability;
-
-                if (gBattlerPartyIndexes[gBattlerAttacker] == i)
-                    ability = gBattleMons[gBattlerAttacker].ability;
-                else if (gBattleTypeFlags & BATTLE_TYPE_DOUBLE
-                      && gBattlerPartyIndexes[gActiveBattler] == i
-                      && !(gAbsentBattlerFlags & gBitTable[gActiveBattler]))
-                    ability = gBattleMons[gActiveBattler].ability;
-                else
-                    ability = GetAbilityBySpecies(species, abilityNum);
-                if (ability != ABILITY_SOUNDPROOF)
-                    toHeal |= (1 << i);
+                toHeal |= (1 << i);
             }
         }
     }
@@ -8126,7 +8110,13 @@ static void atkCF_jumpifnodamage(void)
 
 static void atkD0_settaunt(void)
 {
-    if (gDisableStructs[gBattlerTarget].tauntTimer == 0)
+    if (gBattleMons[gBattlerTarget].ability == ABILITY_OBLIVIOUS)
+    {
+        gBattlescriptCurrInstr = BattleScript_ObliviousPreventsTaunt;
+        gLastUsedAbility = ABILITY_OBLIVIOUS;
+        RecordAbilityBattle(gBattlerTarget, ABILITY_OBLIVIOUS);
+    }
+    else if (gDisableStructs[gBattlerTarget].tauntTimer == 0)
     {
         gDisableStructs[gBattlerTarget].tauntTimer = 3;
         gDisableStructs[gBattlerTarget].tauntTimer2 = 3;

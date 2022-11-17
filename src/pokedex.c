@@ -69,18 +69,6 @@ u16 GetKantoPokedexCount(u8 caseID)
     return count;
 }
 
-bool16 HasAllHoennMons(void)
-{
-    u16 i;
-
-    for (i = 0; i < HOENN_DEX_COUNT - 2; i++)
-    {
-        if (!GetSetPokedexFlag(HoennToNationalOrder(i + 1), FLAG_GET_CAUGHT))
-            return FALSE;
-    }
-    return TRUE;
-}
-
 bool16 HasAllKantoMons(void)
 {
     u16 i;
@@ -97,17 +85,7 @@ bool16 HasAllMons(void)
 {
     u16 i;
 
-    for (i = 0; i < NATIONAL_DEX_MEWTWO; i++)
-    {
-        if (!GetSetPokedexFlag(i + 1, FLAG_GET_CAUGHT))
-            return FALSE;
-    }
-    for (i = NATIONAL_DEX_MEW; i < NATIONAL_DEX_TYRANITAR; i++)
-    {
-        if (!GetSetPokedexFlag(i + 1, FLAG_GET_CAUGHT))
-            return FALSE;
-    }
-    for (i = NATIONAL_DEX_CELEBI; i < NATIONAL_DEX_RAYQUAZA; i++)
+    for (i = 0; i < NATIONAL_DEX_XSENDAI; i++)
     {
         if (!GetSetPokedexFlag(i + 1, FLAG_GET_CAUGHT))
             return FALSE;

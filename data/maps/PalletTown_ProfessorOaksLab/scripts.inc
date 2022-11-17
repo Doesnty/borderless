@@ -1155,8 +1155,8 @@ PalletTown_ProfessorOaksLab_EventScript_BulbasaurBall:: @ 8169BAB
 	lock
 	faceplayer
 	setvar PLAYER_STARTER_NUM, 0
-	setvar PLAYER_STARTER_SPECIES, SPECIES_BULBASAUR
-	setvar RIVAL_STARTER_SPECIES, SPECIES_CHARMANDER
+	setvar PLAYER_STARTER_SPECIES, SPECIES_CALICE
+	setvar RIVAL_STARTER_SPECIES, SPECIES_CREISEN
 	setvar RIVAL_STARTER_ID, LOCALID_CHARMANDER_BALL
 	compare VAR_MAP_SCENE_PALLET_TOWN_PROFESSOR_OAKS_LAB, 3
 	goto_if_ge PalletTown_ProfessorOaksLab_EventScript_LastPokeBall
@@ -1215,7 +1215,7 @@ PalletTown_ProfessorOaksLab_EventScript_ChoseStarter:: @ 8169C74
 	call EventScript_RestorePrevTextColor
 	setflag FLAG_SYS_POKEMON_GET
 	setflag FLAG_PALLET_LADY_NOT_BLOCKING_SIGN
-	givemon PLAYER_STARTER_SPECIES, 100, ITEM_NONE
+	givemon PLAYER_STARTER_SPECIES, 5, ITEM_ORAN_BERRY
 	copyvar VAR_STARTER_MON, PLAYER_STARTER_NUM
 	getspeciesname 0, PLAYER_STARTER_SPECIES
 	message PalletTown_ProfessorOaksLab_Text_ReceivedMonFromOak
@@ -1314,8 +1314,8 @@ PalletTown_ProfessorOaksLab_EventScript_SquirtleBall:: @ 8169D78
 	lock
 	faceplayer
 	setvar PLAYER_STARTER_NUM, 1
-	setvar PLAYER_STARTER_SPECIES, SPECIES_SQUIRTLE
-	setvar RIVAL_STARTER_SPECIES, SPECIES_BULBASAUR
+	setvar PLAYER_STARTER_SPECIES, SPECIES_CSANAE
+	setvar RIVAL_STARTER_SPECIES, SPECIES_CALICE
 	setvar RIVAL_STARTER_ID, LOCALID_BULBASAUR_BALL
 	compare VAR_MAP_SCENE_PALLET_TOWN_PROFESSOR_OAKS_LAB, 3
 	goto_if_ge PalletTown_ProfessorOaksLab_EventScript_LastPokeBall
@@ -1329,8 +1329,8 @@ PalletTown_ProfessorOaksLab_EventScript_CharmanderBall:: @ 8169DAE
 	lock
 	faceplayer
 	setvar PLAYER_STARTER_NUM, 2
-	setvar PLAYER_STARTER_SPECIES, SPECIES_CHARMANDER
-	setvar RIVAL_STARTER_SPECIES, SPECIES_SQUIRTLE
+	setvar PLAYER_STARTER_SPECIES, SPECIES_CREISEN
+	setvar RIVAL_STARTER_SPECIES, SPECIES_CSANAE
 	setvar RIVAL_STARTER_ID, LOCALID_SQUIRTLE_BALL
 	compare VAR_MAP_SCENE_PALLET_TOWN_PROFESSOR_OAKS_LAB, 3
 	goto_if_ge PalletTown_ProfessorOaksLab_EventScript_LastPokeBall

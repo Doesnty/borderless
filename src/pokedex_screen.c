@@ -2229,27 +2229,17 @@ s8 DexScreen_GetSetPokedexFlag(u16 nationalDexNo, u8 caseId, bool8 indexIsSpecie
     case FLAG_GET_SEEN:
         if (gSaveBlock2Ptr->pokedex.seen[index] & mask)
         {
-            // Anticheat
-            if ((gSaveBlock2Ptr->pokedex.seen[index] & mask) == (gSaveBlock1Ptr->seen1[index] & mask)
-                && (gSaveBlock2Ptr->pokedex.seen[index] & mask) == (gSaveBlock1Ptr->seen2[index] & mask))
-                retVal = 1;
+            retVal = 1;
         }
         break;
     case FLAG_GET_CAUGHT:
         if (gSaveBlock2Ptr->pokedex.owned[index] & mask)
         {
-            // Anticheat
-            if ((gSaveBlock2Ptr->pokedex.owned[index] & mask) == (gSaveBlock2Ptr->pokedex.seen[index] & mask)
-                && (gSaveBlock2Ptr->pokedex.owned[index] & mask) == (gSaveBlock1Ptr->seen1[index] & mask)
-                && (gSaveBlock2Ptr->pokedex.owned[index] & mask) == (gSaveBlock1Ptr->seen2[index] & mask))
-                retVal = 1;
+            retVal = 1;
         }
         break;
     case FLAG_SET_SEEN:
         gSaveBlock2Ptr->pokedex.seen[index] |= mask;
-        // Anticheat
-        gSaveBlock1Ptr->seen1[index] |= mask;
-        gSaveBlock1Ptr->seen2[index] |= mask;
         break;
     case FLAG_SET_CAUGHT:
         gSaveBlock2Ptr->pokedex.owned[index] |= mask;
@@ -2659,7 +2649,7 @@ void DexScreen_DexPageZoomEffectFrame(u8 bg, u8 scale)
 void DexScreen_PrintMonCategory(u8 windowId, u16 species, u8 x, u8 y)
 {
     u8 * categoryName;
-    u8 index, categoryStr[12];
+    u8 index, categoryStr[16];
 
     species = SpeciesToNationalPokedexNum(species);
 
@@ -2667,11 +2657,7 @@ void DexScreen_PrintMonCategory(u8 windowId, u16 species, u8 x, u8 y)
     index = 0;
     if (DexScreen_GetSetPokedexFlag(species, FLAG_GET_CAUGHT, FALSE))
     {
-#if REVISION == 0
-        while ((categoryName[index] != CHAR_SPACE) && (index < 11))
-#else
-        while ((categoryName[index] != EOS) && (index < 11))
-#endif
+        while ((categoryName[index] != EOS) && (index < 15))
         {
             categoryStr[index] = categoryName[index];
             index++;
@@ -2679,7 +2665,7 @@ void DexScreen_PrintMonCategory(u8 windowId, u16 species, u8 x, u8 y)
     }
     else
     {
-        while (index < 11)
+        while (index < 15)
         {
             categoryStr[index] = CHAR_QUESTION_MARK;
             index++;
@@ -2688,66 +2674,16 @@ void DexScreen_PrintMonCategory(u8 windowId, u16 species, u8 x, u8 y)
 
     categoryStr[index] = EOS;
 
-    DexScreen_AddTextPrinterParameterized(windowId, 0, categoryStr, x, y, 0);
-    x += GetStringWidth(0, categoryStr, 0);
-    DexScreen_AddTextPrinterParameterized(windowId, 0, gText_PokedexPokemon, x, y, 0);
+    if (species != SPECIES_CJUNKO && species != SPECIES_JUNKO)
+    {
+        DexScreen_AddTextPrinterParameterized(windowId, 0, categoryStr, x, y, 0);
+        x += GetStringWidth(0, categoryStr, 0);
+        DexScreen_AddTextPrinterParameterized(windowId, 0, gText_PokedexPokemon, x, y, 0);
+    }
 }
 
 void DexScreen_PrintMonHeight(u8 windowId, u16 species, u8 x, u8 y)
 {
-    u16 height;
-    u32 inches, feet;
-    const u8 *labelText;
-    u8 buffer[32];
-    u8 i;
-
-    species = SpeciesToNationalPokedexNum(species);
-    height = gPokedexEntries[species].height;
-    labelText = gText_HT;
-
-    i = 0;
-    buffer[i++] = EXT_CTRL_CODE_BEGIN;
-    buffer[i++] = EXT_CTRL_CODE_MIN_LETTER_SPACING;
-    buffer[i++] = 5;
-    buffer[i++] = CHAR_SPACE;
-
-    if (DexScreen_GetSetPokedexFlag(species, FLAG_GET_CAUGHT, FALSE))
-    {
-        inches = 10000 * height / 254; // actually tenths of inches here
-        if (inches % 10 >= 5)
-            inches += 10;
-        feet = inches / 120;
-        inches = (inches - (feet * 120)) / 10;
-        if (feet / 10 == 0)
-        {
-            buffer[i++] = 0;
-            buffer[i++] = feet + CHAR_0;
-        }
-        else
-        {
-            buffer[i++] = feet / 10 + CHAR_0;
-            buffer[i++] = feet % 10 + CHAR_0;
-        }
-        buffer[i++] = CHAR_SGL_QUOT_RIGHT;
-        buffer[i++] = inches / 10 + CHAR_0;
-        buffer[i++] = inches % 10 + CHAR_0;
-        buffer[i++] = CHAR_DBL_QUOT_RIGHT;
-        buffer[i++] = EOS;
-    }
-    else
-    {
-        buffer[i++] = CHAR_QUESTION_MARK;
-        buffer[i++] = CHAR_QUESTION_MARK;
-        buffer[i++] = CHAR_SGL_QUOT_RIGHT;
-        buffer[i++] = CHAR_QUESTION_MARK;
-        buffer[i++] = CHAR_QUESTION_MARK;
-        buffer[i++] = CHAR_DBL_QUOT_RIGHT;
-    }
-
-    buffer[i++] = EOS;
-    DexScreen_AddTextPrinterParameterized(windowId, 0, labelText, x, y, 0);
-    x += 30;
-    DexScreen_AddTextPrinterParameterized(windowId, 0, buffer, x, y, 0);
 }
 
 void DexScreen_PrintMonWeight(u8 windowId, u16 species, u8 x, u8 y)
@@ -2773,51 +2709,9 @@ void DexScreen_PrintMonWeight(u8 windowId, u16 species, u8 x, u8 y)
 
     if (DexScreen_GetSetPokedexFlag(species, FLAG_GET_CAUGHT, FALSE))
     {
-        lbs = (weight * 100000) / 4536; // Convert to hundredths of lb
-
-        // Round up to the nearest 0.1 lb
-        if (lbs % 10 >= 5)
-            lbs += 10;
-
-        output = FALSE;
-
-        if ((buffer[i] = (lbs / 100000) + CHAR_0) == CHAR_0 && !output)
-        {
-            buffer[i++] = CHAR_SPACE;
-        }
-        else
-        {
-            output = TRUE;
-            i++;
-        }
-
-        lbs %= 100000;
-        if ((buffer[i] = (lbs / 10000) + CHAR_0) == CHAR_0 && !output)
-        {
-            buffer[i++] = CHAR_SPACE;
-        }
-        else
-        {
-            output = TRUE;
-            i++;
-        }
-
-        lbs %= 10000;
-        if ((buffer[i] = (lbs / 1000) + CHAR_0) == CHAR_0 && !output)
-        {
-            buffer[i++] = CHAR_SPACE;
-        }
-        else
-        {
-            output = TRUE;
-            i++;
-        }
-
-        lbs %= 1000;
-        buffer[i++] = (lbs / 100) + CHAR_0;
-        lbs %= 100;
-        buffer[i++] = CHAR_PERIOD;
-        buffer[i++] = (lbs / 10) + CHAR_0;
+        lbs = gBaseStats[species].cost;
+        
+        i = (ConvertIntToDecimalStringN(&buffer[i], lbs, STR_CONV_MODE_LEFT_ALIGN, 3) - buffer);
     }
     else
     {

@@ -814,7 +814,7 @@ static void SetPlayerCardData(struct TrainerCard *trainerCard, u8 cardType)
     }
 
     trainerCard->rse.hasPokedex = FlagGet(FLAG_SYS_POKEDEX_GET);
-    trainerCard->rse.caughtAllHoenn = HasAllHoennMons();
+    trainerCard->rse.caughtAllHoenn = HasAllMons();
     trainerCard->rse.caughtMonsCount = GetCaughtMonsCount();
 
     trainerCard->rse.trainerId = (gSaveBlock2Ptr->playerTrainerId[1] << 8) | gSaveBlock2Ptr->playerTrainerId[0];

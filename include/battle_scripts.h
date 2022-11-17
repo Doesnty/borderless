@@ -163,6 +163,7 @@ extern const u8 BattleScript_BRNPrevention[];
 extern const u8 BattleScript_PRLZPrevention[];
 extern const u8 BattleScript_PSNPrevention[];
 extern const u8 BattleScript_ObliviousPreventsAttraction[];
+extern const u8 BattleScript_ObliviousPreventsTaunt[];
 extern const u8 BattleScript_FlinchPrevention[];
 extern const u8 BattleScript_OwnTempoPrevents[];
 extern const u8 BattleScript_SoundproofProtected[];
@@ -238,6 +239,8 @@ extern const u8 BattleScript_HazardsAttacker[];
 extern const u8 BattleScript_HazardsTarget[];
 extern const u8 BattleScript_HazardsFaintedBattler[];
 extern const u8 BattleScript_Cursed[];
+extern const u8 BattleScript_MoveSAtkDrain[];
+extern const u8 BattleScript_MoveSAtkDrain_PPLoss[];
 
 extern const u8 *const gBattleScriptsForMoveEffects[];
 extern const u8 *const gBattlescriptsForBallThrow[];

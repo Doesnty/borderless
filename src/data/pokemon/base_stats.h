@@ -37,7 +37,7 @@
 const struct BaseStats gBaseStats[] =
 {
     [SPECIES_NONE] = {0},
-        [SPECIES_CREIMU] = 
+    [SPECIES_CREIMU] = 
     {
         .baseHP = 85,
         .baseAttack = 70,
@@ -60,7 +60,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_HAKUREI_MIKO, ABILITY_HAKUREI_MIKO},
         .hiddenAbility = ABILITY_ANGER_POINT,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 80,
     },
     [SPECIES_REIMU] = 
     {
@@ -85,7 +86,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_HAKUREI_MIKO, ABILITY_HAKUREI_MIKO},
         .hiddenAbility = ABILITY_ANGER_POINT,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 120,
     },
     [SPECIES_AREIMU] = 
     {
@@ -110,7 +112,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_HAKUREI_MIKO, ABILITY_HAKUREI_MIKO},
         .hiddenAbility = ABILITY_ANGER_POINT,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 120,
     },
     [SPECIES_DREIMU] = 
     {
@@ -135,7 +138,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_HAKUREI_MIKO, ABILITY_HAKUREI_MIKO},
         .hiddenAbility = ABILITY_ANGER_POINT,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 120,
     },
     [SPECIES_CMARISA] = 
     {
@@ -160,7 +164,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_PICKUP, ABILITY_RUN_AWAY},
         .hiddenAbility = ABILITY_POWER_LEAK,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 40,
     },
     [SPECIES_MARISA] = 
     {
@@ -185,7 +190,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_COLLECTOR, ABILITY_HUSTLE},
         .hiddenAbility = ABILITY_POWER_LEAK,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 80,
     },
     [SPECIES_AMARISA] = 
     {
@@ -210,7 +216,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_PRESSURE, ABILITY_HUSTLE},
         .hiddenAbility = ABILITY_POWER_LEAK,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 80,
     },
     [SPECIES_SMARISA] = 
     {
@@ -235,7 +242,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_COLLECTOR, ABILITY_HUSTLE},
         .hiddenAbility = ABILITY_POWER_LEAK,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 80,
     },
     [SPECIES_ADMARISA] = 
     {
@@ -260,7 +268,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_COLLECTOR, ABILITY_COLLECTOR},
         .hiddenAbility = ABILITY_POWER_LEAK,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 80,
     },
     [SPECIES_LMARISA] = 
     {
@@ -285,7 +294,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_DROUGHT, ABILITY_DROUGHT},
         .hiddenAbility = ABILITY_POWER_LEAK,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 80,
     },
     [SPECIES_CRUMIA] = 
     {
@@ -310,7 +320,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_LEVITATE, ABILITY_LEVITATE},
         .hiddenAbility = ABILITY_HUSTLE,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 20,
     },
     [SPECIES_RUMIA] = 
     {
@@ -335,7 +346,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_LEVITATE, ABILITY_LEVITATE},
         .hiddenAbility = ABILITY_HUSTLE,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 60,
     },
     [SPECIES_ARUMIA] = 
     {
@@ -360,7 +372,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_LEVITATE, ABILITY_LEVITATE},
         .hiddenAbility = ABILITY_HUSTLE,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 60,
     },
     [SPECIES_SRUMIA] = 
     {
@@ -385,7 +398,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_LEVITATE, ABILITY_LEVITATE},
         .hiddenAbility = ABILITY_HUSTLE,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 60,
     },
     [SPECIES_CDAIYOUSEI] = 
     {
@@ -410,7 +424,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_RUN_AWAY, ABILITY_NATURAL_CURE},
         .hiddenAbility = ABILITY_SOLAR_POWER,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 20,
     },
     [SPECIES_DAIYOUSEI] = 
     {
@@ -435,7 +450,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_SERENE_GRACE, ABILITY_NATURAL_CURE},
         .hiddenAbility = ABILITY_CHEERFUL,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 40,
     },
     [SPECIES_ADAIYOUSEI] = 
     {
@@ -460,7 +476,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_SERENE_GRACE, ABILITY_NATURAL_CURE},
         .hiddenAbility = ABILITY_SOLAR_POWER,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 40,
     },
     [SPECIES_DDAIYOUSEI] = 
     {
@@ -485,7 +502,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_SERENE_GRACE, ABILITY_NATURAL_CURE},
         .hiddenAbility = ABILITY_SOLAR_POWER,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 40,
     },
     [SPECIES_CCIRNO] = 
     {
@@ -510,7 +528,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_VITAL_SPIRIT, ABILITY_GUTS},
         .hiddenAbility = ABILITY_SLUSH_RUSH,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 20,
     },
     [SPECIES_CIRNO] = 
     {
@@ -535,7 +554,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_SPEED_BOOST, ABILITY_GUTS},
         .hiddenAbility = ABILITY_SLUSH_RUSH,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 60,
     },
     [SPECIES_SCIRNO] = 
     {
@@ -560,7 +580,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_WINTER_GIFT, ABILITY_GUTS},
         .hiddenAbility = ABILITY_SLUSH_RUSH,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 60,
     },
     [SPECIES_TCIRNO] = 
     {
@@ -585,7 +606,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_SOLAR_POWER, ABILITY_GUTS},
         .hiddenAbility = ABILITY_DROUGHT,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 60,
     },
     [SPECIES_ADCIRNO] = 
     {
@@ -610,7 +632,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_VITAL_SPIRIT, ABILITY_WATER_VEIL},
         .hiddenAbility = ABILITY_STEADFAST,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 60,
     },
     [SPECIES_CMEILING] = 
     {
@@ -635,7 +658,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_GATE_KEEPER, ABILITY_INNER_POWER},
         .hiddenAbility = ABILITY_SCRAPPY,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 20,
     },
     [SPECIES_MEILING] = 
     {
@@ -660,7 +684,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_GATE_KEEPER, ABILITY_INNER_POWER},
         .hiddenAbility = ABILITY_SCRAPPY,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 60,
     },
     [SPECIES_DMEILING] = 
     {
@@ -685,7 +710,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_GATE_KEEPER, ABILITY_INNER_POWER},
         .hiddenAbility = ABILITY_SCRAPPY,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 60,
     },
     [SPECIES_SMEILING] = 
     {
@@ -710,7 +736,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_GATE_KEEPER, ABILITY_INNER_POWER},
         .hiddenAbility = ABILITY_SCRAPPY,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 60,
     },
     [SPECIES_ADMEILING] = 
     {
@@ -735,7 +762,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_GATE_KEEPER, ABILITY_INNER_POWER},
         .hiddenAbility = ABILITY_SCRAPPY,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 60,
     },
     [SPECIES_CKOAKUMA] = 
     {
@@ -760,7 +788,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_SYNCHRONIZE, ABILITY_LEVITATE},
         .hiddenAbility = ABILITY_MAGIC_BOUNCE,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 20,
     },
     [SPECIES_KOAKUMA] = 
     {
@@ -785,7 +814,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_SYNCHRONIZE, ABILITY_LEVITATE},
         .hiddenAbility = ABILITY_MAGIC_BOUNCE,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 40,
     },
     [SPECIES_HKOAKUMA] = 
     {
@@ -810,7 +840,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_SYNCHRONIZE, ABILITY_LEVITATE},
         .hiddenAbility = ABILITY_MAGIC_BOUNCE,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 40,
     },
     [SPECIES_CPATCHOULI] = 
     {
@@ -835,7 +866,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_TRACE, ABILITY_SYNCHRONIZE},
         .hiddenAbility = ABILITY_PROTEAN,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 40,
     },
     [SPECIES_PATCHOULI] = 
     {
@@ -860,7 +892,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_TRACE, ABILITY_SYNCHRONIZE},
         .hiddenAbility = ABILITY_PROTEAN,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 80,
     },
     [SPECIES_APATCHOULI] = 
     {
@@ -885,7 +918,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_INNER_POWER, ABILITY_INNER_POWER},
         .hiddenAbility = ABILITY_PRESSURE,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 80,
     },
     [SPECIES_DPATCHOULI] = 
     {
@@ -910,7 +944,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_INNER_POWER, ABILITY_GUARD_ARMOR},
         .hiddenAbility = ABILITY_STURDY,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 80,
     },
     [SPECIES_CSAKUYA] = 
     {
@@ -935,7 +970,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_FOCUS, ABILITY_GUARD_ARMOR},
         .hiddenAbility = ABILITY_INNER_FOCUS,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 40,
     },
     [SPECIES_SAKUYA] = 
     {
@@ -960,7 +996,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_FOCUS, ABILITY_GUARD_ARMOR},
         .hiddenAbility = ABILITY_INNER_FOCUS,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 80,
     },
     [SPECIES_TSAKUYA] = 
     {
@@ -985,7 +1022,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_FOCUS, ABILITY_GUARD_ARMOR},
         .hiddenAbility = ABILITY_PRESSURE,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 80,
     },
     [SPECIES_HSAKUYA] = 
     {
@@ -1010,7 +1048,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_FOCUS, ABILITY_GUARD_ARMOR},
         .hiddenAbility = ABILITY_INNER_FOCUS,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 80,
     },
     [SPECIES_CREMILIA] = 
     {
@@ -1035,7 +1074,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_PRESSURE, ABILITY_PRIDE},
         .hiddenAbility = ABILITY_SUPER_LUCK,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 80,
     },
     [SPECIES_REMILIA] = 
     {
@@ -1060,7 +1100,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_PRESSURE, ABILITY_PRIDE},
         .hiddenAbility = ABILITY_SUPER_LUCK,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 120,
     },
     [SPECIES_AREMILIA] = 
     {
@@ -1085,7 +1126,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_PRESSURE, ABILITY_PRIDE},
         .hiddenAbility = ABILITY_SUPER_LUCK,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 120,
     },
     [SPECIES_DREMILIA] = 
     {
@@ -1110,7 +1152,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_PRESSURE, ABILITY_CUTE_CHARM},
         .hiddenAbility = ABILITY_SUPER_LUCK,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 120,
     },
     [SPECIES_CFLANDRE] = 
     {
@@ -1135,7 +1178,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_HUSTLE, ABILITY_HUSTLE},
         .hiddenAbility = ABILITY_PRESSURE,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 80,
     },
     [SPECIES_FLANDRE] = 
     {
@@ -1160,7 +1204,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_HUSTLE, ABILITY_HUSTLE},
         .hiddenAbility = ABILITY_PRESSURE,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 120,
     },
     [SPECIES_AFLANDRE] = 
     {
@@ -1185,7 +1230,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_HUSTLE, ABILITY_HUSTLE},
         .hiddenAbility = ABILITY_HUSTLE,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 120,
     },
     [SPECIES_SFLANDRE] = 
     {
@@ -1210,7 +1256,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_HUSTLE, ABILITY_HUSTLE},
         .hiddenAbility = ABILITY_HUSTLE,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 120,
     },
     [SPECIES_CLETTY] = 
     {
@@ -1235,7 +1282,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_SNOW_CLOAK, ABILITY_WALL_OF_ICE},
         .hiddenAbility = ABILITY_FOCUS,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 20,
     },
     [SPECIES_LETTY] = 
     {
@@ -1260,7 +1308,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_SNOW_WARNING, ABILITY_WALL_OF_ICE},
         .hiddenAbility = ABILITY_FOCUS,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 60,
     },
     [SPECIES_DLETTY] = 
     {
@@ -1285,7 +1334,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_SNOW_WARNING, ABILITY_WALL_OF_ICE},
         .hiddenAbility = ABILITY_HIBERNATION,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 60,
     },
     [SPECIES_HLETTY] = 
     {
@@ -1310,7 +1360,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_SNOW_WARNING, ABILITY_WALL_OF_ICE},
         .hiddenAbility = ABILITY_HIBERNATION,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 60,
     },
     [SPECIES_ADLETTY] = 
     {
@@ -1335,7 +1386,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_FLAWLESS, ABILITY_STEADFAST},
         .hiddenAbility = ABILITY_VITAL_SPIRIT,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 60,
     },
     [SPECIES_CCHEN] = 
     {
@@ -1358,9 +1410,10 @@ const struct BaseStats gBaseStats[] =
         .eggGroup1 = EGG_GROUP_HUMAN_LIKE,
         .eggGroup2 = EGG_GROUP_HUMAN_LIKE,
         .abilities = { ABILITY_RUN_AWAY, ABILITY_PICKUP},
-        .hiddenAbility = ABILITY_UNBURDEN,
+        .hiddenAbility = ABILITY_QUICK_FEET,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 20,
     },
     [SPECIES_CHEN] = 
     {
@@ -1383,9 +1436,10 @@ const struct BaseStats gBaseStats[] =
         .eggGroup1 = EGG_GROUP_HUMAN_LIKE,
         .eggGroup2 = EGG_GROUP_HUMAN_LIKE,
         .abilities = { ABILITY_LIMBER, ABILITY_EARLY_BIRD},
-        .hiddenAbility = ABILITY_UNBURDEN,
+        .hiddenAbility = ABILITY_QUICK_FEET,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 40,
     },
     [SPECIES_ACHEN] = 
     {
@@ -1408,9 +1462,10 @@ const struct BaseStats gBaseStats[] =
         .eggGroup1 = EGG_GROUP_HUMAN_LIKE,
         .eggGroup2 = EGG_GROUP_HUMAN_LIKE,
         .abilities = { ABILITY_LIMBER, ABILITY_EARLY_BIRD},
-        .hiddenAbility = ABILITY_UNBURDEN,
+        .hiddenAbility = ABILITY_QUICK_FEET,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 40,
     },
     [SPECIES_TCHEN] = 
     {
@@ -1435,7 +1490,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_LIMBER, ABILITY_EARLY_BIRD},
         .hiddenAbility = ABILITY_TECHNICIAN,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 40,
     },
     [SPECIES_ADCHEN] = 
     {
@@ -1460,7 +1516,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_AFTERMATH, ABILITY_AFTERMATH},
         .hiddenAbility = ABILITY_FLAWLESS,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 40,
     },
     [SPECIES_CALICE] = 
     {
@@ -1485,7 +1542,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_DOLL_WALL, ABILITY_MAGIC_BARRIER},
         .hiddenAbility = ABILITY_SKILL_LINK,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 40,
     },
     [SPECIES_ALICE] = 
     {
@@ -1510,7 +1568,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_DOLL_SKEWER, ABILITY_MAGIC_BARRIER},
         .hiddenAbility = ABILITY_SKILL_LINK,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 80,
     },
     [SPECIES_AALICE] = 
     {
@@ -1535,7 +1594,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_DOLL_SKEWER, ABILITY_MAGIC_BARRIER},
         .hiddenAbility = ABILITY_SKILL_LINK,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 80,
     },
     [SPECIES_TALICE] = 
     {
@@ -1560,7 +1620,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_AFTERMATH, ABILITY_MAGIC_BARRIER},
         .hiddenAbility = ABILITY_SKILL_LINK,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 80,
     },
     [SPECIES_ADALICE] = 
     {
@@ -1585,7 +1646,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_DOLL_SKEWER, ABILITY_MAGIC_BARRIER},
         .hiddenAbility = ABILITY_FLAWLESS,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 80,
     },
     [SPECIES_DARK_ALICE] = 
     {
@@ -1610,7 +1672,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_PRESSURE, ABILITY_LEVITATE},
         .hiddenAbility = ABILITY_UNNERVE,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 120,
     },
     [SPECIES_CLILYWHITE] = 
     {
@@ -1635,7 +1698,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_SPRING_CHARM, ABILITY_SPRING_CHARM},
         .hiddenAbility = ABILITY_FIRE_VEIL,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 20,
     },
     [SPECIES_LILYWHITE] = 
     {
@@ -1660,7 +1724,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_SPRING_CHARM, ABILITY_SPRING_CHARM},
         .hiddenAbility = ABILITY_FIRE_VEIL,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 40,
     },
     [SPECIES_ALILYWHITE] = 
     {
@@ -1685,7 +1750,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_SPRING_CHARM, ABILITY_SPRING_CHARM},
         .hiddenAbility = ABILITY_FIRE_VEIL,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 40,
     },
     [SPECIES_HLILYWHITE] = 
     {
@@ -1710,7 +1776,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_CHEERFUL, ABILITY_CHEERFUL},
         .hiddenAbility = ABILITY_LAST_WISH,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 40,
     },
     [SPECIES_CLILYBLACK] = 
     {
@@ -1735,7 +1802,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_SPRING_CHARM, ABILITY_SPRING_CHARM},
         .hiddenAbility = ABILITY_WALL_OF_ICE,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 20,
     },
     [SPECIES_LILYBLACK] = 
     {
@@ -1760,7 +1828,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_SPEED_BOOST, ABILITY_SPEED_BOOST},
         .hiddenAbility = ABILITY_WALL_OF_ICE,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 40,
     },
     [SPECIES_ALILYBLACK] = 
     {
@@ -1785,7 +1854,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_GUTS, ABILITY_GUTS},
         .hiddenAbility = ABILITY_LAST_GRUDGE,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 40,
     },
     [SPECIES_SLILYBLACK] = 
     {
@@ -1810,7 +1880,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_SPEED_BOOST, ABILITY_SPEED_BOOST},
         .hiddenAbility = ABILITY_WALL_OF_ICE,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 40,
     },
     [SPECIES_CLUNASA] = 
     {
@@ -1835,7 +1906,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_SOUNDPROOF, ABILITY_GUARD_ARMOR},
         .hiddenAbility = ABILITY_DOUR_ECHO,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 20,
     },
     [SPECIES_LUNASA] = 
     {
@@ -1860,7 +1932,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_SOUNDPROOF, ABILITY_GUARD_ARMOR},
         .hiddenAbility = ABILITY_DOUR_ECHO,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 60,
     },
     [SPECIES_HLUNASA] = 
     {
@@ -1885,7 +1958,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_SOUNDPROOF, ABILITY_GUARD_ARMOR},
         .hiddenAbility = ABILITY_DOUR_ECHO,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 60,
     },
     [SPECIES_CMERLIN] = 
     {
@@ -1910,7 +1984,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_SOUNDPROOF, ABILITY_SUPER_LUCK},
         .hiddenAbility = ABILITY_MANIC_ECHO,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 20,
     },
     [SPECIES_MERLIN] = 
     {
@@ -1935,7 +2010,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_SOUNDPROOF, ABILITY_SUPER_LUCK},
         .hiddenAbility = ABILITY_MANIC_ECHO,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 60,
     },
     [SPECIES_HMERLIN] = 
     {
@@ -1960,7 +2036,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_SOUNDPROOF, ABILITY_SUPER_LUCK},
         .hiddenAbility = ABILITY_MANIC_ECHO,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 60,
     },
     [SPECIES_CLYRICA] = 
     {
@@ -1985,7 +2062,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_SOUNDPROOF, ABILITY_SAND_VEIL},
         .hiddenAbility = ABILITY_HARMONIZE,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 20,
     },
     [SPECIES_LYRICA] = 
     {
@@ -2010,7 +2088,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_SOUNDPROOF, ABILITY_SAND_VEIL},
         .hiddenAbility = ABILITY_HARMONIZE,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 60,
     },
     [SPECIES_HLYRICA] = 
     {
@@ -2035,7 +2114,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_SOUNDPROOF, ABILITY_SAND_VEIL},
         .hiddenAbility = ABILITY_HARMONIZE,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 60,
     },
     [SPECIES_CYOUMU] = 
     {
@@ -2060,7 +2140,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_RATTLED, ABILITY_STEADFAST},
         .hiddenAbility = ABILITY_UNAWARE,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 40,
     },
     [SPECIES_YOUMU] = 
     {
@@ -2085,7 +2166,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_INNER_FOCUS, ABILITY_STEADFAST},
         .hiddenAbility = ABILITY_UNAWARE,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 80,
     },
     [SPECIES_DYOUMU] = 
     {
@@ -2110,7 +2192,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_INNER_FOCUS, ABILITY_STEADFAST},
         .hiddenAbility = ABILITY_UNAWARE,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 80,
     },
     [SPECIES_SYOUMU] = 
     {
@@ -2135,7 +2218,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_INNER_FOCUS, ABILITY_STEADFAST},
         .hiddenAbility = ABILITY_UNAWARE,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 80,
     },
     [SPECIES_LYOUMU] = 
     {
@@ -2160,7 +2244,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_INNER_FOCUS, ABILITY_STEADFAST},
         .hiddenAbility = ABILITY_PRESSURE,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 80,
     },
     [SPECIES_CYUYUKO] = 
     {
@@ -2185,7 +2270,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_LEVITATE, ABILITY_GLUTTONY},
         .hiddenAbility = ABILITY_SAP_SIPPER,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 80,
     },
     [SPECIES_YUYUKO] = 
     {
@@ -2210,7 +2296,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_LEVITATE, ABILITY_GLUTTONY},
         .hiddenAbility = ABILITY_SAP_SIPPER,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 120,
     },
     [SPECIES_AYUYUKO] = 
     {
@@ -2235,7 +2322,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_LEVITATE, ABILITY_GLUTTONY},
         .hiddenAbility = ABILITY_SAP_SIPPER,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 120,
     },
     [SPECIES_DYUYUKO] = 
     {
@@ -2260,7 +2348,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_LEVITATE, ABILITY_GLUTTONY},
         .hiddenAbility = ABILITY_SAP_SIPPER,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 120,
     },
     [SPECIES_LYUYUKO] = 
     {
@@ -2285,7 +2374,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_LEVITATE, ABILITY_GUTS},
         .hiddenAbility = ABILITY_IMMUNITY,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 120,
     },
     [SPECIES_CRAN] = 
     {
@@ -2310,7 +2400,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_EARLY_BIRD, ABILITY_INNER_FOCUS},
         .hiddenAbility = ABILITY_STEADFAST,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 80,
     },
     [SPECIES_RAN] = 
     {
@@ -2335,7 +2426,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_EARLY_BIRD, ABILITY_INNER_FOCUS},
         .hiddenAbility = ABILITY_STEADFAST,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 120,
     },
     [SPECIES_ARAN] = 
     {
@@ -2360,7 +2452,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_EARLY_BIRD, ABILITY_INNER_FOCUS},
         .hiddenAbility = ABILITY_STEADFAST,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 120,
     },
     [SPECIES_HRAN] = 
     {
@@ -2385,7 +2478,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_EARLY_BIRD, ABILITY_INNER_FOCUS},
         .hiddenAbility = ABILITY_STEADFAST,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 120,
     },
     [SPECIES_ADRAN] = 
     {
@@ -2410,7 +2504,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_EARLY_BIRD, ABILITY_FLAWLESS},
         .hiddenAbility = ABILITY_ANALYTIC,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 120,
     },
     [SPECIES_CYUKARI] = 
     {
@@ -2435,7 +2530,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_MAGIC_BARRIER, ABILITY_LEVITATE},
         .hiddenAbility = ABILITY_HIBERNATION,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 80,
     },
     [SPECIES_YUKARI] = 
     {
@@ -2460,7 +2556,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_MAGIC_BARRIER, ABILITY_LEVITATE},
         .hiddenAbility = ABILITY_HIBERNATION,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 120,
     },
     [SPECIES_DYUKARI] = 
     {
@@ -2485,7 +2582,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_MAGIC_BARRIER, ABILITY_OWN_TEMPO},
         .hiddenAbility = ABILITY_HIBERNATION,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 120,
     },
     [SPECIES_TYUKARI] = 
     {
@@ -2510,7 +2608,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_MAGIC_BARRIER, ABILITY_LEVITATE},
         .hiddenAbility = ABILITY_STRANGE_MIST,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 120,
     },
     [SPECIES_ADYUKARI] = 
     {
@@ -2535,7 +2634,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_MAGIC_BARRIER, ABILITY_LEVITATE},
         .hiddenAbility = ABILITY_FLAWLESS,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 120,
     },
     [SPECIES_CSUIKA] = 
     {
@@ -2560,7 +2660,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_SAND_VEIL, ABILITY_HI_STRENGTH},
         .hiddenAbility = ABILITY_TANGLED_FEET,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 60,
     },
     [SPECIES_SUIKA] = 
     {
@@ -2585,7 +2686,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_SAND_STREAM, ABILITY_HI_STRENGTH},
         .hiddenAbility = ABILITY_TANGLED_FEET,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 100,
     },
     [SPECIES_ASUIKA] = 
     {
@@ -2610,7 +2712,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_SAND_STREAM, ABILITY_HI_STRENGTH},
         .hiddenAbility = ABILITY_TANGLED_FEET,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 100,
     },
     [SPECIES_TSUIKA] = 
     {
@@ -2635,7 +2738,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_SAND_STREAM, ABILITY_HI_STRENGTH},
         .hiddenAbility = ABILITY_TANGLED_FEET,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 100,
     },
     [SPECIES_CWRIGGLE] = 
     {
@@ -2660,7 +2764,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_INNER_POWER, ABILITY_UNNERVE},
         .hiddenAbility = ABILITY_INFILTRATOR,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 20,
     },
     [SPECIES_WRIGGLE] = 
     {
@@ -2685,7 +2790,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_INNER_POWER, ABILITY_UNNERVE},
         .hiddenAbility = ABILITY_INFILTRATOR,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 60,
     },
     [SPECIES_DWRIGGLE] = 
     {
@@ -2710,7 +2816,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_INNER_POWER, ABILITY_UNNERVE},
         .hiddenAbility = ABILITY_INFILTRATOR,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 60,
     },
     [SPECIES_SWRIGGLE] = 
     {
@@ -2735,7 +2842,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_INNER_POWER, ABILITY_UNNERVE},
         .hiddenAbility = ABILITY_INFILTRATOR,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 60,
     },
     [SPECIES_CMYSTIA] = 
     {
@@ -2760,7 +2868,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_DIVA, ABILITY_CUTE_CHARM},
         .hiddenAbility = ABILITY_MANIC_ECHO,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 20,
     },
     [SPECIES_MYSTIA] = 
     {
@@ -2785,7 +2894,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_DIVA, ABILITY_CUTE_CHARM},
         .hiddenAbility = ABILITY_MANIC_ECHO,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 60,
     },
     [SPECIES_AMYSTIA] = 
     {
@@ -2810,7 +2920,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_DIVA, ABILITY_CUTE_CHARM},
         .hiddenAbility = ABILITY_MANIC_ECHO,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 60,
     },
     [SPECIES_HMYSTIA] = 
     {
@@ -2835,7 +2946,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_DIVA, ABILITY_CUTE_CHARM},
         .hiddenAbility = ABILITY_MANIC_ECHO,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 60,
     },
     [SPECIES_ADMYSTIA] = 
     {
@@ -2860,7 +2972,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_DIVA, ABILITY_CUTE_CHARM},
         .hiddenAbility = ABILITY_DOUR_ECHO,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 60,
     },
     [SPECIES_CKEINE] = 
     {
@@ -2885,7 +2998,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_INNER_FOCUS, ABILITY_GUARD_ARMOR},
         .hiddenAbility = ABILITY_STEADFAST,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 20,
     },
     [SPECIES_KEINE] = 
     {
@@ -2910,7 +3024,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_INNER_FOCUS, ABILITY_GUARD_ARMOR},
         .hiddenAbility = ABILITY_LECTURE,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 60,
     },
     [SPECIES_AKEINE] = 
     {
@@ -2935,7 +3050,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_INTIMIDATE, ABILITY_ROCK_HEAD},
         .hiddenAbility = ABILITY_RECKLESS,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 80,
     },
     [SPECIES_DKEINE] = 
     {
@@ -2960,7 +3076,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_INTIMIDATE, ABILITY_ROCK_HEAD},
         .hiddenAbility = ABILITY_RECKLESS,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 80,
     },
     [SPECIES_HKEINE] = 
     {
@@ -2985,7 +3102,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_INNER_FOCUS, ABILITY_GUARD_ARMOR},
         .hiddenAbility = ABILITY_STEADFAST,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 60,
     },
     [SPECIES_CTEWI] = 
     {
@@ -3010,7 +3128,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_RUN_AWAY, ABILITY_SERENE_GRACE},
         .hiddenAbility = ABILITY_NATURAL_CURE,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 20,
     },
     [SPECIES_TEWI] = 
     {
@@ -3035,7 +3154,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_SUPER_LUCK, ABILITY_SERENE_GRACE},
         .hiddenAbility = ABILITY_NATURAL_CURE,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 40,
     },
     [SPECIES_ATEWI] = 
     {
@@ -3060,7 +3180,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_SUPER_LUCK, ABILITY_SERENE_GRACE},
         .hiddenAbility = ABILITY_NATURAL_CURE,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 40,
     },
     [SPECIES_DTEWI] = 
     {
@@ -3085,7 +3206,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_SUPER_LUCK, ABILITY_SERENE_GRACE},
         .hiddenAbility = ABILITY_NATURAL_CURE,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 40,
     },
     [SPECIES_ADTEWI] = 
     {
@@ -3110,7 +3232,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_SUPER_LUCK, ABILITY_PRANKSTER},
         .hiddenAbility = ABILITY_NATURAL_CURE,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 40,
     },
     [SPECIES_CREISEN] = 
     {
@@ -3135,7 +3258,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_RUN_AWAY, ABILITY_KEEN_EYE},
         .hiddenAbility = ABILITY_RATTLED,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 40,
     },
     [SPECIES_REISEN] = 
     {
@@ -3160,7 +3284,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_INSOMNIA, ABILITY_SNIPER},
         .hiddenAbility = ABILITY_RATTLED,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 80,
     },
     [SPECIES_DREISEN] = 
     {
@@ -3185,7 +3310,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_INSOMNIA, ABILITY_SNIPER},
         .hiddenAbility = ABILITY_POISON_HEAL,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 80,
     },
     [SPECIES_TREISEN] = 
     {
@@ -3210,7 +3336,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_LUNACY, ABILITY_SNIPER},
         .hiddenAbility = ABILITY_UNNERVE,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 80,
     },
     [SPECIES_ADREISEN] = 
     {
@@ -3235,7 +3362,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_INSOMNIA, ABILITY_SNIPER},
         .hiddenAbility = ABILITY_RATTLED,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 80,
     },
     [SPECIES_CEIRIN] = 
     {
@@ -3260,7 +3388,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_NATURAL_CURE, ABILITY_LONG_REACH},
         .hiddenAbility = ABILITY_REACTIVE,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 80,
     },
     [SPECIES_EIRIN] = 
     {
@@ -3285,7 +3414,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_NATURAL_CURE, ABILITY_LONG_REACH},
         .hiddenAbility = ABILITY_REACTIVE,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 120,
     },
     [SPECIES_AEIRIN] = 
     {
@@ -3310,7 +3440,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_NATURAL_CURE, ABILITY_LONG_REACH},
         .hiddenAbility = ABILITY_TOXICOLOGIST,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 120,
     },
     [SPECIES_HEIRIN] = 
     {
@@ -3335,7 +3466,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_NATURAL_CURE, ABILITY_LONG_REACH},
         .hiddenAbility = ABILITY_REACTIVE,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 120,
     },
     [SPECIES_CKAGUYA] = 
     {
@@ -3360,7 +3492,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_NATURAL_CURE, ABILITY_INNER_POWER},
         .hiddenAbility = ABILITY_TRUANT,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 80,
     },
     [SPECIES_KAGUYA] = 
     {
@@ -3385,7 +3518,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_NATURAL_CURE, ABILITY_HIBERNATION},
         .hiddenAbility = ABILITY_TRUANT,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 120,
     },
     [SPECIES_AKAGUYA] = 
     {
@@ -3410,7 +3544,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_NATURAL_CURE, ABILITY_INNER_POWER},
         .hiddenAbility = ABILITY_TRUANT,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 120,
     },
     [SPECIES_DKAGUYA] = 
     {
@@ -3435,7 +3570,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_NATURAL_CURE, ABILITY_INNER_POWER},
         .hiddenAbility = ABILITY_TRUANT,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 120,
     },
     [SPECIES_CMOKOU] = 
     {
@@ -3460,7 +3596,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_NATURAL_CURE, ABILITY_FLAME_BODY},
         .hiddenAbility = ABILITY_ANGER_POINT,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 80,
     },
     [SPECIES_MOKOU] = 
     {
@@ -3485,7 +3622,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_NATURAL_CURE, ABILITY_FLAME_BODY},
         .hiddenAbility = ABILITY_ANGER_POINT,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 120,
     },
     [SPECIES_AMOKOU] = 
     {
@@ -3510,7 +3648,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_NATURAL_CURE, ABILITY_FLAME_BODY},
         .hiddenAbility = ABILITY_ANGER_POINT,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 120,
     },
     [SPECIES_DMOKOU] = 
     {
@@ -3535,7 +3674,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_NATURAL_CURE, ABILITY_FLAME_BODY},
         .hiddenAbility = ABILITY_ANGER_POINT,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 120,
     },
     [SPECIES_ADMOKOU] = 
     {
@@ -3560,7 +3700,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_NATURAL_CURE, ABILITY_FLAME_BODY},
         .hiddenAbility = ABILITY_ANGER_POINT,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 120,
     },
     [SPECIES_CAYA] = 
     {
@@ -3585,7 +3726,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_KEEN_EYE, ABILITY_OWN_TEMPO},
         .hiddenAbility = ABILITY_FRISK,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 40,
     },
     [SPECIES_AYA] = 
     {
@@ -3610,7 +3752,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_SPEED_BOOST, ABILITY_SPEED_BOOST},
         .hiddenAbility = ABILITY_FRISK,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 80,
     },
     [SPECIES_SAYA] = 
     {
@@ -3635,7 +3778,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_SPEED_BOOST, ABILITY_SPEED_BOOST},
         .hiddenAbility = ABILITY_FRISK,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 80,
     },
     [SPECIES_TAYA] = 
     {
@@ -3660,7 +3804,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_SPEED_BOOST, ABILITY_SPEED_BOOST},
         .hiddenAbility = ABILITY_FRISK,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 80,
     },
     [SPECIES_CMEDICINE] = 
     {
@@ -3685,7 +3830,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_POISON_BODY, ABILITY_POISON_BODY},
         .hiddenAbility = ABILITY_DOLL_WALL,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 20,
     },
     [SPECIES_MEDICINE] = 
     {
@@ -3710,7 +3856,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_POISON_BODY, ABILITY_POISON_BODY},
         .hiddenAbility = ABILITY_DOLL_WALL,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 40,
     },
     [SPECIES_AMEDICINE] = 
     {
@@ -3735,7 +3882,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_POISON_BODY, ABILITY_POISON_BODY},
         .hiddenAbility = ABILITY_TOXICOLOGIST,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 40,
     },
     [SPECIES_SMEDICINE] = 
     {
@@ -3760,7 +3908,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_POISON_BODY, ABILITY_POISON_BODY},
         .hiddenAbility = ABILITY_DOLL_WALL,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 40,
     },
     [SPECIES_TMEDICINE] = 
     {
@@ -3785,7 +3934,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_POISON_BODY, ABILITY_POISON_BODY},
         .hiddenAbility = ABILITY_CATALYST,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 40,
     },
     [SPECIES_CYUUKA] = 
     {
@@ -3810,7 +3960,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_UNNERVE, ABILITY_UNNERVE},
         .hiddenAbility = ABILITY_PRESSURE,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 60,
     },
     [SPECIES_YUUKA] = 
     {
@@ -3835,7 +3986,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_UNNERVE, ABILITY_UNNERVE},
         .hiddenAbility = ABILITY_PRESSURE,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 100,
     },
     [SPECIES_AYUUKA] = 
     {
@@ -3860,7 +4012,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_UNNERVE, ABILITY_UNNERVE},
         .hiddenAbility = ABILITY_PRESSURE,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 100,
     },
     [SPECIES_TYUUKA] = 
     {
@@ -3885,7 +4038,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_UNNERVE, ABILITY_UNNERVE},
         .hiddenAbility = ABILITY_PRESSURE,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 100,
     },
     [SPECIES_CKOMACHI] = 
     {
@@ -3910,7 +4064,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_OWN_TEMPO, ABILITY_SWIFT_SWIM},
         .hiddenAbility = ABILITY_SLUSH_RUSH,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 40,
     },
     [SPECIES_KOMACHI] = 
     {
@@ -3935,7 +4090,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_OWN_TEMPO, ABILITY_SWIFT_SWIM},
         .hiddenAbility = ABILITY_SLUSH_RUSH,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 80,
     },
     [SPECIES_AKOMACHI] = 
     {
@@ -3960,7 +4116,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_OWN_TEMPO, ABILITY_SWIFT_SWIM},
         .hiddenAbility = ABILITY_SLUSH_RUSH,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 80,
     },
     [SPECIES_SKOMACHI] = 
     {
@@ -3985,7 +4142,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_OWN_TEMPO, ABILITY_SWIFT_SWIM},
         .hiddenAbility = ABILITY_SLUSH_RUSH,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 80,
     },
     [SPECIES_CEIKI] = 
     {
@@ -4010,7 +4168,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_LECTURE, ABILITY_LECTURE},
         .hiddenAbility = ABILITY_PRESSURE,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 80,
     },
     [SPECIES_EIKI] = 
     {
@@ -4035,7 +4194,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_LECTURE, ABILITY_LECTURE},
         .hiddenAbility = ABILITY_PRESSURE,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 120,
     },
     [SPECIES_AEIKI] = 
     {
@@ -4060,7 +4220,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_LECTURE, ABILITY_LECTURE},
         .hiddenAbility = ABILITY_PRESSURE,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 120,
     },
     [SPECIES_DEIKI] = 
     {
@@ -4085,7 +4246,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_LECTURE, ABILITY_LECTURE},
         .hiddenAbility = ABILITY_PRESSURE,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 120,
     },
     [SPECIES_AKYUU] = 
     {
@@ -4110,7 +4272,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_TRACE, ABILITY_FOCUS},
         .hiddenAbility = ABILITY_LECTURE,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 20,
     },
     [SPECIES_CSHIZUHA] = 
     {
@@ -4135,7 +4298,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_CHLOROPHYLL, ABILITY_INNER_POWER},
         .hiddenAbility = ABILITY_OWN_TEMPO,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 20,
     },
     [SPECIES_SHIZUHA] = 
     {
@@ -4160,7 +4324,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_CHLOROPHYLL, ABILITY_CHEERFUL},
         .hiddenAbility = ABILITY_OWN_TEMPO,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 40,
     },
     [SPECIES_SSHIZUHA] = 
     {
@@ -4185,7 +4350,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_CHLOROPHYLL, ABILITY_CHEERFUL},
         .hiddenAbility = ABILITY_OWN_TEMPO,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 40,
     },
     [SPECIES_HSHIZUHA] = 
     {
@@ -4210,7 +4376,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_CHLOROPHYLL, ABILITY_INNER_POWER},
         .hiddenAbility = ABILITY_OWN_TEMPO,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 40,
     },
     [SPECIES_CMINORIKO] = 
     {
@@ -4235,7 +4402,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_CHLOROPHYLL, ABILITY_HARVEST},
         .hiddenAbility = ABILITY_CLOUD_NINE,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 20,
     },
     [SPECIES_MINORIKO] = 
     {
@@ -4260,7 +4428,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_CHLOROPHYLL, ABILITY_HARVEST},
         .hiddenAbility = ABILITY_CLOUD_NINE,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 40,
     },
     [SPECIES_AMINORIKO] = 
     {
@@ -4285,7 +4454,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_CHLOROPHYLL, ABILITY_HARVEST},
         .hiddenAbility = ABILITY_UNNERVE,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 40,
     },
     [SPECIES_DMINORIKO] = 
     {
@@ -4310,7 +4480,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_CHLOROPHYLL, ABILITY_HARVEST},
         .hiddenAbility = ABILITY_CLOUD_NINE,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 40,
     },
     [SPECIES_AKI_SISTERS] = 
     {
@@ -4335,7 +4506,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_CHLOROPHYLL, ABILITY_HARVEST},
         .hiddenAbility = ABILITY_SCRAPPY,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 80,
     },
     [SPECIES_CHINA] = 
     {
@@ -4360,7 +4532,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_CURSED_BODY, ABILITY_LEVITATE},
         .hiddenAbility = ABILITY_STRANGE_MIST,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 20,
     },
     [SPECIES_HINA] = 
     {
@@ -4385,7 +4558,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_CURSED_BODY, ABILITY_LEVITATE},
         .hiddenAbility = ABILITY_STRANGE_MIST,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 40,
     },
     [SPECIES_AHINA] = 
     {
@@ -4410,7 +4584,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_CURSED_BODY, ABILITY_LEVITATE},
         .hiddenAbility = ABILITY_STRANGE_MIST,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 40,
     },
     [SPECIES_DHINA] = 
     {
@@ -4435,7 +4610,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_CURSED_BODY, ABILITY_LEVITATE},
         .hiddenAbility = ABILITY_STRANGE_MIST,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 40,
     },
     [SPECIES_CNITORI] = 
     {
@@ -4460,7 +4636,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_SWIFT_SWIM, ABILITY_RAIN_DISH},
         .hiddenAbility = ABILITY_SALVAGE_ARMOR,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 40,
     },
     [SPECIES_NITORI] = 
     {
@@ -4485,7 +4662,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_SWIFT_SWIM, ABILITY_RAIN_DISH},
         .hiddenAbility = ABILITY_SALVAGE_ARMOR,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 80,
     },
     [SPECIES_ANITORI] = 
     {
@@ -4510,7 +4688,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_SWIFT_SWIM, ABILITY_RAIN_DISH},
         .hiddenAbility = ABILITY_VOLT_ABSORB,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 80,
     },
     [SPECIES_TNITORI] = 
     {
@@ -4535,7 +4714,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_FILTER, ABILITY_MAINTENANCE},
         .hiddenAbility = ABILITY_VOLT_ABSORB,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 80,
     },
     [SPECIES_CMOMIJI] = 
     {
@@ -4560,7 +4740,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_RUN_AWAY, ABILITY_EARLY_BIRD},
         .hiddenAbility = ABILITY_UNNERVE,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 20,
     },
     [SPECIES_MOMIJI] = 
     {
@@ -4585,7 +4766,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_INTIMIDATE, ABILITY_GUTS},
         .hiddenAbility = ABILITY_UNNERVE,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 40,
     },
     [SPECIES_DMOMIJI] = 
     {
@@ -4610,7 +4792,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_INTIMIDATE, ABILITY_EARLY_BIRD},
         .hiddenAbility = ABILITY_SALVAGE_ARMOR,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 40,
     },
     [SPECIES_CSANAE] = 
     {
@@ -4635,7 +4818,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_SERENE_GRACE, ABILITY_SERENE_GRACE},
         .hiddenAbility = ABILITY_SUPER_LUCK,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 40,
     },
     [SPECIES_SANAE] = 
     {
@@ -4660,7 +4844,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_SERENE_GRACE, ABILITY_SERENE_GRACE},
         .hiddenAbility = ABILITY_SUPER_LUCK,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 80,
     },
     [SPECIES_ASANAE] = 
     {
@@ -4685,7 +4870,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_SERENE_GRACE, ABILITY_SERENE_GRACE},
         .hiddenAbility = ABILITY_UNAWARE,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 80,
     },
     [SPECIES_TSANAE] = 
     {
@@ -4710,7 +4896,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_SERENE_GRACE, ABILITY_SERENE_GRACE},
         .hiddenAbility = ABILITY_PRESSURE,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 80,
     },
     [SPECIES_JKSANAE] = 
     {
@@ -4735,7 +4922,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_DRIZZLE, ABILITY_DRIZZLE},
         .hiddenAbility = ABILITY_DIVA,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 80,
     },
     [SPECIES_CKANAKO] = 
     {
@@ -4760,7 +4948,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_PRESSURE, ABILITY_LIGHTNING_ROD},
         .hiddenAbility = ABILITY_FLAWLESS,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 80,
     },
     [SPECIES_KANAKO] = 
     {
@@ -4785,7 +4974,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_PRESSURE, ABILITY_LIGHTNING_ROD},
         .hiddenAbility = ABILITY_FLAWLESS,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 120,
     },
     [SPECIES_AKANAKO] = 
     {
@@ -4810,7 +5000,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_PRESSURE, ABILITY_LIGHTNING_ROD},
         .hiddenAbility = ABILITY_FLAWLESS,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 120,
     },
     [SPECIES_DKANAKO] = 
     {
@@ -4835,7 +5026,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_PRESSURE, ABILITY_LIGHTNING_ROD},
         .hiddenAbility = ABILITY_FLAWLESS,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 120,
     },
     [SPECIES_CSUWAKO] = 
     {
@@ -4860,7 +5052,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_WATER_VEIL, ABILITY_DAMP},
         .hiddenAbility = ABILITY_CURSED_BODY,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 80,
     },
     [SPECIES_SUWAKO] = 
     {
@@ -4885,7 +5078,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_WATER_VEIL, ABILITY_DAMP},
         .hiddenAbility = ABILITY_CURSED_BODY,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 120,
     },
     [SPECIES_ASUWAKO] = 
     {
@@ -4910,7 +5104,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_WATER_VEIL, ABILITY_DAMP},
         .hiddenAbility = ABILITY_CURSED_BODY,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 120,
     },
     [SPECIES_DSUWAKO] = 
     {
@@ -4935,7 +5130,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_WATER_VEIL, ABILITY_DAMP},
         .hiddenAbility = ABILITY_CURSED_BODY,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 120,
     },
     [SPECIES_CREISEN_II] = 
     {
@@ -4960,7 +5156,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_OWN_TEMPO, ABILITY_RATTLED},
         .hiddenAbility = ABILITY_TECHNICIAN,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 20,
     },
     [SPECIES_REISEN_II] = 
     {
@@ -4985,7 +5182,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_UNAWARE, ABILITY_RATTLED},
         .hiddenAbility = ABILITY_TECHNICIAN,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 40,
     },
     [SPECIES_CTOYOHIME] = 
     {
@@ -5010,7 +5208,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_OWN_TEMPO, ABILITY_OWN_TEMPO},
         .hiddenAbility = ABILITY_FLAWLESS,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 80,
     },
     [SPECIES_TOYOHIME] = 
     {
@@ -5035,7 +5234,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_OWN_TEMPO, ABILITY_OWN_TEMPO},
         .hiddenAbility = ABILITY_FLAWLESS,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 120,
     },
     [SPECIES_TTOYOHIME] = 
     {
@@ -5060,7 +5260,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_OWN_TEMPO, ABILITY_OWN_TEMPO},
         .hiddenAbility = ABILITY_FLAWLESS,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 120,
     },
     [SPECIES_CYORIHIME] = 
     {
@@ -5085,7 +5286,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_KEEN_EYE, ABILITY_KEEN_EYE},
         .hiddenAbility = ABILITY_FLAWLESS,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 80,
     },
     [SPECIES_YORIHIME] = 
     {
@@ -5110,7 +5312,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_KEEN_EYE, ABILITY_KEEN_EYE},
         .hiddenAbility = ABILITY_FLAWLESS,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 120,
     },
     [SPECIES_SYORIHIME] = 
     {
@@ -5135,7 +5338,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_KEEN_EYE, ABILITY_KEEN_EYE},
         .hiddenAbility = ABILITY_FLAWLESS,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 120,
     },
     [SPECIES_CIKU] = 
     {
@@ -5160,7 +5364,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_STATIC, ABILITY_LIGHTNING_ROD},
         .hiddenAbility = ABILITY_STORM_SHAWL,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 40,
     },
     [SPECIES_IKU] = 
     {
@@ -5185,7 +5390,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_STATIC, ABILITY_LIGHTNING_ROD},
         .hiddenAbility = ABILITY_STORM_SHAWL,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 80,
     },
     [SPECIES_DIKU] = 
     {
@@ -5210,7 +5416,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_STATIC, ABILITY_LEVITATE},
         .hiddenAbility = ABILITY_STORM_SHAWL,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 80,
     },
     [SPECIES_TIKU] = 
     {
@@ -5235,7 +5442,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_STATIC, ABILITY_MOTOR_DRIVE},
         .hiddenAbility = ABILITY_STORM_SHAWL,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 80,
     },
     [SPECIES_CTENSHI] = 
     {
@@ -5260,7 +5468,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_FLAWLESS, ABILITY_HISOUTEN},
         .hiddenAbility = ABILITY_STURDY,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 60,
     },
     [SPECIES_TENSHI] = 
     {
@@ -5285,7 +5494,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_FLAWLESS, ABILITY_HISOUTEN},
         .hiddenAbility = ABILITY_STURDY,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 100,
     },
     [SPECIES_ATENSHI] = 
     {
@@ -5310,7 +5520,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_FLAWLESS, ABILITY_HISOUTEN},
         .hiddenAbility = ABILITY_STURDY,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 100,
     },
     [SPECIES_DTENSHI] = 
     {
@@ -5335,7 +5546,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_FLAWLESS, ABILITY_HISOUTEN},
         .hiddenAbility = ABILITY_STURDY,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 100,
     },
     [SPECIES_CKISUME] = 
     {
@@ -5360,7 +5572,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_STURDY, ABILITY_GUARD_ARMOR},
         .hiddenAbility = ABILITY_STORM_DRAIN,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 20,
     },
     [SPECIES_KISUME] = 
     {
@@ -5385,7 +5598,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_STURDY, ABILITY_GUARD_ARMOR},
         .hiddenAbility = ABILITY_STORM_DRAIN,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 40,
     },
     [SPECIES_TKISUME] = 
     {
@@ -5410,7 +5624,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_STURDY, ABILITY_GUARD_ARMOR},
         .hiddenAbility = ABILITY_STORM_DRAIN,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 40,
     },
     [SPECIES_CYAMAME] = 
     {
@@ -5435,7 +5650,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_INFECTIOUS, ABILITY_CONTAGION},
         .hiddenAbility = ABILITY_UNNERVE,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 20,
     },
     [SPECIES_YAMAME] = 
     {
@@ -5460,7 +5676,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_INFECTIOUS, ABILITY_CONTAGION},
         .hiddenAbility = ABILITY_UNNERVE,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 40,
     },
     [SPECIES_SYAMAME] = 
     {
@@ -5485,7 +5702,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_INFECTIOUS, ABILITY_CONTAGION},
         .hiddenAbility = ABILITY_UNNERVE,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 40,
     },
     [SPECIES_TYAMAME] = 
     {
@@ -5510,7 +5728,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_INFECTIOUS, ABILITY_CONTAGION},
         .hiddenAbility = ABILITY_UNNERVE,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 40,
     },
     [SPECIES_CPARSEE] = 
     {
@@ -5535,7 +5754,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_JEALOUSY, ABILITY_INSOMNIA},
         .hiddenAbility = ABILITY_LAST_GRUDGE,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 20,
     },
     [SPECIES_PARSEE] = 
     {
@@ -5560,7 +5780,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_JEALOUSY, ABILITY_INSOMNIA},
         .hiddenAbility = ABILITY_LAST_GRUDGE,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 60,
     },
     [SPECIES_DPARSEE] = 
     {
@@ -5585,7 +5806,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_COLLECTOR, ABILITY_INSOMNIA},
         .hiddenAbility = ABILITY_LAST_GRUDGE,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 60,
     },
     [SPECIES_TPARSEE] = 
     {
@@ -5610,7 +5832,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_JEALOUSY, ABILITY_INSOMNIA},
         .hiddenAbility = ABILITY_LAST_GRUDGE,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 60,
     },
     [SPECIES_CYUUGI] = 
     {
@@ -5635,7 +5858,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_HI_STRENGTH, ABILITY_MOLD_BREAKER},
         .hiddenAbility = ABILITY_JUSTIFIED,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 60,
     },
     [SPECIES_YUUGI] = 
     {
@@ -5660,7 +5884,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_HI_STRENGTH, ABILITY_MOLD_BREAKER},
         .hiddenAbility = ABILITY_JUSTIFIED,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 100,
     },
     [SPECIES_AYUUGI] = 
     {
@@ -5685,7 +5910,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_HI_STRENGTH, ABILITY_MOLD_BREAKER},
         .hiddenAbility = ABILITY_JUSTIFIED,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 100,
     },
     [SPECIES_DYUUGI] = 
     {
@@ -5710,7 +5936,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_HI_STRENGTH, ABILITY_MOLD_BREAKER},
         .hiddenAbility = ABILITY_JUSTIFIED,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 100,
     },
     [SPECIES_CSATORI] = 
     {
@@ -5735,7 +5962,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_TRACE, ABILITY_TRACE},
         .hiddenAbility = ABILITY_RECOLLECTION,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 40,
     },
     [SPECIES_SATORI] = 
     {
@@ -5760,7 +5988,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_TRACE, ABILITY_TRACE},
         .hiddenAbility = ABILITY_RECOLLECTION,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 80,
     },
     [SPECIES_DSATORI] = 
     {
@@ -5785,7 +6014,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_SHADOW_TAG, ABILITY_SHADOW_TAG},
         .hiddenAbility = ABILITY_RECOLLECTION,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 80,
     },
     [SPECIES_TSATORI] = 
     {
@@ -5810,7 +6040,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_TRACE, ABILITY_TRACE},
         .hiddenAbility = ABILITY_RECOLLECTION,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 80,
     },
     [SPECIES_CRIN] = 
     {
@@ -5835,7 +6066,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_PICKUP, ABILITY_FLASH_FIRE},
         .hiddenAbility = ABILITY_MOXIE,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 40,
     },
     [SPECIES_RIN] = 
     {
@@ -5860,7 +6092,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_INTIMIDATE, ABILITY_FLASH_FIRE},
         .hiddenAbility = ABILITY_MOXIE,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 80,
     },
     [SPECIES_ARIN] = 
     {
@@ -5885,7 +6118,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_LIMBER, ABILITY_FLASH_FIRE},
         .hiddenAbility = ABILITY_MOXIE,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 80,
     },
     [SPECIES_SRIN] = 
     {
@@ -5910,7 +6144,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_LIMBER, ABILITY_FLASH_FIRE},
         .hiddenAbility = ABILITY_MOXIE,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 80,
     },
     [SPECIES_ZFAIRY] = 
     {
@@ -5935,7 +6170,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_PLAY_GHOST, ABILITY_PLAY_GHOST},
         .hiddenAbility = ABILITY_LAST_WISH,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 40,
     },
     [SPECIES_CUTSUHO] = 
     {
@@ -5960,7 +6196,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_INNER_POWER, ABILITY_FIRE_VEIL},
         .hiddenAbility = ABILITY_AFTERMATH,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 60,
     },
     [SPECIES_UTSUHO] = 
     {
@@ -5985,7 +6222,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_INNER_POWER, ABILITY_FIRE_VEIL},
         .hiddenAbility = ABILITY_AFTERMATH,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 100,
     },
     [SPECIES_AUTSUHO] = 
     {
@@ -6010,7 +6248,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_INNER_POWER, ABILITY_FIRE_VEIL},
         .hiddenAbility = ABILITY_AFTERMATH,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 100,
     },
     [SPECIES_SUTSUHO] = 
     {
@@ -6035,7 +6274,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_INNER_POWER, ABILITY_FIRE_VEIL},
         .hiddenAbility = ABILITY_AFTERMATH,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 100,
     },
     [SPECIES_CKOISHI] = 
     {
@@ -6060,7 +6300,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_MAGIC_GUARD, ABILITY_UNAWARE},
         .hiddenAbility = ABILITY_CLOUD_NINE,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 80,
     },
     [SPECIES_KOISHI] = 
     {
@@ -6085,7 +6326,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_MAGIC_GUARD, ABILITY_UNAWARE},
         .hiddenAbility = ABILITY_CLOUD_NINE,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 120,
     },
     [SPECIES_AKOISHI] = 
     {
@@ -6110,7 +6352,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_MAGIC_GUARD, ABILITY_UNAWARE},
         .hiddenAbility = ABILITY_CLOUD_NINE,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 120,
     },
     [SPECIES_SKOISHI] = 
     {
@@ -6135,7 +6378,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_MAGIC_GUARD, ABILITY_UNAWARE},
         .hiddenAbility = ABILITY_CLOUD_NINE,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 120,
     },
     [SPECIES_CNAZRIN] = 
     {
@@ -6160,7 +6404,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_PICKUP, ABILITY_SAND_VEIL},
         .hiddenAbility = ABILITY_SAND_RUSH,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 20,
     },
     [SPECIES_NAZRIN] = 
     {
@@ -6185,7 +6430,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_COLLECTOR, ABILITY_SAND_VEIL},
         .hiddenAbility = ABILITY_SAND_RUSH,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 60,
     },
     [SPECIES_TNAZRIN] = 
     {
@@ -6210,7 +6456,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_COLLECTOR, ABILITY_SAND_VEIL},
         .hiddenAbility = ABILITY_SAND_RUSH,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 60,
     },
     [SPECIES_HNAZRIN] = 
     {
@@ -6235,7 +6482,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_COLLECTOR, ABILITY_SAND_VEIL},
         .hiddenAbility = ABILITY_FILTER,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 60,
     },
     [SPECIES_CKOGASA] = 
     {
@@ -6260,7 +6508,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_INTIMIDATE, ABILITY_INTIMIDATE},
         .hiddenAbility = ABILITY_UNNERVE,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 20,
     },
     [SPECIES_KOGASA] = 
     {
@@ -6285,7 +6534,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_INTIMIDATE, ABILITY_INTIMIDATE},
         .hiddenAbility = ABILITY_UNNERVE,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 60,
     },
     [SPECIES_SKOGASA] = 
     {
@@ -6310,7 +6560,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_INTIMIDATE, ABILITY_INTIMIDATE},
         .hiddenAbility = ABILITY_UNNERVE,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 60,
     },
     [SPECIES_TKOGASA] = 
     {
@@ -6335,7 +6586,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_SERENE_GRACE, ABILITY_SERENE_GRACE},
         .hiddenAbility = ABILITY_DRIZZLE,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 60,
     },
     [SPECIES_CICHIRIN] = 
     {
@@ -6360,7 +6612,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_UNZAN, ABILITY_FOCUS},
         .hiddenAbility = ABILITY_CLOUD_NINE,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 20,
     },
     [SPECIES_ICHIRIN] = 
     {
@@ -6385,7 +6638,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_UNZAN, ABILITY_UNZAN},
         .hiddenAbility = ABILITY_CLOUD_NINE,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 60,
     },
     [SPECIES_DICHIRIN] = 
     {
@@ -6410,7 +6664,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_GATE_KEEPER, ABILITY_FOCUS},
         .hiddenAbility = ABILITY_CLOUD_NINE,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 60,
     },
     [SPECIES_TICHIRIN] = 
     {
@@ -6435,7 +6690,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_UNZAN, ABILITY_FOCUS},
         .hiddenAbility = ABILITY_CLOUD_NINE,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 60,
     },
     [SPECIES_CMURASA] = 
     {
@@ -6460,7 +6716,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_SWIFT_SWIM, ABILITY_CURSED_BODY},
         .hiddenAbility = ABILITY_STORM_DRAIN,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 40,
     },
     [SPECIES_MURASA] = 
     {
@@ -6485,7 +6742,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_SWIFT_SWIM, ABILITY_CURSED_BODY},
         .hiddenAbility = ABILITY_STORM_DRAIN,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 80,
     },
     [SPECIES_AMURASA] = 
     {
@@ -6510,7 +6768,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_SWIFT_SWIM, ABILITY_CURSED_BODY},
         .hiddenAbility = ABILITY_INNER_POWER,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 80,
     },
     [SPECIES_DMURASA] = 
     {
@@ -6535,7 +6794,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_SWIFT_SWIM, ABILITY_CURSED_BODY},
         .hiddenAbility = ABILITY_STORM_DRAIN,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 80,
     },
     [SPECIES_CSHOU] = 
     {
@@ -6560,7 +6820,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_INNER_FOCUS, ABILITY_LIGHTNING_ROD},
         .hiddenAbility = ABILITY_PRESSURE,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 60,
     },
     [SPECIES_SHOU] = 
     {
@@ -6585,7 +6846,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_INNER_FOCUS, ABILITY_LIGHTNING_ROD},
         .hiddenAbility = ABILITY_PRESSURE,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 100,
     },
     [SPECIES_ASHOU] = 
     {
@@ -6610,7 +6872,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_INNER_FOCUS, ABILITY_LIGHTNING_ROD},
         .hiddenAbility = ABILITY_PRESSURE,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 100,
     },
     [SPECIES_TSHOU] = 
     {
@@ -6635,7 +6898,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_INNER_FOCUS, ABILITY_LIGHTNING_ROD},
         .hiddenAbility = ABILITY_PRESSURE,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 100,
     },
     [SPECIES_CBYAKUREN] = 
     {
@@ -6660,7 +6924,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_MAGIC_BARRIER, ABILITY_INNER_FOCUS},
         .hiddenAbility = ABILITY_OBLIVIOUS,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 80,
     },
     [SPECIES_BYAKUREN] = 
     {
@@ -6685,7 +6950,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_MAGIC_BARRIER, ABILITY_INNER_FOCUS},
         .hiddenAbility = ABILITY_OBLIVIOUS,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 120,
     },
     [SPECIES_DBYAKUREN] = 
     {
@@ -6710,7 +6976,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_MAGIC_BARRIER, ABILITY_INNER_FOCUS},
         .hiddenAbility = ABILITY_OBLIVIOUS,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 120,
     },
     [SPECIES_TBYAKUREN] = 
     {
@@ -6735,7 +7002,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_MAGIC_BARRIER, ABILITY_INNER_FOCUS},
         .hiddenAbility = ABILITY_OBLIVIOUS,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 120,
     },
     [SPECIES_CNUE] = 
     {
@@ -6760,7 +7028,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_INFILTRATOR, ABILITY_PRESSURE},
         .hiddenAbility = ABILITY_MYSTERIOUS,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 80,
     },
     [SPECIES_NUE] = 
     {
@@ -6785,7 +7054,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_INFILTRATOR, ABILITY_PRESSURE},
         .hiddenAbility = ABILITY_MYSTERIOUS,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 120,
     },
     [SPECIES_ANUE] = 
     {
@@ -6810,7 +7080,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_INFILTRATOR, ABILITY_PRESSURE},
         .hiddenAbility = ABILITY_MYSTERIOUS,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 120,
     },
     [SPECIES_TNUE] = 
     {
@@ -6835,7 +7106,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_INFILTRATOR, ABILITY_PRESSURE},
         .hiddenAbility = ABILITY_LEVITATE,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 120,
     },
     [SPECIES_TENSOKU] = 
     {
@@ -6860,7 +7132,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_MAINTENANCE, ABILITY_STURDY},
         .hiddenAbility = ABILITY_FILTER,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 120,
     },
     [SPECIES_SHANGHAI] = 
     {
@@ -6885,7 +7158,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_STURDY, ABILITY_MAINTENANCE},
         .hiddenAbility = ABILITY_DOWNLOAD,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 20,
     },
     [SPECIES_HOURAI] = 
     {
@@ -6910,7 +7184,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_STURDY, ABILITY_MAINTENANCE},
         .hiddenAbility = ABILITY_DOWNLOAD,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 20,
     },
     [SPECIES_GOLIATH] = 
     {
@@ -6935,7 +7210,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_STURDY, ABILITY_MAINTENANCE},
         .hiddenAbility = ABILITY_DOWNLOAD,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 80,
     },
     [SPECIES_NAMAZU] = 
     {
@@ -6960,7 +7236,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_WATER_ABSORB, ABILITY_STORM_DRAIN},
         .hiddenAbility = ABILITY_ANTICIPATION,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 60,
     },
     [SPECIES_CHATATE] = 
     {
@@ -6985,7 +7262,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_TRACE, ABILITY_FOCUS},
         .hiddenAbility = ABILITY_FOREWARN,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 40,
     },
     [SPECIES_HATATE] = 
     {
@@ -7010,7 +7288,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_TRACE, ABILITY_FOCUS},
         .hiddenAbility = ABILITY_FOREWARN,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 80,
     },
     [SPECIES_DHATATE] = 
     {
@@ -7035,7 +7314,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_TRACE, ABILITY_FOCUS},
         .hiddenAbility = ABILITY_FOREWARN,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 80,
     },
     [SPECIES_THATATE] = 
     {
@@ -7060,7 +7340,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_TRACE, ABILITY_FOCUS},
         .hiddenAbility = ABILITY_FOREWARN,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 80,
     },
     [SPECIES_CSUNNY] = 
     {
@@ -7085,7 +7366,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_VITAL_SPIRIT, ABILITY_VITAL_SPIRIT},
         .hiddenAbility = ABILITY_SOLAR_POWER,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 20,
     },
     [SPECIES_SUNNY] = 
     {
@@ -7110,7 +7392,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_FLASH_FIRE, ABILITY_FLASH_FIRE},
         .hiddenAbility = ABILITY_DROUGHT,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 40,
     },
     [SPECIES_ASUNNY] = 
     {
@@ -7135,7 +7418,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_FLASH_FIRE, ABILITY_FLASH_FIRE},
         .hiddenAbility = ABILITY_SOLAR_POWER,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 40,
     },
     [SPECIES_DSUNNY] = 
     {
@@ -7160,7 +7444,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_FLASH_FIRE, ABILITY_FLASH_FIRE},
         .hiddenAbility = ABILITY_SOLAR_POWER,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 40,
     },
     [SPECIES_CLUNA] = 
     {
@@ -7185,7 +7470,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_PICKUP, ABILITY_PICKUP},
         .hiddenAbility = ABILITY_SOUNDPROOF,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 20,
     },
     [SPECIES_LUNA] = 
     {
@@ -7210,7 +7496,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_VOLT_ABSORB, ABILITY_VOLT_ABSORB},
         .hiddenAbility = ABILITY_SOUNDPROOF,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 40,
     },
     [SPECIES_ALUNA] = 
     {
@@ -7235,7 +7522,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_VOLT_ABSORB, ABILITY_VOLT_ABSORB},
         .hiddenAbility = ABILITY_SOUNDPROOF,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 40,
     },
     [SPECIES_TLUNA] = 
     {
@@ -7260,7 +7548,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_VOLT_ABSORB, ABILITY_VOLT_ABSORB},
         .hiddenAbility = ABILITY_UNAWARE,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 40,
     },
     [SPECIES_CSTAR] = 
     {
@@ -7285,7 +7574,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_RUN_AWAY, ABILITY_RUN_AWAY},
         .hiddenAbility = ABILITY_FRISK,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 20,
     },
     [SPECIES_STAR] = 
     {
@@ -7310,7 +7600,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_WATER_ABSORB, ABILITY_WATER_ABSORB},
         .hiddenAbility = ABILITY_FRISK,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 40,
     },
     [SPECIES_ASTAR] = 
     {
@@ -7335,7 +7626,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_WATER_ABSORB, ABILITY_WATER_ABSORB},
         .hiddenAbility = ABILITY_MERCILESS,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 40,
     },
     [SPECIES_HSTAR] = 
     {
@@ -7360,7 +7652,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_WATER_ABSORB, ABILITY_WATER_ABSORB},
         .hiddenAbility = ABILITY_FRISK,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 40,
     },
     [SPECIES_RINNOSUKE] = 
     {
@@ -7385,7 +7678,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_COLLECTOR, ABILITY_OBLIVIOUS},
         .hiddenAbility = ABILITY_ANALYTIC,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 40,
     },
     [SPECIES_CTOKIKO] = 
     {
@@ -7410,7 +7704,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_LIMBER, ABILITY_EARLY_BIRD},
         .hiddenAbility = ABILITY_REACTIVE,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 20,
     },
     [SPECIES_TOKIKO] = 
     {
@@ -7435,7 +7730,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_LIMBER, ABILITY_EARLY_BIRD},
         .hiddenAbility = ABILITY_REACTIVE,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 40,
     },
     [SPECIES_ATOKIKO] = 
     {
@@ -7460,7 +7756,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_LIMBER, ABILITY_GUTS},
         .hiddenAbility = ABILITY_CONTRARY,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 40,
     },
     [SPECIES_CKYOUKO] = 
     {
@@ -7485,7 +7782,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_MANIC_ECHO, ABILITY_DOUR_ECHO},
         .hiddenAbility = ABILITY_SOUNDPROOF,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 20,
     },
     [SPECIES_KYOUKO] = 
     {
@@ -7510,7 +7808,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_MANIC_ECHO, ABILITY_DOUR_ECHO},
         .hiddenAbility = ABILITY_SOUNDPROOF,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 40,
     },
     [SPECIES_TKYOUKO] = 
     {
@@ -7535,7 +7834,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_MANIC_ECHO, ABILITY_DOUR_ECHO},
         .hiddenAbility = ABILITY_SOUNDPROOF,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 40,
     },
     [SPECIES_CYOSHIKA] = 
     {
@@ -7560,7 +7860,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_GATE_KEEPER, ABILITY_PRESSURE},
         .hiddenAbility = ABILITY_AFTERMATH,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 20,
     },
     [SPECIES_YOSHIKA] = 
     {
@@ -7585,7 +7886,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_GATE_KEEPER, ABILITY_PRESSURE},
         .hiddenAbility = ABILITY_AFTERMATH,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 60,
     },
     [SPECIES_HYOSHIKA] = 
     {
@@ -7610,7 +7912,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_GATE_KEEPER, ABILITY_PRESSURE},
         .hiddenAbility = ABILITY_AFTERMATH,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 60,
     },
     [SPECIES_CSEIGA] = 
     {
@@ -7635,7 +7938,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_INFILTRATOR, ABILITY_LEVITATE},
         .hiddenAbility = ABILITY_MERCILESS,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 40,
     },
     [SPECIES_SEIGA] = 
     {
@@ -7660,7 +7964,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_INFILTRATOR, ABILITY_LEVITATE},
         .hiddenAbility = ABILITY_MERCILESS,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 80,
     },
     [SPECIES_SSEIGA] = 
     {
@@ -7685,7 +7990,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_INFILTRATOR, ABILITY_LEVITATE},
         .hiddenAbility = ABILITY_MERCILESS,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 80,
     },
     [SPECIES_CTOJIKO] = 
     {
@@ -7710,7 +8016,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_VOLT_ABSORB, ABILITY_STATIC},
         .hiddenAbility = ABILITY_CURSED_BODY,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 40,
     },
     [SPECIES_TOJIKO] = 
     {
@@ -7735,7 +8042,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_VOLT_ABSORB, ABILITY_STATIC},
         .hiddenAbility = ABILITY_CURSED_BODY,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 80,
     },
     [SPECIES_STOJIKO] = 
     {
@@ -7760,7 +8068,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_STEADFAST, ABILITY_STATIC},
         .hiddenAbility = ABILITY_POWER_LEAK,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 80,
     },
     [SPECIES_CFUTO] = 
     {
@@ -7785,7 +8094,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_FLASH_FIRE, ABILITY_MOXIE},
         .hiddenAbility = ABILITY_FOCUS,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 60,
     },
     [SPECIES_FUTO] = 
     {
@@ -7810,7 +8120,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_FLASH_FIRE, ABILITY_MOXIE},
         .hiddenAbility = ABILITY_FOCUS,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 100,
     },
     [SPECIES_TFUTO] = 
     {
@@ -7835,7 +8146,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_FLASH_FIRE, ABILITY_MOXIE},
         .hiddenAbility = ABILITY_FOCUS,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 100,
     },
     [SPECIES_CMIKO] = 
     {
@@ -7860,7 +8172,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_SOUNDPROOF, ABILITY_FOREWARN},
         .hiddenAbility = ABILITY_SAND_RUSH,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 80,
     },
     [SPECIES_MIKO] = 
     {
@@ -7885,7 +8198,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_SOUNDPROOF, ABILITY_FOREWARN},
         .hiddenAbility = ABILITY_SAND_RUSH,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 120,
     },
     [SPECIES_AMIKO] = 
     {
@@ -7910,7 +8224,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_SOUNDPROOF, ABILITY_INTIMIDATE},
         .hiddenAbility = ABILITY_SAND_RUSH,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 120,
     },
     [SPECIES_DMIKO] = 
     {
@@ -7935,7 +8250,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_SOUNDPROOF, ABILITY_GUARD_ARMOR},
         .hiddenAbility = ABILITY_FILTER,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 120,
     },
     [SPECIES_CMAMIZOU] = 
     {
@@ -7960,7 +8276,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_PICKUP, ABILITY_KEEN_EYE},
         .hiddenAbility = ABILITY_LIMBER,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 80,
     },
     [SPECIES_MAMIZOU] = 
     {
@@ -7985,7 +8302,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_QUICK_FEET, ABILITY_FOCUS},
         .hiddenAbility = ABILITY_LIMBER,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 120,
     },
     [SPECIES_DMAMIZOU] = 
     {
@@ -8010,7 +8328,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_MYSTERIOUS, ABILITY_MYSTERIOUS},
         .hiddenAbility = ABILITY_PROTEAN,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 120,
     },
     [SPECIES_CKOSUZU] = 
     {
@@ -8035,7 +8354,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_RUN_AWAY, ABILITY_SCRAPPY},
         .hiddenAbility = ABILITY_RATTLED,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 20,
     },
     [SPECIES_KOSUZU] = 
     {
@@ -8060,7 +8380,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_CHEERFUL, ABILITY_SCRAPPY},
         .hiddenAbility = ABILITY_RATTLED,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 40,
     },
     [SPECIES_JINYOU] = 
     {
@@ -8085,7 +8406,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_FOREWARN, ABILITY_ANTICIPATION},
         .hiddenAbility = ABILITY_MAGIC_BARRIER,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 60,
     },
     [SPECIES_CKOKORO] = 
     {
@@ -8110,7 +8432,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_OWN_TEMPO, ABILITY_OWN_TEMPO},
         .hiddenAbility = ABILITY_OBLIVIOUS,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 60,
     },
     [SPECIES_KOKORO] = 
     {
@@ -8135,7 +8458,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_OWN_TEMPO, ABILITY_OWN_TEMPO},
         .hiddenAbility = ABILITY_OBLIVIOUS,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 100,
     },
     [SPECIES_AKOKORO] = 
     {
@@ -8160,7 +8484,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_OWN_TEMPO, ABILITY_OWN_TEMPO},
         .hiddenAbility = ABILITY_OBLIVIOUS,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 100,
     },
     [SPECIES_TKOKORO] = 
     {
@@ -8185,7 +8510,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_INTIMIDATE, ABILITY_INTIMIDATE},
         .hiddenAbility = ABILITY_BERSERK,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 100,
     },
     [SPECIES_CWAKASAGIHIME] = 
     {
@@ -8210,7 +8536,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_SWIFT_SWIM, ABILITY_HYDRATION},
         .hiddenAbility = ABILITY_STORM_DRAIN,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 20,
     },
     [SPECIES_WAKASAGIHIME] = 
     {
@@ -8235,7 +8562,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_SWIFT_SWIM, ABILITY_HYDRATION},
         .hiddenAbility = ABILITY_STORM_DRAIN,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 40,
     },
     [SPECIES_DWAKASAGIHIME] = 
     {
@@ -8260,7 +8588,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_WATER_ABSORB, ABILITY_HYDRATION},
         .hiddenAbility = ABILITY_STORM_DRAIN,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 40,
     },
     [SPECIES_CSEKIBANKI] = 
     {
@@ -8285,7 +8614,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_STURDY, ABILITY_GUARD_ARMOR},
         .hiddenAbility = ABILITY_SKILL_LINK,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 20,
     },
     [SPECIES_SEKIBANKI] = 
     {
@@ -8310,7 +8640,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_STURDY, ABILITY_GUARD_ARMOR},
         .hiddenAbility = ABILITY_SKILL_LINK,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 60,
     },
     [SPECIES_TSEKIBANKI] = 
     {
@@ -8335,7 +8666,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_DISGUISE, ABILITY_DISGUISE},
         .hiddenAbility = ABILITY_DISGUISE,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 60,
     },
     [SPECIES_CKAGEROU] = 
     {
@@ -8360,7 +8692,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_INSOMNIA, ABILITY_LIMBER},
         .hiddenAbility = ABILITY_NO_GUARD,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 20,
     },
     [SPECIES_KAGEROU] = 
     {
@@ -8385,7 +8718,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_INSOMNIA, ABILITY_LIMBER},
         .hiddenAbility = ABILITY_NO_GUARD,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 60,
     },
     [SPECIES_HKAGEROU] = 
     {
@@ -8410,7 +8744,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_INSOMNIA, ABILITY_INTIMIDATE},
         .hiddenAbility = ABILITY_NO_GUARD,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 60,
     },
     [SPECIES_CBENBEN] = 
     {
@@ -8435,7 +8770,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_SOUNDPROOF, ABILITY_LEVITATE},
         .hiddenAbility = ABILITY_ANALYTIC,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 20,
     },
     [SPECIES_BENBEN] = 
     {
@@ -8460,7 +8796,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_SOUNDPROOF, ABILITY_LEVITATE},
         .hiddenAbility = ABILITY_ANALYTIC,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 60,
     },
     [SPECIES_CYATSUHASHI] = 
     {
@@ -8485,7 +8822,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_SOUNDPROOF, ABILITY_LEVITATE},
         .hiddenAbility = ABILITY_CHEERFUL,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 20,
     },
     [SPECIES_YATSUHASHI] = 
     {
@@ -8510,7 +8848,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_SOUNDPROOF, ABILITY_LEVITATE},
         .hiddenAbility = ABILITY_CHEERFUL,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 60,
     },
     [SPECIES_CSEIJA] = 
     {
@@ -8535,7 +8874,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_CONTRARY, ABILITY_CONTRARY},
         .hiddenAbility = ABILITY_PERVERSION,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 40,
     },
     [SPECIES_SEIJA] = 
     {
@@ -8560,7 +8900,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_CONTRARY, ABILITY_CONTRARY},
         .hiddenAbility = ABILITY_PERVERSION,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 80,
     },
     [SPECIES_DSEIJA] = 
     {
@@ -8585,20 +8926,21 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_CONTRARY, ABILITY_CONTRARY},
         .hiddenAbility = ABILITY_PERVERSION,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 80,
     },
     [SPECIES_CSHINMYOUMARU] = 
     {
         .baseHP = 30,
-        .baseAttack = 45,
+        .baseAttack = 25,
         .baseDefense = 80,
-        .baseSpAttack = 95,
-        .baseSpDefense = 70,
+        .baseSpAttack = 90,
+        .baseSpDefense = 65,
         .baseSpeed = 80,
         .type1 = TYPE_FIGHTING,
         .type2 = TYPE_FIGHTING,
-        .catchRate = 115,
-        .expYield = 80,
+        .catchRate = 175,
+        .expYield = 74,
         .item1 = ITEM_NONE,
         .item2 = ITEM_NONE,
         .genderRatio = PERCENT_FEMALE(50),
@@ -8607,22 +8949,23 @@ const struct BaseStats gBaseStats[] =
         .growthRate = GROWTH_MEDIUM_FAST,
         .eggGroup1 = EGG_GROUP_HUMAN_LIKE,
         .eggGroup2 = EGG_GROUP_HUMAN_LIKE,
-        .abilities = { ABILITY_INNER_POWER, ABILITY_INNER_POWER},
+        .abilities = { ABILITY_PURE_POWER, ABILITY_PURE_POWER},
         .hiddenAbility = ABILITY_SCRAPPY,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 80,
     },
     [SPECIES_SHINMYOUMARU] = 
     {
-        .baseHP = 60,
+        .baseHP = 50,
         .baseAttack = 45,
-        .baseDefense = 105,
+        .baseDefense = 100,
         .baseSpAttack = 140,
-        .baseSpDefense = 80,
+        .baseSpDefense = 65,
         .baseSpeed = 100,
         .type1 = TYPE_FIGHTING,
         .type2 = TYPE_HEART,
-        .catchRate = 35,
+        .catchRate = 45,
         .expYield = 248,
         .item1 = ITEM_NONE,
         .item2 = ITEM_NONE,
@@ -8635,20 +8978,21 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_PURE_POWER, ABILITY_PURE_POWER},
         .hiddenAbility = ABILITY_SCRAPPY,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 120,
     },
     [SPECIES_ASHINMYOUMARU] = 
     {
-        .baseHP = 60,
+        .baseHP = 55,
         .baseAttack = 115,
         .baseDefense = 110,
         .baseSpAttack = 85,
-        .baseSpDefense = 70,
+        .baseSpDefense = 65,
         .baseSpeed = 110,
         .type1 = TYPE_FIGHTING,
         .type2 = TYPE_STEEL,
-        .catchRate = 35,
-        .expYield = 248,
+        .catchRate = 45,
+        .expYield = 243,
         .item1 = ITEM_NONE,
         .item2 = ITEM_NONE,
         .genderRatio = PERCENT_FEMALE(50),
@@ -8660,7 +9004,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_INNER_POWER, ABILITY_STURDY},
         .hiddenAbility = ABILITY_SCRAPPY,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 120,
     },
     [SPECIES_CRAIKO] = 
     {
@@ -8685,7 +9030,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_SOUNDPROOF, ABILITY_STURDY},
         .hiddenAbility = ABILITY_STATIC,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 60,
     },
     [SPECIES_RAIKO] = 
     {
@@ -8710,7 +9056,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_SOUNDPROOF, ABILITY_LEVITATE},
         .hiddenAbility = ABILITY_STATIC,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 100,
     },
     [SPECIES_ARAIKO] = 
     {
@@ -8735,7 +9082,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_FOCUS, ABILITY_LEVITATE},
         .hiddenAbility = ABILITY_STATIC,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 100,
     },
     [SPECIES_CKASEN] = 
     {
@@ -8760,7 +9108,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_HI_STRENGTH, ABILITY_INNER_POWER},
         .hiddenAbility = ABILITY_PRESSURE,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 80,
     },
     [SPECIES_KASEN] = 
     {
@@ -8785,7 +9134,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_HI_STRENGTH, ABILITY_INNER_POWER},
         .hiddenAbility = ABILITY_PRESSURE,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 120,
     },
     [SPECIES_HKASEN] = 
     {
@@ -8810,7 +9160,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_INTIMIDATE, ABILITY_BERSERK},
         .hiddenAbility = ABILITY_PRESSURE,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 120,
     },
     [SPECIES_CSUMIREKO] = 
     {
@@ -8835,7 +9186,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_DIVA, ABILITY_DIVA},
         .hiddenAbility = ABILITY_INSOMNIA,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 40,
     },
     [SPECIES_SUMIREKO] = 
     {
@@ -8860,7 +9212,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_NEUROFORCE, ABILITY_NEUROFORCE},
         .hiddenAbility = ABILITY_INSOMNIA,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 80,
     },
     [SPECIES_CSEIRAN] = 
     {
@@ -8885,16 +9238,17 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_NO_GUARD, ABILITY_RECKLESS},
         .hiddenAbility = ABILITY_INFILTRATOR,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 20,
     },
     [SPECIES_SEIRAN] = 
     {
         .baseHP = 70,
         .baseAttack = 115,
-        .baseDefense = 65,
+        .baseDefense = 60,
         .baseSpAttack = 60,
-        .baseSpDefense = 65,
-        .baseSpeed = 105,
+        .baseSpDefense = 60,
+        .baseSpeed = 115,
         .type1 = TYPE_HEART,
         .type2 = TYPE_FIGHTING,
         .catchRate = 105,
@@ -8910,7 +9264,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_NO_GUARD, ABILITY_RECKLESS},
         .hiddenAbility = ABILITY_INFILTRATOR,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 40,
     },
     [SPECIES_CRINGO] = 
     {
@@ -8935,7 +9290,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_GLUTTONY, ABILITY_HARVEST},
         .hiddenAbility = ABILITY_OBLIVIOUS,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 20,
     },
     [SPECIES_RINGO] = 
     {
@@ -8960,7 +9316,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_GLUTTONY, ABILITY_HARVEST},
         .hiddenAbility = ABILITY_OBLIVIOUS,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 40,
     },
     [SPECIES_CDOREMY] = 
     {
@@ -8985,7 +9342,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_BAD_DREAMS, ABILITY_OWN_TEMPO},
         .hiddenAbility = ABILITY_INSOMNIA,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 40,
     },
     [SPECIES_DOREMY] = 
     {
@@ -9010,7 +9368,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_BAD_DREAMS, ABILITY_OWN_TEMPO},
         .hiddenAbility = ABILITY_INSOMNIA,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 80,
     },
     [SPECIES_CSAGUME] = 
     {
@@ -9035,7 +9394,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_SERENE_GRACE, ABILITY_WALL_OF_ICE},
         .hiddenAbility = ABILITY_LOOSE_LIPS,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 60,
     },
     [SPECIES_SAGUME] = 
     {
@@ -9060,7 +9420,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_SERENE_GRACE, ABILITY_WALL_OF_ICE},
         .hiddenAbility = ABILITY_LOOSE_LIPS,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 100,
     },
     [SPECIES_CCLOWNPIECE] = 
     {
@@ -9085,7 +9446,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_WONDER_SKIN, ABILITY_WONDER_SKIN},
         .hiddenAbility = ABILITY_LUNACY,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 40,
     },
     [SPECIES_CLOWNPIECE] = 
     {
@@ -9110,7 +9472,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_WONDER_SKIN, ABILITY_WONDER_SKIN},
         .hiddenAbility = ABILITY_LUNACY,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 80,
     },
     [SPECIES_CJUNKO] = 
     {
@@ -9135,7 +9498,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_FLAWLESS, ABILITY_FLAWLESS},
         .hiddenAbility = ABILITY_PURE_FURIES,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 80,
     },
     [SPECIES_JUNKO] = 
     {
@@ -9160,7 +9524,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_FLAWLESS, ABILITY_FLAWLESS},
         .hiddenAbility = ABILITY_PURE_FURIES,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 120,
     },
     [SPECIES_CHECATIA] = 
     {
@@ -9185,7 +9550,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_CURSED_BODY, ABILITY_FLAWLESS},
         .hiddenAbility = ABILITY_MAGIC_BARRIER,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 80,
     },
     [SPECIES_HECATIA] = 
     {
@@ -9210,7 +9576,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_CURSED_BODY, ABILITY_FLAWLESS},
         .hiddenAbility = ABILITY_MAGIC_BARRIER,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 120,
     },
     [SPECIES_CJOON] = 
     {
@@ -9235,7 +9602,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_PICKUP, ABILITY_FRISK},
         .hiddenAbility = ABILITY_MOXIE,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 40,
     },
     [SPECIES_JOON] = 
     {
@@ -9260,7 +9628,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_IRON_FIST, ABILITY_FRISK},
         .hiddenAbility = ABILITY_MOXIE,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 80,
     },
     [SPECIES_CSHION] = 
     {
@@ -9285,7 +9654,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_KLUTZ, ABILITY_KLUTZ},
         .hiddenAbility = ABILITY_RAIN_DISH,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 40,
     },
     [SPECIES_SHION] = 
     {
@@ -9310,7 +9680,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_KLUTZ, ABILITY_KLUTZ},
         .hiddenAbility = ABILITY_DRIZZLE,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 80,
     },
     [SPECIES_CETERNITY] = 
     {
@@ -9335,7 +9706,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_FOCUS, ABILITY_INNER_POWER},
         .hiddenAbility = ABILITY_FLOWER_GIFT,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 20,
     },
     [SPECIES_ETERNITY] = 
     {
@@ -9360,7 +9732,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_FOCUS, ABILITY_INNER_POWER},
         .hiddenAbility = ABILITY_FLOWER_GIFT,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 40,
     },
     [SPECIES_CNEMUNO] = 
     {
@@ -9385,7 +9758,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_UNNERVE, ABILITY_ANGER_POINT},
         .hiddenAbility = ABILITY_INTIMIDATE,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 20,
     },
     [SPECIES_NEMUNO] = 
     {
@@ -9410,7 +9784,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_UNNERVE, ABILITY_ANGER_POINT},
         .hiddenAbility = ABILITY_INTIMIDATE,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 60,
     },
     [SPECIES_CAUNN] = 
     {
@@ -9435,7 +9810,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_IMMUNITY, ABILITY_JUSTIFIED},
         .hiddenAbility = ABILITY_INTIMIDATE,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 20,
     },
     [SPECIES_AUNN] = 
     {
@@ -9460,7 +9836,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_IMMUNITY, ABILITY_JUSTIFIED},
         .hiddenAbility = ABILITY_INTIMIDATE,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 40,
     },
     [SPECIES_CNARUMI] = 
     {
@@ -9485,7 +9862,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_WIDE_HAT, ABILITY_LIGHTNING_ROD},
         .hiddenAbility = ABILITY_STONEWORKER,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 20,
     },
     [SPECIES_NARUMI] = 
     {
@@ -9510,7 +9888,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_WIDE_HAT, ABILITY_LIGHTNING_ROD},
         .hiddenAbility = ABILITY_STONEWORKER,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 60,
     },
     [SPECIES_CMAI_AND_SATONO] = 
     {
@@ -9535,7 +9914,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_PRANKSTER, ABILITY_INFILTRATOR},
         .hiddenAbility = ABILITY_CONTRARY,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 20,
     },
     [SPECIES_MAI_AND_SATONO] = 
     {
@@ -9560,7 +9940,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_PRANKSTER, ABILITY_INFILTRATOR},
         .hiddenAbility = ABILITY_CONTRARY,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 60,
     },
     [SPECIES_COKINA] = 
     {
@@ -9585,7 +9966,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_PURE_POWER, ABILITY_PURE_POWER},
         .hiddenAbility = ABILITY_PURE_POWER,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 80,
     },
     [SPECIES_OKINA] = 
     {
@@ -9610,7 +9992,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_PURE_ENIGMA, ABILITY_PURE_ENIGMA},
         .hiddenAbility = ABILITY_PURE_ENIGMA,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 120,
     },
     [SPECIES_CEIKA] = 
     {
@@ -9635,7 +10018,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_OBLIVIOUS, ABILITY_STURDY},
         .hiddenAbility = ABILITY_CHEERFUL,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 20,
     },
     [SPECIES_EIKA] = 
     {
@@ -9660,7 +10044,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_OBLIVIOUS, ABILITY_STURDY},
         .hiddenAbility = ABILITY_CHEERFUL,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 40,
     },
     [SPECIES_CURUMI] = 
     {
@@ -9674,8 +10059,8 @@ const struct BaseStats gBaseStats[] =
         .type2 = TYPE_WATER,
         .catchRate = 215,
         .expYield = 70,
-        .item1 = ITEM_STONE_BABY,
-        .item2 = ITEM_STONE_BABY,
+        .item1 = ITEM_NONE,
+        .item2 = ITEM_NONE,
         .genderRatio = PERCENT_FEMALE(50),
         .eggCycles = 20,
         .friendship = 70,
@@ -9685,7 +10070,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_HI_STRENGTH, ABILITY_MOLD_BREAKER},
         .hiddenAbility = ABILITY_SAP_SIPPER,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 20,
     },
     [SPECIES_URUMI] = 
     {
@@ -9710,7 +10096,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_HI_STRENGTH, ABILITY_MOLD_BREAKER},
         .hiddenAbility = ABILITY_SAP_SIPPER,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 60,
     },
     [SPECIES_CKUTAKA] = 
     {
@@ -9735,7 +10122,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_EARLY_BIRD, ABILITY_NATURAL_CURE},
         .hiddenAbility = ABILITY_SPEED_BOOST,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 20,
     },
     [SPECIES_KUTAKA] = 
     {
@@ -9760,7 +10148,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_EARLY_BIRD, ABILITY_NATURAL_CURE},
         .hiddenAbility = ABILITY_SPEED_BOOST,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 60,
     },
     [SPECIES_CYACHIE] = 
     {
@@ -9785,7 +10174,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_INTIMIDATE, ABILITY_INTIMIDATE},
         .hiddenAbility = ABILITY_GUARD_ARMOR,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 40,
     },
     [SPECIES_YACHIE] = 
     {
@@ -9810,7 +10200,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_INTIMIDATE, ABILITY_INTIMIDATE},
         .hiddenAbility = ABILITY_GUARD_ARMOR,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 80,
     },
     [SPECIES_CMAYUMI] = 
     {
@@ -9835,7 +10226,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_STURDY, ABILITY_GUARD_ARMOR},
         .hiddenAbility = ABILITY_LONG_REACH,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 40,
     },
     [SPECIES_MAYUMI] = 
     {
@@ -9860,7 +10252,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_STURDY, ABILITY_GUARD_ARMOR},
         .hiddenAbility = ABILITY_LONG_REACH,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 80,
     },
     [SPECIES_CKEIKI] = 
     {
@@ -9885,7 +10278,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_REACTIVE, ABILITY_STURDY},
         .hiddenAbility = ABILITY_MAGIC_GUARD,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 80,
     },
     [SPECIES_KEIKI] = 
     {
@@ -9910,7 +10304,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_REACTIVE, ABILITY_STURDY},
         .hiddenAbility = ABILITY_MAGIC_GUARD,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 120,
     },
     [SPECIES_CSAKI] = 
     {
@@ -9935,7 +10330,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_WIDE_HAT, ABILITY_SAND_RUSH},
         .hiddenAbility = ABILITY_SAND_STREAM,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 80,
     },
     [SPECIES_SAKI] = 
     {
@@ -9960,7 +10356,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_WIDE_HAT, ABILITY_SAND_RUSH},
         .hiddenAbility = ABILITY_SAND_STREAM,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 120,
     },
     [SPECIES_CYUUMA] = 
     {
@@ -9985,7 +10382,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_DEVOURER, ABILITY_GLUTTONY},
         .hiddenAbility = ABILITY_MOXIE,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 60,
     },
     [SPECIES_YUUMA] = 
     {
@@ -10010,7 +10408,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_DEVOURER, ABILITY_GLUTTONY},
         .hiddenAbility = ABILITY_MOXIE,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 100,
     },
     [SPECIES_CMIKE] = 
     {
@@ -10035,7 +10434,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_SUPER_LUCK, ABILITY_DIVA},
         .hiddenAbility = ABILITY_TECHNICIAN,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 20,
     },
     [SPECIES_MIKE] = 
     {
@@ -10060,7 +10460,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_SUPER_LUCK, ABILITY_DIVA},
         .hiddenAbility = ABILITY_TECHNICIAN,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 40,
     },
     [SPECIES_CTAKANE] = 
     {
@@ -10085,7 +10486,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_ROCK_HEAD, ABILITY_SCRAPPY},
         .hiddenAbility = ABILITY_SAND_RUSH,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 40,
     },
     [SPECIES_TAKANE] = 
     {
@@ -10110,17 +10512,18 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_ROCK_HEAD, ABILITY_TECHNICIAN},
         .hiddenAbility = ABILITY_SAND_RUSH,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 80,
     },
     [SPECIES_CSANNYO] = 
     {
         .baseHP = 40,
-        .baseAttack = 30,
+        .baseAttack = 65,
         .baseDefense = 55,
-        .baseSpAttack = 65,
+        .baseSpAttack = 30,
         .baseSpDefense = 115,
         .baseSpeed = 45,
-        .type1 = TYPE_HEART,
+        .type1 = TYPE_FIRE,
         .type2 = TYPE_MIASMA,
         .catchRate = 215,
         .expYield = 70,
@@ -10135,17 +10538,18 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_STRANGE_MIST, ABILITY_HUSTLE},
         .hiddenAbility = ABILITY_WONDER_SKIN,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 20,
     },
     [SPECIES_SANNYO] = 
     {
         .baseHP = 60,
-        .baseAttack = 55,
+        .baseAttack = 90,
         .baseDefense = 90,
-        .baseSpAttack = 90,
+        .baseSpAttack = 55,
         .baseSpDefense = 140,
         .baseSpeed = 65,
-        .type1 = TYPE_HEART,
+        .type1 = TYPE_FIRE,
         .type2 = TYPE_MIASMA,
         .catchRate = 85,
         .expYield = 225,
@@ -10160,7 +10564,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_STRANGE_MIST, ABILITY_HUSTLE},
         .hiddenAbility = ABILITY_WONDER_SKIN,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 60,
     },
     [SPECIES_CMISUMARU] = 
     {
@@ -10185,7 +10590,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_SYNCHRONIZE, ABILITY_RIVALRY},
         .hiddenAbility = ABILITY_WALL_MASTER,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 40,
     },
     [SPECIES_MISUMARU] = 
     {
@@ -10210,7 +10616,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_SYNCHRONIZE, ABILITY_RIVALRY},
         .hiddenAbility = ABILITY_WALL_MASTER,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 80,
     },
     [SPECIES_CTSUKASA] = 
     {
@@ -10235,7 +10642,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_PRANKSTER, ABILITY_PRANKSTER},
         .hiddenAbility = ABILITY_INFILTRATOR,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 20,
     },
     [SPECIES_TSUKASA] = 
     {
@@ -10260,7 +10668,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_PRANKSTER, ABILITY_PRANKSTER},
         .hiddenAbility = ABILITY_INFILTRATOR,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 60,
     },
     [SPECIES_CMEGUMU] = 
     {
@@ -10285,7 +10694,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_GALE_WINGS, ABILITY_GALE_WINGS},
         .hiddenAbility = ABILITY_CLOUD_NINE,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 40,
     },
     [SPECIES_MEGUMU] = 
     {
@@ -10310,7 +10720,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_GALE_WINGS, ABILITY_GALE_WINGS},
         .hiddenAbility = ABILITY_CLOUD_NINE,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 80,
     },
     [SPECIES_CCHIMATA] = 
     {
@@ -10335,7 +10746,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_PICKUP, ABILITY_INNER_POWER},
         .hiddenAbility = ABILITY_BLANK_CARD,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 80,
     },
     [SPECIES_CHIMATA] = 
     {
@@ -10360,7 +10772,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_COLLECTOR, ABILITY_INNER_POWER},
         .hiddenAbility = ABILITY_BLANK_CARD,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 120,
     },
     [SPECIES_CMOMOYO] = 
     {
@@ -10385,7 +10798,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_STRANGE_MIST, ABILITY_INFECTIOUS},
         .hiddenAbility = ABILITY_UNNERVE,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 80,
     },
     [SPECIES_MOMOYO] = 
     {
@@ -10410,7 +10824,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_STRANGE_MIST, ABILITY_INFECTIOUS},
         .hiddenAbility = ABILITY_UNNERVE,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 120,
     },
     [SPECIES_CMIYOI] = 
     {
@@ -10435,7 +10850,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_BAD_DREAMS, ABILITY_WATER_VEIL},
         .hiddenAbility = ABILITY_RATTLED,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 20,
     },
     [SPECIES_MIYOI] = 
     {
@@ -10460,7 +10876,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_BAD_DREAMS, ABILITY_WATER_VEIL},
         .hiddenAbility = ABILITY_RATTLED,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 40,
     },
     [SPECIES_CHAKUREI] = 
     {
@@ -10485,7 +10902,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_HAKUREI_MIKO, ABILITY_HAKUREI_MIKO},
         .hiddenAbility = ABILITY_STEADFAST,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 80,
     },
     [SPECIES_HAKUREI] = 
     {
@@ -10510,7 +10928,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_HAKUREI_MIKO, ABILITY_HAKUREI_MIKO},
         .hiddenAbility = ABILITY_STEADFAST,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 120,
     },
     [SPECIES_CKIRISAME] = 
     {
@@ -10535,7 +10954,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_VITAL_SPIRIT, ABILITY_FLASH_FIRE},
         .hiddenAbility = ABILITY_MOXIE,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 60,
     },
     [SPECIES_KIRISAME] = 
     {
@@ -10560,7 +10980,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_VITAL_SPIRIT, ABILITY_FLASH_FIRE},
         .hiddenAbility = ABILITY_MOXIE,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 100,
     },
     [SPECIES_CSHINGYOKU] = 
     {
@@ -10585,7 +11006,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_PRESSURE, ABILITY_PRESSURE},
         .hiddenAbility = ABILITY_RIVALRY,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 60,
     },
     [SPECIES_SHINGYOKUF] = 
     {
@@ -10610,7 +11032,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_PRESSURE, ABILITY_PRESSURE},
         .hiddenAbility = ABILITY_RIVALRY,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 100,
     },
     [SPECIES_SHINGYOKUM] = 
     {
@@ -10635,7 +11058,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_PRESSURE, ABILITY_PRESSURE},
         .hiddenAbility = ABILITY_RIVALRY,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 100,
     },
     [SPECIES_SHINGYOKUO] = 
     {
@@ -10660,7 +11084,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_PRESSURE, ABILITY_PRESSURE},
         .hiddenAbility = ABILITY_RIVALRY,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 100,
     },
     [SPECIES_CMAGAN] = 
     {
@@ -10685,7 +11110,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_PRESSURE, ABILITY_UNNERVE},
         .hiddenAbility = ABILITY_LEVITATE,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 80,
     },
     [SPECIES_MAGAN] = 
     {
@@ -10710,7 +11136,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_PRESSURE, ABILITY_UNNERVE},
         .hiddenAbility = ABILITY_LEVITATE,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 120,
     },
     [SPECIES_CMIMA] = 
     {
@@ -10735,7 +11162,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_PRESSURE, ABILITY_LEVITATE},
         .hiddenAbility = ABILITY_MOXIE,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 80,
     },
     [SPECIES_MIMA] = 
     {
@@ -10760,7 +11188,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_PRESSURE, ABILITY_LEVITATE},
         .hiddenAbility = ABILITY_MOXIE,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 120,
     },
     [SPECIES_CELIS] = 
     {
@@ -10785,7 +11214,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_PRESSURE, ABILITY_CUTE_CHARM},
         .hiddenAbility = ABILITY_INFILTRATOR,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 80,
     },
     [SPECIES_ELIS] = 
     {
@@ -10810,7 +11240,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_PRESSURE, ABILITY_CUTE_CHARM},
         .hiddenAbility = ABILITY_INFILTRATOR,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 120,
     },
     [SPECIES_CKIKURI] = 
     {
@@ -10835,7 +11266,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_LEVITATE, ABILITY_FLAWLESS},
         .hiddenAbility = ABILITY_IMMUNITY,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 80,
     },
     [SPECIES_KIKURI] = 
     {
@@ -10860,7 +11292,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_LEVITATE, ABILITY_FLAWLESS},
         .hiddenAbility = ABILITY_IMMUNITY,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 120,
     },
     [SPECIES_CKONNGARA] = 
     {
@@ -10885,7 +11318,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_PRESSURE, ABILITY_STURDY},
         .hiddenAbility = ABILITY_HI_STRENGTH,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 80,
     },
     [SPECIES_KONNGARA] = 
     {
@@ -10910,7 +11344,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_PRESSURE, ABILITY_STURDY},
         .hiddenAbility = ABILITY_HI_STRENGTH,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 120,
     },
     [SPECIES_CSARIEL] = 
     {
@@ -10935,7 +11370,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_PRESSURE, ABILITY_FLAWLESS},
         .hiddenAbility = ABILITY_INNER_FOCUS,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 80,
     },
     [SPECIES_SARIEL] = 
     {
@@ -10960,7 +11396,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_PRESSURE, ABILITY_FLAWLESS},
         .hiddenAbility = ABILITY_INNER_FOCUS,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 120,
     },
     [SPECIES_SSARIEL] = 
     {
@@ -10985,7 +11422,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_PRESSURE, ABILITY_UNNERVE},
         .hiddenAbility = ABILITY_INNER_FOCUS,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 120,
     },
     [SPECIES_GENJI] = 
     {
@@ -11010,7 +11448,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_STURDY, ABILITY_GUARD_ARMOR},
         .hiddenAbility = ABILITY_RAIN_DISH,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 40,
     },
     [SPECIES_CRIKA] = 
     {
@@ -11035,7 +11474,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_STURDY, ABILITY_SALVAGE_ARMOR},
         .hiddenAbility = ABILITY_ANALYTIC,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 20,
     },
     [SPECIES_RIKA] = 
     {
@@ -11060,7 +11500,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_STURDY, ABILITY_DOWNLOAD},
         .hiddenAbility = ABILITY_ANALYTIC,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 80,
     },
     [SPECIES_CMEIRA] = 
     {
@@ -11085,7 +11526,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_SALVAGE_ARMOR, ABILITY_INNER_FOCUS},
         .hiddenAbility = ABILITY_SNIPER,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 20,
     },
     [SPECIES_MEIRA] = 
     {
@@ -11110,7 +11552,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_SALVAGE_ARMOR, ABILITY_INNER_FOCUS},
         .hiddenAbility = ABILITY_SNIPER,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 60,
     },
     [SPECIES_MAGIC_STONES] = 
     {
@@ -11135,7 +11578,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_GATE_KEEPER, ABILITY_GATE_KEEPER},
         .hiddenAbility = ABILITY_STURDY,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 60,
     },
     [SPECIES_CELLEN] = 
     {
@@ -11160,7 +11604,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_UNAWARE, ABILITY_SPRING_CHARM},
         .hiddenAbility = ABILITY_NATURAL_CURE,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 20,
     },
     [SPECIES_ELLEN] = 
     {
@@ -11185,7 +11630,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_UNAWARE, ABILITY_SPRING_CHARM},
         .hiddenAbility = ABILITY_NATURAL_CURE,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 40,
     },
     [SPECIES_CKOTOHIME] = 
     {
@@ -11210,7 +11656,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_FRISK, ABILITY_OWN_TEMPO},
         .hiddenAbility = ABILITY_COLLECTOR,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 20,
     },
     [SPECIES_KOTOHIME] = 
     {
@@ -11235,7 +11682,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_FRISK, ABILITY_OWN_TEMPO},
         .hiddenAbility = ABILITY_COLLECTOR,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 40,
     },
     [SPECIES_CKANA] = 
     {
@@ -11260,7 +11708,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_SOUNDPROOF, ABILITY_LEVITATE},
         .hiddenAbility = ABILITY_LOST_DREAM,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 20,
     },
     [SPECIES_KANA] = 
     {
@@ -11285,7 +11734,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_SOUNDPROOF, ABILITY_LEVITATE},
         .hiddenAbility = ABILITY_LOST_DREAM,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 60,
     },
     [SPECIES_CRIKAKO] = 
     {
@@ -11310,7 +11760,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_INSOMNIA, ABILITY_INSOMNIA},
         .hiddenAbility = ABILITY_ANALYTIC,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 20,
     },
     [SPECIES_RIKAKO] = 
     {
@@ -11335,7 +11786,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_INSOMNIA, ABILITY_INSOMNIA},
         .hiddenAbility = ABILITY_ANALYTIC,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 60,
     },
     [SPECIES_CCHIYURI] = 
     {
@@ -11358,9 +11810,10 @@ const struct BaseStats gBaseStats[] =
         .eggGroup1 = EGG_GROUP_HUMAN_LIKE,
         .eggGroup2 = EGG_GROUP_HUMAN_LIKE,
         .abilities = { ABILITY_INTIMIDATE, ABILITY_SWIFT_SWIM},
-        .hiddenAbility = ABILITY_ADAPTABILITY,
+        .hiddenAbility = ABILITY_QUICK_FEET,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 40,
     },
     [SPECIES_CHIYURI] = 
     {
@@ -11383,9 +11836,10 @@ const struct BaseStats gBaseStats[] =
         .eggGroup1 = EGG_GROUP_HUMAN_LIKE,
         .eggGroup2 = EGG_GROUP_HUMAN_LIKE,
         .abilities = { ABILITY_INTIMIDATE, ABILITY_SWIFT_SWIM},
-        .hiddenAbility = ABILITY_ADAPTABILITY,
+        .hiddenAbility = ABILITY_QUICK_FEET,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 80,
     },
     [SPECIES_CYUMEMI] = 
     {
@@ -11407,10 +11861,11 @@ const struct BaseStats gBaseStats[] =
         .growthRate = GROWTH_MEDIUM_FAST,
         .eggGroup1 = EGG_GROUP_HUMAN_LIKE,
         .eggGroup2 = EGG_GROUP_HUMAN_LIKE,
-        .abilities = { ABILITY_SOUNDPROOF, ABILITY_FLARE_BOOST},
+        .abilities = { ABILITY_GRAND_THEORY, ABILITY_SOUNDPROOF},
         .hiddenAbility = ABILITY_MAGIC_BARRIER,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 80,
     },
     [SPECIES_YUMEMI] = 
     {
@@ -11432,10 +11887,11 @@ const struct BaseStats gBaseStats[] =
         .growthRate = GROWTH_MEDIUM_FAST,
         .eggGroup1 = EGG_GROUP_HUMAN_LIKE,
         .eggGroup2 = EGG_GROUP_HUMAN_LIKE,
-        .abilities = { ABILITY_SOUNDPROOF, ABILITY_FLARE_BOOST},
+        .abilities = { ABILITY_GRAND_THEORY, ABILITY_SOUNDPROOF},
         .hiddenAbility = ABILITY_MAGIC_BARRIER,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 120,
     },
     [SPECIES_RUUKOTO] = 
     {
@@ -11460,7 +11916,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_STURDY, ABILITY_STURDY},
         .hiddenAbility = ABILITY_KLUTZ,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 40,
     },
     [SPECIES_MIMI_CHAN] = 
     {
@@ -11485,7 +11942,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_ROCK_HEAD, ABILITY_ROCK_HEAD},
         .hiddenAbility = ABILITY_AFTERMATH,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 120,
     },
     [SPECIES_CORANGE] = 
     {
@@ -11510,7 +11968,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_PURE_POWER, ABILITY_IMMUNITY},
         .hiddenAbility = ABILITY_REGENERATOR,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 20,
     },
     [SPECIES_ORANGE] = 
     {
@@ -11535,7 +11994,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_PURE_POWER, ABILITY_IMMUNITY},
         .hiddenAbility = ABILITY_REGENERATOR,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 40,
     },
     [SPECIES_CKURUMI] = 
     {
@@ -11560,7 +12020,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_SYNCHRONIZE, ABILITY_GATE_KEEPER},
         .hiddenAbility = ABILITY_POISON_HEAL,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 20,
     },
     [SPECIES_KURUMI] = 
     {
@@ -11585,7 +12046,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_SYNCHRONIZE, ABILITY_GATE_KEEPER},
         .hiddenAbility = ABILITY_POISON_HEAL,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 40,
     },
     [SPECIES_CELLY] = 
     {
@@ -11610,7 +12072,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_GATE_KEEPER, ABILITY_MOXIE},
         .hiddenAbility = ABILITY_MERCILESS,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 40,
     },
     [SPECIES_ELLY] = 
     {
@@ -11635,7 +12098,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_GATE_KEEPER, ABILITY_MOXIE},
         .hiddenAbility = ABILITY_MERCILESS,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 80,
     },
     [SPECIES_CKAZAMI] = 
     {
@@ -11660,7 +12124,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_TRUANT, ABILITY_HIBERNATION},
         .hiddenAbility = ABILITY_MOXIE,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 60,
     },
     [SPECIES_KAZAMI] = 
     {
@@ -11685,7 +12150,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_TRUANT, ABILITY_HIBERNATION},
         .hiddenAbility = ABILITY_MOXIE,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 100,
     },
     [SPECIES_AKAZAMI] = 
     {
@@ -11710,7 +12176,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_INNER_POWER, ABILITY_PRIDE},
         .hiddenAbility = ABILITY_MOXIE,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 100,
     },
     [SPECIES_CMUGETSU] = 
     {
@@ -11735,7 +12202,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_PRESSURE, ABILITY_PRESSURE},
         .hiddenAbility = ABILITY_PRIDE,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 80,
     },
     [SPECIES_MUGETSU] = 
     {
@@ -11760,7 +12228,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_PRESSURE, ABILITY_PRESSURE},
         .hiddenAbility = ABILITY_PRIDE,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 120,
     },
     [SPECIES_CGENGETSU] = 
     {
@@ -11785,7 +12254,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_PRESSURE, ABILITY_PRESSURE},
         .hiddenAbility = ABILITY_PRIDE,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 80,
     },
     [SPECIES_GENGETSU] = 
     {
@@ -11810,7 +12280,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_PRESSURE, ABILITY_PRESSURE},
         .hiddenAbility = ABILITY_PRIDE,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 120,
     },
     [SPECIES_CSARA] = 
     {
@@ -11835,7 +12306,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_GATE_KEEPER, ABILITY_GUTS},
         .hiddenAbility = ABILITY_KLUTZ,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 20,
     },
     [SPECIES_SARA] = 
     {
@@ -11860,7 +12332,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_GATE_KEEPER, ABILITY_GUTS},
         .hiddenAbility = ABILITY_KLUTZ,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 60,
     },
     [SPECIES_CLOUISE] = 
     {
@@ -11885,7 +12358,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_OWN_TEMPO, ABILITY_WALL_OF_ICE},
         .hiddenAbility = ABILITY_MAGIC_GUARD,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 20,
     },
     [SPECIES_LOUISE] = 
     {
@@ -11910,7 +12384,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_OWN_TEMPO, ABILITY_WALL_OF_ICE},
         .hiddenAbility = ABILITY_MAGIC_GUARD,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 60,
     },
     [SPECIES_CARISU] = 
     {
@@ -11935,7 +12410,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_SERENE_GRACE, ABILITY_MAGIC_BARRIER},
         .hiddenAbility = ABILITY_DOLL_WALL,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 40,
     },
     [SPECIES_ARISU] = 
     {
@@ -11960,7 +12436,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_SERENE_GRACE, ABILITY_MAGIC_BARRIER},
         .hiddenAbility = ABILITY_DOLL_SKEWER,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 80,
     },
     [SPECIES_CYUKI] = 
     {
@@ -11985,7 +12462,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_INNER_POWER, ABILITY_INTIMIDATE},
         .hiddenAbility = ABILITY_LAST_WISH,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 40,
     },
     [SPECIES_YUKI] = 
     {
@@ -12010,7 +12488,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_INNER_POWER, ABILITY_INTIMIDATE},
         .hiddenAbility = ABILITY_LAST_WISH,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 80,
     },
     [SPECIES_CMAI] = 
     {
@@ -12035,7 +12514,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_PRIDE, ABILITY_INSOMNIA},
         .hiddenAbility = ABILITY_LAST_GRUDGE,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 40,
     },
     [SPECIES_MAI] = 
     {
@@ -12060,7 +12540,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_PRIDE, ABILITY_INSOMNIA},
         .hiddenAbility = ABILITY_LAST_GRUDGE,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 80,
     },
     [SPECIES_CYUMEKO] = 
     {
@@ -12083,9 +12564,10 @@ const struct BaseStats gBaseStats[] =
         .eggGroup1 = EGG_GROUP_HUMAN_LIKE,
         .eggGroup2 = EGG_GROUP_HUMAN_LIKE,
         .abilities = { ABILITY_GUARD_ARMOR, ABILITY_STURDY},
-        .hiddenAbility = ABILITY_UNNERVE,
+        .hiddenAbility = ABILITY_PRESSURE,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 60,
     },
     [SPECIES_YUMEKO] = 
     {
@@ -12108,9 +12590,10 @@ const struct BaseStats gBaseStats[] =
         .eggGroup1 = EGG_GROUP_HUMAN_LIKE,
         .eggGroup2 = EGG_GROUP_HUMAN_LIKE,
         .abilities = { ABILITY_GUARD_ARMOR, ABILITY_STURDY},
-        .hiddenAbility = ABILITY_UNNERVE,
+        .hiddenAbility = ABILITY_PRESSURE,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 100,
     },
     [SPECIES_CSHINKI] = 
     {
@@ -12135,7 +12618,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_PRESSURE, ABILITY_PRESSURE},
         .hiddenAbility = ABILITY_FLAWLESS,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 80,
     },
     [SPECIES_SHINKI] = 
     {
@@ -12160,7 +12644,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_PRESSURE, ABILITY_PRESSURE},
         .hiddenAbility = ABILITY_FLAWLESS,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 120,
     },
     [SPECIES_CSENDAI] = 
     {
@@ -12185,7 +12670,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_HAKUREI_MIKO, ABILITY_HAKUREI_MIKO},
         .hiddenAbility = ABILITY_INNER_FOCUS,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 80,
     },
     [SPECIES_SENDAI] = 
     {
@@ -12210,7 +12696,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_HAKUREI_MIKO, ABILITY_HAKUREI_MIKO},
         .hiddenAbility = ABILITY_INNER_FOCUS,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 120,
     },
     [SPECIES_CTENMA] = 
     {
@@ -12235,7 +12722,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_GUARD_ARMOR, ABILITY_SAND_VEIL},
         .hiddenAbility = ABILITY_ANTICIPATION,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 80,
     },
     [SPECIES_TENMA] = 
     {
@@ -12260,7 +12748,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_GUARD_ARMOR, ABILITY_SAND_VEIL},
         .hiddenAbility = ABILITY_ANTICIPATION,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 120,
     },
     [SPECIES_CLAYLA] = 
     {
@@ -12285,7 +12774,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_SYNCHRONIZE, ABILITY_CURSED_BODY},
         .hiddenAbility = ABILITY_HARMONIZE,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 20,
     },
     [SPECIES_LAYLA] = 
     {
@@ -12310,7 +12800,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_SYNCHRONIZE, ABILITY_CURSED_BODY},
         .hiddenAbility = ABILITY_HARMONIZE,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 60,
     },
     [SPECIES_DLAYLA] = 
     {
@@ -12335,7 +12826,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_SYNCHRONIZE, ABILITY_CURSED_BODY},
         .hiddenAbility = ABILITY_HARMONIZE,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 60,
     },
     [SPECIES_YOUKI] = 
     {
@@ -12360,7 +12852,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_INSOMNIA, ABILITY_INNER_FOCUS},
         .hiddenAbility = ABILITY_PRESSURE,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 100,
     },
     [SPECIES_TORI] = 
     {
@@ -12385,7 +12878,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_IMMUNITY, ABILITY_SOUNDPROOF},
         .hiddenAbility = ABILITY_REGENERATOR,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 20,
     },
     [SPECIES_2HU] = 
     {
@@ -12410,7 +12904,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_SERENE_GRACE, ABILITY_SERENE_GRACE},
         .hiddenAbility = ABILITY_UNNERVE,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 100,
     },
     [SPECIES_XSUWAKO] = 
     {
@@ -12435,7 +12930,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_DRIZZLE, ABILITY_DRIZZLE},
         .hiddenAbility = ABILITY_SWIFT_SWIM,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 120,
     },
     [SPECIES_XUTSUHO] = 
     {
@@ -12460,7 +12956,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_DROUGHT, ABILITY_DROUGHT},
         .hiddenAbility = ABILITY_SOLAR_POWER,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 120,
     },
     [SPECIES_XTENSHI] = 
     {
@@ -12485,7 +12982,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_SAND_STREAM, ABILITY_SAND_STREAM},
         .hiddenAbility = ABILITY_HISOUTEN,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 120,
     },
     [SPECIES_XTENMA] = 
     {
@@ -12510,7 +13008,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_REGENERATOR, ABILITY_REGENERATOR},
         .hiddenAbility = ABILITY_SPEED_BOOST,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 120,
     },
     [SPECIES_XSENDAI] = 
     {
@@ -12535,7 +13034,8 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_HAKUREI_MIKO, ABILITY_HAKUREI_MIKO},
         .hiddenAbility = ABILITY_FLAWLESS,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 120,
     },
     [SPECIES_SEKI_HEAD] = 
     {
@@ -12560,6 +13060,7 @@ const struct BaseStats gBaseStats[] =
         .abilities = { ABILITY_DISGUISE, ABILITY_DISGUISE},
         .hiddenAbility = ABILITY_DISGUISE,
         .safariZoneFleeRate = 0,
-        .noFlip = FALSE,
+        .noFlip = TRUE,
+        .cost = 60,
     },
 };

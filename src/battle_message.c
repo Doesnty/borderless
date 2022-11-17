@@ -531,6 +531,8 @@ const u8 sText_RegeneratesHP[] = _("{B_ATK_NAME_WITH_PREFIX} regenerates\nthroug
 const u8 sText_BestowedItem[] = _("{B_DEF_NAME_WITH_PREFIX} recieved\n{B_BUFF2} from {B_ATK_NAME_WITH_PREFIX}.");
 const u8 sText_HappyHour[] = _("Everyone is caught up in\nthe happy atmosphere!");
 const u8 sText_PkmnTrappedInDestitution[] = _("{B_DEF_NAME_WITH_PREFIX} was trapped\nbelow the poverty line!");
+const u8 sText_PkmnPreventsTaunt[] = _("{B_DEF_NAME_WITH_PREFIX}'s {B_DEF_ABILITY}\nmakes the Taunt fall flat!");
+const u8 sText_PkmnRaisedSpAtk[] = _("{B_SCR_ACTIVE_NAME_WITH_PREFIX}'s {B_SCR_ACTIVE_ABILITY}\nraised its Sp. Atk!");
 
 const u8 *const gBattleStringsTable[] = {
     [STRINGID_TRAINER1LOSETEXT - 12]              = sText_Trainer1LoseText,
@@ -926,6 +928,8 @@ const u8 *const gBattleStringsTable[] = {
     [STRINGID_BESTOWEDITEM - 12]                  = sText_BestowedItem,
     [STRINGID_HAPPYHOUR - 12]                     = sText_HappyHour,
     [STRINGID_PKMNTRAPPEDINDESTITUTION - 12]      = sText_PkmnTrappedInDestitution,
+    [STRINGID_OBLIVIOUSPREVENTSTAUNT - 12]        = sText_PkmnPreventsTaunt,
+    [STRINGID_PKMNRAISEDSPATK - 12]               = sText_PkmnRaisedSpAtk,
 };
 
 const u16 gMissStringIds[] = {
