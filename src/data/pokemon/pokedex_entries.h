@@ -39,25 +39,25 @@ const struct PokedexEntry gPokedexEntries[] =
 
     [NATIONAL_DEX_CMARISA] = 
     {
-        .categoryName = _("Witch"),
+        .categoryName = _("Ordinary Witch"),
         .description = gcmarisaPokedexText,
     },
 
     [NATIONAL_DEX_MARISA] = 
     {
-        .categoryName = _("Witch"),
+        .categoryName = _("Ordinary Witch"),
         .description = gmarisaPokedexText,
     },
 
     [NATIONAL_DEX_AMARISA] = 
     {
-        .categoryName = _("Witch"),
+        .categoryName = _("Very Ordinary"),
         .description = gamarisaPokedexText,
     },
 
     [NATIONAL_DEX_SMARISA] = 
     {
-        .categoryName = _("Witch"),
+        .categoryName = _("Ordinary Witch"),
         .description = gsmarisaPokedexText,
     },
 
@@ -141,7 +141,7 @@ const struct PokedexEntry gPokedexEntries[] =
 
     [NATIONAL_DEX_TCIRNO] = 
     {
-        .categoryName = _("Ice Fairy"),
+        .categoryName = _("Unmelting Fairy"),
         .description = gtcirnoPokedexText,
     },
 
@@ -267,7 +267,7 @@ const struct PokedexEntry gPokedexEntries[] =
 
     [NATIONAL_DEX_DREMILIA] = 
     {
-        .categoryName = _("Vampire"),
+        .categoryName = _("Charismatic"),
         .description = gdremiliaPokedexText,
     },
 
@@ -585,25 +585,25 @@ const struct PokedexEntry gPokedexEntries[] =
 
     [NATIONAL_DEX_CYUKARI] = 
     {
-        .categoryName = _("Gap"),
+        .categoryName = _("Gap Youkai"),
         .description = gcyukariPokedexText,
     },
 
     [NATIONAL_DEX_YUKARI] = 
     {
-        .categoryName = _("Gap"),
+        .categoryName = _("Gap Youkai"),
         .description = gyukariPokedexText,
     },
 
     [NATIONAL_DEX_DYUKARI] = 
     {
-        .categoryName = _("Gap"),
+        .categoryName = _("Gap Youkai"),
         .description = gdyukariPokedexText,
     },
 
     [NATIONAL_DEX_TYUKARI] = 
     {
-        .categoryName = _("Gap"),
+        .categoryName = _("Gap Youkai"),
         .description = gtyukariPokedexText,
     },
 
@@ -615,25 +615,25 @@ const struct PokedexEntry gPokedexEntries[] =
 
     [NATIONAL_DEX_CSUIKA] = 
     {
-        .categoryName = _("Oni"),
+        .categoryName = _("Drunk Oni"),
         .description = gcsuikaPokedexText,
     },
 
     [NATIONAL_DEX_SUIKA] = 
     {
-        .categoryName = _("Oni"),
+        .categoryName = _("Drunk Oni"),
         .description = gsuikaPokedexText,
     },
 
     [NATIONAL_DEX_ASUIKA] = 
     {
-        .categoryName = _("Oni"),
+        .categoryName = _("Drunk Oni"),
         .description = gasuikaPokedexText,
     },
 
     [NATIONAL_DEX_TSUIKA] = 
     {
-        .categoryName = _("Oni"),
+        .categoryName = _("Drunk Oni"),
         .description = gtsuikaPokedexText,
     },
 
@@ -783,25 +783,25 @@ const struct PokedexEntry gPokedexEntries[] =
 
     [NATIONAL_DEX_CEIRIN] = 
     {
-        .categoryName = _("Lunarian"),
+        .categoryName = _("Moon Pharmacist"),
         .description = gceirinPokedexText,
     },
 
     [NATIONAL_DEX_EIRIN] = 
     {
-        .categoryName = _("Lunarian"),
+        .categoryName = _("Moon Pharmacist"),
         .description = geirinPokedexText,
     },
 
     [NATIONAL_DEX_AEIRIN] = 
     {
-        .categoryName = _("Lunarian"),
+        .categoryName = _("Moon Pharmacist"),
         .description = gaeirinPokedexText,
     },
 
     [NATIONAL_DEX_HEIRIN] = 
     {
-        .categoryName = _("Lunarian"),
+        .categoryName = _("Moon Pharmacist"),
         .description = gheirinPokedexText,
     },
 
@@ -939,49 +939,49 @@ const struct PokedexEntry gPokedexEntries[] =
 
     [NATIONAL_DEX_CKOMACHI] = 
     {
-        .categoryName = _("Reaper"),
+        .categoryName = _("Shinigami"),
         .description = gckomachiPokedexText,
     },
 
     [NATIONAL_DEX_KOMACHI] = 
     {
-        .categoryName = _("Reaper"),
+        .categoryName = _("Shinigami"),
         .description = gkomachiPokedexText,
     },
 
     [NATIONAL_DEX_AKOMACHI] = 
     {
-        .categoryName = _("Reaper"),
+        .categoryName = _("Shinigami"),
         .description = gakomachiPokedexText,
     },
 
     [NATIONAL_DEX_SKOMACHI] = 
     {
-        .categoryName = _("Reaper"),
+        .categoryName = _("Shinigami"),
         .description = gskomachiPokedexText,
     },
 
     [NATIONAL_DEX_CEIKI] = 
     {
-        .categoryName = _("Yama"),
+        .categoryName = _("Supreme Judge"),
         .description = gceikiPokedexText,
     },
 
     [NATIONAL_DEX_EIKI] = 
     {
-        .categoryName = _("Yama"),
+        .categoryName = _("Supreme Judge"),
         .description = geikiPokedexText,
     },
 
     [NATIONAL_DEX_AEIKI] = 
     {
-        .categoryName = _("Yama"),
+        .categoryName = _("Supreme Judge"),
         .description = gaeikiPokedexText,
     },
 
     [NATIONAL_DEX_DEIKI] = 
     {
-        .categoryName = _("Yama"),
+        .categoryName = _("Supreme Judge"),
         .description = gdeikiPokedexText,
     },
 
@@ -2481,13 +2481,13 @@ const struct PokedexEntry gPokedexEntries[] =
 
     [NATIONAL_DEX_CCHIMATA] = 
     {
-        .categoryName = _("Marketplace God"),
+        .categoryName = _("Commerce"),
         .description = gcchimataPokedexText,
     },
 
     [NATIONAL_DEX_CHIMATA] = 
     {
-        .categoryName = _("Marketplace God"),
+        .categoryName = _("Commerce"),
         .description = gchimataPokedexText,
     },
 
@@ -2505,13 +2505,13 @@ const struct PokedexEntry gPokedexEntries[] =
 
     [NATIONAL_DEX_CMIYOI] = 
     {
-        .categoryName = _("Bartender"),
+        .categoryName = _("Waitress"),
         .description = gcmiyoiPokedexText,
     },
 
     [NATIONAL_DEX_MIYOI] = 
     {
-        .categoryName = _("Bartender"),
+        .categoryName = _("Waitress"),
         .description = gmiyoiPokedexText,
     },
 
@@ -2601,13 +2601,13 @@ const struct PokedexEntry gPokedexEntries[] =
 
     [NATIONAL_DEX_CKIKURI] = 
     {
-        .categoryName = _("Disc"),
+        .categoryName = _("Magic Disc"),
         .description = gckikuriPokedexText,
     },
 
     [NATIONAL_DEX_KIKURI] = 
     {
-        .categoryName = _("Disc"),
+        .categoryName = _("Magic Disc"),
         .description = gkikuriPokedexText,
     },
 
@@ -2853,13 +2853,13 @@ const struct PokedexEntry gPokedexEntries[] =
 
     [NATIONAL_DEX_CLOUISE] = 
     {
-        .categoryName = _("Demon"),
+        .categoryName = _("Demon Tourist"),
         .description = gclouisePokedexText,
     },
 
     [NATIONAL_DEX_LOUISE] = 
     {
-        .categoryName = _("Demon"),
+        .categoryName = _("Demon Tourist"),
         .description = glouisePokedexText,
     },
 
@@ -2937,7 +2937,7 @@ const struct PokedexEntry gPokedexEntries[] =
 
     [NATIONAL_DEX_CTENMA] = 
     {
-        .categoryName = _("Tengu Chief"),
+        .categoryName = _("Tengu Prince"),
         .description = gctenmaPokedexText,
     },
 
@@ -2985,31 +2985,31 @@ const struct PokedexEntry gPokedexEntries[] =
 
     [NATIONAL_DEX_XSUWAKO] = 
     {
-        .categoryName = _("Calamity"),
+        .categoryName = _("Calamity Ruler"),
         .description = gxsuwakoPokedexText,
     },
 
     [NATIONAL_DEX_XUTSUHO] = 
     {
-        .categoryName = _("Hellfire"),
+        .categoryName = _("Infernal Abyss"),
         .description = gxutsuhoPokedexText,
     },
 
     [NATIONAL_DEX_XTENSHI] = 
     {
-        .categoryName = _("Heaven"),
+        .categoryName = _("Divine Blight"),
         .description = gxtenshiPokedexText,
     },
 
     [NATIONAL_DEX_XTENMA] = 
     {
-        .categoryName = _("Tengu Warlord"),
+        .categoryName = _("Tengu Conqueror"),
         .description = gxtenmaPokedexText,
     },
 
     [NATIONAL_DEX_XSENDAI] = 
     {
-        .categoryName = _("Exterminator"),
+        .categoryName = _("Fantasy Crusade"),
         .description = gxsendaiPokedexText,
     },
 };

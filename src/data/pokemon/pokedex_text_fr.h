@@ -1,3 +1,5 @@
+//ah yes, fanfiction.txt
+
 const u8 gDummyPokedexText[] = _(
     "This is a newly discovered POKéMON. It is\n"
     "currently under investigation. No detailed\n"
@@ -1644,6 +1646,8 @@ const u8 gwakasagihimePokedexText[] = _(
     "She can't walk on land, but it's not\n"
     "an issue since she can fly. Rarely\n"
     "chooses to leave the water, though.");
+    // this is pretty much all fanfiction
+    // her sprite does sorta imply she floats over the misty lake in ddc though
 
 const u8 gdwakasagihimePokedexText[] = _(
     "Part of a grassroots youkai network\n"
@@ -1664,6 +1668,7 @@ const u8 gtsekibankiPokedexText[] = _(
     "Though she can conjure a great many\n"
     "heads, she typically uses just the one\n"
     "to avoid overwhelming her own senses.");
+    // this is pure fanfiction because this girl has no lore
 
 const u8 gckagerouPokedexText[] = _(
     "A werewolf living in the Bamboo\n"
@@ -1679,6 +1684,7 @@ const u8 ghkagerouPokedexText[] = _(
     "Hosts and moderates social deduction\n"
     "games where players converse to find\n"
     "the secret human among them.");
+    // this one is NOT fanfiction, it's real touhou canon
 
 const u8 gcbenbenPokedexText[] = _(
     "A tsukumogami of a biwa, and the\n"
@@ -1921,174 +1927,180 @@ const u8 gokinaPokedexText[] = _(
     "noh theatre, and others.");
 
 const u8 gceikaPokedexText[] = _(
-    "\n"
-    "\n"
+    "The ghost of a stillborn child.\n"
+    "She's a master at stacking stones.\n"
     "");
 
 const u8 geikaPokedexText[] = _(
-    "\n"
-    "\n"
-    "");
+    "She's good at making tedious, pointless\n"
+    "work into something enjoyable, which makes\n"
+    "her very popular with children spirits.");
 
 const u8 gcurumiPokedexText[] = _(
-    "\n"
-    "\n"
-    "");
+    "An oni who domesticates the extinct\n"
+    "giant fish and plesiosaurs living\n"
+    "in the Sanzu River.");
 
 const u8 gurumiPokedexText[] = _(
-    "\n"
-    "\n"
-    "");
+    "In the days when she killed humans, she'd\n"
+    "set up an attack by asking her target\n"
+    "to hold her unexpectedly heavy baby.");
 
 const u8 gckutakaPokedexText[] = _(
-    "\n"
-    "\n"
-    "");
+    "A goddess of chickens who does\n"
+    "clerical work for Hell.\n"
+    "A bit of a scatterbrain.");
 
 const u8 gkutakaPokedexText[] = _(
-    "\n"
-    "\n"
-    "");
+    "She's quietly trying to raise the\n"
+    "status of chickens from just a food\n"
+    "source, but hasn't had much success.");
+    // how is there so little lore for her
 
 const u8 gcyachiePokedexText[] = _(
-    "\n"
-    "\n"
-    "");
+    "The Jidiao matriarch of the Kiketsu\n"
+    "Family, one of the leading factions\n"
+    "of the Animal Realm. Manipulative.");
 
 const u8 gyachiePokedexText[] = _(
-    "\n"
-    "\n"
-    "");
+    "She has the ability to make people\n"
+    "lose their will to fight back, and\n"
+    "abuses it to maintain her authority.");
 
 const u8 gcmayumiPokedexText[] = _(
-    "\n"
-    "\n"
-    "");
+    "A clay soldier created by Keiki.\n"
+    "Has the ability to convert her\n"
+    "loyalty into strength.");
 
 const u8 gmayumiPokedexText[] = _(
-    "\n"
-    "\n"
-    "");
+    "She's a proficient warrior and skilled\n"
+    "general, but she hardly ever gets into\n"
+    "battles where it matters these days.");
+    // this is kind of weird when you think about it
+    // she's like, 1 year old
+    // but it's not entirely fanfiction
+    // the animal spirits don't have bodies
+    // keiki could've just made a toaster to beat them
 
 const u8 gckeikiPokedexText[] = _(
-    "\n"
-    "\n"
-    "");
+    "A sculptor god, born from the wishes\n"
+    "of the downtrodden human spirits in\n"
+    "the Primate Spirit Garden.");
 
 const u8 gkeikiPokedexText[] = _(
-    "\n"
-    "\n"
-    "");
+    "She crafts wondrous idols that are\n"
+    "animated by faith. Her creations always\n"
+    "end up with souls of their own.");
 
 const u8 gcsakiPokedexText[] = _(
-    "\n"
-    "\n"
-    "");
+    "The pegasus matriarch of the Keiga\n"
+    "Family, one of the leading factions\n"
+    "in the Animal Realm. Quick to act.");
 
 const u8 gsakiPokedexText[] = _(
-    "\n"
-    "\n"
-    "");
+    "A frank and straight-forward leader\n"
+    "whose focus on raw strength makes\n"
+    "her popular with her subordinates.");
 
 const u8 gcyuumaPokedexText[] = _(
-    "\n"
-    "\n"
-    "");
+    "The taotie leader of the Gouyoku\n"
+    "Alliance, one of the leading factions\n"
+    "in the Animal Realm. Prefers going solo.");
 
 const u8 gyuumaPokedexText[] = _(
-    "\n"
-    "\n"
-    "");
+    "The ultimate glutton, she can consume\n"
+    "anything and add it to her own power.\n"
+    "This also influences her personality.");
 
 const u8 gcmikePokedexText[] = _(
-    "\n"
-    "\n"
-    "");
+    "A calico maneki-neko. Has the ability\n"
+    "to draw in one of money or customers,\n"
+    "but will drive away the other.");
 
 const u8 gmikePokedexText[] = _(
-    "\n"
-    "\n"
-    "");
+    "Struggled growing up, since maneki-neko\n"
+    "are normally white cats. Quit society to\n"
+    "live a carefree life in the mountains.");
 
 const u8 gctakanePokedexText[] = _(
-    "\n"
-    "\n"
-    "");
+    "A fairly typicaly yamawaro with an\n"
+    "interest in business. Has the ability\n"
+    "to manipulate forest qi.");
 
 const u8 gtakanePokedexText[] = _(
-    "\n"
-    "\n"
-    "");
+    "The de-facto leader of the yamawaro,\n"
+    "much as Nitori is for the kappa. They\n"
+    "have something of a friendly rivalry.");
 
 const u8 gcsannyoPokedexText[] = _(
-    "\n"
-    "\n"
-    "");
+    "A youkai who runs a gambling den for\n"
+    "other youkai. Takes measures to keep\n"
+    "humans out for their own safety.");
 
 const u8 gsannyoPokedexText[] = _(
-    "\n"
-    "\n"
-    "");
+    "The tobacco she smokes while working has\n"
+    "a calming effect on her patrons. Despite\n"
+    "its mystique, it's low quality tobacco.");
 
 const u8 gcmisumaruPokedexText[] = _(
-    "\n"
-    "\n"
-    "");
+    "A god who produces magatama.\n"
+    "Claims to be the original creator\n"
+    "of Reimu's Yin-Yang Orbs.");
 
 const u8 gmisumaruPokedexText[] = _(
-    "\n"
-    "\n"
-    "");
+    "The magatama she makes are powerful\n"
+    "magic items, but she requires rare and\n"
+    "precious minerals to manufacture them.");
 
 const u8 gctsukasaPokedexText[] = _(
-    "\n"
-    "\n"
-    "");
+    "A wicked and typical kuda-gitsune.\n"
+    "Megumu's trusted agent who is really\n"
+    "just out to sow chaos and disorder.");
 
 const u8 gtsukasaPokedexText[] = _(
-    "\n"
-    "\n"
-    "");
+    "She's competent and gives good financial\n"
+    "advice, but listening to her will\n"
+    "inevitably lead to ruin down the road.");
 
 const u8 gcmegumuPokedexText[] = _(
-    "\n"
-    "\n"
+    "The polite chief of the Crow Tengu.\n"
+    "A terrible judge of character.\n"
     "");
 
 const u8 gmegumuPokedexText[] = _(
-    "\n"
-    "\n"
-    "");
+    "Created the Ability Cards as part of an\n"
+    "elaborate business venture to exploit\n"
+    "Gensokyo's lack of standardized currency.");
 
 const u8 gcchimataPokedexText[] = _(
-    "\n"
-    "\n"
-    "");
+    "A destitute god of marketplaces.\n"
+    "Struggles to generate faith in the\n"
+    "modern era of online trade.");
 
 const u8 gchimataPokedexText[] = _(
-    "\n"
-    "\n"
-    "");
+    "Governs “special event” marketplaces.\n"
+    "Detests those who interfere with free\n"
+    "trade or pursue profit through force.");
 
 const u8 gcmomoyoPokedexText[] = _(
-    "\n"
-    "\n"
-    "");
+    "An oomukade, a centipede-like youkai.\n"
+    "Exceedingly powerful, she's rumored\n"
+    "to eat dragons. Values strength.");
 
 const u8 gmomoyoPokedexText[] = _(
-    "\n"
-    "\n"
-    "");
+    "Most people avoid her kind, fearing\n"
+    "her grotesque shape and deadly toxins,\n"
+    "so she enjoys meeting new people.");
 
 const u8 gcmiyoiPokedexText[] = _(
-    "\n"
-    "\n"
-    "");
+    "A zashiki-warashi, and the poster girl\n"
+    "of the pub Geidontei. Mischievous, but\n"
+    "also a bit of a worrywart.");
 
 const u8 gmiyoiPokedexText[] = _(
-    "\n"
-    "\n"
-    "");
+    "She can manipulate memories and dreams.\n"
+    "Uses this ability to make Geidontei's\n"
+    "owner unaware of her existence.");
 
 const u8 gchakureiPokedexText[] = _(
     "A fledgling shrine maiden that\n"
@@ -2221,9 +2233,9 @@ const u8 gmeiraPokedexText[] = _(
     "and hasn't been seen since her defeat.");
 
 const u8 gmagic_stonesPokedexText[] = _(
-    "\n"
-    "\n"
-    "");
+    "A deadly magical weapon guarding the\n"
+    "passage to Reimaden. It's unclear if\n"
+    "they're sentient, or even alive.");
 
 const u8 gcellenPokedexText[] = _(
     "A witch with eternal youth.\n"
@@ -2431,24 +2443,28 @@ const u8 gshinkiPokedexText[] = _(
     "entire realm in a single duel.");
 
 const u8 gcsendaiPokedexText[] = _(
-    "\n"
-    "\n"
-    "");
+    "The former maiden of the Hakurei\n"
+    "Shrine. Enjoys quiet days when the\n"
+    "shrine sees no visitors.");
+    // because she'd exterminate them
 
 const u8 gsendaiPokedexText[] = _(
-    "\n"
-    "\n"
-    "");
+    "Her power was overwhelming and her skill\n"
+    "at youkai extermination was peerless.\n"
+    "Vanished at around the same time as Youki.");
+    // pure fanfiction, inspired by silverquest(?)
 
 const u8 gctenmaPokedexText[] = _(
-    "\n"
-    "\n"
-    "");
+    "Future leader of the tengu. Was born\n"
+    "into the ruling caste, and is being\n"
+    "carefully groomed for the role.");
+    // the tengu actually do seem to have a rigid cast system
+    // hatate is implied nobility by her purple garb and general lifestyle
 
 const u8 gtenmaPokedexText[] = _(
-    "\n"
-    "\n"
-    "");
+    "The proud lord of the tengu.\n"
+    "A serious leader, some tengu think\n"
+    "it would help them to lighten up a bit.");
 
 const u8 gclaylaPokedexText[] = _(
     "The fourth Prismriver sister. Not\n"
@@ -2479,6 +2495,7 @@ const u8 g2huPokedexText[] = _(
     "An aberrant attempt at drawing a Touhou\n"
     "girl. Steals hair decorations, believing\n"
     "that they are necessary for survival.");
+    // she's a reference to the How to Draw a Touhou Girl meme
 
 const u8 gxsuwakoPokedexText[] = _(
     "A native god that controls the earth\n"
@@ -2496,11 +2513,15 @@ const u8 gxtenshiPokedexText[] = _(
     "struggle to do any lasting damage.");
 
 const u8 gxtenmaPokedexText[] = _(
-    "\n"
-    "\n"
-    "");
+    "The tengu's aspirations to rule Gensokyo\n"
+    "are hardly a well-kept secret, especially\n"
+    "since this incarnation took charge.");
+    // iirc the tengu don't actually want to openly rule gensokyo
+    // they're more interested in being shadow rulers pulling strings
+    // but that doesn't mean open war wouldn't be a terrifying prospect for some
 
 const u8 gxsendaiPokedexText[] = _(
-    "\n"
-    "\n"
-    "");
+    "Created a briefly peaceful Gensokyo\n"
+    "by herself through a campaign of\n"
+    "brutal and unprovoked exterminations.");
+    // probably too blunt
