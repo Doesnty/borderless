@@ -1661,9 +1661,11 @@ s32 CalculateBaseDamage(struct BattlePokemon *attacker, struct BattlePokemon *de
     u8 defenderHoldEffectParam;
     u8 attackerHoldEffect;
     u8 attackerHoldEffectParam;
+    u8 defenderAbility;
     u8 atkStatMod;
     u8 defStatMod;
     u8 variablePower = getVariableBasePower(attacker, defender, move, battlerIdAtk, battlerIdDef);
+    u8 weatherHasEffect = WEATHER_HAS_EFFECT2;
 
     if (variablePower)
         gBattleMovePower = variablePower;
@@ -1683,10 +1685,24 @@ s32 CalculateBaseDamage(struct BattlePokemon *attacker, struct BattlePokemon *de
     defense = defender->defense;
     spAttack = attacker->spAttack;
     spDefense = defender->spDefense;
-    if (move == MOVE_FOUL_PLAY)
+    if (move == MOVE_FOUL_PLAY && attacker->ability == ABILITY_PERVERSION)
+        attack = defender->spAttack;
+    else if (move == MOVE_FOUL_PLAY)
         attack = defender->attack;
+    else if (attacker->ability == ABILITY_PERVERSION)
+    {
+        u16 buffer = spAttack;
+        spAttack = buffer;
+        attack = buffer;
+    }
     else if (move == MOVE_EARTH_PRESS)
         attack = attacker->defense;
+    
+    if (attacker->ability == ABILITY_PURE_FURIES ||
+        attacker->ability == ABILITY_MOLD_BREAKER)
+        defenderAbility = ABILITY_NONE;
+    else
+        defenderAbility = defender->ability;
 
     if (attacker->item == ITEM_ENIGMA_BERRY)
     {
@@ -1777,21 +1793,16 @@ s32 CalculateBaseDamage(struct BattlePokemon *attacker, struct BattlePokemon *de
         (attacker->species == SPECIES_CHINA || attacker->species == SPECIES_HINA ||
          attacker->species == SPECIES_AHINA || attacker->species == SPECIES_DHINA))
         attack *= 2;
-    if (defender->ability == ABILITY_WALL_OF_ICE && (type == TYPE_FIRE || type == TYPE_ICE))
+    if (defenderAbility == ABILITY_WALL_OF_ICE && (type == TYPE_FIRE || type == TYPE_ICE))
     {
         attack /= 2;
         spAttack /= 2;
     }
     if (attacker->ability == ABILITY_HUSTLE)
         attack = (150 * attack) / 100;
-    /*
-    if (attacker->ability == ABILITY_PLUS && ABILITY_ON_FIELD2(ABILITY_MINUS))
-        spAttack = (150 * spAttack) / 100;
-    if (attacker->ability == ABILITY_MINUS && ABILITY_ON_FIELD2(ABILITY_PLUS))
-        spAttack = (150 * spAttack) / 100; */
     if (attacker->ability == ABILITY_GUTS && attacker->status1)
         attack = (150 * attack) / 100;
-    if (defender->ability == ABILITY_SPRING_CHARM && defender->status1)
+    if (defenderAbility == ABILITY_SPRING_CHARM && defender->status1)
         defense = (150 * defense) / 100;
     if (type == TYPE_ELECTRIC && AbilityBattleEffects(ABILITYEFFECT_FIELD_SPORT, 0, 0, 0xFD, 0))
         gBattleMovePower /= 2;
@@ -1802,17 +1813,91 @@ s32 CalculateBaseDamage(struct BattlePokemon *attacker, struct BattlePokemon *de
         gBattleMovePower *= 15;
         gBattleMovePower /= 10;
     }
-    /*
-    if (type == TYPE_GRASS && attacker->ability == ABILITY_OVERGROW && attacker->hp <= (attacker->maxHP / 3))
+    if (attacker->ability == ABILITY_INNER_POWER && attacker->hp <= (attacker->maxHP / 3) &&
+        (type == attacker->type1 || type == attacker->type2))
         gBattleMovePower = (150 * gBattleMovePower) / 100;
-    if (type == TYPE_FIRE && attacker->ability == ABILITY_BLAZE && attacker->hp <= (attacker->maxHP / 3))
+    if (attacker->ability == ABILITY_STONEWORKER && type == TYPE_EARTH)
+    {
         gBattleMovePower = (150 * gBattleMovePower) / 100;
-    if (type == TYPE_WATER && attacker->ability == ABILITY_TORRENT && attacker->hp <= (attacker->maxHP / 3))
-        gBattleMovePower = (150 * gBattleMovePower) / 100;
-    if (type == TYPE_BUG && attacker->ability == ABILITY_SWARM && attacker->hp <= (attacker->maxHP / 3))
-        gBattleMovePower = (150 * gBattleMovePower) / 100;
-    if (gBattleMoves[gCurrentMove].effect == EFFECT_EXPLOSION)
-        defense /= 2; */
+    }
+    if (defenderAbility == ABILITY_CHEERFUL && defender->hp == defender->maxHP)
+    {
+        defense *= 2;
+        spDefense *= 2;
+    }
+    if (attacker->ability == ABILITY_PURE_ENIGMA)
+    {
+        if (attacker->species == SPECIES_OKINA)
+        {
+            attack *= 2;
+            spAttack *= 2;
+        }
+        else
+        {
+            defense = (defense * 150) / 100;
+            spDefense = (spDefense * 150) / 100;
+        }
+    }
+    if (defenderAbility == ABILITY_PURE_ENIGMA)
+    {
+        if (defender->species == SPECIES_OKINA)
+        {
+            defense *= 2;
+            spDefense *= 2;
+        }
+        else
+        {
+            defense = (defense * 150) / 100;
+            spDefense = (spDefense * 150) / 100;
+        }
+    }
+    if (attacker->ability == ABILITY_HARMONIZE)
+    {
+        u8 i = 0;
+        u8 boost = 0;
+        struct Pokemon *party;
+        //oh fuckin' boy here we go
+        if (GET_BATTLER_SIDE(battlerIdAtk) != B_SIDE_PLAYER)
+            party = gEnemyParty;
+        else
+            party = gPlayerParty;
+        for (i = 0; i < PARTY_SIZE; i++)
+        {
+            if (i != gBattlerPartyIndexes[battlerIdAtk])
+            {
+                if (GetMonData(&party[i], MON_DATA_IS_EGG, NULL) || !GetMonData(&party[i], MON_DATA_SPECIES, NULL))
+                    continue;
+                if (GetMonData(&party[i], MON_DATA_MOVE1, NULL) == move ||
+                    GetMonData(&party[i], MON_DATA_MOVE2, NULL) == move ||
+                    GetMonData(&party[i], MON_DATA_MOVE3, NULL) == move ||
+                    GetMonData(&party[i], MON_DATA_MOVE4, NULL) == move)
+                    boost += 10;
+            }
+        }
+        
+        gBattleMovePower = (gBattleMovePower * (100 + boost)) / 100;
+    }
+    
+    if (weatherHasEffect)
+    {
+        if (attacker->ability == ABILITY_SOLAR_POWER && gBattleWeather & WEATHER_SUN_ANY)
+            spAttack = (spAttack * 150) / 100;
+        if (gBattleWeather & WEATHER_HAIL)
+        {
+            if (attacker->ability == ABILITY_WINTER_GIFT)
+            {
+                attack *= 2;
+                spAttack *= 2;
+            }
+            if (defenderAbility == ABILITY_WINTER_GIFT)
+            {
+                defense *= 2;
+                spDefense *= 2;
+            }
+        }
+        if (gBattleWeather && defenderAbility == ABILITY_STORM_SHAWL)
+            spDefense = (spDefense * 15) / 10;
+    }
         
         
     if ((attacker->status1 & STATUS1_BURN) && attacker->ability != ABILITY_GUTS && move != MOVE_FACADE)
@@ -1822,8 +1907,12 @@ s32 CalculateBaseDamage(struct BattlePokemon *attacker, struct BattlePokemon *de
     {
         atkStatMod = attacker->statStages[STAT_ATK];
         defStatMod = defender->statStages[STAT_DEF];
-        if (move == MOVE_FOUL_PLAY)
+        if (move == MOVE_FOUL_PLAY && attacker->ability == ABILITY_PERVERSION)
+            atkStatMod = defender->statStages[STAT_SPATK];
+        else if (move == MOVE_FOUL_PLAY)
             atkStatMod = defender->statStages[STAT_ATK];
+        else if (attacker->ability == ABILITY_PERVERSION)
+            atkStatMod = attacker->statStages[STAT_SPATK];
         else if (move == MOVE_EARTH_PRESS)
             atkStatMod = attacker->statStages[STAT_DEF];
         if (gCritMultiplier == 2 && atkStatMod < 6)
@@ -1842,20 +1931,13 @@ s32 CalculateBaseDamage(struct BattlePokemon *attacker, struct BattlePokemon *de
         }
         else
             APPLY_STAT_MOD(damageHelper, defense, defStatMod)
-
-
-        if ((sideStatus & SIDE_STATUS_REFLECT) && gCritMultiplier == 1)
-        {
-            if ((gBattleTypeFlags & BATTLE_TYPE_DOUBLE) && CountAliveMonsInBattle(BATTLE_ALIVE_DEF_SIDE) == 2)
-                damage = 2 * (damage / 3);
-            else
-                damage /= 2;
-        }
     }
     else
     {
         u8 atkStatMod = attacker->statStages[STAT_SPATK];
         u8 defStatMod = defender->statStages[STAT_SPDEF];
+        if (attacker->ability == ABILITY_PERVERSION)
+            atkStatMod = attacker->statStages[STAT_ATK];
         if (move == MOVE_MANASHOCK)
         {
             defStatMod = defender->statStages[STAT_DEF];
@@ -1896,7 +1978,7 @@ s32 CalculateBaseDamage(struct BattlePokemon *attacker, struct BattlePokemon *de
         damage /= 2;
 
     // are effects of weather negated with cloud nine or air lock
-    if (WEATHER_HAS_EFFECT2)
+    if (weatherHasEffect)
     {
         if (gBattleWeather & WEATHER_RAIN_TEMPORARY)
         {

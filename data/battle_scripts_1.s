@@ -3714,6 +3714,11 @@ BattleScript_EnduredMsg::
 	waitmessage 0x40
 	return
 
+BattleScript_EnduredWithSturdyMsg::
+	printstring STRINGID_PKMNENDUREDWITHSTURDY
+	waitmessage 0x40
+	return
+
 BattleScript_OneHitKOMsg::
 	printstring STRINGID_ONEHITKO
 	waitmessage 0x40
@@ -3803,6 +3808,14 @@ BattleScript_MoveUsedIsParalyzed::
 
 BattleScript_MoveUsedFlinched::
 	printstring STRINGID_PKMNFLINCHED
+	waitmessage 0x40
+	goto BattleScript_MoveEnd
+
+BattleScript_SteadfastActivates::
+	printstring STRINGID_PKMNFLINCHED
+	waitmessage 0x40
+	playanimation BS_ATTACKER, B_ANIM_STATS_CHANGE, sB_ANIM_ARG1
+	printstring STRINGID_PKMNRAISEDSPEED
 	waitmessage 0x40
 	goto BattleScript_MoveEnd
 
@@ -4113,6 +4126,12 @@ BattleScript_DroughtActivates::
 	playanimation BS_BATTLER_0, B_ANIM_SUN_CONTINUES, NULL
 	call BattleScript_HandleWeatherFormChanges
 	end3
+
+BattleScript_CloudNineAnnounces::
+	pause 0x20
+	printstring STRINGID_PKMNNULLIFIESWEATHER
+    pause 0x40
+    end3
 
 BattleScript_TookAttack::
 	attackstring
@@ -4544,13 +4563,13 @@ BattleScript_EffectTopsyTurvy::
 	attackstring
 	ppreduce
 	accuracycheck BattleScript_ButItFailed, ACC_CURR_MOVE
-    jumpifstat BS_ATTACKER, CMP_NOT_EQUAL, STAT_ATK, 6, BattleScript_EffectTopsyTurvyExecute
-    jumpifstat BS_ATTACKER, CMP_NOT_EQUAL, STAT_DEF, 6, BattleScript_EffectTopsyTurvyExecute
-    jumpifstat BS_ATTACKER, CMP_NOT_EQUAL, STAT_SPATK, 6, BattleScript_EffectTopsyTurvyExecute
-    jumpifstat BS_ATTACKER, CMP_NOT_EQUAL, STAT_SPDEF, 6, BattleScript_EffectTopsyTurvyExecute
-    jumpifstat BS_ATTACKER, CMP_NOT_EQUAL, STAT_SPEED, 6, BattleScript_EffectTopsyTurvyExecute
-    jumpifstat BS_ATTACKER, CMP_NOT_EQUAL, STAT_ACC, 6, BattleScript_EffectTopsyTurvyExecute
-    jumpifstat BS_ATTACKER, CMP_EQUAL, STAT_EVASION, 6, BattleScript_EffectTopsyTurvyExecute
+    jumpifstat BS_TARGET, CMP_NOT_EQUAL, STAT_ATK, 6, BattleScript_EffectTopsyTurvyExecute
+    jumpifstat BS_TARGET, CMP_NOT_EQUAL, STAT_DEF, 6, BattleScript_EffectTopsyTurvyExecute
+    jumpifstat BS_TARGET, CMP_NOT_EQUAL, STAT_SPATK, 6, BattleScript_EffectTopsyTurvyExecute
+    jumpifstat BS_TARGET, CMP_NOT_EQUAL, STAT_SPDEF, 6, BattleScript_EffectTopsyTurvyExecute
+    jumpifstat BS_TARGET, CMP_NOT_EQUAL, STAT_SPEED, 6, BattleScript_EffectTopsyTurvyExecute
+    jumpifstat BS_TARGET, CMP_NOT_EQUAL, STAT_ACC, 6, BattleScript_EffectTopsyTurvyExecute
+    jumpifstat BS_TARGET, CMP_NOT_EQUAL, STAT_EVASION, 6, BattleScript_EffectTopsyTurvyExecute
     goto BattleScript_ButItFailed
     
 BattleScript_EffectTopsyTurvyExecute::
@@ -5328,3 +5347,90 @@ BattleScript_MoveSAtkDrain::
 	waitmessage 64
 	orbyte gMoveResultFlags, MOVE_RESULT_DOESNT_AFFECT_FOE
 	goto BattleScript_MoveEnd
+
+BattleScript_PressureAnnounces::
+	pause 0x20
+	printstring STRINGID_PKMNEXERTSPRESSURE
+    pause 0x40
+    end3
+
+BattleScript_MoldBreakerAnnounces::
+	pause 0x20
+	printstring STRINGID_MOLDBREAKERANNOUNCE
+    pause 0x40
+    end3
+
+BattleScript_PureFuriesAnnounces::
+	pause 0x20
+	printstring STRINGID_PUREFURIESANNOUNCE
+    pause 0x40
+    end3
+
+BattleScript_Imposter::
+	printstring STRINGID_RECOLLECTIONABILITY
+	waitmessage 0x40
+	healthbarupdate BS_ATTACKER
+	datahpupdate BS_ATTACKER
+	end3
+
+BattleScript_LooseLips::
+    jumpifstat BS_TARGET, CMP_NOT_EQUAL, STAT_ATK, 6, BattleScript_LooseLipsExecute
+    jumpifstat BS_TARGET, CMP_NOT_EQUAL, STAT_DEF, 6, BattleScript_LooseLipsExecute
+    jumpifstat BS_TARGET, CMP_NOT_EQUAL, STAT_SPATK, 6, BattleScript_LooseLipsExecute
+    jumpifstat BS_TARGET, CMP_NOT_EQUAL, STAT_SPDEF, 6, BattleScript_LooseLipsExecute
+    jumpifstat BS_TARGET, CMP_NOT_EQUAL, STAT_SPEED, 6, BattleScript_LooseLipsExecute
+    jumpifstat BS_TARGET, CMP_NOT_EQUAL, STAT_ACC, 6, BattleScript_LooseLipsExecute
+    jumpifstat BS_TARGET, CMP_NOT_EQUAL, STAT_EVASION, 6, BattleScript_LooseLipsExecute
+BattleScript_LooseLipsSkip::
+    end3
+
+BattleScript_LooseLipsExecute::
+    special 0x0
+	pause 0x20
+	printstring STRINGID_LOOSELIPSACTIVATES
+    pause 0x40
+    end3
+
+BattleScript_LunacyActivates::
+	pause 0x20
+	playanimation BS_SCRIPTING, B_ANIM_STATS_CHANGE, sB_ANIM_ARG1
+	printstring STRINGID_ABILITYRAISEDSTAT
+	waitmessage 0x40
+	end3
+
+BattleScript_PowerLeakBoost::
+    pause 0x20
+	playanimation BS_SCRIPTING, B_ANIM_STATS_CHANGE, sB_ANIM_ARG1
+	printstring STRINGID_ABILITYRAISEDSTAT
+	waitmessage 0x40
+	end3
+
+BattleScript_PowerLeakPenalty::
+	playanimation BS_ATTACKER, B_ANIM_STATS_CHANGE, sB_ANIM_ARG1
+	printstring STRINGID_POWERLEAKDRAINSSATK
+	waitmessage 0x40
+	end3
+
+BattleScript_ContagionSpreads::
+	printstring STRINGID_CONTAGIONSPREADS
+	waitmessage 0x40
+	return
+
+BattleScript_Lecture::
+	playanimation BS_ATTACKER, B_ANIM_STATS_CHANGE, sB_ANIM_ARG1
+	printstring STRINGID_LECTURELOWERSSPEED
+	waitmessage 0x40
+	return
+
+BattleScript_LectureContrary::
+	playanimation BS_ATTACKER, B_ANIM_STATS_CHANGE, sB_ANIM_ARG1
+	printstring STRINGID_LECTURERAISESSPEED
+	waitmessage 0x40
+	return
+
+BattleScript_LectureBlockedByAbility::
+	printstring STRINGID_LECTUREBLOCKED
+	waitmessage 0x40
+	return
+
+

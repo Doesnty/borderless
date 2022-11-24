@@ -533,6 +533,20 @@ const u8 sText_HappyHour[] = _("Everyone is caught up in\nthe happy atmosphere!"
 const u8 sText_PkmnTrappedInDestitution[] = _("{B_DEF_NAME_WITH_PREFIX} was trapped\nbelow the poverty line!");
 const u8 sText_PkmnPreventsTaunt[] = _("{B_DEF_NAME_WITH_PREFIX}'s {B_DEF_ABILITY}\nmakes the Taunt fall flat!");
 const u8 sText_PkmnRaisedSpAtk[] = _("{B_SCR_ACTIVE_NAME_WITH_PREFIX}'s {B_SCR_ACTIVE_ABILITY}\nraised its Sp. Atk!");
+const u8 sText_PkmnEnduredWithSturdy[] = _("{B_DEF_NAME_WITH_PREFIX} hung on\nthanks to its Sturdy!");
+const u8 sText_PkmnNullifiesWeather[] = _("{B_SCR_ACTIVE_NAME_WITH_PREFIX}'s {B_SCR_ACTIVE_ABILITY}\nsuppresses the effects of weather.");
+const u8 sText_PkmnExertsPressure[] = _("{B_SCR_ACTIVE_NAME_WITH_PREFIX}\nexerts its Pressure!");
+const u8 sText_RecollectionActivates[] = _("{B_SCR_ACTIVE_NAME_WITH_PREFIX} has a\nRecollection of {B_BUFF1}!");
+const u8 sText_LooseLipsActivates[] = _("{B_SCR_ACTIVE_NAME_WITH_PREFIX}'s Loose Lips\ninverts {B_DEF_NAME_WITH_PREFIX}'s stat changes!");
+const u8 sText_AbilityRaisedStat[] = _("{B_SCR_ACTIVE_NAME_WITH_PREFIX}'s {B_SCR_ACTIVE_ABILITY}\nraised its {B_BUFF1}!");
+const u8 sText_PowerLeakDrainsSAtk[] = _("{B_SCR_ACTIVE_NAME_WITH_PREFIX}'s Power Leak\ndrains away its Sp. Atk!");
+const u8 sText_AbilityHurts[] = _("{B_ATK_NAME_WITH_PREFIX} is hurt by\nits {B_ATK_ABILITY}!");
+const u8 sText_MoldBreakerAnnounce[] = _("{B_SCR_ACTIVE_NAME_WITH_PREFIX}\nbreaks the mold!");
+const u8 sText_PureFuriesAnnounce[] = _("{B_SCR_ACTIVE_NAME_WITH_PREFIX}\nbristles with pure fury!");
+const u8 sText_ContagionSpreads[] = _("{B_DEF_NAME_WITH_PREFIX}'s {B_DEF_ABILITY}\nispreads to {B_ATK_NAME_WITH_PREFIX}!");
+const u8 sText_LectureLowersSpeed[] = _("{B_DEF_NAME_WITH_PREFIX}'s {B_DEF_ABILITY}\nlowers {B_ATK_NAME_WITH_PREFIX}'s Speed!");
+const u8 sText_LectureRaisesSpeed[] = _("{B_DEF_NAME_WITH_PREFIX}'s {B_DEF_ABILITY}\nraises {B_ATK_NAME_WITH_PREFIX}'s Speed!");
+const u8 sText_LectureBlocked[] = _("{B_DEF_NAME_WITH_PREFIX}'s {B_DEF_ABILITY} was\nblocked by {B_ATK_NAME_WITH_PREFIX}'s {B_ATK_ABILITY}!");
 
 const u8 *const gBattleStringsTable[] = {
     [STRINGID_TRAINER1LOSETEXT - 12]              = sText_Trainer1LoseText,
@@ -930,6 +944,20 @@ const u8 *const gBattleStringsTable[] = {
     [STRINGID_PKMNTRAPPEDINDESTITUTION - 12]      = sText_PkmnTrappedInDestitution,
     [STRINGID_OBLIVIOUSPREVENTSTAUNT - 12]        = sText_PkmnPreventsTaunt,
     [STRINGID_PKMNRAISEDSPATK - 12]               = sText_PkmnRaisedSpAtk,
+    [STRINGID_PKMNENDUREDWITHSTURDY - 12]         = sText_PkmnEnduredWithSturdy,
+    [STRINGID_PKMNNULLIFIESWEATHER - 12]          = sText_PkmnNullifiesWeather,
+    [STRINGID_PKMNEXERTSPRESSURE - 12]            = sText_PkmnExertsPressure,
+    [STRINGID_RECOLLECTIONABILITY - 12]           = sText_RecollectionActivates,
+    [STRINGID_LOOSELIPSACTIVATES - 12]            = sText_LooseLipsActivates,
+    [STRINGID_ABILITYRAISEDSTAT - 12]             = sText_AbilityRaisedStat,
+    [STRINGID_POWERLEAKDRAINSSATK - 12]           = sText_PowerLeakDrainsSAtk,
+    [STRINGID_ABILITYHURTS - 12]                  = sText_AbilityHurts,
+    [STRINGID_MOLDBREAKERANNOUNCE - 12]           = sText_MoldBreakerAnnounce,
+    [STRINGID_PUREFURIESANNOUNCE - 12]            = sText_PureFuriesAnnounce,
+    [STRINGID_CONTAGIONSPREADS - 12]              = sText_ContagionSpreads,
+    [STRINGID_LECTURELOWERSSPEED - 12]            = sText_LectureLowersSpeed,
+    [STRINGID_LECTURERAISESSPEED - 12]            = sText_LectureRaisesSpeed,
+    [STRINGID_LECTUREBLOCKED - 12]                = sText_LectureBlocked,
 };
 
 const u16 gMissStringIds[] = {
@@ -961,12 +989,14 @@ const u16 gMoveWeatherChangeStringIds[] = {
 
 const u16 gSandstormHailContinuesStringIds[] = {
     STRINGID_SANDSTORMRAGES,
-    STRINGID_HAILCONTINUES
+    STRINGID_HAILCONTINUES,
+    STRINGID_SUNLIGHTSTRONG,
 };
 
 const u16 gSandstormHailDmgStringIds[] = {
     STRINGID_PKMNBUFFETEDBYSANDSTORM,
-    STRINGID_PKMNPELTEDBYHAIL
+    STRINGID_PKMNPELTEDBYHAIL,
+    STRINGID_ABILITYHURTS,
 };
 
 const u16 gSandstormHailEndStringIds[] = {

@@ -627,7 +627,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .secondaryEffectChance = 0,
         .priority = 0,
         .target = MOVE_TARGET_SELECTED,
-        .flags = FLAG_PROTECT_AFFECTED | FLAG_MAGICCOAT_AFFECTED,
+        .flags = FLAG_PROTECT_AFFECTED | FLAG_MAGICCOAT_AFFECTED | FLAG_SOUND_MOVE,
     },
 
     [MOVE_ROAR] = 
@@ -641,7 +641,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .secondaryEffectChance = 0,
         .priority = -6,
         .target = MOVE_TARGET_SELECTED,
-        .flags = FLAG_MAGICCOAT_AFFECTED,
+        .flags = FLAG_MAGICCOAT_AFFECTED | FLAG_SOUND_MOVE,
     },
 
     [MOVE_SING] = 
@@ -655,7 +655,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .secondaryEffectChance = 0,
         .priority = 0,
         .target = MOVE_TARGET_SELECTED,
-        .flags = FLAG_PROTECT_AFFECTED | FLAG_MAGICCOAT_AFFECTED,
+        .flags = FLAG_PROTECT_AFFECTED | FLAG_MAGICCOAT_AFFECTED | FLAG_SOUND_MOVE,
     },
 
     [MOVE_JAMMING] = 
@@ -669,7 +669,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .secondaryEffectChance = 0,
         .priority = 0,
         .target = MOVE_TARGET_SELECTED,
-        .flags = FLAG_MAGICCOAT_AFFECTED,
+        .flags = FLAG_MAGICCOAT_AFFECTED | FLAG_SOUND_MOVE,
     },
 
     [MOVE_SONICBOOM] = 
@@ -1439,7 +1439,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .secondaryEffectChance = 0,
         .priority = 0,
         .target = MOVE_TARGET_SELECTED,
-        .flags = FLAG_PROTECT_AFFECTED | FLAG_MAGICCOAT_AFFECTED,
+        .flags = FLAG_PROTECT_AFFECTED | FLAG_MAGICCOAT_AFFECTED | FLAG_SOUND_MOVE,
     },
 
     [MOVE_DOUBLE_TEAM] = 
@@ -1999,7 +1999,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .secondaryEffectChance = 80,
         .priority = 0,
         .target = MOVE_TARGET_SELECTED,
-        .flags = FLAG_MAKES_CONTACT | FLAG_PROTECT_AFFECTED,
+        .flags = FLAG_MAKES_CONTACT | FLAG_PROTECT_AFFECTED | FLAG_HIGH_CRIT,
     },
 
     [MOVE_TRANSFORM] = 
@@ -2416,10 +2416,10 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .moveClass = CLASS_SPECIAL,
         .accuracy = 100,
         .pp = 15,
-        .secondaryEffectChance = 30,
+        .secondaryEffectChance = 50,
         .priority = 0,
         .target = MOVE_TARGET_SELECTED,
-        .flags = FLAG_PROTECT_AFFECTED,
+        .flags = FLAG_PROTECT_AFFECTED | FLAG_SOUND_MOVE,
     },
 
     [MOVE_CURSE] = 
@@ -2438,7 +2438,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
 
     [MOVE_FLAIL] = 
     {
-        .effect = EFFECT_FLAIL,
+        .effect = EFFECT_HIT,
         .power = 1,
         .type = TYPE_NORMAL,
         .moveClass = CLASS_PHYSICAL,
@@ -2494,7 +2494,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
 
     [MOVE_REVERSAL] = 
     {
-        .effect = EFFECT_FLAIL,
+        .effect = EFFECT_HIT,
         .power = 1,
         .type = TYPE_FIGHTING,
         .moveClass = CLASS_PHYSICAL,
@@ -2858,15 +2858,15 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
 
     [MOVE_TREMORS] = 
     {
-        .effect = EFFECT_FURY_CUTTER,
-        .power = 40,
+        .effect = EFFECT_SPEED_DOWN_HIT,
+        .power = 55,
         .type = TYPE_EARTH,
         .moveClass = CLASS_SPECIAL,
-        .accuracy = 90,
-        .pp = 20,
-        .secondaryEffectChance = 0,
+        .accuracy = 95,
+        .pp = 15,
+        .secondaryEffectChance = 100,
         .priority = 0,
-        .target = MOVE_TARGET_SELECTED,
+        .target = MOVE_TARGET_BOTH,
         .flags = FLAG_PROTECT_AFFECTED,
     },
 
@@ -3539,7 +3539,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .secondaryEffectChance = 100,
         .priority = 0,
         .target = MOVE_TARGET_RANDOM,
-        .flags = FLAG_PROTECT_AFFECTED,
+        .flags = FLAG_PROTECT_AFFECTED | FLAG_SOUND_MOVE,
     },
 
     [MOVE_NASTY_PLOT] = 
@@ -3670,7 +3670,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
 
     [MOVE_FACADE] = 
     {
-        .effect = EFFECT_FACADE,
+        .effect = EFFECT_HIT,
         .power = 70,
         .type = TYPE_NORMAL,
         .moveClass = CLASS_PHYSICAL,
@@ -4253,7 +4253,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .secondaryEffectChance = 0,
         .priority = 0,
         .target = MOVE_TARGET_BOTH,
-        .flags = FLAG_PROTECT_AFFECTED,
+        .flags = FLAG_PROTECT_AFFECTED | FLAG_SOUND_MOVE,
     },
 
     [MOVE_CROSS_POISON] = 
@@ -4320,7 +4320,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .moveClass = CLASS_PHYSICAL,
         .accuracy = 80,
         .pp = 5,
-        .secondaryEffectChance = 30,
+        .secondaryEffectChance = 20,
         .priority = 0,
         .target = MOVE_TARGET_SELECTED,
         .flags = FLAG_MAKES_CONTACT | FLAG_PROTECT_AFFECTED | FLAG_PUNCHING,
@@ -4390,7 +4390,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .moveClass = CLASS_SPECIAL,
         .accuracy = 95,
         .pp = 15,
-        .secondaryEffectChance = 0,
+        .secondaryEffectChance = 30,
         .priority = 0,
         .target = MOVE_TARGET_SELECTED,
         .flags = FLAG_PROTECT_AFFECTED,
@@ -4463,7 +4463,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .secondaryEffectChance = 20,
         .priority = 0,
         .target = MOVE_TARGET_SELECTED,
-        .flags = FLAG_PROTECT_AFFECTED,
+        .flags = FLAG_PROTECT_AFFECTED | FLAG_SOUND_MOVE,
     },
 
     [MOVE_NATURE_SOUND] = 
@@ -4477,7 +4477,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .secondaryEffectChance = 0,
         .priority = 0,
         .target = MOVE_TARGET_SELECTED,
-        .flags = FLAG_PROTECT_AFFECTED,
+        .flags = FLAG_PROTECT_AFFECTED | FLAG_SOUND_MOVE,
     },
 
     [MOVE_TICKLE] = 
@@ -5546,7 +5546,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
 
     [MOVE_SUTRA] = 
     {
-        .effect = EFFECT_NEW,
+        .effect = EFFECT_HIT,
         .power = 70,
         .type = TYPE_FAITH,
         .moveClass = CLASS_SPECIAL,
@@ -5555,7 +5555,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .secondaryEffectChance = 0,
         .priority = 0,
         .target = MOVE_TARGET_BOTH,
-        .flags = FLAG_PROTECT_AFFECTED,
+        .flags = FLAG_PROTECT_AFFECTED | FLAG_SOUND_MOVE,
     },
 
     [MOVE_PRISTINE_SHOT] = 

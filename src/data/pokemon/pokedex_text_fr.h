@@ -1443,7 +1443,7 @@ const u8 glunaPokedexText[] = _(
     "beans with her powers.");
 
 const u8 galunaPokedexText[] = _(
-    "The dullest of the Light Fairies.\n"
+    "Logical, but lacks common sense.\n"
     "Trips over herself and is usually\n"
     "the first one that gets caught.");
 

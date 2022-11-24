@@ -167,7 +167,7 @@ void SetControllerToOakOrOldMan(void)
     gBattlerControllerFuncs[gActiveBattler] = OakOldManBufferRunCommand;
     gBattleStruct->simulatedInputState[0] = 0;
     gBattleStruct->simulatedInputState[1] = 0;
-    gBattleStruct->simulatedInputState[2] = 0;
+    gBattleStruct->simulatedInputState[2] = 0xFF;
     gBattleStruct->simulatedInputState[3] = 0;
 }
 

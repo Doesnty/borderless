@@ -176,7 +176,7 @@ EWRAM_DATA u16 gLastResultingMoves[MAX_BATTLERS_COUNT] = {0};
 EWRAM_DATA u16 gLockedMoves[MAX_BATTLERS_COUNT] = {0};
 EWRAM_DATA u8 gLastHitBy[MAX_BATTLERS_COUNT] = {0};
 EWRAM_DATA u16 gChosenMoveByBattler[MAX_BATTLERS_COUNT] = {0};
-EWRAM_DATA u8 gMoveResultFlags = 0;
+EWRAM_DATA u16 gMoveResultFlags = 0;
 EWRAM_DATA u32 gHitMarker = 0;
 static EWRAM_DATA u8 gUnknown_2023DD4[MAX_BATTLERS_COUNT] = {0};
 EWRAM_DATA u8 gTakenDmgByBattler[MAX_BATTLERS_COUNT] = {0};
@@ -3331,6 +3331,14 @@ u32 GetBattlerSpeed(u8 battler)
     
     if (gBattleMons[battler].ability == ABILITY_QUICK_FEET && gBattleMons[battler].status1)
         speed = (speed * 15) / 10;
+
+    if (gBattleMons[battler].ability == ABILITY_PURE_ENIGMA)
+    {
+        if (gBattleMons[battler].species == SPECIES_OKINA)
+            speed *= 2;
+        else
+            speed = (speed * 15) / 10;
+    }
     
     if (holdEffect == HOLD_EFFECT_MACHO_BRACE)
         speed /= 2;

@@ -19,7 +19,7 @@
     {
       "english": "MASTER BALL",
       "itemId": "ITEM_MASTER_BALL",
-      "price": 0,
+      "price": 10,
       "holdEffect": "HOLD_EFFECT_NONE",
       "holdEffectParam": 0,
       "description_english": "The best BALL with the ultimate\\nperformance. It will catch any wild\\nPOKéMON without fail.",

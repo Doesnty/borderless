@@ -102,6 +102,7 @@ ViridianCity_Mart_Items:: @ 816A298
     .2byte ITEM_YATA_MIRROR
     .2byte ITEM_ICE_BALL
     .2byte ITEM_DARK_RIBBON
+    .2byte ITEM_MASTER_BALL
 	.2byte ITEM_NONE
 	release
 	end
