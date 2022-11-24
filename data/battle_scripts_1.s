@@ -5433,4 +5433,8 @@ BattleScript_LectureBlockedByAbility::
 	waitmessage 0x40
 	return
 
-
+BattleScript_Rattled::
+	playanimation BS_TARGET, B_ANIM_STATS_CHANGE, sB_ANIM_ARG1
+	printstring STRINGID_PKMNRAISEDSPEED
+	waitmessage 0x40
+	return

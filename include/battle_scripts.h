@@ -256,6 +256,7 @@ extern const u8 BattleScript_ContagionSpreads[];
 extern const u8 BattleScript_Lecture[];
 extern const u8 BattleScript_LectureContrary[];
 extern const u8 BattleScript_LectureBlockedByAbility[];
+extern const u8 BattleScript_Rattled[];
 
 extern const u8 *const gBattleScriptsForMoveEffects[];
 extern const u8 *const gBattlescriptsForBallThrow[];

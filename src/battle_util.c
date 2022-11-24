@@ -2237,6 +2237,23 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u8 ability, u8 special, u16 moveA
                     }
                 }
                 break;
+            case ABILITY_RATTLED:
+                if (!(gMoveResultFlags & MOVE_RESULT_NO_EFFECT)
+                 && gBattleMons[gBattlerTarget].hp != 0
+                 && gBattleMons[gBattlerTarget].statStages[STAT_SPEED] < 12
+                 && !gProtectStructs[gBattlerAttacker].confusionSelfDmg
+                 && (moveType == TYPE_DARK || moveType == TYPE_GHOST || moveType == TYPE_BEAST)
+                 && TARGET_TURN_DAMAGED)
+                {
+                    gBattleMons[gBattlerTarget].statStages[STAT_SPEED]++;
+                    gBattleScripting.animArg1 = GET_STAT_BUFF_ID(STAT_SPEED) + STAT_ANIM_PLUS1 - 1;
+                    gBattleScripting.animArg2 = 0;
+                    BattleScriptPushCursor();
+                    gBattlescriptCurrInstr = BattleScript_Rattled;
+                    gBattleScripting.battler = gBattlerTarget;
+                    ++effect;
+                }
+                break;
                 
             }
             break;
