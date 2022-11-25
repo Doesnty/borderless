@@ -20,7 +20,7 @@ static const struct SpriteFrameImage sPicTable_ShadowExtraLarge[] = { obj_frame_
 const struct SpriteTemplate gFieldEffectObjectTemplate_ShadowSmall =
 {
     .tileTag = SPRITE_INVALID_TAG,
-    .paletteTag = SPRITE_INVALID_TAG,
+    .paletteTag = OBJ_EVENT_PAL_TAG_PLAYER_RED,
     .oam = &gObjectEventBaseOam_8x8,
     .anims = sAnimTable_Shadow,
     .images = sPicTable_ShadowSmall,
@@ -31,7 +31,7 @@ const struct SpriteTemplate gFieldEffectObjectTemplate_ShadowSmall =
 const struct SpriteTemplate gFieldEffectObjectTemplate_ShadowMedium =
 {
     .tileTag = SPRITE_INVALID_TAG,
-    .paletteTag = SPRITE_INVALID_TAG,
+    .paletteTag = OBJ_EVENT_PAL_TAG_PLAYER_RED,
     .oam = &gObjectEventBaseOam_16x8,
     .anims = sAnimTable_Shadow,
     .images = sPicTable_ShadowMedium,
@@ -42,7 +42,7 @@ const struct SpriteTemplate gFieldEffectObjectTemplate_ShadowMedium =
 const struct SpriteTemplate gFieldEffectObjectTemplate_ShadowLarge =
 {
     .tileTag = SPRITE_INVALID_TAG,
-    .paletteTag = SPRITE_INVALID_TAG,
+    .paletteTag = OBJ_EVENT_PAL_TAG_PLAYER_RED,
     .oam = &gObjectEventBaseOam_32x8,
     .anims = sAnimTable_Shadow,
     .images = sPicTable_ShadowLarge,
@@ -53,7 +53,7 @@ const struct SpriteTemplate gFieldEffectObjectTemplate_ShadowLarge =
 const struct SpriteTemplate gFieldEffectObjectTemplate_ShadowExtraLarge =
 {
     .tileTag = SPRITE_INVALID_TAG,
-    .paletteTag = SPRITE_INVALID_TAG,
+    .paletteTag = OBJ_EVENT_PAL_TAG_PLAYER_RED,
     .oam = &gObjectEventBaseOam_64x32,
     .anims = sAnimTable_Shadow,
     .images = sPicTable_ShadowExtraLarge,
@@ -277,7 +277,7 @@ static const union AnimCmd *const sAnimTable_Arrow[] =
 const struct SpriteTemplate gFieldEffectObjectTemplate_Arrow =
 {
     .tileTag = SPRITE_INVALID_TAG,
-    .paletteTag = SPRITE_INVALID_TAG,
+    .paletteTag = OBJ_EVENT_PAL_TAG_PLAYER_RED,
     .oam = &gObjectEventBaseOam_16x16,
     .anims = sAnimTable_Arrow,
     .images = sPicTable_Arrow,
@@ -1020,7 +1020,7 @@ static const union AnimCmd *const sAnimTable_TreeDisguise[] =
 const struct SpriteTemplate gFieldEffectObjectTemplate_TreeDisguise =
 {
     .tileTag = SPRITE_INVALID_TAG,
-    .paletteTag = SPRITE_INVALID_TAG,
+    .paletteTag = OBJ_EVENT_PAL_TAG_PLAYER_RED,
     .oam = &gObjectEventBaseOam_16x32,
     .anims = sAnimTable_TreeDisguise,
     .images = sPicTable_TreeDisguise,
@@ -1066,7 +1066,7 @@ static const union AnimCmd *const sAnimTable_MountainDisguise[] =
 const struct SpriteTemplate gFieldEffectObjectTemplate_MountainDisguise =
 {
     .tileTag = SPRITE_INVALID_TAG,
-    .paletteTag = SPRITE_INVALID_TAG,
+    .paletteTag = OBJ_EVENT_PAL_TAG_PLAYER_RED,
     .oam = &gObjectEventBaseOam_16x32,
     .anims = sAnimTable_MountainDisguise,
     .images = sPicTable_MountainDisguise,
@@ -1147,7 +1147,7 @@ static const union AnimCmd *const sAnimTable_Bird[] =
 const struct SpriteTemplate gFieldEffectObjectTemplate_Bird =
 {
     .tileTag = SPRITE_INVALID_TAG,
-    .paletteTag = SPRITE_INVALID_TAG,
+    .paletteTag = OBJ_EVENT_PAL_TAG_PLAYER_RED,
     .oam = &gObjectEventBaseOam_64x64,
     .anims = sAnimTable_Bird,
     .images = sPicTable_Bird,

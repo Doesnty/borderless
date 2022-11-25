@@ -118,7 +118,6 @@ u8 GetFishingDirectionAnimNum(u8 direction);
 u8 GetFishingNoCatchDirectionAnimNum(u8 a0);
 void ObjectEventSetGraphicsId(struct ObjectEvent *objectEvent, u8 a1);
 u8 sub_805EB44(u8, u8, s16, s16);
-void InitObjectEventPalettes(u8 mode);
 bool8 ObjectEventIsMovementOverridden(struct ObjectEvent *objectEvent);
 u8 ObjectEventCheckHeldMovementStatus(struct ObjectEvent *objectEvent);
 u8 GetWalkNormalMovementAction(u32);
@@ -157,7 +156,6 @@ u8 GetJumpSpecialMovementAction(u32 direction);
 void EnableObjectGroundEffectsByXY(s16 x, s16 y);
 void MoveObjectEventToMapCoords(struct ObjectEvent *objectEvent, s16 x, s16 y);
 u8 CreateCopySpriteAt(struct Sprite * sprite, s16 x, s16 y, u8 subpriority);
-u16 GetObjectPaletteTag(u8 paletteIndex);
 void SetSpritePosToMapCoords(s16 x, s16 y, s16 *x2, s16 *y2);
 void UpdateObjectEventSpriteVisibility(struct Sprite *sprite, bool8 invisible);
 bool8 AreZCoordsCompatible(u8, u8);
@@ -185,6 +183,7 @@ void SetAndStartSpriteAnim(struct Sprite *, u8, u8);
 bool8 SpriteAnimEnded(struct Sprite *);
 u8 ObjectEventGetHeldMovementActionId(struct ObjectEvent *objectEvent);
 u8 GetMoveDirectionAnimNum(u8 direction);
+void LoadObjectEventPalette(u16 paletteTag);
 
 // Exported data declarations
 
@@ -194,7 +193,6 @@ extern const struct SpriteTemplate * const gFieldEffectObjectTemplatePointers[];
 extern const struct OamData gObjectEventBaseOam_32x32;
 extern const u16 gUnknown_8398648[];
 extern const u16 gUnknown_8398688[];
-extern const u8 gReflectionEffectPaletteMap[];
 u8 GetLedgeJumpDirection(s16 x, s16 y, u8 z);
 u8 sub_8063FDC(u32 direction);
 u8 GetRideWaterCurrentMovementAction(u32 direction);
