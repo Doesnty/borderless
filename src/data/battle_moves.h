@@ -5614,6 +5614,20 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .flags = 0,
     },
 
+    [MOVE_HOLD_HANDS] = 
+    {
+        .effect = EFFECT_HAPPY_HOUR,
+        .power = 0,
+        .type = TYPE_NORMAL,
+        .moveClass = CLASS_STATUS,
+        .accuracy = 0,
+        .pp = 10,
+        .secondaryEffectChance = 0,
+        .priority = 0,
+        .target = MOVE_TARGET_USER,
+        .flags = 0,
+    },
+
     [MOVE_ME_FIRST] = 
     {
         .effect = EFFECT_ME_FIRST,

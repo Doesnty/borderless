@@ -402,6 +402,7 @@ const u8 gMoveDescription_PristineShot[] = _("Won't miss unless\nentirely unable
 const u8 gMoveDescription_Destitution[] = _("Ensnares the foe\nfor 2-5 turns,\npreventing escape.");
 const u8 gMoveDescription_EarthPress[] = _("Uses the Defense\nstat instead of\nthe Attack stat.");
 const u8 gMoveDescription_HappyHour[] = _("Doubles the prize\nmoney from winning\nthe battle.");
+const u8 gMoveDescription_HoldHands[] = _("??????????");
 const u8 gMoveDescription_MeFirst[] = _("Uses the move the\nfoe is about to\nuse, and with 50%\nmore power.");
 const u8 gMoveDescription_Dummy[] = _("lol");
 
@@ -807,5 +808,6 @@ const u8 *const gMoveDescriptionPointers[MOVES_COUNT - 1] = {
     [MOVE_DESTITUTION   - 1] = gMoveDescription_Destitution,
     [MOVE_EARTH_PRESS   - 1] = gMoveDescription_EarthPress,
     [MOVE_HAPPY_HOUR    - 1] = gMoveDescription_HappyHour,
+    [MOVE_HOLD_HANDS    - 1] = gMoveDescription_HoldHands,
     [MOVE_ME_FIRST      - 1] = gMoveDescription_MeFirst,
 };

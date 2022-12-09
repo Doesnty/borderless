@@ -401,5 +401,6 @@ const u8 gMoveNames[][15] = {
     _("Destitution"),
     _("Earth Press"),
     _("Happy Hour"),
+    _("Hold Hands"),
     _("Me First"),
 };
