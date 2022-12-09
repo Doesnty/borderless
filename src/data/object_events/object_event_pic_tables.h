@@ -1752,3 +1752,15 @@ const struct SpriteFrameImage gObjectEventPicTable_Mom[] = {
     overworld_frame(gObjectEventPic_Mom, 2, 4, 2),
     overworld_frame(gObjectEventPic_Mom, 2, 4, 2),
 };
+
+const struct SpriteFrameImage gObjectEventPicTable_MamizouDisguised[] = {
+    overworld_frame(gObjectEventPic_MamizouDisguised, 2, 4, 0),
+    overworld_frame(gObjectEventPic_MamizouDisguised, 2, 4, 1),
+    overworld_frame(gObjectEventPic_MamizouDisguised, 2, 4, 2),
+    overworld_frame(gObjectEventPic_MamizouDisguised, 2, 4, 0),
+    overworld_frame(gObjectEventPic_MamizouDisguised, 2, 4, 0),
+    overworld_frame(gObjectEventPic_MamizouDisguised, 2, 4, 1),
+    overworld_frame(gObjectEventPic_MamizouDisguised, 2, 4, 1),
+    overworld_frame(gObjectEventPic_MamizouDisguised, 2, 4, 2),
+    overworld_frame(gObjectEventPic_MamizouDisguised, 2, 4, 2),
+};
