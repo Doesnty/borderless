@@ -118,7 +118,13 @@
 #define ATK49_UPDATE_LAST_MOVES                 14
 #define ATK49_MIRROR_MOVE                       15
 #define ATK49_NEXT_TARGET                       16
-#define ATK49_COUNT                             17
+#define ATK49_ECHO_ABILITY_BATTLER0             17
+#define ATK49_ECHO_ABILITY_BATTLER1             18
+#define ATK49_ECHO_ABILITY_BATTLER2             19
+#define ATK49_ECHO_ABILITY_BATTLER3             20
+#define ATK49_WALL_MASTER                       21
+#define ATK49_WALL_MASTER_CLEANUP               22
+#define ATK49_COUNT                             23
 
 #define BIT_HP                      0x1
 #define BIT_ATK                     0x2

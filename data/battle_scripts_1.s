@@ -302,7 +302,14 @@ BattleScript_MoveMissed::
 	waitmessage 0x40
 	goto BattleScript_MoveEnd
 
+BattleScript_SleepPowderChecks:
+	jumpiftype BS_TARGET, TYPE_NATURE, BattleScript_NotAffected
+	jumpifability BS_TARGET, ABILITY_WIDE_HAT, BattleScript_NotAffected
+    goto BattleScript_EffectDoSleep
+
 BattleScript_EffectSleep::
+    jumpifmove MOVE_SLEEP_POWDER BattleScript_SleepPowderChecks
+BattleScript_EffectDoSleep:
 	attackcanceler
 	attackstring
 	ppreduce
@@ -1020,7 +1027,14 @@ BattleScript_PrintReflectLightScreenSafeguardString::
 	waitmessage 0x40
 	goto BattleScript_MoveEnd
 
+BattleScript_PoisonPowderCheck:
+	jumpiftype BS_TARGET, TYPE_NATURE, BattleScript_NotAffected
+	jumpifability BS_TARGET, ABILITY_WIDE_HAT, BattleScript_NotAffected
+    goto BattleScript_EffectDoPoison
+
 BattleScript_EffectPoison::
+    jumpifmove MOVE_POISON_POWDER, BattleScript_PoisonPowderCheck
+BattleScript_EffectDoPoison:
 	attackcanceler
 	attackstring
 	ppreduce
@@ -1041,7 +1055,14 @@ BattleScript_EffectPoison::
 	waitmessage 0x40
 	goto BattleScript_MoveEnd
 
+BattleScript_ParalyzePowderCheck:
+	jumpiftype BS_TARGET, TYPE_NATURE, BattleScript_NotAffected
+	jumpifability BS_TARGET, ABILITY_WIDE_HAT, BattleScript_NotAffected
+    goto BattleScript_EffectDoParalyze
+
 BattleScript_EffectParalyze::
+    jumpifmove MOVE_STUN_SPORE, BattleScript_ParalyzePowderCheck
+BattleScript_EffectDoParalyze:
 	attackcanceler
 	attackstring
 	ppreduce
@@ -2236,7 +2257,14 @@ BattleScript_FlatterTryConfuse::
 	seteffectprimary
 	goto BattleScript_MoveEnd
 
+BattleScript_BurnPowderCheck:
+	jumpiftype BS_TARGET, TYPE_NATURE, BattleScript_NotAffected
+	jumpifability BS_TARGET, ABILITY_WIDE_HAT, BattleScript_NotAffected
+    goto BattleScript_EffectDoWillOWisp
+
 BattleScript_EffectWillOWisp::
+    jumpifmove MOVE_BURN_POWDER, BattleScript_BurnPowderCheck
+BattleScript_EffectDoWillOWisp:
 	attackcanceler
 	attackstring
 	ppreduce
@@ -5438,3 +5466,49 @@ BattleScript_Rattled::
 	printstring STRINGID_PKMNRAISEDSPEED
 	waitmessage 0x40
 	return
+
+BattleScript_AngerPoint::
+	printstring STRINGID_ANGERPOINT
+	waitmessage 0x40
+	return
+
+BattleScript_ManicEchoBoost::
+    pause 0x20
+	playanimation BS_SCRIPTING, B_ANIM_STATS_CHANGE, sB_ANIM_ARG1
+	printstring STRINGID_ABILITYRAISEDSTAT
+	waitmessage 0x40
+	end3
+
+BattleScript_DourEchoPenalty::
+	playanimation BS_TARGET, B_ANIM_STATS_CHANGE, sB_ANIM_ARG1
+	printstring STRINGID_DOURECHOLOWEREDSTAT
+	waitmessage 0x40
+	end3
+
+BattleScript_DourEchoBlockedByAbility::
+	printstring STRINGID_DOURECHOBLOCKEDBYABILITY
+	waitmessage 0x40
+	end3
+
+BattleScript_DourEchoBlockedByMist::
+	printstring STRINGID_DOURECHOBLOCKEDBYMIST
+	waitmessage 0x40
+	end3
+
+BattleScript_PrideBoost::
+	playanimation BS_SCRIPTING, B_ANIM_STATS_CHANGE, sB_ANIM_ARG1
+	printstring STRINGID_ABILITYRAISEDSTAT
+	waitmessage 0x40
+	end3
+
+BattleScript_WallMasterActivates::
+	printstring STRINGID_WALLMASTERACTIVATES
+	waitmessage 0x40
+	return
+
+BattleScript_Forewarn::
+    pause 0x20
+	printstring STRINGID_FOREWARN
+	waitmessage 0x40
+	end3
+

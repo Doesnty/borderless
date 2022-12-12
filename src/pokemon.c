@@ -1825,6 +1825,11 @@ s32 CalculateBaseDamage(struct BattlePokemon *attacker, struct BattlePokemon *de
         defense *= 2;
         spDefense *= 2;
     }
+    if (defenderAbility == ABILITY_JEALOUSY && defender->item == ITEM_NONE && attacker->item != ITEM_NONE)
+    {
+        defense = (150 * defense) / 100;
+        spDefense = (150 * defense) / 100;
+    }
     if (attacker->ability == ABILITY_PURE_ENIGMA)
     {
         if (attacker->species == SPECIES_OKINA)

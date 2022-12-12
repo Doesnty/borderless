@@ -452,7 +452,8 @@ struct BattleStruct
         struct LinkPartnerHeader linkPartnerHeader;
         struct MultiBattlePokemonTx multiBattleMons[3];
     } multiBuffer;
-    u8 padding_1E4[0x1C];
+    u8 wallMasterTracker;
+    u8 padding_1E4[0x1B];
 }; // size == 0x200 bytes
 
 extern struct BattleStruct *gBattleStruct;

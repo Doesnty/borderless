@@ -257,6 +257,14 @@ extern const u8 BattleScript_Lecture[];
 extern const u8 BattleScript_LectureContrary[];
 extern const u8 BattleScript_LectureBlockedByAbility[];
 extern const u8 BattleScript_Rattled[];
+extern const u8 BattleScript_AngerPoint[];
+extern const u8 BattleScript_ManicEchoBoost[];
+extern const u8 BattleScript_DourEchoPenalty[];
+extern const u8 BattleScript_DourEchoBlockedByAbility[];
+extern const u8 BattleScript_DourEchoBlockedByMist[];
+extern const u8 BattleScript_PrideBoost[];
+extern const u8 BattleScript_WallMasterActivates[];
+extern const u8 BattleScript_Forewarn[];
 
 extern const u8 *const gBattleScriptsForMoveEffects[];
 extern const u8 *const gBattlescriptsForBallThrow[];

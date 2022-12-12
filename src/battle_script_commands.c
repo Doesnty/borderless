@@ -4257,6 +4257,79 @@ static void atk49_moveend(void)
             }
             ++gBattleScripting.atk49_state;
             break;
+        case ATK49_ECHO_ABILITY_BATTLER0:
+            if (gBattleMons[0].hp != 0)
+            {
+                if (AbilityBattleEffects(ABILITYEFFECT_ECHO, 0, 0, 0, 0))
+                    effect = TRUE;
+            }
+            ++gBattleScripting.atk49_state;
+            break;
+        case ATK49_ECHO_ABILITY_BATTLER1:
+            if (gBattleMons[1].hp != 0)
+            {
+                if (AbilityBattleEffects(ABILITYEFFECT_ECHO, 1, 0, 0, 0))
+                    effect = TRUE;
+            }
+            ++gBattleScripting.atk49_state;
+            break;
+        case ATK49_ECHO_ABILITY_BATTLER2:
+            if (gBattleMons[2].hp != 0)
+            {
+                if (AbilityBattleEffects(ABILITYEFFECT_ECHO, 2, 0, 0, 0))
+                    effect = TRUE;
+            }
+            ++gBattleScripting.atk49_state;
+            break;
+        case ATK49_ECHO_ABILITY_BATTLER3:
+            if (gBattleMons[3].hp != 0)
+            {
+                if (AbilityBattleEffects(ABILITYEFFECT_ECHO, 1, 3, 0, 0))
+                    effect = TRUE;
+            }
+            ++gBattleScripting.atk49_state;
+            break;
+        case ATK49_WALL_MASTER:
+            if (gBattleMons[gBattlerAttacker].ability == ABILITY_WALL_MASTER &&
+                !(gHitMarker & HITMARKER_UNABLE_TO_USE_MOVE) &&
+                (gCurrentMove == MOVE_REFLECT
+                || gCurrentMove == MOVE_LIGHT_SCREEN
+                || gCurrentMove == MOVE_MIST
+                || gCurrentMove == MOVE_SAFEGUARD))
+            {
+                u8 i;
+                // first flag the current move
+                for (i = 0; i < 4; i++)
+                {
+                    if (gCurrentMove == gBattleMons[gBattlerAttacker].moves[i])
+                        gBattleStruct->wallMasterTracker |= (1 << i);
+                }
+                // now look for an unflagged wall move to call
+                for (i = 0; i < 4; i++)
+                {
+                    if (!(gBattleStruct->wallMasterTracker & (1 << i)) && 
+                         (gBattleMons[gBattlerAttacker].moves[i] == MOVE_REFLECT
+                       || gBattleMons[gBattlerAttacker].moves[i] == MOVE_LIGHT_SCREEN
+                      || gBattleMons[gBattlerAttacker].moves[i] == MOVE_SAFEGUARD
+                      || gBattleMons[gBattlerAttacker].moves[i] == MOVE_MIST))
+                    {
+                        gCurrentMove = gBattleMons[gBattlerAttacker].moves[i];
+                        gBattleScripting.atk49_state = -1; // it will get incremented to 0 afterwards
+                        MoveValuesCleanUp();
+                        gHitMarker &= ~(HITMARKER_ATTACKSTRING_PRINTED);
+                        BattleScriptPush(gBattleScriptsForMoveEffects[gBattleMoves[gCurrentMove].effect]);
+                        gBattlescriptCurrInstr = BattleScript_WallMasterActivates;
+                        i = 4;
+                        effect = TRUE;
+                    }
+                }
+            }
+            ++gBattleScripting.atk49_state;
+            break;
+        case ATK49_WALL_MASTER_CLEANUP:
+            gBattleStruct->wallMasterTracker = 0;
+            ++gBattleScripting.atk49_state;
+            break;
         case ATK49_COUNT:
             break;
         }
@@ -6872,8 +6945,10 @@ static void atk96_weatherdamage(void)
              && gBattleMons[gBattlerAttacker].type2 != TYPE_ROCK
              && gBattleMons[gBattlerAttacker].type2 != TYPE_STEEL
              && gBattleMons[gBattlerAttacker].type2 != TYPE_GROUND
+             && gBattleMons[gBattlerAttacker].ability != ABILITY_SAND_STREAM
              && gBattleMons[gBattlerAttacker].ability != ABILITY_SAND_VEIL
              && gBattleMons[gBattlerAttacker].ability != ABILITY_STORM_SHAWL
+             && gBattleMons[gBattlerAttacker].ability != ABILITY_WIDE_HAT
              && !(gStatuses3[gBattlerAttacker] & STATUS3_UNDERGROUND)
              && !(gStatuses3[gBattlerAttacker] & STATUS3_UNDERWATER))
             {
@@ -6889,7 +6964,9 @@ static void atk96_weatherdamage(void)
         if (gBattleWeather & WEATHER_HAIL)
         {
             if (!IS_BATTLER_OF_TYPE(gBattlerAttacker, TYPE_ICE)
+             && gBattleMons[gBattlerAttacker].ability != ABILITY_SNOW_WARNING
              && gBattleMons[gBattlerAttacker].ability != ABILITY_STORM_SHAWL
+             && gBattleMons[gBattlerAttacker].ability != ABILITY_WIDE_HAT
              && !(gStatuses3[gBattlerAttacker] & STATUS3_UNDERGROUND)
              && !(gStatuses3[gBattlerAttacker] & STATUS3_UNDERWATER))
             {

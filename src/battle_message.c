@@ -547,6 +547,13 @@ const u8 sText_ContagionSpreads[] = _("{B_DEF_NAME_WITH_PREFIX}'s {B_DEF_ABILITY
 const u8 sText_LectureLowersSpeed[] = _("{B_DEF_NAME_WITH_PREFIX}'s {B_DEF_ABILITY}\nlowers {B_ATK_NAME_WITH_PREFIX}'s Speed!");
 const u8 sText_LectureRaisesSpeed[] = _("{B_DEF_NAME_WITH_PREFIX}'s {B_DEF_ABILITY}\nraises {B_ATK_NAME_WITH_PREFIX}'s Speed!");
 const u8 sText_LectureBlocked[] = _("{B_DEF_NAME_WITH_PREFIX}'s {B_DEF_ABILITY} was\nblocked by {B_ATK_NAME_WITH_PREFIX}'s {B_ATK_ABILITY}!");
+const u8 sText_AngerPoint[] = _("{B_DEF_NAME_WITH_PREFIX}'s {B_DEF_ABILITY}\nmaximized its Attack!");
+const u8 sText_DourEchoLoweredStat[] = _("{B_SCR_ACTIVE_NAME_WITH_PREFIX}'s {B_SCR_ACTIVE_ABILITY}\nlowers {B_DEF_NAME_WITH_PREFIX}'s {B_BUFF1}!");
+const u8 sText_DourEchoBlockedByAbility[] = _("{B_SCR_ACTIVE_NAME_WITH_PREFIX}'s {B_SCR_ACTIVE_ABILITY} was\nblocked by {B_DEF_NAME_WITH_PREFIX}'s {B_DEF_ABILITY}!");
+const u8 sText_DourEchoBlockedByMist[] = _("{B_SCR_ACTIVE_NAME_WITH_PREFIX}'s {B_SCR_ACTIVE_ABILITY} was\nblocked by the Mist!");
+const u8 sText_WallMasterActivates[] = _("{B_ATK_NAME_WITH_PREFIX}'s Wall Master\nlets it use another move!");
+const u8 sText_Forewarn[] = _("{B_SCR_ACTIVE_NAME_WITH_PREFIX}'s Forewarn\nalerted it to the foe's {B_BUFF1}!");
+
 
 const u8 *const gBattleStringsTable[] = {
     [STRINGID_TRAINER1LOSETEXT - 12]              = sText_Trainer1LoseText,
@@ -958,6 +965,12 @@ const u8 *const gBattleStringsTable[] = {
     [STRINGID_LECTURELOWERSSPEED - 12]            = sText_LectureLowersSpeed,
     [STRINGID_LECTURERAISESSPEED - 12]            = sText_LectureRaisesSpeed,
     [STRINGID_LECTUREBLOCKED - 12]                = sText_LectureBlocked,
+    [STRINGID_ANGERPOINT - 12]                    = sText_AngerPoint,
+    [STRINGID_DOURECHOLOWEREDSTAT - 12]           = sText_DourEchoLoweredStat,
+    [STRINGID_DOURECHOBLOCKEDBYABILITY - 12]      = sText_DourEchoBlockedByAbility,
+    [STRINGID_DOURECHOBLOCKEDBYMIST - 12]         = sText_DourEchoBlockedByMist,
+    [STRINGID_WALLMASTERACTIVATES - 12]           = sText_WallMasterActivates,
+    [STRINGID_FOREWARN - 12]                      = sText_Forewarn,
 };
 
 const u16 gMissStringIds[] = {
