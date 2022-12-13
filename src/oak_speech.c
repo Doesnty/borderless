@@ -234,12 +234,12 @@ static const struct WindowTemplate sNewGameAdventureIntroWindowTemplates[] = {
         .baseBlock = 0x0001
     }, {
         .bg = 0x00,
-        .tilemapLeft = 0x12,
+        .tilemapLeft = 0x0c,
         .tilemapTop = 0x09,
-        .width = 0x09,
+        .width = 0x0f,
         .height = 0x04,
         .paletteNum = 0x0f,
-        .baseBlock = 0x0174
+        .baseBlock = 0x0140
     }, {
         .bg = 0x00,
         .tilemapLeft = 0x02,
@@ -393,60 +393,11 @@ static const u8 *const sHelpDocsPtrs[] = {
 };
 
 static const u8 *const sMaleNameChoices[] = {
-#if defined(FIRERED)
-    gNameChoice_Red,
-    gNameChoice_Fire,
     gNameChoice_Ash,
-    gNameChoice_Kene,
-    gNameChoice_Geki,
-#elif defined(LEAFGREEN)
-    gNameChoice_Green,
-    gNameChoice_Leaf,
-    gNameChoice_Gary,
-    gNameChoice_Kaz,
-    gNameChoice_Toru,
-#endif
-    gNameChoice_Jak,
-    gNameChoice_Janne,
-    gNameChoice_Jonn,
-    gNameChoice_Kamon,
-    gNameChoice_Karl,
-    gNameChoice_Taylor,
-    gNameChoice_Oscar,
-    gNameChoice_Hiro,
-    gNameChoice_Max,
-    gNameChoice_Jon,
-    gNameChoice_Ralph,
-    gNameChoice_Kay,
-    gNameChoice_Tosh,
-    gNameChoice_Roak
 };
 
 static const u8 *const sFemaleNameChoices[] = {
-#if defined(FIRERED)
-    gNameChoice_Red,
-    gNameChoice_Fire,
-#elif defined(LEAFGREEN)
-    gNameChoice_Green,
-    gNameChoice_Leaf,
-#endif
-    gNameChoice_Omi,
-    gNameChoice_Jodi,
-    gNameChoice_Amanda,
-    gNameChoice_Hillary,
-    gNameChoice_Makey,
-    gNameChoice_Michi,
-    gNameChoice_Paula,
-    gNameChoice_June,
-    gNameChoice_Cassie,
-    gNameChoice_Rey,
-    gNameChoice_Seda,
-    gNameChoice_Kiko,
-    gNameChoice_Mina,
-    gNameChoice_Norie,
-    gNameChoice_Sai,
-    gNameChoice_Momo,
-    gNameChoice_Suzi
+    gNameChoice_Kene,
 };
 
 static const u8 *const sRivalNameChoices[] = {
@@ -1893,9 +1844,9 @@ static void GetDefaultName(u8 hasPlayerBeenNamed, u8 rivalNameChoice)
     if (hasPlayerBeenNamed == FALSE)
     {
         if (gSaveBlock2Ptr->playerGender == MALE)
-            src = sMaleNameChoices[Random() % 19];
+            src = sMaleNameChoices[0];
         else
-            src = sFemaleNameChoices[Random() % 19];
+            src = sFemaleNameChoices[0];
         dest = gSaveBlock2Ptr->playerName;
     }
     else

@@ -221,6 +221,7 @@ enum
     WILD_AREA_WATER,
     WILD_AREA_ROCKS,
     WILD_AREA_FISHING,
+    WILD_AREA_ALT_LAND,
 };
 
 #define WILD_CHECK_REPEL    0x1
@@ -233,6 +234,7 @@ static bool8 TryGenerateWildMon(const struct WildPokemonInfo * info, u8 area, u8
     switch (area)
     {
     case WILD_AREA_LAND:
+    case WILD_AREA_ALT_LAND:
         slot = ChooseWildMonIndex_Land();
         break;
     case WILD_AREA_WATER:
@@ -350,14 +352,30 @@ bool8 StandardWildEncounter(u32 currMetatileAttrs, u16 previousMetatileBehavior)
             {
 
                 // try a regular wild land encounter
-                if (TryGenerateWildMon(gWildMonHeaders[headerId].landMonsInfo, WILD_AREA_LAND, WILD_CHECK_REPEL) == TRUE)
+                if (gSaveBlock1Ptr->pos.x >= gWildMonHeaders[headerId].altX && gSaveBlock1Ptr->pos.x <= gWildMonHeaders[headerId].altX2 &&
+                    gSaveBlock1Ptr->pos.y >= gWildMonHeaders[headerId].altY && gSaveBlock1Ptr->pos.x <= gWildMonHeaders[headerId].altY2)
                 {
-                    StartWildBattle();
-                    return TRUE;
+                    if (TryGenerateWildMon(gWildMonHeaders[headerId].altLandMonsInfo, WILD_AREA_ALT_LAND, WILD_CHECK_REPEL) == TRUE)
+                    {
+                        StartWildBattle();
+                        return TRUE;
+                    }
+                    else
+                    {
+                        AddToWildEncounterRateBuff(gWildMonHeaders[headerId].altLandMonsInfo->encounterRate);
+                    }
                 }
                 else
                 {
-                    AddToWildEncounterRateBuff(gWildMonHeaders[headerId].landMonsInfo->encounterRate);
+                    if (TryGenerateWildMon(gWildMonHeaders[headerId].landMonsInfo, WILD_AREA_LAND, WILD_CHECK_REPEL) == TRUE)
+                    {
+                        StartWildBattle();
+                        return TRUE;
+                    }
+                    else
+                    {
+                        AddToWildEncounterRateBuff(gWildMonHeaders[headerId].landMonsInfo->encounterRate);
+                    }
                 }
             }
         }

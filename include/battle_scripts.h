@@ -241,6 +241,8 @@ extern const u8 BattleScript_HazardsFaintedBattler[];
 extern const u8 BattleScript_Cursed[];
 extern const u8 BattleScript_MoveSAtkDrain[];
 extern const u8 BattleScript_MoveSAtkDrain_PPLoss[];
+extern const u8 BattleScript_MoveAtkDrain[];
+extern const u8 BattleScript_MoveAtkDrain_PPLoss[];
 extern const u8 BattleScript_EnduredWithSturdyMsg[];
 extern const u8 BattleScript_CloudNineAnnounces[];
 extern const u8 BattleScript_PressureAnnounces[];
@@ -265,6 +267,8 @@ extern const u8 BattleScript_DourEchoBlockedByMist[];
 extern const u8 BattleScript_PrideBoost[];
 extern const u8 BattleScript_WallMasterActivates[];
 extern const u8 BattleScript_Forewarn[];
+extern const u8 BattleScript_Protean[];
+extern const u8 BattleScript_UnnerveAnnounces[];
 
 extern const u8 *const gBattleScriptsForMoveEffects[];
 extern const u8 *const gBattlescriptsForBallThrow[];

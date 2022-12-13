@@ -25,10 +25,15 @@ struct WildPokemonHeader
 {
     u8 mapGroup;
     u8 mapNum;
+    u8 altX;
+    u8 altY;
+    u8 altX2;
+    u8 altY2;
     const struct WildPokemonInfo *landMonsInfo;
     const struct WildPokemonInfo *waterMonsInfo;
     const struct WildPokemonInfo *rockSmashMonsInfo;
     const struct WildPokemonInfo *fishingMonsInfo;
+    const struct WildPokemonInfo *altLandMonsInfo;
 };
 
 extern const struct WildPokemonHeader gWildMonHeaders[];

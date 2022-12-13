@@ -944,6 +944,8 @@ static void atk00_attackcanceler(void)
             return;
         }
     }
+    if (gBattleMons[gBattlerAttacker].ability == ABILITY_INFILTRATOR)
+        gHitMarker |= HITMARKER_IGNORE_SUBSTITUTE;
     if (gSpecialStatuses[gBattlerTarget].lightningRodRedirected)
     {
         gSpecialStatuses[gBattlerTarget].lightningRodRedirected = FALSE;
@@ -1125,6 +1127,8 @@ static void atk01_accuracycheck(void)
             calc = (calc * 130) / 100; // 1.3 compound eyes boost
         if (WEATHER_HAS_EFFECT && targetAbility == ABILITY_SAND_VEIL && gBattleWeather & WEATHER_SANDSTORM_ANY)
             calc = (calc * 80) / 100; // 1.2 sand veil loss
+        if (WEATHER_HAS_EFFECT && targetAbility == ABILITY_SNOW_CLOAK && gBattleWeather & WEATHER_HAIL)
+            calc = (calc * 80) / 100; // 1.2 snow cloak loss
         if (gBattleMons[gBattlerAttacker].ability == ABILITY_HUSTLE && gBattleMoves[move].moveClass == 0)
             calc = (calc * 80) / 100; // 1.2 hustle loss
         if (gBattleMons[gBattlerTarget].item == ITEM_ENIGMA_BERRY)
@@ -1161,6 +1165,28 @@ static void atk02_attackstring(void)
 {
     if (!gBattleControllerExecFlags)
     {
+        if (gBattleMons[gBattlerAttacker].ability == ABILITY_PROTEAN)
+        {
+            u8 moveType = gBattleMoves[gCurrentMove].type;
+            if (gBattleStruct->dynamicMoveType & 0x3F)
+                moveType = gBattleStruct->dynamicMoveType & 0x3F;
+            
+            if (gBattleMons[gBattlerAttacker].type1 != moveType || gBattleMons[gBattlerAttacker].type2 != moveType)
+            {
+                gBattleMons[gBattlerAttacker].type1 = moveType;
+                gBattleMons[gBattlerAttacker].type2 = moveType;
+                
+                gBattleTextBuff1[0] = 0xFD;
+                gBattleTextBuff1[1] = 3;
+                gBattleTextBuff1[2] = moveType;
+                gBattleTextBuff1[3] = 0xFF;
+                
+                BattleScriptPushCursor();
+                gBattlescriptCurrInstr = BattleScript_Protean;
+                return;
+            }
+        }
+    
         if (!(gHitMarker & (HITMARKER_NO_ATTACKSTRING | HITMARKER_ATTACKSTRING_PRINTED)))
         {
             PrepareStringBattle(STRINGID_USEDMOVE, gBattlerAttacker);
@@ -1259,7 +1285,11 @@ static void atk04_critcalc(void)
      && !(Random() % sCriticalHitChance[critChance])
      && (!(gBattleTypeFlags & BATTLE_TYPE_FIRST_BATTLE) || BtlCtrl_OakOldMan_TestState2Flag(1))
      && !(gBattleTypeFlags & BATTLE_TYPE_POKEDUDE))
+    {
         gCritMultiplier = 2;
+        if (gBattleMons[gBattlerAttacker].ability == ABILITY_SNIPER)
+            gCritMultiplier = 3;
+    }
     else
         gCritMultiplier = 1;
     ++gBattlescriptCurrInstr;
@@ -1277,7 +1307,11 @@ static void atk05_damagecalc(void)
                                             gBattleStruct->dynamicMoveType,
                                             gBattlerAttacker,
                                             gBattlerTarget);
-    gBattleMoveDamage = gBattleMoveDamage * gCritMultiplier * gBattleScripting.dmgMultiplier;
+    gBattleMoveDamage = gBattleMoveDamage * gBattleScripting.dmgMultiplier;
+    if (gCritMultiplier > 1)
+        gBattleMoveDamage = (gBattleMoveDamage * 3) / 2;
+    if (gCritMultiplier > 2) // sniper
+        gBattleMoveDamage = (gBattleMoveDamage * 3) / 2;
     if (gStatuses3[gBattlerAttacker] & STATUS3_CHARGED_UP && gBattleMoves[gCurrentMove].type == TYPE_ELECTRIC)
         gBattleMoveDamage *= 2;
     if (gProtectStructs[gBattlerAttacker].helpingHand)
@@ -1844,7 +1878,7 @@ static void atk0D_critmessage(void)
 {
     if (!gBattleControllerExecFlags)
     {
-        if (gCritMultiplier == 2 && !(gMoveResultFlags & MOVE_RESULT_NO_EFFECT))
+        if (gCritMultiplier > 1 && !(gMoveResultFlags & MOVE_RESULT_NO_EFFECT))
         {
             PrepareStringBattle(STRINGID_CRITICALHIT, gBattlerAttacker);
             gBattleCommunication[MSG_DISPLAY] = 1;
@@ -2917,8 +2951,11 @@ static void atk1D_jumpifstatus2(void)
     u8 battlerId = GetBattlerForBattleScript(gBattlescriptCurrInstr[1]);
     u32 flags = T2_READ_32(gBattlescriptCurrInstr + 2);
     const u8 *jumpPtr = T2_READ_PTR(gBattlescriptCurrInstr + 6);
-
-    if (gBattleMons[battlerId].status2 & flags && gBattleMons[battlerId].hp != 0)
+    
+    if (gBattleMons[gBattlerAttacker].ability == ABILITY_INFILTRATOR && gBattlerAttacker != battlerId &&
+        (flags == STATUS2_SUBSTITUTE))
+        gBattlescriptCurrInstr += 10;
+    else if (gBattleMons[battlerId].status2 & flags && gBattleMons[battlerId].hp != 0)
         gBattlescriptCurrInstr = jumpPtr;
     else
         gBattlescriptCurrInstr += 10;
@@ -3000,6 +3037,9 @@ static void atk1F_jumpifsideaffecting(void)
     flags = T2_READ_16(gBattlescriptCurrInstr + 2);
     jumpPtr = T2_READ_PTR(gBattlescriptCurrInstr + 4);
 
+    if (gBattleMons[gBattlerAttacker].ability == ABILITY_INFILTRATOR && GetBattlerSide(gBattlerAttacker) != side
+        && (flags == SIDE_STATUS_SAFEGUARD || flags == SIDE_STATUS_MIST))
+        gBattlescriptCurrInstr += 8;
     if (gSideStatuses[side] & flags)
         gBattlescriptCurrInstr = jumpPtr;
     else
@@ -6946,6 +6986,7 @@ static void atk96_weatherdamage(void)
              && gBattleMons[gBattlerAttacker].type2 != TYPE_STEEL
              && gBattleMons[gBattlerAttacker].type2 != TYPE_GROUND
              && gBattleMons[gBattlerAttacker].ability != ABILITY_SAND_STREAM
+             && gBattleMons[gBattlerAttacker].ability != ABILITY_SAND_RUSH
              && gBattleMons[gBattlerAttacker].ability != ABILITY_SAND_VEIL
              && gBattleMons[gBattlerAttacker].ability != ABILITY_STORM_SHAWL
              && gBattleMons[gBattlerAttacker].ability != ABILITY_WIDE_HAT
@@ -6965,6 +7006,7 @@ static void atk96_weatherdamage(void)
         {
             if (!IS_BATTLER_OF_TYPE(gBattlerAttacker, TYPE_ICE)
              && gBattleMons[gBattlerAttacker].ability != ABILITY_SNOW_WARNING
+             && gBattleMons[gBattlerAttacker].ability != ABILITY_SLUSH_RUSH
              && gBattleMons[gBattlerAttacker].ability != ABILITY_STORM_SHAWL
              && gBattleMons[gBattlerAttacker].ability != ABILITY_WIDE_HAT
              && !(gStatuses3[gBattlerAttacker] & STATUS3_UNDERGROUND)

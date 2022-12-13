@@ -553,6 +553,9 @@ const u8 sText_DourEchoBlockedByAbility[] = _("{B_SCR_ACTIVE_NAME_WITH_PREFIX}'s
 const u8 sText_DourEchoBlockedByMist[] = _("{B_SCR_ACTIVE_NAME_WITH_PREFIX}'s {B_SCR_ACTIVE_ABILITY} was\nblocked by the Mist!");
 const u8 sText_WallMasterActivates[] = _("{B_ATK_NAME_WITH_PREFIX}'s Wall Master\nlets it use another move!");
 const u8 sText_Forewarn[] = _("{B_SCR_ACTIVE_NAME_WITH_PREFIX}'s Forewarn\nalerted it to the foe's {B_BUFF1}!");
+const u8 sText_Protean[] = _("{B_ATK_NAME_WITH_PREFIX}'s Protean\nmade it the {B_BUFF1} type!");
+const u8 sText_UnnerveAnnounces[] = _("{B_SCR_ACTIVE_NAME_WITH_PREFIX}'s Unnerve\nprevents the use of held berries!");
+const u8 sText_PkmnRaisedAtk[] = _("{B_SCR_ACTIVE_NAME_WITH_PREFIX}'s {B_SCR_ACTIVE_ABILITY}\nraised its Attack!");
 
 
 const u8 *const gBattleStringsTable[] = {
@@ -971,6 +974,10 @@ const u8 *const gBattleStringsTable[] = {
     [STRINGID_DOURECHOBLOCKEDBYMIST - 12]         = sText_DourEchoBlockedByMist,
     [STRINGID_WALLMASTERACTIVATES - 12]           = sText_WallMasterActivates,
     [STRINGID_FOREWARN - 12]                      = sText_Forewarn,
+    [STRINGID_PROTEAN - 12]                       = sText_Protean,
+    [STRINGID_UNNERVEANNOUNCES - 12]              = sText_UnnerveAnnounces,
+    [STRINGID_PKMNRAISEDATK - 12]                 = sText_PkmnRaisedAtk,
+
 };
 
 const u16 gMissStringIds[] = {

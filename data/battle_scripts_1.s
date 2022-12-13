@@ -638,6 +638,7 @@ BattleScript_EffectRoar::
 	forcerandomswitch BattleScript_ButItFailed
 
 BattleScript_EffectMultiHit::
+    jumpifability BS_ATTACKER, ABILITY_SKILL_LINK, BattleScript_MultiHitSkillLink
 	attackcanceler
 	accuracycheck BattleScript_PrintMoveMissed, ACC_CURR_MOVE
 	attackstring
@@ -674,6 +675,16 @@ BattleScript_DoMultiHit::
 	jumpifbyte CMP_COMMON_BITS, gMoveResultFlags, MOVE_RESULT_FOE_ENDURED, BattleScript_MultiHitPrintStrings
 	decrementmultihit BattleScript_MultiHitLoop
 	goto BattleScript_MultiHitPrintStrings
+
+BattleScript_MultiHitSkillLink:
+	attackcanceler
+	accuracycheck BattleScript_PrintMoveMissed, ACC_CURR_MOVE
+	attackstring
+	ppreduce
+	setmultihitcounter 5
+	initmultihitstring
+	setbyte sMULTIHIT_EFFECT, 0
+    goto BattleScript_MultiHitLoop
 
 BattleScript_MultiHitNoMoreHits::
 	pause 0x20
@@ -5376,6 +5387,19 @@ BattleScript_MoveSAtkDrain::
 	orbyte gMoveResultFlags, MOVE_RESULT_DOESNT_AFFECT_FOE
 	goto BattleScript_MoveEnd
 
+BattleScript_MoveAtkDrain_PPLoss::
+	ppreduce
+BattleScript_MoveAtkDrain::
+	attackstring
+	pause 0x20
+	
+	playanimation BS_TARGET, B_ANIM_STATS_CHANGE, sB_ANIM_ARG1
+	
+	printstring STRINGID_PKMNRAISEDATK
+	waitmessage 64
+	orbyte gMoveResultFlags, MOVE_RESULT_DOESNT_AFFECT_FOE
+	goto BattleScript_MoveEnd
+
 BattleScript_PressureAnnounces::
 	pause 0x20
 	printstring STRINGID_PKMNEXERTSPRESSURE
@@ -5511,4 +5535,15 @@ BattleScript_Forewarn::
 	printstring STRINGID_FOREWARN
 	waitmessage 0x40
 	end3
+
+BattleScript_Protean::
+	printstring STRINGID_PROTEAN
+	waitmessage 0x40
+	return
+
+BattleScript_UnnerveAnnounces::
+	pause 0x20
+	printstring STRINGID_UNNERVEANNOUNCES
+    pause 0x40
+    end3
 

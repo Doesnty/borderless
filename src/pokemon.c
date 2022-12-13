@@ -1882,6 +1882,13 @@ s32 CalculateBaseDamage(struct BattlePokemon *attacker, struct BattlePokemon *de
         
         gBattleMovePower = (gBattleMovePower * (100 + boost)) / 100;
     }
+    if (attacker->ability == ABILITY_RECKLESS && (gBattleMoves[move].effect == EFFECT_RECOIL
+        || gBattleMoves[move].effect == EFFECT_RECOIL_IF_MISS 
+        || gBattleMoves[move].effect == EFFECT_DOUBLE_EDGE))
+    {
+        gBattleMovePower *= 12;
+        gBattleMovePower /= 10;
+    }
     
     if (weatherHasEffect)
     {
@@ -1920,7 +1927,13 @@ s32 CalculateBaseDamage(struct BattlePokemon *attacker, struct BattlePokemon *de
             atkStatMod = attacker->statStages[STAT_SPATK];
         else if (move == MOVE_EARTH_PRESS)
             atkStatMod = attacker->statStages[STAT_DEF];
-        if (gCritMultiplier == 2 && atkStatMod < 6)
+        
+        if (defenderAbility == ABILITY_UNAWARE)
+            atkStatMod = 6;
+        if (attacker->ability == ABILITY_UNAWARE)
+            defStatMod = 6;
+        
+        if (gCritMultiplier > 1 && atkStatMod < 6)
         {
             damage = attack;
         }
@@ -1930,7 +1943,7 @@ s32 CalculateBaseDamage(struct BattlePokemon *attacker, struct BattlePokemon *de
         damage = damage * gBattleMovePower;
         damage *= (2 * attacker->level / 5 + 2);
 
-        if (gCritMultiplier == 2 && defStatMod > 6)
+        if (gCritMultiplier > 1 && defStatMod > 6)
         {
             damageHelper = defense;
         }
@@ -1949,7 +1962,12 @@ s32 CalculateBaseDamage(struct BattlePokemon *attacker, struct BattlePokemon *de
             spDefense = defense;
         }
         
-        if (gCritMultiplier == 2 && atkStatMod < 6)
+        if (defenderAbility == ABILITY_UNAWARE)
+            atkStatMod = 6;
+        if (attacker->ability == ABILITY_UNAWARE)
+            defStatMod = 6;
+        
+        if (gCritMultiplier > 1 && atkStatMod < 6)
         {
             damage = spAttack;
         }
@@ -1959,7 +1977,7 @@ s32 CalculateBaseDamage(struct BattlePokemon *attacker, struct BattlePokemon *de
         damage = damage * gBattleMovePower;
         damage *= (2 * attacker->level / 5 + 2);
 
-        if (gCritMultiplier == 2 && defStatMod > 6)
+        if (gCritMultiplier > 1 && defStatMod > 6)
         {
             damageHelper = spDefense;
         }
@@ -1971,7 +1989,9 @@ s32 CalculateBaseDamage(struct BattlePokemon *attacker, struct BattlePokemon *de
     damage /= 50;
 
     if (((moveClass == CLASS_PHYSICAL && sideStatus & SIDE_STATUS_REFLECT) ||
-        (moveClass == CLASS_SPECIAL && sideStatus & SIDE_STATUS_LIGHTSCREEN)) && gCritMultiplier == 1)
+        (moveClass == CLASS_SPECIAL && sideStatus & SIDE_STATUS_LIGHTSCREEN)) 
+        && gCritMultiplier == 1
+        && attacker->ability != ABILITY_INFILTRATOR)
     {
         if ((gBattleTypeFlags & BATTLE_TYPE_DOUBLE) && CountAliveMonsInBattle(BATTLE_ALIVE_DEF_SIDE) == 2)
             damage = 2 * (damage / 3);

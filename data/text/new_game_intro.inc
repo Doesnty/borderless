@@ -2,7 +2,7 @@ gOtherText_NewName:: @ 81C574F
     .string "NEW NAME$"
 
 gNameChoice_Green:: @ 81C5758
-    .string "GREEN$"
+    .string "Blue$"
 
 gNameChoice_Red:: @ 81C575E
     .string "RED$"
@@ -14,19 +14,19 @@ gNameChoice_Fire:: @ 81C5767
     .string "FIRE$"
 
 gNameChoice_Gary:: @ 81C576C
-    .string "GARY$"
+    .string "Gary$"
 
 gNameChoice_Kaz:: @ 81C5771
-    .string "KAZ$"
+    .string "Green$"
 
 gNameChoice_Toru:: @ 81C5775
-    .string "TORU$"
+    .string "Jeff$"
 
 gNameChoice_Ash:: @ 81C577A
-    .string "ASH$"
+    .string "Renko$"
 
 gNameChoice_Kene:: @ 81C577E
-    .string "KENE$"
+    .string "Maribel$"
 
 gNameChoice_Geki:: @ 81C5783
     .string "GEKI$"
@@ -143,7 +143,7 @@ gNewGame_HelpDocs4:: @ 81C58F9
 
 gNewGame_HelpDocs5:: @ 81C592B
     .string "Press this button to open the\n"
-    .string "MENU.$"
+    .string "Menu.$"
 
 gNewGame_HelpDocs6:: @ 81C594F
     .string "Used to shift items and to use\n"
@@ -155,8 +155,9 @@ gNewGame_HelpDocs7:: @ 81C5981
     .string "press the L or R Button.$"
 
 gOakText_AskPlayerGender:: @ 81C59D5
-    .string "Now tell me. Are you a boy?\n"
-    .string "Or are you a girl?$"
+    .string "Now tell me...\p"
+    .string "You're a girl, of course.\n"
+    .string "Which do you find more interesting?$"
 
 gNewGameAdventureIntro1::
     .string "In the world which you are about to\n"
@@ -188,19 +189,19 @@ gNewGameAdventureIntro3::
 
 gOakText_WelcomeToTheWorld:: @ 81C5C78
     .string "Hello, there!\n"
-    .string "Glad to meet you!\pWelcome to the world of POKéMON!\pMy name is OAK.\pPeople affectionately refer to me\n"
-    .string "as the POKéMON PROFESSOR.\p$"
+    .string "Glad to meet you!\pWelcome to the world of Puppets!\pMy name is Oak.\pPeople affectionately refer to me\n"
+    .string "as the Puppet Professor.\p$"
 
 gOakText_WorldInhabited1:: @ 81C5D06
     .string "This world…$"
 
 gOakText_WorldInhabited2:: @ 81C5D12
     .string "…is inhabited far and wide by\n"
-    .string "creatures called POKéMON.\p$"
+    .string "creatures called Puppets.\p$"
 
 gOakText_PetsBattlingStudy:: @ 81C5D4B
-    .string "For some people, POKéMON are pets.\n"
-    .string "Others use them for battling.\pAs for myself…\pI study POKéMON as a profession.\p$"
+    .string "For some people, Puppets are pets.\n"
+    .string "Others use them for battling.\pAs for myself…\pI study Puppets as a profession.\p$"
 
 gOakText_TellMeALittleAboutYourself:: @ 81C5DBD
     .string "But first, tell me a little about\n"
@@ -229,6 +230,6 @@ gOakText_RememberRivalName:: @ 81C5EC5
     .string "His name is {RIVAL}!\p$"
 
 gOakText_LegendAboutToUnfold:: @ 81C5EF4
-    .string "{PLAYER}!\pYour very own POKéMON legend is\n"
+    .string "{PLAYER}!\pYour very own Puppet legend is\n"
     .string "about to unfold!\pA world of dreams and adventures\n"
-    .string "with POKéMON awaits! Let's go!$"
+    .string "with Puppets awaits! Let's go!$"
