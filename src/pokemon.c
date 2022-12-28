@@ -4858,15 +4858,10 @@ u32 CanMonLearnTMHM(struct Pokemon *mon, u8 tm)
     {
         return 0;
     }
-    else if (tm < 32)
-    {
-        u32 mask = 1 << tm;
-        return sTMHMLearnsets[species][0] & mask;
-    }
     else
     {
-        u32 mask = 1 << (tm - 32);
-        return sTMHMLearnsets[species][1] & mask;
+        u32 mask = 1 << (tm % 32);
+        return sTMHMLearnsets[species][tm / 32] & mask;
     }
 }
 

@@ -558,13 +558,7 @@ static void TMCase_ItemPrintFunc(u8 windowId, u32 itemId, u8 y)
 {
     if (itemId != -2)
     {
-        if (!itemid_is_unique(BagGetItemIdByPocketPosition(POCKET_TM_CASE, itemId)))
-        {
-            ConvertIntToDecimalStringN(gStringVar1, BagGetQuantityByPocketPosition(POCKET_TM_CASE, itemId), STR_CONV_MODE_RIGHT_ALIGN, 3);
-            StringExpandPlaceholders(gStringVar4, gText_TimesStrVar1);
-            AddTextPrinterParameterized_ColorByIndex(windowId, 0, gStringVar4, 0x7E, y, 0, 0, 0xFF, 1);
-        }
-        else
+        if (BagGetItemIdByPocketPosition(POCKET_TM_CASE, itemId) >= ITEM_HM01)
         {
             PlaceHMTileInWindow(windowId, 8, y);
         }
@@ -794,7 +788,7 @@ static void Task_SelectTMAction_FromFieldBag(u8 taskId)
     StringAppend(strbuf, gText_Var1IsSelected + 2); // +2 skips over the stringvar
     AddTextPrinterParameterized_ColorByIndex(2, 2, strbuf, 0, 2, 1, 0, 0, 1);
     Free(strbuf);
-    if (itemid_is_unique(gSpecialVar_ItemId))
+    if (gSpecialVar_ItemId >= ITEM_HM01)
     {
         PlaceHMTileInWindow(2, 0, 2);
         CopyWindowToVram(2, COPYWIN_GFX);
@@ -1441,7 +1435,7 @@ static u8 CreateTMSprite(u16 itemId)
 
 static void SetTMSpriteAnim(struct Sprite * sprite, u8 idx)
 {
-    if (idx >= 50)
+    if (idx >= 80)
         StartSpriteAnim(sprite, 1);
     else
         StartSpriteAnim(sprite, 0);
@@ -1468,12 +1462,12 @@ static void UpdateTMSpritePosition(struct Sprite * sprite, u8 var)
     }
     else
     {
-        if (var >= 50)
-            var -= 50;
+        if (var >= 80)
+            var -= 80;
         else
             var += 8;
-        x = 0x29 - (((0xE00 * var) / 58) >> 8);
-        y = 0x2E + (((0x800 * var) / 58) >> 8);
+        x = 0x29 - (((0xE00 * var) / 88) >> 8);
+        y = 0x2E + (((0x800 * var) / 88) >> 8);
     }
     sprite->x = x;
     sprite->y = y;

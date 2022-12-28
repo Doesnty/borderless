@@ -31,6 +31,7 @@ ViridianCity_House1_EventScript_Cheat:
     switch VAR_RESULT
 	case 0, ViridianCity_House1_EventScript_GiveFirst200
 	case 1, ViridianCity_House1_EventScript_GivePast200
+    case 2, ViridianCity_House1_EventScript_GiveTMs
 
 ViridianCity_House1_EventScript_GiveFirst200::
 	setvar VAR_TEMP_1, 0x1
@@ -51,3 +52,14 @@ loop2start:
 	goto_if_lt loop2start
 	release
 	end
+
+ViridianCity_House1_EventScript_GiveTMs::
+	setvar VAR_TEMP_1, ITEM_TM01
+loop3start:
+    giveitem VAR_TEMP_1, 1
+    addvar VAR_TEMP_1, 0x1
+    compare VAR_TEMP_1, ITEM_HM08
+    goto_if_lt loop3start
+    release
+    end
+
