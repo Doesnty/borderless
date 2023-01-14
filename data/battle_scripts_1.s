@@ -257,6 +257,7 @@ gBattleScriptsForMoveEffects::
     .4byte BattleScript_EffectHammerArm
     .4byte BattleScript_EffectHappyHour
     .4byte BattleScript_EffectMeFirst
+    .4byte BattleScript_EffectMoodSwing
 
 BattleScript_EffectHit::
 BattleScript_HitFromAtkCanceler::
@@ -5547,3 +5548,31 @@ BattleScript_UnnerveAnnounces::
     pause 0x40
     end3
 
+BattleScript_ReactiveDef::
+	printstring STRINGID_REACTIVEDEF
+	waitmessage 0x40
+	return
+
+BattleScript_ReactiveSpDef::
+	printstring STRINGID_REACTIVESPDEF
+	waitmessage 0x40
+	return
+
+BattleScript_EffectMoodSwing::
+	jumpifstat BS_ATTACKER, CMP_LESS_THAN, STAT_ATK, 12, BattleScript_MoodSwingStart
+	jumpifstat BS_ATTACKER, CMP_LESS_THAN, STAT_DEF, 12, BattleScript_MoodSwingStart
+	jumpifstat BS_ATTACKER, CMP_LESS_THAN, STAT_SPEED, 12, BattleScript_MoodSwingStart
+	jumpifstat BS_ATTACKER, CMP_LESS_THAN, STAT_SPATK, 12, BattleScript_MoodSwingStart
+	jumpifstat BS_ATTACKER, CMP_LESS_THAN, STAT_SPDEF, 12, BattleScript_MoodSwingStart
+	jumpifstat BS_ATTACKER, CMP_LESS_THAN, STAT_ACC, 12, BattleScript_MoodSwingStart
+	jumpifstat BS_ATTACKER, CMP_EQUAL, STAT_EVASION, 12, BattleScript_MoodSwingCantRaiseMultipleStats
+
+BattleScript_MoodSwingStart:
+	special 0x12
+	goto BattleScript_EffectStatUp
+
+BattleScript_MoodSwingCantRaiseMultipleStats:
+	attackcanceler
+	attackstring
+	ppreduce
+	goto BattleScript_CantRaiseMultipleStats

@@ -28,7 +28,7 @@ PalletTown_ProfessorOaksLab_Text_RivalMyMonLooksTougher:: @ 818DD75
 
 PalletTown_ProfessorOaksLab_Text_RivalLetsCheckOutMons:: @ 818DDA4
     .string "{RIVAL}: Wait, {PLAYER}!\n"
-    .string "Let's check out our Puppet!\p"
+    .string "Let's check out our Puppets!\p"
     .string "Come on, I'll take you on!$"
 
 PalletTown_ProfessorOaksLab_Text_RivalDefeat:: @ 818DDEA
@@ -101,22 +101,22 @@ PalletTown_ProfessorOaksLab_Text_OakHeyDontGoAwayYet:: @ 818E177
     .string "Don't go away yet!$"
 
 PalletTown_ProfessorOaksLab_Text_OakChoosingCharmander:: @ 818E194
-    .string "Ah! Chibi Reisen is your choice.\n"
+    .string "Ah! Chibi Kokoro is your choice.\n"
     .string "You should raise it patiently.\p"
     .string "So, {PLAYER}, you're claiming the\n"
-    .string "Heart Puppet CReisen?$"
+    .string "Heart-type Emotion Puppet CKokoro?$"
 
 PalletTown_ProfessorOaksLab_Text_OakChoosingSquirtle:: @ 818E207
-    .string "Hm! Chibi Sanae is your choice.\n"
+    .string "Hm! Chibi Futo is your choice.\n"
     .string "It's one worth raising.\p"
     .string "So, {PLAYER}, you've decided on the\n"
-    .string "Faith Puppet CSanae?$"
+    .string "Faith-type Taoist Puppet CFuto?$"
 
 PalletTown_ProfessorOaksLab_Text_OakChoosingBulbasaur:: @ 818E272
-    .string "I see! Chibi Alice is your choice.\n"
+    .string "I see! Chibi Sumireko is your choice.\n"
     .string "It's very easy to raise.\p"
-    .string "So, {PLAYER}, you want to go with\n"
-    .string "the Reason Puppet CAlice?$"
+    .string "So, {PLAYER}, you want to go with the\n"
+    .string "Reason-type Esper Puppet CSumireko?$"
 
 PalletTown_ProfessorOaksLab_Text_OakThisMonIsEnergetic:: @ 818E2E5
     .string "This Puppet is really quite\n"

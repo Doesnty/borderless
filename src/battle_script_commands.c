@@ -9400,6 +9400,7 @@ static void sp0e_bestow(void);
 static void sp0f_happyhour(void);
 static void sp10_mefirst(void);
 static void sp11_dotracedability(void);
+static void sp12_moodswing(void);
 
 void (* const gBattleScriptingSpecialsTable[])(void) =
 {
@@ -9421,6 +9422,7 @@ void (* const gBattleScriptingSpecialsTable[])(void) =
     sp0f_happyhour,
     sp10_mefirst,
     sp11_dotracedability,
+    sp12_moodswing,
 };
 
 static void atkF8_special(void)
@@ -9872,3 +9874,61 @@ static void sp11_dotracedability(void)
     AbilityBattleEffects(ABILITYEFFECT_ON_SWITCHIN, gActiveBattler, 0, 0, 0);
 }
 
+static void sp12_moodswing(void)
+{	while (1)
+	{
+		u8 value = Random() % 7;
+		switch (value)
+		{
+        case 0: 
+            if (gBattleMons[gBattlerAttacker].statStages[STAT_ATK] < 12)
+            {
+                gBattleScripting.statChanger = 17;
+                return;
+            }
+            break;
+        case 1: 
+            if (gBattleMons[gBattlerAttacker].statStages[STAT_DEF] < 12)
+            {
+                gBattleScripting.statChanger = 18;
+                return;
+            }
+            break;
+        case 2: 
+            if (gBattleMons[gBattlerAttacker].statStages[STAT_SPEED] < 12)
+            {
+                gBattleScripting.statChanger = 19;
+                return;
+            }
+            break;
+        case 3: 
+            if (gBattleMons[gBattlerAttacker].statStages[STAT_SPATK] < 12)
+            {
+                gBattleScripting.statChanger = 20;
+                return;
+            }
+            break;
+        case 4: 
+            if (gBattleMons[gBattlerAttacker].statStages[STAT_SPDEF] < 12)
+            {
+                gBattleScripting.statChanger = 21;
+                return;
+            }
+            break;
+        case 5: 
+            if (gBattleMons[gBattlerAttacker].statStages[STAT_ACC] < 12)
+            {
+                gBattleScripting.statChanger = 22;
+                return;
+            }
+            break;
+        case 6: 
+            if (gBattleMons[gBattlerAttacker].statStages[STAT_EVASION] < 12)
+            {
+                gBattleScripting.statChanger = 23;
+                return;
+            }
+            break;
+		}
+	}
+}

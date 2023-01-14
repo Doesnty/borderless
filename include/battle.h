@@ -100,12 +100,27 @@ struct TrainerMonItemCustomMoves
     u16 moves[4];
 };
 
+struct TrainerMonFullControl
+{
+    u16 iv;
+    u8 lvl;
+    u16 species;
+    u16 heldItem;
+    u16 moves[4];
+    u16 evs[6];
+    u8 nature;
+    u8 gender;
+    u8 ability;
+    u8 ball;
+};
+
 union TrainerMonPtr
 {
     const struct TrainerMonNoItemDefaultMoves *NoItemDefaultMoves;
     const struct TrainerMonNoItemCustomMoves *NoItemCustomMoves;
     const struct TrainerMonItemDefaultMoves *ItemDefaultMoves;
     const struct TrainerMonItemCustomMoves *ItemCustomMoves;
+    const struct TrainerMonFullControl *FullControl;
 };
 
 struct Trainer

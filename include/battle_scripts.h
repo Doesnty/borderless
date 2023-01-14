@@ -269,6 +269,8 @@ extern const u8 BattleScript_WallMasterActivates[];
 extern const u8 BattleScript_Forewarn[];
 extern const u8 BattleScript_Protean[];
 extern const u8 BattleScript_UnnerveAnnounces[];
+extern const u8 BattleScript_ReactiveDef[];
+extern const u8 BattleScript_ReactiveSpDef[];
 
 extern const u8 *const gBattleScriptsForMoveEffects[];
 extern const u8 *const gBattlescriptsForBallThrow[];

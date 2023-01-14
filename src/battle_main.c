@@ -1539,6 +1539,8 @@ static u8 CreateNPCTrainerParty(struct Pokemon *party, u16 trainerNum)
     u32 nameHash = 0;
     u32 personalityValue;
     u8 fixedIV;
+    u8 ability;
+    u8 ball;
     s32 i, j;
 
     if (trainerNum == TRAINER_SECRET_BASE)
@@ -1549,6 +1551,9 @@ static u8 CreateNPCTrainerParty(struct Pokemon *party, u16 trainerNum)
         ZeroEnemyPartyMons();
         for (i = 0; i < gTrainers[trainerNum].partySize; ++i)
         {
+            personalityValue = 44;
+            
+            ball = ITEM_POKE_BALL;
 
             if (gTrainers[trainerNum].doubleBattle == TRUE)
                 personalityValue = 0x80;
@@ -1617,7 +1622,45 @@ static u8 CreateNPCTrainerParty(struct Pokemon *party, u16 trainerNum)
                 }
                 break;
             }
+            case F_TRAINER_PARTY_FULL_CONTROL:
+            {
+				const struct TrainerMonFullControl *partyData = gTrainers[trainerNum].party.FullControl;
+				u8 ability;
+                u8 level = partyData[i].lvl;
+
+                fixedIV = partyData[i].iv;
+                if (partyData[i].gender == MON_MALE)
+                    personalityValue |= 0x80;
+                else if (partyData[i].gender == MON_FEMALE)
+                    personalityValue &= ~(0x80);
+                CreateMon(&party[i], partyData[i].species, level, fixedIV, TRUE, personalityValue, 1, 0);
+
+				//SetMonData(&party[i], MON_DATA_NATURE_OVERRIDE, &partyData[i].nature);
+                
+				ability = partyData[i].ability;
+				if (ability == 0 || ability == 1)
+					SetMonData(&party[i], MON_DATA_ABILITY_NUM, &ability);
+				else if (ability == 2)
+				{
+					ability = 1;
+					SetMonData(&party[i], MON_DATA_HIDDEN_ABILITY, &ability);
+				}
+				ball = partyData[i].ball;
+                SetMonData(&party[i], MON_DATA_HELD_ITEM, &partyData[i].heldItem);
+                for (j = 0; j < 4; j++)
+                {
+                    SetMonData(&party[i], MON_DATA_MOVE1 + j, &partyData[i].moves[j]);
+                    SetMonData(&party[i], MON_DATA_PP1 + j, &gBattleMoves[partyData[i].moves[j]].pp);
+                }
+				for (j = 0; j < 6; j++)
+				{
+					SetMonData(&party[i], MON_DATA_HP_EV + j, &partyData[i].evs[j]);
+				}
+				break;
+			}
             }
+            CalculateMonStats(&party[i]);
+            SetMonData(&party[i], MON_DATA_POKEBALL, &ball);
         }
         gBattleTypeFlags |= gTrainers[trainerNum].doubleBattle;
     }

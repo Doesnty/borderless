@@ -303,7 +303,7 @@ static void CompleteOnHealthbarDone(void)
         if (!BtlCtrl_OakOldMan_TestState2Flag(1) && (gBattleTypeFlags & BATTLE_TYPE_FIRST_BATTLE))
         {
             BtlCtrl_OakOldMan_SetState2Flag(1);
-            gBattlerControllerFuncs[gActiveBattler] = PrintOakText_InflictingDamageIsKey;
+            OpponentBufferExecCompleted();
         }
         else
         {

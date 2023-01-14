@@ -8073,7 +8073,7 @@ const struct BaseStats gBaseStats[] =
     },
     [SPECIES_CFUTO] = 
     {
-        .baseHP = 70,
+        .baseHP = 60,
         .baseAttack = 75,
         .baseDefense = 65,
         .baseSpAttack = 70,
@@ -8095,11 +8095,11 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_FOCUS,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
-        .cost = 60,
+        .cost = 40,
     },
     [SPECIES_FUTO] = 
     {
-        .baseHP = 95,
+        .baseHP = 85,
         .baseAttack = 105,
         .baseDefense = 90,
         .baseSpAttack = 95,
@@ -8121,11 +8121,11 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_FOCUS,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
-        .cost = 100,
+        .cost = 80,
     },
     [SPECIES_TFUTO] = 
     {
-        .baseHP = 95,
+        .baseHP = 85,
         .baseAttack = 95,
         .baseDefense = 55,
         .baseSpAttack = 85,
@@ -8147,7 +8147,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_FOCUS,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
-        .cost = 100,
+        .cost = 80,
     },
     [SPECIES_CMIKO] = 
     {
@@ -8412,9 +8412,9 @@ const struct BaseStats gBaseStats[] =
     [SPECIES_CKOKORO] = 
     {
         .baseHP = 50,
-        .baseAttack = 80,
+        .baseAttack = 75,
         .baseDefense = 30,
-        .baseSpAttack = 85,
+        .baseSpAttack = 80,
         .baseSpDefense = 50,
         .baseSpeed = 95,
         .type1 = TYPE_HEART,
@@ -8433,14 +8433,14 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_OBLIVIOUS,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
-        .cost = 60,
+        .cost = 40,
     },
     [SPECIES_KOKORO] = 
     {
         .baseHP = 70,
-        .baseAttack = 110,
+        .baseAttack = 105,
         .baseDefense = 50,
-        .baseSpAttack = 115,
+        .baseSpAttack = 110,
         .baseSpDefense = 70,
         .baseSpeed = 125,
         .type1 = TYPE_HEART,
@@ -8459,14 +8459,14 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_OBLIVIOUS,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
-        .cost = 100,
+        .cost = 80,
     },
     [SPECIES_AKOKORO] = 
     {
         .baseHP = 75,
         .baseAttack = 145,
         .baseDefense = 70,
-        .baseSpAttack = 90,
+        .baseSpAttack = 80,
         .baseSpDefense = 50,
         .baseSpeed = 110,
         .type1 = TYPE_HEART,
@@ -8485,7 +8485,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_OBLIVIOUS,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
-        .cost = 100,
+        .cost = 80,
     },
     [SPECIES_TKOKORO] = 
     {
@@ -8493,7 +8493,7 @@ const struct BaseStats gBaseStats[] =
         .baseAttack = 55,
         .baseDefense = 100,
         .baseSpAttack = 130,
-        .baseSpDefense = 75,
+        .baseSpDefense = 65,
         .baseSpeed = 90,
         .type1 = TYPE_HEART,
         .type2 = TYPE_FIRE,
@@ -8511,7 +8511,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_BERSERK,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
-        .cost = 100,
+        .cost = 80,
     },
     [SPECIES_CWAKASAGIHIME] = 
     {
@@ -9165,9 +9165,9 @@ const struct BaseStats gBaseStats[] =
     },
     [SPECIES_CSUMIREKO] = 
     {
-        .baseHP = 55,
+        .baseHP = 60,
         .baseAttack = 50,
-        .baseDefense = 50,
+        .baseDefense = 55,
         .baseSpAttack = 95,
         .baseSpDefense = 30,
         .baseSpeed = 90,
@@ -9191,9 +9191,9 @@ const struct BaseStats gBaseStats[] =
     },
     [SPECIES_SUMIREKO] = 
     {
-        .baseHP = 75,
+        .baseHP = 80,
         .baseAttack = 75,
-        .baseDefense = 75,
+        .baseDefense = 80,
         .baseSpAttack = 135,
         .baseSpDefense = 55,
         .baseSpeed = 105,

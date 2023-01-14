@@ -556,6 +556,8 @@ const u8 sText_Forewarn[] = _("{B_SCR_ACTIVE_NAME_WITH_PREFIX}'s Forewarn\nalert
 const u8 sText_Protean[] = _("{B_ATK_NAME_WITH_PREFIX}'s Protean\nmade it the {B_BUFF1} type!");
 const u8 sText_UnnerveAnnounces[] = _("{B_SCR_ACTIVE_NAME_WITH_PREFIX}'s Unnerve\nprevents the use of held berries!");
 const u8 sText_PkmnRaisedAtk[] = _("{B_SCR_ACTIVE_NAME_WITH_PREFIX}'s {B_SCR_ACTIVE_ABILITY}\nraised its Attack!");
+const u8 sText_PkmnReactiveDef[] = _("{B_SCR_ACTIVE_NAME_WITH_PREFIX}'s {B_SCR_ACTIVE_ABILITY} raised\nits Defense and lowered its Sp. Def!");
+const u8 sText_PkmnReactiveSpDef[] = _("{B_SCR_ACTIVE_NAME_WITH_PREFIX}'s {B_SCR_ACTIVE_ABILITY} raised\nits Sp. Def and lowered its Defense!");
 
 
 const u8 *const gBattleStringsTable[] = {
@@ -977,7 +979,8 @@ const u8 *const gBattleStringsTable[] = {
     [STRINGID_PROTEAN - 12]                       = sText_Protean,
     [STRINGID_UNNERVEANNOUNCES - 12]              = sText_UnnerveAnnounces,
     [STRINGID_PKMNRAISEDATK - 12]                 = sText_PkmnRaisedAtk,
-
+    [STRINGID_REACTIVEDEF - 12]                   = sText_PkmnReactiveDef,
+    [STRINGID_REACTIVESPDEF - 12]                 = sText_PkmnReactiveSpDef,
 };
 
 const u16 gMissStringIds[] = {

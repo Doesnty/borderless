@@ -791,7 +791,8 @@ u8 DoBattlerEndTurnEffects(void)
                 ++gBattleStruct->turnEffectsTracker;
                 break;
             case ENDTURN_POISON:  // poison
-                if ((gBattleMons[gActiveBattler].status1 & STATUS1_POISON) && gBattleMons[gActiveBattler].hp != 0)
+                if ((gBattleMons[gActiveBattler].status1 & STATUS1_POISON) && gBattleMons[gActiveBattler].hp != 0
+                    && gBattleMons[gActiveBattler].ability != ABILITY_POISON_HEAL)
                 {
                     u8 multiplier = 2;
                     if (AbilityBattleEffects(ABILITYEFFECT_COUNT_OTHER_SIDE, gActiveBattler, ABILITY_CATALYST, 0, 0))
@@ -807,19 +808,21 @@ u8 DoBattlerEndTurnEffects(void)
             case ENDTURN_BAD_POISON:  // toxic poison
                 if ((gBattleMons[gActiveBattler].status1 & STATUS1_TOXIC_POISON) && gBattleMons[gActiveBattler].hp != 0)
                 {
-                    u8 multiplier = 1;
                     
                     if ((gBattleMons[gActiveBattler].status1 & 0xF00) != 0xF00) // not 16 turns
                         gBattleMons[gActiveBattler].status1 += 0x100;
-                    multiplier = (gBattleMons[gActiveBattler].status1 & 0xF00) >> 8;
                     
-                    if (AbilityBattleEffects(ABILITYEFFECT_COUNT_OTHER_SIDE, gActiveBattler, ABILITY_CATALYST, 0, 0))
-                        multiplier += 2;
-                    gBattleMoveDamage = (gBattleMons[gActiveBattler].maxHP * multiplier) / 16;
-                    if (gBattleMoveDamage == 0)
-                        gBattleMoveDamage = 1;
-                    BattleScriptExecute(BattleScript_PoisonTurnDmg);
-                    ++effect;
+                    if (gBattleMons[gActiveBattler].ability != ABILITY_POISON_HEAL)
+                    {
+                        u8 multiplier = (gBattleMons[gActiveBattler].status1 & 0xF00) >> 8;
+                        if (AbilityBattleEffects(ABILITYEFFECT_COUNT_OTHER_SIDE, gActiveBattler, ABILITY_CATALYST, 0, 0))
+                            multiplier += 2;
+                        gBattleMoveDamage = (gBattleMons[gActiveBattler].maxHP * multiplier) / 16;
+                        if (gBattleMoveDamage == 0)
+                            gBattleMoveDamage = 1;
+                        BattleScriptExecute(BattleScript_PoisonTurnDmg);
+                        ++effect;
+                    }
                 }
                 ++gBattleStruct->turnEffectsTracker;
                 break;
@@ -1889,6 +1892,27 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u8 ability, u8 special, u16 moveA
                     }
                     break;
                 case ABILITY_SOLAR_POWER:
+                    if (gBattleMons[battler].maxHP > gBattleMons[battler].hp)
+                    {
+                        BattleScriptPushCursorAndCallback(BattleScript_RainDishActivates);
+                        gBattleMoveDamage = gBattleMons[battler].maxHP / 8;
+                        if (gBattleMoveDamage == 0)
+                            gBattleMoveDamage = 1;
+                        ++effect;
+                    }
+                    break;
+                case ABILITY_POISON_HEAL:
+                    if (gBattleMons[battler].maxHP > gBattleMons[battler].hp &&
+                        gBattleMons[battler].status1 & (STATUS1_POISON | STATUS1_TOXIC_POISON))
+                    {
+                        BattleScriptPushCursorAndCallback(BattleScript_RainDishActivates);
+                        gBattleMoveDamage = gBattleMons[battler].maxHP / 8;
+                        if (gBattleMoveDamage == 0)
+                            gBattleMoveDamage = 1;
+                        gBattleMoveDamage *= -1;
+                        ++effect;
+                    }
+                    break;
                 case ABILITY_HIBERNATION:
                     if (gBattleMons[battler].status1 & STATUS1_SLEEP
                      && gBattleMons[battler].maxHP > gBattleMons[battler].hp)
@@ -2319,7 +2343,36 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u8 ability, u8 special, u16 moveA
                     ++effect;
                 }
                 break;
-                
+            case ABILITY_REACTIVE:
+                if (!(gMoveResultFlags & MOVE_RESULT_NO_EFFECT)
+                 && gBattleMons[gBattlerTarget].hp != 0
+                 && !gProtectStructs[gBattlerAttacker].confusionSelfDmg
+                 && TARGET_TURN_DAMAGED)
+                {
+                    if (gBattleMoves[gCurrentMove].moveClass == CLASS_PHYSICAL
+                        && gBattleMons[gBattlerTarget].statStages[STAT_DEF] < 12)
+                    {
+                        gBattleMons[gBattlerTarget].statStages[STAT_DEF]++;
+                        if (gBattleMons[gBattlerTarget].statStages[STAT_SPDEF] > 0)
+                            gBattleMons[gBattlerTarget].statStages[STAT_SPDEF]--;
+                        BattleScriptPushCursor();
+                        gBattlescriptCurrInstr = BattleScript_ReactiveDef;
+                        gBattleScripting.battler = gBattlerTarget;
+                        ++effect;
+                    }
+                    else if (gBattleMoves[gCurrentMove].moveClass == CLASS_SPECIAL
+                        && gBattleMons[gBattlerTarget].statStages[STAT_SPDEF] < 12)
+                    {
+                        gBattleMons[gBattlerTarget].statStages[STAT_SPDEF]++;
+                        if (gBattleMons[gBattlerTarget].statStages[STAT_DEF] > 0)
+                            gBattleMons[gBattlerTarget].statStages[STAT_DEF]--;
+                        BattleScriptPushCursor();
+                        gBattlescriptCurrInstr = BattleScript_ReactiveSpDef;
+                        gBattleScripting.battler = gBattlerTarget;
+                        ++effect;
+                    }
+                }
+                break;
             }
             break;
         case ABILITYEFFECT_IMMUNITY: // 5

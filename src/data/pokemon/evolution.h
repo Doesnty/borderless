@@ -308,7 +308,7 @@ const struct Evolution gEvolutionTable[NUM_SPECIES][EVOS_PER_MON] =
     [SPECIES_CTOJIKO]    = {{EVO_LEVEL, 33, SPECIES_TOJIKO},
                              {EVO_ITEM, ITEM_SWIFT_SHARD, SPECIES_STOJIKO}},
 
-    [SPECIES_CFUTO]      = {{EVO_LEVEL, 37, SPECIES_FUTO},
+    [SPECIES_CFUTO]      = {{EVO_LEVEL, 35, SPECIES_FUTO},
                              {EVO_ITEM, ITEM_TECH_SHARD, SPECIES_TFUTO}},
 
     [SPECIES_CMIKO]      = {{EVO_LEVEL, 39, SPECIES_MIKO},
@@ -320,7 +320,7 @@ const struct Evolution gEvolutionTable[NUM_SPECIES][EVOS_PER_MON] =
 
     [SPECIES_CKOSUZU]    = {{EVO_LEVEL, 25, SPECIES_KOSUZU}},
 
-    [SPECIES_CKOKORO]    = {{EVO_LEVEL, 37, SPECIES_KOKORO},
+    [SPECIES_CKOKORO]    = {{EVO_LEVEL, 35, SPECIES_KOKORO},
                              {EVO_ITEM, ITEM_POWER_SHARD, SPECIES_AKOKORO},
                              {EVO_ITEM, ITEM_TECH_SHARD, SPECIES_TKOKORO}},
 
@@ -349,7 +349,7 @@ const struct Evolution gEvolutionTable[NUM_SPECIES][EVOS_PER_MON] =
     [SPECIES_CKASEN]     = {{EVO_LEVEL, 41, SPECIES_KASEN},
                              {EVO_ITEM, ITEM_ASSIST_SHARD, SPECIES_HKASEN}},
 
-    [SPECIES_CSUMIREKO]  = {{EVO_LEVEL, 33, SPECIES_SUMIREKO}},
+    [SPECIES_CSUMIREKO]  = {{EVO_LEVEL, 35, SPECIES_SUMIREKO}},
 
     [SPECIES_CSEIRAN]    = {{EVO_LEVEL, 25, SPECIES_SEIRAN}},
     [SPECIES_CRINGO]     = {{EVO_LEVEL, 27, SPECIES_RINGO}},

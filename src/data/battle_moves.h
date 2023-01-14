@@ -35,7 +35,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .type = TYPE_NORMAL,
         .moveClass = CLASS_PHYSICAL,
         .accuracy = 100,
-        .pp = 10,
+        .pp = 25,
         .secondaryEffectChance = 0,
         .priority = 2,
         .target = MOVE_TARGET_SELECTED,
@@ -5626,6 +5626,34 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .priority = 0,
         .target = MOVE_TARGET_USER,
         .flags = 0,
+    },
+
+    [MOVE_BALL_LIGHTNING] = 
+    {
+        .effect = EFFECT_PARALYZE_HIT,
+        .power = 90,
+        .type = TYPE_ELECTRIC,
+        .moveClass = CLASS_SPECIAL,
+        .accuracy = 100,
+        .pp = 10,
+        .secondaryEffectChance = 10,
+        .priority = 0,
+        .target = MOVE_TARGET_SELECTED,
+        .flags = FLAG_PROTECT_AFFECTED | FLAG_HIGH_CRIT,
+    },
+
+    [MOVE_MOOD_SWING] = 
+    {
+        .effect = EFFECT_MOOD_SWING,
+        .power = 0,
+        .type = TYPE_HEART,
+        .moveClass = CLASS_STATUS,
+        .accuracy = 0,
+        .pp = 30,
+        .secondaryEffectChance = 0,
+        .priority = 0,
+        .target = MOVE_TARGET_USER,
+        .flags = FLAG_SNATCH_AFFECTED,
     },
 
     [MOVE_ME_FIRST] = 
