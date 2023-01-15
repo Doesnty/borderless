@@ -353,7 +353,7 @@ bool8 StandardWildEncounter(u32 currMetatileAttrs, u16 previousMetatileBehavior)
 
                 // try a regular wild land encounter
                 if (gSaveBlock1Ptr->pos.x >= gWildMonHeaders[headerId].altX && gSaveBlock1Ptr->pos.x <= gWildMonHeaders[headerId].altX2 &&
-                    gSaveBlock1Ptr->pos.y >= gWildMonHeaders[headerId].altY && gSaveBlock1Ptr->pos.x <= gWildMonHeaders[headerId].altY2)
+                    gSaveBlock1Ptr->pos.y >= gWildMonHeaders[headerId].altY && gSaveBlock1Ptr->pos.y <= gWildMonHeaders[headerId].altY2)
                 {
                     if (TryGenerateWildMon(gWildMonHeaders[headerId].altLandMonsInfo, WILD_AREA_ALT_LAND, WILD_CHECK_REPEL) == TRUE)
                     {

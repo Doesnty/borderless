@@ -2288,7 +2288,7 @@ const struct MonCoords gMonBackPicCoords[] =
 	[SPECIES_CETERNITY] = 
 	{
 		.size = 0x65,
-		.y_offset = 11,
+		.y_offset = 0,
 	},
 	[SPECIES_ETERNITY] = 
 	{
