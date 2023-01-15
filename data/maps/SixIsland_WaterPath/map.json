@@ -200,7 +200,7 @@
       "x": 13,
       "y": 63,
       "elevation": 3,
-      "item": "ITEM_PINAP_BERRY",
+      "item": "ITEM_LUM_BERRY",
       "flag": "HIDDEN_ITEM_SIX_ISLAND_WATER_PATH_PINAP_BERRY",
       "quantity": 1,
       "underfoot": false

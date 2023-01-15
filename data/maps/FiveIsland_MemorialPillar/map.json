@@ -113,7 +113,7 @@
       "x": 15,
       "y": 7,
       "elevation": 3,
-      "item": "ITEM_RAZZ_BERRY",
+      "item": "ITEM_LUM_BERRY",
       "flag": "HIDDEN_ITEM_FIVE_ISLAND_MEMORIAL_PILLAR_RAZZ_BERRY",
       "quantity": 1,
       "underfoot": false
@@ -133,7 +133,7 @@
       "x": 14,
       "y": 25,
       "elevation": 3,
-      "item": "ITEM_BLUK_BERRY",
+      "item": "ITEM_LEPPA_BERRY",
       "flag": "HIDDEN_ITEM_FIVE_ISLAND_MEMORIAL_PILLAR_BLUK_BERRY",
       "quantity": 1,
       "underfoot": false

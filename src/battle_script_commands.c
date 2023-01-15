@@ -1382,7 +1382,8 @@ static void atk06_typecalc(void)
     else
     {
         ModulateDmgByType2(gTypeEffectiveness[moveType][gBattleMons[gBattlerTarget].type1], gCurrentMove, &gMoveResultFlags);
-        ModulateDmgByType2(gTypeEffectiveness[moveType][gBattleMons[gBattlerTarget].type2], gCurrentMove, &gMoveResultFlags);
+        if (gBattleMons[gBattlerTarget].type1 != gBattleMons[gBattlerTarget].type2)
+            ModulateDmgByType2(gTypeEffectiveness[moveType][gBattleMons[gBattlerTarget].type2], gCurrentMove, &gMoveResultFlags);
     }
     if (defenderAbility == ABILITY_PLAY_GHOST && AttacksThisTurn(gBattlerAttacker, gCurrentMove) == 2
      && (!(gMoveResultFlags & MOVE_RESULT_SUPER_EFFECTIVE) || ((gMoveResultFlags & (MOVE_RESULT_SUPER_EFFECTIVE | MOVE_RESULT_NOT_VERY_EFFECTIVE)) == (MOVE_RESULT_SUPER_EFFECTIVE | MOVE_RESULT_NOT_VERY_EFFECTIVE)))

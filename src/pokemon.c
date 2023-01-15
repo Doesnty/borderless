@@ -1729,32 +1729,6 @@ s32 CalculateBaseDamage(struct BattlePokemon *attacker, struct BattlePokemon *de
     if (attacker->ability == ABILITY_UNZAN || attacker->ability == ABILITY_PURE_POWER)
         attack *= 2;
 
-    // In FRLG, the Battle Tower and opponent checks are stubbed here.
-    if (!(gBattleTypeFlags & (BATTLE_TYPE_LINK | /*BATTLE_TYPE_BATTLE_TOWER |*/ BATTLE_TYPE_EREADER_TRAINER)))
-    {
-        if (FlagGet(FLAG_BADGE01_GET)
-            && GetBattlerSide(battlerIdAtk) == B_SIDE_PLAYER)
-            attack = (110 * attack) / 100;
-    }
-    if (!(gBattleTypeFlags & (BATTLE_TYPE_LINK | /*BATTLE_TYPE_BATTLE_TOWER |*/ BATTLE_TYPE_EREADER_TRAINER)))
-    {
-        if (FlagGet(FLAG_BADGE05_GET)
-            && GetBattlerSide(battlerIdDef) == B_SIDE_PLAYER)
-            defense = (110 * defense) / 100;
-    }
-    if (!(gBattleTypeFlags & (BATTLE_TYPE_LINK | /*BATTLE_TYPE_BATTLE_TOWER |*/ BATTLE_TYPE_EREADER_TRAINER)))
-    {
-        if (FlagGet(FLAG_BADGE07_GET)
-            && GetBattlerSide(battlerIdAtk) == B_SIDE_PLAYER)
-            spAttack = (110 * spAttack) / 100;
-    }
-    if (!(gBattleTypeFlags & (BATTLE_TYPE_LINK | /*BATTLE_TYPE_BATTLE_TOWER |*/ BATTLE_TYPE_EREADER_TRAINER)))
-    {
-        if (FlagGet(FLAG_BADGE07_GET)
-            && GetBattlerSide(battlerIdDef) == B_SIDE_PLAYER)
-            spDefense = (110 * spDefense) / 100;
-    }
-
     for (i = 0; i < NELEMS(sHoldEffectToType); i++)
     {
         if (attackerHoldEffect == sHoldEffectToType[i][0]
@@ -1804,10 +1778,6 @@ s32 CalculateBaseDamage(struct BattlePokemon *attacker, struct BattlePokemon *de
         attack = (150 * attack) / 100;
     if (defenderAbility == ABILITY_SPRING_CHARM && defender->status1)
         defense = (150 * defense) / 100;
-    if (type == TYPE_ELECTRIC && AbilityBattleEffects(ABILITYEFFECT_FIELD_SPORT, 0, 0, 0xFD, 0))
-        gBattleMovePower /= 2;
-    if (type == TYPE_FIRE && AbilityBattleEffects(ABILITYEFFECT_FIELD_SPORT, 0, 0, 0xFE, 0))
-        gBattleMovePower /= 2;
     if (gBattleStruct->meFirstTracker)
     {
         gBattleMovePower *= 15;

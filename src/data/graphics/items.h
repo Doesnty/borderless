@@ -32,11 +32,13 @@ const u32 gFile_graphics_items_icons_repeat_ball_sheet[] = INCBIN_U32("graphics/
 const u32 gFile_graphics_items_icon_palettes_repeat_ball_palette[] = INCBIN_U32("graphics/items/icon_palettes/repeat_ball.gbapal.lz");
 
 const u32 gFile_graphics_items_icons_timer_ball_sheet[] = INCBIN_U32("graphics/items/icons/timer_ball.4bpp.lz");
+const u32 gFile_graphics_items_icon_palettes_timer_ball_palette[] = INCBIN_U32("graphics/items/icon_palettes/timer_ball.gbapal.lz");
 
 const u32 gFile_graphics_items_icons_luxury_ball_sheet[] = INCBIN_U32("graphics/items/icons/luxury_ball.4bpp.lz");
 const u32 gFile_graphics_items_icon_palettes_luxury_ball_palette[] = INCBIN_U32("graphics/items/icon_palettes/luxury_ball.gbapal.lz");
 
 const u32 gFile_graphics_items_icons_premier_ball_sheet[] = INCBIN_U32("graphics/items/icons/premier_ball.4bpp.lz");
+const u32 gFile_graphics_items_icon_palettes_premier_ball_palette[] = INCBIN_U32("graphics/items/icon_palettes/premier_ball.gbapal.lz");
 
 const u32 gFile_graphics_items_icons_potion_sheet[] = INCBIN_U32("graphics/items/icons/potion.4bpp.lz");
 const u32 gFile_graphics_items_icon_palettes_potion_palette[] = INCBIN_U32("graphics/items/icon_palettes/potion.gbapal.lz");
