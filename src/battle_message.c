@@ -558,6 +558,7 @@ const u8 sText_UnnerveAnnounces[] = _("{B_SCR_ACTIVE_NAME_WITH_PREFIX}'s Unnerve
 const u8 sText_PkmnRaisedAtk[] = _("{B_SCR_ACTIVE_NAME_WITH_PREFIX}'s {B_SCR_ACTIVE_ABILITY}\nraised its Attack!");
 const u8 sText_PkmnReactiveDef[] = _("{B_SCR_ACTIVE_NAME_WITH_PREFIX}'s {B_SCR_ACTIVE_ABILITY} raised\nits Defense and lowered its Sp. Def!");
 const u8 sText_PkmnReactiveSpDef[] = _("{B_SCR_ACTIVE_NAME_WITH_PREFIX}'s {B_SCR_ACTIVE_ABILITY} raised\nits Sp. Def and lowered its Defense!");
+const u8 sText_ResistBerry[] = _("{B_DEF_NAME_WITH_PREFIX} ate its {B_LAST_ITEM}\nto reduce the damage taken!");
 
 
 const u8 *const gBattleStringsTable[] = {
@@ -981,6 +982,7 @@ const u8 *const gBattleStringsTable[] = {
     [STRINGID_PKMNRAISEDATK - 12]                 = sText_PkmnRaisedAtk,
     [STRINGID_REACTIVEDEF - 12]                   = sText_PkmnReactiveDef,
     [STRINGID_REACTIVESPDEF - 12]                 = sText_PkmnReactiveSpDef,
+    [STRINGID_RESISTBERRY - 12]                   = sText_ResistBerry,
 };
 
 const u16 gMissStringIds[] = {

@@ -103,6 +103,24 @@ ViridianCity_Mart_Items:: @ 816A298
     .2byte ITEM_ICE_BALL
     .2byte ITEM_DARK_RIBBON
     .2byte ITEM_MASTER_BALL
+    .2byte ITEM_OCCA_BERRY
+    .2byte ITEM_PASSHO_BERRY
+    .2byte ITEM_WACAN_BERRY
+    .2byte ITEM_RINDO_BERRY
+    .2byte ITEM_YACHE_BERRY
+    .2byte ITEM_CHOPLE_BERRY
+    .2byte ITEM_KEBIA_BERRY
+    .2byte ITEM_SHUCA_BERRY
+    .2byte ITEM_COBA_BERRY
+    .2byte ITEM_PAYAPA_BERRY
+    .2byte ITEM_TANGA_BERRY
+    .2byte ITEM_CHARTI_BERRY
+    .2byte ITEM_KASIB_BERRY
+    .2byte ITEM_HABAN_BERRY
+    .2byte ITEM_COLBUR_BERRY
+    .2byte ITEM_BABIRI_BERRY
+    .2byte ITEM_CHILAN_BERRY
+    .2byte ITEM_ENIGMA_RESIST_BERRY
 	.2byte ITEM_NONE
 	release
 	end

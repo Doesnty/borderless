@@ -22,7 +22,7 @@ void MENewsJisan_SetRandomReward(u32 a0)
         break;
     case 1:
     case 2:
-        r5->berry = (Random() % 15) + ITEM_TO_BERRY(ITEM_RAZZ_BERRY);
+        r5->berry = (Random() % 15) + ITEM_TO_BERRY(ITEM_CHERI_BERRY);
         break;
     case 3:
         r5->berry = (Random() % 15) + ITEM_TO_BERRY(ITEM_CHERI_BERRY);

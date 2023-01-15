@@ -745,3 +745,54 @@ const u32 gFile_graphics_items_icon_palettes_yata_mirror_palette[] = INCBIN_U32(
 
 const u32 gFile_graphics_items_icons_stone_baby_sheet[] = INCBIN_U32("graphics/items/icons/stone_baby.4bpp.lz");
 const u32 gFile_graphics_items_icon_palettes_stone_baby_palette[] = INCBIN_U32("graphics/items/icon_palettes/stone_baby.gbapal.lz");
+
+const u32 gFile_graphics_items_icons_occa_berry_sheet[] = INCBIN_U32("graphics/items/icons/occa_berry.4bpp.lz");
+const u32 gFile_graphics_items_icon_palettes_occa_berry_palette[] = INCBIN_U32("graphics/items/icon_palettes/occa_berry.gbapal.lz");
+
+const u32 gFile_graphics_items_icons_passho_berry_sheet[] = INCBIN_U32("graphics/items/icons/passho_berry.4bpp.lz");
+const u32 gFile_graphics_items_icon_palettes_passho_berry_palette[] = INCBIN_U32("graphics/items/icon_palettes/passho_berry.gbapal.lz");
+
+const u32 gFile_graphics_items_icons_wacan_berry_sheet[] = INCBIN_U32("graphics/items/icons/wacan_berry.4bpp.lz");
+const u32 gFile_graphics_items_icon_palettes_wacan_berry_palette[] = INCBIN_U32("graphics/items/icon_palettes/wacan_berry.gbapal.lz");
+
+const u32 gFile_graphics_items_icons_rindo_berry_sheet[] = INCBIN_U32("graphics/items/icons/rindo_berry.4bpp.lz");
+const u32 gFile_graphics_items_icon_palettes_rindo_berry_palette[] = INCBIN_U32("graphics/items/icon_palettes/rindo_berry.gbapal.lz");
+
+const u32 gFile_graphics_items_icons_yache_berry_sheet[] = INCBIN_U32("graphics/items/icons/yache_berry.4bpp.lz");
+const u32 gFile_graphics_items_icon_palettes_yache_berry_palette[] = INCBIN_U32("graphics/items/icon_palettes/yache_berry.gbapal.lz");
+
+const u32 gFile_graphics_items_icons_chople_berry_sheet[] = INCBIN_U32("graphics/items/icons/chople_berry.4bpp.lz");
+const u32 gFile_graphics_items_icon_palettes_chople_berry_palette[] = INCBIN_U32("graphics/items/icon_palettes/chople_berry.gbapal.lz");
+
+const u32 gFile_graphics_items_icons_kebia_berry_sheet[] = INCBIN_U32("graphics/items/icons/kebia_berry.4bpp.lz");
+const u32 gFile_graphics_items_icon_palettes_kebia_berry_palette[] = INCBIN_U32("graphics/items/icon_palettes/kebia_berry.gbapal.lz");
+
+const u32 gFile_graphics_items_icons_shuca_berry_sheet[] = INCBIN_U32("graphics/items/icons/shuca_berry.4bpp.lz");
+const u32 gFile_graphics_items_icon_palettes_shuca_berry_palette[] = INCBIN_U32("graphics/items/icon_palettes/shuca_berry.gbapal.lz");
+
+const u32 gFile_graphics_items_icons_coba_berry_sheet[] = INCBIN_U32("graphics/items/icons/coba_berry.4bpp.lz");
+const u32 gFile_graphics_items_icon_palettes_coba_berry_palette[] = INCBIN_U32("graphics/items/icon_palettes/coba_berry.gbapal.lz");
+
+const u32 gFile_graphics_items_icons_payapa_berry_sheet[] = INCBIN_U32("graphics/items/icons/payapa_berry.4bpp.lz");
+const u32 gFile_graphics_items_icon_palettes_payapa_berry_palette[] = INCBIN_U32("graphics/items/icon_palettes/payapa_berry.gbapal.lz");
+
+const u32 gFile_graphics_items_icons_tanga_berry_sheet[] = INCBIN_U32("graphics/items/icons/tanga_berry.4bpp.lz");
+const u32 gFile_graphics_items_icon_palettes_tanga_berry_palette[] = INCBIN_U32("graphics/items/icon_palettes/tanga_berry.gbapal.lz");
+
+const u32 gFile_graphics_items_icons_charti_berry_sheet[] = INCBIN_U32("graphics/items/icons/charti_berry.4bpp.lz");
+const u32 gFile_graphics_items_icon_palettes_charti_berry_palette[] = INCBIN_U32("graphics/items/icon_palettes/charti_berry.gbapal.lz");
+
+const u32 gFile_graphics_items_icons_kasib_berry_sheet[] = INCBIN_U32("graphics/items/icons/kasib_berry.4bpp.lz");
+const u32 gFile_graphics_items_icon_palettes_kasib_berry_palette[] = INCBIN_U32("graphics/items/icon_palettes/kasib_berry.gbapal.lz");
+
+const u32 gFile_graphics_items_icons_haban_berry_sheet[] = INCBIN_U32("graphics/items/icons/haban_berry.4bpp.lz");
+const u32 gFile_graphics_items_icon_palettes_haban_berry_palette[] = INCBIN_U32("graphics/items/icon_palettes/haban_berry.gbapal.lz");
+
+const u32 gFile_graphics_items_icons_colbur_berry_sheet[] = INCBIN_U32("graphics/items/icons/colbur_berry.4bpp.lz");
+const u32 gFile_graphics_items_icon_palettes_colbur_berry_palette[] = INCBIN_U32("graphics/items/icon_palettes/colbur_berry.gbapal.lz");
+
+const u32 gFile_graphics_items_icons_babiri_berry_sheet[] = INCBIN_U32("graphics/items/icons/babiri_berry.4bpp.lz");
+const u32 gFile_graphics_items_icon_palettes_babiri_berry_palette[] = INCBIN_U32("graphics/items/icon_palettes/babiri_berry.gbapal.lz");
+
+const u32 gFile_graphics_items_icons_chilan_berry_sheet[] = INCBIN_U32("graphics/items/icons/chilan_berry.4bpp.lz");
+const u32 gFile_graphics_items_icon_palettes_chilan_berry_palette[] = INCBIN_U32("graphics/items/icon_palettes/chilan_berry.gbapal.lz");

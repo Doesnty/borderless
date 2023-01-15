@@ -36,7 +36,7 @@ static const u8 sItemEffect_MaxPotion[7] = {
 
 static const u8 sItemEffect_HyperPotion[7] = {
     [4] = ITEM4_HEAL_HP,
-    [6] = 200,
+    [6] = 120,
 };
 
 static const u8 sItemEffect_SuperPotion[7] = {

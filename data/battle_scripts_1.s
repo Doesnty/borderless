@@ -5576,3 +5576,10 @@ BattleScript_MoodSwingCantRaiseMultipleStats:
 	attackstring
 	ppreduce
 	goto BattleScript_CantRaiseMultipleStats
+
+BattleScript_UseResistBerry::
+	playanimation BS_TARGET, B_ANIM_ITEM_EFFECT, NULL
+    printstring STRINGID_RESISTBERRY
+    waitmessage 64
+	removeitem BS_TARGET
+    return

@@ -832,11 +832,11 @@ static const struct PickupItem sPickupItems[] =
     { ITEM_PP_UP, 85 },
     { ITEM_RARE_CANDY, 90 },
     { ITEM_NUGGET, 95 },
-    { ITEM_SPELON_BERRY, 96 },
-    { ITEM_PAMTRE_BERRY, 97 },
-    { ITEM_WATMEL_BERRY, 98 },
-    { ITEM_DURIN_BERRY, 99 },
-    { ITEM_BELUE_BERRY, 1 },
+    { ITEM_LIECHI_BERRY, 96 },
+    { ITEM_GANLON_BERRY, 97 },
+    { ITEM_PETAYA_BERRY, 98 },
+    { ITEM_APICOT_BERRY, 99 },
+    { ITEM_SALAC_BERRY, 1 },
 
 };
 
@@ -1345,6 +1345,7 @@ static void ModulateDmgByType2(u8 multiplier, u16 move, u16 *flags);
 static void atk06_typecalc(void)
 {
     u8 defenderAbility;
+    u16 defenderItem;
     s32 i = 0;
     u8 moveType;
     
@@ -1352,6 +1353,9 @@ static void atk06_typecalc(void)
     if (gBattleMons[gBattlerAttacker].ability == ABILITY_MOLD_BREAKER
         || gBattleMons[gBattlerAttacker].ability == ABILITY_PURE_FURIES)
         defenderAbility = ABILITY_NONE;
+    defenderItem = gBattleMons[gBattlerTarget].item;
+    if (defenderAbility == ABILITY_KLUTZ)
+        defenderItem = 0;
 
     if (gCurrentMove == MOVE_STRUGGLE)
     {
@@ -1393,7 +1397,25 @@ static void atk06_typecalc(void)
     }
     if (gMoveResultFlags & MOVE_RESULT_DOESNT_AFFECT_FOE)
         gProtectStructs[gBattlerAttacker].targetNotAffected = 1;
-    ++gBattlescriptCurrInstr;
+    
+    if (((gMoveResultFlags & MOVE_RESULT_SUPER_EFFECTIVE) || moveType == TYPE_NORMAL || moveType == TYPE_ILLUSION) &&
+        ItemId_GetHoldEffect(defenderItem) == HOLD_EFFECT_RESIST_BERRY &&
+        ItemId_GetHoldEffectParam(defenderItem) == moveType &&
+        gBattleMoveDamage > 0 &&
+        (!(gBattleMons[gBattlerTarget].status2 & STATUS2_SUBSTITUTE) || gHitMarker & HITMARKER_IGNORE_SUBSTITUTE) &&
+        !AbilityBattleEffects(ABILITYEFFECT_CHECK_OTHER_SIDE, gBattlerTarget, ABILITY_UNNERVE, 0, 0))
+    {
+        gBattleMoveDamage /= 2;
+        
+        gBattlescriptCurrInstr++;
+        BattleScriptPushCursor();
+        gBattlescriptCurrInstr = BattleScript_UseResistBerry;
+        gLastUsedItem = gBattleMons[gBattlerTarget].item;
+    }
+    else
+    {
+        ++gBattlescriptCurrInstr;
+    }
 }
 
 static void CheckWonderGuardAndLevitate(void)
@@ -9016,7 +9038,7 @@ static void atkEF_handleballthrow(void)
                 switch (gLastUsedItem)
                 {
                 case ITEM_NET_BALL:
-                    if (IS_BATTLER_OF_TYPE(gBattlerTarget, TYPE_WATER) || IS_BATTLER_OF_TYPE(gBattlerTarget, TYPE_BUG))
+                    if (IS_BATTLER_OF_TYPE(gBattlerTarget, TYPE_WATER) || IS_BATTLER_OF_TYPE(gBattlerTarget, TYPE_NATURE))
                         ballMultiplier = 30;
                     else
                         ballMultiplier = 10;
