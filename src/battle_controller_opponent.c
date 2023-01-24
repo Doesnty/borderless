@@ -709,7 +709,7 @@ static u32 GetOpponentMonData(u8 monId, u8 *dst)
         size = 2;
         break;
     case REQUEST_COOL_BATTLE:
-        dst[0] = GetMonData(&gEnemyParty[monId], MON_DATA_COOL);
+        dst[0] = 0;
         size = 1;
         break;
     case REQUEST_BEAUTY_BATTLE:
@@ -972,7 +972,6 @@ static void SetOpponentMonData(u8 monId)
         SetMonData(&gEnemyParty[monId], MON_DATA_SPDEF, &gBattleBufferA[gActiveBattler][3]);
         break;
     case REQUEST_COOL_BATTLE:
-        SetMonData(&gEnemyParty[monId], MON_DATA_COOL, &gBattleBufferA[gActiveBattler][3]);
         break;
     case REQUEST_BEAUTY_BATTLE:
         SetMonData(&gEnemyParty[monId], MON_DATA_BEAUTY, &gBattleBufferA[gActiveBattler][3]);
@@ -1139,7 +1138,7 @@ static void OpponentHandleDrawTrainerPic(void)
                                                      (8 - gTrainerFrontPicCoords[trainerPicId].size) * 4 + 40,
                                                      GetBattlerSpriteSubpriority(gActiveBattler));
     gSprites[gBattlerSpriteIds[gActiveBattler]].x2 = -240;
-    gSprites[gBattlerSpriteIds[gActiveBattler]].data[0] = 2;
+    gSprites[gBattlerSpriteIds[gActiveBattler]].data[0] = 3;
     gSprites[gBattlerSpriteIds[gActiveBattler]].oam.paletteNum = IndexOfSpritePaletteTag(gTrainerFrontPicPaletteTable[trainerPicId].tag);
     gSprites[gBattlerSpriteIds[gActiveBattler]].data[5] = gSprites[gBattlerSpriteIds[gActiveBattler]].oam.tileNum;
     gSprites[gBattlerSpriteIds[gActiveBattler]].oam.tileNum = GetSpriteTileStartByTag(gTrainerFrontPicTable[trainerPicId].tag);

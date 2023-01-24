@@ -230,6 +230,7 @@ extern const u8 gText_WhatWillPkmnDo[];
 
 // battle_script_commands
 extern const u8 gText_BattleYesNoChoice[];
+extern const u8 gText_BattleNoNoChoice[];
 
 // battle_controller_oak_old_man
 extern const u8 gText_ForPetesSake[];

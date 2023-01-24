@@ -1780,7 +1780,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
 
     [MOVE_MANA_SHIELD] = 
     {
-        .effect = EFFECT_TRAP,
+        .effect = EFFECT_SPECIAL_DEFENSE_UP,
         .power = 0,
         .type = TYPE_REASON,
         .moveClass = CLASS_STATUS,

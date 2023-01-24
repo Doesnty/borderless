@@ -15,14 +15,6 @@ MtMoon_B2F_EventScript_ShowFossils:: @ 81606A9
 	clearflag FLAG_HIDE_HELIX_FOSSIL
 	return
 
-MtMoon_B2F_EventScript_MiguelTrigger:: @ 81606B0
-	lockall
-	applymovement LOCALID_MIGUEL, Movement_WalkInPlaceFastestRight
-	waitmovement 0
-	call MtMoon_B2F_EventScript_BattleMiguel
-	releaseall
-	end
-
 MtMoon_B2F_EventScript_Miguel:: @ 81606C2
 	lock
 	faceplayer
@@ -140,3 +132,118 @@ MtMoon_B2F_EventScript_Grunt4:: @ 8160829
 	trainerbattle_single TRAINER_TEAM_ROCKET_GRUNT_4, MtMoon_B2F_Text_Grunt4Intro, MtMoon_B2F_Text_Grunt4Defeat
 	msgbox MtMoon_B2F_Text_Grunt4PostBattle, MSGBOX_AUTOCLOSE
 	end
+
+MtMoon_B2F_EventScript_MiguelTrigger1::
+	lockall
+	applymovement LOCALID_MIGUEL, MtMoon_B2F_Movement_ImakuniLookAround
+	waitmovement 0
+	playse SE_PIN
+    applymovement LOCALID_MIGUEL, Movement_ExclamationMark
+    waitmovement 0
+    applymovement LOCALID_MIGUEL, MtMoon_B2F_Movement_ImakuniWalkToPlayer1
+    waitmovement 0
+    goto MtMoon_B2F_EventScript_ImakuniEncounter
+
+MtMoon_B2F_EventScript_MiguelTrigger2::
+	lockall
+	applymovement LOCALID_MIGUEL, MtMoon_B2F_Movement_ImakuniLookAround
+	waitmovement 0
+	playse SE_PIN
+    applymovement LOCALID_MIGUEL, Movement_ExclamationMark
+    waitmovement 0
+    applymovement LOCALID_MIGUEL, MtMoon_B2F_Movement_ImakuniWalkToPlayer2
+    waitmovement 0
+    goto MtMoon_B2F_EventScript_ImakuniEncounter
+
+MtMoon_B2F_EventScript_MiguelTrigger3::
+	lockall
+	applymovement LOCALID_MIGUEL, MtMoon_B2F_Movement_ImakuniLookAround
+	waitmovement 0
+	playse SE_PIN
+    applymovement LOCALID_MIGUEL, Movement_ExclamationMark
+    waitmovement 0
+    applymovement LOCALID_MIGUEL, MtMoon_B2F_Movement_ImakuniWalkToPlayer3
+    waitmovement 0
+    goto MtMoon_B2F_EventScript_ImakuniEncounter
+
+MtMoon_B2F_EventScript_MiguelTrigger4::
+	lockall
+	applymovement LOCALID_MIGUEL, MtMoon_B2F_Movement_ImakuniLookAround
+	waitmovement 0
+	playse SE_PIN
+    applymovement LOCALID_MIGUEL, Movement_ExclamationMark
+    waitmovement 0
+    applymovement LOCALID_MIGUEL, MtMoon_B2F_Movement_ImakuniWalkToPlayer4
+    waitmovement 0
+    goto MtMoon_B2F_EventScript_ImakuniEncounter
+    
+MtMoon_B2F_EventScript_ImakuniEncounter::
+	textcolor 0
+	message MtMoon_B2F_Text_ImakuniIntro2
+	waitmessage
+	waitbuttonpress
+	setvar VAR_LAST_TALKED, LOCALID_MIGUEL
+	trainerbattle_no_intro TRAINER_SUPER_NERD_MIGUEL, MtMoon_B2F_Text_ImakuniLoss
+	msgbox MtMoon_B2F_Text_ImakuniPostFight
+    closemessage
+    applymovement LOCALID_MIGUEL, MtMoon_B2F_Movement_ImakuniLeave
+    waitmovement 0
+    setflag FLAG_GOT_FOSSIL_FROM_MT_MOON
+    setflag FLAG_HIDE_DOME_FOSSIL
+    setflag FLAG_HIDE_HELIX_FOSSIL
+	removeobject LOCALID_MIGUEL
+	setvar VAR_MAP_SCENE_MT_MOON_B2F, 1
+    end
+
+MtMoon_B2F_Movement_ImakuniLookAround::
+	walk_in_place_fast_down
+	walk_in_place_fast_left
+	walk_in_place_fast_up
+	walk_in_place_fast_right
+	walk_in_place_fast_down
+	walk_in_place_fast_left
+	walk_in_place_fast_up
+	walk_in_place_fast_right
+	walk_in_place_fast_down
+	walk_in_place_fast_left
+	walk_in_place_fast_up
+	walk_in_place_fast_right
+	step_end
+
+MtMoon_B2F_Movement_ImakuniWalkToPlayer1::
+	walk_right
+    walk_right
+    walk_up
+    walk_up
+    face_right
+	step_end
+
+MtMoon_B2F_Movement_ImakuniWalkToPlayer2::
+	walk_right
+    walk_right
+    walk_up
+    face_right
+	step_end
+
+MtMoon_B2F_Movement_ImakuniWalkToPlayer3::
+	walk_right
+    walk_right
+    face_right
+	step_end
+
+MtMoon_B2F_Movement_ImakuniWalkToPlayer4::
+	walk_right
+    walk_right
+    walk_down
+    face_right
+	step_end
+
+MtMoon_B2F_Movement_ImakuniLeave::
+    walk_left
+    walk_left
+    walk_left
+    walk_left
+    walk_left
+    walk_left
+    walk_left
+    step_end

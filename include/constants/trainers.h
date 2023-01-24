@@ -166,6 +166,7 @@
 #define TRAINER_PIC_RUIN_MANIAC           145
 #define TRAINER_PIC_LADY                  146
 #define TRAINER_PIC_PAINTER               147
+#define TRAINER_PIC_IMAKUNI               148
 
 // Leftover from R/S
 #define TRAINER_SECRET_BASE                 1024
@@ -277,6 +278,7 @@
 #define TRAINER_CLASS_RUIN_MANIAC         104
 #define TRAINER_CLASS_LADY                105
 #define TRAINER_CLASS_PAINTER             106
+#define TRAINER_CLASS_STRANGER            107
 
 #define FACILITY_CLASS_AQUA_LEADER_ARCHIE     0
 #define FACILITY_CLASS_AQUA_GRUNT_M           1

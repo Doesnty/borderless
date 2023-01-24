@@ -998,7 +998,7 @@ static u32 CopyPokedudeMonData(u8 monId, u8 *dst)
         size = 2;
         break;
     case REQUEST_COOL_BATTLE:
-        dst[0] = GetMonData(mon, MON_DATA_COOL);
+        dst[0] = 0;
         size = 1;
         break;
     case REQUEST_BEAUTY_BATTLE:
@@ -1258,7 +1258,6 @@ static void SetPokedudeMonData(u8 monId)
         SetMonData(mon, MON_DATA_SPDEF, &gBattleBufferA[gActiveBattler][3]);
         break;
     case REQUEST_COOL_BATTLE:
-        SetMonData(mon, MON_DATA_COOL, &gBattleBufferA[gActiveBattler][3]);
         break;
     case REQUEST_BEAUTY_BATTLE:
         SetMonData(mon, MON_DATA_BEAUTY, &gBattleBufferA[gActiveBattler][3]);

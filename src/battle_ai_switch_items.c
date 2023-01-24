@@ -543,6 +543,12 @@ static u8 GetAI_ItemType(u8 itemId, const u8 *itemEffect) // NOTE: should take u
 {
     if (itemId == ITEM_FULL_RESTORE)
         return AI_ITEM_FULL_RESTORE;
+    else if (itemId == ITEM_POKEMON_CARD)
+        return AI_ITEM_POKEMON_CARD;
+    else if (itemId == ITEM_SLEEP_RAY)
+        return AI_ITEM_SLEEP_RAY;
+    else if (itemId == ITEM_FREEZE_RAY)
+        return AI_ITEM_FREEZE_RAY;
     else if (itemEffect[4] & ITEM4_HEAL_HP)
         return AI_ITEM_HEAL_HP;
     else if (itemEffect[3] & ITEM3_STATUS_ALL)
@@ -653,6 +659,12 @@ static bool8 ShouldUseItem(void)
         case AI_ITEM_GUARD_SPECS:
             battlerSide = GetBattlerSide(gActiveBattler);
             if (gDisableStructs[gActiveBattler].isFirstTurn && gSideTimers[battlerSide].mistTimer == 0)
+                shouldUse = TRUE;
+            break;
+        case AI_ITEM_POKEMON_CARD:
+            battlerSide = 0;
+            if (gSideTimers[battlerSide].safeguardTimer == 0 && gBattleMons[0].ability != ABILITY_OWN_TEMPO
+                && !(gBattleMons[0].status2 & STATUS2_CONFUSION))
                 shouldUse = TRUE;
             break;
         case AI_ITEM_NOT_RECOGNIZABLE:

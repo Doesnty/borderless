@@ -574,6 +574,7 @@ const struct TrainerMoney gTrainerMoneyTable[] =
     { TRAINER_CLASS_AQUA_ADMIN, 10 },
     { TRAINER_CLASS_AQUA_LEADER, 20 },
     { TRAINER_CLASS_BOSS, 25 },
+    { TRAINER_CLASS_STRANGER, 2 },
     { 0xFF, 5 },
 };
 
@@ -1635,7 +1636,7 @@ static u8 CreateNPCTrainerParty(struct Pokemon *party, u16 trainerNum)
                     personalityValue &= ~(0x80);
                 CreateMon(&party[i], partyData[i].species, level, fixedIV, TRUE, personalityValue, 1, 0);
 
-				//SetMonData(&party[i], MON_DATA_NATURE_OVERRIDE, &partyData[i].nature);
+				SetMonData(&party[i], MON_DATA_NATURE_OVERRIDE, &partyData[i].nature);
                 
 				ability = partyData[i].ability;
 				if (ability == 0 || ability == 1)
@@ -1916,7 +1917,7 @@ static void SpriteCB_MoveWildMonToRight(struct Sprite *sprite)
 {
     if ((gIntroSlideFlags & 1) == 0)
     {
-        sprite->x2 += 2;
+        sprite->x2 += 3;
         if (sprite->x2 == 0)
         {
             sprite->callback = SpriteCB_WildMonShowHealthbox;
@@ -4144,6 +4145,11 @@ static void HandleAction_UseItem(void)
     else if (GetBattlerSide(gBattlerAttacker) == B_SIDE_PLAYER)
     {
         gBattlescriptCurrInstr = gBattlescriptsForUsingItem[0];
+        if (gBattleTypeFlags & BATTLE_TYPE_IMAKUNI)
+        {
+            gBattleResources->battleHistory->itemsNo++;
+            gBattleResources->battleHistory->trainerItems[0] = ITEM_POKEMON_CARD;
+        }
     }
     else
     {

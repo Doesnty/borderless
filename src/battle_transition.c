@@ -675,7 +675,7 @@ static void BT_Phase1Task(u8 taskId)
     if (!gTasks[taskId].tState)
     {
         ++gTasks[taskId].tState;
-        BT_CreatePhase1SubTask(0, 0, 2, 2, 2);
+        BT_CreatePhase1SubTask(0, 0, 1, 2, 2);
     }
     else if (BT_IsPhase1Done())
     {

@@ -39,7 +39,7 @@ MtMoon_1F_EventScript_ItemEscapeRope:: @ 81BE603
 	end
 
 MtMoon_1F_EventScript_ItemMoonStone:: @ 81BE610
-	finditem ITEM_PP_UP
+	finditem ITEM_MOON_STONE
 	end
 
 MtMoon_B2F_EventScript_ItemStarPiece:: @ 81BE61D

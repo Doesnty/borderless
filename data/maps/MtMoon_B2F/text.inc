@@ -82,3 +82,35 @@ MtMoon_B2F_Text_ObtainedHelixFossil:: @ 8172EB2
 MtMoon_B2F_Text_ObtainedDomeFossil:: @ 8172ECD
     .string "Obtained the DOME FOSSIL!$"
 
+MtMoon_B2F_Text_ImakuniIntro::
+    .string "La di da di da....$"
+
+MtMoon_B2F_Text_ImakuniIntro2::
+    .string "Hey, hey!\n"
+    .string "Little miss!\p"
+    .string "Who is cuter, Pikachu or me?\p"
+    .string "... ...\n"
+    .string "... ...\p"
+    .string "... ...\n"
+    .string "... ...\p"
+    .string "What? What's the deal?\p"
+    .string "It's me, Imakuni?!\n"
+    .string "The friendly musician and pop star!\p"
+    .string "I'm just an innocent friend dressed\n"
+    .string "in all black in the mountains.\p"
+    .string "Here, I'll sing the Pokémon theme\n"
+    .string "to show you I'm a good guy.\p"
+    .string "3, 2, 1....$"
+
+MtMoon_B2F_Text_ImakuniLoss::
+    .string "Huh? I lost?\n"
+    .string "Don't tell anyone that I'd lose!$"
+
+MtMoon_B2F_Text_ImakuniPostFight::
+    .string "Well, that was refreshing!\p"
+    .string "Those were some strange Pokémon you\n"
+    .string "used, though. Very unusual.\p"
+    .string "Huh? Puppets? I have no\n"
+    .string "idea what you're talking about.\p"
+    .string "And anyway, I must get going.\n"
+    .string "I have more places to perform at!$"

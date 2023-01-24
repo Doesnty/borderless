@@ -2031,16 +2031,16 @@ const struct Trainer gTrainers[] = {
         .party = {.NoItemDefaultMoves = sParty_SuperNerdJovan}
     },
     [TRAINER_SUPER_NERD_MIGUEL] = {
-        .partyFlags = 0,
-        .trainerClass = TRAINER_CLASS_SUPER_NERD,
+        .partyFlags = F_TRAINER_PARTY_FULL_CONTROL,
+        .trainerClass = TRAINER_CLASS_STRANGER,
         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_SUSPICIOUS,
-        .trainerPic = TRAINER_PIC_SUPER_NERD,
-        .trainerName = _("MIGUEL"),
+        .trainerPic = TRAINER_PIC_IMAKUNI,
+        .trainerName = _("Imakuni?"),
         .items = {},
         .doubleBattle = FALSE,
         .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE,
         .partySize = NELEMS(sParty_SuperNerdMiguel),
-        .party = {.NoItemDefaultMoves = sParty_SuperNerdMiguel}
+        .party = {.FullControl = sParty_SuperNerdMiguel}
     },
     [TRAINER_SUPER_NERD_AIDAN] = {
         .partyFlags = F_TRAINER_PARTY_CUSTOM_MOVESET,
@@ -4959,7 +4959,7 @@ const struct Trainer gTrainers[] = {
         .party = {.ItemCustomMoves = sParty_EliteFourLance}
     },
     [TRAINER_LEADER_BROCK] = {
-        .partyFlags = F_TRAINER_PARTY_CUSTOM_MOVESET,
+        .partyFlags = F_TRAINER_PARTY_FULL_CONTROL,
         .trainerClass = TRAINER_CLASS_LEADER,
         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MALE,
         .trainerPic = TRAINER_PIC_LEADER_BROCK,
@@ -4968,7 +4968,7 @@ const struct Trainer gTrainers[] = {
         .doubleBattle = FALSE,
         .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_TRY_TO_FAINT | AI_SCRIPT_CHECK_VIABILITY,
         .partySize = NELEMS(sParty_LeaderBrock),
-        .party = {.NoItemCustomMoves = sParty_LeaderBrock}
+        .party = {.FullControl = sParty_LeaderBrock}
     },
     [TRAINER_LEADER_MISTY] = {
         .partyFlags = F_TRAINER_PARTY_CUSTOM_MOVESET,

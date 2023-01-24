@@ -108,7 +108,6 @@ void CreateInitialRoamerMon(void)
     ROAMER->ivs = GetMonData(mon, MON_DATA_IVS);
     ROAMER->personality = GetMonData(mon, MON_DATA_PERSONALITY);
     ROAMER->hp = GetMonData(mon, MON_DATA_MAX_HP);
-    ROAMER->cool = GetMonData(mon, MON_DATA_COOL);
     ROAMER->beauty = GetMonData(mon, MON_DATA_BEAUTY);
     ROAMER->cute = GetMonData(mon, MON_DATA_CUTE);
     ROAMER->smart = GetMonData(mon, MON_DATA_SMART);
@@ -211,14 +210,9 @@ void CreateRoamerMonInstance(void)
     CreateMonWithIVsPersonality(mon, ROAMER->species, ROAMER->level, ROAMER->ivs, ROAMER->personality);
 // The roamer's status field is u8, but SetMonData expects status to be u32, so will set the roamer's status
 // using the status field and the following 3 bytes (cool, beauty, and cute).
-#ifdef BUGFIX
     status = ROAMER->status;
     SetMonData(mon, MON_DATA_STATUS, &status);
-#else
-    SetMonData(mon, MON_DATA_STATUS, &ROAMER->status);
-#endif
     SetMonData(mon, MON_DATA_HP, &ROAMER->hp);
-    SetMonData(mon, MON_DATA_COOL, &ROAMER->cool);
     SetMonData(mon, MON_DATA_BEAUTY, &ROAMER->beauty);
     SetMonData(mon, MON_DATA_CUTE, &ROAMER->cute);
     SetMonData(mon, MON_DATA_SMART, &ROAMER->smart);

@@ -306,6 +306,7 @@ static void atkF5_removeattackerstatus1(void);
 static void atkF6_finishaction(void);
 static void atkF7_finishturn(void);
 static void atkF8_special(void);
+static void atkF9_nonobox(void);
 
 void (* const gBattleScriptingCommandsTable[])(void) =
 {
@@ -558,6 +559,7 @@ void (* const gBattleScriptingCommandsTable[])(void) =
     atkF6_finishaction,
     atkF7_finishturn,
     atkF8_special,
+    atkF9_nonobox,
 };
 
 struct StatFractions
@@ -873,6 +875,221 @@ static const u8 sMoldBreakerAbilities[] =
 	ABILITY_VITAL_SPIRIT,
 	ABILITY_WATER_VEIL,
 	0,
+};
+
+static const u32 sExperienceScalingFactors[] = 
+{
+	0,
+    0,
+    1,
+    3,
+    8,
+    13,
+    22,
+    32,
+    45,
+    60,
+    79,
+    100,
+    124,
+    152,
+    183,
+    217,
+    256,
+    297,
+    343,
+    393,
+    447,
+    505,
+    567,
+    634,
+    705,
+    781,
+    861,
+    946,
+    1037,
+    1132,
+    1232,
+    1337,
+    1448,
+    1563,
+    1685,
+    1811,
+    1944,
+    2081,
+    2225,
+    2374,
+    2529,
+    2690,
+    2858,
+    3031,
+    3210,
+    3396,
+    3587,
+    3786,
+    3990,
+    4201,
+    4419,
+    4643,
+    4874,
+    5112,
+    5357,
+    5608,
+    5866,
+    6132,
+    6404,
+    6684,
+    6971,
+    7265,
+    7566,
+    7875,
+    8192,
+    8515,
+    8847,
+    9186,
+    9532,
+    9886,
+    10249,
+    10619,
+    10996,
+    11382,
+    11776,
+    12178,
+    12588,
+    13006,
+    13433,
+    13867,
+    14310,
+    14762,
+    15222,
+    15690,
+    16167,
+    16652,
+    17146,
+    17649,
+    18161,
+    18681,
+    19210,
+    19748,
+    20295,
+    20851,
+    21417,
+    21991,
+    22574,
+    23166,
+    23768,
+    24379,
+    25000,
+    25629,
+    26268,
+    26917,
+    27575,
+    28243,
+    28920,
+    29607,
+    30303,
+    31010,
+    31726,
+    32452,
+    33188,
+    33934,
+    34689,
+    35455,
+    36231,
+    37017,
+    37813,
+    38619,
+    39436,
+    40262,
+    41099,
+    41947,
+    42804,
+    43673,
+    44551,
+    45441,
+    46340,
+    47251,
+    48172,
+    49104,
+    50046,
+    50999,
+    51963,
+    52938,
+    53924,
+    54921,
+    55929,
+    56947,
+    57977,
+    59018,
+    60070,
+    61133,
+    62208,
+    63293,
+    64390,
+    65498,
+    66618,
+    67749,
+    68891,
+    70045,
+    71211,
+    72388,
+    73576,
+    74777,
+    75989,
+    77212,
+    78448,
+    79695,
+    80954,
+    82225,
+    83507,
+    84802,
+    86109,
+    87427,
+    88758,
+    90101,
+    91456,
+    92823,
+    94202,
+    95593,
+    96997,
+    98413,
+    99841,
+    101282,
+    102735,
+    104201,
+    105679,
+    107169,
+    108672,
+    110188,
+    111716,
+    113257,
+    114811,
+    116377,
+    117956,
+    119548,
+    121153,
+    122770,
+    124401,
+    126044,
+    127700,
+    129369,
+    131052,
+    132747,
+    134456,
+    136177,
+    137912,
+    139660,
+    141421,
+    143195,
+    144983,
+    146784,
+    148598,
+    150426,
+    152267,
+    154122,
+    155990,
+    157872,
+    159767,
 };
 
 // not used
@@ -1246,8 +1463,9 @@ static void atk02_attackstring(void)
 
 static void atk04_critcalc(void)
 {
-    u8 holdEffect;
-    u16 item, critChance;
+    u8 holdEffect = HOLD_EFFECT_NONE;
+    u8 defHoldEffect = HOLD_EFFECT_NONE;
+    u16 item, defItem, critChance;
     u8 targetAbility = gBattleMons[gBattlerTarget].ability;
     u16 attackerSpecies = gBattleMons[gBattlerAttacker].species;
 
@@ -1255,10 +1473,15 @@ static void atk04_critcalc(void)
         gBattleMons[gBattlerAttacker].ability == ABILITY_PURE_FURIES)
         targetAbility = ABILITY_NONE;
     item = gBattleMons[gBattlerAttacker].item;
-    if (item == ITEM_ENIGMA_BERRY)
-        holdEffect = gEnigmaBerries[gBattlerAttacker].holdEffect;
-    else
-        holdEffect = ItemId_GetHoldEffect(item);
+    if (gBattleMons[gBattlerAttacker].ability == ABILITY_KLUTZ)
+        item = 0;
+    holdEffect = ItemId_GetHoldEffect(item);
+    
+    defItem = gBattleMons[gBattlerTarget].item;
+    if (gBattleMons[gBattlerTarget].ability == ABILITY_KLUTZ)
+        defItem = 0;
+    defHoldEffect = ItemId_GetHoldEffect(defItem);
+
     gPotentialItemEffectBattler = gBattlerAttacker;
     critChance = 0;
     if ((gBattleMons[gBattlerAttacker].status2 & STATUS2_FOCUS_ENERGY) != 0)
@@ -1280,6 +1503,8 @@ static void atk04_critcalc(void)
         critChance = NELEMS(sCriticalHitChance) - 1;
 
     if (targetAbility != ABILITY_GUARD_ARMOR
+     && !(holdEffect == HOLD_EFFECT_MOON_STONE)
+     && !(defHoldEffect == HOLD_EFFECT_MOON_STONE)
      && !(gStatuses3[gBattlerAttacker] & STATUS3_CANT_SCORE_A_CRIT)
      && !(gBattleTypeFlags & BATTLE_TYPE_OLD_MAN_TUTORIAL)
      && !(Random() % sCriticalHitChance[critChance])
@@ -3194,7 +3419,7 @@ static void atk23_getexp(void)
                         ++viaExpShare;
                 }
             }
-            calculatedExp = gBaseStats[gBattleMons[gBattlerFainted].species].expYield * gBattleMons[gBattlerFainted].level / 7;
+            calculatedExp = gBaseStats[gBattleMons[gBattlerFainted].species].expYield * gBattleMons[gBattlerFainted].level / 5;
             if (viaExpShare) // at least one mon is getting exp via exp share
             {
                 *exp = SAFE_DIV(calculatedExp / 2, viaSentIn);
@@ -3249,20 +3474,31 @@ static void atk23_getexp(void)
                 }
                 if (GetMonData(&gPlayerParty[gBattleStruct->expGetterMonId], MON_DATA_HP))
                 {
+                    u8 enemyLevel = gBattleMons[gBattlerFainted].level;
+                    u8 playerLevel = GetMonData(&gPlayerParty[gBattleStruct->expGetterMonId], MON_DATA_LEVEL);
                     if (gBattleStruct->sentInPokes & 1)
                         gBattleMoveDamage = *exp;
                     else
                         gBattleMoveDamage = 0;
                     if (holdEffect == HOLD_EFFECT_EXP_SHARE)
                         gBattleMoveDamage += gExpShareExp;
+                    
+					gBattleMoveDamage *= sExperienceScalingFactors[(enemyLevel * 2) + 10];
+					gBattleMoveDamage /= sExperienceScalingFactors[(enemyLevel + playerLevel) + 10];
+                    if (enemyLevel > (playerLevel + 5))
+                    {
+                        gBattleMoveDamage *= 5 + (enemyLevel - playerLevel);
+                        gBattleMoveDamage /= 10;
+                    }
+                    
                     if (holdEffect == HOLD_EFFECT_LUCKY_EGG)
                         gBattleMoveDamage = (gBattleMoveDamage * 150) / 100;
-                    if (gBattleTypeFlags & BATTLE_TYPE_TRAINER)
-                        gBattleMoveDamage = (gBattleMoveDamage * 150) / 100;
+                    //if (gBattleTypeFlags & BATTLE_TYPE_TRAINER)
+                        //gBattleMoveDamage = (gBattleMoveDamage * 150) / 100;
                     if (IsTradedMon(&gPlayerParty[gBattleStruct->expGetterMonId])
                      && !(gBattleTypeFlags & BATTLE_TYPE_POKEDUDE))
                     {
-                        gBattleMoveDamage = (gBattleMoveDamage * 150) / 100;
+                        gBattleMoveDamage = (gBattleMoveDamage * 110) / 100;
                         i = STRINGID_ABOOSTED;
                     }
                     else
@@ -5251,6 +5487,10 @@ static void atk5D_getmoneyreward(void)
         {
             moneyReward = gBattleResources->secretBase->party.levels[0] * 20 * moneyMultiplier;
         }
+        else if (gBattleTypeFlags & BATTLE_TYPE_IMAKUNI)
+        {
+            moneyReward = 1 + (Random() % 9);
+        }
         else
         {
             switch (gTrainers[gTrainerBattleOpponent_A].partyFlags)
@@ -5281,6 +5521,14 @@ static void atk5D_getmoneyreward(void)
                     party4 = gTrainers[gTrainerBattleOpponent_A].party.ItemCustomMoves;
                     
                     lastMonLevel = party4[gTrainers[gTrainerBattleOpponent_A].partySize - 1].lvl;
+                }
+                break;
+            case (F_TRAINER_PARTY_FULL_CONTROL):
+                {
+                    const struct TrainerMonFullControl *party5 = gTrainers[gTrainerBattleOpponent_A].party.FullControl;
+                    party5 = gTrainers[gTrainerBattleOpponent_A].party.FullControl;
+                    
+                    lastMonLevel = party5[gTrainers[gTrainerBattleOpponent_A].partySize - 1].lvl;
                 }
                 break;
             }
@@ -9405,6 +9653,49 @@ static void atkF7_finishturn(void)
     gCurrentTurnActionNumber = gBattlersCount;
 }
 
+static void atkF9_nonobox(void)
+{
+    switch (gBattleCommunication[0])
+    {
+    case 0:
+        HandleBattleWindow(0x17, 8, 0x1D, 0xD, 0);
+        BattlePutTextOnWindow(gText_BattleNoNoChoice, 0xE);
+        ++gBattleCommunication[0];
+        gBattleCommunication[CURSOR_POSITION] = 0;
+        BattleCreateYesNoCursorAt();
+        break;
+    case 1:
+        if (JOY_NEW(DPAD_UP) && gBattleCommunication[CURSOR_POSITION] != 0)
+        {
+            PlaySE(SE_SELECT);
+            BattleDestroyYesNoCursorAt();
+            gBattleCommunication[CURSOR_POSITION] = 0;
+            BattleCreateYesNoCursorAt();
+        }
+        if (JOY_NEW(DPAD_DOWN) && gBattleCommunication[CURSOR_POSITION] == 0)
+        {
+            PlaySE(SE_SELECT);
+            BattleDestroyYesNoCursorAt();
+            gBattleCommunication[CURSOR_POSITION] = 1;
+            BattleCreateYesNoCursorAt();
+        }
+        if (JOY_NEW(B_BUTTON))
+        {
+            gBattleCommunication[CURSOR_POSITION] = 1;
+            PlaySE(SE_SELECT);
+            HandleBattleWindow(0x17, 8, 0x1D, 0xD, WINDOW_CLEAR);
+            ++gBattlescriptCurrInstr;
+        }
+        else if (JOY_NEW(A_BUTTON))
+        {
+            PlaySE(SE_SELECT);
+            HandleBattleWindow(0x17, 8, 0x1D, 0xD, WINDOW_CLEAR);
+            ++gBattlescriptCurrInstr;
+        }
+        break;
+    }
+}
+
 static void sp00_topsyturvy(void);
 static void sp01_suckerpunch(void);
 static void sp02_finalgambit(void);
@@ -9424,6 +9715,8 @@ static void sp0f_happyhour(void);
 static void sp10_mefirst(void);
 static void sp11_dotracedability(void);
 static void sp12_moodswing(void);
+static void sp13_preparecatchexp(void);
+static void sp14_confuseplayer(void);
 
 void (* const gBattleScriptingSpecialsTable[])(void) =
 {
@@ -9446,6 +9739,8 @@ void (* const gBattleScriptingSpecialsTable[])(void) =
     sp10_mefirst,
     sp11_dotracedability,
     sp12_moodswing,
+    sp13_preparecatchexp,
+    sp14_confuseplayer,
 };
 
 static void atkF8_special(void)
@@ -9954,4 +10249,18 @@ static void sp12_moodswing(void)
             break;
 		}
 	}
+}
+
+static void sp13_preparecatchexp(void)
+{
+    gBattleStruct->wildVictorySong++;
+    gActiveBattler = 1;
+    BtlController_EmitSpriteInvisibility(0, TRUE);
+    MarkBattlerForControllerExec(gActiveBattler);
+}
+
+static void sp14_confuseplayer(void)
+{
+    gEffectBattler = 0;
+    gBattleMons[gEffectBattler].status2 |= (((Random()) % 0x4)) + 2;
 }

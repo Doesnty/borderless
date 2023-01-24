@@ -352,5 +352,6 @@
 #define MUS_TRAINER_TOWER         344 // MUS_RG_T_TOWER
 #define MUS_SLOW_PALLET           345 // MUS_RG_SLOWMASARA
 #define MUS_TEACHY_TV_MENU        346 // MUS_RG_TVNOIZE
+#define MUS_VS_IMAKUNI            347
 
 #endif  // GUARD_CONSTANTS_SONGS_H

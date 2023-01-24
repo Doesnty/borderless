@@ -40,6 +40,9 @@ gBattlescriptsForUsingItem::
 	.4byte BattleScript_AIUseStatRestore
 	.4byte BattleScript_AIUseXstat
 	.4byte BattleScript_AIUseGuardSpec
+	.4byte BattleScript_AIUsePokemonCard
+	.4byte BattleScript_AIUseSleepRay
+	.4byte BattleScript_AIUseFreezeRay
 
 gBattlescriptsForRunningByItem::
 	.4byte BattleScript_UseFluffyTail
@@ -75,6 +78,11 @@ BattleScript_SuccessBallThrow::
 	incrementgamestat GAME_STAT_POKEMON_CAPTURES
 BattleScript_SafariNoIncGameStat::
 	printstring STRINGID_GOTCHAPKMNCAUGHT
+    
+    special 0x13
+	setbyte sGIVEEXP_STATE, 0
+	getexp BS_TARGET
+    
 	trysetcaughtmondexflags BattleScript_CaughtPokemonSkipNewDex
 	printstring STRINGID_PKMNDATAADDEDTODEX
 	waitstate
@@ -236,3 +244,30 @@ BattleScript_LeftoverWallyPrepToThrow::
 	printstring STRINGID_YOUTHROWABALLNOWRIGHT
 	waitmessage 64
 	end2
+
+
+BattleScript_AIUsePokemonCard::
+	printstring STRINGID_EMPTYSTRING3
+	pause 48
+	playse SE_USE_ITEM
+	printstring STRINGID_IMAKUNICARD1
+	waitmessage 64
+	printstring STRINGID_IMAKUNICARD2
+	waitmessage 64
+	printstring STRINGID_IMAKUNICARD3
+	waitmessage 64
+	printstring STRINGID_IMAKUNICARD4
+	waitmessage 64
+	printstring STRINGID_IMAKUNICARD5
+	waitmessage 64
+	printstring STRINGID_IMAKUNICARD6
+	waitmessage 64
+    special 0x14
+    call BattleScript_MoveEffectConfusion
+	finishaction
+
+BattleScript_AIUseSleepRay::
+
+BattleScript_AIUseFreezeRay::
+
+

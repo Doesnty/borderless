@@ -34,7 +34,7 @@ gBattleScriptsForMoveEffects::
 	.4byte BattleScript_EffectDefenseUp
 	.4byte BattleScript_EffectHit
 	.4byte BattleScript_EffectSpecialAttackUp
-	.4byte BattleScript_EffectHit
+	.4byte BattleScript_EffectSpecialDefenseUp
 	.4byte BattleScript_EffectHit
 	.4byte BattleScript_EffectEvasionUp
 	.4byte BattleScript_EffectHit
@@ -518,6 +518,10 @@ BattleScript_EffectDefenseUp::
 
 BattleScript_EffectSpecialAttackUp::
 	setstatchanger STAT_SPATK, 1, FALSE
+	goto BattleScript_EffectStatUp
+
+BattleScript_EffectSpecialDefenseUp::
+	setstatchanger STAT_SPDEF, 1, FALSE
 	goto BattleScript_EffectStatUp
 
 BattleScript_EffectEvasionUp::
@@ -2954,6 +2958,7 @@ BattleScript_FaintedMonTryChooseAnother::
 	jumpifword CMP_COMMON_BITS, gHitMarker, HITMARKER_PLAYER_FAINTED, BattleScript_FaintedMonChooseAnother
 	jumpifbyte CMP_EQUAL, sBATTLE_STYLE, 1, BattleScript_FaintedMonChooseAnother
 	jumpifcantswitch BS_PLAYER1, BattleScript_FaintedMonChooseAnother
+    jumpifbattletype BATTLE_TYPE_IMAKUNI, BattleScript_ImakuniShiftMode
 	printstring STRINGID_ENEMYABOUTTOSWITCHPKMN
 	setbyte gBattleCommunication, 0
 	yesnobox
@@ -2995,6 +3000,12 @@ BattleScript_FaintedMonChooseAnother::
 	cancelallactions
 BattleScript_FaintedMonEnd::
 	end2
+
+BattleScript_ImakuniShiftMode::
+	printstring STRINGID_IMAKUNIABOUTTOSWITCHPKMN
+	setbyte gBattleCommunication, 0
+	nonobox
+	goto BattleScript_FaintedMonChooseAnother
 
 BattleScript_LinkBattleHandleFaint::
 	openpartyscreen BS_UNKNOWN_5, BattleScript_LinkBattleHandleFaintStart
@@ -5583,3 +5594,12 @@ BattleScript_UseResistBerry::
     waitmessage 64
 	removeitem BS_TARGET
     return
+
+BattleScript_SolarPowerActivates::
+	printstring STRINGID_HURTBYSOLARPOWER
+	waitmessage 0x40
+	orword gHitMarker, HITMARKER_IGNORE_SUBSTITUTE
+	healthbarupdate BS_ATTACKER
+	datahpupdate BS_ATTACKER
+	tryfaintmon BS_ATTACKER, 0, NULL
+	end3

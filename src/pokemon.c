@@ -2472,8 +2472,8 @@ u32 GetBoxMonData(struct BoxPokemon *boxMon, s32 field, u8 *data)
     case MON_DATA_SPDEF_EV:
         retVal = substruct2->spDefenseEV;
         break;
-    case MON_DATA_COOL:
-        retVal = substruct2->cool;
+    case MON_DATA_NATURE_OVERRIDE:
+        retVal = substruct2->natureOverride;
         break;
     case MON_DATA_BEAUTY:
         retVal = substruct2->beauty;
@@ -2869,8 +2869,8 @@ void SetBoxMonData(struct BoxPokemon *boxMon, s32 field, const void *dataArg)
     case MON_DATA_SPDEF_EV:
         SET8(substruct2->spDefenseEV);
         break;
-    case MON_DATA_COOL:
-        SET8(substruct2->cool);
+    case MON_DATA_NATURE_OVERRIDE:
+        SET8(substruct2->natureOverride);
         break;
     case MON_DATA_BEAUTY:
         SET8(substruct2->beauty);
@@ -3587,6 +3587,11 @@ bool8 PokemonUseItemEffects(struct Pokemon *mon, u16 item, u8 partyIndex, u8 mov
                         case 0xFD:
                             data = gBattleScripting.field_23;
                             break;
+                        case 0xFC:
+                            data = GetMonData(mon, MON_DATA_MAX_HP, NULL) / 4;
+                            if (data == 0)
+                                data = 1;
+                            break;
                         }
                         if (GetMonData(mon, MON_DATA_MAX_HP, NULL) != GetMonData(mon, MON_DATA_HP, NULL))
                         {
@@ -4289,6 +4294,9 @@ const u8 *Battle_PrintStatBoosterEffectMessage(u16 itemId)
 
 u8 GetNature(struct Pokemon *mon)
 {
+    u8 natureOverride = GetMonData(mon, MON_DATA_NATURE_OVERRIDE, NULL);
+    if (natureOverride)
+        return natureOverride;
     return GetMonData(mon, MON_DATA_PERSONALITY, NULL) % 25;
 }
 
@@ -4961,6 +4969,9 @@ static u16 GetBattleBGM(void)
         case TRAINER_CLASS_LEADER:
         case TRAINER_CLASS_ELITE_FOUR:
             return MUS_VS_GYM_LEADER;
+        case TRAINER_CLASS_STRANGER:
+            gBattleTypeFlags |= BATTLE_TYPE_IMAKUNI;
+            return MUS_VS_IMAKUNI;
         case TRAINER_CLASS_BOSS:
         case TRAINER_CLASS_TEAM_ROCKET:
         case TRAINER_CLASS_COOLTRAINER:

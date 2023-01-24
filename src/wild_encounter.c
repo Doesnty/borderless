@@ -301,7 +301,8 @@ static u8 GetAbilityEncounterRateModType(void)
         u8 ability = GetMonAbility(&gPlayerParty[0]);
         if (ability == ABILITY_JEALOUSY)
             sWildEncounterData.abilityEffect = 1;
-        else if (ability == ABILITY_DIVA)
+        else if (ability == ABILITY_DIVA && !(gSaveBlock1Ptr->location.mapNum == MAP_NUM(ROUTE1) && 
+                                               gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(ROUTE1)))
             sWildEncounterData.abilityEffect = 2;
     }
     return sWildEncounterData.abilityEffect;

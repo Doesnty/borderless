@@ -715,7 +715,7 @@ static u32 CopyLinkOpponentMonData(u8 monId, u8 *dst)
         size = 2;
         break;
     case REQUEST_COOL_BATTLE:
-        dst[0] = GetMonData(&gEnemyParty[monId], MON_DATA_COOL);
+        dst[0] = 0;
         size = 1;
         break;
     case REQUEST_BEAUTY_BATTLE:
@@ -970,7 +970,6 @@ static void SetLinkOpponentMonData(u8 monId)
         SetMonData(&gEnemyParty[monId], MON_DATA_SPDEF, &gBattleBufferA[gActiveBattler][3]);
         break;
     case REQUEST_COOL_BATTLE:
-        SetMonData(&gEnemyParty[monId], MON_DATA_COOL, &gBattleBufferA[gActiveBattler][3]);
         break;
     case REQUEST_BEAUTY_BATTLE:
         SetMonData(&gEnemyParty[monId], MON_DATA_BEAUTY, &gBattleBufferA[gActiveBattler][3]);

@@ -2449,7 +2449,7 @@ static void CreateInGameTradePokemonInternal(u8 playerSlot, u8 inGameTradeIdx)
     SetMonData(tradeMon, MON_DATA_ABILITY_NUM, &inGameTrade->abilityNum);
     SetMonData(tradeMon, MON_DATA_BEAUTY, &inGameTrade->conditions[1]);
     SetMonData(tradeMon, MON_DATA_CUTE, &inGameTrade->conditions[2]);
-    SetMonData(tradeMon, MON_DATA_COOL, &inGameTrade->conditions[0]);
+    
     SetMonData(tradeMon, MON_DATA_SMART, &inGameTrade->conditions[3]);
     SetMonData(tradeMon, MON_DATA_TOUGH, &inGameTrade->conditions[4]);
     SetMonData(tradeMon, MON_DATA_SHEEN, &inGameTrade->sheen);

@@ -1892,7 +1892,8 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u8 ability, u8 special, u16 moveA
                     }
                     break;
                 case ABILITY_SOLAR_POWER:
-                    if (gBattleMons[battler].maxHP > gBattleMons[battler].hp)
+                    if (WEATHER_HAS_EFFECT && (gBattleWeather & WEATHER_SUN_ANY)
+                     && gBattleMons[battler].hp > 0)
                     {
                         BattleScriptPushCursorAndCallback(BattleScript_RainDishActivates);
                         gBattleMoveDamage = gBattleMons[battler].maxHP / 8;
@@ -3081,6 +3082,17 @@ u8 ItemBattleEffects(u8 caseID, u8 battlerId, bool8 moveTurn)
                     effect = 4;
                 }
                 break;
+            case HOLD_EFFECT_SITRUS:
+                if (gBattleMons[battlerId].hp <= gBattleMons[battlerId].maxHP / 2 && !moveTurn)
+                {
+                    gBattleMoveDamage = gBattleMons[battlerId].maxHP / 4;
+                    if (gBattleMons[battlerId].hp + gBattleMoveDamage > gBattleMons[battlerId].maxHP)
+                        gBattleMoveDamage = gBattleMons[battlerId].maxHP - gBattleMons[battlerId].hp;
+                    gBattleMoveDamage *= -1;
+                    BattleScriptExecute(BattleScript_ItemHealHP_RemoveItem);
+                    effect = 4;
+                }
+                break;
             case HOLD_EFFECT_RESTORE_PP:
                 if (!moveTurn)
                 {
@@ -3156,7 +3168,8 @@ u8 ItemBattleEffects(u8 caseID, u8 battlerId, bool8 moveTurn)
                     if (gBattleMons[battlerId].hp + gBattleMoveDamage > gBattleMons[battlerId].maxHP)
                         gBattleMoveDamage = gBattleMons[battlerId].maxHP - gBattleMons[battlerId].hp;
                     gBattleMoveDamage *= -1;
-                    if (GetFlavorRelationByPersonality(gBattleMons[battlerId].personality, FLAVOR_SPICY) < 0)
+                    if (GetFlavorRelationByPersonality(gBattleMons[battlerId].personality, FLAVOR_SPICY) < 0
+                        || (gBattleTypeFlags & BATTLE_TYPE_IMAKUNI && battlerId == 1))
                         BattleScriptExecute(BattleScript_BerryConfuseHealEnd2);
                     else
                         BattleScriptExecute(BattleScript_ItemHealHP_RemoveItem);
@@ -3173,7 +3186,8 @@ u8 ItemBattleEffects(u8 caseID, u8 battlerId, bool8 moveTurn)
                     if (gBattleMons[battlerId].hp + gBattleMoveDamage > gBattleMons[battlerId].maxHP)
                         gBattleMoveDamage = gBattleMons[battlerId].maxHP - gBattleMons[battlerId].hp;
                     gBattleMoveDamage *= -1;
-                    if (GetFlavorRelationByPersonality(gBattleMons[battlerId].personality, FLAVOR_DRY) < 0)
+                    if (GetFlavorRelationByPersonality(gBattleMons[battlerId].personality, FLAVOR_DRY) < 0
+                        || (gBattleTypeFlags & BATTLE_TYPE_IMAKUNI && battlerId == 1))
                         BattleScriptExecute(BattleScript_BerryConfuseHealEnd2);
                     else
                         BattleScriptExecute(BattleScript_ItemHealHP_RemoveItem);
@@ -3190,7 +3204,8 @@ u8 ItemBattleEffects(u8 caseID, u8 battlerId, bool8 moveTurn)
                     if (gBattleMons[battlerId].hp + gBattleMoveDamage > gBattleMons[battlerId].maxHP)
                         gBattleMoveDamage = gBattleMons[battlerId].maxHP - gBattleMons[battlerId].hp;
                     gBattleMoveDamage *= -1;
-                    if (GetFlavorRelationByPersonality(gBattleMons[battlerId].personality, FLAVOR_SWEET) < 0)
+                    if (GetFlavorRelationByPersonality(gBattleMons[battlerId].personality, FLAVOR_SWEET) < 0
+                        || (gBattleTypeFlags & BATTLE_TYPE_IMAKUNI && battlerId == 1))
                         BattleScriptExecute(BattleScript_BerryConfuseHealEnd2);
                     else
                         BattleScriptExecute(BattleScript_ItemHealHP_RemoveItem);
@@ -3207,7 +3222,8 @@ u8 ItemBattleEffects(u8 caseID, u8 battlerId, bool8 moveTurn)
                     if (gBattleMons[battlerId].hp + gBattleMoveDamage > gBattleMons[battlerId].maxHP)
                         gBattleMoveDamage = gBattleMons[battlerId].maxHP - gBattleMons[battlerId].hp;
                     gBattleMoveDamage *= -1;
-                    if (GetFlavorRelationByPersonality(gBattleMons[battlerId].personality, FLAVOR_BITTER) < 0)
+                    if (GetFlavorRelationByPersonality(gBattleMons[battlerId].personality, FLAVOR_BITTER) < 0
+                        || (gBattleTypeFlags & BATTLE_TYPE_IMAKUNI && battlerId == 1))
                         BattleScriptExecute(BattleScript_BerryConfuseHealEnd2);
                     else
                         BattleScriptExecute(BattleScript_ItemHealHP_RemoveItem);
@@ -3224,7 +3240,8 @@ u8 ItemBattleEffects(u8 caseID, u8 battlerId, bool8 moveTurn)
                     if (gBattleMons[battlerId].hp + gBattleMoveDamage > gBattleMons[battlerId].maxHP)
                         gBattleMoveDamage = gBattleMons[battlerId].maxHP - gBattleMons[battlerId].hp;
                     gBattleMoveDamage *= -1;
-                    if (GetFlavorRelationByPersonality(gBattleMons[battlerId].personality, FLAVOR_SOUR) < 0)
+                    if (GetFlavorRelationByPersonality(gBattleMons[battlerId].personality, FLAVOR_SOUR) < 0
+                        || (gBattleTypeFlags & BATTLE_TYPE_IMAKUNI && battlerId == 1))
                         BattleScriptExecute(BattleScript_BerryConfuseHealEnd2);
                     else
                         BattleScriptExecute(BattleScript_ItemHealHP_RemoveItem);

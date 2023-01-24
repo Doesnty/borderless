@@ -72,7 +72,7 @@
       "x": 16,
       "y": 15,
       "elevation": 3,
-      "item": "ITEM_WEPEAR_BERRY",
+      "item": "ITEM_SITRUS_BERRY",
       "flag": "HIDDEN_ITEM_ROUTE7_WEPEAR_BERRY",
       "quantity": 1,
       "underfoot": false

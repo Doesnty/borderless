@@ -265,7 +265,7 @@
       "x": 20,
       "y": 57,
       "elevation": 3,
-      "item": "ITEM_NANAB_BERRY",
+      "item": "ITEM_SITRUS_BERRY",
       "flag": "HIDDEN_ITEM_ROUTE10_NANAB_BERRY",
       "quantity": 1,
       "underfoot": false

@@ -3196,7 +3196,7 @@ static void Task_SlideSelectedSlotsOffscreen(u8 taskId)
     slidingSlotPositions[0] = tSlot1Left + tSlot1Offset;
     slidingSlotPositions[1] = tSlot2Left + tSlot2Offset;
     // Both slots have slid offscreen
-    if (slidingSlotPositions[0] > 33 && slidingSlotPositions[1] > 33)
+    if ((tSlot1Offset > 16 || tSlot1Offset < -16) && (tSlot2Offset > 16 || tSlot2Offset < -16))
     {
         tSlot1SlideDir *= -1;
         tSlot2SlideDir *= -1;

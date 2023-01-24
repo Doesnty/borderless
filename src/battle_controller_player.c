@@ -1767,7 +1767,7 @@ static u32 CopyPlayerMonData(u8 monId, u8 *dst)
         size = 2;
         break;
     case REQUEST_COOL_BATTLE:
-        dst[0] = GetMonData(&gPlayerParty[monId], MON_DATA_COOL);
+        dst[0] = 0;
         size = 1;
         break;
     case REQUEST_BEAUTY_BATTLE:
@@ -2031,7 +2031,7 @@ static void SetPlayerMonData(u8 monId)
         SetMonData(&gPlayerParty[monId], MON_DATA_SPDEF, &gBattleBufferA[gActiveBattler][3]);
         break;
     case REQUEST_COOL_BATTLE:
-        SetMonData(&gPlayerParty[monId], MON_DATA_COOL, &gBattleBufferA[gActiveBattler][3]);
+        //SetMonData(&gPlayerParty[monId], MON_DATA_COOL, &gBattleBufferA[gActiveBattler][3]);
         break;
     case REQUEST_BEAUTY_BATTLE:
         SetMonData(&gPlayerParty[monId], MON_DATA_BEAUTY, &gBattleBufferA[gActiveBattler][3]);
@@ -2192,7 +2192,7 @@ static void PlayerHandleDrawTrainerPic(void)
                                                      GetBattlerSpriteSubpriority(gActiveBattler));
     gSprites[gBattlerSpriteIds[gActiveBattler]].oam.paletteNum = gActiveBattler;
     gSprites[gBattlerSpriteIds[gActiveBattler]].x2 = 240;
-    gSprites[gBattlerSpriteIds[gActiveBattler]].data[0] = -2;
+    gSprites[gBattlerSpriteIds[gActiveBattler]].data[0] = -3;
     gSprites[gBattlerSpriteIds[gActiveBattler]].callback = SpriteCB_TrainerSlideIn;
     gBattlerControllerFuncs[gActiveBattler] = CompleteOnBattlerSpriteCallbackDummy;
 }

@@ -348,7 +348,7 @@ static const u8 sItemEffect_LumBerry[6] = {
 
 static const u8 sItemEffect_SitrusBerry[7] = {
     [4] = ITEM4_HEAL_HP,
-    [6] = 30,
+    [6] = 252,
 };
 
 const u8 *const gItemEffectTable[] =
@@ -420,5 +420,9 @@ const u8 *const gItemEffectTable[] =
     [ITEM_PERSIM_BERRY - ITEM_POTION] = sItemEffect_PersimBerry,
     [ITEM_LUM_BERRY - ITEM_POTION] = sItemEffect_LumBerry,
     [ITEM_SITRUS_BERRY - ITEM_POTION] = sItemEffect_SitrusBerry,
+    
+    [ITEM_POKEMON_CARD - ITEM_POTION] = sItemEffect_Potion,
+    [ITEM_SLEEP_RAY - ITEM_POTION] = sItemEffect_Potion,
+    [ITEM_FREEZE_RAY - ITEM_POTION] = sItemEffect_Potion,
     [LAST_BERRY_INDEX - ITEM_POTION] = NULL,
 };

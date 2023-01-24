@@ -8849,3 +8849,95 @@ voicegroup190:: @ 84A2C58
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0 @ 84A3054
 	voice_directsound_no_resample 64, 104, DirectSoundWaveData_ethnic_flavours_atarigane, 255, 0, 255, 0 @ 84A3060
 	voice_directsound 63, 64, DirectSoundWaveData_sc88pro_taiko, 255, 0, 255, 0 @ 84A306C
+
+	.align 2
+voicegroup191:: @ 84A2C58
+	voice_keysplit voicegroup003, KeySplitTable1 @ 848ABBC 255, 235, 0, 204 @ "acoustic grand"
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0 @ 84A2D48
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0 @ 84A2D48
+	voice_keysplit voicegroup003, KeySplitTable1 @ 848ABBC 255, 235, 0, 204 @ "honky-tonk"
+	voice_directsound 60, 0, DirectSoundWaveData_sc88pro_flute, 255, 127, 231, 127 @ 'electric piano' sounds like square waves to me idk
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0 @ 84A2D48
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0 @ 84A2D48
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0 @ 84A2D48
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0 @ 84A2D48
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0 @ 84A2D48
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0 @ 84A2D48
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0 @ 84A2D48
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0 @ 84A2D48
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0 @ 84A2D48
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0 @ 84A2D48
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0 @ 84A2D48
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0 @ 84A2D48
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0 @ 84A2D48
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0 @ 84A2D48
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0 @ 84A2D48
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0 @ 84A2D48
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0 @ 84A2D48
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0 @ 84A2D48
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0 @ 84A2D48
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0 @ 84A2D48
+	voice_keysplit_all voicegroup002 @ 84A01E0 @ drums
+	voice_directsound 60, 0, DirectSoundWaveData_sc88pro_nylon_str_guitar, 255, 165, 128, 204 @ electric guitar (jazzy)??
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0 @ 84A2D48
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0 @ 84A2D48
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0 @ 84A2D48
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0 @ 84A2D48
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0 @ 84A2D48
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0 @ 84A2D48
+	voice_directsound 60, 0, DirectSoundWaveData_sc88pro_fingered_bass, 255, 253, 0, 149 @ electric bass
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0 @ 84A2D48
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0 @ 84A2D48
+	voice_directsound 60, 0, DirectSoundWaveData_sc88pro_fretless_bass, 255, 253, 0, 216 @ "slap" bass
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0 @ 84A2D48
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0 @ 84A2D48
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0 @ 84A2D48
+	voice_directsound 60, 0, DirectSoundWaveData_sc88pro_string_ensemble_60, 255, 0, 255, 196 @ violin
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0 @ 84A2D48
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0 @ 84A2D48
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0 @ 84A2D48
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0 @ 84A2D48
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0 @ 84A2D48
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0 @ 84A2D48
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0 @ 84A2D48
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0 @ 84A2D48
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0 @ 84A2D48
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0 @ 84A2D48
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0 @ 84A2D48
+	voice_keysplit voicegroup005, KeySplitTable3 @ choir
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0 @ 84A2D48
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0 @ 84A2D48
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0 @ 84A2D48
+	voice_directsound 60, 0, DirectSoundWaveData_sc88pro_french_horn_60, 255, 0, 224, 165 @ 'trumpet'
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0 @ 84A2D48
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0 @ 84A2D48
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0 @ 84A2D48
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0 @ 84A2D48
+	voice_directsound 60, 0, DirectSoundWaveData_sc88pro_trumpet_60, 255, 0, 193, 127 @ brass
+	voice_directsound 60, 0, DirectSoundWaveData_sd90_classical_oboe, 255, 165, 154, 127 @ "synth brass"
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0 @ 84A2D48
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0 @ 84A2D48
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0 @ 84A2D48
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0 @ 84A2D48
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0 @ 84A2D48
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0 @ 84A2D48
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0 @ 84A2D48
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0 @ 84A2D48
+	voice_directsound 60, 0, DirectSoundWaveData_sd90_classical_oboe, 255, 165, 154, 127 @ "clarinet"
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0 @ 84A2D48
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0 @ 84A2D48
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0 @ 84A2D48
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0 @ 84A2D48
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0 @ 84A2D48
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0 @ 84A2D48
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0 @ 84A2D48
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0 @ 84A2D48
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0 @ 84A2D48
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0 @ 84A2D48
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0 @ 84A2D48
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0 @ 84A2D48
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0 @ 84A2D48
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0 @ 84A2D48
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0 @ 84A2D48
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0 @ 84A2D48
+

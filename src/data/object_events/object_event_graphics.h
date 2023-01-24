@@ -232,3 +232,4 @@ const u16 gFieldEffectPal_SmallSparkle[] = INCBIN_U16("graphics/field_effects/pa
 const u16 gFieldEffectObjectPic_Bird[] = INCBIN_U16("graphics/field_effects/pics/bird.4bpp");
 const u16 gObjectEventPic_MamizouDisguised[] = INCBIN_U16("graphics/object_events/pics/people/mamizou_disguised.4bpp");
 const u16 gObjectEventPal_Mamizou[] = INCBIN_U16("graphics/object_events/palettes/mamizou.gbapal");
+const u16 gObjectEventPic_Imakuni[] = INCBIN_U16("graphics/object_events/pics/people/imakuni.4bpp");

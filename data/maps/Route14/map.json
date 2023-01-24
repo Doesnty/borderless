@@ -248,7 +248,7 @@
       "x": 19,
       "y": 53,
       "elevation": 3,
-      "item": "ITEM_PINAP_BERRY",
+      "item": "ITEM_LUM_BERRY",
       "flag": "HIDDEN_ITEM_ROUTE14_PINAP_BERRY",
       "quantity": 1,
       "underfoot": false

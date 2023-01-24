@@ -1131,9 +1131,6 @@ AI_CV_DefenseDown_End:: @ 81DAAF6
 	end
 
 AI_CV_SpeedDownFromChance:: @ 81DAAF7
-	if_move MOVE_ICY_WIND, AI_CV_SpeedDown
-	if_move MOVE_ROCK_TOMB, AI_CV_SpeedDown
-	if_move MOVE_MUD_SHOT, AI_CV_SpeedDown
 	end
 
 AI_CV_SpeedDown:: @ 81DAB0D
