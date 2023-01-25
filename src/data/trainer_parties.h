@@ -3807,84 +3807,156 @@ static const struct TrainerMonNoItemCustomMoves sParty_RivalRoute22EarlyCharmand
     },
 };
 
-static const struct TrainerMonNoItemCustomMoves sParty_RivalCeruleanSquirtle[] = {
+static const struct TrainerMonFullControl sParty_RivalCeruleanSquirtle[] = {
     {
-        .iv = 50,
-        .lvl = 17,
-        .species = SPECIES_PIDGEOTTO,
-        .moves = {MOVE_POUND},
-    },
-    {
-        .iv = 50,
-        .lvl = 16,
-        .species = SPECIES_ABRA,
-        .moves = {MOVE_POUND},
-    },
-    {
-        .iv = 50,
+        .iv = 0,
         .lvl = 15,
-        .species = SPECIES_RATTATA,
-        .moves = {MOVE_POUND},
+        .species = SPECIES_CMYSTIA,
+        .heldItem = 0,
+        .evs = {0, 0, 0, 0, 0, 0},
+        .nature = NATURE_ADAMANT,
+        .gender = MON_MALE,
+        .ability = 0, // Diva
+        .ball = ITEM_POKE_BALL,
+        .moves = {MOVE_PECK, MOVE_SAND_ATTACK, MOVE_SING, MOVE_GUST},
     },
     {
-        .iv = 100,
-        .lvl = 18,
-        .species = SPECIES_SQUIRTLE,
-        .moves = {MOVE_POUND},
+        .iv = 0,
+        .lvl = 15,
+        .species = SPECIES_CMOMIJI,
+        .heldItem = 0,
+        .evs = {0, 0, 0, 0, 0, 0},
+        .nature = NATURE_ADAMANT,
+        .gender = MON_MALE,
+        .ability = 0, // Run Away
+        .ball = ITEM_POKE_BALL,
+        .moves = {MOVE_SCRATCH, MOVE_TAIL_WHIP, MOVE_HOWL, MOVE_BITE},
+    },
+    {
+        .iv = 0,
+        .lvl = 17,
+        .species = SPECIES_CSUNNY,
+        .heldItem = 0,
+        .evs = {0, 0, 0, 0, 0, 0},
+        .nature = NATURE_NAIVE,
+        .gender = MON_FEMALE,
+        .ability = 0, // Vital Spirit
+        .ball = ITEM_POKE_BALL,
+        .moves = {MOVE_EMBER, MOVE_NATURE_POWER, MOVE_SWAGGER, MOVE_FLAME_WHEEL},
+    },
+    {
+        .iv = 0,
+        .lvl = 17,
+        .species = SPECIES_CFUTO,
+        .heldItem = 0,
+        .evs = {0, 0, 0, 0, 0, 0},
+        .nature = NATURE_QUIRKY,
+        .gender = MON_MALE,
+        .ability = 0, // Flash Fire
+        .ball = ITEM_POKE_BALL,
+        .moves = {MOVE_DECISION, MOVE_WATER_PULSE, MOVE_WORK_UP, MOVE_ROCK_TOMB},
     },
 };
 
-static const struct TrainerMonNoItemCustomMoves sParty_RivalCeruleanBulbasaur[] = {
+static const struct TrainerMonFullControl sParty_RivalCeruleanBulbasaur[] = {
     {
-        .iv = 50,
-        .lvl = 17,
-        .species = SPECIES_PIDGEOTTO,
-        .moves = {MOVE_POUND},
-    },
-    {
-        .iv = 50,
-        .lvl = 16,
-        .species = SPECIES_ABRA,
-        .moves = {MOVE_POUND},
-    },
-    {
-        .iv = 50,
+        .iv = 0,
         .lvl = 15,
-        .species = SPECIES_RATTATA,
-        .moves = {MOVE_POUND},
+        .species = SPECIES_CMYSTIA,
+        .heldItem = 0,
+        .evs = {0, 0, 0, 0, 0, 0},
+        .nature = NATURE_ADAMANT,
+        .gender = MON_MALE,
+        .ability = 0, // Diva
+        .ball = ITEM_POKE_BALL,
+        .moves = {MOVE_PECK, MOVE_SAND_ATTACK, MOVE_SING, MOVE_GUST},
     },
     {
-        .iv = 100,
-        .lvl = 18,
-        .species = SPECIES_BULBASAUR,
-        .moves = {MOVE_POUND},
+        .iv = 0,
+        .lvl = 15,
+        .species = SPECIES_CMOMIJI,
+        .heldItem = 0,
+        .evs = {0, 0, 0, 0, 0, 0},
+        .nature = NATURE_ADAMANT,
+        .gender = MON_MALE,
+        .ability = 0, // Run Away
+        .ball = ITEM_POKE_BALL,
+        .moves = {MOVE_SCRATCH, MOVE_TAIL_WHIP, MOVE_HOWL, MOVE_BITE},
+    },
+    {
+        .iv = 0,
+        .lvl = 17,
+        .species = SPECIES_CLUNA,
+        .heldItem = 0,
+        .evs = {0, 0, 0, 0, 0, 0},
+        .nature = NATURE_TIMID,
+        .gender = MON_FEMALE,
+        .ability = 0, // Pickup
+        .ball = ITEM_POKE_BALL,
+        .moves = {MOVE_SHOCK_WAVE, MOVE_NATURE_POWER, MOVE_TORMENT, MOVE_SCRATCH},
+    },
+    {
+        .iv = 0,
+        .lvl = 17,
+        .species = SPECIES_CSUMIREKO,
+        .heldItem = 0,
+        .evs = {0, 0, 0, 0, 0, 0},
+        .nature = NATURE_MODEST,
+        .gender = MON_MALE,
+        .ability = 0, // Keen Eye
+        .ball = ITEM_POKE_BALL,
+        .moves = {MOVE_OMINOUS_WIND, MOVE_PSYSHOT, MOVE_THUNDER_WAVE, MOVE_FEINT},
     },
 };
 
-static const struct TrainerMonNoItemCustomMoves sParty_RivalCeruleanCharmander[] = {
+static const struct TrainerMonFullControl sParty_RivalCeruleanCharmander[] = {
     {
-        .iv = 50,
-        .lvl = 17,
-        .species = SPECIES_PIDGEOTTO,
-        .moves = {MOVE_POUND},
-    },
-    {
-        .iv = 50,
-        .lvl = 16,
-        .species = SPECIES_ABRA,
-        .moves = {MOVE_POUND},
-    },
-    {
-        .iv = 50,
+        .iv = 0,
         .lvl = 15,
-        .species = SPECIES_RATTATA,
-        .moves = {MOVE_POUND},
+        .species = SPECIES_CMYSTIA,
+        .heldItem = 0,
+        .evs = {0, 0, 0, 0, 0, 0},
+        .nature = NATURE_ADAMANT,
+        .gender = MON_MALE,
+        .ability = 0, // Diva
+        .ball = ITEM_POKE_BALL,
+        .moves = {MOVE_PECK, MOVE_SAND_ATTACK, MOVE_SING, MOVE_GUST},
     },
     {
-        .iv = 100,
-        .lvl = 18,
-        .species = SPECIES_CHARMANDER,
-        .moves = {MOVE_POUND},
+        .iv = 0,
+        .lvl = 15,
+        .species = SPECIES_CMOMIJI,
+        .heldItem = 0,
+        .evs = {0, 0, 0, 0, 0, 0},
+        .nature = NATURE_ADAMANT,
+        .gender = MON_MALE,
+        .ability = 0, // Run Away
+        .ball = ITEM_POKE_BALL,
+        .moves = {MOVE_SCRATCH, MOVE_TAIL_WHIP, MOVE_HOWL, MOVE_BITE},
+    },
+    {
+        .iv = 0,
+        .lvl = 17,
+        .species = SPECIES_CSTAR,
+        .heldItem = 0,
+        .evs = {0, 0, 0, 0, 0, 0},
+        .nature = NATURE_BOLD,
+        .gender = MON_FEMALE,
+        .ability = 0, // Pickup
+        .ball = ITEM_POKE_BALL,
+        .moves = {MOVE_AURORA_BEAM, MOVE_BUBBLE, MOVE_NATURE_POWER, MOVE_GROWL},
+    },
+    {
+        .iv = 0,
+        .lvl = 17,
+        .species = SPECIES_CKOKORO,
+        .heldItem = 0,
+        .evs = {0, 0, 0, 0, 0, 0},
+        .nature = NATURE_HASTY,
+        .gender = MON_MALE,
+        .ability = 0, // Keen Eye
+        .ball = ITEM_POKE_BALL,
+        .moves = {MOVE_OMINOUS_WIND, MOVE_MESMERISM, MOVE_TEETER_DANCE, MOVE_SCRATCH},
     },
 };
 

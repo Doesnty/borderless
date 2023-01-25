@@ -773,63 +773,63 @@
             "encounter_rate": 7,
             "mons": [
               {
-                "min_level": 9,
-                "max_level": 11,
+                "min_level": 10,
+                "max_level": 12,
                 "species": "SPECIES_CRUMIA"
               },
               {
-                "min_level": 9,
-                "max_level": 11,
+                "min_level": 10,
+                "max_level": 12,
                 "species": "SPECIES_CKISUME"
               },
               {
-                "min_level": 9,
-                "max_level": 11,
+                "min_level": 10,
+                "max_level": 12,
                 "species": "SPECIES_CKOAKUMA"
               },
               {
-                "min_level": 9,
-                "max_level": 11,
+                "min_level": 10,
+                "max_level": 12,
                 "species": "SPECIES_CKOAKUMA"
               },
               {
-                "min_level": 9,
-                "max_level": 11,
+                "min_level": 10,
+                "max_level": 12,
                 "species": "SPECIES_CRUMIA"
               },
               {
-                "min_level": 9,
-                "max_level": 11,
+                "min_level": 10,
+                "max_level": 12,
                 "species": "SPECIES_CKISUME"
               },
               {
-                "min_level": 9,
-                "max_level": 11,
+                "min_level": 10,
+                "max_level": 12,
                 "species": "SPECIES_CMISUMARU"
               },
               {
-                "min_level": 9,
-                "max_level": 11,
+                "min_level": 10,
+                "max_level": 12,
                 "species": "SPECIES_CMISUMARU"
               },
               {
-                "min_level": 9,
-                "max_level": 11,
+                "min_level": 10,
+                "max_level": 12,
                 "species": "SPECIES_CREISEN"
               },
               {
-                "min_level": 9,
-                "max_level": 11,
+                "min_level": 10,
+                "max_level": 12,
                 "species": "SPECIES_CREISEN_II"
               },
               {
-                "min_level": 9,
-                "max_level": 11,
+                "min_level": 10,
+                "max_level": 12,
                 "species": "SPECIES_CREISEN"
               },
               {
-                "min_level": 9,
-                "max_level": 11,
+                "min_level": 10,
+                "max_level": 12,
                 "species": "SPECIES_CREISEN_II"
               }
             ]
@@ -8537,64 +8537,64 @@
             "encounter_rate": 21,
             "mons": [
               {
-                "min_level": 10,
-                "max_level": 10,
-                "species": "SPECIES_SPEAROW"
+                "min_level": 11,
+                "max_level": 13,
+                "species": "SPECIES_CSEIRAN"
               },
               {
-                "min_level": 10,
-                "max_level": 10,
-                "species": "SPECIES_RATTATA"
+                "min_level": 11,
+                "max_level": 13,
+                "species": "SPECIES_CRINGO"
               },
               {
-                "min_level": 6,
-                "max_level": 6,
-                "species": "SPECIES_EKANS"
+                "min_level": 11,
+                "max_level": 13,
+                "species": "SPECIES_CMOMIJI"
               },
               {
-                "min_level": 10,
-                "max_level": 10,
-                "species": "SPECIES_EKANS"
+                "min_level": 11,
+                "max_level": 13,
+                "species": "SPECIES_CKUTAKA"
               },
               {
-                "min_level": 8,
-                "max_level": 8,
-                "species": "SPECIES_SPEAROW"
+                "min_level": 11,
+                "max_level": 13,
+                "species": "SPECIES_CMOMIJI"
               },
               {
-                "min_level": 8,
-                "max_level": 8,
-                "species": "SPECIES_RATTATA"
+                "min_level": 11,
+                "max_level": 13,
+                "species": "SPECIES_CKUTAKA"
               },
               {
-                "min_level": 12,
-                "max_level": 12,
-                "species": "SPECIES_SPEAROW"
+                "min_level": 11,
+                "max_level": 13,
+                "species": "SPECIES_CKEINE"
               },
               {
-                "min_level": 12,
-                "max_level": 12,
-                "species": "SPECIES_RATTATA"
+                "min_level": 11,
+                "max_level": 13,
+                "species": "SPECIES_CKEINE"
               },
               {
-                "min_level": 10,
-                "max_level": 10,
-                "species": "SPECIES_MANKEY"
+                "min_level": 11,
+                "max_level": 13,
+                "species": "SPECIES_CURUMI"
               },
               {
-                "min_level": 8,
-                "max_level": 8,
-                "species": "SPECIES_EKANS"
+                "min_level": 11,
+                "max_level": 13,
+                "species": "SPECIES_CURUMI"
               },
               {
-                "min_level": 12,
-                "max_level": 12,
-                "species": "SPECIES_MANKEY"
+                "min_level": 11,
+                "max_level": 13,
+                "species": "SPECIES_CURUMI"
               },
               {
-                "min_level": 12,
-                "max_level": 12,
-                "species": "SPECIES_EKANS"
+                "min_level": 11,
+                "max_level": 13,
+                "species": "SPECIES_CURUMI"
               }
             ]
           },

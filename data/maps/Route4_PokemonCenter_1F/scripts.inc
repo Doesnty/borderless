@@ -49,8 +49,8 @@ Route4_PokemonCenter_1F_EventScript_TryBuyMagikarp:: @ 816F7A2
 	compare VAR_RESULT, FALSE
 	goto_if_eq Route4_PokemonCenter_1F_EventScript_NotEnoughMoney
 	textcolor 3
-	setvar VAR_TEMP_1, SPECIES_MAGIKARP
-	givemon SPECIES_MAGIKARP, 5, ITEM_NONE
+	setvar VAR_TEMP_1, SPECIES_CWAKASAGIHIME
+	givemon SPECIES_CWAKASAGIHIME, 5, ITEM_NONE
 	compare VAR_RESULT, 0
 	goto_if_eq Route4_PokemonCenter_1F_EventScript_BuyMagikarpParty
 	compare VAR_RESULT, 1
@@ -113,7 +113,7 @@ Route4_PokemonCenter_1F_EventScript_PayForMagikarp:: @ 816F86F
 	message Route4_PokemonCenter_1F_Text_PaidOutrageouslyForMagikarp
 	waitmessage
 	waitfanfare
-	getspeciesname 0, SPECIES_MAGIKARP
+	getspeciesname 0, SPECIES_CWAKASAGIHIME
 	return
 
 Route4_PokemonCenter_1F_EventScript_DeclineMagikarp:: @ 816F888

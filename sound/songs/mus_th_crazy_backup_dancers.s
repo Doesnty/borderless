@@ -1,9 +1,9 @@
 	.include "MPlayDef.s"
 
-	.equ	mus_th_crazy_backup_dancers_grp, voicegroup000
+	.equ	mus_th_crazy_backup_dancers_grp, voicegroup191
 	.equ	mus_th_crazy_backup_dancers_pri, 0
 	.equ	mus_th_crazy_backup_dancers_rev, 0
-	.equ	mus_th_crazy_backup_dancers_mvl, 127
+	.equ	mus_th_crazy_backup_dancers_mvl, 60
 	.equ	mus_th_crazy_backup_dancers_key, 0
 	.equ	mus_th_crazy_backup_dancers_tbs, 1
 	.equ	mus_th_crazy_backup_dancers_exg, 0
@@ -19,29 +19,11 @@ mus_th_crazy_backup_dancers_1:
 	.byte	KEYSH , mus_th_crazy_backup_dancers_key+0
 @ 000   ----------------------------------------
 	.byte	TEMPO , 344*mus_th_crazy_backup_dancers_tbs/2
-	.byte	W24
 	.byte		VOL   , 127*mus_th_crazy_backup_dancers_mvl/mxv
-	.byte	W03
 	.byte		PAN   , c_v+0
-	.byte	W03
 	.byte		VOICE , 3
-	.byte	W03
-	.byte	W03
-	.byte	W03
-	.byte	W03
 	.byte		BEND  , c_v+0
-	.byte	W03
 	.byte		MOD   , 0
-	.byte	W03
-	.byte	W03
-	.byte	W03
-	.byte	W03
-	.byte	W03
-	.byte	W03
-	.byte	W03
-	.byte	W03
-	.byte	W03
-	.byte	W24
 @ 001   ----------------------------------------
 mus_th_crazy_backup_dancers_1_001:
 	.byte		N24   , Cn4 , v120
@@ -877,27 +859,10 @@ mus_th_crazy_backup_dancers_2:
 @ 000   ----------------------------------------
 	.byte	W24
 	.byte		VOL   , 127*mus_th_crazy_backup_dancers_mvl/mxv
-	.byte	W03
 	.byte		PAN   , c_v+0
-	.byte	W03
 	.byte		VOICE , 4
-	.byte	W03
-	.byte	W03
-	.byte	W03
-	.byte	W03
 	.byte		BEND  , c_v+0
-	.byte	W03
 	.byte		MOD   , 0
-	.byte	W03
-	.byte	W03
-	.byte	W03
-	.byte	W03
-	.byte	W03
-	.byte	W03
-	.byte	W03
-	.byte	W03
-	.byte	W03
-	.byte	W24
 @ 001   ----------------------------------------
 	.byte	W96
 @ 002   ----------------------------------------
@@ -1316,27 +1281,10 @@ mus_th_crazy_backup_dancers_3:
 @ 000   ----------------------------------------
 	.byte	W24
 	.byte		VOL   , 127*mus_th_crazy_backup_dancers_mvl/mxv
-	.byte	W03
 	.byte		PAN   , c_v+0
-	.byte	W03
 	.byte		VOICE , 0
-	.byte	W03
-	.byte	W03
-	.byte	W03
-	.byte	W03
 	.byte		BEND  , c_v+0
-	.byte	W03
 	.byte		MOD   , 0
-	.byte	W03
-	.byte	W03
-	.byte	W03
-	.byte	W03
-	.byte	W03
-	.byte	W03
-	.byte	W03
-	.byte	W03
-	.byte	W03
-	.byte	W24
 @ 001   ----------------------------------------
 	.byte	W96
 @ 002   ----------------------------------------
@@ -1896,29 +1844,11 @@ mus_th_crazy_backup_dancers_3_186:
 mus_th_crazy_backup_dancers_4:
 	.byte	KEYSH , mus_th_crazy_backup_dancers_key+0
 @ 000   ----------------------------------------
-	.byte	W24
 	.byte		VOL   , 120*mus_th_crazy_backup_dancers_mvl/mxv
-	.byte	W03
 	.byte		PAN   , c_v+0
-	.byte	W03
 	.byte		VOICE , 71
-	.byte	W03
-	.byte	W03
-	.byte	W03
-	.byte	W03
 	.byte		BEND  , c_v+0
-	.byte	W03
 	.byte		MOD   , 4
-	.byte	W03
-	.byte	W03
-	.byte	W03
-	.byte	W03
-	.byte	W03
-	.byte	W03
-	.byte	W03
-	.byte	W03
-	.byte	W03
-	.byte	W24
 @ 001   ----------------------------------------
 	.byte	W96
 @ 002   ----------------------------------------
@@ -2839,29 +2769,11 @@ mus_th_crazy_backup_dancers_4_183:
 mus_th_crazy_backup_dancers_5:
 	.byte	KEYSH , mus_th_crazy_backup_dancers_key+0
 @ 000   ----------------------------------------
-	.byte	W24
 	.byte		VOL   , 120*mus_th_crazy_backup_dancers_mvl/mxv
-	.byte	W03
 	.byte		PAN   , c_v+0
-	.byte	W03
 	.byte		VOICE , 33
-	.byte	W03
-	.byte	W03
-	.byte	W03
-	.byte	W03
 	.byte		BEND  , c_v+0
-	.byte	W03
 	.byte		MOD   , 0
-	.byte	W03
-	.byte	W03
-	.byte	W03
-	.byte	W03
-	.byte	W03
-	.byte	W03
-	.byte	W03
-	.byte	W03
-	.byte	W03
-	.byte	W24
 @ 001   ----------------------------------------
 	.byte		N96   , En1 , v100
 	.byte	W96
@@ -3377,29 +3289,11 @@ mus_th_crazy_backup_dancers_5_B2:
 mus_th_crazy_backup_dancers_6:
 	.byte	KEYSH , mus_th_crazy_backup_dancers_key+0
 @ 000   ----------------------------------------
-	.byte	W24
 	.byte		VOL   , 120*mus_th_crazy_backup_dancers_mvl/mxv
-	.byte	W03
 	.byte		PAN   , c_v+0
-	.byte	W03
 	.byte		VOICE , 61
-	.byte	W03
-	.byte	W03
-	.byte	W03
-	.byte	W03
 	.byte		BEND  , c_v+0
-	.byte	W03
 	.byte		MOD   , 8
-	.byte	W03
-	.byte	W03
-	.byte	W03
-	.byte	W03
-	.byte	W03
-	.byte	W03
-	.byte	W03
-	.byte	W03
-	.byte	W03
-	.byte	W24
 @ 001   ----------------------------------------
 	.byte	W96
 @ 002   ----------------------------------------
@@ -4153,29 +4047,11 @@ mus_th_crazy_backup_dancers_6_B2:
 mus_th_crazy_backup_dancers_7:
 	.byte	KEYSH , mus_th_crazy_backup_dancers_key+0
 @ 000   ----------------------------------------
-	.byte	W24
 	.byte		VOL   , 115*mus_th_crazy_backup_dancers_mvl/mxv
-	.byte	W03
 	.byte		PAN   , c_v+0
-	.byte	W03
 	.byte		VOICE , 52
-	.byte	W03
-	.byte	W03
-	.byte	W03
-	.byte	W03
 	.byte		BEND  , c_v+0
-	.byte	W03
 	.byte		MOD   , 0
-	.byte	W03
-	.byte	W03
-	.byte	W03
-	.byte	W03
-	.byte	W03
-	.byte	W03
-	.byte	W03
-	.byte	W03
-	.byte	W03
-	.byte	W24
 @ 001   ----------------------------------------
 	.byte		N96   , Cn4 , v092
 	.byte	W96
@@ -4883,29 +4759,11 @@ mus_th_crazy_backup_dancers_7_B2:
 mus_th_crazy_backup_dancers_8:
 	.byte	KEYSH , mus_th_crazy_backup_dancers_key+0
 @ 000   ----------------------------------------
-	.byte	W24
 	.byte		VOL   , 120*mus_th_crazy_backup_dancers_mvl/mxv
-	.byte	W03
 	.byte		PAN   , c_v+0
-	.byte	W03
 	.byte		VOICE , 56
-	.byte	W03
-	.byte	W03
-	.byte	W03
-	.byte	W03
 	.byte		BEND  , c_v+0
-	.byte	W03
 	.byte		MOD   , 0
-	.byte	W03
-	.byte	W03
-	.byte	W03
-	.byte	W03
-	.byte	W03
-	.byte	W03
-	.byte	W03
-	.byte	W03
-	.byte	W03
-	.byte	W24
 @ 001   ----------------------------------------
 	.byte	W96
 @ 002   ----------------------------------------
@@ -5597,29 +5455,11 @@ mus_th_crazy_backup_dancers_8_B2:
 mus_th_crazy_backup_dancers_9:
 	.byte	KEYSH , mus_th_crazy_backup_dancers_key+0
 @ 000   ----------------------------------------
-	.byte	W24
 	.byte		VOL   , 115*mus_th_crazy_backup_dancers_mvl/mxv
-	.byte	W03
 	.byte		PAN   , c_v+0
-	.byte	W03
 	.byte		VOICE , 36
-	.byte	W03
-	.byte	W03
-	.byte	W03
-	.byte	W03
 	.byte		BEND  , c_v+0
-	.byte	W03
 	.byte		MOD   , 0
-	.byte	W03
-	.byte	W03
-	.byte	W03
-	.byte	W03
-	.byte	W03
-	.byte	W03
-	.byte	W03
-	.byte	W03
-	.byte	W03
-	.byte	W24
 @ 001   ----------------------------------------
 	.byte	W96
 @ 002   ----------------------------------------
@@ -6730,29 +6570,11 @@ mus_th_crazy_backup_dancers_9_B2:
 mus_th_crazy_backup_dancers_10:
 	.byte	KEYSH , mus_th_crazy_backup_dancers_key+0
 @ 000   ----------------------------------------
-	.byte	W24
 	.byte		VOL   , 100*mus_th_crazy_backup_dancers_mvl/mxv
-	.byte	W03
 	.byte		PAN   , c_v+0
-	.byte	W03
 	.byte		VOICE , 25
-	.byte	W03
-	.byte	W03
-	.byte	W03
-	.byte	W03
 	.byte		BEND  , c_v+0
-	.byte	W03
 	.byte		MOD   , 0
-	.byte	W03
-	.byte	W03
-	.byte	W03
-	.byte	W03
-	.byte	W03
-	.byte	W03
-	.byte	W03
-	.byte	W03
-	.byte	W03
-	.byte	W24
 @ 001   ----------------------------------------
 mus_th_crazy_backup_dancers_10_001:
 	.byte		N06   , Cs2 , v100
@@ -8190,29 +8012,11 @@ mus_th_crazy_backup_dancers_10_B2:
 mus_th_crazy_backup_dancers_11:
 	.byte	KEYSH , mus_th_crazy_backup_dancers_key+0
 @ 000   ----------------------------------------
-	.byte	W24
 	.byte		VOL   , 120*mus_th_crazy_backup_dancers_mvl/mxv
-	.byte	W03
 	.byte		PAN   , c_v+0
-	.byte	W03
 	.byte		VOICE , 26
-	.byte	W03
-	.byte	W03
-	.byte	W03
-	.byte	W03
 	.byte		BEND  , c_v+0
-	.byte	W03
 	.byte		MOD   , 0
-	.byte	W03
-	.byte	W03
-	.byte	W03
-	.byte	W03
-	.byte	W03
-	.byte	W03
-	.byte	W03
-	.byte	W03
-	.byte	W03
-	.byte	W24
 @ 001   ----------------------------------------
 	.byte	W96
 @ 002   ----------------------------------------
@@ -8657,29 +8461,11 @@ mus_th_crazy_backup_dancers_11_B2:
 mus_th_crazy_backup_dancers_12:
 	.byte	KEYSH , mus_th_crazy_backup_dancers_key+0
 @ 000   ----------------------------------------
-	.byte	W24
 	.byte		VOL   , 115*mus_th_crazy_backup_dancers_mvl/mxv
-	.byte	W03
 	.byte		PAN   , c_v+0
-	.byte	W03
 	.byte		VOICE , 40
-	.byte	W03
-	.byte	W03
-	.byte	W03
-	.byte	W03
 	.byte		BEND  , c_v+0
-	.byte	W03
 	.byte		MOD   , 0
-	.byte	W03
-	.byte	W03
-	.byte	W03
-	.byte	W03
-	.byte	W03
-	.byte	W03
-	.byte	W03
-	.byte	W03
-	.byte	W03
-	.byte	W24
 @ 001   ----------------------------------------
 	.byte	W96
 @ 002   ----------------------------------------
@@ -9101,29 +8887,11 @@ mus_th_crazy_backup_dancers_12_B2:
 mus_th_crazy_backup_dancers_13:
 	.byte	KEYSH , mus_th_crazy_backup_dancers_key+0
 @ 000   ----------------------------------------
-	.byte	W24
 	.byte		VOL   , 127*mus_th_crazy_backup_dancers_mvl/mxv
-	.byte	W03
 	.byte		PAN   , c_v+0
-	.byte	W03
 	.byte		VOICE , 62
-	.byte	W03
-	.byte	W03
-	.byte	W03
-	.byte	W03
 	.byte		BEND  , c_v+0
-	.byte	W03
 	.byte		MOD   , 8
-	.byte	W03
-	.byte	W03
-	.byte	W03
-	.byte	W03
-	.byte	W03
-	.byte	W03
-	.byte	W03
-	.byte	W03
-	.byte	W03
-	.byte	W24
 @ 001   ----------------------------------------
 	.byte	W96
 @ 002   ----------------------------------------
