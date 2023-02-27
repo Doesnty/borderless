@@ -404,5 +404,11 @@ const u8 gMoveNames[][15] = {
     _("Hold Hands"),
     _("Ball Lightning"),
     _("Mood Swing"),
+    _("Alpha Strike"),
+    _("Lunar Sea"),
+    _("Purity Edge"),
+    _("Identify"),
+    _("Corpse Blaze"),
+    _("Group Prank"),
     _("Me First"),
 };

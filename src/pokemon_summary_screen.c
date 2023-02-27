@@ -179,6 +179,8 @@ struct PokemonSummaryScreenData
         u8 ALIGNED(4) moveNameStrBufs[5][MOVE_NAME_LENGTH + 1];
         u8 ALIGNED(4) movePowerStrBufs[5][5];
         u8 ALIGNED(4) moveAccuracyStrBufs[5][5];
+        
+        u8 ALIGNED(4) moveClassBufs[5];
 
         u8 ALIGNED(4) expPointsStrBuf[9];
         u8 ALIGNED(4) expToNextLevelStrBuf[9];
@@ -2271,6 +2273,7 @@ static void BufferMonMoveI(u8 i)
         StringCopy(sMonSummaryScreen->summary.moveCurPpStrBufs[i], gText_PokeSum_TwoHyphens);
         StringCopy(sMonSummaryScreen->summary.movePowerStrBufs[i], gText_ThreeHyphens);
         StringCopy(sMonSummaryScreen->summary.moveAccuracyStrBufs[i], gText_ThreeHyphens);
+        sMonSummaryScreen->summary.moveClassBufs[i] = 3;
         sMonSkillsPrinterXpos->curPp[i] = 0xff;
         sMonSkillsPrinterXpos->maxPp[i] = 0xff;
         return;
@@ -2303,6 +2306,8 @@ static void BufferMonMoveI(u8 i)
         StringCopy(sMonSummaryScreen->summary.movePowerStrBufs[i], gText_ThreeHyphens);
     else
         ConvertIntToDecimalStringN(sMonSummaryScreen->summary.movePowerStrBufs[i], gBattleMoves[sMonSummaryScreen->moveIds[i]].power, STR_CONV_MODE_RIGHT_ALIGN, 3);
+
+    sMonSummaryScreen->summary.moveClassBufs[i] = gBattleMoves[sMonSummaryScreen->moveIds[i]].moveClass;
 
     if (gBattleMoves[sMonSummaryScreen->moveIds[i]].accuracy == 0)
         StringCopy(sMonSummaryScreen->summary.moveAccuracyStrBufs[i], gText_ThreeHyphens);
@@ -2882,6 +2887,7 @@ static void PokeSum_PrintSelectedMoveStats(void)
                                      0, 0,
                                      sLevelNickTextColors[0], TEXT_SPEED_FF,
                                      gMoveDescriptionPointers[sMonSummaryScreen->moveIds[sMoveSelectionCursorPos] - 1]);
+        BlitMoveInfoIcon(sMonSummaryScreen->windowIds[POKESUM_WIN_TRAINER_MEMO], 24 + sMonSummaryScreen->summary.moveClassBufs[sMoveSelectionCursorPos], 88, 1);
     }
 }
 
@@ -2937,7 +2943,9 @@ static void PokeSum_DrawMoveTypeIcons(void)
     }
 
     if (sMonSummaryScreen->mode == PSS_MODE_SELECT_MOVE)
+    {
         BlitMoveInfoIcon(sMonSummaryScreen->windowIds[5], sMonSummaryScreen->moveTypes[4] + 1, 3, GetMoveNamePrinterYpos(4));
+    }
 }
 
 static void PokeSum_PrintPageHeaderText(u8 curPageIndex)

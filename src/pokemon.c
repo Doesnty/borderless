@@ -62,7 +62,6 @@ static EWRAM_DATA struct OakSpeechNidoranFStruct *sOakSpeechNidoranResources = N
 
 static union PokemonSubstruct *GetSubstruct(struct BoxPokemon *boxMon, u32 personality, u8 substructType);
 static bool8 IsShinyOtIdPersonality(u32 otId, u32 personality);
-static u16 ModifyStatByNature(u8 nature, u16 n, u8 statIndex);
 static u8 GetNatureFromPersonality(u32 personality);
 static bool8 PartyMonHasStatus(struct Pokemon *mon, u32 unused, u32 healMask, u8 battleId);
 static bool8 HealStatusConditions(struct Pokemon *mon, u32 unused, u32 healMask, u8 battleId);
@@ -599,7 +598,7 @@ static const u16 sSpeciesToNationalPokedexNum[] = // Assigns all species to the 
 
 #include "data/pokemon/item_effects.h"
 
-static const s8 sNatureStatTable[][5] =
+const s8 gNatureStatTable[][5] =
 {
     // Atk Def Spd Sp.Atk Sp.Def
     {    0,  0,  0,     0,     0}, // Hardy
@@ -1306,7 +1305,7 @@ static u16 CalculateBoxMonChecksum(struct BoxPokemon *boxMon)
 #define CALC_STAT(base, iv, ev, statIndex, field)               \
 {                                                               \
     u8 baseStat = gBaseStats[species].base;                     \
-    s32 n = (((2 * baseStat + iv + ev / 4) * level) / 100) + 5; \
+    s32 n = (((2 * baseStat + iv + ev) * level) / 100) + 5; \
     u8 nature = GetNature(mon);                                 \
     n = ModifyStatByNature(nature, n, statIndex);               \
     SetMonData(mon, field, &n);                                 \
@@ -2475,11 +2474,8 @@ u32 GetBoxMonData(struct BoxPokemon *boxMon, s32 field, u8 *data)
     case MON_DATA_NATURE_OVERRIDE:
         retVal = substruct2->natureOverride;
         break;
-    case MON_DATA_BEAUTY:
-        retVal = substruct2->beauty;
-        break;
-    case MON_DATA_CUTE:
-        retVal = substruct2->cute;
+    case MON_DATA_FREE_EV:
+        retVal = substruct2->freeEVs;
         break;
     case MON_DATA_SMART:
         retVal = substruct2->smart;
@@ -2872,11 +2868,8 @@ void SetBoxMonData(struct BoxPokemon *boxMon, s32 field, const void *dataArg)
     case MON_DATA_NATURE_OVERRIDE:
         SET8(substruct2->natureOverride);
         break;
-    case MON_DATA_BEAUTY:
-        SET8(substruct2->beauty);
-        break;
-    case MON_DATA_CUTE:
-        SET8(substruct2->cute);
+    case MON_DATA_FREE_EV:
+        SET16(substruct2->freeEVs);
         break;
     case MON_DATA_SMART:
         SET8(substruct2->smart);
@@ -4314,7 +4307,6 @@ u16 GetEvolutionTargetSpecies(struct Pokemon *mon, u8 type, u16 evolutionItem)
     u32 personality = GetMonData(mon, MON_DATA_PERSONALITY, NULL);
     u8 level;
     u16 friendship;
-    u8 beauty = GetMonData(mon, MON_DATA_BEAUTY, NULL);
     u16 upperPersonality = personality >> 16;
     u8 holdEffect;
 
@@ -4387,8 +4379,8 @@ u16 GetEvolutionTargetSpecies(struct Pokemon *mon, u8 type, u16 evolutionItem)
                     targetSpecies = gEvolutionTable[species][i].targetSpecies;
                 break;
             case EVO_BEAUTY:
-                if (gEvolutionTable[species][i].param <= beauty)
-                    targetSpecies = gEvolutionTable[species][i].targetSpecies;
+                //if (gEvolutionTable[species][i].param <= beauty)
+                    //targetSpecies = gEvolutionTable[species][i].targetSpecies;
                 break;
             }
         }
@@ -4522,7 +4514,7 @@ u8 GetTrainerEncounterMusicId(u16 trainer)
     return gTrainers[trainer].encounterMusic_gender & 0x7F;
 }
 
-static u16 ModifyStatByNature(u8 nature, u16 n, u8 statIndex)
+u16 ModifyStatByNature(u8 nature, u16 n, u8 statIndex)
 {
     if (statIndex < 1 || statIndex > 5)
     {
@@ -4533,7 +4525,7 @@ static u16 ModifyStatByNature(u8 nature, u16 n, u8 statIndex)
         return retVal;
     }
 
-    switch (sNatureStatTable[nature][statIndex - 1])
+    switch (gNatureStatTable[nature][statIndex - 1])
     {
     case 1:
         return (u16)(n * 110) / 100;
@@ -4619,6 +4611,27 @@ void AdjustFriendship(struct Pokemon *mon, u8 event)
 
 void MonGainEVs(struct Pokemon *mon, u16 defeatedSpecies)
 {
+    u16 currentFreeEVs = GetMonData(mon, MON_DATA_FREE_EV, NULL);
+    u16 heldItem;
+    u8 holdEffect;
+    
+    currentFreeEVs += 1;
+    
+    heldItem = GetMonData(mon, MON_DATA_HELD_ITEM, NULL);
+    holdEffect = ItemId_GetHoldEffect(heldItem);
+    
+    if (holdEffect == HOLD_EFFECT_MACHO_BRACE)
+        currentFreeEVs++;
+    
+    if (CheckPartyHasHadPokerus(mon, 0))
+        currentFreeEVs++;
+    
+    if (currentFreeEVs > 999)
+        currentFreeEVs = 999;
+    
+    SetMonData(mon, MON_DATA_FREE_EV, &currentFreeEVs);
+    
+    /*
     u8 evs[NUM_STATS];
     u16 evIncrease = 0;
     u16 totalEVs = 0;
@@ -4699,7 +4712,7 @@ void MonGainEVs(struct Pokemon *mon, u16 defeatedSpecies)
         evs[i] += evIncrease;
         totalEVs += evIncrease;
         SetMonData(mon, MON_DATA_HP_EV + i, &evs[i]);
-    }
+    } */
 }
 
 u16 GetMonEVCount(struct Pokemon *mon)

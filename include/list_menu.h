@@ -77,7 +77,7 @@ struct ListMenu
     struct ListMenuTemplate template;
     u16 cursorPos;
     u16 itemsAbove;
-    u8 unk_1C;
+    u8 hideCursor;
     u8 unk_1D;
     u8 taskId;
     u8 unk_1F;
@@ -105,5 +105,8 @@ u16 ListMenuGetYCoordForPrintingArrowCursor(u8 listTaskId);
 void ListMenuOverrideSetColors(u8 cursorPal, u8 fillValue, u8 cursorShadowPal);
 void ListMenuDefaultCursorMoveFunc(s32 itemIndex, bool8 onInit, struct ListMenu *list);
 void ListMenuSetTemplateField(u8 taskId, u8 field, s32 value);
+void ListMenuResetPosition(u8 taskId);
+void ListMenuHideCursor(u8 taskId);
+void ListMenuShowCursor(u8 taskId);
 
 #endif //GUARD_LIST_MENU_H

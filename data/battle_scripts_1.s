@@ -258,6 +258,10 @@ gBattleScriptsForMoveEffects::
     .4byte BattleScript_EffectHappyHour
     .4byte BattleScript_EffectMeFirst
     .4byte BattleScript_EffectMoodSwing
+    .4byte BattleScript_EffectPurityEdge
+    .4byte BattleScript_EffectIdentify
+    .4byte BattleScript_EffectCorpseBlaze
+    .4byte BattleScript_EffectGroupPrank
 
 BattleScript_EffectHit::
 BattleScript_HitFromAtkCanceler::
@@ -5603,3 +5607,133 @@ BattleScript_SolarPowerActivates::
 	datahpupdate BS_ATTACKER
 	tryfaintmon BS_ATTACKER, 0, NULL
 	end3
+
+BattleScript_EffectPurityEdge::
+    jumpifstatus BS_ATTACKER, STATUS1_ANY, BattleScript_ButItFailedAtkStringPpReduce
+    goto BattleScript_EffectHit
+
+BattleScript_EffectIdentify::
+	attackcanceler
+	accuracycheck BattleScript_PrintMoveMissed, ACC_CURR_MOVE
+	attackstring
+	ppreduce
+	attackanimation
+	waitanimation
+    special 0x15
+	printstring STRINGID_IDENTIFY
+	waitmessage 0x40
+    special 0x16
+	printstring STRINGID_IDENTIFYITEMABILITY
+	waitmessage 0x40
+    special 0x17
+	printstring STRINGID_IDENTIFYMOVESET1
+	waitmessage 0x40
+    special 0x18
+	printstring STRINGID_IDENTIFYMOVESET2
+	waitmessage 0x40
+    end
+
+BattleScript_EffectCorpseBlaze::
+	attackcanceler
+	accuracycheck BattleScript_PrintMoveMissed, ACC_CURR_MOVE
+	attackstring
+	ppreduce
+	critcalc
+	damagecalc
+	typecalc
+	adjustnormaldamage
+	attackanimation
+	waitanimation
+	effectivenesssound
+	hitanimation BS_TARGET
+	waitstate
+	healthbarupdate BS_TARGET
+	datahpupdate BS_TARGET
+	critmessage
+	waitmessage 0x40
+	resultmessage
+	waitmessage 0x40
+	seteffectwithchance
+    special 0x19
+	tryfaintmon BS_TARGET, 0, NULL
+	moveendall
+	end
+
+BattleScript_CorpseBlazeKills::
+	jumpifstat BS_ATTACKER, CMP_EQUAL, STAT_SPATK, 12, BattleScript_CorpseBlazeEnd
+	setbyte sSTAT_ANIM_PLAYED, 0
+	playstatchangeanimation BS_ATTACKER, BIT_SPATK, ATK48_STAT_BY_TWO
+	setstatchanger STAT_SPATK, 3, FALSE
+	statbuffchange STAT_CHANGE_BS_PTR | MOVE_EFFECT_AFFECTS_USER, BattleScript_CorpseBlazeEnd
+	jumpifbyte CMP_EQUAL, cMULTISTRING_CHOOSER, 2, BattleScript_CorpseBlazeEnd
+	printfromtable gStatUpStringIds
+
+BattleScript_CorpseBlazeEnd:
+	tryfaintmon BS_TARGET, 0, NULL
+	moveendall
+	end
+
+BattleScript_EffectGroupPrank::
+	jumpifstatus2 BS_ATTACKER, STATUS2_MULTIPLETURNS, BattleScript_GroupPrankSecondTurn
+	jumpifword CMP_COMMON_BITS, gHitMarker, HITMARKER_NO_ATTACKSTRING, BattleScript_GroupPrankSecondTurn
+	setbyte sTWOTURN_STRINGID, 8
+	call BattleScriptFirstChargingTurn
+	goto BattleScript_MoveEnd
+
+BattleScript_GroupPrankSecondTurn::
+	attackcanceler
+	setmoveeffect MOVE_EFFECT_CHARGING
+	setbyte sB_ANIM_TURN, 1
+	clearstatusfromeffect BS_ATTACKER
+	orword gHitMarker, HITMARKER_NO_PPDEDUCT
+
+	accuracycheck BattleScript_PrintMoveMissed, ACC_CURR_MOVE
+	attackstring
+	ppreduce
+    
+	setmultihitcounter 2
+	initmultihitstring
+	setbyte sMULTIHIT_EFFECT, 0
+BattleScript_GroupPrankLoop:
+	jumpifhasnohp BS_ATTACKER, BattleScript_GroupPrankEnd
+	jumpifhasnohp BS_TARGET, BattleScript_GroupPrankPrintStrings
+	movevaluescleanup
+	copybyte cEFFECT_CHOOSER, sMULTIHIT_EFFECT
+	typecalc
+	bicbyte gMoveResultFlags, MOVE_RESULT_SUPER_EFFECTIVE | MOVE_RESULT_NOT_VERY_EFFECTIVE
+	damagetohalftargethp
+	jumpifmovehadnoeffect BattleScript_GroupPrankNoMoreHits
+	attackanimation
+	waitanimation
+	effectivenesssound
+	hitanimation BS_TARGET
+	waitstate
+	healthbarupdate BS_TARGET
+	datahpupdate BS_TARGET
+	critmessage
+	waitmessage 0x40
+	resultmessage
+	waitmessage 0x40
+	printstring STRINGID_EMPTYSTRING3
+	waitmessage 1
+	addbyte gBattleScripting + 12, 1
+	moveendto 16
+	jumpifbyte CMP_COMMON_BITS, gMoveResultFlags, MOVE_RESULT_FOE_ENDURED, BattleScript_GroupPrankPrintStrings
+	decrementmultihit BattleScript_GroupPrankLoop
+	goto BattleScript_GroupPrankPrintStrings
+    
+BattleScript_GroupPrankNoMoreHits:
+    pause 0x20
+BattleScript_GroupPrankPrintStrings:
+	resultmessage
+	waitmessage 0x40
+	jumpifmovehadnoeffect BattleScript_MultiHitEnd
+	copyarray gBattleTextBuff1, sMULTIHIT_STRING, 6
+	printstring STRINGID_HITXTIMES
+	waitmessage 0x40
+BattleScript_GroupPrankEnd:
+	seteffectwithchance
+	tryfaintmon BS_TARGET, 0, NULL
+	moveendcase 2
+	moveendfrom 4
+	end

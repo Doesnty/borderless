@@ -1336,3 +1336,7 @@ const u8 gText_Receive[] = _("RECEIVE");
 const u8 gText_Send[] = _("SEND");
 const u8 gText_Toss[] = _("TOSS");
 const u8 gUnknown_841EE2B[] = _("DEL. ALL{CLEAR_TO 0x57}CANCEL{CLEAR_TO 0xA4}OK");
+const u8 gEffortGaugeLabels[] = _("{CLEAR_TO 0x30}Base{CLEAR_TO 0x50}IV{CLEAR_TO 0x70}EV{CLEAR_TO 0x90}Stat{CLEAR_TO 0xB0}Lv50");
+const u8 gEffortGaugeString2[] = _(" Effort unspent.{CLEAR_TO 0x60} Limit: ");
+const u8 gEffortGaugeHelp1[] = _("{DPAD_UPDOWN}PICK {A_BUTTON}SELECT");
+const u8 gEffortGaugeHelp2[] = _("{DPAD_UPDOWN}PICK {DPAD_LEFTRIGHT}{L_BUTTON}{R_BUTTON}INVEST {START_BUTTON}COMMIT");

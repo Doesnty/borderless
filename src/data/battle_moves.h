@@ -5656,6 +5656,90 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .flags = FLAG_SNATCH_AFFECTED,
     },
 
+    [MOVE_ALPHA_STRIKE] = 
+    {
+        .effect = EFFECT_FAKE_OUT,
+        .power = 90,
+        .type = TYPE_BEAST,
+        .moveClass = CLASS_PHYSICAL,
+        .accuracy = 100,
+        .pp = 10,
+        .secondaryEffectChance = 0,
+        .priority = 2,
+        .target = MOVE_TARGET_SELECTED,
+        .flags = FLAG_MAKES_CONTACT | FLAG_PROTECT_AFFECTED,
+    },
+
+    [MOVE_LUNAR_SEA] = 
+    {
+        .effect = EFFECT_DOUBLE_EDGE,
+        .power = 150,
+        .type = TYPE_WATER,
+        .moveClass = CLASS_SPECIAL,
+        .accuracy = 100,
+        .pp = 5,
+        .secondaryEffectChance = 0,
+        .priority = 0,
+        .target = MOVE_TARGET_SELECTED,
+        .flags = FLAG_PROTECT_AFFECTED,
+    },
+
+    [MOVE_PURITY_EDGE] = 
+    {
+        .effect = EFFECT_PURITY_EDGE,
+        .power = 95,
+        .type = TYPE_STEEL,
+        .moveClass = CLASS_PHYSICAL,
+        .accuracy = 100,
+        .pp = 10,
+        .secondaryEffectChance = 0,
+        .priority = 0,
+        .target = MOVE_TARGET_SELECTED,
+        .flags = FLAG_MAKES_CONTACT | FLAG_PROTECT_AFFECTED,
+    },
+
+    [MOVE_IDENTIFY] = 
+    {
+        .effect = EFFECT_IDENTIFY,
+        .power = 0,
+        .type = TYPE_NORMAL,
+        .moveClass = CLASS_STATUS,
+        .accuracy = 0,
+        .pp = 40,
+        .secondaryEffectChance = 0,
+        .priority = 1,
+        .target = MOVE_TARGET_SELECTED,
+        .flags = FLAG_MAGICCOAT_AFFECTED,
+    },
+
+    [MOVE_CORPSE_BLAZE] = 
+    {
+        .effect = EFFECT_CORPSE_BLAZE,
+        .power = 50,
+        .type = TYPE_FIRE,
+        .moveClass = CLASS_SPECIAL,
+        .accuracy = 100,
+        .pp = 25,
+        .secondaryEffectChance = 0,
+        .priority = 0,
+        .target = MOVE_TARGET_SELECTED,
+        .flags = FLAG_PROTECT_AFFECTED,
+    },
+
+    [MOVE_GROUP_PRANK] = 
+    {
+        .effect = EFFECT_GROUP_PRANK,
+        .power = 1,
+        .type = TYPE_DARK,
+        .moveClass = CLASS_PHYSICAL,
+        .accuracy = 100,
+        .pp = 5,
+        .secondaryEffectChance = 0,
+        .priority = 0,
+        .target = MOVE_TARGET_SELECTED,
+        .flags = FLAG_PROTECT_AFFECTED,
+    },
+
     [MOVE_ME_FIRST] = 
     {
         .effect = EFFECT_ME_FIRST,

@@ -30,9 +30,8 @@ struct PokemonSubstruct2
     u8 spAttackEV;
     u8 spDefenseEV;
     u8 natureOverride;
-    u8 beauty;
-    u8 cute;
     u8 smart;
+    u16 freeEVs;
     u8 tough;
     u8 sheen;
 };
@@ -335,6 +334,7 @@ extern const u8 gFacilityClassToPicIndex[];
 extern const u8 gFacilityClassToTrainerClass[];
 extern const struct SpriteTemplate gSpriteTemplates_Battlers[];
 extern const u8 gPPUpGetMask[];
+extern const s8 gNatureStatTable[][5];
 
 void ZeroBoxMonData(struct BoxPokemon *boxMon);
 void ZeroMonData(struct Pokemon *mon);
@@ -461,5 +461,6 @@ bool8 CheckBattleTypeGhost(struct Pokemon *mon, u8 bank);
 struct OakSpeechNidoranFStruct *OakSpeechNidoranFSetup(u8 battlePosition, bool8 enable);
 void OakSpeechNidoranFFreeResources(void);
 void *OakSpeechNidoranFGetBuffer(u8 bufferId);
+u16 ModifyStatByNature(u8 nature, u16 n, u8 statIndex);
 
 #endif // GUARD_POKEMON_H

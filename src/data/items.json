@@ -6377,12 +6377,12 @@
       "secondaryId": 0
     },
     {
-      "english": "FAME CHECKER",
+      "english": "Effort Gauge",
       "itemId": "ITEM_FAME_CHECKER",
       "price": 0,
       "holdEffect": "HOLD_EFFECT_NONE",
       "holdEffectParam": 0,
-      "description_english": "A device that enables you to\\nrecall what you've heard and seen\\nabout famous people.",
+      "description_english": "A device that enables you to\\nmeasure and apply the Effort\\nexerted by puppets.",
       "importance": 1,
       "exitsBagOnUse": 1,
       "pocket": "POCKET_KEY_ITEMS",

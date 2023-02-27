@@ -172,7 +172,7 @@ s32 BuildPokedexAreaSubspriteBuffer(u16 species, struct Subsprite * subsprites)
     s32 alteringCaveNum;
     s32 i;
 
-    if (GetRoamerIndex(species) >= SPECIES_NONE)
+    if (species == GetRoamerSpecies())
     {
         return CountRoamerNests(species, subsprites);
     }
@@ -236,15 +236,9 @@ static s32 GetRoamerIndex(u16 species)
 static s32 CountRoamerNests(u16 species, struct Subsprite * subsprites)
 {
     u16 roamerLocation;
-    s32 roamerIdx;
     u16 dexAreaSubspriteIdx;
     s32 dexAreaEntryLUTidx;
-
-    roamerIdx = GetRoamerIndex(species);
-    if (roamerIdx < 0)
-        return 0;
-    if (sRoamerPairs[roamerIdx].starter != GetStarterSpecies())
-        return 0;
+    
     roamerLocation = GetRoamerLocationMapSectionId();
     dexAreaEntryLUTidx = 0;
     if (TryGetMapSecPokedexAreaEntry(roamerLocation, sDexAreas_Kanto, 55, &dexAreaEntryLUTidx, &dexAreaSubspriteIdx))

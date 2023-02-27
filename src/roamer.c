@@ -1,4 +1,5 @@
 #include "global.h"
+#include "event_data.h"
 #include "random.h"
 #include "overworld.h"
 #include "field_specials.h"
@@ -79,37 +80,34 @@ void ClearRoamerData(void)
     }
 }
 
-#define GetRoamerSpecies() ({\
-    u16 a;\
-    switch (GetStarterSpecies())\
-    {\
-    default:\
-        a = SPECIES_RAIKOU;\
-        break;\
-    case SPECIES_BULBASAUR:\
-        a = SPECIES_ENTEI;\
-        break;\
-    case SPECIES_CHARMANDER:\
-        a = SPECIES_SUICUNE;\
-        break;\
-    }\
-    a;\
-})
-
 void CreateInitialRoamerMon(void)
 {
     struct Pokemon * mon = &gEnemyParty[0];
-    u16 species = GetRoamerSpecies();
-    CreateMon(mon, species, 50, USE_RANDOM_IVS, FALSE, 0, OT_ID_PLAYER_ID, 0);
+    u16 species = SPECIES_CKOISHI;
+    u16 flagId;
+    u8 nbadges, lvl;
+    
+    for (flagId = FLAG_BADGE01_GET; flagId < FLAG_BADGE01_GET + 8; flagId++)
+    {
+        if (FlagGet(flagId))
+            nbadges++;
+    }
+    
+    lvl = 6 + (nbadges * 7);
+    
+    if (lvl >= 39)
+        species = SPECIES_KOISHI + (Random() % 3);
+    
+    CreateMon(mon, species, lvl, USE_RANDOM_IVS, FALSE, 0, OT_ID_PLAYER_ID, 0);
     ROAMER->species = species;
-    ROAMER->level = 50;
+    ROAMER->level = lvl;
     ROAMER->status = 0;
     ROAMER->active = TRUE;
     ROAMER->ivs = GetMonData(mon, MON_DATA_IVS);
     ROAMER->personality = GetMonData(mon, MON_DATA_PERSONALITY);
     ROAMER->hp = GetMonData(mon, MON_DATA_MAX_HP);
-    ROAMER->beauty = GetMonData(mon, MON_DATA_BEAUTY);
-    ROAMER->cute = GetMonData(mon, MON_DATA_CUTE);
+    ROAMER->beauty = GetMonData(mon, MON_DATA_FREE_EV);
+    //ROAMER->cute = GetMonData(mon, MON_DATA_CUTE);
     ROAMER->smart = GetMonData(mon, MON_DATA_SMART);
     ROAMER->tough = GetMonData(mon, MON_DATA_TOUGH);
     sRoamerLocation[MAP_GRP] = ROAMER_MAP_GROUP;
@@ -120,6 +118,14 @@ void InitRoamer(void)
 {
     ClearRoamerData();
     CreateInitialRoamerMon();
+}
+
+void MaybeInitRoamer(void)
+{
+    if (!ROAMER->active)
+    {
+        InitRoamer();
+    }
 }
 
 void UpdateLocationHistoryForRoamer(void)
@@ -213,8 +219,8 @@ void CreateRoamerMonInstance(void)
     status = ROAMER->status;
     SetMonData(mon, MON_DATA_STATUS, &status);
     SetMonData(mon, MON_DATA_HP, &ROAMER->hp);
-    SetMonData(mon, MON_DATA_BEAUTY, &ROAMER->beauty);
-    SetMonData(mon, MON_DATA_CUTE, &ROAMER->cute);
+    SetMonData(mon, MON_DATA_FREE_EV, &ROAMER->beauty);
+    //SetMonData(mon, MON_DATA_CUTE, &ROAMER->cute);
     SetMonData(mon, MON_DATA_SMART, &ROAMER->smart);
     SetMonData(mon, MON_DATA_TOUGH, &ROAMER->tough);
 }
@@ -255,4 +261,11 @@ u16 GetRoamerLocationMapSectionId(void)
     if (!ROAMER->active)
         return MAPSEC_NONE;
     return Overworld_GetMapHeaderByGroupAndId(sRoamerLocation[MAP_GRP], sRoamerLocation[MAP_NUM])->regionMapSectionId;
+}
+
+u16 GetRoamerSpecies(void)
+{
+    if (ROAMER->active)
+        return ROAMER->species;
+    return 0;
 }

@@ -75,6 +75,9 @@ const struct MoveMenuInfoIcon gMoveMenuInfoIcons[] =
     { 40, 12, 0xC8 },       // -Accuracy- icon
     { 40, 12, 0xE0 },       // -PP- icon
     { 40, 12, 0xE8 },       // -Effect- icon
+    { 32, 16, 0x04 },       // Physical icon
+    { 32, 16, 0x08 },       // Special icon
+    { 32, 16, 0x0C },       // Status icon
 };
 
 static void ListMenuDummyTask(u8 taskId)
@@ -270,7 +273,7 @@ static s32 ListMenuTestInput(struct ListMenuTemplate *template, u32 cursorPos, u
     list.template = *template;
     list.cursorPos = cursorPos;
     list.itemsAbove = itemsAbove;
-    list.unk_1C = 0;
+    list.hideCursor = 0;
     list.unk_1D = 0;
     if (keys == DPAD_UP)
         ListMenuChangeSelection(&list, FALSE, 1, FALSE);
@@ -318,7 +321,7 @@ static u8 ListMenuInitInternal(const struct ListMenuTemplate *listMenuTemplate, 
     list->template = *listMenuTemplate;
     list->cursorPos = cursorPos;
     list->itemsAbove = itemsAbove;
-    list->unk_1C = 0;
+    list->hideCursor = 0;
     list->unk_1D = 0;
     list->taskId = TAIL_SENTINEL;
     list->unk_1F = 0;
@@ -384,25 +387,26 @@ static void ListMenuDrawCursor(struct ListMenu *list)
     u8 x = list->template.cursor_X;
     u8 y = list->itemsAbove * yMultiplier + list->template.upText_Y;
     
-    switch (list->template.cursorKind)
-    {
-    case 0:
-        ListMenuPrint(list, gText_SelectorArrow2, x, y);
-        break;
-    case 1:
-        break;
-    case 2:
-        if (list->taskId == TAIL_SENTINEL)
-            list->taskId = ListMenuAddCursorObject(list, 0);
-        ListMenuUpdateCursorObject(list->taskId, GetWindowAttribute(list->template.windowId, WINDOW_TILEMAP_LEFT) * 8 - 1, GetWindowAttribute(list->template.windowId, WINDOW_TILEMAP_TOP) * 8 + y - 1, 0);
-        break;
-    case 3:
-        if (list->taskId == TAIL_SENTINEL)
-            list->taskId = ListMenuAddCursorObject(list, 1);
-        ListMenuUpdateCursorObject(list->taskId, GetWindowAttribute(list->template.windowId, WINDOW_TILEMAP_LEFT) * 8 + x, GetWindowAttribute(list->template.windowId, WINDOW_TILEMAP_TOP) * 8 + y, 1);
-        break;
+    if (!list->hideCursor)
+        switch (list->template.cursorKind)
+        {
+        case 0:
+            ListMenuPrint(list, gText_SelectorArrow2, x, y);
+            break;
+        case 1:
+            break;
+        case 2:
+            if (list->taskId == TAIL_SENTINEL)
+                list->taskId = ListMenuAddCursorObject(list, 0);
+            ListMenuUpdateCursorObject(list->taskId, GetWindowAttribute(list->template.windowId, WINDOW_TILEMAP_LEFT) * 8 - 1, GetWindowAttribute(list->template.windowId, WINDOW_TILEMAP_TOP) * 8 + y - 1, 0);
+            break;
+        case 3:
+            if (list->taskId == TAIL_SENTINEL)
+                list->taskId = ListMenuAddCursorObject(list, 1);
+            ListMenuUpdateCursorObject(list->taskId, GetWindowAttribute(list->template.windowId, WINDOW_TILEMAP_LEFT) * 8 + x, GetWindowAttribute(list->template.windowId, WINDOW_TILEMAP_TOP) * 8 + y, 1);
+            break;
+        }
     }
-}
 
 static u8 ListMenuAddCursorObject(struct ListMenu *list, u32 cursorKind)
 {
@@ -755,4 +759,23 @@ void ListMenuLoadStdPalAt(u8 palOffset, u8 palId)
 void BlitMoveInfoIcon(u8 windowId, u8 iconId, u16 x, u16 y)
 {
     BlitBitmapRectToWindow(windowId, gFireRedMenuElements_Gfx + gMoveMenuInfoIcons[iconId].offset * 32, 0, 0, 128, 128, x, y, gMoveMenuInfoIcons[iconId].width, gMoveMenuInfoIcons[iconId].height);
+}
+
+void ListMenuResetPosition(u8 taskId)
+{
+    struct ListMenu *data = (struct ListMenu *)gTasks[taskId].data;
+    data->cursorPos = 0;
+    data->itemsAbove = 0;
+}
+
+void ListMenuHideCursor(u8 taskId)
+{
+    struct ListMenu *data = (struct ListMenu *)gTasks[taskId].data;
+    data->hideCursor = 1;
+}
+
+void ListMenuShowCursor(u8 taskId)
+{
+    struct ListMenu *data = (struct ListMenu *)gTasks[taskId].data;
+    data->hideCursor = 0;
 }

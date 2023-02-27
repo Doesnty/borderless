@@ -25,8 +25,8 @@
 #define MON_DATA_PP4               20
 #define MON_DATA_PP_BONUSES        21
 #define MON_DATA_NATURE_OVERRIDE   22
-#define MON_DATA_BEAUTY            23
-#define MON_DATA_CUTE              24
+#define MON_DATA_FREE_EV           23
+// cute is unused now
 #define MON_DATA_EXP               25
 #define MON_DATA_HP_EV             26
 #define MON_DATA_ATK_EV            27

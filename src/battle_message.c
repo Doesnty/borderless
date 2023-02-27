@@ -567,6 +567,12 @@ const u8 sText_ImakuniCard3[] = _("Your Active Pokémon is now Confused.");
 const u8 sText_ImakuniCard4[] = _("Imakuni wants you to play him as\na Basic Pokémon, but you can't.");
 const u8 sText_ImakuniCard5[] = _("A mysterious creature not listed\nin the Pokédex.");
 const u8 sText_ImakuniCard6[] = _("He asks kids around the world,\n'Who is cuter, Pikachu or me?'");
+const u8 sText_Identify[] = _("{B_DEF_NAME_WITH_PREFIX} was identified!\nCurrent HP: {B_BUFF1}/{B_BUFF2}.");
+const u8 sText_IdentifyItemAbility[] = _("It is holding {B_BUFF1}.\nIts ability is {B_DEF_ABILITY}.");
+const u8 sText_IdentifyMoveset1[] = _("First move: {B_BUFF1}.\nSecond move: {B_BUFF2}.");
+const u8 sText_IdentifyMoveset2[] = _("Third move: {B_BUFF1}.\nFourth move: {B_BUFF2}.");
+const u8 sText_Scheming[] = _("{B_ATK_NAME_WITH_PREFIX} is scheming!");
+
 
 
 const u8 *const gBattleStringsTable[] = {
@@ -999,6 +1005,11 @@ const u8 *const gBattleStringsTable[] = {
     [STRINGID_IMAKUNICARD4 - 12]                  = sText_ImakuniCard4,
     [STRINGID_IMAKUNICARD5 - 12]                  = sText_ImakuniCard5,
     [STRINGID_IMAKUNICARD6 - 12]                  = sText_ImakuniCard6,
+    [STRINGID_IDENTIFY - 12]                      = sText_Identify,
+    [STRINGID_IDENTIFYITEMABILITY - 12]           = sText_IdentifyItemAbility,
+    [STRINGID_IDENTIFYMOVESET1 - 12]              = sText_IdentifyMoveset1,
+    [STRINGID_IDENTIFYMOVESET2 - 12]              = sText_IdentifyMoveset2,
+    [STRINGID_SCHEMING - 12]                      = sText_Scheming,
 };
 
 const u16 gMissStringIds[] = {
@@ -1129,7 +1140,8 @@ const u16 gFirstTurnOfTwoStringIds[] = {
     STRINGID_PKMNFLEWHIGH,
     STRINGID_PKMNDUGHOLE,
     STRINGID_PKMNHIDUNDERWATER,
-    STRINGID_PKMNSPRANGUP
+    STRINGID_PKMNSPRANGUP,
+    STRINGID_SCHEMING,
 };
 
 const u16 gWrappedStringIds[] = {

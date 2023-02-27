@@ -3173,15 +3173,24 @@ AI_Unknown_End:: @ 81DBCA7
 	end
 
 AI_Roaming:: @ 81DBCA8
+	get_turn_count
+	if_equal 0, AI_Roaming_End
+	if_equal 1, AI_Roaming_End
+	if_equal 2, AI_Roaming_MaybeEnd
+	if_equal 3, AI_Roaming_MaybeEnd
+	if_equal 4, AI_Roaming_MaybeEnd
+    
 	if_status2 AI_USER, STATUS2_WRAPPED, AI_Roaming_End
 	if_status2 AI_USER, STATUS2_ESCAPE_PREVENTION, AI_Roaming_End
 	get_ability AI_TARGET
 	if_equal ABILITY_SHADOW_TAG, AI_Roaming_End
-	get_ability AI_USER
-	if_equal ABILITY_LEVITATE, AI_Roaming_Flee
 
 AI_Roaming_Flee:: @ 81DBCD4
 	flee
+
+AI_Roaming_MaybeEnd::
+	if_random_less_than 128, AI_Roaming_Flee
+    end
 
 AI_Roaming_End:: @ 81DBCD5
 	end

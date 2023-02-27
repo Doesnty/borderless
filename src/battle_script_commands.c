@@ -2949,6 +2949,8 @@ void SetMoveEffect(bool8 primary, u8 certain)
                 break;
             case MOVE_EFFECT_RECOIL_33: // Double Edge
                 gBattleMoveDamage = gHpDealt / 3;
+                if (gCurrentMove == MOVE_LUNAR_SEA)
+                    gBattleMoveDamage = (gBattleMons[gBattlerAttacker].maxHP + 1) / 2;
                 if (gBattleMoveDamage == 0)
                     gBattleMoveDamage = 1;
                 BattleScriptPush(gBattlescriptCurrInstr + 1);
@@ -9717,6 +9719,11 @@ static void sp11_dotracedability(void);
 static void sp12_moodswing(void);
 static void sp13_preparecatchexp(void);
 static void sp14_confuseplayer(void);
+static void sp15_identify1(void);
+static void sp16_identify2(void);
+static void sp17_identify3(void);
+static void sp18_identify4(void);
+static void sp19_corpseblaze(void);
 
 void (* const gBattleScriptingSpecialsTable[])(void) =
 {
@@ -9741,6 +9748,11 @@ void (* const gBattleScriptingSpecialsTable[])(void) =
     sp12_moodswing,
     sp13_preparecatchexp,
     sp14_confuseplayer,
+    sp15_identify1,
+    sp16_identify2,
+    sp17_identify3,
+    sp18_identify4,
+    sp19_corpseblaze,
 };
 
 static void atkF8_special(void)
@@ -10263,4 +10275,47 @@ static void sp14_confuseplayer(void)
 {
     gEffectBattler = 0;
     gBattleMons[gEffectBattler].status2 |= (((Random()) % 0x4)) + 2;
+}
+
+static void sp15_identify1(void)
+{
+    PREPARE_HWORD_NUMBER_BUFFER(gBattleTextBuff1, 3, gBattleMons[gBattlerTarget].hp);
+    PREPARE_HWORD_NUMBER_BUFFER(gBattleTextBuff2, 3, gBattleMons[gBattlerTarget].maxHP);
+}
+
+static void sp16_identify2(void)
+{
+    if (gBattleMons[gBattlerTarget].item)
+    {
+        PREPARE_ITEM_BUFFER(gBattleTextBuff1, gBattleMons[gBattlerTarget].item);
+    }
+    else
+    {
+        gBattleTextBuff1[0] = CHAR_n;
+        gBattleTextBuff1[1] = CHAR_o;
+        gBattleTextBuff1[2] = CHAR_t;
+        gBattleTextBuff1[3] = CHAR_h;
+        gBattleTextBuff1[4] = CHAR_i;
+        gBattleTextBuff1[5] = CHAR_n;
+        gBattleTextBuff1[6] = CHAR_g;
+        gBattleTextBuff1[7] = EOS;
+    }
+}
+
+static void sp17_identify3(void)
+{
+    PREPARE_MOVE_BUFFER(gBattleTextBuff1, gBattleMons[gBattlerTarget].moves[0]);
+    PREPARE_MOVE_BUFFER(gBattleTextBuff2, gBattleMons[gBattlerTarget].moves[1]);
+}
+
+static void sp18_identify4(void)
+{
+    PREPARE_MOVE_BUFFER(gBattleTextBuff1, gBattleMons[gBattlerTarget].moves[2]);
+    PREPARE_MOVE_BUFFER(gBattleTextBuff2, gBattleMons[gBattlerTarget].moves[3]);
+}
+
+static void sp19_corpseblaze(void)
+{
+    if (gBattleMons[gBattlerTarget].hp == 0)
+        gBattlescriptCurrInstr = BattleScript_CorpseBlazeKills;
 }

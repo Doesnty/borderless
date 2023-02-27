@@ -125,6 +125,11 @@ extern const u8 gFameCheckerDaisyName[]; // "DAISY$"
 extern const u8 gFameCheckerBillName[]; // "BILL$"
 extern const u8 gFameCheckerMrFujiName[]; // "FUJI$"
 
+extern const u8 gEffortGaugeLabels[];
+extern const u8 gEffortGaugeString2[];
+extern const u8 gEffortGaugeHelp1[];
+extern const u8 gEffortGaugeHelp2[];
+
 // teachy_tv
 extern const u8 gTeachyTvString_TeachBattle[];
 extern const u8 gTeachyTvString_StatusProblems[];
