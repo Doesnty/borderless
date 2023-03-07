@@ -216,6 +216,17 @@ const struct SpriteTemplate gStompFootSpriteTemplate =
     .callback = AnimStompFoot,
 };
 
+const struct SpriteTemplate gHorsepowerHoofSpriteTemplate =
+{
+    .tileTag = ANIM_TAG_HORSEPOWER,
+    .paletteTag = ANIM_TAG_HORSEPOWER,
+    .oam = &gOamData_AffineOff_ObjNormal_32x32,
+    .anims = gDummySpriteAnimTable,
+    .images = NULL,
+    .affineAnims = gDummySpriteAffineAnimTable,
+    .callback = AnimStompFoot,
+};
+
 const struct SpriteTemplate gDizzyPunchDuckSpriteTemplate =
 {
     .tileTag = ANIM_TAG_DUCK,
@@ -420,6 +431,17 @@ const struct SpriteTemplate gFocusPunchFistSpriteTemplate =
     .images = NULL,
     .affineAnims = sAffineAnims_FocusPunchFist,
     .callback = AnimFocusPunchFist,
+};
+
+const struct SpriteTemplate gExclamationPointSpriteTemplate =
+{
+    .tileTag = ANIM_TAG_EXCLAMATION_POINT,
+    .paletteTag = ANIM_TAG_EXCLAMATION_POINT,
+    .oam = &gOamData_AffineOff_ObjNormal_32x32,
+    .anims = gDummySpriteAnimTable,
+    .images = NULL,
+    .affineAnims = gDummySpriteAffineAnimTable,
+    .callback = AnimBasicFistOrFoot,
 };
 
 static void unc_080B08A0(struct Sprite *sprite)

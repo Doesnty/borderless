@@ -257,6 +257,17 @@ const struct SpriteTemplate gPsywaveRingSpriteTemplate =
     .callback = AnimToTargetInSinWave,
 };
 
+const struct SpriteTemplate gDarkVoidRingSpriteTemplate =
+{
+    .tileTag = ANIM_TAG_BROKEN_RING,
+    .paletteTag = ANIM_TAG_BROKEN_RING,
+    .oam = &gOamData_AffineDouble_ObjNormal_16x32,
+    .anims = gDummySpriteAnimTable,
+    .images = NULL,
+    .affineAnims = gGrowingRingAffineAnimTable,
+    .callback = AnimToTargetInSinWave,
+};
+
 static const union AffineAnimCmd sAffineAnim_HydroCannonCharge[] =
 {
     AFFINEANIMCMD_FRAME(0x3, 0x3, 10, 50),

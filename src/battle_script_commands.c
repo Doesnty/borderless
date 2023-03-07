@@ -8396,14 +8396,7 @@ static void atkC3_trysetfutureattack(void)
         gWishFutureKnock.futureSightMove[gBattlerTarget] = gCurrentMove;
         gWishFutureKnock.futureSightAttacker[gBattlerTarget] = gBattlerAttacker;
         gWishFutureKnock.futureSightCounter[gBattlerTarget] = 3;
-        gWishFutureKnock.futureSightDmg[gBattlerTarget] = CalculateBaseDamage(&gBattleMons[gBattlerAttacker],
-                                                                              &gBattleMons[gBattlerTarget],
-                                                                              gCurrentMove,
-                                                                              gSideStatuses[GET_BATTLER_SIDE(gBattlerTarget)],
-                                                                              0,
-                                                                              0,
-                                                                              gBattlerAttacker,
-                                                                              gBattlerTarget);
+        gWishFutureKnock.futureSightDmg[gBattlerTarget] = (gBattleMons[gBattlerAttacker].level * 15) / 10;
         if (gProtectStructs[gBattlerAttacker].helpingHand)
             gWishFutureKnock.futureSightDmg[gBattlerTarget] = gWishFutureKnock.futureSightDmg[gBattlerTarget] * 15 / 10;
         if (gCurrentMove == MOVE_APOLLON)
@@ -9752,7 +9745,7 @@ void (* const gBattleScriptingSpecialsTable[])(void) =
     sp16_identify2,
     sp17_identify3,
     sp18_identify4,
-    sp19_corpseblaze,
+    sp19_corpseblaze,    
 };
 
 static void atkF8_special(void)

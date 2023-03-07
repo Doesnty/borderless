@@ -262,6 +262,7 @@ gBattleScriptsForMoveEffects::
     .4byte BattleScript_EffectIdentify
     .4byte BattleScript_EffectCorpseBlaze
     .4byte BattleScript_EffectGroupPrank
+    .4byte BattleScript_EffectFinalGambit
 
 BattleScript_EffectHit::
 BattleScript_HitFromAtkCanceler::
@@ -308,8 +309,8 @@ BattleScript_MoveMissed::
 	goto BattleScript_MoveEnd
 
 BattleScript_SleepPowderChecks:
-	jumpiftype BS_TARGET, TYPE_NATURE, BattleScript_NotAffected
-	jumpifability BS_TARGET, ABILITY_WIDE_HAT, BattleScript_NotAffected
+	jumpiftype BS_TARGET, TYPE_NATURE, BattleScript_NotAffectedPpReduce
+	jumpifability BS_TARGET, ABILITY_WIDE_HAT, BattleScript_NotAffectedPpReduce
     goto BattleScript_EffectDoSleep
 
 BattleScript_EffectSleep::
@@ -1048,8 +1049,8 @@ BattleScript_PrintReflectLightScreenSafeguardString::
 	goto BattleScript_MoveEnd
 
 BattleScript_PoisonPowderCheck:
-	jumpiftype BS_TARGET, TYPE_NATURE, BattleScript_NotAffected
-	jumpifability BS_TARGET, ABILITY_WIDE_HAT, BattleScript_NotAffected
+	jumpiftype BS_TARGET, TYPE_NATURE, BattleScript_NotAffectedPpReduce
+	jumpifability BS_TARGET, ABILITY_WIDE_HAT, BattleScript_NotAffectedPpReduce
     goto BattleScript_EffectDoPoison
 
 BattleScript_EffectPoison::
@@ -1076,8 +1077,8 @@ BattleScript_EffectDoPoison:
 	goto BattleScript_MoveEnd
 
 BattleScript_ParalyzePowderCheck:
-	jumpiftype BS_TARGET, TYPE_NATURE, BattleScript_NotAffected
-	jumpifability BS_TARGET, ABILITY_WIDE_HAT, BattleScript_NotAffected
+	jumpiftype BS_TARGET, TYPE_NATURE, BattleScript_NotAffectedPpReduce
+	jumpifability BS_TARGET, ABILITY_WIDE_HAT, BattleScript_NotAffectedPpReduce
     goto BattleScript_EffectDoParalyze
 
 BattleScript_EffectParalyze::
@@ -2167,6 +2168,9 @@ BattleScript_ButItFailed::
 	waitmessage 0x40
 	goto BattleScript_MoveEnd
 
+BattleScript_NotAffectedPpReduce::
+	attackstring
+	ppreduce
 BattleScript_NotAffected::
 	pause 0x20
 	orbyte gMoveResultFlags, MOVE_RESULT_DOESNT_AFFECT_FOE
@@ -2278,8 +2282,8 @@ BattleScript_FlatterTryConfuse::
 	goto BattleScript_MoveEnd
 
 BattleScript_BurnPowderCheck:
-	jumpiftype BS_TARGET, TYPE_NATURE, BattleScript_NotAffected
-	jumpifability BS_TARGET, ABILITY_WIDE_HAT, BattleScript_NotAffected
+	jumpiftype BS_TARGET, TYPE_NATURE, BattleScript_NotAffectedPpReduce
+	jumpifability BS_TARGET, ABILITY_WIDE_HAT, BattleScript_NotAffectedPpReduce
     goto BattleScript_EffectDoWillOWisp
 
 BattleScript_EffectWillOWisp::
@@ -3601,7 +3605,7 @@ BattleScript_FutureAttackAnimate::
 	goto BattleScript_DoFutureAttackHit
 
 BattleScript_FutureHitAnimDoomDesire::
-	playanimation BS_ATTACKER, B_ANIM_DOOM_DESIRE_HIT, NULL
+	playanimation BS_TARGET, B_ANIM_DOOM_DESIRE_HIT, NULL
 BattleScript_DoFutureAttackHit::
 	effectivenesssound
 	hitanimation BS_TARGET

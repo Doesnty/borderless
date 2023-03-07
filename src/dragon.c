@@ -217,7 +217,7 @@ static void sub_80B72F8(struct Sprite *sprite)
     sprite->data[4] = GetBattlerSpriteCoord(gBattleAnimTarget, 3);
     if (GetBattlerSide(gBattleAnimAttacker) != B_SIDE_PLAYER)
     {
-        sprite->x -= gBattleAnimArgs[1];
+        sprite->x -= gBattleAnimArgs[0];
         sprite->y += gBattleAnimArgs[1];
         sprite->data[2] -= gBattleAnimArgs[2];
         sprite->data[4] += gBattleAnimArgs[3];

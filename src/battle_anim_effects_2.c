@@ -316,6 +316,17 @@ const struct SpriteTemplate gEggThrowSpriteTemplate =
     .callback = AnimThrowProjectile,
 };
 
+const struct SpriteTemplate gSeedThrowSpriteTemplate =    
+{
+    .tileTag = ANIM_TAG_SEED,
+    .paletteTag = ANIM_TAG_SEED,
+    .oam = &gOamData_AffineOff_ObjNormal_16x16,
+    .anims = gDummySpriteAnimTable,
+    .images = NULL,
+    .affineAnims = gDummySpriteAffineAnimTable,
+    .callback = AnimThrowProjectile,
+};
+
 static const struct SpriteTemplate sUnknown_83E3D18 =
 {
     .tileTag = ANIM_TAG_VOID_LINES,
@@ -732,6 +743,17 @@ const struct SpriteTemplate gBlendThinRingExpandingSpriteTemplate =
     .images = NULL,
     .affineAnims = sThinRingExpandingAffineAnimTable,
     .callback = AnimBlendThinRing,
+};
+
+const struct SpriteTemplate gAquaRingShrinkingSpriteTemplate =
+{
+    .tileTag = ANIM_TAG_THIN_RING,
+    .paletteTag = ANIM_TAG_RAIN_DROPS,
+    .oam = &gOamData_AffineDouble_ObjBlend_64x64,
+    .anims = gDummySpriteAnimTable,
+    .images = NULL,
+    .affineAnims = sThinRingShrinkingAffineAnimTable,
+    .callback = AnimSpriteOnMonPos,
 };
 
 const struct SpriteTemplate gHyperVoiceRingSpriteTemplate =    

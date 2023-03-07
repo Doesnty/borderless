@@ -296,6 +296,15 @@
 #define ANIM_TAG_SLASH_2                    (ANIM_SPRITES_START + 286)
 #define ANIM_TAG_WHIP_HIT                   (ANIM_SPRITES_START + 287)
 #define ANIM_TAG_BLUE_RING_2                (ANIM_SPRITES_START + 288)
+#define ANIM_TAG_BURN_POWDER                (ANIM_SPRITES_START + 289)
+#define ANIM_TAG_BLACK_SHADOW               (ANIM_SPRITES_START + 290)
+#define ANIM_TAG_EXCLAMATION_POINT          (ANIM_SPRITES_START + 291)
+#define ANIM_TAG_DRACO_METEOR               (ANIM_SPRITES_START + 292)
+#define ANIM_TAG_APOLLON                    (ANIM_SPRITES_START + 293)
+#define ANIM_TAG_AURA_SPHERE                (ANIM_SPRITES_START + 294)
+#define ANIM_TAG_BROKEN_RING                (ANIM_SPRITES_START + 295)
+#define ANIM_TAG_TAILWIND_PAL               (ANIM_SPRITES_START + 296)
+#define ANIM_TAG_HORSEPOWER                 (ANIM_SPRITES_START + 297)
 
 // battlers
 #define ANIM_ATTACKER    0

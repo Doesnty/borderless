@@ -3012,7 +3012,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
 
     [MOVE_FINAL_GAMBIT] = 
     {
-        .effect = EFFECT_NEW,
+        .effect = EFFECT_FINAL_GAMBIT,
         .power = 1,
         .type = TYPE_FIGHTING,
         .moveClass = CLASS_SPECIAL,
@@ -4931,7 +4931,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
     [MOVE_APOLLON] = 
     {
         .effect = EFFECT_FUTURE_SIGHT,
-        .power = 120,
+        .power = 1,
         .type = TYPE_STEEL,
         .moveClass = CLASS_PHYSICAL,
         .accuracy = 100,
@@ -5735,6 +5735,20 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .accuracy = 100,
         .pp = 5,
         .secondaryEffectChance = 0,
+        .priority = 0,
+        .target = MOVE_TARGET_SELECTED,
+        .flags = FLAG_PROTECT_AFFECTED,
+    },
+
+    [MOVE_SCALD] = 
+    {
+        .effect = EFFECT_THAW_HIT,
+        .power = 80,
+        .type = TYPE_WATER,
+        .moveClass = CLASS_SPECIAL,
+        .accuracy = 100,
+        .pp = 20,
+        .secondaryEffectChance = 30,
         .priority = 0,
         .target = MOVE_TARGET_SELECTED,
         .flags = FLAG_PROTECT_AFFECTED,

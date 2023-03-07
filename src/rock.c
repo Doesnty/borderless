@@ -313,6 +313,17 @@ const struct SpriteTemplate gWeatherBallRockDownSpriteTemplate =
     .callback = AnimWeatherBallDown,
 };
 
+const struct SpriteTemplate gRockWreckerSpriteTemplate =
+{
+    .tileTag = ANIM_TAG_ROCKS,
+    .paletteTag = ANIM_TAG_ROCKS,
+    .oam = &gOamData_AffineOff_ObjNormal_32x32,
+    .anims = sAnims_BasicRock,
+    .images = NULL,
+    .affineAnims = gDummySpriteAffineAnimTable,
+    .callback = TranslateAnimSpriteToTargetMonLocation,
+};
+
 static void AnimFallingRock(struct Sprite *sprite)
 {
     if (gBattleAnimArgs[3] != 0)
@@ -411,6 +422,34 @@ void AnimTask_LoadSandstormBackground(u8 taskId)
     AnimLoadCompressedBgTilemap(animBg.bgId, gFile_graphics_battle_anims_backgrounds_sandstorm_brew_tilemap);
     AnimLoadCompressedBgGfx(animBg.bgId, gFile_graphics_battle_anims_backgrounds_sandstorm_brew_sheet, animBg.tilesOffset);
     LoadCompressedPalette(gBattleAnimSpritePal_FlyingDirt, animBg.paletteId * 16, 32);
+    if (IsContest())
+        RelocateBattleBgPal(animBg.paletteId, animBg.bgTilemap, 0, 0);
+    if (gBattleAnimArgs[0] && GetBattlerSide(gBattleAnimAttacker) != B_SIDE_PLAYER)
+        var0 = 1;
+    gTasks[taskId].data[0] = var0;
+    gTasks[taskId].func = sub_80B490C;
+}
+
+void AnimTask_LoadTailwindBackground(u8 taskId)
+{
+    s32 var0;
+    struct BattleAnimBgData animBg;
+
+    var0 = 0;
+    SetGpuReg(REG_OFFSET_BLDCNT, BLDCNT_TGT1_BG1 | BLDCNT_TGT2_ALL | BLDCNT_EFFECT_BLEND);
+    SetGpuReg(REG_OFFSET_BLDALPHA, BLDALPHA_BLEND(0, 16));
+    SetAnimBgAttribute(1, BG_ANIM_PRIORITY, 1);
+    SetAnimBgAttribute(1, BG_ANIM_SCREEN_SIZE, 0);
+    if (!IsContest())
+        SetAnimBgAttribute(1, BG_ANIM_CHAR_BASE_BLOCK, 1);
+    gBattle_BG1_X = 0;
+    gBattle_BG1_Y = 0;
+    SetGpuReg(REG_OFFSET_BG1HOFS, gBattle_BG1_X);
+    SetGpuReg(REG_OFFSET_BG1VOFS, gBattle_BG1_Y);
+    GetBattleAnimBg1Data(&animBg);
+    AnimLoadCompressedBgTilemap(animBg.bgId, gFile_graphics_battle_anims_backgrounds_sandstorm_brew_tilemap);
+    AnimLoadCompressedBgGfx(animBg.bgId, gFile_graphics_battle_anims_backgrounds_sandstorm_brew_sheet, animBg.tilesOffset);
+    LoadCompressedPalette(gBattleAnimSpritePal_Tailwind, animBg.paletteId * 16, 32);
     if (IsContest())
         RelocateBattleBgPal(animBg.paletteId, animBg.bgTilemap, 0, 0);
     if (gBattleAnimArgs[0] && GetBattlerSide(gBattleAnimAttacker) != B_SIDE_PLAYER)

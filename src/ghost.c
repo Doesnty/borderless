@@ -99,6 +99,17 @@ const struct SpriteTemplate gShadowBallSpriteTemplate =
     .callback = AnimShadowBall,
 };
 
+const struct SpriteTemplate gAuraSphereSpriteTemplate =
+{
+    .tileTag = ANIM_TAG_AURA_SPHERE,
+    .paletteTag = ANIM_TAG_AURA_SPHERE,
+    .oam = &gOamData_AffineNormal_ObjNormal_32x32,
+    .anims = gDummySpriteAnimTable,
+    .images = NULL,
+    .affineAnims = sAffineAnims_ShadowBall,
+    .callback = AnimShadowBall,
+};
+
 const union AnimCmd sAnim_Lick[] =
 {
     ANIMCMD_FRAME(0, 2),
@@ -147,6 +158,17 @@ const struct SpriteTemplate gDestinyBondWhiteShadowSpriteTemplate =
     .images = NULL,
     .affineAnims = gDummySpriteAffineAnimTable,
     .callback = AnimDestinyBondWhiteShadow,
+};
+
+const struct SpriteTemplate gShadowSneakBlackShadowSpriteTemplate =
+{
+    .tileTag = ANIM_TAG_BLACK_SHADOW,
+    .paletteTag = ANIM_TAG_BLACK_SHADOW,
+    .oam = &gOamData_AffineOff_ObjBlend_64x32,
+    .anims = gDummySpriteAnimTable,
+    .images = NULL,
+    .affineAnims = gDummySpriteAffineAnimTable,
+    .callback = TranslateAnimSpriteToTargetMonLocation,
 };
 
 const struct SpriteTemplate gCurseNailSpriteTemplate =

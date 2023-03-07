@@ -410,5 +410,6 @@ const u8 gMoveNames[][15] = {
     _("Identify"),
     _("Corpse Blaze"),
     _("Group Prank"),
+    _("Scald"),
     _("Me First"),
 };

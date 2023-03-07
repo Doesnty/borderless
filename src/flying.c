@@ -94,6 +94,17 @@ const struct SpriteTemplate gAirWaveCrescentSpriteTemplate =
     .callback = AnimAirWaveCrescent,
 };
 
+const struct SpriteTemplate gLeafStormCrescentSpriteTemplate =
+{
+    .tileTag = ANIM_TAG_RAZOR_LEAF,
+    .paletteTag = ANIM_TAG_RAZOR_LEAF,
+    .oam = &gOamData_AffineOff_ObjNormal_32x16,
+    .anims = sAffineAnims_AirWaveCrescent,
+    .images = NULL,
+    .affineAnims = gDummySpriteAffineAnimTable,
+    .callback = AnimAirWaveCrescent,
+};
+
 static const union AffineAnimCmd sAffineAnim_FlyBallUp[] =
 {
     AFFINEANIMCMD_FRAME(0x10, 0x100, 0, 0),
