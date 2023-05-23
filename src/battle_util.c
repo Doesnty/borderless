@@ -882,7 +882,7 @@ u8 DoBattlerEndTurnEffects(void)
                         gBattleTextBuff1[3] = *(gBattleStruct->wrappedMove + gActiveBattler * 2 + 1);
                         gBattleTextBuff1[4] = EOS;
                         gBattlescriptCurrInstr = BattleScript_WrapTurnDmg;
-                        gBattleMoveDamage = gBattleMons[gActiveBattler].maxHP / 16;
+                        gBattleMoveDamage = gBattleMons[gActiveBattler].maxHP / 8;
                         if (gBattleMoveDamage == 0)
                             gBattleMoveDamage = 1;
                     }
@@ -1766,6 +1766,7 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u8 ability, u8 special, u16 moveA
                 }
                 break;
             case ABILITY_INTIMIDATE:
+            case ABILITY_FRISK:
                 if (!(gSpecialStatuses[battler].intimidatedMon))
                 {
                     gStatuses3[battler] |= STATUS3_INTIMIDATE_POKES;
@@ -2116,6 +2117,7 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u8 ability, u8 special, u16 moveA
                  && gBattleMoves[moveArg].power != 0
                  && TARGET_TURN_DAMAGED
                  && !IS_BATTLER_OF_TYPE(battler, moveType)
+                 && gBattleMons[gBattlerAttacker].ability != ABILITY_LONG_REACH
                  && gBattleMons[battler].hp != 0)
                 {
                     SET_BATTLER_TYPE(battler, moveType);
@@ -2130,6 +2132,7 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u8 ability, u8 special, u16 moveA
                  && gBattleMons[gBattlerAttacker].hp != 0
                  && !gProtectStructs[gBattlerAttacker].confusionSelfDmg
                  && TARGET_TURN_DAMAGED
+                 && gBattleMons[gBattlerAttacker].ability != ABILITY_LONG_REACH
                  && (gBattleMoves[moveArg].flags & FLAG_MAKES_CONTACT))
                 {
                     gBattleMoveDamage = gBattleMons[gBattlerAttacker].maxHP / 16;
@@ -2145,6 +2148,7 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u8 ability, u8 special, u16 moveA
                  && gBattleMons[gBattlerAttacker].hp != 0
                  && !gProtectStructs[gBattlerAttacker].confusionSelfDmg
                  && TARGET_TURN_DAMAGED
+                 && gBattleMons[gBattlerAttacker].ability != ABILITY_LONG_REACH
                  && (gBattleMoves[moveArg].flags & FLAG_MAKES_CONTACT))
                 {
                     gBattleMoveDamage = gBattleMons[gBattlerAttacker].maxHP / 8;
@@ -2161,6 +2165,7 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u8 ability, u8 special, u16 moveA
                  && gBattleMons[gBattlerTarget].hp == 0
                  && !gProtectStructs[gBattlerAttacker].confusionSelfDmg
                  && TARGET_TURN_DAMAGED
+                 && gBattleMons[gBattlerAttacker].ability != ABILITY_LONG_REACH
                  && (gBattleMoves[moveArg].flags & FLAG_MAKES_CONTACT))
                 {
                     gBattleMoveDamage = gBattleMons[gBattlerAttacker].maxHP / 4;
@@ -2176,6 +2181,7 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u8 ability, u8 special, u16 moveA
                  && gBattleMons[gBattlerAttacker].hp != 0
                  && !gProtectStructs[gBattlerAttacker].confusionSelfDmg
                  && TARGET_TURN_DAMAGED
+                 && gBattleMons[gBattlerAttacker].ability != ABILITY_LONG_REACH
                  && (gBattleMoves[moveArg].flags & FLAG_MAKES_CONTACT)
                  && (Random() % 10) == 0)
                 {
@@ -2197,6 +2203,7 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u8 ability, u8 special, u16 moveA
                  && gBattleMons[gBattlerAttacker].hp != 0
                  && !gProtectStructs[gBattlerAttacker].confusionSelfDmg
                  && TARGET_TURN_DAMAGED
+                 && gBattleMons[gBattlerAttacker].ability != ABILITY_LONG_REACH
                  && (gBattleMoves[moveArg].flags & FLAG_MAKES_CONTACT)
                  && (Random() % 3) == 0)
                 {
@@ -2212,6 +2219,7 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u8 ability, u8 special, u16 moveA
                  && gBattleMons[gBattlerAttacker].hp != 0
                  && !gProtectStructs[gBattlerAttacker].confusionSelfDmg
                  && TARGET_TURN_DAMAGED
+                 && gBattleMons[gBattlerAttacker].ability != ABILITY_LONG_REACH
                  && (gBattleMoves[moveArg].flags & FLAG_MAKES_CONTACT)
                  && (Random() % 3) == 0)
                 {
@@ -2228,6 +2236,7 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u8 ability, u8 special, u16 moveA
                  && !gProtectStructs[gBattlerAttacker].confusionSelfDmg
                  && (gBattleMoves[moveArg].flags & FLAG_MAKES_CONTACT)
                  && TARGET_TURN_DAMAGED
+                 && gBattleMons[gBattlerAttacker].ability != ABILITY_LONG_REACH
                  && (Random() % 3) == 0)
                 {
                     gBattleCommunication[MOVE_EFFECT_BYTE] = MOVE_EFFECT_AFFECTS_USER | MOVE_EFFECT_BURN;
@@ -2242,6 +2251,7 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u8 ability, u8 special, u16 moveA
                  && gBattleMons[gBattlerAttacker].hp != 0
                  && !gProtectStructs[gBattlerAttacker].confusionSelfDmg
                  && (gBattleMoves[moveArg].flags & FLAG_MAKES_CONTACT)
+                 && gBattleMons[gBattlerAttacker].ability != ABILITY_LONG_REACH
                  && TARGET_TURN_DAMAGED
                  && gBattleMons[gBattlerTarget].hp != 0
                  && (Random() % 3) == 0
@@ -2262,6 +2272,7 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u8 ability, u8 special, u16 moveA
                  && gBattleMons[gBattlerAttacker].hp != 0
                  && !gProtectStructs[gBattlerAttacker].confusionSelfDmg
                  && (gBattleMoves[moveArg].flags & FLAG_MAKES_CONTACT)
+                 && gBattleMons[gBattlerAttacker].ability != ABILITY_LONG_REACH
                  && TARGET_TURN_DAMAGED
                  && gBattleMons[gBattlerAttacker].ability != ABILITY_CONTAGION)
                 {
@@ -2517,6 +2528,15 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u8 ability, u8 special, u16 moveA
                     ++effect;
                     break;
                 }
+                else if (gBattleMons[i].ability == ABILITY_FRISK && gStatuses3[i] & STATUS3_INTIMIDATE_POKES)
+                {
+                    gLastUsedAbility = ABILITY_INTIMIDATE;
+                    gStatuses3[i] &= ~(STATUS3_INTIMIDATE_POKES);
+                    BattleScriptPushCursorAndCallback(BattleScript_Frisk1);
+                    gBattleStruct->intimidateBattler = i;
+                    ++effect;
+                    break;
+                }
             }
             break;
         case ABILITYEFFECT_TRACE: // 11
@@ -2736,6 +2756,16 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u8 ability, u8 special, u16 moveA
                     gStatuses3[i] &= ~(STATUS3_INTIMIDATE_POKES);
                     BattleScriptPushCursor();
                     gBattlescriptCurrInstr = BattleScript_IntimidateActivates;
+                    gBattleStruct->intimidateBattler = i;
+                    ++effect;
+                    break;
+                }
+                if (gBattleMons[i].ability == ABILITY_FRISK && (gStatuses3[i] & STATUS3_INTIMIDATE_POKES))
+                {
+                    gLastUsedAbility = ABILITY_FRISK;
+                    gStatuses3[i] &= ~(STATUS3_INTIMIDATE_POKES);
+                    BattleScriptPushCursor();
+                    gBattlescriptCurrInstr = BattleScript_Frisk2;
                     gBattleStruct->intimidateBattler = i;
                     ++effect;
                     break;

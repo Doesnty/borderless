@@ -5754,6 +5754,48 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .flags = FLAG_PROTECT_AFFECTED,
     },
 
+    [MOVE_CIRCLE_THROW] = 
+    {
+        .effect = EFFECT_CIRCLE_THROW,
+        .power = 60,
+        .type = TYPE_FIGHTING,
+        .moveClass = CLASS_PHYSICAL,
+        .accuracy = 90,
+        .pp = 10,
+        .secondaryEffectChance = 0,
+        .priority = -6,
+        .target = MOVE_TARGET_SELECTED,
+        .flags = FLAG_MAKES_CONTACT | FLAG_PROTECT_AFFECTED,
+    },
+
+    [MOVE_CLEAR_SMOG] = 
+    {
+        .effect = EFFECT_CLEAR_SMOG,
+        .power = 50,
+        .type = TYPE_MIASMA,
+        .moveClass = CLASS_SPECIAL,
+        .accuracy = 0,
+        .pp = 15,
+        .secondaryEffectChance = 0,
+        .priority = 0,
+        .target = MOVE_TARGET_SELECTED,
+        .flags = FLAG_PROTECT_AFFECTED,
+    },
+
+    [MOVE_BUTCHERY] = 
+    {
+        .effect = EFFECT_HIT,
+        .power = 120,
+        .type = TYPE_STEEL,
+        .moveClass = CLASS_PHYSICAL,
+        .accuracy = 100,
+        .pp = 5,
+        .secondaryEffectChance = 0,
+        .priority = 0,
+        .target = MOVE_TARGET_SELECTED,
+        .flags = FLAG_MAKES_CONTACT | FLAG_PROTECT_AFFECTED,
+    },
+
     [MOVE_ME_FIRST] = 
     {
         .effect = EFFECT_ME_FIRST,

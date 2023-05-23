@@ -91,7 +91,7 @@ SSAnne_Kitchen_EventScript_ItemGreatBall:: @ 81BE6AC
 	end
 
 Route9_EventScript_ItemTM40:: @ 81BE6B9
-	finditem ITEM_TM40
+	finditem ITEM_TM73_SHOCK_WAVE
 	end
 
 RocketHideout_B1F_EventScript_ItemEscapeRope:: @ 81BE6C6

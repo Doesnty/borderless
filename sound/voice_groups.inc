@@ -8941,3 +8941,6 @@ voicegroup191:: @ 84A2C58
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0 @ 84A2D48
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0 @ 84A2D48
 
+	.align 2
+voicegroup192::
+	voice_directsound_no_resample 60, 0, DirectSoundWaveData_se_abyss_nova_siren, 255, 255, 255, 0

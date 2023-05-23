@@ -247,6 +247,17 @@ const struct SpriteTemplate gPowerAbsorptionOrbSpriteTemplate =
     .callback = AnimPowerAbsorptionOrb,
 };
 
+const struct SpriteTemplate gAcupressureSpriteTemplate =
+{
+    .tileTag = ANIM_TAG_FINGER_3,
+    .paletteTag = ANIM_TAG_FINGER_3,
+    .oam = &gOamData_AffineOff_ObjNormal_32x32,
+    .anims = gDummySpriteAnimTable,
+    .images = NULL,
+    .affineAnims = gDummySpriteAffineAnimTable,
+    .callback = AnimNeedleArmSpike,
+};
+
 const struct SpriteTemplate gSolarbeamBigOrbSpriteTemplate =
 {
     .tileTag = ANIM_TAG_ORBS,

@@ -3030,7 +3030,7 @@
       "price": 100,
       "holdEffect": "HOLD_EFFECT_DOUBLE_PRIZE",
       "holdEffectParam": 10,
-      "description_english": "An item to be held by a Puppet.\\nIt doubles the battle money if the\\nholding Puppet takes part.",
+      "description_english": "An item to be held by a Puppet.\\nIt doubles prize money, and\\nsharply boosts Mike's critical rate.",
       "importance": 0,
       "exitsBagOnUse": 0,
       "pocket": "POCKET_ITEMS",

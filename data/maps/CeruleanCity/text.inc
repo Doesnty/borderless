@@ -3,7 +3,7 @@ CeruleanCity_Text_RivalIntro:: @ 817EAD7
     .string "You're still struggling along back\n"
     .string "here?\p"
     .string "I'm doing great! I caught a bunch\n"
-    .string "of strong and smart POKéMON!\p"
+    .string "of strong and smart Puppets!\p"
     .string "Here, let me see what you caught,\n"
     .string "{PLAYER}!$"
 
@@ -14,13 +14,13 @@ CeruleanCity_Text_RivalDefeat:: @ 817EB71
 
 CeruleanCity_Text_RivalPostBattle:: @ 817EB95
     .string "{RIVAL}: Hey, guess what?\p"
-    .string "I went to BILL's and got him to\n"
-    .string "show me his rare POKéMON.\p"
+    .string "I went to Bill's and got him to\n"
+    .string "show me his rare Puppets.\p"
     .string "That added a lot of pages to my\n"
-    .string "POKéDEX!\p"
-    .string "After all, BILL's world famous as a\n"
-    .string "POKéMANIAC.\p"
-    .string "He invented the POKéMON Storage\n"
+    .string "Tohodex!\p"
+    .string "After all, Bill's world famous as a\n"
+    .string "Tohomaniac.\p"
+    .string "He invented the Puppet Storage\n"
     .string "System on PC, too.\p"
     .string "Since you're using his system,\n"
     .string "you should go thank him.\p"
@@ -35,10 +35,12 @@ CeruleanCity_Text_OhRightLittlePresentAsFavor:: @ 817ECD4
     .string "present as a favor.$"
 
 CeruleanCity_Text_ExplainFameCheckerSmellYa:: @ 817ED5D
-    .string "A chatty gossip like you…\n"
+    .string "A persistent tryhard like you…\n"
     .string "That thing's perfect.\p"
-    .string "I don't need it because I don't\n"
-    .string "give a hoot about others.\p"
+    .string "I don't need it because my\n"
+    .string "Puppets are already perfect.\p"
+    .string "...I'm just kidding, of course.\n"
+    .string "That one's a spare.\p"
     .string "All right, this time I really am\n"
     .string "gone. Smell ya!$"
 

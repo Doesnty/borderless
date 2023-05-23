@@ -156,6 +156,7 @@
 #define STATUS3_TRACE                   0x100000
 #define STATUS3_AEGIS_MERGE             0x200000
 #define STATUS3_SEMI_INVULNERABLE       (STATUS3_UNDERGROUND | STATUS3_ON_AIR | STATUS3_UNDERWATER)
+#define STATUS3_GLAIVE_RUSH             0x400000
 
 // Not really sure what a "hitmarker" is.
 #define HITMARKER_x10                   0x00000010

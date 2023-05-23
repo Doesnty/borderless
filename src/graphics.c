@@ -760,6 +760,7 @@ const u32 gBattleAnimSpriteGfx_Electricity[] = INCBIN_U32("graphics/battle_anims
 const u32 gBattleAnimSpritePal_ElectricOrbs[] = INCBIN_U32("graphics/battle_anims/sprites/electric_orbs.gbapal.lz");
 
 const u32 gBattleAnimSpriteGfx_Finger2[] = INCBIN_U32("graphics/battle_anims/sprites/finger_2.4bpp.lz");
+const u32 gBattleAnimSpriteGfx_Finger3[] = INCBIN_U32("graphics/battle_anims/sprites/finger_3.4bpp.lz");
 
 const u32 gBattleAnimSpriteGfx_MovementWaves[] = INCBIN_U32("graphics/battle_anims/sprites/movement_waves.4bpp.lz");
 const u32 gBattleAnimSpritePal_MovementWaves[] = INCBIN_U32("graphics/battle_anims/sprites/movement_waves.gbapal.lz");

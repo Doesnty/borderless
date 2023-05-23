@@ -1244,6 +1244,11 @@ static bool8 AccuracyCalcHelper(u16 move)
         JumpIfMoveFailed(7, move);
         return TRUE;
     }
+    if (gStatuses3[gBattlerTarget] & STATUS3_GLAIVE_RUSH)
+    {
+        JumpIfMoveFailed(7, move);
+        return TRUE;
+    }
     if (!(gHitMarker & HITMARKER_IGNORE_ON_AIR) && gStatuses3[gBattlerTarget] & STATUS3_ON_AIR)
     {
         gMoveResultFlags |= MOVE_RESULT_MISSED;
@@ -1492,6 +1497,9 @@ static void atk04_critcalc(void)
         critChance++;
     if (holdEffect == HOLD_EFFECT_SCOPE_LENS)
         critChance++;
+    if (holdEffect == HOLD_EFFECT_DOUBLE_PRIZE && (attackerSpecies == SPECIES_CMIKE
+        || attackerSpecies == SPECIES_MIKE))
+        critChance += 2;
     if (holdEffect == HOLD_EFFECT_LUCKY_PUNCH && (attackerSpecies == SPECIES_CICHIRIN
         || attackerSpecies == SPECIES_ICHIRIN || attackerSpecies == SPECIES_DICHIRIN
         || attackerSpecies == SPECIES_TICHIRIN))
@@ -4533,6 +4541,16 @@ static void atk49_moveend(void)
             }
             ++gBattleScripting.atk49_state;
             break;
+        case ATK49_GLAIVE_RUSH:
+            if (gChosenMove == MOVE_BUTCHERY &&
+                !(gHitMarker & HITMARKER_UNABLE_TO_USE_MOVE) &&
+                !(gMoveResultFlags & MOVE_RESULT_NO_EFFECT)) {
+                gStatuses3[gBattlerAttacker] &= (STATUS3_GLAIVE_RUSH);
+            }
+            else
+                gStatuses3[gBattlerAttacker] &= ~(STATUS3_GLAIVE_RUSH);
+            ++gBattleScripting.atk49_state;
+            break;
         case ATK49_NEXT_TARGET: // For moves hitting two opposing Pokemon.
             if (!(gHitMarker & HITMARKER_UNABLE_TO_USE_MOVE)
              && gBattleTypeFlags & BATTLE_TYPE_DOUBLE
@@ -6966,7 +6984,11 @@ static bool8 TryDoForceSwitchOut(void)
 
 static void atk8F_forcerandomswitch(void)
 {
-    if (gBattleTypeFlags & BATTLE_TYPE_TRAINER)
+    if (gBattleMons[gBattlerTarget].hp == 0)
+    {
+        gBattlescriptCurrInstr += 5;
+    }
+    else if (gBattleTypeFlags & BATTLE_TYPE_TRAINER)
     {
         u8 i;
         struct Pokemon *party;
@@ -9717,6 +9739,8 @@ static void sp16_identify2(void);
 static void sp17_identify3(void);
 static void sp18_identify4(void);
 static void sp19_corpseblaze(void);
+static void sp1a_frisk(void);
+static void sp1b_clearsmog(void);
 
 void (* const gBattleScriptingSpecialsTable[])(void) =
 {
@@ -9745,7 +9769,9 @@ void (* const gBattleScriptingSpecialsTable[])(void) =
     sp16_identify2,
     sp17_identify3,
     sp18_identify4,
-    sp19_corpseblaze,    
+    sp19_corpseblaze,
+    sp1a_frisk,
+    sp1b_clearsmog,
 };
 
 static void atkF8_special(void)
@@ -10312,3 +10338,22 @@ static void sp19_corpseblaze(void)
     if (gBattleMons[gBattlerTarget].hp == 0)
         gBattlescriptCurrInstr = BattleScript_CorpseBlazeKills;
 }
+
+static void sp1a_frisk(void)
+{
+	gLastUsedItem = gBattleMons[gBattlerTarget].item;
+	if (gLastUsedItem == 0)
+	{
+		gBattlescriptCurrInstr += 6;
+	}
+}
+
+static void sp1b_clearsmog(void)
+{
+    u8 i = 0;
+    
+    for (i = 0; i < 8; i++)
+        gBattleMons[gBattlerTarget].statStages[i] = 6;
+}
+
+

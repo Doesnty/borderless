@@ -167,6 +167,9 @@ static const u8 sSnowWarningDescription[] = _("Whips up a hailstorm.");
 static const u8 sAdaptabilityDescription[] = _("Unused, unimplemented.");
 static const u8 sMagicBounceDescription[] = _("Reflects status moves.");
 static const u8 sGrandTheoryDescription[] = _("Boosts Sp. Atk on seeing a known move.");
+static const u8 sCharismaticDescription[] = _("Halves power when below half HP.");
+static const u8 sSongbirdDescription[] = _("?????");
+static const u8 sYinAndYangDescription[] = _("+30% to lower attack stat (both on tie).");
 static const u8 sObsoleteDescription[] = _("Obsolete.");
 static const u8 sUnimplementedDescription[] = _("Unimplemented.");
 
@@ -295,8 +298,8 @@ const u8 *const gAbilityDescriptionPointers[ABILITIES_COUNT] =
     [ABILITY_PRANKSTER] = sPranksterDescription,
     [ABILITY_SNIPER] = sSniperDescription,
     [ABILITY_POISON_HEAL] = sUnimplementedDescription,
-    [ABILITY_FRISK] = sUnimplementedDescription,
-    [ABILITY_LONG_REACH] = sUnimplementedDescription,
+    [ABILITY_FRISK] = sFriskDescription,
+    [ABILITY_LONG_REACH] = sLongReachDescription,
     [ABILITY_HARVEST] = sUnimplementedDescription,
     [ABILITY_FILTER] = sUnimplementedDescription,
     [ABILITY_CURSED_BODY] = sUnimplementedDescription,
@@ -342,6 +345,8 @@ const u8 *const gAbilityDescriptionPointers[ABILITIES_COUNT] =
     [ABILITY_MAGIC_BOUNCE] = sUnimplementedDescription,
     
     [ABILITY_GRAND_THEORY] = sGrandTheoryDescription,
+    
+    [ABILITY_YIN_AND_YANG] = sYinAndYangDescription,
 };
 
 const u8 gAbilityNames[ABILITIES_COUNT][ABILITY_NAME_LENGTH + 1] =
@@ -515,4 +520,9 @@ const u8 gAbilityNames[ABILITIES_COUNT][ABILITY_NAME_LENGTH + 1] =
     [ABILITY_ADAPTABILITY] = _("Adaptability"),
     [ABILITY_MAGIC_BOUNCE] = _("Magic Bounce"),
     [ABILITY_GRAND_THEORY] = _("Grand Theory"),
+    [ABILITY_CHARISMATIC] = _("Charismatic"),
+    [ABILITY_BLACK_SMOKE] = _("Black Smoke"),
+    [ABILITY_SONGBIRD] = _("Songbird"),
+    [ABILITY_YIN_AND_YANG] = _("Yin and Yang"),
+    
 };

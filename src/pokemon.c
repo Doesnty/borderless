@@ -1737,6 +1737,20 @@ s32 CalculateBaseDamage(struct BattlePokemon *attacker, struct BattlePokemon *de
             spAttack = (spAttack * (attackerHoldEffectParam + 100)) / 100;
         }
     }
+    
+    // do this before other boosts!
+    if (attacker->ability == ABILITY_YIN_AND_YANG)
+    {
+        if (attack == spAttack)
+        {
+            attack = (attack * 13) / 10;
+            spAttack = (spAttack * 13) / 10;
+        }
+        else if (attack > spAttack)
+            spAttack = (spAttack * 13) / 10;
+        else
+            attack = (attack * 13) / 10;
+    }
 
     if (attackerHoldEffect == HOLD_EFFECT_CHOICE_BAND)
         attack = (150 * attack) / 100;
@@ -2009,6 +2023,9 @@ s32 CalculateBaseDamage(struct BattlePokemon *attacker, struct BattlePokemon *de
     // flash fire triggered
     if ((gBattleResources->flags->flags[battlerIdAtk] & RESOURCE_FLAG_FLASH_FIRE) && type == TYPE_FIRE)
         damage = (15 * damage) / 10;
+    
+    if (gStatuses3[battlerIdDef] & STATUS3_GLAIVE_RUSH)
+        damage *= 2;
 
     return damage + 2;
 }

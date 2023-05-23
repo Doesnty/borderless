@@ -572,7 +572,8 @@ const u8 sText_IdentifyItemAbility[] = _("It is holding {B_BUFF1}.\nIts ability 
 const u8 sText_IdentifyMoveset1[] = _("First move: {B_BUFF1}.\nSecond move: {B_BUFF2}.");
 const u8 sText_IdentifyMoveset2[] = _("Third move: {B_BUFF1}.\nFourth move: {B_BUFF2}.");
 const u8 sText_Scheming[] = _("{B_ATK_NAME_WITH_PREFIX} is scheming!");
-
+const u8 sText_Frisk[] = _("{B_SCR_ACTIVE_NAME_WITH_PREFIX} Frisked {B_DEF_NAME_WITH_PREFIX}\nand found its {B_LAST_ITEM}!");
+const u8 sText_ClearSmog[] = _("{B_DEF_NAME_WITH_PREFIX}'s stat\nchanges were eliminated!");
 
 
 const u8 *const gBattleStringsTable[] = {
@@ -1010,6 +1011,8 @@ const u8 *const gBattleStringsTable[] = {
     [STRINGID_IDENTIFYMOVESET1 - 12]              = sText_IdentifyMoveset1,
     [STRINGID_IDENTIFYMOVESET2 - 12]              = sText_IdentifyMoveset2,
     [STRINGID_SCHEMING - 12]                      = sText_Scheming,
+    [STRINGID_FRISK - 12]                         = sText_Frisk,
+    [STRINGID_CLEARSMOGCLEARBUFFS - 12]           = sText_ClearSmog,
 };
 
 const u16 gMissStringIds[] = {

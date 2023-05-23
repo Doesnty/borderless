@@ -4092,6 +4092,7 @@ extern const u32 gBattleAnimSpriteGfx_ElectricOrbs[];
 extern const u32 gBattleAnimSpriteGfx_CircleOfLight[];
 extern const u32 gBattleAnimSpriteGfx_Electricity[];
 extern const u32 gBattleAnimSpriteGfx_Finger2[];
+extern const u32 gBattleAnimSpriteGfx_Finger3[];
 extern const u32 gBattleAnimSpriteGfx_MovementWaves[];
 extern const u32 gBattleAnimSpriteGfx_MagentaHeart[];
 extern const u32 gBattleAnimSpriteGfx_RedOrb[];

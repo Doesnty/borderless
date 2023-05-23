@@ -1907,3 +1907,7 @@ DirectSoundWaveData_sd90_classical_detuned_ep1_high::
 	.align 2
 DirectSoundWaveData_sd90_enhanced_delay_shaku::
 	.incbin "sound/direct_sound_samples/sd90_enhanced_delay_shaku.bin"
+
+	.align 2
+DirectSoundWaveData_se_abyss_nova_siren::
+	.incbin "sound/direct_sound_samples/se_abyss_nova_siren.bin"

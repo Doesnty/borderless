@@ -305,6 +305,7 @@
 #define ANIM_TAG_BROKEN_RING                (ANIM_SPRITES_START + 295)
 #define ANIM_TAG_TAILWIND_PAL               (ANIM_SPRITES_START + 296)
 #define ANIM_TAG_HORSEPOWER                 (ANIM_SPRITES_START + 297)
+#define ANIM_TAG_FINGER_3                   (ANIM_SPRITES_START + 298)
 
 // battlers
 #define ANIM_ATTACKER    0
@@ -385,6 +386,7 @@
 #define B_ANIM_ROCK_THROW               0x1A
 #define B_ANIM_SAFARI_REACTION          0x1B
 #define B_ANIM_RETURN_TO_TRAINER        0x1C
+#define B_ANIM_KNOCKED_AWAY             0x1D
 
 // special animations table
 #define B_ANIM_LVL_UP                   0x0

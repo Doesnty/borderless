@@ -412,6 +412,9 @@ const u8 gMoveDescription_Identify[] = _("+1 Priority.\nLearns foe moves,\nAbili
 const u8 gMoveDescription_MeFirst[] = _("Uses the move the\nfoe is about to\nuse, and with 50%\nmore power.");
 const u8 gMoveDescription_CorpseBlaze[] = _("If target faints,\ngain +3 Sp. Atk.");
 const u8 gMoveDescription_GroupPrank[] = _("A 2-turn attack.\nHits twice.\nDamage is half of\nfoe's current HP.");
+const u8 gMoveDescription_CircleThrow[] = _("Forces foe switch.\nIn the wild, ends\nthe fight outright.");
+const u8 gMoveDescription_ClearSmog[] = _("Resets all stat\nchanges back to +0\nfor the target.");
+const u8 gMoveDescription_Butchery[] = _("User takes 2x\ndamage and won't\navoid moves until\nusing another move.");
 const u8 gMoveDescription_Dummy[] = _("lol");
 
 const u8 *const gMoveDescriptionPointers[MOVES_COUNT - 1] = {
@@ -825,5 +828,8 @@ const u8 *const gMoveDescriptionPointers[MOVES_COUNT - 1] = {
     [MOVE_IDENTIFY      - 1] = gMoveDescription_Identify,
     [MOVE_CORPSE_BLAZE  - 1] = gMoveDescription_CorpseBlaze,
     [MOVE_GROUP_PRANK   - 1] = gMoveDescription_GroupPrank,
+    [MOVE_CIRCLE_THROW  - 1] = gMoveDescription_CircleThrow,
+    [MOVE_CLEAR_SMOG    - 1] = gMoveDescription_ClearSmog,
+    [MOVE_BUTCHERY      - 1] = gMoveDescription_Butchery,
     [MOVE_ME_FIRST      - 1] = gMoveDescription_MeFirst,
 };

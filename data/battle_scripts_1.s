@@ -263,6 +263,9 @@ gBattleScriptsForMoveEffects::
     .4byte BattleScript_EffectCorpseBlaze
     .4byte BattleScript_EffectGroupPrank
     .4byte BattleScript_EffectFinalGambit
+    .4byte BattleScript_EffectCircleThrow
+    .4byte BattleScript_EffectClearSmog
+    .4byte BattleScript_EffectGlaiveRush
 
 BattleScript_EffectHit::
 BattleScript_HitFromAtkCanceler::
@@ -3413,14 +3416,24 @@ BattleScript_BideNoEnergyToAttack::
 	goto BattleScript_ButItFailed
 
 BattleScript_SuccessForceOut::
+	jumpifmove MOVE_ROAR, BattleScript_RoarWWindForceOut
+	jumpifmove MOVE_WHIRLWIND, BattleScript_RoarWWindForceOut
+	playanimation BS_TARGET, B_ANIM_KNOCKED_AWAY, NULL
+	goto BattleScript_ForceOutMerge
+
+BattleScript_RoarWWindForceOut:
 	attackanimation
 	waitanimation
+	goto BattleScript_ForceOutMerge
+
+BattleScript_ForceOutMerge:
 	switchoutabilities BS_TARGET
 	returntoball BS_TARGET
 	waitstate
 	jumpifbattletype BATTLE_TYPE_TRAINER, BattleScript_TrainerBattleForceOut
 	setbyte gBattleOutcome, B_OUTCOME_PLAYER_TELEPORTED
 	finishaction
+
 BattleScript_TrainerBattleForceOut::
 	getswitchedmondata BS_TARGET
 	switchindataupdate BS_TARGET
@@ -5741,3 +5754,96 @@ BattleScript_GroupPrankEnd:
 	moveendcase 2
 	moveendfrom 4
 	end
+
+BattleScript_Frisk1::
+	call BattleScript_FriskStart
+	end3
+
+BattleScript_FriskStart:
+	pause 32
+
+BattleScript_Frisk2::
+	setbyte gBattlerTarget, 0
+
+BattleScript_FriskMeat:
+	trygetintimidatetarget BattleScript_FriskEnd
+	special 0x1a
+	printstring STRINGID_FRISK
+	waitmessage 64
+
+BattleScript_FriskTail:
+	addbyte gBattlerTarget, 1
+	goto BattleScript_FriskMeat
+
+BattleScript_FriskEnd:
+	return
+
+BattleScript_EffectCircleThrow::
+	attackcanceler
+	accuracycheck BattleScript_PrintMoveMissed, ACC_CURR_MOVE
+	attackstring
+	ppreduce
+	critcalc
+	damagecalc
+	typecalc
+	adjustnormaldamage
+	attackanimation
+	waitanimation
+	effectivenesssound
+	hitanimation BS_TARGET
+	waitstate
+	healthbarupdate BS_TARGET
+	datahpupdate BS_TARGET
+	critmessage
+	waitmessage 64
+	resultmessage
+	waitmessage 64
+	
+	seteffectwithchance
+	tryfaintmon BS_TARGET, FALSE, NULL
+	
+	jumpifability BS_TARGET, ABILITY_GATE_KEEPER, BattleScript_AbilityPreventsPhasingOut
+	jumpifstatus3 BS_TARGET, STATUS3_ROOTED, BattleScript_PrintMonIsRooted
+	jumpifstatus2 BS_TARGET, STATUS2_SUBSTITUTE, BattleScript_DragonTailEnd
+	jumpifmovehadnoeffect BattleScript_DragonTailEnd
+	forcerandomswitch BattleScript_DragonTailEnd
+
+BattleScript_DragonTailEnd:
+	moveendall
+	end
+
+BattleScript_EffectClearSmog::
+	attackcanceler
+	accuracycheck BattleScript_PrintMoveMissed, ACC_CURR_MOVE
+	attackstring
+	ppreduce
+	critcalc
+	damagecalc
+	typecalc
+	adjustnormaldamage
+	attackanimation
+	waitanimation
+	effectivenesssound
+	hitanimation BS_TARGET
+	waitstate
+	healthbarupdate BS_TARGET
+	datahpupdate BS_TARGET
+	critmessage
+	waitmessage 64
+	resultmessage
+	waitmessage 64
+	jumpifstatus2 BS_TARGET, STATUS2_SUBSTITUTE, BattleScript_ClearSmogEnd
+	jumpifmovehadnoeffect BattleScript_ClearSmogEnd
+	special 0x1B
+	printstring STRINGID_CLEARSMOGCLEARBUFFS
+	waitmessage 64
+BattleScript_ClearSmogEnd:
+	tryfaintmon BS_TARGET, FALSE, NULL
+	setbyte sMOVEEND_STATE, 0
+	moveend 0, 0
+	end
+
+BattleScript_EffectGlaiveRush::
+    waitanimation
+
+

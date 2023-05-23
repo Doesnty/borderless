@@ -258,37 +258,37 @@ Route25_SeaCottage_EventScript_BillsMonList:: @ 81707D8
 	end
 
 Route25_SeaCottage_EventScript_ViewEevee:: @ 817082B
-	drawmonpic SPECIES_EEVEE, 10, 3
+	drawmonpic SPECIES_CREISEN, 10, 3
 	waitbuttonpress
 	erasemonpic
-	setvar VAR_0x8004, SPECIES_EEVEE
+	setvar VAR_0x8004, SPECIES_CREISEN
 	special SetSeenMon
 	goto Route25_SeaCottage_EventScript_BillsMonList
 	end
 
 Route25_SeaCottage_EventScript_ViewFlareon:: @ 8170840
-	drawmonpic SPECIES_FLAREON, 10, 3
+	drawmonpic SPECIES_REISEN, 10, 3
 	waitbuttonpress
 	erasemonpic
-	setvar VAR_0x8004, SPECIES_FLAREON
+	setvar VAR_0x8004, SPECIES_REISEN
 	special SetSeenMon
 	goto Route25_SeaCottage_EventScript_BillsMonList
 	end
 
 Route25_SeaCottage_EventScript_ViewJolteon:: @ 8170855
-	drawmonpic SPECIES_JOLTEON, 10, 3
+	drawmonpic SPECIES_DREISEN, 10, 3
 	waitbuttonpress
 	erasemonpic
-	setvar VAR_0x8004, SPECIES_JOLTEON
+	setvar VAR_0x8004, SPECIES_DREISEN
 	special SetSeenMon
 	goto Route25_SeaCottage_EventScript_BillsMonList
 	end
 
 Route25_SeaCottage_EventScript_ViewVaporeon:: @ 817086A
-	drawmonpic SPECIES_VAPOREON, 10, 3
+	drawmonpic SPECIES_TREISEN, 10, 3
 	waitbuttonpress
 	erasemonpic
-	setvar VAR_0x8004, SPECIES_VAPOREON
+	setvar VAR_0x8004, SPECIES_TREISEN
 	special SetSeenMon
 	goto Route25_SeaCottage_EventScript_BillsMonList
 	end
