@@ -233,3 +233,5 @@ const u16 gFieldEffectObjectPic_Bird[] = INCBIN_U16("graphics/field_effects/pics
 const u16 gObjectEventPic_MamizouDisguised[] = INCBIN_U16("graphics/object_events/pics/people/mamizou_disguised.4bpp");
 const u16 gObjectEventPal_Mamizou[] = INCBIN_U16("graphics/object_events/palettes/mamizou.gbapal");
 const u16 gObjectEventPic_Imakuni[] = INCBIN_U16("graphics/object_events/pics/people/imakuni.4bpp");
+const u16 gObjectEventPic_Zun[] = INCBIN_U16("graphics/object_events/pics/people/zun.4bpp");
+const u16 gObjectEventPal_Zun[] = INCBIN_U16("graphics/object_events/palettes/zun.gbapal");

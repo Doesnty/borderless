@@ -127,6 +127,7 @@ AI_CheckBadMove_CheckEffect:: @ 81D9D27
 	if_effect EFFECT_SUPER_FANG, AI_CBM_HighRiskForDamage
 	if_effect EFFECT_MIST, AI_CBM_Mist
 	if_effect EFFECT_FOCUS_ENERGY, AI_CBM_FocusEnergy
+    if_effect EFFECT_TEETER_DANCE, AI_CBM_Confuse
 	if_effect EFFECT_CONFUSE, AI_CBM_Confuse
 	if_effect EFFECT_ATTACK_UP_2, AI_CBM_AttackUp
 	if_effect EFFECT_DEFENSE_UP_2, AI_CBM_DefenseUp
@@ -677,6 +678,7 @@ AI_CheckViability:: @ 81DA445
 	if_effect EFFECT_TRAP, AI_CV_Trap
 	if_effect EFFECT_HIGH_CRITICAL, AI_CV_HighCrit
 	if_effect EFFECT_CONFUSE, AI_CV_Confuse
+    if_effect EFFECT_TEETER_DANCE, AI_CV_Confuse
 	if_effect EFFECT_ATTACK_UP_2, AI_CV_AttackUp
 	if_effect EFFECT_DEFENSE_UP_2, AI_CV_DefenseUp
 	if_effect EFFECT_SPEED_UP_2, AI_CV_SpeedUp

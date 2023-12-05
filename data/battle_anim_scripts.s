@@ -461,7 +461,7 @@ gBattleAnims_Moves::
 	.4byte Move_POUND
 	.4byte Move_POUND
 	.4byte Move_POUND
-	.4byte Move_POUND
+	.4byte Move_REST
 	.4byte Move_POUND
 	.4byte Move_POUND
 	.4byte Move_POUND

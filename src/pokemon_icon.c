@@ -444,6 +444,16 @@ const u8 *const gMonIconTable[] = {
     [SPECIES_MOMOYO] = gMonIcon_momoyo_neutral,
     [SPECIES_CMIYOI] = gMonIcon_miyoi_chibi,
     [SPECIES_MIYOI] = gMonIcon_miyoi_neutral,
+    [SPECIES_CBITEN] = gMonIcon_biten_chibi,
+    [SPECIES_BITEN] = gMonIcon_biten_neutral,
+    [SPECIES_CENOKO] = gMonIcon_enoko_chibi,
+    [SPECIES_ENOKO] = gMonIcon_enoko_neutral,
+    [SPECIES_CCHIYARI] = gMonIcon_chiyari_chibi,
+    [SPECIES_CHIYARI] = gMonIcon_chiyari_neutral,
+    [SPECIES_CHISAMI] = gMonIcon_hisami_chibi,
+    [SPECIES_HISAMI] = gMonIcon_hisami_neutral,
+    [SPECIES_CZANMU] = gMonIcon_zanmu_chibi,
+    [SPECIES_ZANMU] = gMonIcon_zanmu_neutral,
     [SPECIES_CHAKUREI] = gMonIcon_hakurei_chibi,
     [SPECIES_HAKUREI] = gMonIcon_hakurei_neutral,
     [SPECIES_CKIRISAME] = gMonIcon_kirisame_chibi,
@@ -519,6 +529,7 @@ const u8 *const gMonIconTable[] = {
     [SPECIES_CLAYLA] = gMonIcon_layla_chibi,
     [SPECIES_LAYLA] = gMonIcon_layla_neutral,
     [SPECIES_DLAYLA] = gMonIcon_layla_defense,
+    [SPECIES_CYOUKI] = gMonIcon_youki_chibi,
     [SPECIES_YOUKI] = gMonIcon_youki,
     [SPECIES_TORI] = gMonIcon_tori,
     [SPECIES_2HU] = gMonIcon_2hu,
@@ -1063,6 +1074,21 @@ const u8 gMonIconPaletteIndices[] = {
     [SPECIES_CMIYOI] = 1,
     [SPECIES_MIYOI] = 1,
     
+    [SPECIES_CBITEN] = 1,
+    [SPECIES_BITEN] = 1,
+    
+    [SPECIES_CENOKO] = 1,
+    [SPECIES_ENOKO] = 1,
+    
+    [SPECIES_CCHIYARI] = 1,
+    [SPECIES_CHIYARI] = 1,
+    
+    [SPECIES_CHISAMI] = 1,
+    [SPECIES_HISAMI] = 1,
+    
+    [SPECIES_CZANMU] = 1,
+    [SPECIES_ZANMU] = 1,
+    
     [SPECIES_CHAKUREI] = 1,
     [SPECIES_HAKUREI] = 1,
     
@@ -1164,16 +1190,23 @@ const u8 gMonIconPaletteIndices[] = {
     
     [SPECIES_CSHINKI] = 1,
     [SPECIES_SHINKI] = 1,
+    
     [SPECIES_CSENDAI] = 1,
     [SPECIES_SENDAI] = 1,
+    
     [SPECIES_CTENMA] = 1,
     [SPECIES_TENMA] = 1,
+    
     [SPECIES_CLAYLA] = 0,
     [SPECIES_LAYLA] = 0,
     [SPECIES_DLAYLA] = 0,
+    
+    [SPECIES_CYOUKI] = 0,
     [SPECIES_YOUKI] = 0,
+    
     [SPECIES_TORI] = 0,
     [SPECIES_2HU] = 0,
+    
     [SPECIES_XSUWAKO] = 1,
     [SPECIES_XUTSUHO] = 0,
     [SPECIES_XTENSHI] = 0,

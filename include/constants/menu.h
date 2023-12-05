@@ -69,6 +69,27 @@
 #define MULTICHOICE_62                                         62
 #define MULTICHOICE_JOIN_OR_LEAD                               63
 #define MULTICHOICE_TRAINER_TOWER_MODE                         64
+#define MULTICHOICE_ZUN1                                       65
+#define MULTICHOICE_ZUN2                                       66
+#define MULTICHOICE_ZUN3                                       67
+#define MULTICHOICE_ZUN4                                       68
+#define MULTICHOICE_ZUN5                                       69
+#define MULTICHOICE_ZUN6                                       70
+#define MULTICHOICE_ZUN7                                       71
+#define MULTICHOICE_ZUN8                                       72
+#define MULTICHOICE_ZUN9                                       73
+#define MULTICHOICE_ZUN10                                      74
+#define MULTICHOICE_ZUN11                                      75
+#define MULTICHOICE_ZUN12                                      76
+#define MULTICHOICE_ZUN13                                      77
+#define MULTICHOICE_ZUN14                                      78
+#define MULTICHOICE_ZUN15                                      79
+#define MULTICHOICE_ZUN16                                      80
+#define MULTICHOICE_ZUN17                                      81
+#define MULTICHOICE_ZUN18                                      82
+#define MULTICHOICE_ZUN19                                      83
+#define MULTICHOICE_ZUN20                                      84
+#define MULTICHOICE_ZUN21                                      85
 
 #define LISTMENU_BADGES                    0
 #define LISTMENU_SILPHCO_FLOORS            1

@@ -1,7 +1,10 @@
 Route5_PokemonDayCare_Text_WantMeToRaiseMon:: @ 819DD66
-	.string "I run the DAY-CARE service.\p"
-	.string "Would you like me to raise one of\n"
-	.string "your POKéMON?$"
+	.string "I'm the Shard Maniac.\n"
+    .string "I collect evolutionary Shards.\p"
+    .string "Let your puppet hold a Shard, and\n"
+    .string "when it evolves, it might turn into\l"
+    .string "a special Puppet.\p"
+	.string "Interested?$"
 
 Route5_PokemonDayCare_Text_ComeAgain:: @ 819DDB2
 	.string "Come again.$"

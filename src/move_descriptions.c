@@ -415,6 +415,7 @@ const u8 gMoveDescription_GroupPrank[] = _("A 2-turn attack.\nHits twice.\nDamag
 const u8 gMoveDescription_CircleThrow[] = _("Forces foe switch.\nIn the wild, ends\nthe fight outright.");
 const u8 gMoveDescription_ClearSmog[] = _("Resets all stat\nchanges back to +0\nfor the target.");
 const u8 gMoveDescription_Butchery[] = _("User takes 2x\ndamage and won't\navoid moves until\nusing another move.");
+const u8 gMoveDescription_BeddyBye[] = _("Restores all HP,\nbut the user falls\nasleep for 2 turns.\nUser switches out.");
 const u8 gMoveDescription_Dummy[] = _("lol");
 
 const u8 *const gMoveDescriptionPointers[MOVES_COUNT - 1] = {
@@ -831,5 +832,7 @@ const u8 *const gMoveDescriptionPointers[MOVES_COUNT - 1] = {
     [MOVE_CIRCLE_THROW  - 1] = gMoveDescription_CircleThrow,
     [MOVE_CLEAR_SMOG    - 1] = gMoveDescription_ClearSmog,
     [MOVE_BUTCHERY      - 1] = gMoveDescription_Butchery,
+    [MOVE_BEDDY_BYE     - 1] = gMoveDescription_BeddyBye,
+    [MOVE_SNAP_TRAP     - 1] = gMoveDescription_Wrap,
     [MOVE_ME_FIRST      - 1] = gMoveDescription_MeFirst,
 };

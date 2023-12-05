@@ -121,6 +121,7 @@ ViridianCity_Mart_Items:: @ 816A298
     .2byte ITEM_BABIRI_BERRY
     .2byte ITEM_CHILAN_BERRY
     .2byte ITEM_ENIGMA_RESIST_BERRY
+    .2byte ITEM_CHESTO_BERRY
 	.2byte ITEM_NONE
 	release
 	end

@@ -266,6 +266,7 @@ gBattleScriptsForMoveEffects::
     .4byte BattleScript_EffectCircleThrow
     .4byte BattleScript_EffectClearSmog
     .4byte BattleScript_EffectGlaiveRush
+    .4byte BattleScript_EffectBeddyBye
 
 BattleScript_EffectHit::
 BattleScript_HitFromAtkCanceler::
@@ -5846,4 +5847,47 @@ BattleScript_ClearSmogEnd:
 BattleScript_EffectGlaiveRush::
     waitanimation
 
+BattleScript_EffectBeddyBye::
+	attackcanceler
+	attackstring
+	ppreduce
+	jumpifstatus BS_ATTACKER, STATUS1_SLEEP, BattleScript_RestIsAlreadyAsleep
+	jumpifcantmakeasleep BattleScript_RestCantSleep
+	trysetrest BattleScript_AlreadyAtFullHp
+	pause 0x20
+	printfromtable gRestUsedStringIds
+	waitmessage 0x40
+	updatestatusicon BS_ATTACKER
+	waitstate
+    
+	attackanimation
+	waitanimation
+	orword gHitMarker, HITMARKER_IGNORE_SUBSTITUTE
+	healthbarupdate BS_TARGET
+	datahpupdate BS_TARGET
+	printstring STRINGID_PKMNREGAINEDHEALTH
+	waitmessage 0x40
+    
+	jumpifcantswitch ATK4F_DONT_CHECK_STATUSES | BS_ATTACKER, BattleScript_FinishUTurn
+	special 0x3E
+	printstring STRINGID_WENTBACKTOTRAINER
+	waitmessage 64
+	playanimation BS_ATTACKER, B_ANIM_RETURN_TO_TRAINER, NULL
+	
+	openpartyscreen BS_ATTACKER, BattleScript_FinishUTurn
+	switchoutabilities BS_ATTACKER
+	waitstate
+	switchhandleorder BS_ATTACKER, 2
+	returntoball BS_ATTACKER
+	getswitchedmondata BS_ATTACKER
+	switchindataupdate BS_ATTACKER
+	hpthresholds BS_ATTACKER
+	printstring 3
+	switchinanim BS_ATTACKER, 1
+	waitstate
+	special 0x7
+	switchineffects BS_ATTACKER
+    
+    
+	goto BattleScript_MoveEnd
 

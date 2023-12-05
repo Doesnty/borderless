@@ -63,9 +63,11 @@ PewterCity_Text_SprayingRepelToKeepWildMonsOut:: @ 817E644
     .string "POKéMON out of my garden!$"
 
 PewterCity_Text_BrocksLookingForChallengersFollowMe:: @ 817E67E
-    .string "You're a TRAINER, right?\p"
-    .string "BROCK's looking for new\n"
-    .string "challengers. Follow me!$"
+    .string "You're a Trainer, right?\p"
+    .string "Brock's out looking for\n"
+    .string "new challengers.\p"
+    .string "Go east to Route 3.\n"
+    .string "You can find him out there.$"
 
 PewterCity_Text_GoTakeOnBrock:: @ 817E6C7
     .string "If you have the right stuff,\n"

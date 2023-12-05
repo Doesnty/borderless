@@ -4,6 +4,14 @@ Route4_MapScripts:: @ 8167F8A
 Route4_EventScript_Unused:: @ 8167F8B
 	end
 
+Route4_EventScript_Boy:: @ 81ACDEA
+	lock
+	faceplayer
+	msgbox Route4_Text_PeopleLikeAndRespectBrock
+    setflag FLAG_HIDE_PEWTER_CITY_GYM_GUIDE
+	release
+	end
+
 Route4_EventScript_Woman:: @ 8167F8C
 	msgbox Route4_Text_TrippedOverGeodude, MSGBOX_NPC
 	end

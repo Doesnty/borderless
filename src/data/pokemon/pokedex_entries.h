@@ -2515,6 +2515,66 @@ const struct PokedexEntry gPokedexEntries[] =
         .description = gmiyoiPokedexText,
     },
 
+    [NATIONAL_DEX_CBITEN] = 
+    {
+        .categoryName = _("Monkey"),
+        .description = gcbitenPokedexText,
+    },
+
+    [NATIONAL_DEX_BITEN] = 
+    {
+        .categoryName = _("Mythic Monkey"),
+        .description = gbitenPokedexText,
+    },
+
+    [NATIONAL_DEX_CENOKO] = 
+    {
+        .categoryName = _("Cursed Dog"),
+        .description = gcenokoPokedexText,
+    },
+
+    [NATIONAL_DEX_ENOKO] = 
+    {
+        .categoryName = _("Cerberus"),
+        .description = genokoPokedexText,
+    },
+
+    [NATIONAL_DEX_CCHIYARI] = 
+    {
+        .categoryName = _("Tenkajin"),
+        .description = gcchiyariPokedexText,
+    },
+
+    [NATIONAL_DEX_CHIYARI] = 
+    {
+        .categoryName = _("Chupacabra"),
+        .description = gchiyariPokedexText,
+    },
+
+    [NATIONAL_DEX_CHISAMI] = 
+    {
+        .categoryName = _("Hell Solicitor"),
+        .description = ghisamiPokedexText,
+    },
+
+    [NATIONAL_DEX_HISAMI] = 
+    {
+        .categoryName = _("Hell Solicitor"),
+        .description = gchisamiPokedexText,
+    },
+
+    [NATIONAL_DEX_CZANMU] = 
+    {
+        .categoryName = _("Oni King"),
+        .description = gczanmuPokedexText,
+    },
+
+    [NATIONAL_DEX_ZANMU] = 
+    {
+        .categoryName = _("Oni King"),
+        .description = gzanmuPokedexText,
+    },
+
     [NATIONAL_DEX_CHAKUREI] = 
     {
         .categoryName = _("Miko"),
@@ -2963,6 +3023,12 @@ const struct PokedexEntry gPokedexEntries[] =
     {
         .categoryName = _("Memory"),
         .description = gdlaylaPokedexText,
+    },
+
+    [NATIONAL_DEX_CYOUKI] = 
+    {
+        .categoryName = _("Half-Phantom"),
+        .description = gcyoukiPokedexText,
     },
 
     [NATIONAL_DEX_YOUKI] = 

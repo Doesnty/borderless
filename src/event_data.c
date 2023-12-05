@@ -153,13 +153,13 @@ void ResetMysteryEventVars(void)
 
 void DisableResetRTC(void)
 {
-    VarSet(VAR_0x4032, 0);
+    //VarSet(VAR_0x4032, 0);
     FlagClear(FLAG_0x837);
 }
 
 void EnableResetRTC(void)
 {
-    VarSet(VAR_0x4032, 0x0920);
+    //VarSet(VAR_0x4032, 0x0920);
     FlagSet(FLAG_0x837);
 }
 
@@ -167,8 +167,8 @@ bool32 CanResetRTC(void)
 {
     if (!FlagGet(FLAG_0x837))
         return FALSE;
-    if (VarGet(VAR_0x4032) != 0x0920)
-        return FALSE;
+    //if (VarGet(VAR_0x4032) != 0x0920)
+    //    return FALSE;
     return TRUE;
 }
 

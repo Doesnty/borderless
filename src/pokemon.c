@@ -510,6 +510,16 @@ static const u16 sSpeciesToNationalPokedexNum[] = // Assigns all species to the 
     NATIONAL_DEX_MOMOYO,
     NATIONAL_DEX_CMIYOI,
     NATIONAL_DEX_MIYOI,
+    NATIONAL_DEX_CBITEN,
+    NATIONAL_DEX_BITEN,
+    NATIONAL_DEX_CENOKO,
+    NATIONAL_DEX_ENOKO,
+    NATIONAL_DEX_CCHIYARI,
+    NATIONAL_DEX_CHIYARI,
+    NATIONAL_DEX_CHISAMI,
+    NATIONAL_DEX_HISAMI,
+    NATIONAL_DEX_CZANMU,
+    NATIONAL_DEX_ZANMU,
     NATIONAL_DEX_CHAKUREI,
     NATIONAL_DEX_HAKUREI,
     NATIONAL_DEX_CKIRISAME,
@@ -585,6 +595,7 @@ static const u16 sSpeciesToNationalPokedexNum[] = // Assigns all species to the 
     NATIONAL_DEX_CLAYLA,
     NATIONAL_DEX_LAYLA,
     NATIONAL_DEX_DLAYLA,
+    NATIONAL_DEX_CYOUKI,
     NATIONAL_DEX_YOUKI,
     NATIONAL_DEX_TORI,
     NATIONAL_DEX_2HU,
@@ -1803,6 +1814,10 @@ s32 CalculateBaseDamage(struct BattlePokemon *attacker, struct BattlePokemon *de
     {
         gBattleMovePower = (150 * gBattleMovePower) / 100;
     }
+    if (attacker->ability == ABILITY_ARSONIST && type == TYPE_FIRE)
+    {
+        gBattleMovePower = (150 * gBattleMovePower) / 100;
+    }
     if (defenderAbility == ABILITY_CHEERFUL && defender->hp == defender->maxHP)
     {
         defense *= 2;
@@ -1862,7 +1877,31 @@ s32 CalculateBaseDamage(struct BattlePokemon *attacker, struct BattlePokemon *de
                     boost += 10;
             }
         }
-        
+        gBattleMovePower = (gBattleMovePower * (100 + boost)) / 100;
+    }
+    if (attacker->ability == ABILITY_MASTERMIND)
+    {
+        u8 i = 0;
+        u8 boost = 0;
+        struct Pokemon *party;
+        //oh fuckin' boy here we go
+        if (GET_BATTLER_SIDE(battlerIdAtk) != B_SIDE_PLAYER)
+            party = gEnemyParty;
+        else
+            party = gPlayerParty;
+        for (i = 0; i < PARTY_SIZE && !boost; i++)
+        {
+            if (i != gBattlerPartyIndexes[battlerIdAtk])
+            {
+                u16 monspecies = GetMonData(&party[i], MON_DATA_SPECIES, NULL);
+                if (!monspecies || GetMonData(&party[i], MON_DATA_IS_EGG, NULL)
+                    || GetMonData(&party[i], MON_DATA_HP, NULL) != 0)
+                    continue;
+                if (gBaseStats[monspecies].type1 == type ||
+                    gBaseStats[monspecies].type2 == type)
+                    boost = 100;
+            }
+        }
         gBattleMovePower = (gBattleMovePower * (100 + boost)) / 100;
     }
     if (attacker->ability == ABILITY_RECKLESS && (gBattleMoves[move].effect == EFFECT_RECOIL
@@ -4365,34 +4404,43 @@ u16 GetEvolutionTargetSpecies(struct Pokemon *mon, u8 type, u16 evolutionItem)
                 */
                 break;
             case EVO_LEVEL:
-                if (gEvolutionTable[species][i].param <= level)
+                if (gEvolutionTable[species][i].levelReq <= level)
                     targetSpecies = gEvolutionTable[species][i].targetSpecies;
                 break;
+            case EVO_LEVEL_HELD_ITEM:
+                if (gEvolutionTable[species][i].levelReq <= level &&
+                    gEvolutionTable[species][i].param == heldItem)
+                {
+                    heldItem = 0;
+                    SetMonData(mon, MON_DATA_HELD_ITEM, &heldItem);
+                    targetSpecies = gEvolutionTable[species][i].targetSpecies;
+                }
+                break;
             case EVO_LEVEL_ATK_GT_DEF:
-                if (gEvolutionTable[species][i].param <= level)
+                if (gEvolutionTable[species][i].levelReq <= level)
                     if (GetMonData(mon, MON_DATA_ATK, NULL) > GetMonData(mon, MON_DATA_DEF, NULL))
                         targetSpecies = gEvolutionTable[species][i].targetSpecies;
                 break;
             case EVO_LEVEL_ATK_EQ_DEF:
-                if (gEvolutionTable[species][i].param <= level)
+                if (gEvolutionTable[species][i].levelReq <= level)
                     if (GetMonData(mon, MON_DATA_ATK, NULL) == GetMonData(mon, MON_DATA_DEF, NULL))
                         targetSpecies = gEvolutionTable[species][i].targetSpecies;
                 break;
             case EVO_LEVEL_ATK_LT_DEF:
-                if (gEvolutionTable[species][i].param <= level)
+                if (gEvolutionTable[species][i].levelReq <= level)
                     if (GetMonData(mon, MON_DATA_ATK, NULL) < GetMonData(mon, MON_DATA_DEF, NULL))
                         targetSpecies = gEvolutionTable[species][i].targetSpecies;
                 break;
             case EVO_LEVEL_SILCOON:
-                if (gEvolutionTable[species][i].param <= level && (upperPersonality % 10) <= 4)
+                if (gEvolutionTable[species][i].levelReq <= level && (upperPersonality % 10) <= 4)
                     targetSpecies = gEvolutionTable[species][i].targetSpecies;
                 break;
             case EVO_LEVEL_CASCOON:
-                if (gEvolutionTable[species][i].param <= level && (upperPersonality % 10) > 4)
+                if (gEvolutionTable[species][i].levelReq <= level && (upperPersonality % 10) > 4)
                     targetSpecies = gEvolutionTable[species][i].targetSpecies;
                 break;
             case EVO_LEVEL_NINJASK:
-                if (gEvolutionTable[species][i].param <= level)
+                if (gEvolutionTable[species][i].levelReq <= level)
                     targetSpecies = gEvolutionTable[species][i].targetSpecies;
                 break;
             case EVO_BEAUTY:
@@ -4969,9 +5017,6 @@ u8 GetNumberOfRelearnableMoves(struct Pokemon *mon)
 u16 SpeciesToPokedexNum(u16 species)
 {
     species = SpeciesToNationalPokedexNum(species);
-
-    if (!IsNationalPokedexEnabled() && species > 151)
-        return 0xFFFF;
     return species;
 }
 
@@ -5486,4 +5531,208 @@ void *OakSpeechNidoranFGetBuffer(u8 bufferId)
             bufferId = 0;
         return sOakSpeechNidoranResources->bufferPtrs[bufferId];
     }
+}
+
+static const u16 sZunStarters[] = 
+{
+    SPECIES_CREIMU,
+    SPECIES_CMARISA,
+    SPECIES_CRUMIA,
+    SPECIES_CDAIYOUSEI,
+    SPECIES_CCIRNO,
+    SPECIES_CMEILING,
+    SPECIES_CKOAKUMA,
+    SPECIES_CPATCHOULI,
+    
+    SPECIES_CSAKUYA,
+    SPECIES_CREMILIA,
+    SPECIES_CFLANDRE,
+    SPECIES_CLETTY,
+    SPECIES_CCHEN,
+    SPECIES_CALICE,
+    SPECIES_CLILYWHITE,
+    SPECIES_CLILYBLACK,
+    
+    SPECIES_CLUNASA,
+    SPECIES_CMERLIN,
+    SPECIES_CLYRICA,
+    SPECIES_CYOUMU,
+    SPECIES_CYUYUKO,
+    SPECIES_CRAN,
+    SPECIES_CYUKARI,
+    SPECIES_CSUIKA,
+    
+    SPECIES_CWRIGGLE,
+    SPECIES_CMYSTIA,
+    SPECIES_CKEINE,
+    SPECIES_CTEWI,
+    SPECIES_CREISEN,
+    SPECIES_CEIRIN,
+    SPECIES_CKAGUYA,
+    SPECIES_CMOKOU,
+    
+    SPECIES_CAYA,
+    SPECIES_CMEDICINE,
+    SPECIES_CYUUKA,
+    SPECIES_CKOMACHI,
+    SPECIES_CEIKI,
+    SPECIES_AKYUU,
+    SPECIES_CSHIZUHA,
+    SPECIES_CMINORIKO,
+    
+    SPECIES_CHINA,
+    SPECIES_CNITORI,
+    SPECIES_CMOMIJI,
+    SPECIES_CSANAE,
+    SPECIES_CKANAKO,
+    SPECIES_CSUWAKO,
+    SPECIES_CREISEN_II,
+    SPECIES_CTOYOHIME,
+    
+    SPECIES_CYORIHIME,
+    SPECIES_CIKU,
+    SPECIES_CTENSHI,
+    SPECIES_CKISUME,
+    SPECIES_CYAMAME,
+    SPECIES_CPARSEE,
+    SPECIES_CYUUGI,
+    SPECIES_CSATORI,
+    
+    SPECIES_CRIN,
+    SPECIES_CUTSUHO,
+    SPECIES_CKOISHI,
+    SPECIES_CNAZRIN,
+    SPECIES_CKOGASA,
+    SPECIES_CICHIRIN,
+    SPECIES_CMURASA,
+    SPECIES_CSHOU,
+    
+    SPECIES_CBYAKUREN,
+    SPECIES_CNUE,
+    SPECIES_SHANGHAI,
+    SPECIES_HOURAI,
+    SPECIES_CHATATE,
+    SPECIES_CSUNNY,
+    SPECIES_CLUNA,
+    SPECIES_CSTAR,
+    
+    SPECIES_RINNOSUKE,
+    SPECIES_CTOKIKO,
+    SPECIES_CKYOUKO,
+    SPECIES_CYOSHIKA,
+    SPECIES_CSEIGA,
+    SPECIES_CTOJIKO,
+    SPECIES_CFUTO,
+    SPECIES_CMIKO,
+    
+    SPECIES_CMAMIZOU,
+    SPECIES_CKOSUZU,
+    SPECIES_CKOKORO,
+    SPECIES_CWAKASAGIHIME,
+    SPECIES_CSEKIBANKI,
+    SPECIES_CKAGEROU,
+    SPECIES_CBENBEN,
+    SPECIES_CYATSUHASHI,
+    
+    SPECIES_CSEIJA,
+    SPECIES_CSHINMYOUMARU,
+    SPECIES_CRAIKO,
+    SPECIES_CKASEN,
+    SPECIES_CSUMIREKO,
+    SPECIES_CSEIRAN,
+    SPECIES_CRINGO,
+    SPECIES_CDOREMY,
+    
+    SPECIES_CSAGUME,
+    SPECIES_CCLOWNPIECE,
+    SPECIES_CJUNKO,
+    SPECIES_CHECATIA,
+    SPECIES_CJOON,
+    SPECIES_CSHION,
+    SPECIES_CETERNITY,
+    SPECIES_CNEMUNO,
+    
+    SPECIES_CAUNN,
+    SPECIES_CNARUMI,
+    SPECIES_CMAI_AND_SATONO,
+    SPECIES_CMAI_AND_SATONO,
+    SPECIES_COKINA,
+    SPECIES_CEIKA,
+    SPECIES_CURUMI,
+    SPECIES_CKUTAKA,
+    
+    SPECIES_CYACHIE,
+    SPECIES_CMAYUMI,
+    SPECIES_CKEIKI,
+    SPECIES_CSAKI,
+    SPECIES_CYUUMA,
+    SPECIES_CMIKE,
+    SPECIES_CTAKANE,
+    SPECIES_CSANNYO,
+    
+    SPECIES_CMISUMARU,
+    SPECIES_CTSUKASA,
+    SPECIES_CMEGUMU,
+    SPECIES_CCHIMATA,
+    SPECIES_CMOMOYO,
+    SPECIES_CMIYOI,
+    SPECIES_CBITEN,
+    SPECIES_CENOKO,
+    
+    SPECIES_CCHIYARI,
+    SPECIES_CHISAMI,
+    SPECIES_CZANMU,
+    SPECIES_CHAKUREI,
+    SPECIES_CKIRISAME,
+    SPECIES_CSHINGYOKU,
+    SPECIES_CMAGAN,
+    SPECIES_CMIMA,
+    
+    SPECIES_CELIS,
+    SPECIES_CKIKURI,
+    SPECIES_CKONNGARA,
+    SPECIES_CSARIEL,
+    SPECIES_GENJI,
+    SPECIES_CRIKA,
+    SPECIES_CMEIRA,
+    SPECIES_CELLEN,
+    
+    SPECIES_CKOTOHIME,
+    SPECIES_CKANA,
+    SPECIES_RIKAKO,
+    SPECIES_CCHIYURI,
+    SPECIES_CYUMEMI,
+    SPECIES_RUUKOTO,
+    SPECIES_CORANGE,
+    SPECIES_CKURUMI,
+    
+    SPECIES_CELLY,
+    SPECIES_CKAZAMI,
+    SPECIES_CMUGETSU,
+    SPECIES_CGENGETSU,
+    SPECIES_CSARA,
+    SPECIES_CLOUISE,
+    SPECIES_CARISU,
+    SPECIES_CYUKI,
+    
+    SPECIES_CMAI,
+    SPECIES_CYUMEKO,
+    SPECIES_CSHINKI,
+    SPECIES_CSENDAI,
+    SPECIES_CTENMA,
+    SPECIES_CLAYLA,
+    SPECIES_CYOUKI,
+    0,
+    
+};
+
+u16 SelectZunStarter(void)
+{
+    u16 index = (VarGet(VAR_TEMP_5) * 8) + (VarGet(VAR_TEMP_6) - 1);
+    u16 value = sZunStarters[index];
+    
+    while (value == 0)
+        value = sZunStarters[Random() % (NELEMS(sZunStarters))];
+    
+    return value;
 }

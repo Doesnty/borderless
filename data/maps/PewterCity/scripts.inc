@@ -17,7 +17,9 @@ PewterCity_EventScript_GymGuide:: @ 8165B9D
 	lock
 	faceplayer
 	msgbox PewterCity_Text_BrocksLookingForChallengersFollowMe
-	closemessage
+    release
+    end
+    
 	playbgm MUS_FOLLOW_ME, 0
 	compare VAR_FACING, DIR_EAST
 	call_if_eq PewterCity_EventScript_WalkToGymEast

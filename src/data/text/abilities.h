@@ -115,7 +115,7 @@ static const u8 sSkillLinkDescription[] = _("Multi-hit moves hit 5 times.");
 static const u8 sUnnerveDescription[] = _("Foes can't use berries.");
 static const u8 sUnawareDescription[] = _("Ignores foe's stat changes.");
 static const u8 sSapSipperDescription[] = _("Absorbs Nature moves into Attack.");
-static const u8 sGluttonyDescription[] = _("Eats held berries more readily.");
+static const u8 sGluttonyDescription[] = _("Eats held berries immediately.");
 static const u8 sInfiltratorDescription[] = _("Bypasses screens and substitutes.");
 static const u8 sRecklessDescription[] = _("+20% power on recoil moves.");
 static const u8 sPranksterDescription[] = _("+1 Priority for status moves.");
@@ -170,6 +170,9 @@ static const u8 sGrandTheoryDescription[] = _("Boosts Sp. Atk on seeing a known 
 static const u8 sCharismaticDescription[] = _("Halves power when below half HP.");
 static const u8 sSongbirdDescription[] = _("?????");
 static const u8 sYinAndYangDescription[] = _("+30% to lower attack stat (both on tie).");
+static const u8 sArsonistDescription[] = _("+50% power on Fire moves.");
+static const u8 sMastermindDescription[] = _("Double power on KO'd-ally-type moves.");
+static const u8 sRestraintDescription[] = _("Traps foe using moves to escape.");
 static const u8 sObsoleteDescription[] = _("Obsolete.");
 static const u8 sUnimplementedDescription[] = _("Unimplemented.");
 
@@ -347,6 +350,9 @@ const u8 *const gAbilityDescriptionPointers[ABILITIES_COUNT] =
     [ABILITY_GRAND_THEORY] = sGrandTheoryDescription,
     
     [ABILITY_YIN_AND_YANG] = sYinAndYangDescription,
+    [ABILITY_ARSONIST] = sArsonistDescription,
+    [ABILITY_MASTERMIND] = sMastermindDescription,
+    [ABILITY_RESTRAINT] = sUnimplementedDescription,
 };
 
 const u8 gAbilityNames[ABILITIES_COUNT][ABILITY_NAME_LENGTH + 1] =
@@ -524,5 +530,8 @@ const u8 gAbilityNames[ABILITIES_COUNT][ABILITY_NAME_LENGTH + 1] =
     [ABILITY_BLACK_SMOKE] = _("Black Smoke"),
     [ABILITY_SONGBIRD] = _("Songbird"),
     [ABILITY_YIN_AND_YANG] = _("Yin and Yang"),
+    [ABILITY_ARSONIST] = _("Arsonist"),
+    [ABILITY_MASTERMIND] = _("Mastermind"),
+    [ABILITY_RESTRAINT] = _("Restraint"),
     
 };

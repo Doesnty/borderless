@@ -85,7 +85,7 @@ void CreateInitialRoamerMon(void)
     struct Pokemon * mon = &gEnemyParty[0];
     u16 species = SPECIES_CKOISHI;
     u16 flagId;
-    u8 nbadges, lvl;
+    u8 nbadges = 0, lvl;
     
     for (flagId = FLAG_BADGE01_GET; flagId < FLAG_BADGE01_GET + 8; flagId++)
     {

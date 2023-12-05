@@ -3067,7 +3067,7 @@ u8 ItemBattleEffects(u8 caseID, u8 battlerId, bool8 moveTurn)
     }
     
     if (gBattleMons[battlerId].ability == ABILITY_GLUTTONY)
-        gluttonyMult = 2;
+        gluttonyMult = 8;
     
     switch (caseID)
     {

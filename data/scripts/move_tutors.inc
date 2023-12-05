@@ -117,7 +117,7 @@ EventScript_ExplosionTaught:: @ 81C4944
 Route4_EventScript_MegaPunchTutor:: @ 81C494E
 	lock
 	faceplayer
-	goto_if_set FLAG_TUTOR_MEGA_PUNCH, EventScript_MegaPunchTaught
+	goto_if_set FLAG_GOT_TM77, EventScript_MegaPunchTaught
 	msgbox Text_MegaPunchTeach, MSGBOX_YESNO
 	compare VAR_RESULT, NO
 	goto_if_eq EventScript_MegaPunchDeclined
@@ -129,7 +129,7 @@ Route4_EventScript_MegaPunchTutor:: @ 81C494E
 	call EventScript_ChooseMoveTutorMon
 	compare VAR_RESULT, FALSE
 	goto_if_eq EventScript_MegaPunchDeclined
-	setflag FLAG_TUTOR_MEGA_PUNCH
+	setflag FLAG_GOT_TM77
 	goto EventScript_MegaPunchTaught
 	end
 

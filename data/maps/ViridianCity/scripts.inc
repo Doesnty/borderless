@@ -23,7 +23,7 @@ ViridianCity_EventScript_SetOldManNormal:: @ 8165909
 	return
 
 ViridianCity_EventScript_SetOldManStandingByRoad:: @ 816590F
-	setvar VAR_OBJ_GFX_ID_0, OBJ_EVENT_GFX_OLD_MAN_1
+	setvar VAR_OBJ_GFX_ID_0, OBJ_EVENT_GFX_ZUN
 	setobjectxyperm LOCALID_TUTORIAL_MAN, 21, 8
 	setobjectmovementtype LOCALID_TUTORIAL_MAN, MOVEMENT_TYPE_LOOK_AROUND
 	return
@@ -240,14 +240,289 @@ ViridianCity_EventScript_TutorialTriggerRight:: @ 8165B2E
 ViridianCity_EventScript_DoTutorialBattle:: @ 8165B4C
 	msgbox ViridianCity_Text_ShowYouHowToCatchMons
 	closemessage
-	goto_if_questlog EventScript_ReleaseEnd
-	special QuestLog_CutRecording
-	special StartOldManTutorialBattle
-	waitstate
-	lock
-	faceplayer
+    
+    setvar VAR_TEMP_5, 0
+    setvar VAR_TEMP_6, 0
+    goto ViridianCity_EventScript_ZunMenu1
+
+ViridianCity_EventScript_ZunCheckMon::
+    specialvar VAR_ZUN_STARTER_SPECIES, SelectZunStarter
+	copyvar VAR_TEMP_1, VAR_ZUN_STARTER_SPECIES
+    getspeciesname 0, VAR_ZUN_STARTER_SPECIES
+    
+	drawmonpic VAR_ZUN_STARTER_SPECIES, 10, 3
+    msgbox ViridianCity_Text_SoYouLike, MSGBOX_YESNO
+    
+    erasemonpic
+    closemessage
+    
+	compare VAR_RESULT, NO
+    goto_if_eq ViridianCity_EventScript_ZunMenuReturn
+    
+
+    givemon VAR_ZUN_STARTER_SPECIES, 5, ITEM_ORAN_BERRY
+
+	compare VAR_RESULT, 0
+	goto_if_eq ViridianCity_EventScript_ZunGetMonParty
+	compare VAR_RESULT, 1
+	goto_if_eq ViridianCity_EventScript_ZunGetMonPC
+	compare VAR_RESULT, 2
+	goto_if_eq EventScript_NoMoreRoomForPokemon
+    
+ViridianCity_EventScript_ZunGetMonParty::
+	playfanfare MUS_LEVEL_UP
+	getspeciesname 0, VAR_ZUN_STARTER_SPECIES
+	message ViridianCity_Text_ObtainedAnX
+	waitmessage
+	waitfanfare
+	msgbox Text_GiveNicknameToThisMon, MSGBOX_YESNO
+	compare VAR_RESULT, NO
+	goto_if_eq ViridianCity_EventScript_ZunDoneGetMon
+	call EventScript_GetGiftMonPartySlot
+	call EventScript_ChangePokemonNickname
+	goto ViridianCity_EventScript_ZunDoneGetMon
+
+ViridianCity_EventScript_ZunGetMonPC::
+	playfanfare MUS_LEVEL_UP
+	getspeciesname 0, SPECIES_EEVEE
+	message ViridianCity_Text_ObtainedAnX
+	waitmessage
+	waitfanfare
+	msgbox Text_GiveNicknameToThisMon, MSGBOX_YESNO
+	compare VAR_RESULT, NO
+	goto_if_eq ViridianCity_EventScript_ZunSentMonToPC
+	call EventScript_NameReceivedBoxMon
+	goto ViridianCity_EventScript_ZunSentMonToPC
+
+ViridianCity_EventScript_ZunSentMonToPC::
+	call EventScript_TransferredToPC
+	goto ViridianCity_EventScript_ZunDoneGetMon
+
+ViridianCity_EventScript_ZunDoneGetMon::
 	msgbox ViridianCity_Text_ThatWasEducationalTakeThis
 	setvar VAR_MAP_SCENE_VIRIDIAN_CITY_OLD_MAN, 2
-	giveitem ITEM_TEACHY_TV
-	msgbox ViridianCity_Text_WatchThatToLearnBasics
 	return
+
+ViridianCity_EventScript_ZunMenuReturn::
+    switch VAR_TEMP_5
+    case 0, ViridianCity_EventScript_ZunMenu1
+    case 1, ViridianCity_EventScript_ZunMenu2
+    case 2, ViridianCity_EventScript_ZunMenu3
+    case 3, ViridianCity_EventScript_ZunMenu4
+    case 4, ViridianCity_EventScript_ZunMenu5
+    case 5, ViridianCity_EventScript_ZunMenu6
+    case 6, ViridianCity_EventScript_ZunMenu7
+    case 7, ViridianCity_EventScript_ZunMenu8
+    case 8, ViridianCity_EventScript_ZunMenu9
+    case 9, ViridianCity_EventScript_ZunMenu10
+    case 10, ViridianCity_EventScript_ZunMenu11
+    case 11, ViridianCity_EventScript_ZunMenu12
+    case 12, ViridianCity_EventScript_ZunMenu13
+    case 13, ViridianCity_EventScript_ZunMenu14
+    case 14, ViridianCity_EventScript_ZunMenu15
+    case 15, ViridianCity_EventScript_ZunMenu16
+    case 16, ViridianCity_EventScript_ZunMenu17
+    case 17, ViridianCity_EventScript_ZunMenu18
+    case 18, ViridianCity_EventScript_ZunMenu19
+    case 19, ViridianCity_EventScript_ZunMenu20
+    case 20, ViridianCity_EventScript_ZunMenu21
+
+ViridianCity_EventScript_ZunMenuBus::
+    switch VAR_TEMP_6
+    case 0, ViridianCity_EventScript_ZunMenuNext
+    case 1, ViridianCity_EventScript_ZunCheckMon
+    case 2, ViridianCity_EventScript_ZunCheckMon
+    case 3, ViridianCity_EventScript_ZunCheckMon
+    case 4, ViridianCity_EventScript_ZunCheckMon
+    case 5, ViridianCity_EventScript_ZunCheckMon
+    case 6, ViridianCity_EventScript_ZunCheckMon
+    case 7, ViridianCity_EventScript_ZunCheckMon
+    case 8, ViridianCity_EventScript_ZunCheckMon
+    case 9, ViridianCity_EventScript_ZunMenuPrevious
+
+ViridianCity_EventScript_ZunMenuNext::
+    switch VAR_TEMP_5
+    case 0, ViridianCity_EventScript_ZunMenu2
+    case 1, ViridianCity_EventScript_ZunMenu3
+    case 2, ViridianCity_EventScript_ZunMenu4
+    case 3, ViridianCity_EventScript_ZunMenu5
+    case 4, ViridianCity_EventScript_ZunMenu6
+    case 5, ViridianCity_EventScript_ZunMenu7
+    case 6, ViridianCity_EventScript_ZunMenu8
+    case 7, ViridianCity_EventScript_ZunMenu9
+    case 8, ViridianCity_EventScript_ZunMenu10
+    case 9, ViridianCity_EventScript_ZunMenu11
+    case 10, ViridianCity_EventScript_ZunMenu12
+    case 11, ViridianCity_EventScript_ZunMenu13
+    case 12, ViridianCity_EventScript_ZunMenu14
+    case 13, ViridianCity_EventScript_ZunMenu15
+    case 14, ViridianCity_EventScript_ZunMenu16
+    case 15, ViridianCity_EventScript_ZunMenu17
+    case 16, ViridianCity_EventScript_ZunMenu18
+    case 17, ViridianCity_EventScript_ZunMenu19
+    case 18, ViridianCity_EventScript_ZunMenu20
+    case 19, ViridianCity_EventScript_ZunMenu21
+    case 20, ViridianCity_EventScript_ZunMenu1
+
+ViridianCity_EventScript_ZunMenuPrevious::
+    switch VAR_TEMP_5
+    case 0, ViridianCity_EventScript_ZunMenu21
+    case 1, ViridianCity_EventScript_ZunMenu1
+    case 2, ViridianCity_EventScript_ZunMenu2
+    case 3, ViridianCity_EventScript_ZunMenu3
+    case 4, ViridianCity_EventScript_ZunMenu4
+    case 5, ViridianCity_EventScript_ZunMenu5
+    case 6, ViridianCity_EventScript_ZunMenu6
+    case 7, ViridianCity_EventScript_ZunMenu7
+    case 8, ViridianCity_EventScript_ZunMenu8
+    case 9, ViridianCity_EventScript_ZunMenu9
+    case 10, ViridianCity_EventScript_ZunMenu10
+    case 11, ViridianCity_EventScript_ZunMenu11
+    case 12, ViridianCity_EventScript_ZunMenu12
+    case 13, ViridianCity_EventScript_ZunMenu13
+    case 14, ViridianCity_EventScript_ZunMenu14
+    case 15, ViridianCity_EventScript_ZunMenu15
+    case 16, ViridianCity_EventScript_ZunMenu16
+    case 17, ViridianCity_EventScript_ZunMenu17
+    case 18, ViridianCity_EventScript_ZunMenu18
+    case 19, ViridianCity_EventScript_ZunMenu19
+    case 20, ViridianCity_EventScript_ZunMenu20
+
+ViridianCity_EventScript_ZunMenu1::
+    setvar VAR_TEMP_5, 0
+    multichoice 8, 0, MULTICHOICE_ZUN1, TRUE
+    copyvar VAR_TEMP_6, VAR_RESULT
+    goto ViridianCity_EventScript_ZunMenuBus
+
+ViridianCity_EventScript_ZunMenu2::
+    setvar VAR_TEMP_5, 1
+    multichoice 8, 0, MULTICHOICE_ZUN2, TRUE
+    copyvar VAR_TEMP_6, VAR_RESULT
+    goto ViridianCity_EventScript_ZunMenuBus
+
+ViridianCity_EventScript_ZunMenu3::
+    setvar VAR_TEMP_5, 2
+    multichoice 8, 0, MULTICHOICE_ZUN3, TRUE
+    copyvar VAR_TEMP_6, VAR_RESULT
+    goto ViridianCity_EventScript_ZunMenuBus
+
+ViridianCity_EventScript_ZunMenu4::
+    setvar VAR_TEMP_5, 3
+    multichoice 8, 0, MULTICHOICE_ZUN4, TRUE
+    copyvar VAR_TEMP_6, VAR_RESULT
+    goto ViridianCity_EventScript_ZunMenuBus
+
+ViridianCity_EventScript_ZunMenu5::
+    setvar VAR_TEMP_5, 4
+    multichoice 8, 0, MULTICHOICE_ZUN5, TRUE
+    copyvar VAR_TEMP_6, VAR_RESULT
+    goto ViridianCity_EventScript_ZunMenuBus
+
+ViridianCity_EventScript_ZunMenu6::
+    setvar VAR_TEMP_5, 5
+    multichoice 8, 0, MULTICHOICE_ZUN6, TRUE
+    copyvar VAR_TEMP_6, VAR_RESULT
+    goto ViridianCity_EventScript_ZunMenuBus
+
+ViridianCity_EventScript_ZunMenu7::
+    setvar VAR_TEMP_5, 6
+    multichoice 8, 0, MULTICHOICE_ZUN7, TRUE
+    copyvar VAR_TEMP_6, VAR_RESULT
+    goto ViridianCity_EventScript_ZunMenuBus
+
+ViridianCity_EventScript_ZunMenu8::
+    setvar VAR_TEMP_5, 7
+    multichoice 8, 0, MULTICHOICE_ZUN8, TRUE
+    copyvar VAR_TEMP_6, VAR_RESULT
+    goto ViridianCity_EventScript_ZunMenuBus
+
+ViridianCity_EventScript_ZunMenu9::
+    setvar VAR_TEMP_5, 8
+    multichoice 8, 0, MULTICHOICE_ZUN9, TRUE
+    copyvar VAR_TEMP_6, VAR_RESULT
+    goto ViridianCity_EventScript_ZunMenuBus
+
+ViridianCity_EventScript_ZunMenu10::
+    setvar VAR_TEMP_5, 9
+    multichoice 8, 0, MULTICHOICE_ZUN10, TRUE
+    copyvar VAR_TEMP_6, VAR_RESULT
+    goto ViridianCity_EventScript_ZunMenuBus
+
+ViridianCity_EventScript_ZunMenu11::
+    setvar VAR_TEMP_5, 10
+    multichoice 8, 0, MULTICHOICE_ZUN11, TRUE
+    copyvar VAR_TEMP_6, VAR_RESULT
+    goto ViridianCity_EventScript_ZunMenuBus
+
+ViridianCity_EventScript_ZunMenu12::
+    setvar VAR_TEMP_5, 11
+    multichoice 8, 0, MULTICHOICE_ZUN12, TRUE
+    copyvar VAR_TEMP_6, VAR_RESULT
+    goto ViridianCity_EventScript_ZunMenuBus
+
+ViridianCity_EventScript_ZunMenu13::
+    setvar VAR_TEMP_5, 12
+    multichoice 8, 0, MULTICHOICE_ZUN13, TRUE
+    copyvar VAR_TEMP_6, VAR_RESULT
+    goto ViridianCity_EventScript_ZunMenuBus
+
+ViridianCity_EventScript_ZunMenu14::
+    setvar VAR_TEMP_5, 13
+    multichoice 8, 0, MULTICHOICE_ZUN14, TRUE
+    copyvar VAR_TEMP_6, VAR_RESULT
+    goto ViridianCity_EventScript_ZunMenuBus
+
+ViridianCity_EventScript_ZunMenu15::
+    setvar VAR_TEMP_5, 14
+    multichoice 8, 0, MULTICHOICE_ZUN15, TRUE
+    copyvar VAR_TEMP_6, VAR_RESULT
+    goto ViridianCity_EventScript_ZunMenuBus
+
+ViridianCity_EventScript_ZunMenu16::
+    setvar VAR_TEMP_5, 15
+    multichoice 8, 0, MULTICHOICE_ZUN16, TRUE
+    copyvar VAR_TEMP_6, VAR_RESULT
+    goto ViridianCity_EventScript_ZunMenuBus
+
+ViridianCity_EventScript_ZunMenu17::
+    setvar VAR_TEMP_5, 16
+    multichoice 8, 0, MULTICHOICE_ZUN17, TRUE
+    copyvar VAR_TEMP_6, VAR_RESULT
+    goto ViridianCity_EventScript_ZunMenuBus
+
+ViridianCity_EventScript_ZunMenu18::
+    setvar VAR_TEMP_5, 17
+    multichoice 8, 0, MULTICHOICE_ZUN18, TRUE
+    copyvar VAR_TEMP_6, VAR_RESULT
+    goto ViridianCity_EventScript_ZunMenuBus
+
+ViridianCity_EventScript_ZunMenu19::
+    setvar VAR_TEMP_5, 18
+    multichoice 8, 0, MULTICHOICE_ZUN19, TRUE
+    copyvar VAR_TEMP_6, VAR_RESULT
+    goto ViridianCity_EventScript_ZunMenuBus
+
+ViridianCity_EventScript_ZunMenu20::
+    setvar VAR_TEMP_5, 19
+    multichoice 8, 0, MULTICHOICE_ZUN20, TRUE
+    copyvar VAR_TEMP_6, VAR_RESULT
+    goto ViridianCity_EventScript_ZunMenuBus
+
+ViridianCity_EventScript_ZunMenu21::
+    setvar VAR_TEMP_5, 20
+    multichoice 8, 0, MULTICHOICE_ZUN21, TRUE
+    copyvar VAR_TEMP_6, VAR_RESULT
+    switch VAR_TEMP_6
+    case 0, ViridianCity_EventScript_ZunMenu1
+    case 1, ViridianCity_EventScript_ZunCheckMon
+    case 2, ViridianCity_EventScript_ZunCheckMon
+    case 3, ViridianCity_EventScript_ZunCheckMon
+    case 4, ViridianCity_EventScript_ZunCheckMon
+    case 5, ViridianCity_EventScript_ZunCheckMon
+    case 6, ViridianCity_EventScript_ZunCheckMon
+    case 7, ViridianCity_EventScript_ZunCheckMon
+    case 8, ViridianCity_EventScript_ZunCheckMon
+    case 9, ViridianCity_EventScript_ZunMenu20
+
+
+

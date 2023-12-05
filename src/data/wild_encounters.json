@@ -636,62 +636,62 @@
             "mons": [
               {
                 "min_level": 9,
-                "max_level": 11,
+                "max_level": 10,
                 "species": "SPECIES_CRUMIA"
               },
               {
                 "min_level": 9,
-                "max_level": 11,
+                "max_level": 10,
                 "species": "SPECIES_CKISUME"
               },
               {
                 "min_level": 9,
-                "max_level": 11,
+                "max_level": 10,
                 "species": "SPECIES_CKOAKUMA"
               },
               {
                 "min_level": 9,
-                "max_level": 11,
+                "max_level": 10,
                 "species": "SPECIES_CREISEN_II"
               },
               {
                 "min_level": 9,
-                "max_level": 11,
+                "max_level": 10,
                 "species": "SPECIES_CRUMIA"
               },
               {
                 "min_level": 9,
-                "max_level": 11,
+                "max_level": 10,
                 "species": "SPECIES_CKISUME"
               },
               {
                 "min_level": 9,
-                "max_level": 11,
+                "max_level": 10,
                 "species": "SPECIES_CKURUMI"
               },
               {
                 "min_level": 9,
-                "max_level": 11,
+                "max_level": 10,
                 "species": "SPECIES_CKURUMI"
               },
               {
                 "min_level": 9,
-                "max_level": 11,
+                "max_level": 10,
                 "species": "SPECIES_CRINGO"
               },
               {
                 "min_level": 9,
-                "max_level": 11,
+                "max_level": 10,
                 "species": "SPECIES_CSEIRAN"
               },
               {
                 "min_level": 9,
-                "max_level": 11,
+                "max_level": 10,
                 "species": "SPECIES_CRINGO"
               },
               {
                 "min_level": 9,
-                "max_level": 11,
+                "max_level": 10,
                 "species": "SPECIES_CSEIRAN"
               }
             ]
@@ -774,62 +774,62 @@
             "mons": [
               {
                 "min_level": 10,
-                "max_level": 12,
+                "max_level": 11,
                 "species": "SPECIES_CRUMIA"
               },
               {
                 "min_level": 10,
-                "max_level": 12,
+                "max_level": 11,
                 "species": "SPECIES_CKISUME"
               },
               {
                 "min_level": 10,
-                "max_level": 12,
+                "max_level": 11,
                 "species": "SPECIES_CKOAKUMA"
               },
               {
                 "min_level": 10,
-                "max_level": 12,
+                "max_level": 11,
                 "species": "SPECIES_CKOAKUMA"
               },
               {
                 "min_level": 10,
-                "max_level": 12,
+                "max_level": 11,
                 "species": "SPECIES_CRUMIA"
               },
               {
                 "min_level": 10,
-                "max_level": 12,
+                "max_level": 11,
                 "species": "SPECIES_CKISUME"
               },
               {
                 "min_level": 10,
-                "max_level": 12,
+                "max_level": 11,
                 "species": "SPECIES_CMISUMARU"
               },
               {
                 "min_level": 10,
-                "max_level": 12,
+                "max_level": 11,
                 "species": "SPECIES_CMISUMARU"
               },
               {
                 "min_level": 10,
-                "max_level": 12,
+                "max_level": 11,
                 "species": "SPECIES_CREISEN"
               },
               {
                 "min_level": 10,
-                "max_level": 12,
+                "max_level": 11,
                 "species": "SPECIES_CREISEN_II"
               },
               {
                 "min_level": 10,
-                "max_level": 12,
+                "max_level": 11,
                 "species": "SPECIES_CREISEN"
               },
               {
                 "min_level": 10,
-                "max_level": 12,
+                "max_level": 11,
                 "species": "SPECIES_CREISEN_II"
               }
             ]
@@ -931,64 +931,64 @@
             "encounter_rate": 5,
             "mons": [
               {
-                "min_level": 15,
+                "min_level": 16,
                 "max_level": 17,
                 "species": "SPECIES_CYAMAME"
               },
               {
-                "min_level": 15,
+                "min_level": 16,
                 "max_level": 17,
                 "species": "SPECIES_CYAMAME"
               },
               {
-                "min_level": 15,
+                "min_level": 16,
                 "max_level": 17,
                 "species": "SPECIES_CSUIKA"
               },
               {
-                "min_level": 15,
+                "min_level": 16,
                 "max_level": 17,
                 "species": "SPECIES_CYUUGI"
               },
               {
-                "min_level": 15,
+                "min_level": 16,
                 "max_level": 17,
                 "species": "SPECIES_CSUIKA"
               },
               {
-                "min_level": 15,
+                "min_level": 16,
                 "max_level": 17,
                 "species": "SPECIES_CYUUGI"
               },
               {
-                "min_level": 15,
+                "min_level": 16,
                 "max_level": 17,
-                "species": "SPECIES_CSUIKA"
+                "species": "SPECIES_CMOMOYO"
               },
               {
-                "min_level": 15,
+                "min_level": 16,
                 "max_level": 17,
-                "species": "SPECIES_CYUUGI"
+                "species": "SPECIES_CMOMOYO"
               },
               {
-                "min_level": 15,
+                "min_level": 16,
                 "max_level": 17,
-                "species": "SPECIES_CCLOWNPIECE"
+                "species": "SPECIES_CRIN"
               },
               {
-                "min_level": 15,
+                "min_level": 16,
                 "max_level": 17,
-                "species": "SPECIES_CCLOWNPIECE"
+                "species": "SPECIES_CRIN"
               },
               {
-                "min_level": 15,
+                "min_level": 16,
                 "max_level": 17,
-                "species": "SPECIES_CCLOWNPIECE"
+                "species": "SPECIES_CRIN"
               },
               {
-                "min_level": 15,
+                "min_level": 16,
                 "max_level": 17,
-                "species": "SPECIES_CCLOWNPIECE"
+                "species": "SPECIES_CRIN"
               }
             ]
           }
@@ -8399,63 +8399,63 @@
             "encounter_rate": 21,
             "mons": [
               {
-                "min_level": 6,
-                "max_level": 8,
+                "min_level": 5,
+                "max_level": 7,
                 "species": "SPECIES_CLILYWHITE"
               },
               {
-                "min_level": 6,
-                "max_level": 8,
+                "min_level": 5,
+                "max_level": 7,
                 "species": "SPECIES_CLILYBLACK"
               },
               {
-                "min_level": 6,
-                "max_level": 8,
+                "min_level": 5,
+                "max_level": 7,
                 "species": "SPECIES_CTAKANE"
               },
               {
-                "min_level": 6,
-                "max_level": 8,
+                "min_level": 5,
+                "max_level": 7,
                 "species": "SPECIES_CMYSTIA"
               },
               {
-                "min_level": 6,
-                "max_level": 8,
+                "min_level": 5,
+                "max_level": 7,
                 "species": "SPECIES_CTAKANE"
               },
               {
-                "min_level": 6,
-                "max_level": 8,
+                "min_level": 5,
+                "max_level": 7,
                 "species": "SPECIES_CMYSTIA"
               },
               {
-                "min_level": 6,
-                "max_level": 8,
+                "min_level": 5,
+                "max_level": 7,
                 "species": "SPECIES_CLILYWHITE"
               },
               {
-                "min_level": 6,
-                "max_level": 8,
+                "min_level": 5,
+                "max_level": 7,
                 "species": "SPECIES_CLILYBLACK"
               },
               {
-                "min_level": 6,
-                "max_level": 8,
+                "min_level": 5,
+                "max_level": 7,
                 "species": "SPECIES_CAUNN"
               },
               {
-                "min_level": 6,
-                "max_level": 8,
+                "min_level": 5,
+                "max_level": 7,
                 "species": "SPECIES_CAUNN"
               },
               {
-                "min_level": 6,
-                "max_level": 8,
+                "min_level": 5,
+                "max_level": 7,
                 "species": "SPECIES_CAUNN"
               },
               {
-                "min_level": 6,
-                "max_level": 8,
+                "min_level": 5,
+                "max_level": 7,
                 "species": "SPECIES_CAUNN"
               }
             ]
@@ -8538,62 +8538,62 @@
             "mons": [
               {
                 "min_level": 11,
-                "max_level": 13,
+                "max_level": 12,
                 "species": "SPECIES_CSEIRAN"
               },
               {
                 "min_level": 11,
-                "max_level": 13,
+                "max_level": 12,
                 "species": "SPECIES_CRINGO"
               },
               {
                 "min_level": 11,
-                "max_level": 13,
+                "max_level": 12,
                 "species": "SPECIES_CMOMIJI"
               },
               {
                 "min_level": 11,
-                "max_level": 13,
+                "max_level": 12,
                 "species": "SPECIES_CKUTAKA"
               },
               {
                 "min_level": 11,
-                "max_level": 13,
+                "max_level": 12,
                 "species": "SPECIES_CMOMIJI"
               },
               {
                 "min_level": 11,
-                "max_level": 13,
+                "max_level": 12,
                 "species": "SPECIES_CKUTAKA"
               },
               {
                 "min_level": 11,
-                "max_level": 13,
+                "max_level": 12,
                 "species": "SPECIES_CKEINE"
               },
               {
                 "min_level": 11,
-                "max_level": 13,
+                "max_level": 12,
                 "species": "SPECIES_CKEINE"
               },
               {
                 "min_level": 11,
-                "max_level": 13,
+                "max_level": 12,
                 "species": "SPECIES_CURUMI"
               },
               {
                 "min_level": 11,
-                "max_level": 13,
+                "max_level": 12,
                 "species": "SPECIES_CURUMI"
               },
               {
                 "min_level": 11,
-                "max_level": 13,
+                "max_level": 12,
                 "species": "SPECIES_CURUMI"
               },
               {
                 "min_level": 11,
-                "max_level": 13,
+                "max_level": 12,
                 "species": "SPECIES_CURUMI"
               }
             ]
@@ -8691,63 +8691,63 @@
             "encounter_rate": 21,
             "mons": [
               {
-                "min_level": 13,
-                "max_level": 15,
+                "min_level": 15,
+                "max_level": 16,
                 "species": "SPECIES_CORANGE"
               },
               {
-                "min_level": 13,
-                "max_level": 15,
+                "min_level": 15,
+                "max_level": 16,
                 "species": "SPECIES_CELLEN"
               },
               {
-                "min_level": 13,
-                "max_level": 15,
+                "min_level": 15,
+                "max_level": 16,
                 "species": "SPECIES_CMEILING"
               },
               {
-                "min_level": 13,
-                "max_level": 15,
+                "min_level": 15,
+                "max_level": 16,
                 "species": "SPECIES_CLOUISE"
               },
               {
-                "min_level": 13,
-                "max_level": 15,
+                "min_level": 15,
+                "max_level": 16,
                 "species": "SPECIES_CSHION"
               },
               {
-                "min_level": 13,
-                "max_level": 15,
+                "min_level": 15,
+                "max_level": 16,
                 "species": "SPECIES_CKEINE"
               },
               {
-                "min_level": 13,
-                "max_level": 15,
+                "min_level": 15,
+                "max_level": 16,
                 "species": "SPECIES_CMEILING"
               },
               {
-                "min_level": 13,
-                "max_level": 15,
+                "min_level": 15,
+                "max_level": 16,
                 "species": "SPECIES_CLOUISE"
               },
               {
-                "min_level": 13,
-                "max_level": 15,
+                "min_level": 15,
+                "max_level": 16,
                 "species": "SPECIES_CSHION"
               },
               {
-                "min_level": 13,
-                "max_level": 15,
+                "min_level": 15,
+                "max_level": 16,
                 "species": "SPECIES_CKEINE"
               },
               {
-                "min_level": 13,
-                "max_level": 15,
+                "min_level": 15,
+                "max_level": 16,
                 "species": "SPECIES_CSHION"
               },
               {
-                "min_level": 13,
-                "max_level": 15,
+                "min_level": 15,
+                "max_level": 16,
                 "species": "SPECIES_CKEINE"
               }
             ]
@@ -8760,63 +8760,63 @@
             "encounter_rate": 21,
             "mons": [
               {
-                "min_level": 13,
-                "max_level": 15,
+                "min_level": 15,
+                "max_level": 16,
                 "species": "SPECIES_CICHIRIN"
               },
               {
-                "min_level": 13,
-                "max_level": 15,
+                "min_level": 15,
+                "max_level": 16,
                 "species": "SPECIES_CSEKIBANKI"
               },
               {
-                "min_level": 13,
-                "max_level": 15,
+                "min_level": 15,
+                "max_level": 16,
                 "species": "SPECIES_CMEILING"
               },
               {
-                "min_level": 13,
-                "max_level": 15,
+                "min_level": 15,
+                "max_level": 16,
                 "species": "SPECIES_CELLY"
               },
               {
-                "min_level": 13,
-                "max_level": 15,
+                "min_level": 15,
+                "max_level": 16,
                 "species": "SPECIES_CSHION"
               },
               {
-                "min_level": 13,
-                "max_level": 15,
+                "min_level": 15,
+                "max_level": 16,
                 "species": "SPECIES_CKOGASA"
               },
               {
-                "min_level": 13,
-                "max_level": 15,
+                "min_level": 15,
+                "max_level": 16,
                 "species": "SPECIES_CMEILING"
               },
               {
-                "min_level": 13,
-                "max_level": 15,
+                "min_level": 15,
+                "max_level": 16,
                 "species": "SPECIES_CELLY"
               },
               {
-                "min_level": 13,
-                "max_level": 15,
+                "min_level": 15,
+                "max_level": 16,
                 "species": "SPECIES_CSHION"
               },
               {
-                "min_level": 13,
-                "max_level": 15,
+                "min_level": 15,
+                "max_level": 16,
                 "species": "SPECIES_CKOGASA"
               },
               {
-                "min_level": 13,
-                "max_level": 15,
+                "min_level": 15,
+                "max_level": 16,
                 "species": "SPECIES_CSHION"
               },
               {
-                "min_level": 13,
-                "max_level": 15,
+                "min_level": 15,
+                "max_level": 16,
                 "species": "SPECIES_CKOGASA"
               }
             ]
@@ -9052,64 +9052,64 @@
             "encounter_rate": 21,
             "mons": [
               {
-                "min_level": 16,
-                "max_level": 16,
-                "species": "SPECIES_SPEAROW"
+                "min_level": 20,
+                "max_level": 21,
+                "species": "SPECIES_CKAGEROU"
               },
               {
-                "min_level": 16,
-                "max_level": 16,
-                "species": "SPECIES_RATTATA"
+                "min_level": 20,
+                "max_level": 21,
+                "species": "SPECIES_CSHOU"
               },
               {
-                "min_level": 11,
-                "max_level": 11,
-                "species": "SPECIES_EKANS"
+                "min_level": 20,
+                "max_level": 21,
+                "species": "SPECIES_CCIRNO"
               },
               {
-                "min_level": 15,
-                "max_level": 15,
-                "species": "SPECIES_EKANS"
+                "min_level": 20,
+                "max_level": 21,
+                "species": "SPECIES_CCLOWNPIECE"
               },
               {
-                "min_level": 13,
-                "max_level": 13,
-                "species": "SPECIES_SPEAROW"
+                "min_level": 20,
+                "max_level": 21,
+                "species": "SPECIES_CMOMIJI"
               },
               {
-                "min_level": 14,
-                "max_level": 14,
-                "species": "SPECIES_RATTATA"
+                "min_level": 20,
+                "max_level": 21,
+                "species": "SPECIES_CKUTAKA"
               },
               {
-                "min_level": 17,
-                "max_level": 17,
-                "species": "SPECIES_SPEAROW"
+                "min_level": 20,
+                "max_level": 21,
+                "species": "SPECIES_CCIRNO"
               },
               {
-                "min_level": 17,
-                "max_level": 17,
-                "species": "SPECIES_RATTATA"
+                "min_level": 20,
+                "max_level": 21,
+                "species": "SPECIES_CCLOWNPIECE"
               },
               {
-                "min_level": 14,
-                "max_level": 14,
-                "species": "SPECIES_RATTATA"
+                "min_level": 20,
+                "max_level": 21,
+                "species": "SPECIES_CYOSHIKA"
               },
               {
-                "min_level": 13,
-                "max_level": 13,
-                "species": "SPECIES_EKANS"
+                "min_level": 20,
+                "max_level": 21,
+                "species": "SPECIES_CYOSHIKA"
               },
               {
-                "min_level": 14,
-                "max_level": 14,
-                "species": "SPECIES_RATTATA"
+                "min_level": 20,
+                "max_level": 21,
+                "species": "SPECIES_CYOSHIKA"
               },
               {
-                "min_level": 17,
-                "max_level": 17,
-                "species": "SPECIES_EKANS"
+                "min_level": 20,
+                "max_level": 21,
+                "species": "SPECIES_CYOSHIKA"
               }
             ]
           }
@@ -9121,64 +9121,64 @@
             "encounter_rate": 21,
             "mons": [
               {
-                "min_level": 16,
-                "max_level": 16,
-                "species": "SPECIES_SPEAROW"
+                "min_level": 20,
+                "max_level": 21,
+                "species": "SPECIES_CNEMUNO"
               },
               {
-                "min_level": 16,
-                "max_level": 16,
-                "species": "SPECIES_VOLTORB"
+                "min_level": 20,
+                "max_level": 21,
+                "species": "SPECIES_CKAGEROU"
               },
               {
-                "min_level": 11,
-                "max_level": 11,
-                "species": "SPECIES_EKANS"
+                "min_level": 20,
+                "max_level": 21,
+                "species": "SPECIES_CSHOU"
               },
               {
-                "min_level": 15,
-                "max_level": 15,
-                "species": "SPECIES_EKANS"
+                "min_level": 20,
+                "max_level": 21,
+                "species": "SPECIES_CRIKA"
               },
               {
-                "min_level": 13,
-                "max_level": 13,
-                "species": "SPECIES_SPEAROW"
+                "min_level": 20,
+                "max_level": 21,
+                "species": "SPECIES_CYOSHIKA"
               },
               {
-                "min_level": 14,
-                "max_level": 14,
-                "species": "SPECIES_VOLTORB"
+                "min_level": 20,
+                "max_level": 21,
+                "species": "SPECIES_CSAKUYA"
               },
               {
-                "min_level": 17,
-                "max_level": 17,
-                "species": "SPECIES_SPEAROW"
+                "min_level": 20,
+                "max_level": 21,
+                "species": "SPECIES_CRIKA"
               },
               {
-                "min_level": 17,
-                "max_level": 17,
-                "species": "SPECIES_VOLTORB"
+                "min_level": 20,
+                "max_level": 21,
+                "species": "SPECIES_CRIKAKO"
               },
               {
-                "min_level": 14,
-                "max_level": 14,
-                "species": "SPECIES_VOLTORB"
+                "min_level": 20,
+                "max_level": 21,
+                "species": "SPECIES_CNEMUNO"
               },
               {
-                "min_level": 13,
-                "max_level": 13,
-                "species": "SPECIES_EKANS"
+                "min_level": 20,
+                "max_level": 21,
+                "species": "SPECIES_CRIKAKO"
               },
               {
-                "min_level": 14,
-                "max_level": 14,
-                "species": "SPECIES_VOLTORB"
+                "min_level": 20,
+                "max_level": 21,
+                "species": "SPECIES_CNEMUNO"
               },
               {
-                "min_level": 17,
-                "max_level": 17,
-                "species": "SPECIES_EKANS"
+                "min_level": 20,
+                "max_level": 21,
+                "species": "SPECIES_CRIKAKO"
               }
             ]
           },
@@ -9275,63 +9275,63 @@
             "encounter_rate": 21,
             "mons": [
               {
-                "min_level": 14,
-                "max_level": 16,
+                "min_level": 16,
+                "max_level": 17,
                 "species": "SPECIES_CSEKIBANKI"
               },
               {
-                "min_level": 14,
-                "max_level": 16,
+                "min_level": 16,
+                "max_level": 17,
                 "species": "SPECIES_CKOGASA"
               },
               {
-                "min_level": 14,
-                "max_level": 16,
+                "min_level": 16,
+                "max_level": 17,
                 "species": "SPECIES_CMEIRA"
               },
               {
-                "min_level": 14,
-                "max_level": 16,
+                "min_level": 16,
+                "max_level": 17,
                 "species": "SPECIES_CMEIRA"
               },
               {
-                "min_level": 14,
-                "max_level": 16,
+                "min_level": 16,
+                "max_level": 17,
                 "species": "SPECIES_CPATCHOULI"
               },
               {
-                "min_level": 14,
-                "max_level": 16,
+                "min_level": 16,
+                "max_level": 17,
                 "species": "SPECIES_CSANAE"
               },
               {
-                "min_level": 14,
-                "max_level": 16,
+                "min_level": 16,
+                "max_level": 17,
                 "species": "SPECIES_CPATCHOULI"
               },
               {
-                "min_level": 14,
-                "max_level": 16,
+                "min_level": 16,
+                "max_level": 17,
                 "species": "SPECIES_CSANAE"
               },
               {
-                "min_level": 14,
-                "max_level": 16,
+                "min_level": 16,
+                "max_level": 17,
                 "species": "SPECIES_CMUGETSU"
               },
               {
-                "min_level": 14,
-                "max_level": 16,
+                "min_level": 16,
+                "max_level": 17,
                 "species": "SPECIES_CGENGETSU"
               },
               {
-                "min_level": 14,
-                "max_level": 16,
+                "min_level": 16,
+                "max_level": 17,
                 "species": "SPECIES_CMUGETSU"
               },
               {
-                "min_level": 14,
-                "max_level": 16,
+                "min_level": 16,
+                "max_level": 17,
                 "species": "SPECIES_CGENGETSU"
               }
             ]

@@ -798,3 +798,21 @@ const u32 gFile_graphics_items_icon_palettes_babiri_berry_palette[] = INCBIN_U32
 
 const u32 gFile_graphics_items_icons_chilan_berry_sheet[] = INCBIN_U32("graphics/items/icons/chilan_berry.4bpp.lz");
 const u32 gFile_graphics_items_icon_palettes_chilan_berry_palette[] = INCBIN_U32("graphics/items/icon_palettes/chilan_berry.gbapal.lz");
+
+const u32 gFile_graphics_items_icons_power_shard_sheet[] = INCBIN_U32("graphics/items/icons/power_shard.4bpp.lz");
+const u32 gFile_graphics_items_icon_palettes_power_shard_palette[] = INCBIN_U32("graphics/items/icon_palettes/power_shard.gbapal.lz");
+
+const u32 gFile_graphics_items_icons_defense_shard_sheet[] = INCBIN_U32("graphics/items/icons/defense_shard.4bpp.lz");
+const u32 gFile_graphics_items_icon_palettes_defense_shard_palette[] = INCBIN_U32("graphics/items/icon_palettes/defense_shard.gbapal.lz");
+
+const u32 gFile_graphics_items_icons_swift_shard_sheet[] = INCBIN_U32("graphics/items/icons/swift_shard.4bpp.lz");
+const u32 gFile_graphics_items_icon_palettes_swift_shard_palette[] = INCBIN_U32("graphics/items/icon_palettes/swift_shard.gbapal.lz");
+
+const u32 gFile_graphics_items_icons_support_shard_sheet[] = INCBIN_U32("graphics/items/icons/support_shard.4bpp.lz");
+const u32 gFile_graphics_items_icon_palettes_support_shard_palette[] = INCBIN_U32("graphics/items/icon_palettes/support_shard.gbapal.lz");
+
+const u32 gFile_graphics_items_icons_tech_shard_sheet[] = INCBIN_U32("graphics/items/icons/tech_shard.4bpp.lz");
+const u32 gFile_graphics_items_icon_palettes_tech_shard_palette[] = INCBIN_U32("graphics/items/icon_palettes/tech_shard.gbapal.lz");
+
+const u32 gFile_graphics_items_icons_solar_shard_sheet[] = INCBIN_U32("graphics/items/icons/solar_shard.4bpp.lz");
+const u32 gFile_graphics_items_icon_palettes_solar_shard_palette[] = INCBIN_U32("graphics/items/icon_palettes/solar_shard.gbapal.lz");

@@ -3430,6 +3430,7 @@ static void atk23_getexp(void)
                 }
             }
             calculatedExp = gBaseStats[gBattleMons[gBattlerFainted].species].expYield * gBattleMons[gBattlerFainted].level / 5;
+            calculatedExp += (calculatedExp * (1 + gBattleMons[gBattlerFainted].level)) / 100;
             if (viaExpShare) // at least one mon is getting exp via exp share
             {
                 *exp = SAFE_DIV(calculatedExp / 2, viaSentIn);
@@ -3503,8 +3504,6 @@ static void atk23_getexp(void)
                     
                     if (holdEffect == HOLD_EFFECT_LUCKY_EGG)
                         gBattleMoveDamage = (gBattleMoveDamage * 150) / 100;
-                    //if (gBattleTypeFlags & BATTLE_TYPE_TRAINER)
-                        //gBattleMoveDamage = (gBattleMoveDamage * 150) / 100;
                     if (IsTradedMon(&gPlayerParty[gBattleStruct->expGetterMonId])
                      && !(gBattleTypeFlags & BATTLE_TYPE_POKEDUDE))
                     {
@@ -3532,6 +3531,27 @@ static void atk23_getexp(void)
                     {
                         gBattleStruct->expGetterBattlerId = 0;
                     }
+                    
+                    if (gBattleTypeFlags & BATTLE_TYPE_TRAINER && (playerLevel + 1) < enemyLevel)
+                    {
+                        // if exp gained would not bring us to next level,
+                        // and our level+1 is lower than KO'd mon,
+                        // get enough exp to bring us to next level,
+                        // or get (level*(level+20)) if that's lower
+                        
+                        u16 species = GetMonData(&gPlayerParty[gBattleStruct->expGetterMonId], MON_DATA_SPECIES);
+                        u32 currentExp = GetMonData(&gPlayerParty[gBattleStruct->expGetterMonId], MON_DATA_EXP);
+                        u32 cappedExp = enemyLevel * (enemyLevel+20);
+                        u32 expToNextLevel = gExperienceTables[gBaseStats[species].growthRate][playerLevel + 1] - currentExp;
+                        
+                        if (gBattleMoveDamage < expToNextLevel)
+                        {
+                            gBattleMoveDamage = expToNextLevel;
+                            if (gBattleMoveDamage > cappedExp)
+                                gBattleMoveDamage = cappedExp;
+                        }
+                    }
+                    
                     PREPARE_MON_NICK_WITH_PREFIX_BUFFER(gBattleTextBuff1, gBattleStruct->expGetterBattlerId, gBattleStruct->expGetterMonId);
                     // buffer 'gained' or 'gained a boosted'
                     PREPARE_STRING_BUFFER(gBattleTextBuff2, i);

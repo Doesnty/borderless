@@ -2102,6 +2102,56 @@ const u8 gmiyoiPokedexText[] = _(
     "Uses this ability to make Geidontei's\n"
     "owner unaware of her existence.");
 
+const u8 gcbitenPokedexText[] = _(
+    "placeholder\n"
+    "\n"
+    "todo when more lore");
+
+const u8 gbitenPokedexText[] = _(
+    "placeholder\n"
+    "\n"
+    "todo when more lore");
+
+const u8 gcenokoPokedexText[] = _(
+    "placeholder\n"
+    "\n"
+    "todo when more lore");
+
+const u8 genokoPokedexText[] = _(
+    "placeholder\n"
+    "\n"
+    "todo when more lore");
+
+const u8 gcchiyariPokedexText[] = _(
+    "placeholder\n"
+    "\n"
+    "todo when more lore");
+
+const u8 gchiyariPokedexText[] = _(
+    "placeholder\n"
+    "\n"
+    "todo when more lore");
+
+const u8 gchisamiPokedexText[] = _(
+    "placeholder\n"
+    "\n"
+    "todo when more lore");
+
+const u8 ghisamiPokedexText[] = _(
+    "placeholder\n"
+    "\n"
+    "todo when more lore");
+
+const u8 gczanmuPokedexText[] = _(
+    "placeholder\n"
+    "\n"
+    "todo when more lore");
+
+const u8 gzanmuPokedexText[] = _(
+    "placeholder\n"
+    "\n"
+    "todo when more lore");
+
 const u8 gchakureiPokedexText[] = _(
     "A fledgling shrine maiden that\n"
     "hasn't realized her potential.\n"
@@ -2481,9 +2531,14 @@ const u8 gdlaylaPokedexText[] = _(
     "over time, and nothing remains of\n"
     "them in the outside world.");
 
-const u8 gyoukiPokedexText[] = _(
+const u8 gcyoukiPokedexText[] = _(
     "Youmu's father and instructor in the\n"
-    "art of swordplay. He disappeared one\n"
+    "art of swordplay. Formerly Yuyuko's\n"
+    "attendant.");
+
+const u8 gyoukiPokedexText[] = _(
+    "Peerless in swordplay, and known for\n"
+    "his stolen arts. He disappeared one\n"
     "day and nobody knows where he is.");
 
 const u8 gtoriPokedexText[] = _(

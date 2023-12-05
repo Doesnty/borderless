@@ -71,9 +71,7 @@ Text_MegaKickTaught:: @ 8183C94
     .string "only simple punching over there.$"
 
 Route4_Text_PeopleLikeAndRespectBrock:: @ 8183D26
-    .string "Oh, wow, that's the BOULDERBADGE!\n"
-    .string "You got it from BROCK, didn't you?\p"
-    .string "BROCK is cool. He's not just tough.\n"
-    .string "People like and respect him.\p"
-    .string "I want to become a GYM LEADER\n"
-    .string "like him.$"
+    .string "Huh? You're looking for Brock?\n"
+    .string "You just missed him.\p"
+    .string "He should be back at Pewter City\n"
+    .string "Gym by now, if you head back there.$"

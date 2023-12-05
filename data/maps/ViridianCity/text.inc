@@ -28,7 +28,7 @@ ViridianCity_Text_GrandpaHasntHadCoffeeYet:: @ 817DC4E
     .string "Oh, Grandpa!\n"
     .string "Don't be so mean!\p"
     .string "I'm so sorry.\n"
-    .string "He hasn't had his coffee yet.$"
+    .string "He hasn't had his booze yet.$"
 
 ViridianCity_Text_GoShoppingInPewterOccasionally:: @ 817DC99
     .string "I go shopping in PEWTER CITY\n"
@@ -42,26 +42,25 @@ ViridianCity_Text_ThisIsPrivateProperty:: @ 817DD03
     .string "This is private property!$"
 
 ViridianCity_Text_ShowYouHowToCatchMons:: @ 817DD4E
-    .string "Well, now, I've had my coffee, and\n"
+    .string "Well, now, I've had my beer, and\n"
     .string "that's what I need to get going!\p"
     .string "Hm?\n"
     .string "What is that red box you have?\p"
     .string "Ah, so you're working on your\n"
-    .string "POKéDEX.\p"
-    .string "Then let me give you a word of\n"
-    .string "advice.\p"
-    .string "Whenever you catch a POKéMON,\n"
-    .string "the POKéDEX automatically updates\l"
-    .string "its data.\p"
-    .string "…You don't know how to catch\n"
-    .string "a POKéMON?\p"
-    .string "I suppose I had better show you\n"
-    .string "then!$"
+    .string "Tohodex.\p"
+    .string "Then let me give you a little\n"
+    .string "bit of help with that.\p"
+    .string "Who's your favorite Touhou character?$"
+
+ViridianCity_Text_WhosYourFavorite::
+    .string "Who's your favorite Touhou character?$"
+
+ViridianCity_Text_SoYouLike::
+    .string "So, you like {STR_VAR_1}?$"
 
 ViridianCity_Text_ThatWasEducationalTakeThis:: @ 817DE9B
-    .string "There! Now tell me, that was\n"
-    .string "educational, was it not?\p"
-    .string "And here, take this, too.$"
+    .string "What a happy coincidence, no?\n"
+    .string "Good luck with your Tohodex.$"
 
 ViridianCity_Text_WatchThatToLearnBasics:: @ 817DEEB
     .string "If there's something you don't\n"
@@ -70,22 +69,19 @@ ViridianCity_Text_WatchThatToLearnBasics:: @ 817DEEB
     .string "of being a POKéMON TRAINER.$"
 
 ViridianCity_Text_WeakenMonsFirstToCatch:: @ 817DF61
-    .string "Well, now, I've had my coffee, and\n"
+    .string "Well, now, I've had my beer, and\n"
     .string "that's what I need to get going!\p"
-    .string "But I made it too strong.\n"
-    .string "It gave me a headache…\p"
-    .string "Incidentally, are you filling your\n"
-    .string "POKéDEX?\p"
-    .string "At first, focus on weakening the\n"
-    .string "POKéMON before trying to catch it.$"
+    .string "But I didn't have enough.\n"
+    .string "I've got a headache…$"
+
+ViridianCity_Text_ObtainedAnX::
+    .string "{PLAYER} obtained {STR_VAR_1}!$"
 
 ViridianCity_Text_HowsTeachyTVHelping:: @ 817E046
-    .string "Well, now, I've had my coffee, and\n"
+    .string "Well, now, I've had my beer, and\n"
     .string "that's what I need to get going!\p"
-    .string "But I made it too strong.\n"
-    .string "It gave me a headache…\p"
-    .string "Incidentally, is my old TEACHY TV\n"
-    .string "helping you?$"
+    .string "But I didn't have enough.\n"
+    .string "I've got a headache…$"
 
 ViridianCity_Text_MyGrandsonOnTheShow:: @ 817E0EA
     .string "Wahaha!\n"

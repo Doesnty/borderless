@@ -54,6 +54,10 @@ Route4_EventScript_ItemTM05:: @ 81BE637
 	finditem ITEM_TM05
 	end
 
+Route4_EventScript_ItemTM74:: @ 81BE637
+	finditem ITEM_TM74
+	end
+
 Route24_EventScript_ItemTM45:: @ 81BE644
 	finditem ITEM_TM45
 	end
