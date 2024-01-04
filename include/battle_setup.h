@@ -16,6 +16,7 @@ u8 BattleSetup_GetTerrainId(void);
 u8 BattleSetup_GetBattleTowerBattleTransition(void);
 const u8 *BattleSetup_ConfigureTrainerBattle(const u8 *data);
 void ConfigureAndSetUpOneTrainerBattle(u8 trainerEventObjId, const u8 *trainerScript);
+void BattleSetup_ConfigureRockTunnelImakuni();
 bool32 GetTrainerFlagFromScriptPointer(const u8 *data);
 void SetUpTrainerMovement(void);
 u8 GetTrainerBattleMode(void);

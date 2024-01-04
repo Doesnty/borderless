@@ -741,6 +741,17 @@ bool8 TryStandardWildEncounter(u32 currMetatileAttrs)
         sWildEncounterData.prevMetatileBehavior = ExtractMetatileAttribute(currMetatileAttrs, METATILE_ATTRIBUTE_BEHAVIOR);
         return FALSE;
     }
+    // imakuni? hack
+    else if (gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(ROCK_TUNNEL_1F)
+        && (gSaveBlock1Ptr->location.mapNum == MAP_NUM(ROCK_TUNNEL_1F) || gSaveBlock1Ptr->location.mapNum == MAP_NUM(ROCK_TUNNEL_B1F))
+        && !(Random() % 100)
+        && VarGet(VAR_REPEL_STEP_COUNT)
+        && !FlagGet(FLAG_ROCK_TUNNEL_IMAKUNI_FOUGHT))
+    {
+        FlagSet(FLAG_ROCK_TUNNEL_IMAKUNI_FOUGHT);
+        BattleSetup_ConfigureRockTunnelImakuni();
+        StartTrainerBattle();
+    }
     else if (StandardWildEncounter(currMetatileAttrs, sWildEncounterData.prevMetatileBehavior) == TRUE)
     {
         sWildEncounterData.encounterRateBuff = 0;

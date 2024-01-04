@@ -2059,9 +2059,8 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u8 ability, u8 special, u16 moveA
 							else
 								gBattlescriptCurrInstr = BattleScript_MoveSAtkDrain_PPLoss;
                         }
-                        
+                        effect = 2;
                     }
-                    effect = 2;
                     break;
                 case ABILITY_SAP_SIPPER:
                     if (moveType == TYPE_NATURE)
@@ -2084,9 +2083,8 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u8 ability, u8 special, u16 moveA
 							else
 								gBattlescriptCurrInstr = BattleScript_MoveAtkDrain_PPLoss;
                         }
-                        
+                        effect = 2;
                     }
-                    effect = 2;
                     break;
                 }
                 if (effect == 1)

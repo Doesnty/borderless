@@ -1784,6 +1784,12 @@ s32 CalculateBaseDamage(struct BattlePokemon *attacker, struct BattlePokemon *de
         attack *= 2;
         spAttack *= 2;
     }
+    if (attackerHoldEffect == HOLD_EFFECT_HANIWA_SWORD && (attacker->species == SPECIES_CMAYUMI || attacker->species == SPECIES_MAYUMI) &&
+        (type == TYPE_EARTH || type == TYPE_STEEL))
+    {
+        attack = (attack * 12) / 10;
+        spAttack = (spAttack * 12) / 10;
+    }
     /*
     if (defenderHoldEffect == HOLD_EFFECT_METAL_POWDER && defender->species == SPECIES_DITTO)
         defense *= 2; */
@@ -1791,6 +1797,10 @@ s32 CalculateBaseDamage(struct BattlePokemon *attacker, struct BattlePokemon *de
         (attacker->species == SPECIES_CHINA || attacker->species == SPECIES_HINA ||
          attacker->species == SPECIES_AHINA || attacker->species == SPECIES_DHINA))
         attack *= 2;
+    if (defenderHoldEffect == HOLD_EFFECT_HANIWA_GUARD && (defender->species == SPECIES_CMAYUMI || defender->species == SPECIES_MAYUMI))
+        defense = (150 * defense) / 100;
+    if (defenderHoldEffect == HOLD_EFFECT_HANIWA_CHARM && (defender->species == SPECIES_CMAYUMI || defender->species == SPECIES_MAYUMI))
+        spDefense = (150 * spDefense) / 100;
     if (defenderAbility == ABILITY_WALL_OF_ICE && (type == TYPE_FIRE || type == TYPE_ICE))
     {
         attack /= 2;
@@ -5045,6 +5055,7 @@ static u16 GetBattleBGM(void)
         case TRAINER_CLASS_ELITE_FOUR:
             return MUS_VS_GYM_LEADER;
         case TRAINER_CLASS_STRANGER:
+        case TRAINER_CLASS_WILD:
             gBattleTypeFlags |= BATTLE_TYPE_IMAKUNI;
             return MUS_VS_IMAKUNI;
         case TRAINER_CLASS_BOSS:

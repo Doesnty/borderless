@@ -18,6 +18,14 @@ ViridianForest_EventScript_ItemPotion:: @ 81BE5C2
 	finditem ITEM_POTION
 	end
 
+ViridianForestWest_EventScript_ItemTM58::
+	finditem ITEM_TM58_HIDDEN_POWER
+	end
+
+ViridianForestWest_EventScript_ItemTM68::
+	finditem ITEM_TM68_SPIKES
+	end
+
 MtMoon_1F_EventScript_ItemParalyzeHeal:: @ 81BE5CF
 	finditem ITEM_PARALYZE_HEAL
 	end
@@ -59,15 +67,15 @@ Route4_EventScript_ItemTM74:: @ 81BE637
 	end
 
 Route24_EventScript_ItemTM45:: @ 81BE644
-	finditem ITEM_TM45
+	finditem ITEM_TM43_SECRET_POWER
 	end
 
 Route25_EventScript_ItemTM43:: @ 81BE651
-	finditem ITEM_TM43
+	finditem ITEM_TM73_SHOCK_WAVE
 	end
 
 SSAnne_1F_Room2_EventScript_ItemTM31:: @ 81BE65E
-	finditem ITEM_TM31
+	finditem ITEM_TM31_BRICK_BREAK
 	end
 
 SSAnne_2F_Room2_EventScript_ItemStardust:: @ 81BE66B
@@ -95,7 +103,7 @@ SSAnne_Kitchen_EventScript_ItemGreatBall:: @ 81BE6AC
 	end
 
 Route9_EventScript_ItemTM40:: @ 81BE6B9
-	finditem ITEM_TM73_SHOCK_WAVE
+	finditem ITEM_TM07_RAZOR_WIND
 	end
 
 RocketHideout_B1F_EventScript_ItemEscapeRope:: @ 81BE6C6

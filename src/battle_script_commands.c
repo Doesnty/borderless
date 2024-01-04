@@ -821,25 +821,96 @@ struct PickupItem
     u8 chance;
 };
 
+
 static const struct PickupItem sPickupItems[] =
 {
-    { ITEM_ORAN_BERRY, 15 },
-    { ITEM_CHERI_BERRY, 25 },
-    { ITEM_CHESTO_BERRY, 35 },
-    { ITEM_PECHA_BERRY, 45 },
-    { ITEM_RAWST_BERRY, 55 },
-    { ITEM_ASPEAR_BERRY, 65 },
-    { ITEM_PERSIM_BERRY, 75 },
-    { ITEM_TM10, 80 },
-    { ITEM_PP_UP, 85 },
-    { ITEM_RARE_CANDY, 90 },
-    { ITEM_NUGGET, 95 },
-    { ITEM_LIECHI_BERRY, 96 },
-    { ITEM_GANLON_BERRY, 97 },
-    { ITEM_PETAYA_BERRY, 98 },
-    { ITEM_APICOT_BERRY, 99 },
-    { ITEM_SALAC_BERRY, 1 },
+    { ITEM_SUPER_POTION, 25 },
+    { ITEM_HYPER_POTION, 35 },
+    { ITEM_MAX_POTION, 40 },
+    { ITEM_FULL_RESTORE, 45 },
+    { ITEM_GREAT_BALL, 60 },
+    { ITEM_ULTRA_BALL, 70 },
+    { ITEM_FULL_HEAL, 80 },
+    { ITEM_REVIVE, 88 },
+    { ITEM_MAX_REVIVE, 92 },
+    { ITEM_RARE_CANDY, 95 },
+    { ITEM_LEFTOVERS, 96 },
+    { ITEM_PP_UP, 99 },
+    { ITEM_PP_MAX, 250 },
+};
 
+// uses mon's level + total levels gained under player
+// e.g. fresh lv 15 catch is 15, but a lv15 starter counts as 25
+// breakpoints are 20 and 50
+// novice: 20% oran, 5% sitrus, 60% status cure, 5% leppa, 10% figy
+// vet: 25% sitrus, 30% status cure, 18% lum, 10% leppa, 10% figy, 7% pinch
+// elite: 25% sitrus, 10% status cure, 5% chesto, 20% lum, 11% leppa, 15% figy, 14% pinch
+static const struct PickupItem sPickupBerriesNovice[] =
+{
+    { ITEM_ORAN_BERRY, 20 },
+    { ITEM_SITRUS_BERRY, 25 },
+    { ITEM_CHERI_BERRY, 35 },
+    { ITEM_PECHA_BERRY, 45 },
+    { ITEM_CHESTO_BERRY, 55 },
+    { ITEM_ASPEAR_BERRY, 65 },
+    { ITEM_RAWST_BERRY, 75 },
+    { ITEM_PERSIM_BERRY, 85 },
+    { ITEM_LEPPA_BERRY, 90 },
+    { ITEM_FIGY_BERRY, 92 },
+    { ITEM_WIKI_BERRY, 94 },
+    { ITEM_MAGO_BERRY, 96 },
+    { ITEM_AGUAV_BERRY, 98 },
+    { ITEM_IAPAPA_BERRY, 250 },
+};
+
+static const struct PickupItem sPickupBerriesVeteran[] =
+{
+    { ITEM_SITRUS_BERRY, 25 },
+    { ITEM_CHERI_BERRY, 30 },
+    { ITEM_PECHA_BERRY, 35 },
+    { ITEM_CHESTO_BERRY, 40 },
+    { ITEM_ASPEAR_BERRY, 45 },
+    { ITEM_RAWST_BERRY, 50 },
+    { ITEM_PERSIM_BERRY, 55 },
+    { ITEM_LUM_BERRY, 73 },
+    { ITEM_LEPPA_BERRY, 83 },
+    { ITEM_FIGY_BERRY, 85 },
+    { ITEM_WIKI_BERRY, 87 },
+    { ITEM_MAGO_BERRY, 89 },
+    { ITEM_AGUAV_BERRY, 91 },
+    { ITEM_IAPAPA_BERRY, 93 },
+    { ITEM_LIECHI_BERRY, 94 },
+    { ITEM_GANLON_BERRY, 95 },
+    { ITEM_PETAYA_BERRY, 96 },
+    { ITEM_APICOT_BERRY, 97 },
+    { ITEM_SALAC_BERRY, 98 },
+    { ITEM_LANSAT_BERRY, 99 },
+    { ITEM_STARF_BERRY, 250 },
+};
+
+static const struct PickupItem sPickupBerriesElite[] =
+{
+    { ITEM_SITRUS_BERRY, 25 },
+    { ITEM_CHERI_BERRY, 27 },
+    { ITEM_PECHA_BERRY, 29 },
+    { ITEM_ASPEAR_BERRY, 31 },
+    { ITEM_RAWST_BERRY, 33 },
+    { ITEM_PERSIM_BERRY, 35 },
+    { ITEM_CHESTO_BERRY, 40 },
+    { ITEM_LUM_BERRY, 60 },
+    { ITEM_LEPPA_BERRY, 71 },
+    { ITEM_FIGY_BERRY, 74 },
+    { ITEM_WIKI_BERRY, 77 },
+    { ITEM_MAGO_BERRY, 80 },
+    { ITEM_AGUAV_BERRY, 83 },
+    { ITEM_IAPAPA_BERRY, 86 },
+    { ITEM_LIECHI_BERRY, 88 },
+    { ITEM_GANLON_BERRY, 90 },
+    { ITEM_PETAYA_BERRY, 92 },
+    { ITEM_APICOT_BERRY, 94 },
+    { ITEM_SALAC_BERRY, 96 },
+    { ITEM_LANSAT_BERRY, 98 },
+    { ITEM_STARF_BERRY, 250 },
 };
 
 static const u8 sTerrainToType[] =
@@ -9102,23 +9173,97 @@ static void atkE5_pickup(void)
     u32 j;
     u16 species, heldItem;
     u32 ability;
+    u16 newItem = 0;
+    u16 rn;
+    u16 level;
+    u16 levelmet;
 
     for (i = 0; i < PARTY_SIZE; ++i)
     {
         species = GetMonData(&gPlayerParty[i], MON_DATA_SPECIES2);
         heldItem = GetMonData(&gPlayerParty[i], MON_DATA_HELD_ITEM);
-        if (GetMonData(&gPlayerParty[i], MON_DATA_ABILITY_NUM) != ABILITY_NONE)
-            ability = gBaseStats[species].abilities[1];
-        else
-            ability = gBaseStats[species].abilities[0];
-        if (ability == ABILITY_PICKUP && species != SPECIES_NONE && species != SPECIES_EGG && heldItem == ITEM_NONE && !(Random() % 10))
+        newItem = 0;
+        ability = GetMonAbility(&gPlayerParty[i]);
+        if (species != SPECIES_NONE && species != SPECIES_EGG && heldItem == ITEM_NONE && ability != ABILITY_JEALOUSY)
         {
-            s32 random = Random() % 100;
-
-            for (j = 0; j < 15; ++j)
-                if (sPickupItems[j].chance > random)
-                    break;
-            SetMonData(&gPlayerParty[i], MON_DATA_HELD_ITEM, &sPickupItems[j]);
+            if (ability == ABILITY_PICKUP && !(Random() % 5))
+            {
+                s32 random = Random() % 100;
+                for (j = 0; TRUE; ++j)
+                    if (sPickupItems[j].chance > random)
+                        break;
+                newItem = sPickupItems[j].itemId;
+            }
+            
+            // species-specific pickups
+            if (!newItem && !(Random() % 10))
+            {
+                // marisa and the fairies like mushrooms
+                if ((species >= SPECIES_CMARISA && species <= SPECIES_LMARISA) ||
+                    (species >= SPECIES_CSUNNY && species <= SPECIES_HSTAR))
+                {
+                    if (Random() % 5)
+                        newItem = ITEM_TINY_MUSHROOM;
+                    else
+                        newItem = ITEM_BIG_MUSHROOM;
+                }
+                
+                // ice ball
+                if (species >= SPECIES_CCIRNO && species <= SPECIES_ADCIRNO)
+                {
+                    if (!(Random() % 10))
+                        newItem = ITEM_ICE_BALL;
+                }
+                
+                // peachy
+                if ((species >= SPECIES_CTOYOHIME && species <= SPECIES_TTOYOHIME) ||
+                    (species >= SPECIES_CTENSHI && species <= SPECIES_DTENSHI))
+                {
+                    newItem = ITEM_PECHA_BERRY;
+                }
+                
+                // a nice non-alcoholic drink
+                if (species == SPECIES_CMIYOI || species == SPECIES_MIYOI)
+                {
+                    rn = Random() % 3;
+                    switch (rn)
+                    {
+                        case 0: newItem = ITEM_FRESH_WATER; break;
+                        case 1: newItem = ITEM_SODA_POP; break;
+                        case 2: newItem = ITEM_LEMONADE; break;
+                    }
+                }
+                
+                // attracts money
+                if (species == SPECIES_CMIKE || species == SPECIES_MIKE)
+                {
+                    if (Random() % 2)
+                        newItem = ITEM_NUGGET;
+                }
+            }
+            
+            // random berries
+            if (!newItem && !(Random() % 20))
+            {
+                const struct PickupItem* pickuplist = sPickupBerriesNovice;
+                s32 random = Random() % 100;
+                
+                level = GetMonData(&gPlayerParty[i], MON_DATA_LEVEL);
+                levelmet = GetMonData(&gPlayerParty[i], MON_DATA_MET_LEVEL);
+                level = level + (level - levelmet);
+                
+                if (level >= 20)
+                    pickuplist = sPickupBerriesVeteran;
+                if (level >= 50)
+                    pickuplist = sPickupBerriesElite;
+                for (j = 0; TRUE; ++j)
+                    if (pickuplist[j].chance > random)
+                        break;
+                newItem = pickuplist[j].itemId;
+            }
+            
+            if (newItem)
+                SetMonData(&gPlayerParty[i], MON_DATA_HELD_ITEM, &newItem);
         }
     }
     ++gBattlescriptCurrInstr;

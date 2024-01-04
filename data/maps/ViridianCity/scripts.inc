@@ -198,7 +198,21 @@ ViridianCity_EventScript_WomanRoadBlocked:: @ 8165ADB
 	end
 
 ViridianCity_EventScript_DreamEaterTutor:: @ 8165AF0
-	goto EventScript_DreamEaterTutor
+    lock
+    faceplayer
+    goto_if_set FLAG_TUTOR_DREAM_EATER, EventScript_DreamEaterTaught
+    msgbox ViridianCity_Text_DreamEaterMan
+	checkitemspace ITEM_LEFTOVERS, 1
+	compare VAR_RESULT, FALSE
+	goto_if_eq ViridianCity_EventScript_DreamEaterNoRoom
+	setflag FLAG_TUTOR_DREAM_EATER
+	giveitem_msg ViridianCity_Text_DreamEaterGotLeftovers, ITEM_LEFTOVERS, 1, MUS_OBTAIN_KEY_ITEM
+	release
+	end
+
+ViridianCity_EventScript_DreamEaterNoRoom::
+	msgbox ViridianCity_Text_DreamEaterNoRoom
+	release
 	end
 
 ViridianCity_EventScript_RoadBlocked:: @ 8165AF6

@@ -119,3 +119,19 @@ ViridianCity_Text_GymSign:: @ 817E2DB
 ViridianCity_Text_GymDoorsAreLocked:: @ 817E2F5
     .string "VIRIDIAN GYM's doors are locked…$"
 
+ViridianCity_Text_DreamEaterMan::
+    .string "Yawn! I must have dozed off\n"
+    .string "in the sun.\p"
+    .string "I had this weird dream about\n"
+    .string "a Doremy eating my dream.\p"
+    .string "And...\n"
+    .string "It left behind the Leftovers...\p"
+    .string "Oogh, this is took spooky!\n"
+    .string "Take these away from me!$"
+
+ViridianCity_Text_DreamEaterGotLeftovers:: @ 8190866
+    .string "{PLAYER} received the Leftovers\n"
+    .string "from the strange man.$"
+
+ViridianCity_Text_DreamEaterNoRoom::
+    .string "You don't have space for this.$"

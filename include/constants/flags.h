@@ -132,7 +132,7 @@
 #define FLAG_HIDE_TWO_ISLAND_BEAUTY                        0x07C
 #define FLAG_HIDE_TWO_ISLAND_SUPER_NERD                    0x07D
 #define FLAG_HIDE_THREE_ISLAND_ANTIBIKERS                  0x07E
-#define FLAG_0x07F                                         0x07F
+#define FLAG_HIDE_ROUTE_21_CUT_TREE                        0x07F
 #define FLAG_HIDE_ROUTE_16_SNORLAX                         0x080
 #define FLAG_HIDE_MEWTWO                                   0x081
 #define FLAG_HIDE_ARTICUNO                                 0x082
@@ -522,9 +522,9 @@
 #define FLAG_HIDE_SILPH_CO_4F_TM41                              0x1FE
 
 // Unused?
-#define FLAG_0x1FF               0x1FF
-#define FLAG_0x200               0x200
-#define FLAG_0x201               0x201
+#define FLAG_HIDE_WEST_VIRIDIAN_FOREST_TM58                     0x1FF
+#define FLAG_HIDE_WEST_VIRIDIAN_FOREST_TM68                     0x200
+#define FLAG_ROCK_TUNNEL_IMAKUNI_FOUGHT                         0x201
 #define FLAG_0x202               0x202
 #define FLAG_0x203               0x203
 #define FLAG_0x204               0x204
@@ -695,7 +695,7 @@
 #define FLAG_GOT_TEA                                     0x2A6
 #define FLAG_GOT_AURORA_TICKET                           0x2A7
 #define FLAG_GOT_MYSTIC_TICKET                           0x2A8
-#define FLAG_0x2A9                                       0x2A9
+#define FLAG_VIRIDIAN_CUT_TREE                           0x2A9
 #define FLAG_0x2AA                                       0x2AA
 #define FLAG_0x2AB                                       0x2AB
 #define FLAG_0x2AC                                       0x2AC

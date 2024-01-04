@@ -50,7 +50,7 @@ extern const u8 gMultiBootProgram_EReader_End[];
 
 static const u16 sGiftItemFlagIds[] = {
     FLAG_GOT_AURORA_TICKET,
-    FLAG_GOT_MYSTIC_TICKET,
+    FLAG_GOT_MYSTIC_TICKET, /*
     FLAG_0x2A9,
     FLAG_0x2AA,
     FLAG_0x2AB,
@@ -68,7 +68,7 @@ static const u16 sGiftItemFlagIds[] = {
     FLAG_0x2B7,
     FLAG_0x2B8,
     FLAG_0x2B9,
-    FLAG_0x2BA
+    FLAG_0x2BA */
 };
 
 struct MEvent_Str_1 sMEventSendToEReaderManager;

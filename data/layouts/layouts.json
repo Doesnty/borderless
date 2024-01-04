@@ -4380,6 +4380,18 @@
       "secondary_tileset": "gTileset_MtEmber",
       "border_filepath": "data/layouts/OneIsland_KindleRoad_EmberSpa/border.bin",
       "blockdata_filepath": "data/layouts/OneIsland_KindleRoad_EmberSpa/map.bin"
+    },
+    {
+      "id": "LAYOUT_VIRIDIAN_FOREST_WEST",
+      "name": "ViridianForestWest_Layout",
+      "width": 54,
+      "height": 69,
+      "border_width": 3,
+      "border_height": 2,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_ViridianForest",
+      "border_filepath": "data/layouts/ViridianForestWest/border.bin",
+      "blockdata_filepath": "data/layouts/ViridianForestWest/map.bin"
     }
   ]
 }

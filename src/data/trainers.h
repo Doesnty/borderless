@@ -2,17 +2,17 @@ const struct Trainer gTrainers[] = {
     [TRAINER_NONE] = {
         .trainerName = _(""),
     },
-    [TRAINER_AQUA_LEADER] = {
-        .partyFlags = 0,
-        .trainerClass = TRAINER_CLASS_AQUA_LEADER,
-        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_AQUA,
-        .trainerPic = TRAINER_PIC_AQUA_LEADER_ARCHIE,
-        .trainerName = _(""),
+    [TRAINER_IMAKUNI_2] = {
+        .partyFlags = F_TRAINER_PARTY_FULL_CONTROL,
+        .trainerClass = TRAINER_CLASS_WILD,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_SUSPICIOUS,
+        .trainerPic = TRAINER_PIC_IMAKUNI,
+        .trainerName = _("Imakuni?"),
         .items = {}, //{},
         .doubleBattle = FALSE,
         .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE,
-        .partySize = NELEMS(sParty_AquaLeader),
-        .party = {.NoItemDefaultMoves = sParty_AquaLeader}
+        .partySize = NELEMS(sParty_Imakuni2),
+        .party = {.FullControl = sParty_Imakuni2}
     },
     [TRAINER_AQUA_GRUNT_M] = {
         .partyFlags = 0,
@@ -1983,7 +1983,7 @@ const struct Trainer gTrainers[] = {
         .party = {.NoItemDefaultMoves = sParty_PokemaniacSteve}
     },
     [TRAINER_POKEMANIAC_WINSTON] = {
-        .partyFlags = 0,
+        .partyFlags = F_TRAINER_PARTY_FULL_CONTROL,
         .trainerClass = TRAINER_CLASS_POKEMANIAC,
         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_SUSPICIOUS,
         .trainerPic = TRAINER_PIC_POKEMANIAC,
@@ -1992,7 +1992,7 @@ const struct Trainer gTrainers[] = {
         .doubleBattle = FALSE,
         .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE,
         .partySize = NELEMS(sParty_PokemaniacWinston),
-        .party = {.NoItemDefaultMoves = sParty_PokemaniacWinston}
+        .party = {.FullControl = sParty_PokemaniacWinston}
     },
     [TRAINER_POKEMANIAC_DAWSON] = {
         .partyFlags = 0,
@@ -3411,7 +3411,7 @@ const struct Trainer gTrainers[] = {
         .party = {.NoItemDefaultMoves = sParty_RockerRandall}
     },
     [TRAINER_ROCKER_LUCA] = {
-        .partyFlags = 0,
+        .partyFlags = F_TRAINER_PARTY_CUSTOM_MOVESET,
         .trainerClass = TRAINER_CLASS_ROCKER,
         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MALE,
         .trainerPic = TRAINER_PIC_ROCKER,
@@ -3420,7 +3420,7 @@ const struct Trainer gTrainers[] = {
         .doubleBattle = FALSE,
         .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE,
         .partySize = NELEMS(sParty_RockerLuca),
-        .party = {.NoItemDefaultMoves = sParty_RockerLuca}
+        .party = {.NoItemCustomMoves = sParty_RockerLuca}
     },
     [TRAINER_JUGGLER_DALTON] = {
         .partyFlags = 0,

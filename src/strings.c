@@ -1512,3 +1512,4 @@ const u8 gText_ZunLayla[] = _("Layla Prismriver");
 const u8 gText_ZunYouki[] = _("Youki Konpaku");
 const u8 gText_ZunTori[] = _("Tori");
 const u8 gText_ZunRandom[] = _("I don't know!");
+const u8 gText_ImakuniRockTunnelDefeat[] = _("Oh, wow!\nYou're already so strong!\pI saw you using Repel, so\nI assumed you'd want to fight Trainers.\pAfter all, if you don't\nfight anyone, your level won't go up!\nSo, I snuck on over to give\nyou some experience.\pNow, I'll disappear before the\nscreen unfades back. Watch!$");

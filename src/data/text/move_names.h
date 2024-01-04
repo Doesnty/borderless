@@ -332,7 +332,7 @@ const u8 gMoveNames[][15] = {
     _("Muddy Water"),
     _("Bullet Seed"),
     _("Blade Flash"),
-    _("Icicle Spear"),
+    _("Ice Shard"),
     _("Iron Defense"),
     _("Block"),
     _("Howl"),

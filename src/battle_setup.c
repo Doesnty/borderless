@@ -818,6 +818,19 @@ const u8 *BattleSetup_ConfigureTrainerBattle(const u8 *data)
     }
 }
 
+void BattleSetup_ConfigureRockTunnelImakuni()
+{
+    sTrainerBattleMode = 0;
+    gTrainerBattleOpponent_A = TRAINER_IMAKUNI_2;
+    sTrainerObjectEventLocalId = 0;
+    sTrainerAIntroSpeech = 0;
+    sTrainerADefeatSpeech = (u8*)gText_ImakuniRockTunnelDefeat; // wretched hack alert
+    sTrainerVictorySpeech = 0;
+    sTrainerCannotBattleSpeech = 0;
+    sTrainerABattleScriptRetAddr = 0;
+    sTrainerBattleEndScript = 0;
+}
+
 void ConfigureAndSetUpOneTrainerBattle(u8 trainerEventObjId, const u8 *trainerScript)
 {
     gSelectedObjectEvent = trainerEventObjId;

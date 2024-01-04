@@ -575,6 +575,7 @@ const struct TrainerMoney gTrainerMoneyTable[] =
     { TRAINER_CLASS_AQUA_LEADER, 20 },
     { TRAINER_CLASS_BOSS, 25 },
     { TRAINER_CLASS_STRANGER, 2 },
+    { TRAINER_CLASS_WILD, 2 },
     { 0xFF, 5 },
 };
 
@@ -3347,6 +3348,8 @@ u32 GetBattlerSpeed(u8 battler)
     u8 holdEffect, holdEffectParam;
     u8 speed = 0;
     u8 weatherMultiplier = 1;
+    u16 species = gBattleMons[battler].species;
+
     if (WEATHER_HAS_EFFECT)
     {
         if ((gBattleMons[battler].ability == ABILITY_SWIFT_SWIM && gBattleWeather & WEATHER_RAIN_ANY)
@@ -3383,6 +3386,9 @@ u32 GetBattlerSpeed(u8 battler)
         else
             speed = (speed * 15) / 10;
     }
+    
+    if (holdEffect == HOLD_EFFECT_HANIWA_STEED && (species == SPECIES_CMAYUMI || species == SPECIES_MAYUMI))
+        speed = (speed * 15) / 10;
     
     if (holdEffect == HOLD_EFFECT_MACHO_BRACE)
         speed /= 2;

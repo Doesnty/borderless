@@ -81,3 +81,8 @@ RockTunnel_1F_Text_RouteSign:: @ 817962D
     .string "ROCK TUNNEL\n"
     .string "CERULEAN CITY - LAVENDER TOWN$"
 
+RockTunnel_1F_Text_ImakuniLoss::
+    .string "What! I lost?!\n"
+    .string "Well, away I go!\p"
+    .string "I'll disappear before the screen\n"
+    .string "even unfades from black, watch!$"

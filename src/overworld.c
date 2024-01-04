@@ -956,7 +956,7 @@ static void SetDefaultFlashLevel(void)
     else if (FlagGet(FLAG_SYS_FLASH_ACTIVE))
         gSaveBlock1Ptr->flashLevel = 0;
     else
-        gSaveBlock1Ptr->flashLevel = gMaxFlashLevel;
+        gSaveBlock1Ptr->flashLevel = 2;
 }
 
 void Overworld_SetFlashLevel(s32 flashLevel)

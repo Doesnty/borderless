@@ -44,3 +44,13 @@ RockTunnel_1F_EventScript_Dana:: @ 8162E73
 	trainerbattle_single TRAINER_PICNICKER_DANA, RockTunnel_1F_Text_DanaIntro, RockTunnel_1F_Text_DanaDefeat
 	msgbox RockTunnel_1F_Text_DanaPostBattle, MSGBOX_AUTOCLOSE
 	end
+
+RockTunnel_1F_EventScript_ImakuniTile::
+    compare_var_to_value VAR_REPEL_STEP_COUNT, 0
+    goto_if_eq RockTunnel_1F_EventScript_ImakuniTileEnd
+    trainerbattle_no_intro TRAINER_IMAKUNI_2, RockTunnel_1F_Text_ImakuniLoss
+    end
+
+RockTunnel_1F_EventScript_ImakuniTileEnd::
+    end
+

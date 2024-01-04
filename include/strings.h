@@ -1729,4 +1729,6 @@ extern const u8 gText_ZunRandom[];
 extern const u8 gText_ZunNextPage[];
 extern const u8 gText_ZunPreviousPage[];
 
+extern const u8 gText_ImakuniRockTunnelDefeat[];
+
 #endif //GUARD_STRINGS_H
