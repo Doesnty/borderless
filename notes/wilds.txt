@@ -1,0 +1,21 @@
+
+ROUTE 1: 40% CNazrin, 40% CTokiko, 20% CDaiyousei
+ROUTE 22: 40% Daiyousei, 20% Tokiko, 20% Chen, 20% Mike
+ROUTE 2 SOUTH: 40% CEternity, 30% CLilyWhite, 30% CLilyBlack
+VIRIDIAN FOREST: 20% CSunny, 20% CLuna, 20% CStar, 20% CEternity, 15% CWriggle, 5% CKana
+ROUTE 2 NORTH: 25% CLilyWhite, 25% CLilyBlack, 20% CTakane, 20% CMystia, 10% CAunn
+
+ROUTE 3: 25% CSeiran, 25% CRingo, 15% CMystia, 15% CKyouko, 10% CTakane, 10% CTewi
+MT MOON 1F: 30% CRumia, 30% CKisume, 10% CKoakuma, 10% CReisen II, 10% CKurumi, 5% CSeiran, 5% CRingo
+MT MOON B1F: 100% CYamame
+MT MOON B2F: 30% CRumia, 30% CKisume, 20% CKoakuma, 10% CMisumaru, 10% CReisen II, 10% CReisen
+ROUTE 4: 20% CSeiran, 20% CRingo, 20% CMomiji, 20% CKutaka, 10% CKeine, 10% CUrumi
+ROUTE 24: 20% CMinoriko, 20% CShizuha, 15% CEllen, 15% CKotohime, 10% CUrumi, 10% CKutaka, 10% CParsee
+ROUTE 25: 20% CMinoriko, 20% CShizuha, 15% CEllen, 15% CKotohime, 10% CMomiji, 10% CKutaka, 10% CHatate
+
+ROUTE 5: 20% Orange, 20% Ellen, 15% Meiling, 15% Louise, 15% Shion, 15% CKeine
+ROUTE 6: 20% Ichirin, 20% Sekibanki, 15% Meiling, 15% Elly, 15% Shion, 15% Kogasa
+
+ROUTE 11: 20% CSekibanki, 20% CKogasa, 20% CMeira, 15% CPatchouli, 15% CSanae, 5% CMugetsu, 5% CGengetsu
+DIGLETT's CAVE: 40% CYamame, 25% CSuika, 25% CYuugi, 10% CClownpiece
+

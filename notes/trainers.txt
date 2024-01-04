@@ -1,0 +1,249 @@
+nine(ish.) mons of each level, then plus one
+ensures a player who fights everyone stays on curve
+see lvlcurve spreadsheet for math
+evolved mons give roughly triple exp
+
+RIVAL: Lv5 starter
+
+RIVAL 2: Lv5 mystia, Lv6 starter
+
+rt2 wilds: 3-5
+forest wilds: 4-6
+
+FAIRYCATCHER RICK: Lv6 CDaiyousei, Lv6 CSunny
+FAIRYCATCHER DOUG: Lv6 CLilyWhite, Lv6 CLilyBlack
+FAIRYCATCHER ANTHONY: Lv6 CStar, Lv7 CEternity
+FAIRYCATCHER CHARLIE: Lv7 CLuna, Lv7 CCirno
+FAIRYCATCHER SAMMY: Lv7 CSunny, Lv7 CStar, Lv7 CLuna
+
+rt2 wilds: 5-7
+
+LASS JANICE: CKoakuma Lv7, CTakane Lv7, CEnoko Lv7
+FAIRYCATCHER COLTON: CLuna Lv8, CCirno Lv8
+YOUNGSTER BEN: CRingo Lv8, CMurasa Lv8
+FAIRYCATCHER GREG: CDaiyousei Lv8, CSunny Lv8
+YOUNGSTER CALVIN: CNazrin Lv8, COrange Lv8
+LASS SALLY: CTokiko Lv8, CStar Lv9, CMike Lv9
+FAIRYCATCHER JAMES: CLilyBlack Lv9, CEternity Lv9
+LASS ROBIN: CYamame Lv9, CReisenII Lv9
+
+rt3 wilds: 8-9
+
+CAMPER LIAM: Lv9 CSuika, Lv9 CYuugi
+LEADER BROCK: 
+
+Lv10 CMisumaru
+ -Reflect
+ -Light Screen
+ -Seal Needle
+ -Sand Tomb
+
+Lv11 CKeiki
+ -Sandstorm
+ -Sand Tomb
+ -Pound
+ 
+mtmoon wilds: 9-10, 9-11, 10-11
+
+MT MOON
+LASS IRIS: CKyouko Lv10, CTokiko Lv10
+FAIRYCATCHER KENT: CDaiyousei Lv10, CStar Lv10
+SUPER NERD JOVAN: CRika Lv10, CNitori Lv10
+FAIRYCATCHER ROBBY: CLuna Lv10, CSunny Lv10, CEternity Lv10
+
+LASS MIRIAM: CShinmyoumaru LV11, CKutaka Lv11
+YOUNGSTER JOSH: CChen Lv11, CNue Lv11
+HIKER MARCOS: CMisumaru Lv11, CUrumi Lv11, 
+
+GRUNT 2: CWriggle Lv11, CChen Lv12, CSekibanki Lv12
+GRUNT 3: CKoakuma Lv11, CMeiling Lv12, CLunasa Lv12, 
+GRUNT 4: CSara Lv11, CKagerou Lv12, CYumeko Lv12
+(final) GRUNT 1: CRumia Lv12, CMomiji Lv12, CChiyari Lv12
+MIGUEL:
+IMAKUNI?:
+Lv13 CKoishi
+Lv13 CClownpiece
+Lv13 CMai&Satono
+
+rt4 wilds: 11-12
+
+RIVAL:
+CMystia Lv13, CMomiji Lv13, Lv13 CSunny, Lv14 CFuto
+CMystia Lv13, CMomiji Lv13, Lv13 CLuna, Lv14 CSumireko
+CMystia Lv13, CMomiji Lv13, Lv13 CStar, Lv14 CKokoro
+
+NUGGET BRIDGE
+FAIRYCATCHER CALE: CLuna Lv13, CStar Lv13, CSunny Lv13
+LASS ALI: CMinoriko Lv13, CMerlin Lv14, CRin Lv14
+YOUNGSTER TIMMY: CAunn Lv14, CKisume Lv14, CNemuno Lv14
+LASS RELI: CShizuha Lv14, CReisen II Lv14, CHatate Lv14
+CAMPER ETHAN: CKeine Lv14, CRumia Lv14, CAya Lv14
+ROCKET GRUNT6: CBiten Lv15, CClownpiece Lv15
+
+rt24 wilds: 12-14
+
+CAMPER SHANE: CSeiran Lv15, CKutaka Lv15
+
+HIKER FRANKLIN: CKoakuma Lv15, CYuugi Lv15, CKyouko Lv15
+HIKER WAYNE: CKisume Lv15, CYamame Lv15
+YOUNGSTER JOEY: CNazrin Lv17
+YOUNGSTER DAN: CEika Lv15, CTakane Lv15
+PICNICKER KELSEY: CLilyWhite Lv15, CEllen lv16
+HIKER NOB: CParsee Lv16, CSeiga Lv16
+CAMPER FLINT: CSanae Lv16, CReisen Lv16, CAlice Lv16
+YOUNGSTER CHAD: COrange Lv16, CSekibanki Lv16, CEternity Lv16
+LASS HALEY: CRingo Lv16, CNitori Lv16, CMomiji Lv17
+
+SWIMMER LUIS: CMurasa Lv16, CChiyuri Lv16
+PICNICKER DIANA: CKomachi Lv16, CUrumi Lv16
+
+LEADER MISTY:
+CKogasa Lv17
+CToyohime Lv17
+CWakasagihime Lv18
+
+DIG ROCKET GRUNT5: CMarisa Lv17, CMomoyo Lv17
+
+Route5 wilds: 15-16
+
+FAIRYCATCHER KEIGO: CSunny Lv17, CLilyBlack Lv17
+CAMPER RICKY: CMeiling Lv17, CSakuya Lv17
+PICNICKER NANCY: CSuwako Lv17, CMeira Lv17
+FAIRYCATCHER ELIJAH: CCirno Lv19
+PICNICKER ISABELLE: CShizuha Lv17, CLouise Lv17, CTokiko Lv18
+CAMPER JEFF: CParsee Lv17, CNazrin Lv17, CYuuka Lv18
+
+Route9 wilds: 16-17
+
+
+YOUNGSTER EDDIE: CSuika LV19
+GAMBLER HUGO: CSannyo Lv18, CMiyoi Lv18
+ENGINEER BERNIE: CNitori Lv18, CRaiko Lv19
+YOUNGSTER DAVE: CMike Lv18, CWriggle Lv18, CSeiran Lv18
+YOUNGSTER DILLON: CKosuzu Lv18, CReisen II Lv18, CDaiyousei Lv18
+GAMBLER JASPER: CMamizou Lv18, CRikako Lv19
+ENGINEER BRAXTON: CRika Lv18, CKanako Lv19
+GAMBLER DARIAN: CHina Lv18, CShion Lv19
+YOUNGSTER YASU: CMomiji Lv18, CKutaka Lv19
+GAMBLER DIRK: CJoon Lv18, CTewi Lv19
+
+SS Anne
+GENTLEMAN THOMAS: CLouise Lv21
+GENTLEMAN ARTHUR: CAunn Lv19, CSagume Lv20
+LASS ANN: CKana Lv19, CRemilia Lv20
+YOUNGSTER TYLER: CLyrica Lv19, CAlice Lv20
+
+FISHERMAN BARNY: CWakasagi Lv19, CIku Lv20
+SAILOR PHILIP: CShou Lv19, CEika Lv20
+SAILOR HUEY: CNitori Lv19, CHina Lv20
+SAILOR DYLAN: CChiyuri Lv19, CMokou Lv20
+DAILOR DUNCAN: CMurasa Lv19, CKomachi Lv20
+SAILOR LEONARD: CSekibanki Lv19, CSuika Lv20
+
+FISHERMAN DALE: CShinmyoumaru Lv21
+GENTLEMAN BROOKS: CMiko Lv19, CYukari Lv20
+LASS DAWN: CReimu Lv20, CMarisa Lv20
+GENTLEMAN LAMAR: CChimata Lv20, CDoremy Lv20
+
+SAILOR TREVOR: CEirin Lv20, CKyouko Lv20
+SAILOR EDMOND: CYatsuhashi Lv21
+
+RIVAL:
+CMystia Lv20, CMomiji Lv20, Lv21 CSunny, Lv21 CReisen, Lv21 CFuto
+CMystia Lv20, CMomiji Lv20, Lv21 CLuna, Lv21 CSanae, Lv21 CSumireko
+CMystia Lv20, CMomiji Lv20, Lv21 CStar, Lv21 CAlice, Lv21 CKokoro
+
+SAILOR DWAYNE: CMarisa Lv20, CIku Lv21, CRaiko Lv21
+ENGINEER BAILY: CKirisame Lv21, CLuna Lv21
+GENTLEMAN TUCKER: CTakane Lv21, CShou Lv21
+
+
+LEADER SURGE:
+CChimata Lv21, CTojiko Lv21, CNitori Lv21, TLuna Lv22
+
+Rt9 wilds: 20-21
+
+PICNICKER ALICIA: CShizuha Lv21, CMinoriko Lv21, CYoumu Lv21
+HIKER JEREMY: CKisume Lv21, CSuika Lv22
+CAMPER CHRIS: CRumia Lv22, CHisami Lv22
+FAIRYCATCHER BRENT: CEternity Lv22, CCirno Lv22
+HIKER ALAN: CSara Lv22, CMisumaru Lv22
+FAIRYCATCHER CONNER: CSunny Lv21, CStar Lv21, CLuna Lv21
+CAMPER DREW: CRingo Lv22, CKyouko Lv22
+HIKER BRICE: CUrumi Lv22, CNemuno Lv22
+PICNICKER CAITLIN: CKosuzu Lv22, CEika Lv22
+PICNICKER HEIDI: CMugetsu Lv22, CChen Lv22, COrange Lv23
+
+IMAKUNI 2: CKoishi Lv24, CClownpiece Lv24, CSuwako Lv24, CMai&Satono Lv24
+
+TOHOMANIAC ASHTON: CRan Lv22, CRan Lv22, CRumia Lv23
+TOHOMANIAC WINSTON: CKeiki Lv23, Akyuu Lv23
+PICNICKER MARTHA: CRin Lv23, CIchirin Lv23
+TOHOMANIAC STEVE: CMamizou Lv23, CHecatia Lv23
+HIKER ALLEN: CTenshi Lv23, CKasen Lv23
+HIKER ERIC: CMomiji Lv23, CSeiran Lv23
+HIKER LENNY: CKanako Lv23, CKirisame Lv23
+HIKER OLIVER: CKogasa Lv23, CMiko Lv24
+HIKER LUCAS: CFlandre Lv23, CMarisa Lv24
+PICNICKER SOFIA: CAlice Lv23, CShizuha Lv24
+HIKER DUDLEY: AYuugi Lv25
+TOHOMANIAC COOPER: CRaiko Lv23, CHakurei CLv24
+PICNICKER LEAH: CSunny Lv23, CMystia Lv24
+PICNICKER ARIANA: CToyohime Lv25
+PICNICKER DANA: CHatate Lv23, Daiyousei Lv25
+
+PICNICKER CAROL: CKeine Lv23, CStar Lv24
+HIKER CLARK: CYamame Lv24, CMedicine Lv24
+HIKER TRENT: CSanae Lv24, CBiten Lv24
+TOHOMANIAC HERMAN: CSeija Lv26
+
+rt24: 22-23
+
+FISHERMAN NED: CYachie Lv24, CWakasagihime Lv25
+FISHERMAN CHIP: CHina Lv24, CHina Lv24, CKomachi Lv24, CHina Lv24
+FISHERMAN HANK: CShinmyoumaru Lv24, CKogasa Lv25
+ROCKER LUCA: CChimata Lv25, Luna Lv25
+
+LASS JULIA: CTewi Lv24, DTewi Lv25
+GAMBLER RICH: CJoon LV25, CMike Lv25, CKagerou Lv25
+SUPER NERD GLENN: CYuyuko Lv25, Tokiko Lv25
+SUPER NERD LESLIE: Kosuzu Lv26
+LASS PAIGE: CReisen Lv25, CRingo Lv26, CSeiran Lv26
+LASS ANDREA: CRin Lv25, CRin Lv26, CRin Lv26
+LASS MEGAN: Tori Lv27
+BIKER JAREN: CMai Lv26, CGengetsu Lv26
+BIKER RICARDO: CShion Lv26, CEnoko Lv27
+SUPER NERD AIDAN: CTsukasa Lv26, CChiyari Lv27
+GAMBLER STAN: HStar Lv27
+
+GRUNT7: CSara Lv26, Kurumi Lv27
+
+(bf1)
+GRUNT8: CEternity Lv27, CMayumi Lv27
+GRUNT9: LilyBlack Lv27
+
+(bf1 side room)
+GRUNT10: CMystia Lv26, TMedicine Lv28
+GRUNT11: CYachie Lv27, CEiki Lv27
+
+(bf1 at elevator)
+GRUNT12: CRumia Lv26, TChen Lv27
+
+(bf2)
+GRUNT13: CDaiyousei Lv26, CSaki Lv26
+
+(bf3)
+GRUNT15: CYuuma, CSagume
+GRUNT14: CYorihime, CMomoyo
+
+(bf4 silph scope guy)
+GRUNT18: CSakuya, CCirno
+
+(bf4 door guards)
+GRUNT16: CRemilia, CYouki, Yatsuhashi, ALilyWhite
+GRUNT17: CFlandre, CTenma, Benben, ALilyBlack
+
+
+GIOVANNI1: TNue, TSakuya, AKeine Lv31
+
+
