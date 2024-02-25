@@ -1434,6 +1434,8 @@ static void atk01_accuracycheck(void)
             holdEffect = ItemId_GetHoldEffect(gBattleMons[gBattlerTarget].item);
             param = ItemId_GetHoldEffectParam(gBattleMons[gBattlerTarget].item);
         }
+		if (targetAbility == ABILITY_KLUTZ)
+			holdEffect = 0;
         gPotentialItemEffectBattler = gBattlerTarget;
 
         if (holdEffect == HOLD_EFFECT_EVASION_UP)
@@ -1927,6 +1929,8 @@ static void atk07_adjustnormaldamage(void)
         holdEffect = ItemId_GetHoldEffect(gBattleMons[gBattlerTarget].item);
         param = ItemId_GetHoldEffectParam(gBattleMons[gBattlerTarget].item);
     }
+	if (gBattleMons[gBattlerTarget].ability == ABILITY_KLUTZ)
+		holdEffect = 0;
     gPotentialItemEffectBattler = gBattlerTarget;
     if (holdEffect == HOLD_EFFECT_FOCUS_BAND && (Random() % 100) < param)
     {
@@ -1977,6 +1981,8 @@ static void atk08_adjustnormaldamage2(void)
         holdEffect = ItemId_GetHoldEffect(gBattleMons[gBattlerTarget].item);
         param = ItemId_GetHoldEffectParam(gBattleMons[gBattlerTarget].item);
     }
+	if (gBattleMons[gBattlerTarget].ability == ABILITY_KLUTZ)
+		holdEffect = 0;
     gPotentialItemEffectBattler = gBattlerTarget;
     if (holdEffect == HOLD_EFFECT_FOCUS_BAND && (Random() % 100) < param)
     {
@@ -5884,6 +5890,8 @@ static void atk69_adjustsetdamage(void)
         holdEffect = ItemId_GetHoldEffect(gBattleMons[gBattlerTarget].item);
         param = ItemId_GetHoldEffectParam(gBattleMons[gBattlerTarget].item);
     }
+	if (gBattleMons[gBattlerTarget].ability == ABILITY_KLUTZ)
+		holdEffect = 0;
     gPotentialItemEffectBattler = gBattlerTarget;
     if (holdEffect == HOLD_EFFECT_FOCUS_BAND && (Random() % 100) < param)
     {
@@ -7257,6 +7265,8 @@ static void atk93_tryKO(void)
         holdEffect = ItemId_GetHoldEffect(gBattleMons[gBattlerTarget].item);
         param = ItemId_GetHoldEffectParam(gBattleMons[gBattlerTarget].item);
     }
+	if (gBattleMons[gBattlerTarget].ability == ABILITY_KLUTZ)
+		holdEffect = 0;
     gPotentialItemEffectBattler = gBattlerTarget;
     if (holdEffect == HOLD_EFFECT_FOCUS_BAND && (Random() % 100) < param)
     {
@@ -9221,16 +9231,43 @@ static void atkE5_pickup(void)
                 {
                     newItem = ITEM_PECHA_BERRY;
                 }
+				
+				// futo
+				if ((species >= SPECIES_CFUTO && species <= SPECIES_TFUTO))
+				{
+					if (Random() % 2)
+						newItem = ITEM_OLD_PLATE;
+				}
+				
+				// dumb unlucky idiot who can't find anything useful
+				if (species == SPECIES_CSHION || species == SPECIES_SHION)
+				{
+					rn = Random() % 20;
+					switch (rn)
+					{
+						case 0: newItem = ITEM_RAWST_BERRY; break;
+						case 1: newItem = ITEM_ASPEAR_BERRY; break;
+						case 2: newItem = ITEM_ORAN_BERRY; break;
+						case 3: newItem = ITEM_REPEL; break;
+						case 4: newItem = ITEM_DIRE_HIT; break;
+						case 5: newItem = ITEM_GUARD_SPEC; break;
+						case 6: newItem = ITEM_PERSIM_BERRY; break;
+						case 7: newItem = ITEM_DURIN_BERRY; break;
+						case 8: newItem = ITEM_CLEANSE_TAG; break; // debt notice
+						case 9: newItem = ITEM_BLOOMERS; break;
+					}
+				}
                 
                 // a nice non-alcoholic drink
                 if (species == SPECIES_CMIYOI || species == SPECIES_MIYOI)
                 {
-                    rn = Random() % 3;
+                    rn = Random() % 4;
                     switch (rn)
                     {
                         case 0: newItem = ITEM_FRESH_WATER; break;
                         case 1: newItem = ITEM_SODA_POP; break;
                         case 2: newItem = ITEM_LEMONADE; break;
+						case 3: newItem = ITEM_MOOMOO_MILK; break;
                     }
                 }
                 
@@ -9243,7 +9280,7 @@ static void atkE5_pickup(void)
             }
             
             // random berries
-            if (!newItem && !(Random() % 20))
+            if (!newItem && !(Random() % 20) && species != SPECIES_CSHION && species != SPECIES_SHION)
             {
                 const struct PickupItem* pickuplist = sPickupBerriesNovice;
                 s32 random = Random() % 100;
@@ -9518,18 +9555,15 @@ static void atkEF_handleballthrow(void)
                 odds *= 2;
             if (gBattleMons[gBattlerTarget].status1 & (STATUS1_POISON | STATUS1_BURN | STATUS1_PARALYSIS | STATUS1_TOXIC_POISON))
                 odds = (odds * 15) / 10;
-            if (gLastUsedItem != ITEM_SAFARI_BALL)
-            {
-                if (gLastUsedItem == ITEM_MASTER_BALL)
-                {
-                    gBattleResults.usedMasterBall = TRUE;
-                }
-                else
-                {
-                    if (gBattleResults.catchAttempts[gLastUsedItem - ITEM_ULTRA_BALL] < 0xFF)
-                        ++gBattleResults.catchAttempts[gLastUsedItem - ITEM_ULTRA_BALL];
-                }
-            }
+			if (gLastUsedItem == ITEM_MASTER_BALL || gLastUsedItem == ITEM_SAFARI_BALL)
+			{
+				gBattleResults.usedMasterBall = TRUE;
+			}
+			else
+			{
+				if (gBattleResults.catchAttempts[gLastUsedItem - ITEM_ULTRA_BALL] < 0xFF)
+					++gBattleResults.catchAttempts[gLastUsedItem - ITEM_ULTRA_BALL];
+			}
             if (odds > 254) // mon caught
             {
                 BtlController_EmitBallThrowAnim(0, BALL_3_SHAKES_SUCCESS);
@@ -9548,7 +9582,7 @@ static void atkEF_handleballthrow(void)
                 odds = Sqrt(Sqrt(16711680 / odds));
                 odds = 1048560 / odds;
                 for (shakes = 0; shakes < 4 && Random() < odds; ++shakes);
-                if (gLastUsedItem == ITEM_MASTER_BALL)
+                if (gLastUsedItem == ITEM_MASTER_BALL || gLastUsedItem == ITEM_SAFARI_BALL)
                     shakes = BALL_3_SHAKES_SUCCESS; // why calculate the shakes before that check?
                 BtlController_EmitBallThrowAnim(0, shakes);
                 MarkBattlerForControllerExec(gActiveBattler);
@@ -9906,6 +9940,7 @@ static void sp18_identify4(void);
 static void sp19_corpseblaze(void);
 static void sp1a_frisk(void);
 static void sp1b_clearsmog(void);
+static void sp1c_roost(void);
 
 void (* const gBattleScriptingSpecialsTable[])(void) =
 {
@@ -9937,6 +9972,7 @@ void (* const gBattleScriptingSpecialsTable[])(void) =
     sp19_corpseblaze,
     sp1a_frisk,
     sp1b_clearsmog,
+	sp1c_roost,
 };
 
 static void atkF8_special(void)
@@ -10519,6 +10555,14 @@ static void sp1b_clearsmog(void)
     
     for (i = 0; i < 8; i++)
         gBattleMons[gBattlerTarget].statStages[i] = 6;
+}
+
+static void sp1c_roost(void)
+{
+	if (gBattleMons[gBattlerAttacker].type1 == TYPE_WIND)
+		gBattleMons[gBattlerAttacker].type1 = TYPE_ROOSTING;
+	if (gBattleMons[gBattlerAttacker].type2 == TYPE_WIND)
+		gBattleMons[gBattlerAttacker].type2 = TYPE_ROOSTING;
 }
 
 

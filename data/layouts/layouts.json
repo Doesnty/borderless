@@ -2513,11 +2513,11 @@
       "id": "LAYOUT_SAFFRON_CITY_DOJO",
       "name": "SaffronCity_Dojo_Layout",
       "width": 13,
-      "height": 16,
+      "height": 17,
       "border_width": 2,
       "border_height": 2,
       "primary_tileset": "gTileset_Building",
-      "secondary_tileset": "gTileset_PewterGym",
+      "secondary_tileset": "gTileset_FanClubDaycare",
       "border_filepath": "data/layouts/SaffronCity_Dojo/border.bin",
       "blockdata_filepath": "data/layouts/SaffronCity_Dojo/map.bin"
     },
@@ -4392,6 +4392,42 @@
       "secondary_tileset": "gTileset_ViridianForest",
       "border_filepath": "data/layouts/ViridianForestWest/border.bin",
       "blockdata_filepath": "data/layouts/ViridianForestWest/map.bin"
+    },
+    {
+      "id": "LAYOUT_MT_MOON_B3F",
+      "name": "MtMoon_B3F_Layout",
+      "width": 48,
+      "height": 40,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Cave",
+      "border_filepath": "data/layouts/MtMoon_B3F/border.bin",
+      "blockdata_filepath": "data/layouts/MtMoon_B3F/map.bin"
+    },
+    {
+      "id": "LAYOUT_MT_MOON_B4F",
+      "name": "MtMoon_B4F_Layout",
+      "width": 48,
+      "height": 40,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Cave",
+      "border_filepath": "data/layouts/MtMoon_B4F/border.bin",
+      "blockdata_filepath": "data/layouts/MtMoon_B4F/map.bin"
+    },
+    {
+      "id": "LAYOUT_DIGLETTS_CAVE_B2F",
+      "name": "DiglettsCave_B2F_Layout",
+      "width": 60,
+      "height": 60,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_DiglettsCave",
+      "border_filepath": "data/layouts/DiglettsCave_B2F/border.bin",
+      "blockdata_filepath": "data/layouts/DiglettsCave_B2F/map.bin"
     }
   ]
 }

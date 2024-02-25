@@ -18,10 +18,10 @@ Route12_NorthEntrance_2F_EventScript_Lass:: @ 816FE8A
 	call_if_eq Route12_NorthEntrance_2F_EventScript_TakeTMMale
 	compare VAR_RESULT, FEMALE
 	call_if_eq Route12_NorthEntrance_2F_EventScript_TakeTMFemale
-	checkitemspace ITEM_TM27, 1
+	checkitemspace ITEM_TM42, 1
 	compare VAR_RESULT, FALSE
 	goto_if_eq Route12_NorthEntrance_2F_EventScript_NoRoomForTM27
-	giveitem_msg Route12_NorthEntrance_2F_Text_ReceivedTM27FromLittleGirl, ITEM_TM27
+	giveitem_msg Route12_NorthEntrance_2F_Text_ReceivedTM27FromLittleGirl, ITEM_TM42
 	msgbox Route12_NorthEntrance_2F_Text_ExplainTM27
 	setflag FLAG_GOT_TM27
 	release

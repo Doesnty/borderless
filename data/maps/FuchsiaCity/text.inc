@@ -110,3 +110,9 @@ FuchsiaCity_Text_MyFatherIsGymLeader:: @ 8180ABD
     .string "I'm training to use POISON POKéMON\n"
     .string "as well as my father.$"
 
+FuchsiaCity_Text_GymGuard::
+	.string "Yo, a challenger?\n"
+	.string "Sorry, Koga's out at Route 12.\p"
+	.string "A bridge went out, he's helping\n"
+	.string "to fix it. We can't take challengers\l"
+	.string "while he's out. It sucks.$"

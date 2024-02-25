@@ -176,7 +176,10 @@
     "SixIsland_DottedHole_SapphireRoom",
     "SixIsland_PatternBush",
     "SixIsland_AlteringCave",
-    "ViridianForestWest"
+    "ViridianForestWest",
+    "MtMoon_B3F",
+    "MtMoon_B4F",
+    "DiglettsCave_B2F"
   ],
   "gMapGroup_SpecialArea": [
     "NavelRock_Exterior",

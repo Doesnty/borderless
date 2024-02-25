@@ -380,12 +380,14 @@ static const u8 sSlotMachineIndices[] = {
     3,
     4,
     4,
-    5
+    4 //5
 };
 
 u8 GetRandomSlotMachineId(void)
 {
     u16 rval = Random() % NELEMS(sSlotMachineIndices);
+	if (VarGet(0x8004) == 9)
+		return 5;
     return sSlotMachineIndices[rval];
 }
 

@@ -315,7 +315,7 @@ const u8 gTypeEffectiveness[20][20] =
     // Normal, Fighting, Wind, Miasma, Earth
     // Beast, Heart, Ghost, Steel, Illusion
     // Fire, Water, Nature, Electric, Reason
-    // Ice, Faith, Dark, --, --
+    // Ice, Faith, Dark, Roosting, --
     
     { // Normal
         10,  5, 10, 10, 10,
@@ -431,7 +431,7 @@ const u8 gTypeEffectiveness[20][20] =
         10, 10, 10, 10, 20,
         10, 10,  5, 10, 10,
     },
-    { // --
+    { // (Roosting)
         10, 10, 10, 10, 10,
         10, 10, 10, 10, 10,
         10, 10, 10, 10, 10,
@@ -465,6 +465,7 @@ const u8 gTypeNames[][TYPE_NAME_LENGTH + 1] =
     _("Ice"),
     _("Faith"),
     _("Dark"),
+	_("Wind"),
 };
 
 // This is a factor in how much money you get for beating a trainer.
@@ -3481,8 +3482,14 @@ u8 GetWhoStrikesFirst(u8 battler1, u8 battler2, bool8 ignoreChosenMoves)
     
     if (gBattleMoves[moveBattler1].moveClass == CLASS_STATUS && gBattleMons[battler1].ability == ABILITY_PRANKSTER)
         priorityBattler1++;
+	if (gBattleMoves[moveBattler1].type == TYPE_WIND && gBattleMons[battler1].ability == ABILITY_GALE_WINGS)
+		priorityBattler1++;
+
     if (gBattleMoves[moveBattler2].moveClass == CLASS_STATUS && gBattleMons[battler2].ability == ABILITY_PRANKSTER)
         priorityBattler2++;
+	if (gBattleMoves[moveBattler2].type == TYPE_WIND && gBattleMons[battler2].ability == ABILITY_GALE_WINGS)
+		priorityBattler2++;
+	
     
     // both move priorities are different than 0
     if (priorityBattler1 != 0 || priorityBattler2 != 0)

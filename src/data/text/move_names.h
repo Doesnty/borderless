@@ -224,7 +224,7 @@ const u8 gMoveNames[][15] = {
     _("Magnitude"),
     _("Dynamic Punch"),
     _("Brave Bird"),
-    _("Lava Stream"),
+    _("Lava Plume"),
     _("Baton Pass"),
     _("Encore"),
     _("Pursuit"),
@@ -416,5 +416,7 @@ const u8 gMoveNames[][15] = {
     _("Butchery"),
     _("Beddy Bye"),
     _("Snap Trap"),
+	_("Punishment"),
+	_("Shriek"),
     _("Me First"),
 };

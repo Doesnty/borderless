@@ -1361,3 +1361,12 @@ Text_TestMsg:: @ 81ACD45
 
 	.include "data/maps/ViridianForestWest/scripts.inc"
 	.include "data/maps/ViridianForestWest/text.inc"
+
+	.include "data/maps/MtMoon_B3F/scripts.inc"
+	.include "data/maps/MtMoon_B3F/text.inc"
+
+	.include "data/maps/MtMoon_B4F/scripts.inc"
+	.include "data/maps/MtMoon_B4F/text.inc"
+
+	.include "data/maps/DiglettsCave_B2F/scripts.inc"
+	.include "data/maps/DiglettsCave_B2F/text.inc"

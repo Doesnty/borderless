@@ -308,6 +308,8 @@ u8 TrySetCantSelectMoveBattleScript(void)
         holdEffect = gEnigmaBerries[gActiveBattler].holdEffect;
     else
         holdEffect = ItemId_GetHoldEffect(gBattleMons[gActiveBattler].item);
+	if (gBattleMons[gActiveBattler].ability == ABILITY_KLUTZ)
+		holdEffect = 0;
     gPotentialItemEffectBattler = gActiveBattler;
     if (holdEffect == HOLD_EFFECT_CHOICE_BAND && *choicedMove && *choicedMove != 0xFFFF && *choicedMove != move)
     {
@@ -334,6 +336,8 @@ u8 CheckMoveLimitations(u8 battlerId, u8 unusableMoves, u8 check)
         holdEffect = gEnigmaBerries[battlerId].holdEffect;
     else
         holdEffect = ItemId_GetHoldEffect(gBattleMons[battlerId].item);
+	if (gBattleMons[battlerId].ability == ABILITY_KLUTZ)
+		holdEffect = 0;
     gPotentialItemEffectBattler = battlerId;
 
     for (i = 0; i < MAX_MON_MOVES; ++i)
@@ -712,6 +716,8 @@ enum
     ENDTURN_TAUNT,
     ENDTURN_YAWN,
     ENDTURN_ITEMS2,
+	ENDTURN_BAD_DREAMS,
+	ENDTURN_ROOST,
     ENDTURN_BATTLER_COUNT
 };
 
@@ -1048,6 +1054,25 @@ u8 DoBattlerEndTurnEffects(void)
                 }
                 ++gBattleStruct->turnEffectsTracker;
                 break;
+			case ENDTURN_BAD_DREAMS:
+				if (gBattleMons[gActiveBattler ^ 0x1].ability == ABILITY_BAD_DREAMS && (gBattleMons[gActiveBattler ^ 0x1].hp > 0) &&
+				(gBattleMons[gActiveBattler].status1 & STATUS1_SLEEP) && gBattleMons[gActiveBattler].hp > 0)
+				{
+                    gBattleMoveDamage = gBattleMons[gActiveBattler].maxHP / 8;
+                    if (gBattleMoveDamage == 0)
+                        gBattleMoveDamage = 1;
+                    BattleScriptExecute(BattleScript_BadDreamsTurnDmg);
+                    ++effect;
+                }
+                ++gBattleStruct->turnEffectsTracker;
+                break;
+			case ENDTURN_ROOST:
+				if (gBattleMons[gActiveBattler].type1 == TYPE_ROOSTING)
+					gBattleMons[gActiveBattler].type1 = TYPE_WIND;
+				if (gBattleMons[gActiveBattler].type2 == TYPE_ROOSTING)
+					gBattleMons[gActiveBattler].type2 = TYPE_WIND;
+                ++gBattleStruct->turnEffectsTracker;
+				break;
             case ENDTURN_BATTLER_COUNT:  // done
                 gBattleStruct->turnEffectsTracker = 0;
                 ++gBattleStruct->turnEffectsBattlerId;
@@ -3020,6 +3045,7 @@ u8 ItemBattleEffects(u8 caseID, u8 battlerId, bool8 moveTurn)
     u8 battlerHoldEffectParam, atkHoldEffectParam, defHoldEffectParam;
     u16 atkItem, defItem;
     u8 gluttonyMult = 1;
+	u8 gluttonyFigyMult = 1;
 
     gLastUsedItem = gBattleMons[battlerId].item;
     if (gLastUsedItem == ITEM_ENIGMA_BERRY)
@@ -3065,7 +3091,14 @@ u8 ItemBattleEffects(u8 caseID, u8 battlerId, bool8 moveTurn)
     }
     
     if (gBattleMons[battlerId].ability == ABILITY_GLUTTONY)
-        gluttonyMult = 8;
+    {
+		gluttonyMult = 8;
+		gluttonyFigyMult = 2;
+	}
+	if (gBattleMons[battlerId].ability == ABILITY_KLUTZ)
+	{
+		return 0;
+	}
     
     switch (caseID)
     {
@@ -3187,7 +3220,7 @@ u8 ItemBattleEffects(u8 caseID, u8 battlerId, bool8 moveTurn)
                 }
                 break;
             case HOLD_EFFECT_CONFUSE_SPICY:
-                if (gBattleMons[battlerId].hp <= gBattleMons[battlerId].maxHP / 2 && !moveTurn)
+                if (gluttonyFigyMult * gBattleMons[battlerId].hp <= gBattleMons[battlerId].maxHP / 4 && !moveTurn)
                 {
                     PREPARE_FLAVOR_BUFFER(gBattleTextBuff1, FLAVOR_SPICY);
                     gBattleMoveDamage = gBattleMons[battlerId].maxHP / battlerHoldEffectParam;
@@ -3205,7 +3238,7 @@ u8 ItemBattleEffects(u8 caseID, u8 battlerId, bool8 moveTurn)
                 }
                 break;
             case HOLD_EFFECT_CONFUSE_DRY:
-                if (gBattleMons[battlerId].hp <= gBattleMons[battlerId].maxHP / 2 && !moveTurn)
+                if (gluttonyFigyMult * gBattleMons[battlerId].hp <= gBattleMons[battlerId].maxHP / 4 && !moveTurn)
                 {
                     PREPARE_FLAVOR_BUFFER(gBattleTextBuff1, FLAVOR_DRY);
                     gBattleMoveDamage = gBattleMons[battlerId].maxHP / battlerHoldEffectParam;
@@ -3223,7 +3256,7 @@ u8 ItemBattleEffects(u8 caseID, u8 battlerId, bool8 moveTurn)
                 }
                 break;
             case HOLD_EFFECT_CONFUSE_SWEET:
-                if (gBattleMons[battlerId].hp <= gBattleMons[battlerId].maxHP / 2 && !moveTurn)
+                if (gluttonyFigyMult * gBattleMons[battlerId].hp <= gBattleMons[battlerId].maxHP / 4 && !moveTurn)
                 {
                     PREPARE_FLAVOR_BUFFER(gBattleTextBuff1, FLAVOR_SWEET);
                     gBattleMoveDamage = gBattleMons[battlerId].maxHP / battlerHoldEffectParam;
@@ -3241,7 +3274,7 @@ u8 ItemBattleEffects(u8 caseID, u8 battlerId, bool8 moveTurn)
                 }
                 break;
             case HOLD_EFFECT_CONFUSE_BITTER:
-                if (gBattleMons[battlerId].hp <= gBattleMons[battlerId].maxHP / 2 && !moveTurn)
+                if (gluttonyFigyMult * gBattleMons[battlerId].hp <= gBattleMons[battlerId].maxHP / 4 && !moveTurn)
                 {
                     PREPARE_FLAVOR_BUFFER(gBattleTextBuff1, FLAVOR_BITTER);
                     gBattleMoveDamage = gBattleMons[battlerId].maxHP / battlerHoldEffectParam;
@@ -3259,7 +3292,7 @@ u8 ItemBattleEffects(u8 caseID, u8 battlerId, bool8 moveTurn)
                 }
                 break;
             case HOLD_EFFECT_CONFUSE_SOUR:
-                if (gBattleMons[battlerId].hp <= gBattleMons[battlerId].maxHP / 2 && !moveTurn)
+                if (gluttonyFigyMult * gBattleMons[battlerId].hp <= gBattleMons[battlerId].maxHP / 4 && !moveTurn)
                 {
                     PREPARE_FLAVOR_BUFFER(gBattleTextBuff1, FLAVOR_SOUR);
                     gBattleMoveDamage = gBattleMons[battlerId].maxHP / battlerHoldEffectParam;

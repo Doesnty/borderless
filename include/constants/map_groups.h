@@ -137,6 +137,9 @@
 #define MAP_SIX_ISLAND_PATTERN_BUSH              (121 | (1 << 8))
 #define MAP_SIX_ISLAND_ALTERING_CAVE             (122 | (1 << 8))
 #define MAP_VIRIDIAN_FOREST_WEST                 (123 | (1 << 8))
+#define MAP_MT_MOON_B3F                          (124 | (1 << 8))
+#define MAP_MT_MOON_B4F                          (125 | (1 << 8))
+#define MAP_DIGLETTS_CAVE_B2F                    (126 | (1 << 8))
 
 // gMapGroup_SpecialArea
 #define MAP_NAVEL_ROCK_EXTERIOR                       (0 | (2 << 8))

@@ -816,3 +816,5 @@ const u32 gFile_graphics_items_icon_palettes_tech_shard_palette[] = INCBIN_U32("
 
 const u32 gFile_graphics_items_icons_solar_shard_sheet[] = INCBIN_U32("graphics/items/icons/solar_shard.4bpp.lz");
 const u32 gFile_graphics_items_icon_palettes_solar_shard_palette[] = INCBIN_U32("graphics/items/icon_palettes/solar_shard.gbapal.lz");
+
+const u32 gFile_graphics_items_icons_old_plate_sheet[] = INCBIN_U32("graphics/items/icons/old_plate.4bpp.lz");

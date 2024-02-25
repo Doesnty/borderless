@@ -372,8 +372,8 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .moveClass = CLASS_PHYSICAL,
         .accuracy = 90,
         .pp = 15,
-        .secondaryEffectChance = 0,
-        .priority = 20,
+        .secondaryEffectChance = 20,
+        .priority = 0,
         .target = MOVE_TARGET_SELECTED,
         .flags = FLAG_MAKES_CONTACT | FLAG_PROTECT_AFFECTED,
     },
@@ -1948,7 +1948,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
 
     [MOVE_BARRAGE] = 
     {
-        .effect = EFFECT_NEW,
+        .effect = EFFECT_TRIPLE_HIT,
         .power = 30,
         .type = TYPE_FAITH,
         .moveClass = CLASS_PHYSICAL,
@@ -2582,7 +2582,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .power = 60,
         .type = TYPE_DARK,
         .moveClass = CLASS_PHYSICAL,
-        .accuracy = 100,
+        .accuracy = 0,
         .pp = 20,
         .secondaryEffectChance = 0,
         .priority = 0,
@@ -4146,7 +4146,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
 
     [MOVE_ROOST] = 
     {
-        .effect = EFFECT_NEW,
+        .effect = EFFECT_RESTORE_HP,
         .power = 0,
         .type = TYPE_WIND,
         .moveClass = CLASS_STATUS,
@@ -5822,6 +5822,34 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .priority = 0,
         .target = MOVE_TARGET_SELECTED,
         .flags = FLAG_MAKES_CONTACT | FLAG_PROTECT_AFFECTED,
+    },
+    
+    [MOVE_PUNISHMENT] = 
+    {
+        .effect = EFFECT_HIT,
+        .power = 60,
+        .type = TYPE_FAITH,
+        .moveClass = CLASS_PHYSICAL,
+        .accuracy = 100,
+        .pp = 20,
+        .secondaryEffectChance = 0,
+        .priority = 0,
+        .target = MOVE_TARGET_SELECTED,
+        .flags = FLAG_MAKES_CONTACT | FLAG_PROTECT_AFFECTED,
+    },
+
+    [MOVE_SHRIEK] = 
+    {
+        .effect = EFFECT_FLINCH_HIT,
+        .power = 55,
+        .type = TYPE_GHOST,
+        .moveClass = CLASS_SPECIAL,
+        .accuracy = 100,
+        .pp = 20,
+        .secondaryEffectChance = 30,
+        .priority = 0,
+        .target = MOVE_TARGET_SELECTED,
+        .flags = FLAG_PROTECT_AFFECTED | FLAG_SOUND_MOVE,
     },
 
     [MOVE_ME_FIRST] = 

@@ -293,7 +293,7 @@ const u8 *const gMonIconTable[] = {
     [SPECIES_TSHOU] = gMonIcon_shou_technical,
     [SPECIES_CBYAKUREN] = gMonIcon_byakuren_chibi,
     [SPECIES_BYAKUREN] = gMonIcon_byakuren_neutral,
-    [SPECIES_DBYAKUREN] = gMonIcon_byakuren_defense,
+    [SPECIES_HBYAKUREN] = gMonIcon_byakuren_defense,
     [SPECIES_TBYAKUREN] = gMonIcon_byakuren_technical,
     [SPECIES_CNUE] = gMonIcon_nue_chibi,
     [SPECIES_NUE] = gMonIcon_nue_neutral,
@@ -478,6 +478,7 @@ const u8 *const gMonIconTable[] = {
     [SPECIES_GENJI] = gMonIcon_genji,
     [SPECIES_CRIKA] = gMonIcon_rika_chibi,
     [SPECIES_RIKA] = gMonIcon_rika_neutral,
+    [SPECIES_TRIKA] = gMonIcon_rika_technical,
     [SPECIES_CMEIRA] = gMonIcon_meira_chibi,
     [SPECIES_MEIRA] = gMonIcon_meira_neutral,
     [SPECIES_MAGIC_STONES] = gMonIcon_magicstones,
@@ -874,7 +875,7 @@ const u8 gMonIconPaletteIndices[] = {
     
     [SPECIES_CBYAKUREN] = 1,
     [SPECIES_BYAKUREN] = 1,
-    [SPECIES_DBYAKUREN] = 1,
+    [SPECIES_HBYAKUREN] = 1,
     [SPECIES_TBYAKUREN] = 1,
     
     [SPECIES_CNUE] = 1,

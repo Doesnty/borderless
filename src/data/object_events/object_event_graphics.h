@@ -235,3 +235,4 @@ const u16 gObjectEventPal_Mamizou[] = INCBIN_U16("graphics/object_events/palette
 const u16 gObjectEventPic_Imakuni[] = INCBIN_U16("graphics/object_events/pics/people/imakuni.4bpp");
 const u16 gObjectEventPic_Zun[] = INCBIN_U16("graphics/object_events/pics/people/zun.4bpp");
 const u16 gObjectEventPal_Zun[] = INCBIN_U16("graphics/object_events/palettes/zun.gbapal");
+const u16 gObjectEventPal_Doremy[] = INCBIN_U16("graphics/object_events/palettes/doremy.gbapal");

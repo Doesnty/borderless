@@ -121,6 +121,7 @@
 #define TYPE_FAITH    0x10
 #define TYPE_DRAGON   0x10
 #define TYPE_DARK     0x11
+#define TYPE_ROOSTING 0x12
 #define NUMBER_OF_MON_TYPES     0x12
 
 // Pokemon egg groups

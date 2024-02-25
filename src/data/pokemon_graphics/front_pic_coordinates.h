@@ -90,7 +90,7 @@ const struct MonCoords gMonFrontPicCoords[] =
 		.size = 0x57,
 		.y_offset = 6,
 	},
-	[SPECIES_DBYAKUREN] = 
+	[SPECIES_HBYAKUREN] = 
 	{
 		.size = 0x88,
 		.y_offset = 0,
@@ -1441,6 +1441,11 @@ const struct MonCoords gMonFrontPicCoords[] =
 		.y_offset = 4,
 	},
 	[SPECIES_RIKA] = 
+	{
+		.size = 0x55,
+		.y_offset = 4,
+	},
+	[SPECIES_TRIKA] = 
 	{
 		.size = 0x88,
 		.y_offset = 0,

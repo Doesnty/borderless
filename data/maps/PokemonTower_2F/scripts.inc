@@ -1,4 +1,4 @@
-.set LOCALID_RIVAL, 1
+.set LOCALID_RIVAL, 6
 
 PokemonTower_2F_MapScripts:: @ 8163285
 	.byte 0
@@ -26,10 +26,6 @@ PokemonTower_2F_EventScript_Rival:: @ 81632A7
 	call_if_eq PokemonTower_2F_EventScript_RivalFacePlayerRight
 	compare VAR_TEMP_1, 1
 	call_if_eq PokemonTower_2F_EventScript_RivalFacePlayerDown
-	applymovement LOCALID_RIVAL, Movement_ExclamationMark
-	waitmovement 0
-	applymovement LOCALID_RIVAL, Movement_Delay48
-	waitmovement 0
 	msgbox PokemonTower_2F_Text_RivalIntro
 	setvar VAR_LAST_TALKED, LOCALID_RIVAL
 	compare VAR_STARTER_MON, 2
@@ -45,8 +41,6 @@ PokemonTower_2F_EventScript_Rival:: @ 81632A7
 	call_if_eq PokemonTower_2F_EventScript_RivalExitRight
 	compare VAR_TEMP_1, 1
 	call_if_eq PokemonTower_2F_EventScript_RivalExitDown
-	playse SE_EXIT
-	delay 25
 	fadedefaultbgm
 	removeobject LOCALID_RIVAL
 	setvar VAR_MAP_SCENE_POKEMON_TOWER_2F, 1
@@ -54,14 +48,15 @@ PokemonTower_2F_EventScript_Rival:: @ 81632A7
 	end
 
 PokemonTower_2F_EventScript_RivalFacePlayerRight:: @ 8163339
-	applymovement LOCALID_RIVAL, Movement_WalkInPlaceFastestRight
+	applymovement LOCALID_RIVAL, PokemonTower_6F_Movement_RivalGreetRight
+	waitmovement 0
 	applymovement OBJ_EVENT_ID_PLAYER, Movement_WalkInPlaceFastestLeft
 	waitmovement 0
 	return
 
 PokemonTower_2F_EventScript_RivalFacePlayerDown:: @ 816334B
-	applymovement LOCALID_RIVAL, Movement_WalkInPlaceFastestDown
-	applymovement OBJ_EVENT_ID_PLAYER, Movement_WalkInPlaceFastestUp
+	applymovement OBJ_EVENT_ID_PLAYER, Movement_WalkInPlaceFastestDown
+	applymovement LOCALID_RIVAL, PokemonTower_6F_Movement_RivalGreetLeft
 	waitmovement 0
 	return
 
@@ -86,25 +81,54 @@ PokemonTower_2F_EventScript_RivalExitDown:: @ 8163389
 	applymovement LOCALID_RIVAL, PokemonTower_2F_Movement_RivalExitDown
 	waitmovement 0
 	return
+	
+PokemonTower_6F_Movement_RivalGreetLeft::
+	face_up
+	emote_exclamation_mark
+	delay_16
+	delay_16
+	walk_up
+	step_end
+	
+PokemonTower_6F_Movement_RivalGreetRight::
+	face_up
+	emote_exclamation_mark
+	delay_16
+	delay_16
+	walk_up
+	face_right
+	step_end
 
 PokemonTower_2F_Movement_RivalExitRight:: @ 8163394
-	walk_down
-	walk_right
-	walk_right
-	walk_down
-	walk_down
-	walk_down
-	walk_down
+	walk_up
+	walk_up
+	walk_up
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_up
+	walk_up
+	walk_up
+	walk_up
 	walk_in_place_fastest_right
 	step_end
 
 PokemonTower_2F_Movement_RivalExitDown:: @ 816339D
 	walk_right
-	walk_right
-	walk_down
-	walk_down
-	walk_down
-	walk_down
-	walk_down
+	walk_up
+	walk_up
+	walk_up
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_up
+	walk_up
+	walk_up
+	walk_up
 	walk_in_place_fastest_right
 	step_end

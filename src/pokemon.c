@@ -359,7 +359,7 @@ static const u16 sSpeciesToNationalPokedexNum[] = // Assigns all species to the 
     NATIONAL_DEX_TSHOU,
     NATIONAL_DEX_CBYAKUREN,
     NATIONAL_DEX_BYAKUREN,
-    NATIONAL_DEX_DBYAKUREN,
+    NATIONAL_DEX_HBYAKUREN,
     NATIONAL_DEX_TBYAKUREN,
     NATIONAL_DEX_CNUE,
     NATIONAL_DEX_NUE,
@@ -544,6 +544,7 @@ static const u16 sSpeciesToNationalPokedexNum[] = // Assigns all species to the 
     NATIONAL_DEX_GENJI,
     NATIONAL_DEX_CRIKA,
     NATIONAL_DEX_RIKA,
+    NATIONAL_DEX_TRIKA,
     NATIONAL_DEX_CMEIRA,
     NATIONAL_DEX_MEIRA,
     NATIONAL_DEX_MAGIC_STONES,
@@ -852,6 +853,16 @@ static const u8 sGetMonDataEVConstants[] =
     MON_DATA_SPEED_EV,
     MON_DATA_SPDEF_EV,
     MON_DATA_SPATK_EV
+};
+
+static const u8 sGetMonDataIVConstants[] = 
+{
+    MON_DATA_HP_IV,
+    MON_DATA_ATK_IV,
+    MON_DATA_DEF_IV,
+    MON_DATA_SPEED_IV,
+    MON_DATA_SPDEF_IV,
+    MON_DATA_SPATK_IV
 };
 
 static const u8 sStatsToRaise[] = 
@@ -1653,6 +1664,14 @@ u32 getVariableBasePower(struct BattlePokemon *attacker, struct BattlePokemon *d
             if (gBattleMons[battlerIdDef].status1)
                 power *= 2;
             return power;
+		case MOVE_PUNISHMENT:
+			power = gBattleMoves[move].power;
+			for (i = 1; i < 8; i++)
+			{
+				if (gBattleMons[battlerIdDef].statStages[i] > 6)
+					power += (20 * gBattleMons[battlerIdDef].statStages[i]);
+			}
+			return power;
     }
     
     return 0;
@@ -1735,6 +1754,11 @@ s32 CalculateBaseDamage(struct BattlePokemon *attacker, struct BattlePokemon *de
         defenderHoldEffect = ItemId_GetHoldEffect(defender->item);
         defenderHoldEffectParam = ItemId_GetHoldEffectParam(defender->item);
     }
+	
+	if (attacker->ability == ABILITY_KLUTZ)
+		attackerHoldEffect = 0;
+	if (defender->ability == ABILITY_KLUTZ) // mold breaker shouldn't pierce klutz
+		defenderHoldEffect = 0;
 
     if (attacker->ability == ABILITY_UNZAN || attacker->ability == ABILITY_PURE_POWER)
         attack *= 2;
@@ -1790,6 +1814,11 @@ s32 CalculateBaseDamage(struct BattlePokemon *attacker, struct BattlePokemon *de
         attack = (attack * 12) / 10;
         spAttack = (spAttack * 12) / 10;
     }
+	if (attackerHoldEffect == HOLD_EFFECT_OLD_PLATE)
+	{
+		attack = (attack * 11) / 10;
+		spAttack = (spAttack * 11) / 10;
+	}
     /*
     if (defenderHoldEffect == HOLD_EFFECT_METAL_POWDER && defender->species == SPECIES_DITTO)
         defense *= 2; */
@@ -3579,20 +3608,15 @@ bool8 PokemonUseItemEffects(struct Pokemon *mon, u16 item, u8 partyIndex, u8 mov
                     {
                     case 0: // EV_HP
                     case 1: // EV_ATK
-                        evCount = GetMonEVCount(mon);
-                        if (evCount >= 510)
-                            return TRUE;
-                        data = GetMonData(mon, sGetMonDataEVConstants[i], NULL);
-                        if (data < 100)
+                        data = GetMonData(mon, sGetMonDataIVConstants[i], NULL);
+                        if (data < 31)
                         {
-                            if (data + itemEffect[idx] > 100)
-                                evDelta = 100 - (data + itemEffect[idx]) + itemEffect[idx];
+                            if (data + itemEffect[idx] > 31)
+                                evDelta = 31 - data;
                             else
                                 evDelta = itemEffect[idx];
-                            if (evCount + evDelta > 510)
-                                evDelta += 510 - (evCount + evDelta);
                             data += evDelta;
-                            SetMonData(mon, sGetMonDataEVConstants[i], &data);
+                            SetMonData(mon, sGetMonDataIVConstants[i], &data);
                             CalculateMonStats(mon);
                             idx++;
                             retVal = FALSE;
@@ -3768,20 +3792,15 @@ bool8 PokemonUseItemEffects(struct Pokemon *mon, u16 item, u8 partyIndex, u8 mov
                     case 1: // EV_SPEED
                     case 2: // EV_SPDEF
                     case 3: // EV_SPATK
-                        evCount = GetMonEVCount(mon);
-                        if (evCount >= 510)
-                            return TRUE;
-                        data = GetMonData(mon, sGetMonDataEVConstants[i + 2], NULL);
-                        if (data < 100)
+                        data = GetMonData(mon, sGetMonDataIVConstants[i + 2], NULL);
+                        if (data < 31)
                         {
-                            if (data + itemEffect[idx] > 100)
-                                evDelta = 100 - (data + itemEffect[idx]) + itemEffect[idx];
+                            if (data + itemEffect[idx] > 31)
+                                evDelta = 31 - data;
                             else
                                 evDelta = itemEffect[idx];
-                            if (evCount + evDelta > 510)
-                                evDelta += 510 - (evCount + evDelta);
                             data += evDelta;
-                            SetMonData(mon, sGetMonDataEVConstants[i + 2], &data);
+                            SetMonData(mon, sGetMonDataIVConstants[i + 2], &data);
                             CalculateMonStats(mon);
                             retVal = FALSE;
                             idx++;
@@ -5059,6 +5078,7 @@ static u16 GetBattleBGM(void)
             gBattleTypeFlags |= BATTLE_TYPE_IMAKUNI;
             return MUS_VS_IMAKUNI;
         case TRAINER_CLASS_BOSS:
+			return MUS_RS_VS_GYM_LEADER;
         case TRAINER_CLASS_TEAM_ROCKET:
         case TRAINER_CLASS_COOLTRAINER:
         case TRAINER_CLASS_GENTLEMAN:

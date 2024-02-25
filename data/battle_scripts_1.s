@@ -267,6 +267,7 @@ gBattleScriptsForMoveEffects::
     .4byte BattleScript_EffectClearSmog
     .4byte BattleScript_EffectGlaiveRush
     .4byte BattleScript_EffectBeddyBye
+	.4byte BattleScript_EffectTripleHit
 
 BattleScript_EffectHit::
 BattleScript_HitFromAtkCanceler::
@@ -732,6 +733,7 @@ BattleScript_EffectFlinchHit::
 	goto BattleScript_EffectHit
 
 BattleScript_EffectRestoreHp::
+	jumpifmove MOVE_ROOST, BattleScript_EffectRoost
 	attackcanceler
 	attackstring
 	ppreduce
@@ -903,6 +905,16 @@ BattleScript_EffectDoubleHit::
 	attackstring
 	ppreduce
 	setmultihitcounter 2
+	initmultihitstring
+	setbyte sMULTIHIT_EFFECT, 0
+	goto BattleScript_MultiHitLoop
+
+BattleScript_EffectTripleHit::
+	attackcanceler
+	accuracycheck BattleScript_PrintMoveMissed, ACC_CURR_MOVE
+	attackstring
+	ppreduce
+	setmultihitcounter 3
 	initmultihitstring
 	setbyte sMULTIHIT_EFFECT, 0
 	goto BattleScript_MultiHitLoop
@@ -3854,6 +3866,11 @@ BattleScript_BurnTurnDmg::
 	waitmessage 0x40
 	goto BattleScript_DoStatusTurnDmg
 
+BattleScript_BadDreamsTurnDmg::
+	printstring STRINGID_PKMNHURTBYBADDREAMS
+	waitmessage 0x40
+	goto BattleScript_DoTurnDmg
+
 BattleScript_MoveUsedIsFrozen::
 	printstring STRINGID_PKMNISFROZEN
 	waitmessage 0x40
@@ -5891,3 +5908,17 @@ BattleScript_EffectBeddyBye::
     
 	goto BattleScript_MoveEnd
 
+BattleScript_EffectRoost::
+	attackcanceler
+	attackstring
+	ppreduce
+	tryhealhalfhealth BattleScript_AlreadyAtFullHp, BS_ATTACKER
+	attackanimation
+	waitanimation
+	orword gHitMarker, HITMARKER_IGNORE_SUBSTITUTE
+	healthbarupdate BS_ATTACKER
+	datahpupdate BS_ATTACKER
+	printstring STRINGID_PKMNREGAINEDHEALTH
+	waitmessage 0x40
+	special 0x1c
+	goto BattleScript_MoveEnd

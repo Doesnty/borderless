@@ -126,7 +126,7 @@ ViridianCity_Text_DreamEaterMan::
     .string "a Doremy eating my dream.\p"
     .string "And...\n"
     .string "It left behind the Leftovers...\p"
-    .string "Oogh, this is took spooky!\n"
+    .string "Oogh, this is too spooky!\n"
     .string "Take these away from me!$"
 
 ViridianCity_Text_DreamEaterGotLeftovers:: @ 8190866

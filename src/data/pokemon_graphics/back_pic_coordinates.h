@@ -90,7 +90,7 @@ const struct MonCoords gMonBackPicCoords[] =
 		.size = 0x55,
 		.y_offset = 1,
 	},
-	[SPECIES_DBYAKUREN] = 
+	[SPECIES_HBYAKUREN] = 
 	{
 		.size = 0x87,
 		.y_offset = 0,
@@ -1450,6 +1450,11 @@ const struct MonCoords gMonBackPicCoords[] =
 		.size = 0x87,
 		.y_offset = 1,
 	},
+	[SPECIES_TRIKA] = 
+	{
+		.size = 0x87,
+		.y_offset = 1,
+	},
 	[SPECIES_CRINGO] = 
 	{
 		.size = 0x56,
@@ -2428,7 +2433,7 @@ const struct MonCoords gMonBackPicCoords[] =
 	[SPECIES_CSHION] = 
 	{
 		.size = 0x87,
-		.y_offset = 4,
+		.y_offset = 5,
 	},
 	[SPECIES_SHION] = 
 	{

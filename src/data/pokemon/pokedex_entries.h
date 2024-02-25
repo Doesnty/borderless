@@ -1609,7 +1609,7 @@ const struct PokedexEntry gPokedexEntries[] =
         .description = gbyakurenPokedexText,
     },
 
-    [NATIONAL_DEX_DBYAKUREN] = 
+    [NATIONAL_DEX_HBYAKUREN] = 
     {
         .categoryName = _("Buddhist"),
         .description = gdbyakurenPokedexText,
@@ -2717,6 +2717,12 @@ const struct PokedexEntry gPokedexEntries[] =
     {
         .categoryName = _("Engineer"),
         .description = grikaPokedexText,
+    },
+
+    [NATIONAL_DEX_TRIKA] = 
+    {
+        .categoryName = _("Engineer"),
+        .description = gtrikaPokedexText,
     },
 
     [NATIONAL_DEX_CMEIRA] = 

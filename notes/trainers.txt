@@ -142,7 +142,7 @@ SAILOR LEONARD: CSekibanki Lv19, CSuika Lv20
 
 FISHERMAN DALE: CShinmyoumaru Lv21
 GENTLEMAN BROOKS: CMiko Lv19, CYukari Lv20
-LASS DAWN: CReimu Lv20, CMarisa Lv20
+LASS DAWN: CReimu Lv20, CLetty Lv20
 GENTLEMAN LAMAR: CChimata Lv20, CDoremy Lv20
 
 SAILOR TREVOR: CEirin Lv20, CKyouko Lv20
@@ -216,7 +216,7 @@ BIKER RICARDO: CShion Lv26, CEnoko Lv27
 SUPER NERD AIDAN: CTsukasa Lv26, CChiyari Lv27
 GAMBLER STAN: HStar Lv27
 
-GRUNT7: CSara Lv26, Kurumi Lv27
+GRUNT7: CSara Lv26, CNue Lv26, Kurumi Lv27
 
 (bf1)
 GRUNT8: CEternity Lv27, CMayumi Lv27
@@ -230,20 +230,139 @@ GRUNT11: CYachie Lv27, CEiki Lv27
 GRUNT12: CRumia Lv26, TChen Lv27
 
 (bf2)
-GRUNT13: CDaiyousei Lv26, CSaki Lv26
+GRUNT13: CDaiyousei Lv26, CSekibanki Lv26
 
 (bf3)
-GRUNT15: CYuuma, CSagume
-GRUNT14: CYorihime, CMomoyo
+GRUNT14: CYorihime Lv26, CMomoyo Lv27
+GRUNT15: CYuuma Lv26, CSagume Lv27
 
 (bf4 silph scope guy)
-GRUNT18: CSakuya, CCirno
+GRUNT18: CSakuya Lv26, CCirno Lv27
 
 (bf4 door guards)
-GRUNT16: CRemilia, CYouki, Yatsuhashi, ALilyWhite
-GRUNT17: CFlandre, CTenma, Benben, ALilyBlack
+GRUNT16: CRemilia Lv27, CYouki Lv27, Yatsuhashi Lv27, ALilyWhite Lv28
+GRUNT17: CFlandre Lv27, CTenma Lv27, Benben Lv27, ALilyBlack Lv28
 
 
-GIOVANNI1: TNue, TSakuya, AKeine Lv31
+GIOVANNI1:
+ CSaki Lv28
+ CShinki Lv28
+ HKoakuma Lv29
+ Nemuno Lv29
+ AChen Lv29
+
+LASS KAY: DDaiyousei Lv28
+BEAUTY BRIDGET: Wriggle Lv28
+BEAUTY TAMIA: Minoriko Lv28
+PICNICKER TINA: Shizuha Lv28
+ACE TRAINER MARY: ASunny Lv28, ALuna Lv28, AStar Lv28, TCirno Lv29
+BEAUTY LORI: CKaguya Lv29, DWriggle Lv29
+LASS LISA: CTakane Lv29, Eternity Lv29
+
+ERIKA: CYuuka Lv29, Hisami Lv30, AMedicine Lv30, Akis Lv30
+
+HOPE: CYuyuko Lv29
+PATRICIA: CTojiko Lv29, HMerlin Lv30
+CARLY: CKomachi Lv29, HLunasa Lv30
+LAUREL: CMima Lv29, Enoko Lv30
+JODY: CYoumu Lv29, Lyrica Lv30
+PAULA: CKogasa Lv30, Kana Lv30
+RUTH: CMiko Lv30, Lunasa Lv31
+TAMMY: CEiki Lv30, Merlin Lv30
+KARINA: CYoshika Lv29, CYoshika Lv29, CYoshika Lv29, ZFairy Lv29
+JANAE: Eika Lv31
+ANGELICA: HLyrica Lv31
+JENNIFER: DParsee Lv31
+EMILIA: DLayla Lv31
+
+RIVAL:
+Mystia Lv31, Momiji Lv31, Sunny Lv32, CReisen Lv31, CPatchouli Lv32, CFuto Lv32
+Mystia Lv31, Momiji Lv31, Luna Lv32, CSanae Lv31, CArisu Lv32, CSumireko Lv32
+Mystia Lv31, Momiji Lv31, Star Lv32, CAlice Lv31, CShou Lv32, CKokoro Lv32
+
+GRUNT19: CYuki Lv31, Seiran Lv31
+GRUNT20: CNarumi Lv32, Letty Lv31
+GRUNT21: CMegumu Lv32, Kisume Lv32, Sekibanki Lv32
+
+BIKER LAO: CIku Lv32, Chiyari Lv32
+CUE BALL KOJI: CShion Lv32, Takane Lv33
+CUE BALL LUKE: CYumemi Lv32, Rin Lv33
+BIKER HIDEO: CEiki Lv32, Yamame Lv32
+BIKER RUBEN: CYuuma Lv32, Kogasa Lv32, ARin Lv33
+CUE BALL CAMRON: CYuugi Lv33, CMai Lv33, Orange Lv32
+
+CUE BALL ISAIAH: CKomachi Lv32, Meiling Lv33
+BIKER VIRGIL: Seiran Lv33, SLilyBlack Lv33
+CUE BALL RAUL: Joon Lv33, Nazrin Lv33
+BIKER BILLY: Cirno Lv33, Meira Lv33
+BIKER NIKOLAS: Luna Lv34, TLuna Lv34, ALuna Lv34
+CUE BALL ZEEK: Rinnosuke Lv35
+CUE BALL COREY: CShinmyoumaru Lv35, CRaiko Lv35, Seija Lv35
+CUE BALL JAMAL: CYukari Lv33, Urumi Lv35
+BIKER WILLIAM: CMokou Lv34, CKazami Lv34, TKisume Lv34
+
+BIRD KEEPER WILTON: CUtsuho Lv34, Tokiko Lv34, HMystia Lv34, Hatate Lv34
+BIRD KEEPER JACOB: CAya Lv34, CMegumu Lv34, Aya Lv35, Megumu Lv35
+BIRD KEEPER RAMIRO: AMystia Lv34, Wakasagihime Lv34
+
+SWIMMERM RICHARD: CKasen Lv34, CEirin Lv34, Nitori Lv35
+SWIMMERM REECE: Murasa Lv35
+
+
+PICNICKER YAZMIN: CKikuri Lv35, TNazrin Lv35
+BIRD KEEPER -> BUG MANIAC EDWIN: CMomoyo Lv34, SYamame Lv35, SWriggle Lv35
+BIRD KEEPER CHESTER: CNue Lv35, THatate Lv36
+PICNICKER KINDRA: Medicine Lv36, CByakuren Lv36
+BEAUTY OLIVIA: Shanghai Lv36, Hourai Lv36, TAlice Lv36
+BEAUTY GRACE: CKagerou Lv36, Seiga Lv36
+BIKER ALEX: Mike Lv36
+BIKER ERNEST: DHina Lv36, DReisen Lv36
+PICNICKER BECKY: Mai Lv36, Hisami Lv36
+PICNICKER CELIA: Alice Lv36, CMiko Lv36
+
+BIKER GERALD: CSaki Lv37, TKyouko Lv37
+BIKER MALIK: HYoshika Lv37, TKogasa Lv37
+BIKER ISAAC: Ichirin Lv37, Ringo Lv37
+BIKER LUKAS: Mayumi Lv37, Sara Lv37
+BIRD KEEPER -> TOHOMANIAC BENNY: Kazami Lv39
+BIRD KEEPER -> TOHOMANIAC DONALD: CSuwako Lv37, CUtsuho Lv37, CTenshi Lv37
+BIRD KEEPER MARLON: AMystia Lv39
+BIRD KEEPER -> TOHOMANIAC BECK: Kosuzu Lv37, Patchouli Lv38
+BIRD KEEPER -> ROCKER MITCH: Benben Lv37, Lunasa Lv38
+BIRD KEEPER -> TOHOMANIAC CARTER: SMeiling Lv37, Reisen II Lv38
+BIKER JARED: CMagan Lv37, Satori Lv38
+BIRD KEEPER PERRY: ATokiko Lv39
+PICNICKER GWEN: LilyWhite Lv38, HLetty Lv38
+PICNICKER VALERIE: ADaiyousei Lv39
+BIRD KEEPER ROBERT: CSariel Lv39
+BEAUTY SHEILA: Miyoi Lv38, Shou Lv38
+BEAUTY LOLA: DWakasagihime Lv38, Yatsuhashi Lv39
+
+PICNICKER SUSIE: Ellen Lv38, Eika Lv39
+BIRD KEEPER -> PSYCHIC SEBASTIAN: Narumi Lv38, SMarisa Lv39
+PICNICKER ALMA: Chen Lv38, SCirno Lv39
+FISHERMAN ANDREW: TNitori Lv40
+CAMPER JUSTIN: CAlice Lv40
+FISHERMAN ELLIOT: AHina Lv39, AMurasa Lv39
+
+JUGGLER NATE: Hina Lv39, Sagume Lv40
+JUGGLER KAYDEN: TParsee Lv39, Sannyo Lv40
+JUGGLER KIRK: Eirin Lv40, Joon Lv40
+TAMER EDGAR: Tsukasa Lv40, Rumia Lv40
+TAMER PHIL: ANue Lv40, Momoyo Lv40
+JUGGLER SHAWN: TYukari Lv41
+
+KOGA: Nue Lv41, HEirin Lv41, Shion Lv41, Yoshika Lv42
+
+BLACKBELT HIDEKI: Meiling Lv41, Hakurei Lv42
+BLACKBELT HITOSHI: SMeiling Lv41, DIchirin Lv42
+BLACKBELT MIKE: Joon Lv41, DYuugi Lv42
+BLACKBELT AARON: Biten Lv41, Sara Lv42
+
+BLACKBELT KOICHI: AdMokou, TAya, Tenma, Sendai
+
+TOHOMANIAC STEVEN: TToyohime, SYorihime, Sagume, TSakuya
+
+IMAKUNI 3??: CKoishi Lv34, Clownpiece Lv34, CSuwako Lv35, AdTewi Lv34, Mai&Satono Lv35
 
 

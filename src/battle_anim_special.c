@@ -2296,6 +2296,8 @@ void AnimTask_GetTrappedMoveAnimId(u8 taskId)
         gBattleAnimArgs[0] = TRAP_ANIM_CLAMP;
     else if (gBattleSpritesDataPtr->animationData->animArg == MOVE_SAND_TOMB)
         gBattleAnimArgs[0] = TRAP_ANIM_SAND_TOMB;
+	else if (gBattleSpritesDataPtr->animationData->animArg == MOVE_DESTITUTION)
+		gBattleAnimArgs[0] = TRAP_ANIM_DESTITUTION;
     else
         gBattleAnimArgs[0] = TRAP_ANIM_BIND;
 

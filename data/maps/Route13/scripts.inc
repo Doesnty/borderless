@@ -1,5 +1,10 @@
 Route13_MapScripts:: @ 81680B5
+	map_script MAP_SCRIPT_ON_RESUME, Route13_OnResume
 	.byte 0
+
+Route13_OnResume::
+	setflag FLAG_ENTERED_ROUTE_13
+	end
 
 Route13_EventScript_TrainerTips1:: @ 81680B6
 	msgbox Route13_Text_LookToLeftOfThatPost, MSGBOX_SIGN

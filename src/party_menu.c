@@ -2106,9 +2106,9 @@ static void BlitBitmapToPartyWindow_LeftColumn(u8 windowId, u8 x, u8 y, u8 width
         height = 5;
     }
     if (!isEgg)
-        BlitBitmapToPartyWindow(windowId, sMainSlotTileNums, width, x, y, width, height);
+        BlitBitmapToPartyWindow(windowId, sMainSlotTileNums, 14, x, y, width, height);
     else
-        BlitBitmapToPartyWindow(windowId, sMainSlotTileNums_Egg, width, x, y, width, height);
+        BlitBitmapToPartyWindow(windowId, sMainSlotTileNums_Egg, 14, x, y, width, height);
 }
 
 static void BlitBitmapToPartyWindow_RightColumn(u8 windowId, u8 x, u8 y, u8 width, u8 height, u8 isEgg)
@@ -2119,9 +2119,9 @@ static void BlitBitmapToPartyWindow_RightColumn(u8 windowId, u8 x, u8 y, u8 widt
         height = 3;
     }
     if (!isEgg)
-        BlitBitmapToPartyWindow(windowId, sOtherSlotsTileNums, width, x, y, width, height);
+        BlitBitmapToPartyWindow(windowId, sOtherSlotsTileNums, 13, x, y, width, height);
     else
-        BlitBitmapToPartyWindow(windowId, sOtherSlotsTileNums_Egg, width, x, y, width, height);
+        BlitBitmapToPartyWindow(windowId, sOtherSlotsTileNums_Egg, 13, x, y, width, height);
 }
 
 static void DrawEmptySlot(u8 windowId)
@@ -4400,8 +4400,8 @@ void ItemUseCB_Medicine(u8 taskId, TaskFunc func)
     else
     {
         ItemUse_SetQuestLogEvent(QL_EVENT_USED_ITEM, mon, item, 0xFFFF);
-        sub_8124DC0(taskId);
-        gItemUseCB = ItemUseCB_MedicineStep;
+        //sub_8124DC0(taskId);
+        ItemUseCB_MedicineStep(taskId, func);
     }
 }
 
@@ -4592,8 +4592,9 @@ static void sub_812580C(u8 taskId)
     }
     else
     {
-        sub_8124DC0(taskId);
+        //sub_8124DC0(taskId);
         gItemUseCB = sub_8125898;
+		sub_8125898(taskId, NULL);
     }
 }
 
@@ -4723,8 +4724,9 @@ void ItemUseCB_TMHM(u8 taskId, UNUSED TaskFunc func)
     if (GiveMoveToMon(mon, move[0]) != MON_HAS_MAX_MOVES)
     {
         ItemUse_SetQuestLogEvent(QL_EVENT_USED_ITEM, mon, item, 0xFFFF);
-        sub_8124DC0(taskId);
+        //sub_8124DC0(taskId);
         gItemUseCB = ItemUseCB_LearnedMove;
+		ItemUseCB_LearnedMove(taskId, NULL);
     }
     else
     {
@@ -4973,8 +4975,9 @@ void ItemUseCB_RareCandy(u8 taskId, TaskFunc func)
     }
     else
     {
-        sub_8124DC0(taskId);
+        //sub_8124DC0(taskId);
         gItemUseCB = ItemUseCB_RareCandyStep;
+		ItemUseCB_RareCandyStep(taskId, NULL);
     }
 }
 
@@ -5244,7 +5247,7 @@ void ItemUseCB_EvolutionStone(u8 taskId, TaskFunc func)
     }
     else
     {
-        sub_8124DC0(taskId);
+        //sub_8124DC0(taskId);
     }
 }
 

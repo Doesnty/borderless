@@ -531,7 +531,7 @@ const u8 sText_BeginsRegenerating[] = _("{B_ATK_NAME_WITH_PREFIX} anchors\nitsel
 const u8 sText_RegeneratesHP[] = _("{B_ATK_NAME_WITH_PREFIX} regenerates\nthrough holy power!");
 const u8 sText_BestowedItem[] = _("{B_DEF_NAME_WITH_PREFIX} recieved\n{B_BUFF2} from {B_ATK_NAME_WITH_PREFIX}.");
 const u8 sText_HappyHour[] = _("Everyone is caught up in\nthe happy atmosphere!");
-const u8 sText_PkmnTrappedInDestitution[] = _("{B_DEF_NAME_WITH_PREFIX} was trapped\nbelow the poverty line!");
+const u8 sText_PkmnTrappedInDestitution[] = _("{B_DEF_NAME_WITH_PREFIX} was\nengulfed in misfortune!");
 const u8 sText_PkmnPreventsTaunt[] = _("{B_DEF_NAME_WITH_PREFIX}'s {B_DEF_ABILITY}\nmakes the Taunt fall flat!");
 const u8 sText_PkmnRaisedSpAtk[] = _("{B_SCR_ACTIVE_NAME_WITH_PREFIX}'s {B_SCR_ACTIVE_ABILITY}\nraised its Sp. Atk!");
 const u8 sText_PkmnEnduredWithSturdy[] = _("{B_DEF_NAME_WITH_PREFIX} hung on\nthanks to its Sturdy!");
@@ -574,6 +574,7 @@ const u8 sText_IdentifyMoveset2[] = _("Third move: {B_BUFF1}.\nFourth move: {B_B
 const u8 sText_Scheming[] = _("{B_ATK_NAME_WITH_PREFIX} is scheming!");
 const u8 sText_Frisk[] = _("{B_SCR_ACTIVE_NAME_WITH_PREFIX} Frisked {B_DEF_NAME_WITH_PREFIX}\nand found its {B_LAST_ITEM}!");
 const u8 sText_ClearSmog[] = _("{B_DEF_NAME_WITH_PREFIX}'s stat\nchanges were eliminated!");
+const u8 sText_PkmnHurtByBadDreams[] = _("{B_ATK_NAME_WITH_PREFIX} is tormented\nby Bad Dreams!");
 
 
 const u8 *const gBattleStringsTable[] = {
@@ -1013,6 +1014,7 @@ const u8 *const gBattleStringsTable[] = {
     [STRINGID_SCHEMING - 12]                      = sText_Scheming,
     [STRINGID_FRISK - 12]                         = sText_Frisk,
     [STRINGID_CLEARSMOGCLEARBUFFS - 12]           = sText_ClearSmog,
+	[STRINGID_PKMNHURTBYBADDREAMS - 12]           = sText_PkmnHurtByBadDreams,
 };
 
 const u16 gMissStringIds[] = {

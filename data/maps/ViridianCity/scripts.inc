@@ -19,7 +19,7 @@ ViridianCity_OnTransition:: @ 81658D9
 	end
 
 ViridianCity_EventScript_SetOldManNormal:: @ 8165909
-	setvar VAR_OBJ_GFX_ID_0, OBJ_EVENT_GFX_OLD_MAN_1
+	setvar VAR_OBJ_GFX_ID_0, OBJ_EVENT_GFX_ZUN
 	return
 
 ViridianCity_EventScript_SetOldManStandingByRoad:: @ 816590F

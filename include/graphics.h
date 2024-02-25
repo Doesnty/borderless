@@ -1475,6 +1475,11 @@ extern const u32 gMonBackPic_rika_neutral[];
 extern const u32 gMonPalette_rika_neutral[];
 extern const u32 gMonShinyPalette_rika_neutral[];
 extern const u8 gMonIcon_rika_neutral[];
+extern const u32 gMonFrontPic_rika_technical[];
+extern const u32 gMonBackPic_rika_technical[];
+extern const u32 gMonPalette_rika_technical[];
+extern const u32 gMonShinyPalette_rika_technical[];
+extern const u8 gMonIcon_rika_technical[];
 extern const u32 gMonFrontPic_ringo_chibi[];
 extern const u32 gMonBackPic_ringo_chibi[];
 extern const u32 gMonPalette_ringo_chibi[];
@@ -3540,7 +3545,7 @@ extern const u8 gFile_graphics_items_icons_stick_sheet[];
 extern const u8 gFile_graphics_items_icon_palettes_stick_palette[];
 extern const u8 gFile_graphics_items_icons_stone_baby_sheet[];
 extern const u8 gFile_graphics_items_icon_palettes_stone_baby_palette[];
-extern const u8 gFile_graphics_items_icons_question_mark_sheet[];
+extern const u8 gFile_graphics_items_icons_old_plate_sheet[];
 extern const u8 gFile_graphics_items_icon_palettes_question_mark_palette[];
 extern const u8 gFile_graphics_items_icons_question_mark_sheet[];
 extern const u8 gFile_graphics_items_icon_palettes_question_mark_palette[];
@@ -4234,6 +4239,8 @@ extern const u32 gBattleAnimSpriteGfx_Bird[];
 extern const u32 gBattleAnimSpriteGfx_CrossImpact[];
 extern const u32 gBattleAnimSpriteGfx_Apollon[];
 extern const u32 gBattleAnimSpriteGfx_BrokenRing[];
+extern const u32 gBattleAnimSpriteGfx_DestitutionOrb[];
+extern const u32 gBattleAnimSpriteGfx_Vine3[];
 
 // battle anim particle pals
 extern const u32 gBattleAnimSpritePal_Bone[];
@@ -4489,6 +4496,8 @@ extern const u32 gBattleAnimSpritePal_BlackShadow[];
 extern const u32 gBattleAnimSpritePal_Apollon[];
 extern const u32 gBattleAnimSpritePal_BrokenRing[];
 extern const u32 gBattleAnimSpritePal_Tailwind[];
+extern const u32 gBattleAnimSpritePal_DestitutionOrb[];
+extern const u32 gBattleAnimSpritePal_Vine3[];
 
 
 // battle anim task

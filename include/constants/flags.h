@@ -124,8 +124,8 @@
 #define FLAG_HIDE_TWO_ISLAND_GAME_CORNER_BIKER             0x074
 #define FLAG_HIDE_TWO_ISLAND_GAME_CORNER_LOSTELLE          0x075
 #define FLAG_HIDE_LOSTELLE_IN_HER_HOME                     0x076
-#define FLAG_0x077                                         0x077
-#define FLAG_0x078                                         0x078
+#define FLAG_HIDE_MTMOON_SNORLAX                           0x077
+#define FLAG_HIDE_DIGLETTS_CAVE_SNORLAX                    0x078
 #define FLAG_HIDE_THREE_ISLAND_BIKERS                      0x079
 #define FLAG_HIDE_LOSTELLE_IN_BERRY_FOREST                 0x07A
 #define FLAG_HIDE_TWO_ISLAND_WOMAN                         0x07B
@@ -182,8 +182,8 @@
 #define FLAG_HIDE_SAFFRON_CITY_POKECENTER_SABRINA_JOURNALS 0x0AE
 
 // Unused?
-#define FLAG_0x0AF               0x0AF
-#define FLAG_0x0B0               0x0B0
+#define FLAG_HIDE_FUCHSIA_CITY_GYM_GUARD                   0x0AF
+#define FLAG_ENTERED_ROUTE_13                              0x0B0
 #define FLAG_0x0B1               0x0B1
 #define FLAG_0x0B2               0x0B2
 #define FLAG_0x0B3               0x0B3
@@ -616,9 +616,9 @@
 #define FLAG_DID_MARC_TRADE                              0x257
 #define FLAG_BEAT_RIVAL_IN_OAKS_LAB                      0x258
 #define FLAG_GOT_TM06_FROM_KOGA                          0x259
-#define FLAG_0x25A                                       0x25A
+#define FLAG_WOKE_UP_MTMOON_SNORLAX                      0x25A
 #define FLAG_GOT_TM27                                    0x25B
-#define FLAG_0x25C                                       0x25C
+#define FLAG_WOKE_UP_DIGLETTS_CAVE_SNORLAX               0x25C
 #define FLAG_0x25D                                       0x25D
 #define FLAG_GOT_OLD_AMBER                               0x25E
 #define FLAG_0x25F                                       0x25F

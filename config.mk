@@ -13,7 +13,7 @@ MAKER_CODE  := 01
 ifeq ($(GAME_VERSION),FIRERED)
 TITLE       := POKEMON FIRE
 GAME_CODE   := BPR
-BUILD_NAME  := firered
+BUILD_NAME  := borderless
 else
 ifeq ($(GAME_VERSION),LEAFGREEN)
 TITLE       := POKEMON LEAF

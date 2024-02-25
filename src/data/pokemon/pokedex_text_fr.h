@@ -1769,7 +1769,7 @@ const u8 ghkasenPokedexText[] = _(
 const u8 gcsumirekoPokedexText[] = _(
     "A high school girl from the outside\n"
     "world with psychic powers.\n"
-    "Apparently founded the Sealing Club.");
+    "Allegedly founded the Sealing Club.");
 
 const u8 gsumirekoPokedexText[] = _(
     "Visits Gensokyo in her sleep via a\n"
@@ -2066,6 +2066,7 @@ const u8 gcmegumuPokedexText[] = _(
     "The polite chief of the Crow Tengu.\n"
     "A terrible judge of character.\n"
     "");
+	// can probably do better, but well, tsukasa
 
 const u8 gmegumuPokedexText[] = _(
     "Created the Ability Cards as part of an\n"
@@ -2271,6 +2272,11 @@ const u8 grikaPokedexText[] = _(
     "Created many monsters and machines\n"
     "attempting to destroy Reimu, but the\n"
     "reason for doing so is unknown.");
+
+const u8 gtrikaPokedexText[] = _(
+    "She stubbornly insists that her\n"
+    "greatest creation, the floating Evil\n"
+    "Eye Sigma, in fact qualifies as a tank.");
 
 const u8 gcmeiraPokedexText[] = _(
     "A wandering samurai seeking\n"
@@ -2508,7 +2514,7 @@ const u8 gctenmaPokedexText[] = _(
     "Future leader of the tengu. Was born\n"
     "into the ruling caste, and is being\n"
     "carefully groomed for the role.");
-    // the tengu actually do seem to have a rigid cast system
+    // the tengu actually do seem to have a rigid caste system
     // hatate is implied nobility by her purple garb and general lifestyle
 
 const u8 gtenmaPokedexText[] = _(

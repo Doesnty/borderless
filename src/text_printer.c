@@ -121,9 +121,9 @@ void RunTextPrinters(void)
         if (sTextPrinters[i].active != 0)
         {
             temp = RenderFont(&sTextPrinters[i]);
+			CopyWindowToVram(sTextPrinters[i].printerTemplate.windowId, COPYWIN_GFX);
             switch (temp) {
                 case 0:
-                    CopyWindowToVram(sTextPrinters[i].printerTemplate.windowId, COPYWIN_GFX);
                 case 3:
                     if (sTextPrinters[i].callback != 0)
                         sTextPrinters[i].callback(&sTextPrinters[i].printerTemplate, temp);

@@ -306,6 +306,8 @@
 #define ANIM_TAG_TAILWIND_PAL               (ANIM_SPRITES_START + 296)
 #define ANIM_TAG_HORSEPOWER                 (ANIM_SPRITES_START + 297)
 #define ANIM_TAG_FINGER_3                   (ANIM_SPRITES_START + 298)
+#define ANIM_TAG_DESTITUTION_ORB            (ANIM_SPRITES_START + 299)
+#define ANIM_TAG_VINE_3                     (ANIM_SPRITES_START + 300)
 
 // battlers
 #define ANIM_ATTACKER    0
@@ -419,6 +421,7 @@
 #define TRAP_ANIM_WHIRLPOOL 2
 #define TRAP_ANIM_CLAMP 3
 #define TRAP_ANIM_SAND_TOMB 4
+#define TRAP_ANIM_DESTITUTION 5
 
 // Weather defines for battle animation scripts.
 #define ANIM_WEATHER_NONE 0

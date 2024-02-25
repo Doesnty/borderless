@@ -39,9 +39,9 @@ Route16_EventScript_Snorlax:: @ 8168121
 	compare VAR_RESULT, NO
 	goto_if_eq Route16_EventScript_DontUsePokeFlute
 	call EventScript_AwakenSnorlax
-	setwildbattle SPECIES_SNORLAX, 30, ITEM_NONE
+	setwildbattle SPECIES_CDOREMY, 30, ITEM_NONE
 	waitse
-	playmoncry SPECIES_SNORLAX, 2
+	playmoncry SPECIES_CDOREMY, 2
 	delay 40
 	waitmoncry
 	setflag FLAG_HIDE_ROUTE_16_SNORLAX

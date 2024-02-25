@@ -142,3 +142,26 @@ Route12_Text_GiaNotEnoughMons:: @ 8185908
     .string "GIA: I can't bear to battle\n"
     .string "without my JES!\p"
     .string "Don't you have one more POKéMON?$"
+
+Route12_Text_Koga::
+	.string "It seems the Doremy that settled\n"
+	.string "north of here took out the bridge.\p"
+	.string "I've been helping with the\n"
+	.string "reconstruction efforts here.\p"
+	.string "Hm?\n"
+	.string "You're looking for Koga?\p"
+	.string "Ah. That would be me.\p"
+	.string "The work is finished, so I will\n"
+	.string "be returning to Fuchsia City's Gym.\p"
+	.string "As a token of apology for\n"
+	.string "my absence, please take this.$"
+
+Route12_Text_Koga2::
+	.string "If you seek to battle me for the\n"
+	.string "MarshBadge, come to Fuchsia City Gym.$"
+
+Route12_Text_ConstructionGuy::
+	.string "Bridge's out.\n"
+	.string "Come by later.\p"
+	.string "If you need to go to Fuchsia,\n"
+	.string "try heading west from Celadon.$"

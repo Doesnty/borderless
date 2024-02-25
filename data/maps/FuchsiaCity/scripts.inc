@@ -137,3 +137,7 @@ FuchsiaCity_EventScript_OmanyteSign:: @ 8166EBE
 	erasemonpic
 	releaseall
 	end
+
+FuchsiaCity_EventScript_GymGuard::
+	msgbox FuchsiaCity_Text_GymGuard, MSGBOX_NPC
+	end

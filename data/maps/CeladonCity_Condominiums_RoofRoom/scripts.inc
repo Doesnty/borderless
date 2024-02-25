@@ -10,8 +10,8 @@ CeladonCity_Condominiums_RoofRoom_EventScript_BlackBelt:: @ 816C464
 CeladonCity_Condominiums_RoofRoom_EventScript_EeveeBall:: @ 816C46D
 	lock
 	faceplayer
-	setvar VAR_TEMP_1, SPECIES_EEVEE
-	givemon SPECIES_EEVEE, 25, ITEM_NONE
+	setvar VAR_TEMP_1, SPECIES_AKYUU
+	givemon SPECIES_AKYUU, 25, ITEM_NONE
 	compare VAR_RESULT, 0
 	goto_if_eq CeladonCity_Condominiums_RoofRoom_EventScript_GetEeveeParty
 	compare VAR_RESULT, 1
@@ -27,7 +27,7 @@ CeladonCity_Condominiums_RoofRoom_EventScript_GetEeveeParty:: @ 816C4A6
 	message CeladonCity_Condominiums_RoofRoom_Text_ObtainedAnEevee
 	waitmessage
 	waitfanfare
-	getspeciesname 0, SPECIES_EEVEE
+	getspeciesname 0, SPECIES_AKYUU
 	msgbox Text_GiveNicknameToThisMon, MSGBOX_YESNO
 	compare VAR_RESULT, NO
 	goto_if_eq CeladonCity_Condominiums_RoofRoom_EventScript_SetGotEevee
@@ -42,7 +42,7 @@ CeladonCity_Condominiums_RoofRoom_EventScript_GetEeveePC:: @ 816C4DA
 	message CeladonCity_Condominiums_RoofRoom_Text_ObtainedAnEevee
 	waitmessage
 	waitfanfare
-	getspeciesname 0, SPECIES_EEVEE
+	getspeciesname 0, SPECIES_CSHINGYOKU
 	msgbox Text_GiveNicknameToThisMon, MSGBOX_YESNO
 	compare VAR_RESULT, NO
 	goto_if_eq CeladonCity_Condominiums_RoofRoom_EventScript_TransferEeveeToPC

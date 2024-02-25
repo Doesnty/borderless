@@ -6,7 +6,7 @@ PokemonTower_6F_EventScript_MarowakGhost:: @ 81634B8
 	textcolor 2
 	msgbox PokemonTower_6F_Text_BeGoneIntruders
 	goto_if_questlog EventScript_ReleaseEnd
-	setwildbattle SPECIES_MAROWAK, 30, ITEM_NONE
+	setwildbattle SPECIES_LAYLA, 36, ITEM_NONE
 	special StartMarowakBattle
 	waitstate
 	special QuestLog_CutRecording
@@ -21,7 +21,7 @@ PokemonTower_6F_EventScript_DefeatedMarowakGhost:: @ 81634F5
 	message PokemonTower_6F_Text_GhostWasCubonesMother
 	waitmessage
 	waitse
-	playmoncry SPECIES_MAROWAK, 0
+	playmoncry SPECIES_LAYLA, 0
 	waitbuttonpress
 	waitmoncry
 	msgbox PokemonTower_6F_Text_MothersSpiritWasCalmed
@@ -30,7 +30,7 @@ PokemonTower_6F_EventScript_DefeatedMarowakGhost:: @ 81634F5
 	end
 
 PokemonTower_6F_Movement_ForcePlayerUp:: @ 8163512
-	walk_up
+	walk_down
 	step_end
 
 PokemonTower_6F_EventScript_Angelica:: @ 8163514

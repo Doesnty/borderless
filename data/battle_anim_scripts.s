@@ -445,7 +445,7 @@ gBattleAnims_Moves::
 	.4byte Move_POUND
 	.4byte Move_POUND
 	.4byte Move_POUND
-	.4byte Move_POUND
+	.4byte Move_DESTITUTION
 	.4byte Move_POUND
 	.4byte Move_POUND
 	.4byte Move_POUND
@@ -463,7 +463,7 @@ gBattleAnims_Moves::
 	.4byte Move_POUND
 	.4byte Move_REST
 	.4byte Move_POUND
-	.4byte Move_POUND
+	.4byte Move_PUNISHMENT
 	.4byte Move_POUND
 	.4byte Move_POUND
 	.4byte Move_POUND
@@ -10663,6 +10663,7 @@ General_TurnTrap:: @ 81D5C5F
 	jumpargeq 0, 2, Status_Whirlpool
 	jumpargeq 0, 3, Status_Clamp
 	jumpargeq 0, 4, Status_SandTomb
+	jumpargeq 0, 5, Status_Destitution
 	goto Status_BindWrap
 
 Status_BindWrap:: @ 81D5C8B
@@ -10735,6 +10736,24 @@ Status_SandTomb:: @ 81D5DA9
 	createsprite gSimplePaletteBlendSpriteTemplate, ANIM_ATTACKER, 0, 4, 2, 7, 0, 563
 	waitforvisualfinish
 	stopsound
+	end
+
+Status_Destitution::
+	loadspritegfx ANIM_TAG_DESTITUTION_ORB
+	monbg ANIM_DEF_PARTNER
+	monbgprio_28 1
+	setalpha 12, 8
+	delay 0
+	createsprite gSimplePaletteBlendSpriteTemplate, ANIM_ATTACKER, 0, 4, 2, 0, 7, 0x28CB
+	loopsewithpan SE_M_PSYBEAM2, 192, 3, 10
+	createvisualtask AnimTask_ShakeMon, 5, 1, 0, 2, 30, 1
+	call DestitutionEffect
+	call DestitutionEffect
+	delay 12
+	createsprite gSimplePaletteBlendSpriteTemplate, ANIM_ATTACKER, 0, 4, 2, 7, 0, 0x28CB
+	waitforvisualfinish
+	stopsound
+	clearmonbg ANIM_DEF_PARTNER
 	end
 
 General_ItemEffect:: @ 81D5DF2
@@ -13146,7 +13165,6 @@ Move_ABYSS_NOVA::
 
 	createsprite gComplexPaletteBlendSpriteTemplate, ANIM_ATTACKER, 2, 1, 8, 13, 8474, 8, 0, 8
 
-	loopsewithpan SE_ABYSS_NOVA_SIREN, 192, 40, 3
 	createvisualtask AnimTask_ShakeMon2, 5, 4, 8, 0, 60, 1
     
     waitforvisualfinish
@@ -13327,3 +13345,62 @@ General_KnockedAway:
 	createvisualtask AnimTask_SlideOffScreen, 5, 1, 8
 	waitforvisualfinish
 	end
+
+Move_DESTITUTION:: @ 81CFB3A
+	loadspritegfx ANIM_TAG_DESTITUTION_ORB
+	monbg ANIM_DEF_PARTNER
+	monbgprio_28 1
+	setalpha 12, 8
+	delay 0
+	createsprite gSimplePaletteBlendSpriteTemplate, ANIM_ATTACKER, 0, 4, 2, 0, 7, 0x28CB
+	loopsewithpan SE_M_PSYBEAM2, 192, 5, 10
+	createvisualtask AnimTask_ShakeMon, 5, 1, 0, 2, 50, 1
+	call DestitutionEffect
+	call DestitutionEffect
+	call DestitutionEffect
+	delay 12
+	createsprite gSimplePaletteBlendSpriteTemplate, ANIM_ATTACKER, 0, 4, 2, 7, 0, 0x28CB
+	waitforvisualfinish
+	clearmonbg ANIM_DEF_PARTNER
+	end
+
+DestitutionEffect:: @ 81CFB92
+	createsprite gDestitutionSpriteTemplate, ANIM_TARGET, 2, 0, 28, 384, 50, 8, 50, 1
+	delay 2
+	createsprite gDestitutionSpriteTemplate, ANIM_TARGET, 2, 0, 32, 240, 40, 11, -46, 1
+	delay 2
+	createsprite gDestitutionSpriteTemplate, ANIM_TARGET, 2, 0, 33, 416, 40, 4, 42, 1
+	delay 2
+	createsprite gDestitutionSpriteTemplate, ANIM_TARGET, 2, 0, 31, 288, 45, 6, -42, 1
+	delay 2
+	createsprite gDestitutionSpriteTemplate, ANIM_TARGET, 2, 0, 28, 448, 45, 11, 46, 1
+	delay 2
+	createsprite gDestitutionSpriteTemplate, ANIM_TARGET, 2, 0, 33, 464, 50, 10, -50, 1
+	delay 2
+	return
+
+Move_PUNISHMENT::
+	loadspritegfx ANIM_TAG_LIGHTNING
+	loadspritegfx ANIM_TAG_SLAM_HIT
+	playsewithpan SE_M_JUMP_KICK, 192
+	createsprite gHorizontalLungeSpriteTemplate, ANIM_ATTACKER, 2, 4, 6
+	delay 6
+	playsewithpan SE_M_SCRATCH, 63
+	createsprite gSlamHitSpriteTemplate, ANIM_TARGET, 2, 0, 0
+	createvisualtask AnimTask_ShakeMon2, 2, 1, 2, 0, 6, 1
+	
+	playsewithpan SE_M_TRI_ATTACK2, 63
+	createsprite gLightningSpriteTemplate, ANIM_TARGET, 2, 0, -48
+	delay 1
+	createsprite gLightningSpriteTemplate, ANIM_TARGET, 2, 0, -16
+	delay 1
+	createsprite gLightningSpriteTemplate, ANIM_TARGET, 2, 0, 16
+	
+	delay 6
+	createvisualtask AnimTask_ShakeTargetInPattern, 2, 20, 3, 1, 0
+	delay 2
+	waitforvisualfinish
+	
+	end
+
+

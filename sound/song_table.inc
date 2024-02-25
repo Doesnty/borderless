@@ -347,7 +347,6 @@ gSongTable:: @ 84A32CC
 	song mus_slow_pallet, 0, 0
 	song mus_teachy_tv_menu, 0, 0
     song mus_vs_trainer, 0, 0
-	song se_abyss_nova_siren, 1, 1
 
 g18SongTable::
 	song mus_dummy, 0, 0
@@ -698,7 +697,6 @@ g18SongTable::
 	song mus_slow_pallet, 0, 0
 	song mus_teachy_tv_menu, 0, 0
     song mus_th_crazy_backup_dancers, 0, 0
-	song se_abyss_nova_siren, 1, 1
 
 dummy_song_header: @ 84A3DA4
 	.byte 0, 0, 0, 0
