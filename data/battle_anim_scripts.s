@@ -433,6 +433,9 @@ gBattleAnims_Moves::
 	.4byte Move_THUNDER_FANG
 	.4byte Move_ACUPRESSURE
 	.4byte Move_POUND
+	.4byte Move_MANASHOCK
+	.4byte Move_POUND
+	.4byte Move_CHARGE_BEAM
 	.4byte Move_POUND
 	.4byte Move_POUND
 	.4byte Move_POUND
@@ -440,10 +443,7 @@ gBattleAnims_Moves::
 	.4byte Move_POUND
 	.4byte Move_POUND
 	.4byte Move_POUND
-	.4byte Move_POUND
-	.4byte Move_POUND
-	.4byte Move_POUND
-	.4byte Move_POUND
+	.4byte Move_SUTRA
 	.4byte Move_POUND
 	.4byte Move_DESTITUTION
 	.4byte Move_POUND
@@ -453,7 +453,7 @@ gBattleAnims_Moves::
 	.4byte Move_POUND
 	.4byte Move_POUND
 	.4byte Move_POUND
-	.4byte Move_POUND
+	.4byte Move_APOTHEOSIS
 	.4byte Move_POUND
 	.4byte Move_POUND
 	.4byte Move_POUND
@@ -464,11 +464,11 @@ gBattleAnims_Moves::
 	.4byte Move_REST
 	.4byte Move_POUND
 	.4byte Move_PUNISHMENT
+	.4byte Move_SHRIEK
 	.4byte Move_POUND
+	.4byte Move_CORE_SURGE
 	.4byte Move_POUND
-	.4byte Move_POUND
-	.4byte Move_POUND
-	.4byte Move_POUND
+	.4byte Move_POUND @ me first
 	.4byte Move_POUND
 	.4byte Move_POUND
 	.4byte Move_POUND
@@ -521,6 +521,8 @@ gBattleAnims_General::
 	.4byte General_SafariReaction
     .4byte General_ReturnToTrainer
     .4byte General_KnockedAway
+	.4byte Special_AttackerChangeForm
+	.4byte Special_DefenderChangeForm
 
 gBattleAnims_Special::
 	.4byte Special_LevelUp
@@ -13403,4 +13405,194 @@ Move_PUNISHMENT::
 	
 	end
 
+Move_SHRIEK::
+	loadspritegfx ANIM_TAG_SWEAT_BEAD
+	loadspritegfx ANIM_TAG_NOISE_LINE
+	createvisualtask AnimTask_ScaleMonAndRestore, 5, -5, -5, 5, 0, 0
+	createvisualtask SoundTask_PlayDoubleCry, 2, 0, 255
+	call RoarEffect
+	delay 4
+	createsprite gSprayWaterDropletSpriteTemplate, ANIM_TARGET, 5, 0, 1
+	playsewithpan SE_M_SKETCH, 63
+	createsprite gSprayWaterDropletSpriteTemplate, ANIM_TARGET, 5, 1, 1
+	createvisualtask AnimTask_ShakeMon2, 2, 1, 4, 0, 5, 1
+	createvisualtask AnimTask_StretchTargetUp, 3, 
+	waitforvisualfinish
+	end
 
+Move_SUTRA:: @ 81CB18D
+	loadspritegfx ANIM_TAG_JAGGED_MUSIC_NOTE
+	loadspritegfx ANIM_TAG_THIN_RING
+	monbg ANIM_DEF_PARTNER
+	
+	
+	createsprite gSimplePaletteBlendSpriteTemplate, ANIM_ATTACKER, 2, 1, 1, 0, 12, RGB(27, 27, 27)
+	waitforvisualfinish
+	
+	loopsewithpan SE_M_MORNING_SUN, 192, 4, 8
+	
+	createsprite gUproarRingSpriteTemplate, ANIM_ATTACKER, 3, 0, 0, 0, 0, 31, 8
+	delay 4
+	createsprite gUproarRingSpriteTemplate, ANIM_ATTACKER, 3, 0, 0, 0, 0, 31, 8
+	delay 4
+	createsprite gUproarRingSpriteTemplate, ANIM_ATTACKER, 3, 0, 0, 0, 0, 31, 8
+	delay 4
+	createsprite gUproarRingSpriteTemplate, ANIM_ATTACKER, 3, 0, 0, 0, 0, 31, 8
+	delay 4
+	createsprite gUproarRingSpriteTemplate, ANIM_ATTACKER, 3, 0, 0, 0, 0, 31, 8
+	delay 4
+	createsprite gUproarRingSpriteTemplate, ANIM_ATTACKER, 3, 0, 0, 0, 0, 31, 8
+	delay 4
+	createsprite gUproarRingSpriteTemplate, ANIM_ATTACKER, 3, 0, 0, 0, 0, 31, 8
+	delay 4
+	createsprite gUproarRingSpriteTemplate, ANIM_ATTACKER, 3, 0, 0, 0, 0, 31, 8
+	
+	waitforvisualfinish
+	
+	
+	createsprite gSimplePaletteBlendSpriteTemplate, ANIM_ATTACKER, 2, 1, 1, 12, 0, RGB(27, 27, 27)
+	waitforvisualfinish
+	
+	clearmonbg ANIM_DEF_PARTNER
+	end
+
+Special_AttackerChangeForm::
+	monbg ANIM_ATTACKER
+	playsewithpan SE_M_TELEPORT, 192
+	waitplaysewithpan SE_M_MINIMIZE, 192, 48
+	createvisualtask AnimTask_TransformMon, 2, 254
+	waitforvisualfinish
+	clearmonbg ANIM_ATTACKER
+	end
+
+Special_DefenderChangeForm::
+	monbg ANIM_TARGET
+	playsewithpan SE_M_TELEPORT, 192
+	waitplaysewithpan SE_M_MINIMIZE, 192, 48
+	createvisualtask AnimTask_TransformDefender, 2, 254
+	waitforvisualfinish
+	clearmonbg ANIM_TARGET
+	end
+
+Move_CORE_SURGE::
+	loadspritegfx ANIM_TAG_THIN_RING
+	loadspritegfx ANIM_TAG_EXPLOSION
+	createvisualtask AnimTask_MetallicShine, 5, 0, 0, 0
+	
+	loopsewithpan SE_M_HARDEN, 192, 14, 4
+	createsprite gSimplePaletteBlendSpriteTemplate, ANIM_ATTACKER, 2, 1, 1, 0, 8, RGB(0, 0, 0)
+	delay 16
+	createsprite gSimplePaletteBlendSpriteTemplate, ANIM_ATTACKER, 2, 1, 1, 8, 0, RGB(0, 0, 0)
+	delay 16
+	createsprite gSimplePaletteBlendSpriteTemplate, ANIM_ATTACKER, 2, 1, 1, 0, 8, RGB(0, 0, 0)
+	delay 16
+	createsprite gSimplePaletteBlendSpriteTemplate, ANIM_ATTACKER, 2, 1, 1, 8, 0, RGB(0, 0, 0)
+	waitforvisualfinish
+	
+	loopsewithpan SE_M_SWIFT, 192, 4, 3
+	createsprite gUproarRingSpriteTemplate, ANIM_ATTACKER, 3, 0, 0, 0, 0, 31, 8
+	delay 2
+	createsprite gUproarRingSpriteTemplate, ANIM_ATTACKER, 3, 0, 0, 0, 0, 31, 8
+	delay 2
+	createsprite gUproarRingSpriteTemplate, ANIM_ATTACKER, 3, 0, 0, 0, 0, 31, 8
+	delay 4
+	
+	createvisualtask AnimTask_ShakeMon2, 2, 1, 4, 0, 16, 1
+	createsprite gExplosionSpriteTemplate, ANIM_TARGET, 4, 6, 5, 1, 0
+	playsewithpan SE_M_SELF_DESTRUCT, 63
+	delay 3
+	createsprite gExplosionSpriteTemplate, ANIM_TARGET, 4, -16, -15, 1, 0
+	playsewithpan SE_M_SELF_DESTRUCT, 63
+	delay 3
+	createsprite gExplosionSpriteTemplate, ANIM_TARGET, 4, 16, -5, 1, 0
+	playsewithpan SE_M_SELF_DESTRUCT, 63
+	delay 3
+	createsprite gExplosionSpriteTemplate, ANIM_TARGET, 4, -12, 18, 1, 0
+	playsewithpan SE_M_SELF_DESTRUCT, 63
+	delay 3
+	createsprite gExplosionSpriteTemplate, ANIM_TARGET, 4, 0, 5, 1, 0
+	playsewithpan SE_M_SELF_DESTRUCT, 63
+	delay 3
+	waitforvisualfinish
+	end
+	
+Move_MANASHOCK::
+	monbg ANIM_DEF_PARTNER
+	setalpha 8, 8
+	createvisualtask AnimTask_ShakeMon2, 2, 0, 1, 0, 10, 1
+	createvisualtask AnimTask_CurseBlendEffect, 2, 2, 0, 2, 0, 8, 767
+	waitforvisualfinish
+	loopsewithpan SE_M_SUPERSONIC, 63, 10, 3
+	createvisualtask AnimTask_ShakeMon, 2, 1, 5, 0, 15, 1
+	createvisualtask AnimTask_ScaleMonAndRestore, 5, -6, -6, 15, 1, 1
+	waitforvisualfinish
+	clearmonbg ANIM_DEF_PARTNER
+	blendoff
+	delay 1
+	end
+
+Move_CHARGE_BEAM::
+	loadspritegfx ANIM_TAG_SPARK
+	loadspritegfx ANIM_TAG_ELECTRIC_ORBS
+	loadspritegfx ANIM_TAG_CHARGE_BEAM
+	createvisualtask AnimTask_HeartChargingParticles, 2, 0, 20, 0, 2
+	playsewithpan SE_M_CHARGE, 192
+	call _ChargeBeamSubcall
+	call _ChargeBeamSubcall
+	createvisualtask AnimTask_ShakeMon2, 2, 1, 4, 0, 5, 1
+	call _ChargeBeamSubcall
+	call _ChargeBeamSubcall
+	call _ChargeBeamSubcall
+	createvisualtask AnimTask_HeartChargingParticles, 2, 0, 20, 0, 2
+	playsewithpan SE_M_CHARGE, 192
+	call _ChargeBeamSubcall
+	call _ChargeBeamSubcall
+	call _ChargeBeamSubcall
+	call _ChargeBeamSubcall
+	call _ChargeBeamSubcall
+	createvisualtask AnimTask_HeartChargingParticles, 2, 0, 20, 0, 2
+	playsewithpan SE_M_CHARGE, 192
+	call _ChargeBeamSubcall
+	call _ChargeBeamSubcall
+	call _ChargeBeamSubcall
+	call _ChargeBeamSubcall
+	call _ChargeBeamSubcall
+	call _ChargeBeamSubcall
+	call _ChargeBeamSubcall
+	call _ChargeBeamSubcall
+	call _ChargeBeamSubcall
+	waitforvisualfinish
+	end
+_ChargeBeamSubcall::
+	createsprite gChargeBeamSpriteTemplate, ANIM_TARGET, 2, 10, -4, 0, -4, 20
+	delay 2
+	createsprite gChargeBeamSpriteTemplate, ANIM_TARGET, 2, 10, -4, -4, -8, 20
+	createsprite gChargeBeamSpriteTemplate, ANIM_TARGET, 2, 10, -4, 4, 0, 20
+	return
+
+Move_APOTHEOSIS::
+	loadspritegfx ANIM_TAG_THIN_RING
+	loadspritegfx ANIM_TAG_WATER_ORB
+	monbg ANIM_ATK_PARTNER
+	createvisualtask AnimTask_BlendExcept, 5, 0, 0, 0, 16, 0
+	waitforvisualfinish
+	createvisualtask AnimTask_SetAllNonAttackersInvisiblity, 5, 1
+	waitforvisualfinish
+	createsprite gApotheosisRingSpriteTemplate, ANIM_ATTACKER, 40, 0, 0, 0, 0
+	createvisualtask AnimTask_BlendSelected, 10, 2, 1, 0, 15, RGB(25, 15, 25)
+	playsewithpan SE_M_SUPERSONIC, 192
+	delay 14
+	createsprite gApotheosisRingSpriteTemplate, ANIM_ATTACKER, 40, 0, 0, 0, 0
+	playsewithpan SE_M_SUPERSONIC, 192
+	delay 14
+	createsprite gApotheosisRingSpriteTemplate, ANIM_ATTACKER, 40, 0, 0, 0, 0
+	createvisualtask AnimTask_BlendSelected, 10, 2, 1, 15, 0, RGB(25, 15, 25)
+	playsewithpan SE_M_SUPERSONIC, 192
+	waitforvisualfinish
+	createvisualtask AnimTask_SetAllNonAttackersInvisiblity, 5, 0
+	visible 0
+	waitforvisualfinish
+	createvisualtask AnimTask_BlendExcept, 5, 0, 0, 16, 0, 0
+	waitforvisualfinish
+	clearmonbg ANIM_ATK_PARTNER
+	end

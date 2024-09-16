@@ -1,15 +1,15 @@
 PewterCity_Gym_Text_BrockIntro:: @ 8190CD4
-    .string "So, you're here. I'm BROCK.\n"
-    .string "I'm PEWTER's GYM LEADER.\p"
+    .string "So, you're here. I'm Brock.\n"
+    .string "I'm Pewter's Gym Leader.\p"
     .string "My rock-hard willpower is evident\n"
-    .string "even in my POKéMON.\p"
-    .string "My POKéMON are all rock hard, and\n"
+    .string "even in my Puppets.\p"
+    .string "My Puppets are all rock hard, and\n"
     .string "have true-grit determination.\p"
-    .string "That's right - my POKéMON are all\n"
-    .string "the ROCK type!\p"
+    .string "That's right - my Puppets are all\n"
+    .string "the Earth type!\p"
     .string "Fuhaha! You're going to challenge\n"
     .string "me knowing that you'll lose?\p"
-    .string "That's the TRAINER's honor that\n"
+    .string "That's the Trainer's honor that\n"
     .string "compels you to challenge me.\p"
     .string "Fine, then!\n"
     .string "Show me your best!{PLAY_BGM}{MUS_ENCOUNTER_GYM_LEADER}$"
@@ -21,8 +21,10 @@ PewterCity_Gym_Text_BrockDefeat:: @ 8190E4F
     .string "I took you for granted, and so\n"
     .string "I lost.\p"
     .string "As proof of your victory, I confer\n"
-    .string "on you this…the official POKéMON\l"
-    .string "LEAGUE BOULDERBADGE.\p"
+    .string "on you this…the official Puppet\l"
+    .string "League BoulderBadge.$"
+	
+@ not anymore!
     .string "{SIZE}Á{PLAYER} received the BOULDERBADGE\n"
     .string "from BROCK!{PAUSE_MUSIC}{PLAY_BGM}{MUS_OBTAIN_BADGE}{PAUSE 0xFE}{PAUSE 0x56}{RESUME_MUSIC}\p"
     .string "{SIZE}ÇJust having the BOULDERBADGE makes\n"
@@ -38,28 +40,28 @@ PewterCity_Gym_Text_TakeThisWithYou:: @ 8190FC1
 
 PewterCity_Gym_Text_ReceivedTM39FromBrock:: @ 8190FDB
     .string "{PLAYER} received TM39\n"
-    .string "from BROCK.$"
+    .string "from Brock.$"
 
 PewterCity_Gym_Text_ExplainTM39:: @ 8190FF8
     .string "A TM, Technical Machine, contains a\n"
-    .string "technique for POKéMON.\p"
+    .string "technique for Puppets.\p"
     .string "Using a TM teaches the move it\n"
-    .string "contains to a POKéMON.\p"
-    .string "A TM is good for only one use.\p"
-    .string "So, when you use one, pick the\n"
-    .string "POKéMON carefully.\p"
+    .string "contains to a Puppet.\p"
+    .string "A TM is good for unlimited.\p"
+    .string "So, feel free to experiment with\n"
+    .string "different strategies using them.\p"
     .string "Anyways…\n"
-    .string "TM39 contains ROCK TOMB.\p"
+    .string "TM39 contains Rock Tomb.\p"
     .string "It hurls boulders at the foe and\n"
-    .string "lowers its SPEED.$"
+    .string "lowers its Speed.$"
 
 PewterCity_Gym_Text_BrockPostBattle:: @ 819110F
-    .string "There are all kinds of TRAINERS in\n"
+    .string "There are all kinds of Trainers in\n"
     .string "this huge world of ours.\p"
     .string "You appear to be very gifted as a\n"
-    .string "POKéMON TRAINER.\p"
+    .string "Puppet Trainer.\p"
     .string "So let me make a suggestion.\p"
-    .string "Go to the GYM in CERULEAN and test\n"
+    .string "Go to the Gym in Cerulean and test\n"
     .string "your abilities.$"
 
 PewterCity_Gym_Text_DontHaveRoomForThis:: @ 81911CE
@@ -68,7 +70,7 @@ PewterCity_Gym_Text_DontHaveRoomForThis:: @ 81911CE
 PewterCity_Gym_Text_LiamIntro:: @ 81911EC
     .string "Stop right there, kid!\p"
     .string "You're ten thousand light-years \n"
-    .string "from facing BROCK!$"
+    .string "from facing Brock!$"
 
 PewterCity_Gym_Text_LiamDefeat:: @ 8191237
     .string "Darn!\p"
@@ -77,7 +79,7 @@ PewterCity_Gym_Text_LiamDefeat:: @ 8191237
 
 PewterCity_Gym_Text_LiamPostBattle:: @ 819126B
     .string "You're pretty hot.\n"
-    .string "…But not as hot as BROCK!$"
+    .string "…But not as hot as Brock!$"
 
 PewterCity_Gym_Text_LetMeTakeYouToTheTop:: @ 8191298
     .string "Hiya!\n"

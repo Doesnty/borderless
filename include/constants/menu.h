@@ -90,6 +90,12 @@
 #define MULTICHOICE_ZUN19                                      83
 #define MULTICHOICE_ZUN20                                      84
 #define MULTICHOICE_ZUN21                                      85
+#define MULTICHOICE_NATURE_CHANGER1                            86
+#define MULTICHOICE_NATURE_CHANGER2                            87
+#define MULTICHOICE_NATURE_CHANGER3                            88
+#define MULTICHOICE_NATURE_CHANGER4                            89
+#define MULTICHOICE_NATURE_CHANGER5                            90
+#define MULTICHOICE_NATURE_CHANGER6                            91
 
 #define LISTMENU_BADGES                    0
 #define LISTMENU_SILPHCO_FLOORS            1

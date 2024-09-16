@@ -106,6 +106,7 @@ static void CheckFocusPunch_ClearVarsBeforeTurnStarts(void);
 static void HandleEndTurn_FinishBattle(void);
 static void FreeResetData_ReturnToOvOrDoEvolutions(void);
 static void ReturnFromBattleToOverworld(void);
+static void TryRevertFormChanges(void);
 static void TryEvolvePokemon(void);
 static void WaitForEvoSceneToFinish(void);
 
@@ -3834,6 +3835,7 @@ static void HandleEndTurn_FinishBattle(void)
                 }
             }
         }
+		TryRevertFormChanges();
         TrySetQuestLogBattleEvent();
         if (gBattleTypeFlags & BATTLE_TYPE_TRAINER)
             ClearRematchStateByTrainerId();
@@ -3865,6 +3867,30 @@ static void FreeResetData_ReturnToOvOrDoEvolutions(void)
             FreeBattleResources();
         }
     }
+}
+
+static void TryRevertFormChanges(void)
+{
+	u32 i;
+	for (i = 0; i < 6; i++)
+	{
+		u16 newspecies = 0;
+		u16 oldspecies = GetMonData(&gPlayerParty[i], MON_DATA_SPECIES);
+		if (oldspecies == SPECIES_TENSOKUG)
+		{
+			newspecies = SPECIES_TENSOKU;
+		}
+		else if (oldspecies == SPECIES_SEKI_HEAD)
+		{
+			newspecies = SPECIES_TSEKIBANKI;
+		}
+		
+		if (newspecies)
+		{
+			SetMonData(&gPlayerParty[i], MON_DATA_SPECIES, &newspecies);
+			CalculateMonStats(&gPlayerParty[i]);
+		}
+	}
 }
 
 static void TryEvolvePokemon(void)

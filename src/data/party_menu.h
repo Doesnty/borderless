@@ -964,9 +964,15 @@ static const union AnimCmd sSpriteAnim_StatusFaint[] =
     ANIMCMD_END
 };
 
-static const union AnimCmd sSpriteAnim_Blank[] =
+static const union AnimCmd sSpriteAnim_StatusToxic[] =
 {
     ANIMCMD_FRAME(28, 0),
+    ANIMCMD_END
+};
+
+static const union AnimCmd sSpriteAnim_Blank[] =
+{
+    ANIMCMD_FRAME(32, 0),
     ANIMCMD_END
 };
 
@@ -979,12 +985,13 @@ static const union AnimCmd *const sSpriteTemplate_StatusCondition[] =
     sSpriteAnim_StatusBurn,
     sSpriteAnim_StatusPokerus,
     sSpriteAnim_StatusFaint,
+	sSpriteAnim_StatusToxic,
     sSpriteAnim_Blank,
 };
 
 static const struct CompressedSpriteSheet sSpriteSheet_StatusIcons =
 {
-    gStatusGfx_Icons, 0x400, 1202
+    gStatusGfx_Icons, 0x480, 1202
 };
 
 static const struct CompressedSpritePalette sSpritePalette_StatusIcons =
@@ -1253,7 +1260,7 @@ static const u16 sTMHMMoves[] =
     MOVE_TRICK_ROOM,
     MOVE_SPIKES,
     MOVE_METRONOME,
-    MOVE_HELPING_HAND,
+    MOVE_FLIGHT,
     MOVE_SANDSTORM,
     MOVE_HAIL,
     MOVE_SHOCK_WAVE,

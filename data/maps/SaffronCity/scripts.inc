@@ -6,7 +6,7 @@ SaffronCity_MapScripts:: @ 816735F
 
 SaffronCity_OnTransition:: @ 8167365
 	setworldmapflag FLAG_WORLD_MAP_SAFFRON_CITY
-	call_if_unset FLAG_RESCUED_MR_FUJI, SaffronCity_EventScript_MoveDoorGuardGrunt
+	call_if_not_defeated TRAINER_BLACK_BELT_KOICHI, SaffronCity_EventScript_MoveDoorGuardGrunt
 	end
 
 SaffronCity_EventScript_MoveDoorGuardGrunt:: @ 8167372
@@ -43,7 +43,7 @@ SaffronCity_EventScript_RocketGrunt7:: @ 81673B0
 
 SaffronCity_EventScript_DoorGuardGrunt:: @ 81673B9
 	lock
-	goto_if_set FLAG_RESCUED_MR_FUJI, SaffronCity_EventScript_DoorGuardAsleep
+	goto_if_defeated TRAINER_BLACK_BELT_KOICHI, SaffronCity_EventScript_DoorGuardAsleep
 	applymovement LOCALID_DOOR_GUARD_GRUNT, Movement_FacePlayer
 	waitmovement 0
 	msgbox SaffronCity_Text_ImASecurityGuard

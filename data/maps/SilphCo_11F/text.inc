@@ -19,18 +19,16 @@ SilphCo_11F_Text_ThanksForSavingMeDearGirl:: @ 8176EE7
     .string "Here, maybe this will do.$"
 
 SilphCo_11F_Text_ObtainedMasterBallFromPresident:: @ 8176FBD
-    .string "{PLAYER} obtained a MASTER BALL\n"
-    .string "from the PRESIDENT!$"
+    .string "{PLAYER} obtained HM03\n"
+    .string "from the President!$"
 
 SilphCo_11F_Text_ThatsOurSecretPrototype:: @ 8176FEB
     .string "PRESIDENT: You can't buy that\n"
     .string "anywhere.\p"
-    .string "It's our secret prototype MASTER\n"
-    .string "BALL.\p"
-    .string "It will catch any POKéMON without\n"
-    .string "fail!\p"
-    .string "You should be quiet about using it,\n"
-    .string "though.$"
+    .string "It's Surf, a useful move for\n"
+    .string "crossing water.\p"
+    .string "It's also a very useful move\n"
+    .string "for Water-type Puppets.$"
 
 SilphCo_11F_Text_YouHaveNoRoomForThis:: @ 817708E
     .string "You have no room for this.$"

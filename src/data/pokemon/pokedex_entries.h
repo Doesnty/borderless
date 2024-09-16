@@ -2554,13 +2554,13 @@ const struct PokedexEntry gPokedexEntries[] =
     [NATIONAL_DEX_CHISAMI] = 
     {
         .categoryName = _("Hell Solicitor"),
-        .description = ghisamiPokedexText,
+        .description = gchisamiPokedexText,
     },
 
     [NATIONAL_DEX_HISAMI] = 
     {
         .categoryName = _("Hell Solicitor"),
-        .description = gchisamiPokedexText,
+        .description = ghisamiPokedexText,
     },
 
     [NATIONAL_DEX_CZANMU] = 

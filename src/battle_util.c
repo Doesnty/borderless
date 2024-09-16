@@ -1435,7 +1435,7 @@ u8 AtkCanceller_UnableToUseMove(void)
                 --gBattleMons[gBattlerAttacker].status2;
                 if (gBattleMons[gBattlerAttacker].status2 & STATUS2_CONFUSION)
                 {
-                    if (Random() & 1)
+                    if (Random() % 3 != 0)
                     {
                         gBattleCommunication[MULTISTRING_CHOOSER] = 0;
                         BattleScriptPushCursor();
@@ -2005,7 +2005,7 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u8 ability, u8 special, u16 moveA
         case ABILITYEFFECT_MOVES_BLOCK: // 2
             if (gLastUsedAbility == ABILITY_SOUNDPROOF)
             {
-                if (gBattleMoves[moveArg].flags & FLAG_SOUND_MOVE)
+                if (gBattleMoves[moveArg].flags & FLAG_SOUND_MOVE && moveArg != MOVE_HOWL)
                 {
                     if (gBattleMons[gBattlerAttacker].status2 & STATUS2_MULTIPLETURNS)
                         gHitMarker |= HITMARKER_NO_PPDEDUCT;
@@ -2939,7 +2939,8 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u8 ability, u8 special, u16 moveA
                     
                     if (gBattleMoves[gCurrentMove].flags & FLAG_SOUND_MOVE 
                         && !(gHitMarker & HITMARKER_UNABLE_TO_USE_MOVE)
-                        && gBattleMons[battler].statStages[stat] > 0
+                        && gBattleMons[gBattlerTarget].statStages[stat] > 0
+                        && gBattleMons[battler].hp != 0
                         && gBattleMons[gBattlerTarget].hp != 0)
                     {
                         if (gSideTimers[GET_BATTLER_SIDE(gBattlerTarget)].mistTimer)
@@ -2962,7 +2963,7 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u8 ability, u8 special, u16 moveA
                         }
                         else
                         {
-                            gBattleMons[battler].statStages[stat]--;
+                            gBattleMons[gBattlerTarget].statStages[stat]--;
                             gBattleScripting.animArg1 = STAT_ANIM_MINUS1 + stat - 1;
                             gBattleScripting.animArg2 = 0;
                             

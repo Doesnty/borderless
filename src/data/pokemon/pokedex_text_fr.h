@@ -1643,11 +1643,9 @@ const u8 gcwakasagihimePokedexText[] = _(
     "");
 
 const u8 gwakasagihimePokedexText[] = _(
-    "She can't walk on land, but it's not\n"
-    "an issue since she can fly. Rarely\n"
-    "chooses to leave the water, though.");
-    // this is pretty much all fanfiction
-    // her sprite does sorta imply she floats over the misty lake in ddc though
+    "She supposedly grows stronger when in\n"
+    "water, but she's almost never seen outside\n"
+    "of the water to begin with.");
 
 const u8 gdwakasagihimePokedexText[] = _(
     "Part of a grassroots youkai network\n"
@@ -2104,54 +2102,54 @@ const u8 gmiyoiPokedexText[] = _(
     "owner unaware of her existence.");
 
 const u8 gcbitenPokedexText[] = _(
-    "placeholder\n"
-    "\n"
-    "todo when more lore");
+    "A monkey who became a youkai by\n"
+    "eating phantoms. Works for Yachie.\n"
+    "");
 
 const u8 gbitenPokedexText[] = _(
-    "placeholder\n"
-    "\n"
-    "todo when more lore");
+    "She's been convinced by Yachie that\n"
+    "she is the reincarnation of the\n"
+    "legendary monkey, Sun Wukong.");
 
 const u8 gcenokoPokedexText[] = _(
-    "placeholder\n"
-    "\n"
-    "todo when more lore");
+    "A common wolf who became immortal\n"
+    "after eating Zanmu's flesh.\n"
+    "Wields a pair of beartraps.");
 
 const u8 genokoPokedexText[] = _(
-    "placeholder\n"
-    "\n"
-    "todo when more lore");
+    "She works for Saki, who has been\n"
+    "hyping her up as being just like\n"
+    "a certain three-headed dog.");
 
 const u8 gcchiyariPokedexText[] = _(
-    "placeholder\n"
-    "\n"
-    "todo when more lore");
+    "A strange and eccentric youkai.\n"
+    "Feeds on resentment, and so lives in\n"
+    "the Former Hell of Blood Pools.");
 
 const u8 gchiyariPokedexText[] = _(
-    "placeholder\n"
-    "\n"
-    "todo when more lore");
+    "Her true form is some sort of\n"
+    "badger-like bloodsucker. She\n"
+    "insists she isn't a chupacabra.");
 
 const u8 gchisamiPokedexText[] = _(
-    "placeholder\n"
-    "\n"
-    "todo when more lore");
+    "A promoter of sorts for Hell.\n"
+    "Very aggressive, she never lets\n"
+    "any of her targets slip away.");
 
 const u8 ghisamiPokedexText[] = _(
-    "placeholder\n"
-    "\n"
-    "todo when more lore");
+    "Has a crush on her boss, Zanmu.\n"
+    "She'll botch jobs for her on\n"
+    "purpose in order to get scolded.");
 
 const u8 gczanmuPokedexText[] = _(
-    "placeholder\n"
-    "\n"
-    "todo when more lore");
+    "A monk turned oni.\n"
+    "She has the ability to manipulate\n"
+    "the concept of nothingness.");
 
 const u8 gzanmuPokedexText[] = _(
-    "placeholder\n"
-    "\n"
-    "todo when more lore");
+    "Unlike most oni, she prefers to solve\n"
+    "problems with schemes, diplomacy,\n"
+    "and careful manipulation.");
 
 const u8 gchakureiPokedexText[] = _(
     "A fledgling shrine maiden that\n"

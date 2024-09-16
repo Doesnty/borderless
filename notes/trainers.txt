@@ -288,7 +288,7 @@ BIKER LAO: CIku Lv32, Chiyari Lv32
 CUE BALL KOJI: CShion Lv32, Takane Lv33
 CUE BALL LUKE: CYumemi Lv32, Rin Lv33
 BIKER HIDEO: CEiki Lv32, Yamame Lv32
-BIKER RUBEN: CYuuma Lv32, Kogasa Lv32, ARin Lv33
+BIKER RUBEN: CYuuma Lv32, Kogasa Lv32
 CUE BALL CAMRON: CYuugi Lv33, CMai Lv33, Orange Lv32
 
 CUE BALL ISAIAH: CKomachi Lv32, Meiling Lv33
@@ -299,7 +299,8 @@ BIKER NIKOLAS: Luna Lv34, TLuna Lv34, ALuna Lv34
 CUE BALL ZEEK: Rinnosuke Lv35
 CUE BALL COREY: CShinmyoumaru Lv35, CRaiko Lv35, Seija Lv35
 CUE BALL JAMAL: CYukari Lv33, Urumi Lv35
-BIKER WILLIAM: CMokou Lv34, CKazami Lv34, TKisume Lv34
+BIKER WILLIAM: CMokou Lv34, TKisume Lv34
+BIKER JAXON: CKazami Lv34, ARin Lv33
 
 BIRD KEEPER WILTON: CUtsuho Lv34, Tokiko Lv34, HMystia Lv34, Hatate Lv34
 BIRD KEEPER JACOB: CAya Lv34, CMegumu Lv34, Aya Lv35, Megumu Lv35
@@ -359,10 +360,129 @@ BLACKBELT HITOSHI: SMeiling Lv41, DIchirin Lv42
 BLACKBELT MIKE: Joon Lv41, DYuugi Lv42
 BLACKBELT AARON: Biten Lv41, Sara Lv42
 
-BLACKBELT KOICHI: AdMokou, TAya, Tenma, Sendai
+IMAKUNI 3: Koishi Lv42, Clownpiece Lv42, DSuwako Lv42, AdTewi Lv42, Mai&Satono Lv44
 
-TOHOMANIAC STEVEN: TToyohime, SYorihime, Sagume, TSakuya
-
-IMAKUNI 3??: CKoishi Lv34, Clownpiece Lv34, CSuwako Lv35, AdTewi Lv34, Mai&Satono Lv35
+[BLACKBELT KOICHI: AdMokou, TAya, Tenma, Sendai]
 
 
+SILPH F2
+GRUNT23: Suika Lv40, Mystia Lv41, Yuuka Lv41
+GRUNT24: AStar Lv40, Sekibanki Lv41
+JERRY: DKeine Lv41, Mai Lv41
+CONNOR: Mayumi Lv42, Biten Lv42
+
+SILPH F3
+GRUNT25: HKagerou Lv42, ATokiko Lv43
+JOSE: CYumemi Lv44, Seiran Lv44
+
+SILPH F4
+GRUNT26: Medicine Lv43, DIku Lv44
+GRUNT27: TCirno Lv43, DTenshi Lv44
+RODNEY: Ruukoto Lv70
+
+SILPH F5
+GRUNT28: Raiko Lv46, Kyouko Lv47, Star Lv47, Jinyou Lv47, Mimi-chan Lv47 [card key guy]
+GRUNT29: Sunny Lv43, DMomiji Lv43, Murasa Lv43
+DALTON: Magic Stones Lv42, AMurasa Lv43, ARan Lv43, TSekibanki Lv43
+BEAU: Sagume Lv44, Enoko Lv45
+
+SILPH F6
+GRUNT30: Kagerou Lv44, Iku Lv45
+GRUNT31: SRumia Lv43, Yuyuko Lv44, Tewi Lv44
+TAYLOR: CRikako Lv44, DReisen Lv43, Suika Lv44, Hina Lv44
+
+SILPH F7
+GRUNT32: AChen Lv43, Hina Lv44, Orange Lv45
+GRUNT33: HMystia Lv43, TNue Lv44, Kana Lv45
+GRUNT34: Takane Lv45, Nazrin Lv46
+JOSHUA: Koakuma Lv44, Mayumi Lv45, Chiyari Lv45
+
+SILPH F8
+GRUNT35: Youmu Lv45, Nue Lv45, Yuki Lv45
+GRUNT36: DWriggle Lv46, TIku Lv46
+PARKER: Ringo Lv46, Luna Lv46
+
+SILPH F9
+GRUNT37: Cirno Lv45, DHina Lv46, Mike Lv46
+GRUNT38: DWakasagihime Lv46, ATewi Lv47
+ED: CZanmu Lv45, Rika Lv48
+
+SILPH F10
+GRUNT39: Sannyo Lv45, Rumia Lv45, Megumu Lv46
+TRAVIS: Yorihime Lv46, Nemuno Lv47
+
+SILPH F11
+GRUNT40: ALilyWhite Lv46, Remilia Lv47, Seiga Lv47, Yatsuhashi Lv47, Youki Lv48
+GRUNT41: ALilyBlack Lv46, Flandre Lv47, TByakuren Lv47, Benben Lv47, Tenma Lv48
+
+RIVAL:
+Keiki Lv47, Momiji Lv46, Sunny Lv47, Reisen Lv48, Patchouli Lv48, Futo Lv50
+Mystia Lv46, Toyohime Lv47, Luna Lv47, Sanae Lv48, Arisu Lv48, Sumireko Lv50
+TAya Lv47, Momiji Lv46, Star Lv47, Alice Lv48, Shou Lv48, Kokoro Lv50
+
+GIOVANNI:
+ Goliath Lv48
+ Yachie Lv49
+ Shinki Lv49
+ Saki Lv50
+ AKeine Lv50
+ 
+PSYCHIC CAMERON: HByakuren Lv48, Marisa Lv49
+PSYCHIC TYRON: Koakuma Lv47, TSakuya Lv48, Chiyuri Lv48
+CHANNELER STACY: Layla Lv48, Narumi Lv49
+PSYCHIC PRESTON: Satori Lv48, Eirin Lv49
+CHANNELER AMANDA: Byakuren Lv47, DLayla Lv48, Keine Lv48
+CHANNELER TASHA: SSeiga Lv47, HKeine Lv48, THatate Lv49
+PSYCHIC JOHAN: TAlice Lv48, DYukari Lv49
+
+SABRINA:
+ Doremy Lv51
+ Rikako Lv51
+ AEiki Lv51
+ Ran Lv51
+ Kikuri Lv53
+ 
+ROUTE 4, AGAIN
+LASS CRISSY: AMarisa Lv49, Sunny Lv49, HStar Lv49, Luna Lv49
+
+POWER PLANT
+TOHOMANIAC MARK: ShingyokuM Lv50, Kirisame Lv50
+
+SWIMMER TONY: Enoko
+SWIMMER DAVID: TNitori
+SWIMMER DOUGLAS: Reimu, Yukari
+SWIMMER MATTHEW: Wakasagihime
+SWIMMER AXLE: Murasa, Marisa
+SWIMMER ALICE: Alice
+SWIMMER CONNIE: Patchouli, Joon
+SWIMMER ANYA: Nitori, Narumi
+SWIMMER BARRY: Hina, Komachi, Louise
+SWIMMER DARRIN: ASuika, DYuugi
+SWIMMER SHIRLEY: Lunasa, DSuwako
+SWIMMER TIFFANY: CShinki, Yuki, Mai
+
+LORELEI:
+ Yumemi
+
+BRUNO:
+ TSuika
+ Saki
+ Keiki
+
+AGATHA:
+ Youki
+ ARemilia
+ AYuyuko
+ Lyrica
+ Dark Alice
+
+LANCE:
+ Junko
+ SSariel
+ Okina
+ Zanmu
+
+CHAMPION:
+ AdYukari
+ Sendai
+ 

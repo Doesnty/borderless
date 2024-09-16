@@ -268,6 +268,8 @@ gBattleScriptsForMoveEffects::
     .4byte BattleScript_EffectGlaiveRush
     .4byte BattleScript_EffectBeddyBye
 	.4byte BattleScript_EffectTripleHit
+	.4byte BattleScript_EffectFlight
+	.4byte BattleScript_EffectCoreSurge
 
 BattleScript_EffectHit::
 BattleScript_HitFromAtkCanceler::
@@ -2871,6 +2873,7 @@ BattleScript_BulkUpEnd::
 
 BattleScript_EffectCalmMind::
     jumpifmove MOVE_QUIVER_DANCE, BattleScript_EffectQuiverDance
+	jumpifmove MOVE_APOTHEOSIS, BattleScript_EffectApotheosis
 	attackcanceler
 	attackstring
 	ppreduce
@@ -5922,3 +5925,103 @@ BattleScript_EffectRoost::
 	waitmessage 0x40
 	special 0x1c
 	goto BattleScript_MoveEnd
+
+BattleScript_EffectFlight::
+	attackcanceler
+	attackstring
+	ppreduce
+	jumpifability BS_ATTACKER, ABILITY_LEVITATE, BattleScript_ButItFailed
+	special 0x1d
+	attackanimation
+	waitanimation
+	printstring STRINGID_ABILITYBECAMELEVITATE
+	waitmessage 0x40
+	goto BattleScript_MoveEnd
+
+BattleScript_EffectCoreSurge::
+	attackcanceler
+	accuracycheck BattleScript_PrintMoveMissed, ACC_CURR_MOVE
+	attackstring
+	ppreduce
+	critcalc
+	damagecalc
+	typecalc
+	adjustnormaldamage
+	attackanimation
+	waitanimation
+	effectivenesssound
+	hitanimation BS_TARGET
+	waitstate
+	healthbarupdate BS_TARGET
+	datahpupdate BS_TARGET
+	critmessage
+	waitmessage 64
+	resultmessage
+	waitmessage 64
+	jumpifmovehadnoeffect BattleScript_CoreSurgeFinish
+	setbyte sSTAT_ANIM_PLAYED, 0
+	
+	special 0x1e
+	playanimation BS_ATTACKER, B_ANIM_TRANSFORM_ATTACKER, sB_ANIM_ARG1
+	
+	printstring STRINGID_CHANGEDFORM
+	waitmessage 0x40
+	
+	updatestatusicon BS_ATTACKER
+
+BattleScript_CoreSurgeFinish::
+	tryfaintmon BS_TARGET, FALSE, NULL
+	moveendall
+	end
+
+BattleScript_DisguiseBusted::
+	playanimation BS_TARGET, B_ANIM_TRANSFORM_DEFENDER, sB_ANIM_ARG1
+	printstring STRINGID_DISGUISEBUSTED
+	waitmessage 0x40
+	return
+
+BattleScript_EffectApotheosis:
+	attackcanceler
+	attackstring
+	ppreduce
+	jumpifstat BS_ATTACKER, CMP_LESS_THAN, STAT_SPATK, 12, BattleScript_ApotheosisDoMoveAnim
+	jumpifstat BS_ATTACKER, CMP_LESS_THAN, STAT_SPDEF, 12, BattleScript_ApotheosisDoMoveAnim
+	jumpifstat BS_ATTACKER, CMP_LESS_THAN, STAT_ACC, 12, BattleScript_ApotheosisDoMoveAnim
+	jumpifstat BS_ATTACKER, CMP_EQUAL, STAT_EVASION, 12, BattleScript_CantRaiseMultipleStats
+	
+BattleScript_ApotheosisDoMoveAnim:
+	attackanimation
+	waitanimation
+	setbyte sSTAT_ANIM_PLAYED, 0
+	playstatchangeanimation BS_ATTACKER, 0xF0, 0
+	
+	setstatchanger STAT_SPATK, 1, FALSE
+	statbuffchange MOVE_EFFECT_AFFECTS_USER | 0x1, BattleScript_ApotheosisTrySpDef
+	jumpifbyte CMP_EQUAL, cMULTISTRING_CHOOSER, 2, BattleScript_ApotheosisTrySpDef
+	printfromtable gStatUpStringIds
+	waitmessage 64
+
+BattleScript_ApotheosisTrySpDef:
+	setstatchanger STAT_SPDEF, 1, FALSE
+	statbuffchange MOVE_EFFECT_AFFECTS_USER | 0x1, BattleScript_ApotheosisTryAccuracy
+	jumpifbyte CMP_EQUAL, cMULTISTRING_CHOOSER, 2, BattleScript_ApotheosisTryAccuracy
+	printfromtable gStatUpStringIds
+	waitmessage 64
+	
+BattleScript_ApotheosisTryAccuracy:
+	setstatchanger STAT_ACC, 1, FALSE
+	statbuffchange MOVE_EFFECT_AFFECTS_USER | 0x1, BattleScript_ApotheosisTryEvasion
+	jumpifbyte CMP_EQUAL, cMULTISTRING_CHOOSER, 2, BattleScript_ApotheosisTryEvasion
+	printfromtable gStatUpStringIds
+	waitmessage 64
+	
+BattleScript_ApotheosisTryEvasion:
+	setstatchanger STAT_EVASION, 1, FALSE
+	statbuffchange MOVE_EFFECT_AFFECTS_USER | 0x1, BattleScript_ApotheosisEnd
+	jumpifbyte CMP_EQUAL, cMULTISTRING_CHOOSER, 2, BattleScript_ApotheosisEnd
+	printfromtable gStatUpStringIds
+	waitmessage 64
+
+BattleScript_ApotheosisEnd:
+	goto BattleScript_MoveEnd
+

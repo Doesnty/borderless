@@ -24,6 +24,32 @@ static const u8 sSassyNatureName[] = _("Sassy");
 static const u8 sCarefulNatureName[] = _("Careful");
 static const u8 sQuirkyNatureName[] = _("Quirky");
 
+static const u8 sAltNatureName_Hardy[]   = _("Balanced");
+static const u8 sAltNatureName_Lonely[]  = _("+Atk/-Def");
+static const u8 sAltNatureName_Brave[]   = _("+Atk/-Spe");
+static const u8 sAltNatureName_Adamant[] = _("+Atk/-SpA");
+static const u8 sAltNatureName_Naughty[] = _("+Atk/-SpD");
+static const u8 sAltNatureName_Bold[]    = _("+Def/-Atk");
+static const u8 sAltNatureName_Docile[]  = _("Balanced");
+static const u8 sAltNatureName_Relaxed[] = _("+Def/-Spe");
+static const u8 sAltNatureName_Impish[]  = _("+Def/-SpA");
+static const u8 sAltNatureName_Lax[]     = _("+Def/-SpD");
+static const u8 sAltNatureName_Timid[]   = _("+Spe/-Atk");
+static const u8 sAltNatureName_Hasty[]   = _("+Spe/-Def");
+static const u8 sAltNatureName_Serious[] = _("Balanced");
+static const u8 sAltNatureName_Jolly[]   = _("+Spe/-SpA");
+static const u8 sAltNatureName_Naive[]   = _("+Spe/-SpD");
+static const u8 sAltNatureName_Modest[]  = _("+SpA/-Atk");
+static const u8 sAltNatureName_Mild[]    = _("+SpA/-Def");
+static const u8 sAltNatureName_Quiet[]   = _("+SpA/-Spe");
+static const u8 sAltNatureName_Bashful[] = _("Balanced");
+static const u8 sAltNatureName_Rash[]    = _("+SpA/-SpD");
+static const u8 sAltNatureName_Calm[]    = _("+SpD/-Atk");
+static const u8 sAltNatureName_Gentle[]  = _("+SpD/-Def");
+static const u8 sAltNatureName_Sassy[]   = _("+SpD/-Spe");
+static const u8 sAltNatureName_Careful[] = _("+SpD/-SpA");
+static const u8 sAltNatureName_Quirky[]  = _("Balanced");
+
 const u8 *const gNatureNamePointers[] = 
 {
     [NATURE_HARDY] = sHardyNatureName,
@@ -51,4 +77,32 @@ const u8 *const gNatureNamePointers[] =
     [NATURE_SASSY] = sSassyNatureName,
     [NATURE_CAREFUL] = sCarefulNatureName,
     [NATURE_QUIRKY] = sQuirkyNatureName,
+};
+const u8 *const gAltNatureNamePointers[] = 
+{
+    [NATURE_HARDY] = sAltNatureName_Hardy,
+    [NATURE_LONELY] = sAltNatureName_Lonely,
+    [NATURE_BRAVE] = sAltNatureName_Brave,
+    [NATURE_ADAMANT] = sAltNatureName_Adamant,
+    [NATURE_NAUGHTY] = sAltNatureName_Naughty,
+    [NATURE_BOLD] = sAltNatureName_Bold,
+    [NATURE_DOCILE] = sAltNatureName_Docile,
+    [NATURE_RELAXED] = sAltNatureName_Relaxed,
+    [NATURE_IMPISH] = sAltNatureName_Impish,
+    [NATURE_LAX] = sAltNatureName_Lax,
+    [NATURE_TIMID] = sAltNatureName_Timid,
+    [NATURE_HASTY] = sAltNatureName_Hasty,
+    [NATURE_SERIOUS] = sAltNatureName_Serious,
+    [NATURE_JOLLY] = sAltNatureName_Jolly,
+    [NATURE_NAIVE] = sAltNatureName_Naive,
+    [NATURE_MODEST] = sAltNatureName_Modest,
+    [NATURE_MILD] = sAltNatureName_Mild,
+    [NATURE_QUIET] = sAltNatureName_Quiet,
+    [NATURE_BASHFUL] = sAltNatureName_Bashful,
+    [NATURE_RASH] = sAltNatureName_Rash,
+    [NATURE_CALM] = sAltNatureName_Calm,
+    [NATURE_GENTLE] = sAltNatureName_Gentle,
+    [NATURE_SASSY] = sAltNatureName_Sassy,
+    [NATURE_CAREFUL] = sAltNatureName_Careful,
+    [NATURE_QUIRKY] = sAltNatureName_Quirky,
 };

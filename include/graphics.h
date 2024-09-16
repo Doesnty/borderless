@@ -2596,6 +2596,16 @@ extern const u32 gMonPalette_zanmu_neutral[];
 extern const u32 gMonBackPic_zanmu_neutral[];
 extern const u32 gMonShinyPalette_zanmu_neutral[];
 extern const u8 gMonIcon_zanmu_neutral[];
+extern const u32 gMonFrontPic_seki_head[];
+extern const u32 gMonPalette_seki_head[];
+extern const u32 gMonBackPic_seki_head[];
+extern const u32 gMonShinyPalette_seki_head[];
+extern const u8 gMonIcon_seki_head[];
+extern const u32 gMonFrontPic_tensokug[];
+extern const u32 gMonPalette_tensokug[];
+extern const u32 gMonBackPic_tensokug[];
+extern const u32 gMonShinyPalette_tensokug[];
+extern const u8 gMonIcon_tensokug[];
 
 extern const u8 gMonFootprint_Metapod[];
 extern const u32 gMonFrontPic_Egg[];
@@ -4498,6 +4508,7 @@ extern const u32 gBattleAnimSpritePal_BrokenRing[];
 extern const u32 gBattleAnimSpritePal_Tailwind[];
 extern const u32 gBattleAnimSpritePal_DestitutionOrb[];
 extern const u32 gBattleAnimSpritePal_Vine3[];
+extern const u32 gBattleAnimSpritePal_ChargeBeam[];
 
 
 // battle anim task
@@ -5148,6 +5159,8 @@ extern const u8 gHealthboxElementsGfxTable[][32];
 extern const u16 gBattleInterface_BallStatusBarPal[];
 extern const u16 gBattleInterface_BallDisplayPal[];
 extern const u16 gBattleInterface_SummaryBallDisplayGfx[];
+extern const u8 gBattleInterface_TypeHint1[];
+extern const u8 gBattleInterface_TypeHint2[];
 
 // item_menu
 extern const u32 gUnknown_8E830CC[];

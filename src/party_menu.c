@@ -1656,6 +1656,8 @@ static void ResetHPTaskData(u8 taskId, u8 caseId, u32 hp)
 
 u8 GetAilmentFromStatus(u32 status)
 {
+	if (status & STATUS1_TOXIC_POISON)
+		return AILMENT_TOX;
     if (status & STATUS1_PSN_ANY)
         return AILMENT_PSN;
     if (status & STATUS1_PARALYSIS)
@@ -2261,8 +2263,6 @@ static void DisplayPartyPokemonGender(u8 gender, u16 species, u8 *nickname, stru
     u8 palNum = GetWindowAttribute(menuBox->windowId, WINDOW_PALETTE_NUM) * 16;
 
     if (species == SPECIES_NONE)
-        return;
-    if ((species == SPECIES_NIDORAN_M || species == SPECIES_NIDORAN_F) && StringCompare(nickname, gSpeciesNames[species]) == 0)
         return;
     switch (gender)
     {
@@ -4348,7 +4348,7 @@ static void GetMedicineItemEffectMessage(u16 item)
 
 static bool8 NotUsingHPEVItemOnShedinja(struct Pokemon *mon, u16 item)
 {
-    if (GetItemEffectType(item) == ITEM_EFFECT_HP_EV && GetMonData(mon, MON_DATA_SPECIES) == SPECIES_SHEDINJA)
+    if (GetItemEffectType(item) == ITEM_EFFECT_HP_EV && GetMonData(mon, MON_DATA_SPECIES) == SPECIES_ZFAIRY)
         return FALSE;
     return TRUE;
 }

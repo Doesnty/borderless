@@ -765,6 +765,50 @@ static const struct MenuAction sScriptMultiChoiceMenu_Zun21[] = {
     { gText_ZunPreviousPage },
 };
 
+static const struct MenuAction sScriptMultiChoiceMenu_NatureChanger1[] = {
+	{ gUnknown_841B2B7 }, // Attack
+	{ gUnknown_841B2BE }, // Defense
+	{ gUnknown_841B2CC }, // Sp. Atk
+	{ gUnknown_841B2D4 }, // Sp. Def
+	{ gUnknown_841B2C6 }, // Speed
+	{ gText_Balance },
+};
+
+static const struct MenuAction sScriptMultiChoiceMenu_NatureChanger2[] = {
+	{ gUnknown_841B2BE }, // Defense
+	{ gUnknown_841B2CC }, // Sp. Atk
+	{ gUnknown_841B2D4 }, // Sp. Def
+	{ gUnknown_841B2C6 }, // Speed
+};
+
+static const struct MenuAction sScriptMultiChoiceMenu_NatureChanger3[] = {
+	{ gUnknown_841B2B7 }, // Attack
+	{ gUnknown_841B2CC }, // Sp. Atk
+	{ gUnknown_841B2D4 }, // Sp. Def
+	{ gUnknown_841B2C6 }, // Speed
+};
+
+static const struct MenuAction sScriptMultiChoiceMenu_NatureChanger4[] = {
+	{ gUnknown_841B2B7 }, // Attack
+	{ gUnknown_841B2BE }, // Defense
+	{ gUnknown_841B2D4 }, // Sp. Def
+	{ gUnknown_841B2C6 }, // Speed
+};
+
+static const struct MenuAction sScriptMultiChoiceMenu_NatureChanger5[] = {
+	{ gUnknown_841B2B7 }, // Attack
+	{ gUnknown_841B2BE }, // Defense
+	{ gUnknown_841B2CC }, // Sp. Atk
+	{ gUnknown_841B2C6 }, // Speed
+};
+
+static const struct MenuAction sScriptMultiChoiceMenu_NatureChanger6[] = {
+	{ gUnknown_841B2B7 }, // Attack
+	{ gUnknown_841B2BE }, // Defense
+	{ gUnknown_841B2CC }, // Sp. Atk
+	{ gUnknown_841B2D4 }, // Sp. Def
+};
+
 
 
 const struct MultichoiceListStruct gScriptMultiChoiceMenus[] = {
@@ -854,6 +898,12 @@ const struct MultichoiceListStruct gScriptMultiChoiceMenus[] = {
     { sScriptMultiChoiceMenu_Zun19, NELEMS(sScriptMultiChoiceMenu_Zun19) },
     { sScriptMultiChoiceMenu_Zun20, NELEMS(sScriptMultiChoiceMenu_Zun20) },
     { sScriptMultiChoiceMenu_Zun21, NELEMS(sScriptMultiChoiceMenu_Zun21) },
+	{ sScriptMultiChoiceMenu_NatureChanger1, NELEMS(sScriptMultiChoiceMenu_NatureChanger1) },
+	{ sScriptMultiChoiceMenu_NatureChanger2, NELEMS(sScriptMultiChoiceMenu_NatureChanger2) },
+	{ sScriptMultiChoiceMenu_NatureChanger3, NELEMS(sScriptMultiChoiceMenu_NatureChanger3) },
+	{ sScriptMultiChoiceMenu_NatureChanger4, NELEMS(sScriptMultiChoiceMenu_NatureChanger4) },
+	{ sScriptMultiChoiceMenu_NatureChanger5, NELEMS(sScriptMultiChoiceMenu_NatureChanger5) },
+	{ sScriptMultiChoiceMenu_NatureChanger6, NELEMS(sScriptMultiChoiceMenu_NatureChanger6) },
 };
 
 // From Cool to Berries goes unused

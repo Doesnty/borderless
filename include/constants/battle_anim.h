@@ -308,6 +308,7 @@
 #define ANIM_TAG_FINGER_3                   (ANIM_SPRITES_START + 298)
 #define ANIM_TAG_DESTITUTION_ORB            (ANIM_SPRITES_START + 299)
 #define ANIM_TAG_VINE_3                     (ANIM_SPRITES_START + 300)
+#define ANIM_TAG_CHARGE_BEAM                (ANIM_SPRITES_START + 301)
 
 // battlers
 #define ANIM_ATTACKER    0
@@ -389,6 +390,8 @@
 #define B_ANIM_SAFARI_REACTION          0x1B
 #define B_ANIM_RETURN_TO_TRAINER        0x1C
 #define B_ANIM_KNOCKED_AWAY             0x1D
+#define B_ANIM_TRANSFORM_ATTACKER       0x1E
+#define B_ANIM_TRANSFORM_DEFENDER       0x1F
 
 // special animations table
 #define B_ANIM_LVL_UP                   0x0

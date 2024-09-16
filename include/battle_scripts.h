@@ -276,6 +276,8 @@ extern const u8 BattleScript_CorpseBlazeKills[];
 extern const u8 BattleScript_Frisk1[];
 extern const u8 BattleScript_Frisk2[];
 extern const u8 BattleScript_BadDreamsTurnDmg[];
+extern const u8 BattleScript_CoreSurgeFinish[];
+extern const u8 BattleScript_DisguiseBusted[];
 
 extern const u8 *const gBattleScriptsForMoveEffects[];
 extern const u8 *const gBattlescriptsForBallThrow[];

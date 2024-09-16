@@ -2054,16 +2054,46 @@ static void atk0A_waitanimation(void)
 
 static void atk0B_healthbarupdate(void)
 {
+	u8 defenderAbility;
+	
     if (!gBattleControllerExecFlags)
     {
         if (!(gMoveResultFlags & MOVE_RESULT_NO_EFFECT))
         {
             gActiveBattler = GetBattlerForBattleScript(gBattlescriptCurrInstr[1]);
+			
+			defenderAbility = gBattleMons[gActiveBattler].ability;
+			if (gBattleMons[gBattlerAttacker].ability == ABILITY_MOLD_BREAKER ||
+				gBattleMons[gBattlerAttacker].ability == ABILITY_PURE_FURIES)
+				defenderAbility = 0;
 
             if (gBattleMons[gActiveBattler].status2 & STATUS2_SUBSTITUTE && gDisableStructs[gActiveBattler].substituteHP && !(gHitMarker & HITMARKER_IGNORE_SUBSTITUTE))
             {
                 PrepareStringBattle(STRINGID_SUBSTITUTEDAMAGED, gActiveBattler);
-            }
+            }			
+			else if (defenderAbility == ABILITY_DISGUISE && gBattleMons[gActiveBattler].species == SPECIES_TSEKIBANKI
+					&& !(gBattleMons[gActiveBattler].status2 & STATUS2_TRANSFORMED)
+					&& !(gHitMarker & HITMARKER_PASSIVE_DAMAGE))
+			{
+				u16 species = SPECIES_SEKI_HEAD;
+				struct Pokemon *mon;
+
+				if (GetBattlerSide(gActiveBattler) == B_SIDE_OPPONENT)
+					mon = &gEnemyParty[gBattlerPartyIndexes[gActiveBattler]];
+				else
+					mon = &gPlayerParty[gBattlerPartyIndexes[gActiveBattler]];
+				
+				SetMonData(mon, MON_DATA_SPECIES, &species);
+				
+				gBattleMoveDamage = 0;
+				
+				gBattleMons[gActiveBattler].species = species;
+				
+				gBattlescriptCurrInstr += 2;
+				BattleScriptPushCursor();
+				gBattlescriptCurrInstr = BattleScript_DisguiseBusted;
+				return;
+			}
             else
             {
                 s16 healthValue;
@@ -2096,6 +2126,7 @@ static void atk0C_datahpupdate(void)
             moveType = gBattleStruct->dynamicMoveType & 0x3F;
         else
             moveType = gBattleMoves[gCurrentMove].type;
+		
         if (!(gMoveResultFlags & MOVE_RESULT_NO_EFFECT))
         {
             gActiveBattler = GetBattlerForBattleScript(gBattlescriptCurrInstr[1]);
@@ -9270,6 +9301,29 @@ static void atkE5_pickup(void)
 						case 3: newItem = ITEM_MOOMOO_MILK; break;
                     }
                 }
+				
+				// regalia
+				if (species >= SPECIES_CKEINE && species <= SPECIES_HKEINE)
+				{
+					rn = Random() % 20;
+					switch (rn)
+					{
+						case 0: newItem = ITEM_KUSANAGI; break;
+						case 1: newItem = ITEM_YATA_MIRROR; break;
+					}
+				}
+				
+				// orbsmith
+				if (species == SPECIES_CMISUMARU || species == SPECIES_MISUMARU)
+				{
+					rn = Random() % 10;
+					switch (rn)
+					{
+						case 0: case 1: case 2: newItem = ITEM_LUXURY_BALL; break;
+						case 3: case 4: newItem = ITEM_ULTRA_BALL; break;
+						default: newItem = ITEM_PREMIER_BALL; break;
+					}
+				}
                 
                 // attracts money
                 if (species == SPECIES_CMIKE || species == SPECIES_MIKE)
@@ -9578,6 +9632,7 @@ static void atkEF_handleballthrow(void)
             else // mon may be caught, calculate shakes
             {
                 u8 shakes;
+				u16 species;
 
                 odds = Sqrt(Sqrt(16711680 / odds));
                 odds = 1048560 / odds;
@@ -9588,8 +9643,23 @@ static void atkEF_handleballthrow(void)
                 MarkBattlerForControllerExec(gActiveBattler);
                 if (shakes == BALL_3_SHAKES_SUCCESS) // mon caught, copy of the code above
                 {
+					u16 newspecies = 0;
                     gBattlescriptCurrInstr = BattleScript_SuccessBallThrow;
                     SetMonData(&gEnemyParty[gBattlerPartyIndexes[gBattlerTarget]], MON_DATA_POKEBALL, &gLastUsedItem);
+					
+					// revert tensoku/tseki
+					species = GetMonData(&gEnemyParty[gBattlerPartyIndexes[gBattlerTarget]], MON_DATA_SPECIES);
+					if (species == SPECIES_TENSOKUG)
+						newspecies = SPECIES_TENSOKU;
+					else if (species == SPECIES_SEKI_HEAD)
+						newspecies = SPECIES_TSEKIBANKI;
+					
+					if (newspecies)
+					{
+						SetMonData(&gEnemyParty[gBattlerPartyIndexes[gBattlerTarget]], MON_DATA_SPECIES, &newspecies);
+						CalculateMonStats(&gEnemyParty[gBattlerPartyIndexes[gBattlerTarget]]);
+					}
+					
                     if (CalculatePlayerPartyCount() == 6)
                         gBattleCommunication[MULTISTRING_CHOOSER] = 0;
                     else
@@ -9941,6 +10011,8 @@ static void sp19_corpseblaze(void);
 static void sp1a_frisk(void);
 static void sp1b_clearsmog(void);
 static void sp1c_roost(void);
+static void sp1d_flight(void);
+static void sp1e_core_surge(void);
 
 void (* const gBattleScriptingSpecialsTable[])(void) =
 {
@@ -9973,6 +10045,8 @@ void (* const gBattleScriptingSpecialsTable[])(void) =
     sp1a_frisk,
     sp1b_clearsmog,
 	sp1c_roost,
+	sp1d_flight,
+	sp1e_core_surge,
 };
 
 static void atkF8_special(void)
@@ -10565,4 +10639,47 @@ static void sp1c_roost(void)
 		gBattleMons[gBattlerAttacker].type2 = TYPE_ROOSTING;
 }
 
+static void sp1d_flight(void)
+{
+	gBattleMons[gBattlerAttacker].ability = ABILITY_LEVITATE;
+}
 
+static void sp1e_core_surge(void)
+{
+    struct Pokemon *mon;
+	u16 species;
+	
+	if (GetBattlerSide(gBattlerAttacker) == B_SIDE_OPPONENT)
+		mon = &gEnemyParty[gBattlerPartyIndexes[gBattlerAttacker]];
+	else
+		mon = &gPlayerParty[gBattlerPartyIndexes[gBattlerAttacker]];
+	
+	species = GetMonData(mon, MON_DATA_SPECIES);
+	
+	if (species == SPECIES_TENSOKU)
+	{
+		species = SPECIES_TENSOKUG;
+		SetMonData(mon, MON_DATA_SPECIES, &species);
+	}
+	else if (species == SPECIES_TENSOKUG)
+	{
+		species = SPECIES_TENSOKU;
+		SetMonData(mon, MON_DATA_SPECIES, &species);
+	}
+	else
+	{
+		gBattlescriptCurrInstr = BattleScript_CoreSurgeFinish;
+		return;
+	}
+	
+	gBattleMons[gBattlerAttacker].species = species;
+	
+	CalculateMonStats(mon);
+	gBattleMons[gBattlerAttacker].type1 = gBaseStats[species].type1;
+	gBattleMons[gBattlerAttacker].type2 = gBaseStats[species].type2;
+	gBattleMons[gBattlerAttacker].attack = GetMonData(mon, MON_DATA_ATK);
+	gBattleMons[gBattlerAttacker].defense = GetMonData(mon, MON_DATA_DEF);
+	gBattleMons[gBattlerAttacker].speed = GetMonData(mon, MON_DATA_SPEED);
+	gBattleMons[gBattlerAttacker].spAttack = GetMonData(mon, MON_DATA_SPATK);
+	gBattleMons[gBattlerAttacker].spDefense = GetMonData(mon, MON_DATA_SPDEF);
+}

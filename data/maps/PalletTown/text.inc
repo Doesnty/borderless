@@ -4,24 +4,24 @@ PalletTown_Text_OakDontGoOut:: @ 817D72C
 
 PalletTown_Text_OakGrassUnsafeNeedMon:: @ 817D74A
     .string "OAK: It's unsafe!\n"
-    .string "Wild POKéMON live in tall grass!\p"
-    .string "You need your own POKéMON for\n"
+    .string "Wild Puppets live in tall grass!\p"
+    .string "You need your own Puppet for\n"
     .string "your protection.\p"
     .string "I know!\n"
     .string "Here, come with me!$"
 
 PalletTown_Text_RaisingMonsToo:: @ 817D7C8
-    .string "I'm raising POKéMON, too.\p"
+    .string "I'm raising Puppets, too.\p"
     .string "When they get strong, they can\n"
     .string "protect me.$"
 
 PalletTown_Text_CanStoreItemsAndMonsInPC:: @ 817D80D
     .string "Technology is incredible!\p"
     .string "You can now store and recall items\n"
-    .string "and POKéMON as data via PC.$"
+    .string "and Puppets as data via PC.$"
 
 PalletTown_Text_OakPokemonResearchLab:: @ 817D866
-    .string "OAK POKéMON RESEARCH LAB$"
+    .string "OAK PUPPET RESEARCH LAB$"
 
 PalletTown_Text_PlayersHouse:: @ 817D87F
     .string "{PLAYER}'s house$"
@@ -37,7 +37,7 @@ PalletTown_Text_OakLetMeSeePokedex:: @ 817D8BF
     .string "OAK: Ah, {PLAYER}!\n"
     .string "You're back, are you?\p"
     .string "How much have you filled in your\n"
-    .string "POKéDEX?\p"
+    .string "Tohodex?\p"
     .string "May I see it?\p"
     .string "Let's see…$"
 

@@ -1,4 +1,14 @@
 SaffronCity_Dojo_Text_MasterKoichiIntro:: @ 819B12C
+	.string "Behold!\n"
+	.string "It is I, the Karate King!\p"
+	.string "Huh?\n"
+	.string "I don't look like one?\p"
+	.string "Why, you! Can't you see the\n"
+	.string "black belt I'm wearing?\p"
+	.string "Anyway...\p"
+	.string "Hee-ho!\n"
+	.string "Prepare yourself!$"
+	
     .string "Grunt!\p"
     .string "I am the KARATE MASTER!\n"
     .string "I am the LEADER here!\p"
@@ -6,11 +16,18 @@ SaffronCity_Dojo_Text_MasterKoichiIntro:: @ 819B12C
     .string "Expect no mercy!\p"
     .string "Fwaaa!$"
 
-SaffronCity_Dojo_Text_MasterKoichiDefeat:: @ 819B193
-    .string "Hwa!\n"
-    .string "Arrgh! Beaten!$"
+SaffronCity_Dojo_Text_MasterKoichiDefeat::
+    .string "Oof! Ouch! Owie!\n"
+    .string "Beaten!$"
 
 SaffronCity_Dojo_Text_ChoosePrizedFightingMon:: @ 819B1A7
+	.string "Well, I don't have any badges\n"
+	.string "for you, sorry.\p"
+	.string "For some reason, the Puppet League\n"
+	.string "didn't like the Imakuni?Badge.\p"
+	.string "So uhh, take one of these weird\n"
+	.string "Pokémon sitting in the back there.$"
+
     .string "Indeed, I have lost!\p"
     .string "But, I beseech you, do not take\n"
     .string "our emblem as your trophy!\p"

@@ -10,7 +10,21 @@
 #define DEX_CATEGORY_ROUGH_TERRAIN  6
 #define DEX_CATEGORY_URBAN          7
 #define DEX_CATEGORY_RARE           8
-#define DEX_CATEGORY_COUNT          9
+#define DEX_CATEGORY_LOLK           9
+#define DEX_CATEGORY_HSIFS          10
+#define DEX_CATEGORY_WBAWC          11
+#define DEX_CATEGORY_UM             12
+#define DEX_CATEGORY_UDOALG         13
+#define DEX_CATEGORY_FIGHTERS       14
+#define DEX_CATEGORY_WRITTEN_WORKS  15
+#define DEX_CATEGORY_HRTP           16
+#define DEX_CATEGORY_SOEW           17
+#define DEX_CATEGORY_PODD           18
+#define DEX_CATEGORY_LLS            19
+#define DEX_CATEGORY_MS             20
+#define DEX_CATEGORY_FANON          21
+#define DEX_CATEGORY_SPECIAL        22
+#define DEX_CATEGORY_COUNT          23
 
 #define DEX_ORDER_NUMERICAL_KANTO    0
 #define DEX_ORDER_ATOZ               1

@@ -539,6 +539,8 @@ const u8 *const gMonIconTable[] = {
     [SPECIES_XTENSHI] = gMonIcon_xtenshi,
     [SPECIES_XTENMA] = gMonIcon_xtenma,
     [SPECIES_XSENDAI] = gMonIcon_xsendai,
+    [SPECIES_SEKI_HEAD] = gMonIcon_seki_head,
+    [SPECIES_TENSOKUG] = gMonIcon_tensokug,
     [SPECIES_EGG] = gMonIcon_Egg
 };
 
@@ -1075,20 +1077,20 @@ const u8 gMonIconPaletteIndices[] = {
     [SPECIES_CMIYOI] = 1,
     [SPECIES_MIYOI] = 1,
     
-    [SPECIES_CBITEN] = 1,
-    [SPECIES_BITEN] = 1,
+    [SPECIES_CBITEN] = 2,
+    [SPECIES_BITEN] = 2,
     
     [SPECIES_CENOKO] = 1,
     [SPECIES_ENOKO] = 1,
     
-    [SPECIES_CCHIYARI] = 1,
-    [SPECIES_CHIYARI] = 1,
+    [SPECIES_CCHIYARI] = 0,
+    [SPECIES_CHIYARI] = 0,
     
     [SPECIES_CHISAMI] = 1,
     [SPECIES_HISAMI] = 1,
     
-    [SPECIES_CZANMU] = 1,
-    [SPECIES_ZANMU] = 1,
+    [SPECIES_CZANMU] = 0,
+    [SPECIES_ZANMU] = 0,
     
     [SPECIES_CHAKUREI] = 1,
     [SPECIES_HAKUREI] = 1,
@@ -1123,7 +1125,8 @@ const u8 gMonIconPaletteIndices[] = {
     [SPECIES_GENJI] = 0,
     
     [SPECIES_CRIKA] = 1,
-    [SPECIES_RIKA] = 0,
+    [SPECIES_RIKA] = 1,
+    [SPECIES_TRIKA] = 0,
     
     [SPECIES_CMEIRA] = 1,
     [SPECIES_MEIRA] = 1,
@@ -1213,6 +1216,9 @@ const u8 gMonIconPaletteIndices[] = {
     [SPECIES_XTENSHI] = 0,
     [SPECIES_XTENMA] = 1,
     [SPECIES_XSENDAI] = 1,
+	
+    [SPECIES_SEKI_HEAD] = 0,
+    [SPECIES_TENSOKUG] = 1,
     [SPECIES_EGG] = 0,
 };
 

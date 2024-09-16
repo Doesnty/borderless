@@ -440,9 +440,15 @@ static const union AnimCmd sStatusAilmentIconAnim_FNT[] =
     ANIMCMD_JUMP(0),
 };
 
-static const union AnimCmd sStatusAilmentIconAnim_Blank[] = 
+static const union AnimCmd sStatusAilmentIconAnim_TOX[] = 
 {
     ANIMCMD_FRAME(28, 20),
+    ANIMCMD_JUMP(0),
+};
+
+static const union AnimCmd sStatusAilmentIconAnim_Blank[] = 
+{
+    ANIMCMD_FRAME(32, 20),
     ANIMCMD_JUMP(0),
 };
 
@@ -455,6 +461,7 @@ static const union AnimCmd * const sStatusAilmentIconAnimTable[] =
     sStatusAilmentIconAnim_BRN,
     sStatusAilmentIconAnim_PKRS,
     sStatusAilmentIconAnim_FNT,
+    sStatusAilmentIconAnim_TOX,
     sStatusAilmentIconAnim_Blank
 };
 
@@ -2130,10 +2137,6 @@ static void BufferMonInfo(void)
     else
         StringCopy(sMonSummaryScreen->summary.genderSymbolStrBuf, gString_Dummy);
 
-    if (dexNum == SPECIES_NIDORAN_M || dexNum == SPECIES_NIDORAN_F)
-        if (StringCompare(sMonSummaryScreen->summary.nicknameStrBuf, gSpeciesNames[dexNum]) == 0)
-            StringCopy(sMonSummaryScreen->summary.genderSymbolStrBuf, gString_Dummy);
-
     GetMonData(&sMonSummaryScreen->currentMon, MON_DATA_OT_NAME, tempStr);
     StringCopyN_Multibyte(sMonSummaryScreen->summary.otNameStrBuf, tempStr, PLAYER_NAME_LENGTH);
 
@@ -2623,14 +2626,23 @@ static void PokeSum_PrintTrainerMemo(void)
 static void PokeSum_PrintTrainerMemo_Mon_HeldByOT(void)
 {
     u8 nature;
+	u8 training = 0;
     u8 level;
     u8 metLocation;
     u8 levelStr[5];
     u8 mapNameStr[32];
     u8 natureMetOrHatchedAtLevelStr[152];
+	u8 natureChanged;
 
     DynamicPlaceholderTextUtil_Reset();
-    nature = GetNature(&sMonSummaryScreen->currentMon);
+    nature = GetNatureStringIndex(&sMonSummaryScreen->currentMon);
+	
+	natureChanged = nature >= 25;
+	if (natureChanged)
+	{
+		training = nature - 25;
+		nature = GetUnderlyingNature(&sMonSummaryScreen->currentMon);
+	}
     DynamicPlaceholderTextUtil_SetPlaceholderPtr(0, gNatureNamePointers[nature]);
     level = GetMonData(&sMonSummaryScreen->currentMon, MON_DATA_MET_LEVEL);
 
@@ -2653,6 +2665,8 @@ static void PokeSum_PrintTrainerMemo_Mon_HeldByOT(void)
     }
 
     DynamicPlaceholderTextUtil_SetPlaceholderPtr(2, mapNameStr);
+	
+	DynamicPlaceholderTextUtil_SetPlaceholderPtr(3, gAltNatureNamePointers[training]);
 
     // These pairs of strings are bytewise identical to each other in English,
     // but Japanese uses different grammar for Bold and Gentle natures.
@@ -2660,15 +2674,15 @@ static void PokeSum_PrintTrainerMemo_Mon_HeldByOT(void)
     {
         if (GetMonData(&sMonSummaryScreen->currentMon, MON_DATA_EVENT_LEGAL) == 1) // Fateful encounter
         {
-            if (PokeSum_IsMonBoldOrGentle(nature))
-                DynamicPlaceholderTextUtil_ExpandPlaceholders(natureMetOrHatchedAtLevelStr, gText_PokeSum_FatefulEncounterHatched_BoldGentleGrammar);
+            if (natureChanged)
+                DynamicPlaceholderTextUtil_ExpandPlaceholders(natureMetOrHatchedAtLevelStr, gText_PokeSum_FatefulEncounterHatched_NatureChanged);
             else
                 DynamicPlaceholderTextUtil_ExpandPlaceholders(natureMetOrHatchedAtLevelStr, gText_PokeSum_FatefulEncounterHatched);
         }
         else
         {
-            if (PokeSum_IsMonBoldOrGentle(nature))
-                DynamicPlaceholderTextUtil_ExpandPlaceholders(natureMetOrHatchedAtLevelStr, gText_PokeSum_Hatched_BoldGentleGrammar);
+            if (natureChanged)
+                DynamicPlaceholderTextUtil_ExpandPlaceholders(natureMetOrHatchedAtLevelStr, gText_PokeSum_Hatched_NatureChanged);
             else
                 DynamicPlaceholderTextUtil_ExpandPlaceholders(natureMetOrHatchedAtLevelStr, gText_PokeSum_Hatched);
         }
@@ -2677,15 +2691,15 @@ static void PokeSum_PrintTrainerMemo_Mon_HeldByOT(void)
     {
         if (metLocation == METLOC_FATEFUL_ENCOUNTER)
         {
-            if (PokeSum_IsMonBoldOrGentle(nature))
-                DynamicPlaceholderTextUtil_ExpandPlaceholders(natureMetOrHatchedAtLevelStr, gText_PokeSum_FatefulEncounterMet_BoldGentleGrammar);
+            if (natureChanged)
+                DynamicPlaceholderTextUtil_ExpandPlaceholders(natureMetOrHatchedAtLevelStr, gText_PokeSum_FatefulEncounterMet_NatureChanged);
             else
                 DynamicPlaceholderTextUtil_ExpandPlaceholders(natureMetOrHatchedAtLevelStr, gText_PokeSum_FatefulEncounterMet);
         }
         else
         {
-            if (PokeSum_IsMonBoldOrGentle(nature))
-                DynamicPlaceholderTextUtil_ExpandPlaceholders(natureMetOrHatchedAtLevelStr, gText_PokeSum_Met_BoldGentleGrammar);
+            if (natureChanged)
+                DynamicPlaceholderTextUtil_ExpandPlaceholders(natureMetOrHatchedAtLevelStr, gText_PokeSum_Met_NatureChanged);
             else
                 DynamicPlaceholderTextUtil_ExpandPlaceholders(natureMetOrHatchedAtLevelStr, gText_PokeSum_Met);
         }
@@ -2697,15 +2711,25 @@ static void PokeSum_PrintTrainerMemo_Mon_HeldByOT(void)
 static void PokeSum_PrintTrainerMemo_Mon_NotHeldByOT(void)
 {
     u8 nature;
+	u8 training;
     u8 level;
     u8 metLocation;
     u8 levelStr[5];
     u8 mapNameStr[32];
     u8 natureMetOrHatchedAtLevelStr[152];
+	u8 natureChanged;
 
     DynamicPlaceholderTextUtil_Reset();
-    nature = GetNature(&sMonSummaryScreen->currentMon);
+    nature = GetNatureStringIndex(&sMonSummaryScreen->currentMon);
+	
+	natureChanged = nature >= 25;
+	if (natureChanged)
+	{
+		training = nature - 25;
+		nature = GetUnderlyingNature(&sMonSummaryScreen->currentMon);
+	}
     DynamicPlaceholderTextUtil_SetPlaceholderPtr(0, gNatureNamePointers[nature]);
+	DynamicPlaceholderTextUtil_SetPlaceholderPtr(3, gAltNatureNamePointers[training]);
 
     level = GetMonData(&sMonSummaryScreen->currentMon, MON_DATA_MET_LEVEL);
 
@@ -2727,15 +2751,15 @@ static void PokeSum_PrintTrainerMemo_Mon_NotHeldByOT(void)
 
         if (metLocation == METLOC_FATEFUL_ENCOUNTER)
         {
-            if (PokeSum_IsMonBoldOrGentle(nature))
-                DynamicPlaceholderTextUtil_ExpandPlaceholders(natureMetOrHatchedAtLevelStr, gText_PokeSum_FatefulEncounterMet_BoldGentleGrammar);
+            if (natureChanged)
+                DynamicPlaceholderTextUtil_ExpandPlaceholders(natureMetOrHatchedAtLevelStr, gText_PokeSum_FatefulEncounterMet_NatureChanged);
             else
                 DynamicPlaceholderTextUtil_ExpandPlaceholders(natureMetOrHatchedAtLevelStr, gText_PokeSum_FatefulEncounterMet);
         }
         else
         {
-            if (PokeSum_IsMonBoldOrGentle(nature))
-                DynamicPlaceholderTextUtil_ExpandPlaceholders(natureMetOrHatchedAtLevelStr, gText_PokeSum_MetInATrade_BoldGentleGrammar);
+            if (natureChanged)
+                DynamicPlaceholderTextUtil_ExpandPlaceholders(natureMetOrHatchedAtLevelStr, gText_PokeSum_MetInATrade_NatureChanged);
             else
                 DynamicPlaceholderTextUtil_ExpandPlaceholders(natureMetOrHatchedAtLevelStr, gText_PokeSum_MetInATrade);
         }
@@ -2750,6 +2774,7 @@ static void PokeSum_PrintTrainerMemo_Mon_NotHeldByOT(void)
         StringCopy(mapNameStr, gText_PokeSum_ATrade);
 
     DynamicPlaceholderTextUtil_SetPlaceholderPtr(2, mapNameStr);
+	
 
     // These pairs of strings are bytewise identical to each other in English,
     // but Japanese uses different grammar for Bold and Gentle natures.
@@ -2757,15 +2782,15 @@ static void PokeSum_PrintTrainerMemo_Mon_NotHeldByOT(void)
     {
         if (GetMonData(&sMonSummaryScreen->currentMon, MON_DATA_EVENT_LEGAL) == 1) // Fateful encounter
         {
-            if (PokeSum_IsMonBoldOrGentle(nature))
-                DynamicPlaceholderTextUtil_ExpandPlaceholders(natureMetOrHatchedAtLevelStr, gText_PokeSum_ApparentlyFatefulEncounterHatched_BoldGentleGrammar);
+            if (natureChanged)
+                DynamicPlaceholderTextUtil_ExpandPlaceholders(natureMetOrHatchedAtLevelStr, gText_PokeSum_ApparentlyFatefulEncounterHatched_NatureChanged);
             else
                 DynamicPlaceholderTextUtil_ExpandPlaceholders(natureMetOrHatchedAtLevelStr, gText_PokeSum_ApparentlyFatefulEncounterHatched);
         }
         else
         {
-            if (PokeSum_IsMonBoldOrGentle(nature))
-                DynamicPlaceholderTextUtil_ExpandPlaceholders(natureMetOrHatchedAtLevelStr, gText_PokeSum_ApparentlyMet_BoldGentleGrammar);
+            if (natureChanged)
+                DynamicPlaceholderTextUtil_ExpandPlaceholders(natureMetOrHatchedAtLevelStr, gText_PokeSum_ApparentlyMet_NatureChanged);
             else
                 DynamicPlaceholderTextUtil_ExpandPlaceholders(natureMetOrHatchedAtLevelStr, gText_PokeSum_ApparentlyMet);
         }
@@ -2774,15 +2799,15 @@ static void PokeSum_PrintTrainerMemo_Mon_NotHeldByOT(void)
     {
         if (metLocation == METLOC_FATEFUL_ENCOUNTER)
         {
-            if (PokeSum_IsMonBoldOrGentle(nature))
-                DynamicPlaceholderTextUtil_ExpandPlaceholders(natureMetOrHatchedAtLevelStr, gText_PokeSum_FatefulEncounterMet_BoldGentleGrammar);
+            if (natureChanged)
+                DynamicPlaceholderTextUtil_ExpandPlaceholders(natureMetOrHatchedAtLevelStr, gText_PokeSum_FatefulEncounterMet_NatureChanged);
             else
                 DynamicPlaceholderTextUtil_ExpandPlaceholders(natureMetOrHatchedAtLevelStr, gText_PokeSum_FatefulEncounterMet);
         }
         else
         {
-            if (PokeSum_IsMonBoldOrGentle(nature))
-                DynamicPlaceholderTextUtil_ExpandPlaceholders(natureMetOrHatchedAtLevelStr, gText_PokeSum_ApparentlyMet_BoldGentleGrammar);
+            if (natureChanged)
+                DynamicPlaceholderTextUtil_ExpandPlaceholders(natureMetOrHatchedAtLevelStr, gText_PokeSum_ApparentlyMet_NatureChanged);
             else
                 DynamicPlaceholderTextUtil_ExpandPlaceholders(natureMetOrHatchedAtLevelStr, gText_PokeSum_ApparentlyMet);
         }
@@ -3493,6 +3518,9 @@ static u8 StatusToAilment(u32 status)
 {
     if (GetMonData(&sMonSummaryScreen->currentMon, MON_DATA_HP) == 0)
         return AILMENT_FNT;
+	
+	if ((status & STATUS1_TOXIC_POISON))
+		return AILMENT_TOX;
 
     if ((status & STATUS1_PSN_ANY) != 0)
         return AILMENT_PSN;
@@ -4327,7 +4355,7 @@ static void CreateMonStatusIconObj(u16 tileTag, u16 palTag)
     void * gfxBufferPtr;
 
     sStatusIcon = AllocZeroed(sizeof(struct MonStatusIconObj));
-    gfxBufferPtr = AllocZeroed(0x20 * 32);
+    gfxBufferPtr = AllocZeroed(0x20 * 40);
 
     LZ77UnCompWram(gPokeSummary_StatusAilmentIconTiles, gfxBufferPtr);
 
@@ -4335,7 +4363,7 @@ static void CreateMonStatusIconObj(u16 tileTag, u16 palTag)
     {
         struct SpriteSheet sheet = {
             .data = gfxBufferPtr,
-            .size = 0x20 * 32,
+            .size = 0x20 * 40,
             .tag = tileTag
         };
 

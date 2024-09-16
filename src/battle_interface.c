@@ -67,6 +67,9 @@ enum
     HEALTHBOX_GFX_STATUS_BRN_BATTLER0,  //status brn
     HEALTHBOX_GFX_34,
     HEALTHBOX_GFX_35,
+	HEALTHBOX_GFX_STATUS_TOX_BATTLER0,
+    HEALTHBOX_GFX_119,
+    HEALTHBOX_GFX_120,
     HEALTHBOX_GFX_36, //misc [Black section]
     HEALTHBOX_GFX_37, //misc [Black section]
     HEALTHBOX_GFX_38, //misc [Black section]
@@ -117,6 +120,9 @@ enum
     HEALTHBOX_GFX_STATUS_BRN_BATTLER1, //status2 "BRN"
     HEALTHBOX_GFX_84,
     HEALTHBOX_GFX_85,
+	HEALTHBOX_GFX_STATUS_TOX_BATTLER1,
+    HEALTHBOX_GFX_122,
+    HEALTHBOX_GFX_123,
     HEALTHBOX_GFX_STATUS_PSN_BATTLER2, //status3 "PSN"
     HEALTHBOX_GFX_87,
     HEALTHBOX_GFX_88,
@@ -132,6 +138,9 @@ enum
     HEALTHBOX_GFX_STATUS_BRN_BATTLER2, //status3 "BRN"
     HEALTHBOX_GFX_99,
     HEALTHBOX_GFX_100,
+	HEALTHBOX_GFX_STATUS_TOX_BATTLER2,
+    HEALTHBOX_GFX_125,
+    HEALTHBOX_GFX_126,
     HEALTHBOX_GFX_STATUS_PSN_BATTLER3, //status4 "PSN"
     HEALTHBOX_GFX_102,
     HEALTHBOX_GFX_103,
@@ -147,6 +156,9 @@ enum
     HEALTHBOX_GFX_STATUS_BRN_BATTLER3, //status4 "BRN"
     HEALTHBOX_GFX_114,
     HEALTHBOX_GFX_115,
+	HEALTHBOX_GFX_STATUS_TOX_BATTLER3,
+    HEALTHBOX_GFX_128,
+    HEALTHBOX_GFX_129,
     HEALTHBOX_GFX_116, //unknown_D12FEC
     HEALTHBOX_GFX_117, //unknown_D1300C
 };
@@ -299,7 +311,7 @@ static const struct Subsprite gUnknown_8260390[] = {
 static const struct Subsprite gUnknown_8260398[] = {
     { 240, 0, SPRITE_SHAPE(32x8), SPRITE_SIZE(32x8), 0x0000, 1 },
     { 16, 0, SPRITE_SHAPE(32x8), SPRITE_SIZE(32x8), 0x0004, 1 },
-    { 224, 0, SPRITE_SHAPE(8x8), SPRITE_SIZE(8x8), 0x0008, 1 }
+    { 51, 0, SPRITE_SHAPE(8x8), SPRITE_SIZE(8x8), 0x0008, 1 } // enemy caught ball indicator
 };
 
 static const struct SubspriteTable gUnknown_82603A4[] = {
@@ -1555,10 +1567,9 @@ void TryAddPokeballIconToHealthbox(u8 healthboxSpriteId, bool8 noStatus)
 
     healthBarSpriteId = gSprites[healthboxSpriteId].hMain_HealthBarSpriteId;
 
-    if (noStatus)
-        CpuCopy32(GetHealthboxElementGfxPtr(HEALTHBOX_GFX_70), (void*)(OBJ_VRAM0 + (gSprites[healthBarSpriteId].oam.tileNum + 8) * TILE_SIZE_4BPP), 32);
-    else
-    CpuFill32(0, (void*)(OBJ_VRAM0 + (gSprites[healthBarSpriteId].oam.tileNum + 8) * TILE_SIZE_4BPP), 32);
+
+    CpuCopy32(GetHealthboxElementGfxPtr(HEALTHBOX_GFX_70), (void*)(OBJ_VRAM0 + (gSprites[healthBarSpriteId].oam.tileNum + 8) * TILE_SIZE_4BPP), 32);
+    
 }
 
 enum
@@ -1576,6 +1587,28 @@ static const u16 sStatusIconColors[] = {
     [PAL_STATUS_SLP] = RGB(20, 20, 17),
     [PAL_STATUS_FRZ] = RGB(17, 22, 28),
     [PAL_STATUS_BRN] = RGB(28, 14, 10)
+};
+
+static const u16 sTypeHintColors[] = {
+    [TYPE_NORMAL]   = RGB( 9,  9,  9),
+    [TYPE_FIGHTING] = RGB(10,  1,  0),
+    [TYPE_WIND]     = RGB(17, 17, 25),
+    [TYPE_MIASMA]   = RGB(24, 12, 24),
+    [TYPE_EARTH]    = RGB(19, 13,  7),
+    [TYPE_BEAST]    = RGB(21, 11,  5),
+    [TYPE_HEART]    = RGB(26,  0, 26),
+    [TYPE_GHOST]    = RGB( 9,  9, 13),
+    [TYPE_STEEL]    = RGB(16, 16, 16),
+    [TYPE_ILLUSION] = RGB(11, 26, 16),
+    [TYPE_FIRE]     = RGB(28,  0,  0),
+    [TYPE_WATER]    = RGB( 0,  0, 28),
+    [TYPE_NATURE]   = RGB( 0, 28,  0),
+    [TYPE_ELECTRIC] = RGB(31, 22,  8),
+    [TYPE_REASON]   = RGB(28,  0, 28),
+    [TYPE_ICE]      = RGB(20, 24, 31),
+    [TYPE_FAITH]    = RGB(28,  1,  1),
+    [TYPE_DARK]     = RGB( 5,  5,  5),
+    [TYPE_ROOSTING] = RGB(17, 17, 25),
 };
 
 static void UpdateStatusIconInHealthbox(u8 healthboxSpriteId)
@@ -1608,7 +1641,12 @@ static void UpdateStatusIconInHealthbox(u8 healthboxSpriteId)
         statusGfxPtr = GetHealthboxElementGfxPtr(GetStatusIconForBattlerId(HEALTHBOX_GFX_STATUS_SLP_BATTLER0, battlerId));
         statusPalId = PAL_STATUS_SLP;
     }
-    else if (status & STATUS1_PSN_ANY)
+    else if (status & STATUS1_TOXIC_POISON)
+    {
+        statusGfxPtr = GetHealthboxElementGfxPtr(GetStatusIconForBattlerId(HEALTHBOX_GFX_STATUS_TOX_BATTLER0, battlerId));
+        statusPalId = PAL_STATUS_PSN;
+    }
+    else if (status & STATUS1_POISON)
     {
         statusGfxPtr = GetHealthboxElementGfxPtr(GetStatusIconForBattlerId(HEALTHBOX_GFX_STATUS_PSN_BATTLER0, battlerId));
         statusPalId = PAL_STATUS_PSN;
@@ -1630,6 +1668,8 @@ static void UpdateStatusIconInHealthbox(u8 healthboxSpriteId)
     }
     else
     {
+		u32 species, type1, type2;
+		
         statusGfxPtr = GetHealthboxElementGfxPtr(HEALTHBOX_GFX_39);
 
         for (i = 0; i < 3; i++)
@@ -1637,6 +1677,24 @@ static void UpdateStatusIconInHealthbox(u8 healthboxSpriteId)
 
         if (!gBattleSpritesDataPtr->battlerData[battlerId].hpNumbersNoBars)
             CpuCopy32(GetHealthboxElementGfxPtr(HEALTHBOX_GFX_1), (void *)(OBJ_VRAM0 + gSprites[healthBarSpriteId].oam.tileNum * TILE_SIZE_4BPP), 64);
+		
+		// now, draw type hint
+		if (battlerId == 1)
+		{
+			species = GetMonData(&gEnemyParty[gBattlerPartyIndexes[battlerId]], MON_DATA_SPECIES);
+			type1 = gBaseStats[species].type1;
+			type2 = gBaseStats[species].type2;
+			
+			CpuCopy32(gBattleInterface_TypeHint1 + (type1 * 32), (void*)(OBJ_VRAM0 + (gSprites[healthboxSpriteId].oam.tileNum + tileNumAdder + 0) * TILE_SIZE_4BPP), 32);
+			
+			if (type1 != type2)
+				CpuCopy32(gBattleInterface_TypeHint2 + (type2 * 32), (void*)(OBJ_VRAM0 + (gSprites[healthboxSpriteId].oam.tileNum + tileNumAdder + 1) * TILE_SIZE_4BPP), 32);
+			
+			pltAdder = gSprites[healthboxSpriteId].oam.paletteNum * 16;
+			pltAdder += battlerId + 12;
+			FillPalette(sTypeHintColors[type1], pltAdder + 0x100, 2);
+			FillPalette(sTypeHintColors[type2], pltAdder + 0x101, 2);
+		}
 
         TryAddPokeballIconToHealthbox(healthboxSpriteId, TRUE);
         return;
@@ -1714,6 +1772,16 @@ static u8 GetStatusIconForBattlerId(u8 statusElementId, u8 battlerId)
             ret = HEALTHBOX_GFX_STATUS_BRN_BATTLER2;
         else
             ret = HEALTHBOX_GFX_STATUS_BRN_BATTLER3;
+        break;
+	case HEALTHBOX_GFX_STATUS_TOX_BATTLER0:
+        if (battlerId == 0)
+            ret = HEALTHBOX_GFX_STATUS_TOX_BATTLER0;
+        else if (battlerId == 1)
+            ret = HEALTHBOX_GFX_STATUS_TOX_BATTLER1;
+        else if (battlerId == 2)
+            ret = HEALTHBOX_GFX_STATUS_TOX_BATTLER2;
+        else
+            ret = HEALTHBOX_GFX_STATUS_TOX_BATTLER3;
         break;
     }
     return ret;

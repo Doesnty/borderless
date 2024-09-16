@@ -134,6 +134,17 @@ const struct SpriteTemplate gSpiderWebSpriteTemplate =
     .callback = AnimSpiderWeb,
 };
 
+const struct SpriteTemplate gChargeBeamSpriteTemplate =
+{
+    .tileTag = ANIM_TAG_SPARK,
+    .paletteTag = ANIM_TAG_CHARGE_BEAM,
+    .oam = &gOamData_AffineNormal_ObjNormal_16x16,
+    .anims = gDummySpriteAnimTable,
+    .images = NULL,
+    .affineAnims = gDummySpriteAffineAnimTable,
+    .callback = AnimTranslateStinger,
+};
+
 const struct SpriteTemplate gLinearStingerSpriteTemplate =
 {
     .tileTag = ANIM_TAG_NEEDLE,

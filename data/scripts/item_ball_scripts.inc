@@ -135,7 +135,7 @@ RocketHideout_B3F_EventScript_ItemRareCandy:: @ 81BE714
 	end
 
 RocketHideout_B3F_EventScript_ItemTM21:: @ 81BE721
-	finditem ITEM_TM21
+	finditem ITEM_TM76_DARK_PULSE
 	end
 
 RocketHideout_B4F_EventScript_ItemTM49:: @ 81BE72E

@@ -406,7 +406,7 @@ const u8 gMoveNames[][15] = {
     _("Mood Swing"),
     _("Alpha Strike"),
     _("Lunar Sea"),
-    _("Purity Edge"),
+    _("Apotheosis"),
     _("Identify"),
     _("Corpse Blaze"),
     _("Group Prank"),
@@ -418,5 +418,8 @@ const u8 gMoveNames[][15] = {
     _("Snap Trap"),
 	_("Punishment"),
 	_("Shriek"),
+	_("Flight"),
+	_("Core Surge"),
+	_("Cataclysm"),
     _("Me First"),
 };

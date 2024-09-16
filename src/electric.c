@@ -27,6 +27,7 @@ static void sub_80AE130(struct Sprite *sprite);
 static void sub_80AE278(u8 taskId);
 static void sub_80AE4F4(struct Sprite *sprite);
 static void sub_80AE5BC(u8 taskId);
+static void AnimChargeBeamHelperFunction(u8 taskId);
 static void sub_80AE704(struct Sprite *sprite);
 static void sub_80AE83C(struct Sprite *sprite);
 static bool8 sub_80AEB98(struct Task *task, u8 taskId);
@@ -284,6 +285,17 @@ static const struct SpriteTemplate gElectricChargingParticlesSpriteTemplate =
 {
     .tileTag = ANIM_TAG_ELECTRIC_ORBS,
     .paletteTag = ANIM_TAG_ELECTRIC_ORBS,
+    .oam = &gOamData_AffineOff_ObjNormal_8x8,
+    .anims = sAnims_ElectricChargingParticles,
+    .images = NULL,
+    .affineAnims = gDummySpriteAffineAnimTable,
+    .callback = SpriteCallbackDummy,
+};
+
+static const struct SpriteTemplate gHeartChargingParticlesSpriteTemplate =
+{
+    .tileTag = ANIM_TAG_ELECTRIC_ORBS,
+    .paletteTag = ANIM_TAG_CHARGE_BEAM,
     .oam = &gOamData_AffineOff_ObjNormal_8x8,
     .anims = sAnims_ElectricChargingParticles,
     .images = NULL,
@@ -808,6 +820,77 @@ static void sub_80AE5BC(u8 taskId)
 
             task->data[12] = 0;
             spriteId = CreateSprite(&gElectricChargingParticlesSpriteTemplate, task->data[14], task->data[15], 2);
+            if (spriteId != MAX_SPRITES)
+            {
+                struct Sprite *sprite = &gSprites[spriteId];
+
+                sprite->x += sElectricChargingParticleCoordOffsets[task->data[9]][0];
+                sprite->y += sElectricChargingParticleCoordOffsets[task->data[9]][1];
+                sprite->data[0] = 40 - task->data[8] * 5;
+                sprite->data[1] = sprite->x;
+                sprite->data[2] = task->data[14];
+                sprite->data[3] = sprite->y;
+                sprite->data[4] = task->data[15];
+                sprite->data[5] = taskId;
+                InitAnimLinearTranslation(sprite);
+                StoreSpriteCallbackInData6(sprite, sub_80AE704);
+                sprite->callback = RunStoredCallbackWhenAnimEnds;
+                if (++task->data[9] > 15)
+                    task->data[9] = 0;
+                if (++task->data[10] >= task->data[11])
+                {
+                    task->data[10] = 0;
+                    if (task->data[8] <= 5)
+                        ++task->data[8];
+                }
+                ++task->data[7];
+                --task->data[6];
+            }
+        }
+    }
+    else if(task->data[7] == 0)
+    {
+        DestroyAnimVisualTask(taskId);
+    }
+}
+
+void AnimTask_HeartChargingParticles(u8 taskId)
+{
+    struct Task *task = &gTasks[taskId];
+
+    if (!gBattleAnimArgs[0])
+    {
+        task->data[14] = GetBattlerSpriteCoord(gBattleAnimAttacker, BATTLER_COORD_X_2);
+        task->data[15] = GetBattlerSpriteCoord(gBattleAnimAttacker, BATTLER_COORD_Y_PIC_OFFSET);
+    }
+    else
+    {
+        task->data[14] = GetBattlerSpriteCoord(gBattleAnimTarget, BATTLER_COORD_X_2);
+        task->data[15] = GetBattlerSpriteCoord(gBattleAnimTarget, BATTLER_COORD_Y_PIC_OFFSET);
+    }
+    task->data[6] = gBattleAnimArgs[1];
+    task->data[7] = 0;
+    task->data[8] = 0;
+    task->data[9] = 0;
+    task->data[10] = 0;
+    task->data[11] = gBattleAnimArgs[3];
+    task->data[12] = 0;
+    task->data[13] = gBattleAnimArgs[2];
+    task->func = AnimChargeBeamHelperFunction;
+}
+
+static void AnimChargeBeamHelperFunction(u8 taskId)
+{
+    struct Task *task = &gTasks[taskId];
+
+    if (task->data[6])
+    {
+        if (++task->data[12] > task->data[13])
+        {
+            u8 spriteId;
+
+            task->data[12] = 0;
+            spriteId = CreateSprite(&gHeartChargingParticlesSpriteTemplate, task->data[14], task->data[15], 2);
             if (spriteId != MAX_SPRITES)
             {
                 struct Sprite *sprite = &gSprites[spriteId];

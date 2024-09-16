@@ -512,4 +512,6 @@ const u8 gSpeciesNames[][POKEMON_NAME_LENGTH+1] = {
 	_("XTenshi"),
 	_("XTenma"),
 	_("XSendai"),
+	_("TSekibanki"),
+	_("Tensoku"),
 };

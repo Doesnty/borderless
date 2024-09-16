@@ -3265,7 +3265,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
     [MOVE_ENERGY_LIGHT] = 
     {
         .effect = EFFECT_SPECIAL_DEFENSE_DOWN_HIT,
-        .power = 80,
+        .power = 90,
         .type = TYPE_NATURE,
         .moveClass = CLASS_SPECIAL,
         .accuracy = 100,
@@ -4701,7 +4701,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .secondaryEffectChance = 0,
         .priority = 0,
         .target = MOVE_TARGET_USER,
-        .flags = FLAG_SNATCH_AFFECTED,
+        .flags = FLAG_SNATCH_AFFECTED | FLAG_SOUND_MOVE,
     },
 
     [MOVE_HEAT_CLAW] = 
@@ -5684,18 +5684,18 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .flags = FLAG_PROTECT_AFFECTED,
     },
 
-    [MOVE_PURITY_EDGE] = 
+    [MOVE_APOTHEOSIS] = 
     {
-        .effect = EFFECT_PURITY_EDGE,
-        .power = 95,
-        .type = TYPE_STEEL,
-        .moveClass = CLASS_PHYSICAL,
-        .accuracy = 100,
-        .pp = 10,
+        .effect = EFFECT_CALM_MIND,
+        .power = 0,
+        .type = TYPE_FAITH,
+        .moveClass = CLASS_STATUS,
+        .accuracy = 0,
+        .pp = 5,
         .secondaryEffectChance = 0,
         .priority = 0,
-        .target = MOVE_TARGET_SELECTED,
-        .flags = FLAG_MAKES_CONTACT | FLAG_PROTECT_AFFECTED,
+        .target = MOVE_TARGET_USER,
+        .flags = FLAG_SNATCH_AFFECTED,
     },
 
     [MOVE_IDENTIFY] = 
@@ -5850,6 +5850,48 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .priority = 0,
         .target = MOVE_TARGET_SELECTED,
         .flags = FLAG_PROTECT_AFFECTED | FLAG_SOUND_MOVE,
+    },
+
+    [MOVE_FLIGHT] = 
+    {
+        .effect = EFFECT_FLIGHT,
+        .power = 0,
+        .type = TYPE_WIND,
+        .moveClass = CLASS_STATUS,
+        .accuracy = 0,
+        .pp = 20,
+        .secondaryEffectChance = 0,
+        .priority = 0,
+        .target = MOVE_TARGET_USER,
+        .flags = FLAG_SNATCH_AFFECTED,
+    },
+
+    [MOVE_CORE_SURGE] = 
+    {
+        .effect = EFFECT_CORE_SURGE,
+        .power = 100,
+        .type = TYPE_STEEL,
+        .moveClass = CLASS_SPECIAL,
+        .accuracy = 100,
+        .pp = 10,
+        .secondaryEffectChance = 0,
+        .priority = 0,
+        .target = MOVE_TARGET_SELECTED,
+        .flags = FLAG_PROTECT_AFFECTED,
+    },
+
+    [MOVE_CATACLYSM] = 
+    {
+        .effect = EFFECT_SKY_ATTACK,
+        .power = 140,
+        .type = TYPE_EARTH,
+        .moveClass = CLASS_PHYSICAL,
+        .accuracy = 100,
+        .pp = 5,
+        .secondaryEffectChance = 80,
+        .priority = 0,
+        .target = MOVE_TARGET_SELECTED,
+        .flags = FLAG_PROTECT_AFFECTED | FLAG_HIGH_CRIT,
     },
 
     [MOVE_ME_FIRST] = 

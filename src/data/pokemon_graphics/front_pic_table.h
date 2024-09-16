@@ -513,5 +513,7 @@ const struct CompressedSpriteSheet gMonFrontPicTable[] =
     SPECIES_SPRITE(XTENSHI, gMonFrontPic_xtenshi),
     SPECIES_SPRITE(XTENMA, gMonFrontPic_xtenma),
     SPECIES_SPRITE(XSENDAI, gMonFrontPic_xsendai),
+    SPECIES_SPRITE(SEKI_HEAD, gMonFrontPic_seki_head),
+    SPECIES_SPRITE(TENSOKUG, gMonFrontPic_tensokug),
     SPECIES_SPRITE(EGG, gMonFrontPic_Egg),
 };

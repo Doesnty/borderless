@@ -38,9 +38,9 @@ PowerPlant_EventScript_Zapdos:: @ 81637B8
 	special QuestLog_CutRecording
 	lock
 	faceplayer
-	setwildbattle SPECIES_ZAPDOS, 50, ITEM_NONE
+	setwildbattle SPECIES_TENSOKU, 50, ITEM_NONE
 	waitse
-	playmoncry SPECIES_ZAPDOS, 2
+	playmoncry SPECIES_TENSOKU, 2
 	message Text_Gyaoo
 	waitmessage
 	waitmoncry
@@ -76,9 +76,9 @@ PowerPlant_EventScript_Electrode1:: @ 816382F
 	goto_if_questlog EventScript_ReleaseEnd
 	lock
 	faceplayer
-	setwildbattle SPECIES_ELECTRODE, 34, ITEM_NONE
+	setwildbattle SPECIES_KOGASA, 50, ITEM_NONE
 	waitse
-	playmoncry SPECIES_ELECTRODE, 2
+	playmoncry SPECIES_KOGASA, 2
 	delay 40
 	waitmoncry
 	setflag FLAG_SYS_SPECIAL_WILD_BATTLE
@@ -105,9 +105,9 @@ PowerPlant_EventScript_Electrode2:: @ 816388D
 	goto_if_questlog EventScript_ReleaseEnd
 	lock
 	faceplayer
-	setwildbattle SPECIES_ELECTRODE, 34, ITEM_NONE
+	setwildbattle SPECIES_NUE, 50, ITEM_NONE
 	waitse
-	playmoncry SPECIES_ELECTRODE, 2
+	playmoncry SPECIES_NUE, 2
 	delay 40
 	waitmoncry
 	setflag FLAG_SYS_SPECIAL_WILD_BATTLE

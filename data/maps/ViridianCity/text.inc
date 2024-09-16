@@ -1,28 +1,34 @@
 ViridianCity_Text_CanCarryMonsAnywhere:: @ 817DABB
-    .string "Those POKé BALLS at your waist!\n"
-    .string "You have POKéMON, don't you?\p"
+    .string "Those Toho Orbs at your waist!\n"
+    .string "You have Puppets, don't you?\p"
     .string "It's great that you can carry and\n"
-    .string "use POKéMON anytime, anywhere.$"
+    .string "use Puppets anytime, anywhere.$"
 
 ViridianCity_Text_GymClosedWonderWhoLeaderIs:: @ 817DB39
-    .string "This POKéMON GYM is always closed.\p"
-    .string "I wonder who the LEADER is?$"
+    .string "This Puppet Gym is always closed.\p"
+    .string "I wonder who the Leader is?$"
 
 ViridianCity_Text_ViridiansGymLeaderReturned:: @ 817DB78
-    .string "VIRIDIAN GYM's LEADER returned!$"
+    .string "Viridian Gym's Leader returned!$"
 
 ViridianCity_Text_WantToKnowAboutCaterpillarMons:: @ 817DB98
-    .string "You want to know about the two\n"
-    .string "kinds of caterpillar POKéMON?$"
+    .string "You want to know about the nine\n"
+    .string "kinds of fairy Puppet?$"
 
 ViridianCity_Text_OhOkayThen:: @ 817DBD5
     .string "Oh, okay then!$"
 
 ViridianCity_Text_ExplainCaterpieWeedle:: @ 817DBE4
-    .string "CATERPIE has no poison,\n"
-    .string "but WEEDLE does.\p"
-    .string "Watch that your POKéMON aren't\n"
-    .string "stabbed by WEEDLE's POISON STING.$"
+    .string "Lily White is Heart,\n"
+    .string "Lily Black is Dark,\l"
+	.string "Daiyousei is Nature.\p"
+    .string "Sunny Milk uses Fire, Luna Child\n"
+    .string "uses electricity, and Star\l"
+	.string "Sapphire uses water.\p"
+    .string "Eternity Larva uses Nature and\n"
+    .string "Wind attacks. She's good for novices!\p"
+	.string "There's also Cirno and Clownpiece,\n"
+	.string "but they don't live near here.$"
 
 ViridianCity_Text_GrandpaHasntHadCoffeeYet:: @ 817DC4E
     .string "Oh, Grandpa!\n"
@@ -31,10 +37,10 @@ ViridianCity_Text_GrandpaHasntHadCoffeeYet:: @ 817DC4E
     .string "He hasn't had his booze yet.$"
 
 ViridianCity_Text_GoShoppingInPewterOccasionally:: @ 817DC99
-    .string "I go shopping in PEWTER CITY\n"
+    .string "I go shopping in Pewter City\n"
     .string "occasionally.\p"
     .string "I have to take the winding trail in\n"
-    .string "VIRIDIAN FOREST when I go.$"
+    .string "Viridian Forest when I go.$"
 
 ViridianCity_Text_ThisIsPrivateProperty:: @ 817DD03
     .string "I absolutely forbid you from\n"
@@ -101,23 +107,23 @@ ViridianCity_Text_CitySign:: @ 817E1BB
 
 ViridianCity_Text_CatchMonsForEasierBattles:: @ 817E1E7
     .string "TRAINER TIPS\p"
-    .string "Catch POKéMON and expand your\n"
+    .string "Catch Puppets and expand your\n"
     .string "collection.\p"
     .string "The more you have, the easier it\n"
     .string "is to battle.$"
 
 ViridianCity_Text_MovesLimitedByPP:: @ 817E24D
     .string "TRAINER TIPS\p"
-    .string "The battle moves of POKéMON are\n"
-    .string "limited by their POWER POINTS, PP.\p"
+    .string "The battle moves of Puppets are\n"
+    .string "limited by their Power Points, PP.\p"
     .string "To replenish PP, rest your tired\n"
-    .string "POKéMON at a POKéMON CENTER.$"
+    .string "Puppets at a Puppet Center.$"
 
 ViridianCity_Text_GymSign:: @ 817E2DB
-    .string "VIRIDIAN CITY POKéMON GYM$"
+    .string "VIRIDIAN CITY PUPPET GYM$"
 
 ViridianCity_Text_GymDoorsAreLocked:: @ 817E2F5
-    .string "VIRIDIAN GYM's doors are locked…$"
+    .string "Viridian Gym's doors are locked…$"
 
 ViridianCity_Text_DreamEaterMan::
     .string "Yawn! I must have dozed off\n"

@@ -512,5 +512,7 @@ const u16 *const gLevelUpLearnsets[NUM_SPECIES] =
     [SPECIES_XTENSHI] = sXTenshiLevelUpLearnset,
     [SPECIES_XTENMA] = sXTenmaLevelUpLearnset,
     [SPECIES_XSENDAI] = sXSendaiLevelUpLearnset,
-    [SPECIES_SEKI_HEAD] = sSekiHeadLevelUpLearnset,
+	
+	[SPECIES_TENSOKUG] = sTensokuLevelUpLearnset,
+    [SPECIES_SEKI_HEAD] = sTSekibankiLevelUpLearnset,
 };

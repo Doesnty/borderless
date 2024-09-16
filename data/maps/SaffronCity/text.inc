@@ -55,7 +55,9 @@ SaffronCity_Text_SawRocketBossEscaping:: @ 8181299
 
 SaffronCity_Text_ImASecurityGuard:: @ 81812CA
     .string "I'm a security guard.\p"
-    .string "Suspicious kids I don't allow in!$"
+    .string "Suspicious kids I don't allow in!\p"
+	.string "Go play at the Fighting Dojo\n"
+	.string "or somewhere, kid!$"
 
 SaffronCity_Text_HesTakingASnooze:: @ 8181302
     .string "…\n"

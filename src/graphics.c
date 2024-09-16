@@ -372,6 +372,7 @@ const u8 gHealthboxElementsGfxTable_StatusPar[] = INCBIN_U8("graphics/battle_int
 const u8 gHealthboxElementsGfxTable_StatusSlp[] = INCBIN_U8("graphics/battle_interface/status_slp.4bpp");
 const u8 gHealthboxElementsGfxTable_StatusFrz[] = INCBIN_U8("graphics/battle_interface/status_frz.4bpp");
 const u8 gHealthboxElementsGfxTable_StatusBrn[] = INCBIN_U8("graphics/battle_interface/status_brn.4bpp");
+const u8 gHealthboxElementsGfxTable_StatusTox[] = INCBIN_U8("graphics/battle_interface/status_tox.4bpp");
 const u8 gHealthboxElementsGfxTable_Misc[] = INCBIN_U8("graphics/battle_interface/misc.4bpp");
 const u8 gHealthboxElementsGfxTable_HpBarAnim[] = INCBIN_U8("graphics/battle_interface/hp_bar_anim.4bpp");
 const u8 gHealthboxElementsGfxTable_MiscFrameEnd[] = INCBIN_U8("graphics/battle_interface/misc_frame_end.4bpp");
@@ -388,6 +389,9 @@ const u8 gUnknown_8D12A64[] = INCBIN_U8("graphics/unknown/unknown_D12A64.4bpp");
 const u32 gBattleInterfaceGfx_UnusedWindow3[] = INCBIN_U32("graphics/battle_interface/unused_window3.4bpp.lz");
 const u32 gBattleInterfaceGfx_UnusedWindow4[] = INCBIN_U32("graphics/battle_interface/unused_window4.4bpp.lz");
 
+const u8 gBattleInterface_TypeHint1[] = INCBIN_U8("graphics/battle_interface/typehint.4bpp");
+const u8 gBattleInterface_TypeHint2[] = INCBIN_U8("graphics/battle_interface/typehint2.4bpp");
+
 const u32 gBattleAnimSpriteGfx_FurySwipes[] = INCBIN_U32("graphics/battle_anims/sprites/fury_swipes.4bpp.lz");
 const u32 gBattleAnimSpritePal_FurySwipes[] = INCBIN_U32("graphics/battle_anims/sprites/fury_swipes.gbapal.lz");
 
@@ -396,6 +400,8 @@ const u32 gBattleAnimSpritePal_Vine2[] = INCBIN_U32("graphics/battle_anims/sprit
 
 const u32 gBattleAnimSpriteGfx_Vine3[] = INCBIN_U32("graphics/battle_anims/sprites/vine_3.4bpp.lz");
 const u32 gBattleAnimSpritePal_Vine3[] = INCBIN_U32("graphics/battle_anims/sprites/vine_3.gbapal.lz");
+
+const u32 gBattleAnimSpritePal_ChargeBeam[] = INCBIN_U32("graphics/battle_anims/sprites/charge_beam.gbapal.lz");
 
 const u32 gBattleAnimSpriteGfx_Teeth[] = INCBIN_U32("graphics/battle_anims/sprites/teeth.4bpp.lz");
 const u32 gBattleAnimSpritePal_Teeth[] = INCBIN_U32("graphics/battle_anims/sprites/teeth.gbapal.lz");

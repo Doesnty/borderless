@@ -1087,9 +1087,6 @@ static void SetCursorMonData(void *pokemon, u8 mode)
     }
     else
     {
-        if (gPSSData->cursorMonSpecies == SPECIES_NIDORAN_F || gPSSData->cursorMonSpecies == SPECIES_NIDORAN_M)
-            gender = MON_GENDERLESS;
-
         StringCopyPadded(gPSSData->cursorMonTexts[0], gPSSData->cursorMonNick, CHAR_SPACE, 5);
 
         txtPtr = gPSSData->cursorMonTexts[1];

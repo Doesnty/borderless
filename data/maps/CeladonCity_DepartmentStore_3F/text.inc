@@ -68,3 +68,129 @@ Text_CounterWhichMon:: @ 8195A08
 Text_CounterTaught:: @ 8195A31
     .string "Are you using that COUNTER move\n"
     .string "I taught your POKéMON?$"
+
+CeladonCity_DepartmentStore_3F_Text_Psychiatrist_Intro::
+    .string "Howdy.\n"
+    .string "I am the Puppet Psychiatrist.\p"
+    .string "I can train your Puppets to overcome\n"
+    .string "their natures and adapt their stats.$"
+
+CeladonCity_DepartmentStore_3F_Text_Psychiatrist_ShowPrice::
+    .string "My services cost ¥10000.$"
+
+CeladonCity_DepartmentStore_3F_Text_Psychiatrist_WhichMon::
+    .string "Which Puppet needs my training?$"
+
+CeladonCity_DepartmentStore_3F_Text_Psychiatrist_WhichStrength::
+    .string "Alright. Which stat do you want\n"
+    .string "this Puppet to focus on?$"
+
+CeladonCity_DepartmentStore_3F_Text_Psychiatrist_WhichWeakness::
+    .string "And which stat should be least\n"
+    .string "important for this Puppet?$"
+
+CeladonCity_DepartmentStore_3F_Text_Psychiatrist_Lonely::
+    .string "So, focus on Attack at the\n"
+    .string "expense of Defense?$"
+
+CeladonCity_DepartmentStore_3F_Text_Psychiatrist_Adamant::
+    .string "So, focus on Attack at the\n"
+    .string "expense of Sp. Atk?$"
+
+CeladonCity_DepartmentStore_3F_Text_Psychiatrist_Naughty::
+    .string "So, focus on Attack at the\n"
+    .string "expense of Sp. Def?$"
+
+CeladonCity_DepartmentStore_3F_Text_Psychiatrist_Brave::
+    .string "So, focus on Attack at the\n"
+    .string "expense of Speed?$"
+
+CeladonCity_DepartmentStore_3F_Text_Psychiatrist_Bold::
+    .string "So, focus on Defense at the\n"
+    .string "expense of Attack?$"
+
+CeladonCity_DepartmentStore_3F_Text_Psychiatrist_Impish::
+    .string "So, focus on Defense at the\n"
+    .string "expense of Sp. Atk?$"
+
+CeladonCity_DepartmentStore_3F_Text_Psychiatrist_Lax::
+    .string "So, focus on Defense at the\n"
+    .string "expense of Sp. Def?$"
+
+CeladonCity_DepartmentStore_3F_Text_Psychiatrist_Relaxed::
+    .string "So, focus on Defense at the\n"
+    .string "expense of Speed?$"
+
+CeladonCity_DepartmentStore_3F_Text_Psychiatrist_Modest::
+    .string "So, focus on Sp. Atk at the\n"
+    .string "expense of Attack?$"
+
+CeladonCity_DepartmentStore_3F_Text_Psychiatrist_Mild::
+    .string "So, focus on Sp. Atk at the\n"
+    .string "expense of Defense?$"
+
+CeladonCity_DepartmentStore_3F_Text_Psychiatrist_Rash::
+    .string "So, focus on Sp. Atk at the\n"
+    .string "expense of Sp. Def?$"
+
+CeladonCity_DepartmentStore_3F_Text_Psychiatrist_Quiet::
+    .string "So, focus on Sp. Atk at the\n"
+    .string "expense of Speed?$"
+
+CeladonCity_DepartmentStore_3F_Text_Psychiatrist_Calm::
+    .string "So, focus on Sp. Def at the\n"
+    .string "expense of Attack?$"
+
+CeladonCity_DepartmentStore_3F_Text_Psychiatrist_Gentle::
+    .string "So, focus on Sp. Def at the\n"
+    .string "expense of Defense?$"
+
+CeladonCity_DepartmentStore_3F_Text_Psychiatrist_Careful::
+    .string "So, focus on Sp. Def at the\n"
+    .string "expense of Sp. Atk?$"
+
+CeladonCity_DepartmentStore_3F_Text_Psychiatrist_Sassy::
+    .string "So, focus on Sp. Def at the\n"
+    .string "expense of Speed?$"
+
+CeladonCity_DepartmentStore_3F_Text_Psychiatrist_Timid::
+    .string "So, focus on Speed at the\n"
+    .string "expense of Attack?$"
+
+CeladonCity_DepartmentStore_3F_Text_Psychiatrist_Hasty::
+    .string "So, focus on Speed at the\n"
+    .string "expense of Defense?$"
+
+CeladonCity_DepartmentStore_3F_Text_Psychiatrist_Jolly::
+    .string "So, focus on Speed at the\n"
+    .string "expense of Sp. Atk?$"
+
+CeladonCity_DepartmentStore_3F_Text_Psychiatrist_Naive::
+    .string "So, focus on Speed at the\n"
+    .string "expense of Sp. Def?$"
+
+CeladonCity_DepartmentStore_3F_Text_Psychiatrist_Balance::
+    .string "So, focus on keeping all\n"
+    .string "stats about even?$"
+
+CeladonCity_DepartmentStore_3F_Text_Psychiatrist_Done::
+    .string "Alright, let's get to work.\p"
+    .string "... ... ... ... ...\n"
+    .string "... ... ... ... ...$"
+
+CeladonCity_DepartmentStore_3F_Text_Psychiatrist_Done2::
+    .string "There. That will be ¥10000.$"
+
+CeladonCity_DepartmentStore_3F_Text_Psychiatrist_Redundant::
+    .string "This Puppet already has its\n"
+    .string "stats in order.$"
+
+CeladonCity_DepartmentStore_3F_Text_Psychiatrist_Egg::
+    .string "...This is an egg.\n"
+    .string "Come back when it's a bit older.$"
+
+CeladonCity_DepartmentStore_3F_Text_Psychiatrist_Bye::
+    .string "Come back soon!$"
+
+CeladonCity_DepartmentStore_3F_Text_Psychiatrist_NeedMoney::
+    .string "You don't have enough money.$"

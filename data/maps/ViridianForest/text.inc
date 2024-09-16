@@ -1,29 +1,29 @@
 ViridianForest_Text_FriendsItchingToBattle:: @ 8172255
     .string "I came here with some friends to\n"
-    .string "catch us some BUG POKéMON!\p"
+    .string "catch us some Fairy Puppets!\p"
     .string "They're all itching to get into\n"
-    .string "some POKéMON battles!$"
+    .string "some Puppet battles!$"
 
 ViridianForest_Text_RickIntro:: @ 81722C7
-    .string "Hey! You have POKéMON!\n"
+    .string "Hey! You have Puppets!\n"
     .string "Come on!\l"
     .string "Let's battle 'em!$"
 
 ViridianForest_Text_RickDefeat:: @ 81722F9
-    .string "No!\nCATERPIE can't hack it!$"
+    .string "No!\nSunny can't hack it!$"
 
 ViridianForest_Text_RickPostBattle:: @ 8172315
-    .string "Ssh! You'll scare the bugs away.\n"
+    .string "Ssh! You'll scare the fairies away.\n"
     .string "Another time, okay?$"
 
 ViridianForest_Text_DougIntro:: @ 817234A
     .string "Yo!\n"
     .string "You can't jam out if you're a\l"
-    .string "POKéMON TRAINER!$"
+    .string "Puppet Trainer!$"
 
 ViridianForest_Text_DougDefeat:: @ 817237D
     .string "Huh?\n"
-    .string "I ran out of POKéMON!$"
+    .string "I ran out of fairies!$"
 
 ViridianForest_Text_DougPostBattle:: @ 8172398
     .string "That totally stinks! I'm going to\n"
@@ -55,47 +55,47 @@ ViridianForest_Text_AnthonyPostBattle:: @ 81724DC
     .string "I lost some of my allowance…$"
 
 ViridianForest_Text_CharlieIntro:: @ 81724F9
-    .string "Did you know that POKéMON evolve?$"
+    .string "Did you know that Puppets evolve?$"
 
 ViridianForest_Text_CharlieDefeat:: @ 817251B
     .string "Oh!\n"
     .string "I lost!$"
 
 ViridianForest_Text_CharliePostBattle:: @ 8172527
-    .string "BUG POKéMON evolve quickly.\n"
-    .string "They're a lot of fun!$"
+    .string "Fairy Puppets evolve quickly.\n"
+    .string "But it still takes a while…$"
 
 ViridianForest_Text_RanOutOfPokeBalls:: @ 8172559
-    .string "I was throwing POKé BALLS to\n"
-    .string "catch POKéMON, and I ran out.\p"
+    .string "I was throwing Toho Orbs to\n"
+    .string "catch Puppets, and I ran out.\p"
     .string "That's why you can never have too\n"
-    .string "many POKé BALLS.$"
+    .string "many Toho Orbs.$"
 
 ViridianForest_Text_AvoidGrassyAreasWhenWeak:: @ 81725C7
     .string "TRAINER TIPS\p"
-    .string "If your POKéMON are weak and you\n"
+    .string "If your Puppets are weak and you\n"
     .string "want to avoid battles, stay away\l"
     .string "from grassy areas!$"
 
 ViridianForest_Text_UseAntidoteForPoison:: @ 8172629
-    .string "For poison, use ANTIDOTE!\n"
-    .string "Get it at POKéMON MARTS!$"
+    .string "For poison, use Antidote!\n"
+    .string "Get it at Puppet Marts!$"
 
 ViridianForest_Text_ContactOakViaPCToRatePokedex:: @ 817265C
     .string "TRAINER TIPS\p"
-    .string "Contact PROF. OAK via a PC to\n"
-    .string "get your POKéDEX evaluated!$"
+    .string "Contact Prof. Oak via a PC to\n"
+    .string "get your Tohodex evaluated!$"
 
 ViridianForest_Text_CantCatchOwnedMons:: @ 81726A3
     .string "TRAINER TIPS\p"
-    .string "You can't catch a POKéMON that\n"
+    .string "You can't catch a Puppet that\n"
     .string "belongs to someone else.\p"
-    .string "Throw POKé BALLS only at wild\n"
-    .string "POKéMON to catch them!$"
+    .string "Throw Toho Orbs only at wild\n"
+    .string "Puppets to catch them!$"
 
 ViridianForest_Text_WeakenMonsBeforeCapture:: @ 817271D
     .string "TRAINER TIPS\p"
-    .string "Weaken POKéMON before attempting\n"
+    .string "Weaken Puppets before attempting\n"
     .string "capture!\p"
     .string "When healthy, they may escape!$"
 

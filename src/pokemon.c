@@ -606,6 +606,7 @@ static const u16 sSpeciesToNationalPokedexNum[] = // Assigns all species to the 
     NATIONAL_DEX_XTENMA,
     NATIONAL_DEX_XSENDAI,
     NATIONAL_DEX_TSEKIBANKI,
+	NATIONAL_DEX_TENSOKU,
 };
 
 #include "data/pokemon/item_effects.h"
@@ -1355,14 +1356,14 @@ void CalculateMonStats(struct Pokemon *mon)
 
     SetMonData(mon, MON_DATA_LEVEL, &level);
 
-    if (species == SPECIES_SHEDINJA)
+    if (species == SPECIES_ZFAIRY)
     {
         newMaxHP = 1;
     }
     else
     {
         s32 n = 2 * gBaseStats[species].baseHP + hpIV;
-        newMaxHP = (((n + hpEV / 4) * level) / 100) + level + 10;
+        newMaxHP = (((n + hpEV) * level) / 100) + level + 10;
     }
 
     gBattleScripting.field_23 = newMaxHP - oldMaxHP;
@@ -1377,7 +1378,7 @@ void CalculateMonStats(struct Pokemon *mon)
     CALC_STAT(baseSpAttack, spAttackIV, spAttackEV, STAT_SPATK, MON_DATA_SPATK)
     CALC_STAT(baseSpDefense, spDefenseIV, spDefenseEV, STAT_SPDEF, MON_DATA_SPDEF)
 
-    if (species == SPECIES_SHEDINJA)
+    if (species == SPECIES_ZFAIRY)
     {
         if (currentHP != 0 || oldMaxHP == 0)
             currentHP = 1;
@@ -1669,7 +1670,7 @@ u32 getVariableBasePower(struct BattlePokemon *attacker, struct BattlePokemon *d
 			for (i = 1; i < 8; i++)
 			{
 				if (gBattleMons[battlerIdDef].statStages[i] > 6)
-					power += (20 * gBattleMons[battlerIdDef].statStages[i]);
+					power += (20 * (gBattleMons[battlerIdDef].statStages[i] - 6));
 			}
 			return power;
     }
@@ -1857,6 +1858,10 @@ s32 CalculateBaseDamage(struct BattlePokemon *attacker, struct BattlePokemon *de
     {
         gBattleMovePower = (150 * gBattleMovePower) / 100;
     }
+    if (attacker->ability == ABILITY_LOGICIAN && type == TYPE_REASON)
+    {
+        gBattleMovePower = (150 * gBattleMovePower) / 100;
+    }
     if (defenderAbility == ABILITY_CHEERFUL && defender->hp == defender->maxHP)
     {
         defense *= 2;
@@ -1938,9 +1943,11 @@ s32 CalculateBaseDamage(struct BattlePokemon *attacker, struct BattlePokemon *de
                     continue;
                 if (gBaseStats[monspecies].type1 == type ||
                     gBaseStats[monspecies].type2 == type)
-                    boost = 100;
+                    boost = 33;
             }
         }
+		if (boost > 0 && type != attacker->type1 && type != attacker->type2)
+				boost = 100;
         gBattleMovePower = (gBattleMovePower * (100 + boost)) / 100;
     }
     if (attacker->ability == ABILITY_RECKLESS && (gBattleMoves[move].effect == EFFECT_RECOIL
@@ -4378,6 +4385,11 @@ u8 GetNature(struct Pokemon *mon)
     return GetMonData(mon, MON_DATA_PERSONALITY, NULL) % 25;
 }
 
+u8 GetUnderlyingNature(struct Pokemon *mon)
+{
+    return GetMonData(mon, MON_DATA_PERSONALITY, NULL) % 25;
+}
+
 static u8 GetNatureFromPersonality(u32 personality)
 {
     return personality % 25;
@@ -5075,6 +5087,7 @@ static u16 GetBattleBGM(void)
             return MUS_VS_GYM_LEADER;
         case TRAINER_CLASS_STRANGER:
         case TRAINER_CLASS_WILD:
+		case TRAINER_CLASS_BLACK_BELT_IMAKUNI:
             gBattleTypeFlags |= BATTLE_TYPE_IMAKUNI;
             return MUS_VS_IMAKUNI;
         case TRAINER_CLASS_BOSS:
@@ -5767,3 +5780,25 @@ u16 SelectZunStarter(void)
     
     return value;
 }
+
+u8 GetNatureStringIndex(struct Pokemon *mon)
+{
+    u32 nature = GetMonData(mon, MON_DATA_NATURE_OVERRIDE, 0);
+    if (nature)
+        return nature + 25;
+    return GetMonData(mon, MON_DATA_PERSONALITY, 0) % 25;
+}
+
+void SetNatureOverride(void)
+{
+    if (gSpecialVar_0x8001 != GetNature(&gPlayerParty[gSpecialVar_0x8004]))
+    {
+        SetMonData(&(gPlayerParty[gSpecialVar_0x8004]), MON_DATA_NATURE_OVERRIDE, &gSpecialVar_0x8001);
+        CalculateMonStats(&(gPlayerParty[gSpecialVar_0x8004]));
+        gSpecialVar_Result = 1;
+        //AdjustFriendship(&(gPlayerParty[gSpecialVar_0x8004]), FRIENDSHIP_EVENT_NATURE_CHANGE);
+    }
+    else
+        gSpecialVar_Result = 0;
+}
+

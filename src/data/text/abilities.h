@@ -136,7 +136,7 @@ static const u8 sSandRushDescription[] = _("Doubles Speed in sandstorm.");
 static const u8 sDownloadDescription[] = _("Boosts favorable Attack stat on entry.");
 static const u8 sQuickFeetDescription[] = _("Status problems boost Speed.");
 static const u8 sHydrationDescription[] = _("Recovers from status in rain.");
-static const u8 sDisguiseDescription[] = _("Takes no damage from one hit.");
+static const u8 sDisguiseDescription[] = _("Sacrifices body to prevent damage.");
 static const u8 sAnalyticDescription[] = _("Stronger when moving second.");
 static const u8 sContraryDescription[] = _("Inverts stat changes.");
 static const u8 sBerserkDescription[] = _("Boosts Sp. Atk when brought to low HP.");
@@ -173,6 +173,7 @@ static const u8 sYinAndYangDescription[] = _("+30% to lower attack stat (both on
 static const u8 sArsonistDescription[] = _("+50% power on Fire moves.");
 static const u8 sMastermindDescription[] = _("Double power on KO'd-ally-type moves.");
 static const u8 sRestraintDescription[] = _("Traps foe using moves to escape.");
+static const u8 sLogicianDescription[] = _("+50% power on Reason moves.");
 static const u8 sObsoleteDescription[] = _("Obsolete.");
 static const u8 sUnimplementedDescription[] = _("Unimplemented.");
 
@@ -316,7 +317,7 @@ const u8 *const gAbilityDescriptionPointers[ABILITIES_COUNT] =
     [ABILITY_DOWNLOAD] = sUnimplementedDescription,
     [ABILITY_QUICK_FEET] = sUnimplementedDescription,
     [ABILITY_HYDRATION] = sUnimplementedDescription,
-    [ABILITY_DISGUISE] = sUnimplementedDescription,
+    [ABILITY_DISGUISE] = sDisguiseDescription,
     [ABILITY_ANALYTIC] = sUnimplementedDescription,
     [ABILITY_CONTRARY] = sUnimplementedDescription,
     [ABILITY_BERSERK] = sUnimplementedDescription,
@@ -353,6 +354,7 @@ const u8 *const gAbilityDescriptionPointers[ABILITIES_COUNT] =
     [ABILITY_ARSONIST] = sArsonistDescription,
     [ABILITY_MASTERMIND] = sMastermindDescription,
     [ABILITY_RESTRAINT] = sUnimplementedDescription,
+	[ABILITY_LOGICIAN] = sLogicianDescription,
 };
 
 const u8 gAbilityNames[ABILITIES_COUNT][ABILITY_NAME_LENGTH + 1] =
@@ -533,5 +535,6 @@ const u8 gAbilityNames[ABILITIES_COUNT][ABILITY_NAME_LENGTH + 1] =
     [ABILITY_ARSONIST] = _("Arsonist"),
     [ABILITY_MASTERMIND] = _("Mastermind"),
     [ABILITY_RESTRAINT] = _("Restraint"),
+	[ABILITY_LOGICIAN] = _("Logician"),
     
 };

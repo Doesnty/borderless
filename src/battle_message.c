@@ -141,7 +141,7 @@ static const u8 sText_PkmnHidUnderwater[] = _("{B_ATK_NAME_WITH_PREFIX} disappea
 static const u8 sText_PkmnSprangUp[] = _("{B_ATK_NAME_WITH_PREFIX} sprang up!");
 static const u8 sText_PkmnSqueezedByBind[] = _("{B_DEF_NAME_WITH_PREFIX} was squeezed by\n{B_ATK_NAME_WITH_PREFIX}'s BIND!");
 static const u8 sText_PkmnTrappedInVortex[] = _("{B_DEF_NAME_WITH_PREFIX} was trapped\nin the vortex!");
-static const u8 sText_PkmnTrappedBySandTomb[] = _("{B_DEF_NAME_WITH_PREFIX} was trapped\nby SAND TOMB!");
+static const u8 sText_PkmnTrappedBySandTomb[] = _("{B_DEF_NAME_WITH_PREFIX} was trapped\nby Sand Tomb!");
 static const u8 sText_PkmnWrappedBy[] = _("{B_DEF_NAME_WITH_PREFIX} was Wrapped by\n{B_ATK_NAME_WITH_PREFIX}!");
 static const u8 sText_PkmnClamped[] = _("{B_ATK_NAME_WITH_PREFIX} Clamped\n{B_DEF_NAME_WITH_PREFIX}!");
 static const u8 sText_PkmnHurtBy[] = _("{B_ATK_NAME_WITH_PREFIX} is hurt\nby {B_BUFF1}!");
@@ -275,7 +275,7 @@ static const u8 sText_PkmnAnchorsItselfWith[] = _("{B_DEF_NAME_WITH_PREFIX} anch
 static const u8 sText_PkmnCutsAttackWith[] = _("{B_SCR_ACTIVE_NAME_WITH_PREFIX}'s {B_SCR_ACTIVE_ABILITY}\ncuts {B_DEF_NAME_WITH_PREFIX}'s Attack!");
 static const u8 sText_PkmnPreventsStatLossWith[] = _("{B_SCR_ACTIVE_NAME_WITH_PREFIX}'s {B_SCR_ACTIVE_ABILITY}\nprevents stat loss!");
 static const u8 sText_PkmnHurtsWith[] = _("{B_DEF_NAME_WITH_PREFIX}'s {B_DEF_ABILITY}\nhurt {B_ATK_NAME_WITH_PREFIX}!");
-static const u8 sText_PkmnTraced[] = _("{B_SCR_ACTIVE_NAME_WITH_PREFIX} TRACED\n{B_BUFF1}'s {B_BUFF2}!");
+static const u8 sText_PkmnTraced[] = _("{B_SCR_ACTIVE_NAME_WITH_PREFIX} Traced\n{B_BUFF1}'s {B_BUFF2}!");
 static const u8 sText_PkmnsXPreventsBurns[] = _("{B_EFF_NAME_WITH_PREFIX}'s {B_EFF_ABILITY}\nprevents burns!");
 static const u8 sText_PkmnsXBlocksY[] = _("{B_DEF_NAME_WITH_PREFIX}'s {B_DEF_ABILITY}\nblocks {B_CURRENT_MOVE}!");
 static const u8 sText_PkmnsXBlocksY2[] = _("{B_SCR_ACTIVE_NAME_WITH_PREFIX}'s {B_SCR_ACTIVE_ABILITY}\nblocks {B_CURRENT_MOVE}!");
@@ -575,6 +575,9 @@ const u8 sText_Scheming[] = _("{B_ATK_NAME_WITH_PREFIX} is scheming!");
 const u8 sText_Frisk[] = _("{B_SCR_ACTIVE_NAME_WITH_PREFIX} Frisked {B_DEF_NAME_WITH_PREFIX}\nand found its {B_LAST_ITEM}!");
 const u8 sText_ClearSmog[] = _("{B_DEF_NAME_WITH_PREFIX}'s stat\nchanges were eliminated!");
 const u8 sText_PkmnHurtByBadDreams[] = _("{B_ATK_NAME_WITH_PREFIX} is tormented\nby Bad Dreams!");
+const u8 sText_AbilityBecameLevitate[] = _("{B_ATK_NAME_WITH_PREFIX}'s Ability\nbecame Levitate!");
+const u8 sText_ChangedForm[] = _("{B_ATK_NAME_WITH_PREFIX} changed form!");
+const u8 sText_DisguiseBusted[] = _("{B_DEF_NAME_WITH_PREFIX}'s Disguise\nwas busted!");
 
 
 const u8 *const gBattleStringsTable[] = {
@@ -1015,6 +1018,9 @@ const u8 *const gBattleStringsTable[] = {
     [STRINGID_FRISK - 12]                         = sText_Frisk,
     [STRINGID_CLEARSMOGCLEARBUFFS - 12]           = sText_ClearSmog,
 	[STRINGID_PKMNHURTBYBADDREAMS - 12]           = sText_PkmnHurtByBadDreams,
+	[STRINGID_ABILITYBECAMELEVITATE - 12]         = sText_AbilityBecameLevitate,
+	[STRINGID_CHANGEDFORM - 12]                   = sText_ChangedForm,
+	[STRINGID_DISGUISEBUSTED - 12]                = sText_DisguiseBusted,
 };
 
 const u16 gMissStringIds[] = {
