@@ -128,6 +128,11 @@ const u32 gFile_graphics_items_icon_palettes_iron_palette[] = INCBIN_U32("graphi
 const u32 gFile_graphics_items_icon_palettes_carbos_palette[] = INCBIN_U32("graphics/items/icon_palettes/carbos.gbapal.lz");
 const u32 gFile_graphics_items_icon_palettes_calcium_palette[] = INCBIN_U32("graphics/items/icon_palettes/calcium.gbapal.lz");
 
+const u32 gFile_graphics_items_icons_ability_capsule_sheet[] = INCBIN_U32("graphics/items/icons/ability_capsule.4bpp.lz");
+const u32 gFile_graphics_items_icon_palettes_ability_capsule_palette[] = INCBIN_U32("graphics/items/icon_palettes/ability_capsule.gbapal.lz");
+const u32 gFile_graphics_items_icons_dream_capsule_sheet[] = INCBIN_U32("graphics/items/icons/dream_capsule.4bpp.lz");
+const u32 gFile_graphics_items_icon_palettes_dream_capsule_palette[] = INCBIN_U32("graphics/items/icon_palettes/dream_capsule.gbapal.lz");
+
 const u32 gFile_graphics_items_icons_rare_candy_sheet[] = INCBIN_U32("graphics/items/icons/rare_candy.4bpp.lz");
 const u32 gFile_graphics_items_icon_palettes_rare_candy_palette[] = INCBIN_U32("graphics/items/icon_palettes/rare_candy.gbapal.lz");
 

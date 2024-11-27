@@ -40,3 +40,10 @@ DEEP DIGLETT'S CAVE: 20% CSatori, 20% CRin, 10% CClownpiece, 10% CHisami, 10% CU
 ROUTE 17/18: 20% CAya, 20% CMegumu, 10% CMayumi, 10% CSaki, 10% CSeija, 10% CTenshi, 10% CYachie, 10% CKirisame
 ROUTE 15/14/13: 20% CSanae, 20% CNitori, 10% CKanako, 10% CYumemi, 10% CChimata, 10% CAya, 5% CMokou, 5% CHakurei, 5% CYukari, 5% Momiji
 
+SEAFOAM ISLANDS: 20% Rumia, 20% Letty, 10% Koakuma, 10% Louise, 10% Parsee, 10% Yuki, 10% Mai, 5% Tenshi, 5% Shinki
+
+CINNABAR MANSION F1-3: 20% Rin, 20% Sakuya, 10% Satori, 10% Patchouli, 10% Remilia, 10% Clownpiece, 10% Rika, 5% Tori, 5% ZFairy
+CINNABAR MANSION BASEMENT: 20% SRin, 20% ZFairy, 10% Patchouli, 10% Clownpiece, 10% Flandre, 10% Utsuho, 10% DSatori, 10% TRika
+
+ (warning: zfairy is excruciatingly difficult to catch in the wild b/c it is always at full health and kills itself)
+ (just evolve rin with an incomplete party)

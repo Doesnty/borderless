@@ -457,3 +457,6 @@ const u32 gTrainerPalette_OldManBackPic[] = INCBIN_U32("graphics/trainers/palett
 
 const u32 gTrainerFrontPic_Imakuni[] = INCBIN_U32("graphics/trainers/front_pics/imakuni.4bpp.lz");
 const u32 gTrainerPalette_Imakuni[] = INCBIN_U32("graphics/trainers/palettes/imakuni.gbapal.lz");
+
+const u32 gTrainerFrontPic_ImakuniRed[] = INCBIN_U32("graphics/trainers/front_pics/imakuni_red.4bpp.lz");
+const u32 gTrainerPalette_ImakuniRed[] = INCBIN_U32("graphics/trainers/palettes/imakuni_red.gbapal.lz");

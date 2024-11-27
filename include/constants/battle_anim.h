@@ -309,6 +309,7 @@
 #define ANIM_TAG_DESTITUTION_ORB            (ANIM_SPRITES_START + 299)
 #define ANIM_TAG_VINE_3                     (ANIM_SPRITES_START + 300)
 #define ANIM_TAG_CHARGE_BEAM                (ANIM_SPRITES_START + 301)
+#define ANIM_TAG_HEXAGRAM                   (ANIM_SPRITES_START + 302)
 
 // battlers
 #define ANIM_ATTACKER    0

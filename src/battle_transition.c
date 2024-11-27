@@ -341,11 +341,17 @@ static const TransitionStateFunc sBT_Phase2MugshotFuncs[] =
 static const u8 sMugshotsTrainerPicIDsTable[MUGSHOTS_COUNT] =
 {
     // TODO: document these with macro
-    0x70, 0x71, 0x72, 0x73, 0x7D
+    TRAINER_PIC_ELITE_FOUR_LORELEI,
+	TRAINER_PIC_ELITE_FOUR_BRUNO,
+	TRAINER_PIC_ELITE_FOUR_AGATHA,
+	TRAINER_PIC_ELITE_FOUR_LANCE,
+	TRAINER_PIC_LEAF,
+	TRAINER_PIC_RED,
 };
 
 static const s16 sMugshotsOpponentRotationScales[MUGSHOTS_COUNT][2] =
 {
+    {0x200, 0x200},
     {0x200, 0x200},
     {0x200, 0x200},
     {0x200, 0x200},
@@ -359,6 +365,7 @@ static const s16 sMugshotsOpponentCoords[MUGSHOTS_COUNT][2] =
     { -10, 0 },
     { 0, 0 },
     { -32, 0 },
+    { 0, 0 },
     { 0, 0 },
 };
 
@@ -561,6 +568,7 @@ static const u16 *const sVsBarOpponentPalettes[MUGSHOTS_COUNT] =
     sVsBarBrunoPalette,
     sVsBarAgathaPalette,
     sVsBarLancePalette,
+    sVsBarBluePalette,
     sVsBarBluePalette,
 };
 
@@ -1791,7 +1799,10 @@ static void BT_Phase2StartLanceMugshot(u8 taskId)
 
 static void BT_Phase2StartBlueMugshot(u8 taskId)
 {
-    gTasks[taskId].tWhichMugshot = MUGSHOT_BLUE;
+	if (gSaveBlock2Ptr->playerGender)
+		gTasks[taskId].tWhichMugshot = MUGSHOT_RENKO;
+	else
+		gTasks[taskId].tWhichMugshot = MUGSHOT_MARIBEL;
     BT_Phase2Mugshot(taskId);
 }
 

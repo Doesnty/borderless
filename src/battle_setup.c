@@ -349,7 +349,7 @@ void StartLegendaryBattle(void)
     case SPECIES_MEWTWO:
         CreateBattleStartTask(B_TRANSITION_BLUR, MUS_VS_MEWTWO);
         break;
-    case SPECIES_DEOXYS:
+    case SPECIES_2HU:
         CreateBattleStartTask(B_TRANSITION_BLUR, MUS_VS_DEOXYS);
         break;
     case SPECIES_MOLTRES:
@@ -455,6 +455,34 @@ static void CB2_EndMarowakBattle(void)
     }
 }
 
+static const u8 sIceMaps[] =
+{
+	MAP_GROUP(SEAFOAM_ISLANDS_1F), MAP_NUM(SEAFOAM_ISLANDS_1F),
+	MAP_GROUP(SEAFOAM_ISLANDS_B1F), MAP_NUM(SEAFOAM_ISLANDS_B1F),
+	MAP_GROUP(SEAFOAM_ISLANDS_B2F), MAP_NUM(SEAFOAM_ISLANDS_B2F),
+	MAP_GROUP(SEAFOAM_ISLANDS_B3F), MAP_NUM(SEAFOAM_ISLANDS_B3F),
+	MAP_GROUP(SEAFOAM_ISLANDS_B4F), MAP_NUM(SEAFOAM_ISLANDS_B4F),
+	MAP_GROUP(BIRTH_ISLAND_EXTERIOR), MAP_NUM(BIRTH_ISLAND_EXTERIOR),
+	MAP_GROUP(FOUR_ISLAND_ICEFALL_CAVE_ENTRANCE), MAP_NUM(FOUR_ISLAND_ICEFALL_CAVE_ENTRANCE),
+	MAP_GROUP(FOUR_ISLAND_ICEFALL_CAVE_1F), MAP_NUM(FOUR_ISLAND_ICEFALL_CAVE_1F),
+	MAP_GROUP(FOUR_ISLAND_ICEFALL_CAVE_B1F), MAP_NUM(FOUR_ISLAND_ICEFALL_CAVE_B1F),
+	MAP_GROUP(FOUR_ISLAND_ICEFALL_CAVE_BACK), MAP_NUM(FOUR_ISLAND_ICEFALL_CAVE_BACK),
+	0xFF, 0xFF
+};
+
+static u8 BattleSetup_CurrentMapIsIceMap(void)
+{
+	u32 i;
+	// filthy hack alert
+	
+	for (i = 0; sIceMaps[i] != 0xFF && sIceMaps[i+1] != 0xFF; i += 2)
+	{
+		if (gSaveBlock1Ptr->location.mapGroup == sIceMaps[i] && gSaveBlock1Ptr->location.mapNum == sIceMaps[i + 1])
+			return TRUE;
+	}
+	return FALSE;
+}
+
 u8 BattleSetup_GetTerrainId(void)
 {
     u16 tileBehavior;
@@ -479,6 +507,8 @@ u8 BattleSetup_GetTerrainId(void)
             return BATTLE_TERRAIN_BUILDING;
         if (MetatileBehavior_IsSurfable(tileBehavior))
             return BATTLE_TERRAIN_POND;
+		if (BattleSetup_CurrentMapIsIceMap())
+			return BATTLE_TERRAIN_ICE_CAVE;
         return BATTLE_TERRAIN_CAVE;
     case MAP_TYPE_INDOOR:
     case MAP_TYPE_SECRET_BASE:

@@ -193,6 +193,30 @@ const struct SpriteTemplate gThunderboltOrbSpriteTemplate =
     .callback = AnimThunderboltOrb,
 };
 
+static const union AnimCmd sAnim_BallLightning[] =
+{
+    ANIMCMD_FRAME(0, 1),
+    ANIMCMD_FRAME(16, 1),
+    ANIMCMD_FRAME(32, 1),
+    ANIMCMD_JUMP(0),
+};
+
+static const union AnimCmd *const sAnims_BallLightning[] =
+{
+    sAnim_ThunderboltOrb,
+};
+
+const struct SpriteTemplate gBallLightningSpriteTemplate =
+{
+    .tileTag = ANIM_TAG_SHOCK_2,
+    .paletteTag = ANIM_TAG_SHOCK_2,
+    .oam = &gOamData_AffineOff_ObjNormal_32x32,
+    .anims = sAnims_BallLightning,
+    .images = NULL,
+    .affineAnims = gDummySpriteAffineAnimTable,
+    .callback = AnimThrowProjectile,
+};
+
 const struct SpriteTemplate gSparkElectricityFlashingSpriteTemplate =
 {
     .tileTag = ANIM_TAG_SPARK_2,

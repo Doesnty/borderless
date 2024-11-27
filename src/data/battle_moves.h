@@ -5893,6 +5893,48 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .target = MOVE_TARGET_SELECTED,
         .flags = FLAG_PROTECT_AFFECTED | FLAG_HIGH_CRIT,
     },
+	
+	[MOVE_BLOSSOMING] = 
+	{
+		.effect = EFFECT_BLOSSOMING,
+		.power = 80,
+		.type = TYPE_NATURE,
+		.moveClass = CLASS_SPECIAL,
+		.accuracy = 100,
+		.pp = 10,
+		.secondaryEffectChance = 50,
+		.priority = 0,
+		.target = MOVE_TARGET_SELECTED,
+		.flags = FLAG_PROTECT_AFFECTED,
+	},
+
+    [MOVE_SPATIAL_REND] = 
+    {
+        .effect = EFFECT_HIT,
+        .power = 100,
+        .type = TYPE_ILLUSION,
+        .moveClass = CLASS_SPECIAL,
+        .accuracy = 100,
+        .pp = 10,
+        .secondaryEffectChance = 0,
+        .priority = 0,
+        .target = MOVE_TARGET_SELECTED,
+        .flags = FLAG_PROTECT_AFFECTED | FLAG_HIGH_CRIT,
+    },
+
+    [MOVE_PASSION_DANCE] = 
+    {
+        .effect = EFFECT_RAMPAGE,
+        .power = 120,
+        .type = TYPE_HEART,
+        .moveClass = CLASS_PHYSICAL,
+        .accuracy = 100,
+        .pp = 15,
+        .secondaryEffectChance = 100,
+        .priority = 0,
+        .target = MOVE_TARGET_RANDOM,
+        .flags = FLAG_MAKES_CONTACT | FLAG_PROTECT_AFFECTED,
+    },
 
     [MOVE_ME_FIRST] = 
     {

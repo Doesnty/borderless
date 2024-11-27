@@ -513,6 +513,11 @@ const u32 gMonFrontPic_xtenma[] = INCBIN_U32("graphics/pokemon/xtenma/front.4bpp
 const u32 gMonFrontPic_xsendai[] = INCBIN_U32("graphics/pokemon/xsendai/front.4bpp.lz");
 const u32 gMonFrontPic_seki_head[] = INCBIN_U32("graphics/pokemon/sekibanki_head/front.4bpp.lz");
 const u32 gMonFrontPic_tensokug[] = INCBIN_U32("graphics/pokemon/tensoku_g/front.4bpp.lz");
+const u32 gMonFrontPic_crenko[] = INCBIN_U32("graphics/pokemon/renko_chibi/front.4bpp.lz");
+const u32 gMonFrontPic_trrenko[] = INCBIN_U32("graphics/pokemon/renko_transcendant/front.4bpp.lz");
+const u32 gMonFrontPic_cmaribel[] = INCBIN_U32("graphics/pokemon/maribel_chibi/front.4bpp.lz");
+const u32 gMonFrontPic_trmaribel[] = INCBIN_U32("graphics/pokemon/maribel_transcendant/front.4bpp.lz");
+
 
 const u32 gMonBackPic_reimu_chibi[] = INCBIN_U32("graphics/pokemon/reimu_chibi/back.4bpp.lz");
 const u32 gMonBackPic_reimu_neutral[] = INCBIN_U32("graphics/pokemon/reimu_neutral/back.4bpp.lz");
@@ -1028,6 +1033,10 @@ const u32 gMonBackPic_xtenma[] = INCBIN_U32("graphics/pokemon/xtenma/back.4bpp.l
 const u32 gMonBackPic_xsendai[] = INCBIN_U32("graphics/pokemon/xsendai/back.4bpp.lz");
 const u32 gMonBackPic_seki_head[] = INCBIN_U32("graphics/pokemon/sekibanki_head/back.4bpp.lz");
 const u32 gMonBackPic_tensokug[] = INCBIN_U32("graphics/pokemon/tensoku_g/back.4bpp.lz");
+const u32 gMonBackPic_crenko[] = INCBIN_U32("graphics/pokemon/renko_chibi/back.4bpp.lz");
+const u32 gMonBackPic_trrenko[] = INCBIN_U32("graphics/pokemon/renko_transcendant/back.4bpp.lz");
+const u32 gMonBackPic_cmaribel[] = INCBIN_U32("graphics/pokemon/maribel_chibi/back.4bpp.lz");
+const u32 gMonBackPic_trmaribel[] = INCBIN_U32("graphics/pokemon/maribel_transcendant/back.4bpp.lz");
 
 const u32 gMonPalette_reimu_chibi[] = INCBIN_U32("graphics/pokemon/reimu_chibi/normal.gbapal.lz");
 const u32 gMonPalette_reimu_neutral[] = INCBIN_U32("graphics/pokemon/reimu_neutral/normal.gbapal.lz");
@@ -1543,6 +1552,10 @@ const u32 gMonPalette_xtenma[] = INCBIN_U32("graphics/pokemon/xtenma/normal.gbap
 const u32 gMonPalette_xsendai[] = INCBIN_U32("graphics/pokemon/xsendai/normal.gbapal.lz");
 const u32 gMonPalette_seki_head[] = INCBIN_U32("graphics/pokemon/sekibanki_head/normal.gbapal.lz");
 const u32 gMonPalette_tensokug[] = INCBIN_U32("graphics/pokemon/tensoku_g/normal.gbapal.lz");
+const u32 gMonPalette_crenko[] = INCBIN_U32("graphics/pokemon/renko_chibi/normal.gbapal.lz");
+const u32 gMonPalette_trrenko[] = INCBIN_U32("graphics/pokemon/renko_transcendant/normal.gbapal.lz");
+const u32 gMonPalette_cmaribel[] = INCBIN_U32("graphics/pokemon/maribel_chibi/normal.gbapal.lz");
+const u32 gMonPalette_trmaribel[] = INCBIN_U32("graphics/pokemon/maribel_transcendant/normal.gbapal.lz");
 
 const u32 gMonShinyPalette_reimu_chibi[] = INCBIN_U32("graphics/pokemon/reimu_chibi/shiny.gbapal.lz");
 const u32 gMonShinyPalette_reimu_neutral[] = INCBIN_U32("graphics/pokemon/reimu_neutral/shiny.gbapal.lz");
@@ -2058,6 +2071,10 @@ const u32 gMonShinyPalette_xtenma[] = INCBIN_U32("graphics/pokemon/xtenma/shiny.
 const u32 gMonShinyPalette_xsendai[] = INCBIN_U32("graphics/pokemon/xsendai/shiny.gbapal.lz");
 const u32 gMonShinyPalette_seki_head[] = INCBIN_U32("graphics/pokemon/sekibanki_head/shiny.gbapal.lz");
 const u32 gMonShinyPalette_tensokug[] = INCBIN_U32("graphics/pokemon/tensoku_g/shiny.gbapal.lz");
+const u32 gMonShinyPalette_crenko[] = INCBIN_U32("graphics/pokemon/renko_chibi/shiny.gbapal.lz");
+const u32 gMonShinyPalette_trrenko[] = INCBIN_U32("graphics/pokemon/renko_transcendant/shiny.gbapal.lz");
+const u32 gMonShinyPalette_cmaribel[] = INCBIN_U32("graphics/pokemon/maribel_chibi/shiny.gbapal.lz");
+const u32 gMonShinyPalette_trmaribel[] = INCBIN_U32("graphics/pokemon/maribel_transcendant/shiny.gbapal.lz");
 
 const u8 gMonIcon_reimu_chibi[] = INCBIN_U8("graphics/pokemon/reimu_chibi/icon.4bpp");
 const u8 gMonIcon_reimu_neutral[] = INCBIN_U8("graphics/pokemon/reimu_neutral/icon.4bpp");
@@ -2573,6 +2590,10 @@ const u8 gMonIcon_xtenma[] = INCBIN_U8("graphics/pokemon/xtenma/icon.4bpp");
 const u8 gMonIcon_xsendai[] = INCBIN_U8("graphics/pokemon/xsendai/icon.4bpp");
 const u8 gMonIcon_seki_head[] = INCBIN_U8("graphics/pokemon/sekibanki_head/icon.4bpp");
 const u8 gMonIcon_tensokug[] = INCBIN_U8("graphics/pokemon/tensoku_g/icon.4bpp");
+const u8 gMonIcon_crenko[] = INCBIN_U8("graphics/pokemon/renko_chibi/icon.4bpp");
+const u8 gMonIcon_trrenko[] = INCBIN_U8("graphics/pokemon/renko_transcendant/icon.4bpp");
+const u8 gMonIcon_cmaribel[] = INCBIN_U8("graphics/pokemon/maribel_chibi/icon.4bpp");
+const u8 gMonIcon_trmaribel[] = INCBIN_U8("graphics/pokemon/maribel_transcendant/icon.4bpp");
 
 const u32 gMonFrontPic_DoubleQuestionMark[] = INCBIN_U32("graphics/pokemon/question_mark/double/front.4bpp.lz");
 const u32 gMonPalette_DoubleQuestionMark[] = INCBIN_U32("graphics/pokemon/question_mark/double/normal.gbapal.lz");

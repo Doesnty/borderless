@@ -83,7 +83,7 @@ SSAnne_2F_Room2_EventScript_ItemStardust:: @ 81BE66B
 	end
 
 SSAnne_2F_Room4_EventScript_ItemXAttack:: @ 81BE678
-	finditem ITEM_X_ATTACK
+	finditem ITEM_SUPER_POTION
 	end
 
 SSAnne_B1F_Room2_EventScript_ItemTM44:: @ 81BE685
@@ -115,7 +115,7 @@ RocketHideout_B1F_EventScript_ItemHyperPotion:: @ 81BE6D3
 	end
 
 RocketHideout_B2F_EventScript_ItemXSpeed:: @ 81BE6E0
-	finditem ITEM_X_SPEED
+	finditem ITEM_SUPER_POTION
 	end
 
 RocketHideout_B2F_EventScript_ItemMoonStone:: @ 81BE6ED
@@ -267,7 +267,7 @@ SilphCo_6F_EventScript_ItemHPUp:: @ 81BE8C1
 	end
 
 SilphCo_6F_EventScript_ItemXSpecial:: @ 81BE8CE
-	finditem ITEM_X_SPECIAL
+	finditem ITEM_SUPER_POTION
 	end
 
 SilphCo_7F_EventScript_ItemCalcium:: @ 81BE8DB
@@ -355,7 +355,7 @@ VictoryRoad_1F_EventScript_ItemTM02:: @ 81BE9DF
 	end
 
 VictoryRoad_2F_EventScript_ItemGuardSpec:: @ 81BE9EC
-	finditem ITEM_GUARD_SPEC
+	finditem ITEM_HYPER_POTION
 	end
 
 VictoryRoad_2F_EventScript_ItemTM07:: @ 81BE9F9
@@ -435,7 +435,7 @@ MtMoon_B2F_EventScript_ItemAntidote:: @ 81BEAE3
 	end
 
 Route11_EventScript_ItemXDefend:: @ 81BEAF0
-	finditem ITEM_X_DEFEND
+	finditem ITEM_SUPER_POTION
 	end
 
 Route9_EventScript_ItemBurnHeal:: @ 81BEAFD
@@ -619,7 +619,7 @@ MtEmber_Exterior_EventScript_ItemFireStone:: @ 81BED39
 	end
 
 MtEmber_Exterior_EventScript_ItemDireHit:: @ 81BED46
-	finditem ITEM_DIRE_HIT
+	finditem ITEM_HYPER_POTION
 	end
 
 FourIsland_IcefallCave_1F_EventScript_ItemUltraBall:: @ 81BED53

@@ -358,7 +358,7 @@ static const u8 sText_CoinsScattered[] = _("Coins scattered everywhere!");
 static const u8 sText_TooWeakForSubstitute[] = _("It was too weak to make\na Substitute!");
 static const u8 sText_SharedPain[] = _("The battlers shared\ntheir pain!");
 static const u8 sText_BellChimed[] = _("A bell chimed!");
-static const u8 sText_FaintInThree[] = _("All affected Puppet will\nfaint in three turns!");
+static const u8 sText_FaintInThree[] = _("All affected Puppets will\nfaint in three turns!");
 static const u8 sText_NoPPLeft[] = _("There's no PP left for\nthis move!\p");
 static const u8 sText_ButNoPPLeft[] = _("But there was no PP left\nfor the move!");
 static const u8 sText_PkmnIgnoresAsleep[] = _("{B_ATK_NAME_WITH_PREFIX} ignored\norders while asleep!");
@@ -578,6 +578,15 @@ const u8 sText_PkmnHurtByBadDreams[] = _("{B_ATK_NAME_WITH_PREFIX} is tormented\
 const u8 sText_AbilityBecameLevitate[] = _("{B_ATK_NAME_WITH_PREFIX}'s Ability\nbecame Levitate!");
 const u8 sText_ChangedForm[] = _("{B_ATK_NAME_WITH_PREFIX} changed form!");
 const u8 sText_DisguiseBusted[] = _("{B_DEF_NAME_WITH_PREFIX}'s Disguise\nwas busted!");
+const u8 sText_TwinSparkActivates[] = _("{B_ATK_NAME_WITH_PREFIX}'s Twin Spark\nlets it attack again!");
+const u8 sText_BlankCardActivates[] = _("{B_SCR_ACTIVE_NAME_WITH_PREFIX}'s Blank Card\nturned into {B_BUFF1}!");
+const u8 sText_HailWhippedUp[] = _("{B_SCR_ACTIVE_NAME_WITH_PREFIX}'s {B_SCR_ACTIVE_ABILITY}\nwhipped up a sandstorm!");
+const u8 sText_MyRealmSet[] = _("{B_SCR_ACTIVE_NAME_WITH_PREFIX}'s {B_SCR_ACTIVE_ABILITY}\ntwisted the dimensions!");
+const u8 sText_MyRealmUnset[] = _("{B_SCR_ACTIVE_NAME_WITH_PREFIX}'s {B_SCR_ACTIVE_ABILITY}\nuntwisted the dimensions!");
+const u8 sText_HarvestActivates[] = _("{B_ATK_NAME_WITH_PREFIX} Harvested\none {B_LAST_ITEM}!");
+const u8 sText_CursedBody[] = _("{B_ATK_NAME_WITH_PREFIX}'s {B_BUFF1}\nwas disabled by Cursed Body!");
+const u8 sText_IntimBackfire[] = _("{B_SCR_ACTIVE_NAME_WITH_PREFIX}'s {B_SCR_ACTIVE_ABILITY}\nups {B_DEF_NAME_WITH_PREFIX}'s Attack!");
+const u8 sText_Devourer[] = _("{B_ATK_NAME_WITH_PREFIX} Devoured\n{B_DEF_NAME_WITH_PREFIX}'s HP!");
 
 
 const u8 *const gBattleStringsTable[] = {
@@ -1021,6 +1030,15 @@ const u8 *const gBattleStringsTable[] = {
 	[STRINGID_ABILITYBECAMELEVITATE - 12]         = sText_AbilityBecameLevitate,
 	[STRINGID_CHANGEDFORM - 12]                   = sText_ChangedForm,
 	[STRINGID_DISGUISEBUSTED - 12]                = sText_DisguiseBusted,
+	[STRINGID_TWINSPARKACTIVATES - 12]            = sText_TwinSparkActivates,
+	[STRINGID_BLANKCARDACTIVATES - 12]            = sText_BlankCardActivates,
+	[STRINGID_HAILWHIPPEDUP - 12]                 = sText_HailWhippedUp,
+	[STRINGID_MYREALMSET - 12]                    = sText_MyRealmSet,
+	[STRINGID_MYREALMUNSET - 12]                  = sText_MyRealmUnset,
+	[STRINGID_HARVESTACTIVATES - 12]              = sText_HarvestActivates,
+	[STRINGID_CURSEDBODY - 12]                    = sText_CursedBody,
+	[STRINGID_INTIMBACKFIRE - 12]                 = sText_IntimBackfire,
+	[STRINGID_DEVOURER - 12]                      = sText_Devourer,
 };
 
 const u16 gMissStringIds[] = {
@@ -2043,8 +2061,7 @@ u32 BattleStringExpandPlaceholders(const u8 *src, u8 *dst)
                 else
                 {
                     if (gTrainers[gTrainerBattleOpponent_A].trainerClass == TRAINER_CLASS_RIVAL_EARLY
-                     || gTrainers[gTrainerBattleOpponent_A].trainerClass == TRAINER_CLASS_RIVAL_LATE
-                     || gTrainers[gTrainerBattleOpponent_A].trainerClass == TRAINER_CLASS_CHAMPION)
+                     || gTrainers[gTrainerBattleOpponent_A].trainerClass == TRAINER_CLASS_RIVAL_LATE)
                         toCpy = GetExpandedPlaceholder(PLACEHOLDER_ID_RIVAL);
                     else
                         toCpy = gTrainers[gTrainerBattleOpponent_A].trainerName;

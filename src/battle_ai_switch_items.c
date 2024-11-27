@@ -465,6 +465,9 @@ u8 GetMostSuitableMonToSwitchInto(void)
                 && !(gBitTable[i] & invalidMons)
                 && gBattlerPartyIndexes[battlerIn1] != i
                 && gBattlerPartyIndexes[battlerIn2] != i
+				&& GetMonAbility(&gEnemyParty[i]) != ABILITY_MASTERMIND
+				&& GetMonAbility(&gEnemyParty[i]) != ABILITY_TIME_CONTROL
+				&& GetMonAbility(&gEnemyParty[i]) != ABILITY_MY_REALM
                 && i != *(gBattleStruct->monToSwitchIntoId + battlerIn1)
                 && i != *(gBattleStruct->monToSwitchIntoId + battlerIn2))
             {
@@ -513,6 +516,7 @@ u8 GetMostSuitableMonToSwitchInto(void)
     // If we couldn't find the best mon in terms of typing, find the one that deals most damage.
     for (i = 0; i < PARTY_SIZE; ++i)
     {
+		u8 ability = GetMonAbility(&gEnemyParty[i]);
         if (((u16)(GetMonData(&gEnemyParty[i], MON_DATA_SPECIES)) == SPECIES_NONE)
          || (GetMonData(&gEnemyParty[i], MON_DATA_HP) == 0)
          || (gBattlerPartyIndexes[battlerIn1] == i)
@@ -524,6 +528,10 @@ u8 GetMostSuitableMonToSwitchInto(void)
         {
             move = GetMonData(&gEnemyParty[i], MON_DATA_MOVE1 + j);
             gBattleMoveDamage = 0;
+			if (ability == ABILITY_MASTERMIND || ability == ABILITY_TIME_CONTROL || ability == ABILITY_MY_REALM)
+			{
+				gBattleMoveDamage = 1;
+			}
             if (move != MOVE_NONE && gBattleMoves[move].power != 1)
             {
                 AI_CalcDmg(gActiveBattler, opposingBattler);

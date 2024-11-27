@@ -1,5 +1,6 @@
 nine(ish.) mons of each level, then plus one
 ensures a player who fights everyone stays on curve
+(this does assume a party structure of 4->5->6 mons, growing at lv16 and lv28)
 see lvlcurve spreadsheet for math
 evolved mons give roughly triple exp
 
@@ -187,12 +188,12 @@ HIKER OLIVER: CKogasa Lv23, CMiko Lv24
 HIKER LUCAS: CFlandre Lv23, CMarisa Lv24
 PICNICKER SOFIA: CAlice Lv23, CShizuha Lv24
 HIKER DUDLEY: AYuugi Lv25
-TOHOMANIAC COOPER: CRaiko Lv23, CHakurei CLv24
-PICNICKER LEAH: CSunny Lv23, CMystia Lv24
+TOHOMANIAC COOPER: CKotohime Lv23, CHakurei CLv24
+PICNICKER LEAH: CSatori Lv23, CMystia Lv24
 PICNICKER ARIANA: CToyohime Lv25
 PICNICKER DANA: CHatate Lv23, Daiyousei Lv25
 
-PICNICKER CAROL: CKeine Lv23, CStar Lv24
+PICNICKER CAROL: CKeine Lv23, CBenben Lv24
 HIKER CLARK: CYamame Lv24, CMedicine Lv24
 HIKER TRENT: CSanae Lv24, CBiten Lv24
 TOHOMANIAC HERMAN: CSeija Lv26
@@ -259,7 +260,7 @@ ACE TRAINER MARY: ASunny Lv28, ALuna Lv28, AStar Lv28, TCirno Lv29
 BEAUTY LORI: CKaguya Lv29, DWriggle Lv29
 LASS LISA: CTakane Lv29, Eternity Lv29
 
-ERIKA: CYuuka Lv29, Hisami Lv30, AMedicine Lv30, Akis Lv30
+ERIKA: CYuuka Lv29, Hisami Lv30, AkiSisters Lv30, Ringo Lv30
 
 HOPE: CYuyuko Lv29
 PATRICIA: CTojiko Lv29, HMerlin Lv30
@@ -312,7 +313,7 @@ SWIMMERM REECE: Murasa Lv35
 
 PICNICKER YAZMIN: CKikuri Lv35, TNazrin Lv35
 BIRD KEEPER -> BUG MANIAC EDWIN: CMomoyo Lv34, SYamame Lv35, SWriggle Lv35
-BIRD KEEPER CHESTER: CNue Lv35, THatate Lv36
+BIRD KEEPER CHESTER: CNue Lv35, DHatate Lv36
 PICNICKER KINDRA: Medicine Lv36, CByakuren Lv36
 BEAUTY OLIVIA: Shanghai Lv36, Hourai Lv36, TAlice Lv36
 BEAUTY GRACE: CKagerou Lv36, Seiga Lv36
@@ -321,7 +322,7 @@ BIKER ERNEST: DHina Lv36, DReisen Lv36
 PICNICKER BECKY: Mai Lv36, Hisami Lv36
 PICNICKER CELIA: Alice Lv36, CMiko Lv36
 
-BIKER GERALD: CSaki Lv37, TKyouko Lv37
+BIKER GERALD: CElis Lv37, TKyouko Lv37
 BIKER MALIK: HYoshika Lv37, TKogasa Lv37
 BIKER ISAAC: Ichirin Lv37, Ringo Lv37
 BIKER LUKAS: Mayumi Lv37, Sara Lv37
@@ -330,7 +331,7 @@ BIRD KEEPER -> TOHOMANIAC DONALD: CSuwako Lv37, CUtsuho Lv37, CTenshi Lv37
 BIRD KEEPER MARLON: AMystia Lv39
 BIRD KEEPER -> TOHOMANIAC BECK: Kosuzu Lv37, Patchouli Lv38
 BIRD KEEPER -> ROCKER MITCH: Benben Lv37, Lunasa Lv38
-BIRD KEEPER -> TOHOMANIAC CARTER: SMeiling Lv37, Reisen II Lv38
+BIRD KEEPER -> TOHOMANIAC CARTER: AdMeiling Lv37, Reisen II Lv38
 BIKER JARED: CMagan Lv37, Satori Lv38
 BIRD KEEPER PERRY: ATokiko Lv39
 PICNICKER GWEN: LilyWhite Lv38, HLetty Lv38
@@ -353,7 +354,7 @@ TAMER EDGAR: Tsukasa Lv40, Rumia Lv40
 TAMER PHIL: ANue Lv40, Momoyo Lv40
 JUGGLER SHAWN: TYukari Lv41
 
-KOGA: Nue Lv41, HEirin Lv41, Shion Lv41, Yoshika Lv42
+KOGA: Magan Lv41, HEirin Lv41, Shion Lv41, Yoshika Lv42
 
 BLACKBELT HIDEKI: Meiling Lv41, Hakurei Lv42
 BLACKBELT HITOSHI: SMeiling Lv41, DIchirin Lv42
@@ -377,7 +378,7 @@ JOSE: CYumemi Lv44, Seiran Lv44
 
 SILPH F4
 GRUNT26: Medicine Lv43, DIku Lv44
-GRUNT27: TCirno Lv43, DTenshi Lv44
+GRUNT27: TReisen Lv43, DTenshi Lv44
 RODNEY: Ruukoto Lv70
 
 SILPH F5
@@ -403,7 +404,7 @@ GRUNT36: DWriggle Lv46, TIku Lv46
 PARKER: Ringo Lv46, Luna Lv46
 
 SILPH F9
-GRUNT37: Cirno Lv45, DHina Lv46, Mike Lv46
+GRUNT37: Cirno Lv45, Parsee Lv46, Mike Lv46
 GRUNT38: DWakasagihime Lv46, ATewi Lv47
 ED: CZanmu Lv45, Rika Lv48
 
@@ -428,7 +429,7 @@ GIOVANNI:
  AKeine Lv50
  
 PSYCHIC CAMERON: HByakuren Lv48, Marisa Lv49
-PSYCHIC TYRON: Koakuma Lv47, TSakuya Lv48, Chiyuri Lv48
+PSYCHIC TYRON: Koakuma Lv47, Sakuya Lv48, Chiyuri Lv48
 CHANNELER STACY: Layla Lv48, Narumi Lv49
 PSYCHIC PRESTON: Satori Lv48, Eirin Lv49
 CHANNELER AMANDA: Byakuren Lv47, DLayla Lv48, Keine Lv48
@@ -448,41 +449,176 @@ LASS CRISSY: AMarisa Lv49, Sunny Lv49, HStar Lv49, Luna Lv49
 POWER PLANT
 TOHOMANIAC MARK: ShingyokuM Lv50, Kirisame Lv50
 
-SWIMMER TONY: Enoko
-SWIMMER DAVID: TNitori
-SWIMMER DOUGLAS: Reimu, Yukari
-SWIMMER MATTHEW: Wakasagihime
-SWIMMER AXLE: Murasa, Marisa
-SWIMMER ALICE: Alice
-SWIMMER CONNIE: Patchouli, Joon
-SWIMMER ANYA: Nitori, Narumi
-SWIMMER BARRY: Hina, Komachi, Louise
-SWIMMER DARRIN: ASuika, DYuugi
-SWIMMER SHIRLEY: Lunasa, DSuwako
-SWIMMER TIFFANY: CShinki, Yuki, Mai
+route 19 (east of seafoam)
+SWIMMER TONY: Enoko Lv51
+SWIMMER DAVID: TNitori Lv51
+SWIMMER DOUGLAS: Reimu Lv49, Yukari Lv50
+SWIMMER MATTHEW: Wakasagihime Lv52
+SWIMMER AXLE: Murasa Lv49, Marisa Lv50
+SWIMMER ALICE: Alice Lv51
+SWIMMER CONNIE: SShizuha Lv50, Joon Lv50
+SWIMMER ANYA: Sanae Lv50, TShou Lv50
+SWIMMER BARRY: Komachi Lv49, HShizuha Lv49, Louise Lv50
+SWIMMER DARRIN: ASuika Lv50, Yuugi Lv50
+SWIMMER SHIRLEY: Lunasa Lv50, Suwako Lv50
+SWIMMER TIFFANY: CShinki Lv49, Yuki Lv51, Mai Lv51
+
+(west of seafoam)
+PICNICKER IRENE: Louise Lv53
+BIRD KEEPER ROGER: Utsuho Lv51, Megumu Lv51
+SWIMMER NORA: Mamizou Lv53
+SWIMMER DEAN: Joon Lv51, DMurasa Lv51
+PICNICKER MISSY: Chiyuri Lv53
+SWIMMER MELISSA: TRika Lv51, Nitori Lv51
+
+(north of cinnabar)
+SWIMMER JEROME: Rikako Lv52, Aya Lv52, SKomachi Lv52
+SWIMMER ROLAND: DSunny Lv52, TSanae Lv53
+SWIMMER JACK: Miyoi Lv54
+FISHER NOLAN: DMeiling Lv52, TSakuya Lv53
+FISHER CLAUDE: Wakasagihime Lv53, TSatori Lv53
+SWIMMER SPENCER: Kanako Lv53, Kutaka Lv53
+FISHER RONALD: Toyohime Lv54
+FISHER WADE: CHina Lv50, CHina Lv50, Hina Lv52, DHina Lv52, AHina Lv52, CHina Lv75
+
+mansion
+BURGLAR ARNIE: HNazrin Lv52, TNazrin Lv52, Marisa Lv52
+BURGLAR SIMON: HSakuya Lv53, Tojiko Lv54
+YOUNGSTER JOHNSON: DYoumu Lv53, TYamame Lv54
+SCIENTIST BRAYDON: Mima Lv53, Tsukasa Lv54
+SCIENTIST TED: ANitori Lv52, Seiga Lv52, DRemilia Lv52
+BURGLAR LEWIS: Miko Lv55
+SCIENTIST IVAN: AEirin Lv53, Eternity Lv54, Narumi Lv54
+
+BURGLAR QUINN: ASunny Lv54, TKisume Lv55
+SUPER NERD ERIK: AKaguya Lv54, DMokou Lv55
+SUPER NERD AVERY: ARin Lv54, ZFairy Lv53, SRin Lv54, ZFairy Lv53
+BURGLAR RAMON: Sannyo Lv54, ASuika Lv54, AMarisa Lv55
+SUPER NERD DEREK: TCirno Lv54, TCirno Lv55, Yuki Lv55
+BURGLAR DUSTY: Chiyari Lv55, APatchouli Lv56
+SUPER NERD ZAC: Mimi-chan Lv55, Hecatia Lv56
+
+BLAINE:
+Sunny Lv56
+SUtsuho Lv57
+HKasen Lv57
+LMarisa Lv57
+AUtsuho Lv60
+
+(three island)
+GOON: Hina Lv54, AYuuka Lv55
+GOON: DSeija Lv55, Hakurei Lv55
+GOON: Luna Lv55, Mai Lv55
+CUE BALL PAXTON: Gengetsu Lv55, Tenshi Lv56
+
+AROMA LADY VIOLET: DMinoriko Lv55, TYuuka Lv55, HRan Lv56
+TUBER ALEXIS: SKogasa Lv56, Eika Lv57
+SWIMMER TISHA: DYuugi Lv58
+TUBER AMIRA: Akyuu Lv56, Keine Lv57
+AROMA LADY NIKKI: Urumi Lv56, DYukari Lv57
+
+IMAKUNI 4: Koishi Lv57, Clownpiece Lv57, DSuwako Lv57, AdTewi Lv57, Genji Lv59, Mai&Satono Lv60
+
+(treasure beach)
+SWIMMER AMARA: Kisume Lv56, Reisen II Lv57
+
+(kindle road)
+SWIMMER ABIGAIL: Misumaru Lv57, AdLetty Lv58
+PICNICKER CLAIRE: Mokou Lv56, Ringo Lv56, AdMystia Lv56
+CAMPER BRYCE: Nitori Lv57, Yuugi Lv58
+CRUSH GIRL TANYA: Biten Lv59
+SWIMMER GARRETT: Komachi Lv56, Lily White Lv56, Eiki Lv56
+BLACK BELT HUGH: DReimu Lv59
+BLACK BELT SHEA: Orange Lv57, Sara Lv58
+CRUSH GIRL SHARON: SMeiling Lv59
+SWIMMER FINN: TKisume Lv57, Yachie Lv58
+SWIMMER MARIA: Tenshi Lv57, Wakasagihime Lv58
+FISHERMAN TOMMY: DWakasagihime Lv59
+
+RANGER BETH: Eirin Lv57, Momoyo Lv58
+CRUSH GIRL JOCELYN: AMokou Lv59
+RANGER LOGAN: Elly Lv56, Kasen Lv57, DSatori Lv57
+
+(viridian gym)
+TAMER COLE: Kagerou Lv58, DIku Lv59
+BLACKBELT KIYO: Konngara Lv60
+BLACKBELT ATSUSHI: AYuugi Lv60
+TAMER JASON: Aunn Lv58, TNue Lv59
+BLACKBELT TAKASHI: Youmu Lv60
+
+COOLTRAINER YUJI: Flandre Lv58, TByakuren Lv60, Benben Lv58, ShingyokuF Lv59, Tenma Lv59
+COOLTRAINER SAMUEL: Remilia Lv58, Seiga Lv59, Yatsuhashi Lv58, ShingyokuM Lv59, Youki Lv60
+COOLTRAINER WARREN: TSekibanki Lv58, Megumu Lv59, Layla Lv58, Momiji Lv59, Raiko Lv58, AMedicine Lv60
+
+GIOVANNI:
+ Yachie Lv59
+ Nemuno Lv61
+ Mima Lv61
+ Saki Lv62
+ AMiko Lv61
+ AKeine Lv65
+
+RIVAL: [actual mons on spreadsheet]
+ Lv60, Lv60, Lv60, Lv61, Lv61, Lv64
+
+COOLTRAINER NAOMI: SMedicine Lv60, SKomachi Lv60, Aya Lv60, Rin Lv60, Yumeko Lv60
+COOLTRAINER ROLANDO: SKoishi Lv61, DPatchouli Lv61, AFlandre Lv61, SAya Lv61, LYoumu Lv61
+
+TOHOMANIAC DAWSON: TAlice Lv61, AdAlice Lv61, AAlice Lv62, Arisu Lv62, CArisu Lv65
+BLACKBELT DAISUKE: ATenshi Lv60, DMiko Lv60, SYoumu Lv61, ShingyokuO Lv61, Yuuma Lv62
+TAMER VINCENT: AdRan Lv60, Mokou Lv61, Urumi Lv62, Momoyo Lv62, Kutaka Lv62
+JUGGLER NELSON: LYuyuko Lv61, Seija Lv61, AKoishi Lv62, AShou Lv62, Elis Lv63
+
+ACE TRAINER GEORGE: TCirno Lv62, AMinoriko Lv63, SFlandre Lv63, SRin Lv63, STojiko Lv64
+ACE TRAINER ALEXA: Chimata Lv62, ASanae Lv63, AKanako Lv63, ANitori Lv63, Shion Lv64
+ACE TRAINER COLBY+: ARumia Lv62, AdCirno Lv62, Wriggle Lv62, AMystia Lv63, ADaiyousei Lv63
+ACE TRAINER CAROLINE: ARaiko Lv62, DKanako Lv62, DYuyuko Lv62, ASuwako Lv63, Kaguya Lv63
+
+JUGGLER GREGORY: AdMarisa Lv63, AReimu Lv63, AdYukari Lv63, TToyohime Lv64, Sariel Lv64
+
 
 LORELEI:
- Yumemi
+ Letty Lv66
+ AKomachi Lv66
+ SCirno Lv66
+ DKaguya Lv66
+ Yumemi Lv68
 
 BRUNO:
- TSuika
- Saki
- Keiki
+ TSuika Lv66
+ Saki Lv66
+ AdMokou Lv66
+ Shinmyoumaru Lv66
+ Keiki Lv68
 
 AGATHA:
- Youki
- ARemilia
- AYuyuko
- Lyrica
- Dark Alice
+ Youki Lv67
+ ARemilia Lv67
+ AYuyuko Lv67
+ Lyrica Lv67
+ Dark Alice Lv69
 
 LANCE:
- Junko
- SSariel
- Okina
- Zanmu
+ Junko Lv68
+ SSariel Lv68
+ AdReisen Lv68
+ Tenma Lv68
+ SYorihime Lv70
+ Zanmu Lv70
 
-CHAMPION:
- AdYukari
- Sendai
+CHAMPION RENKO:
+ Suika Lv70
+ AKazami Lv70
+ Sagume Lv70
+ Okina Lv71
+ Magic Stones Lv71
+ TrRenko Lv72
+
+CHAMPION MARIBEL:
+ Yuyuko Lv70
+ HEirin Lv70
+ Satori Lv70
+ AShinmyoumaru Lv71
+ Sendai Lv71
+ TrMaribel Lv72
  

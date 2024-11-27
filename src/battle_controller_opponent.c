@@ -176,13 +176,21 @@ static void OpponentBufferRunCommand(void)
 static void CompleteOnBattlerSpriteCallbackDummy(void)
 {
     if (gSprites[gBattlerSpriteIds[gActiveBattler]].callback == SpriteCallbackDummy)
-        OpponentBufferExecCompleted();
+    {
+		if (gTrainerBattleOpponent_A == TRAINER_IMAKUNI_4)
+		{
+			ForceShinyAnimation(1);
+		}
+		OpponentBufferExecCompleted();
+	}
 }
 
 static void CompleteOnBattlerSpriteCallbackDummy2(void)
 {
     if (gSprites[gBattlerSpriteIds[gActiveBattler]].callback == SpriteCallbackDummy)
-        OpponentBufferExecCompleted();
+	{
+		OpponentBufferExecCompleted();
+	}
 }
 
 static void FreeTrainerSpriteAfterSlide(void)

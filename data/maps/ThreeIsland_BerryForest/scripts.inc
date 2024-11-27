@@ -21,11 +21,9 @@ ThreeIsland_BerryForest_EventScript_Lostelle:: @ 8163C83
 	msgbox ThreeIsland_BerryForest_Text_HereItComesAgain
 	goto_if_questlog EventScript_ReleaseEnd
 	waitse
-	playmoncry SPECIES_HYPNO, 2
-	waitmoncry
-	setwildbattle SPECIES_HYPNO, 30, ITEM_NONE
-	dowildbattle
-	special QuestLog_CutRecording
+	
+	trainerbattle_no_intro TRAINER_IMAKUNI_4, ThreeIsland_BerryForest_Text_ImakuniLoss
+	
 	applymovement LOCALID_LOSTELLE, Movement_FacePlayer
 	waitmovement 0
 	msgbox ThreeIsland_BerryForest_Text_ThankYouHaveThis

@@ -80,13 +80,13 @@ BirthIsland_Exterior_EventScript_Deoxys:: @ 81652C0
 	applymovement LOCALID_DEOXYS, Movement_DeoxysApproach
 	waitmovement 0
 	waitse
-	playmoncry SPECIES_DEOXYS, 2
+	playmoncry SPECIES_2HU, 2
 	delay 40
 	waitmoncry
 	setvar VAR_LAST_TALKED, LOCALID_DEOXYS
-	setvar VAR_0x8004, SPECIES_DEOXYS
-	setvar VAR_0x8005, 30  @ Level
-	setvar VAR_0x8006, ITEM_NONE
+	setvar VAR_0x8004, SPECIES_2HU
+	setvar VAR_0x8005, 60  @ Level
+	setvar VAR_0x8006, ITEM_BRIGHT_POWDER
 	special CreateEventLegalEnemyMon
 	setflag FLAG_SYS_SPECIAL_WILD_BATTLE
 	special StartLegendaryBattle

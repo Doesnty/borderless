@@ -445,7 +445,7 @@ struct BattleStruct
     u8 multiplayerId;
     u8 overworldWeatherDone;
     u8 atkCancellerTracker;
-    u16 usedHeldItems[MAX_BATTLERS_COUNT];
+    u16 usedHeldItems[PARTY_SIZE * 2];
     u8 chosenItem[4]; // why is this an u8?
     u8 AI_itemType[2];
     u8 AI_itemFlags[2];
@@ -468,7 +468,9 @@ struct BattleStruct
         struct MultiBattlePokemonTx multiBattleMons[3];
     } multiBuffer;
     u8 wallMasterTracker;
-    u8 padding_1E4[0x1B];
+	u8 twinSparkTracker;
+	u16 itemsAtBattleStart[PARTY_SIZE];
+    u8 padding_1E4[0x1A];
 }; // size == 0x200 bytes
 
 extern struct BattleStruct *gBattleStruct;

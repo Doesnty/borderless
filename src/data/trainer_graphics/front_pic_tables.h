@@ -303,6 +303,7 @@ const struct CompressedSpriteSheet gTrainerFrontPicTable[] =
     TRAINER_SPRITE(LADY, gTrainerFrontPic_Lady, 0x800),
     TRAINER_SPRITE(PAINTER, gTrainerFrontPic_Painter, 0x800),
     TRAINER_SPRITE(IMAKUNI, gTrainerFrontPic_Imakuni, 0x800),
+    TRAINER_SPRITE(IMAKUNI_RED, gTrainerFrontPic_ImakuniRed, 0x800),
 };
 
 const struct CompressedSpritePalette gTrainerFrontPicPaletteTable[] =
@@ -456,4 +457,5 @@ const struct CompressedSpritePalette gTrainerFrontPicPaletteTable[] =
     TRAINER_PAL(LADY, gTrainerPalette_Lady),
     TRAINER_PAL(PAINTER, gTrainerPalette_Painter),
     TRAINER_PAL(IMAKUNI, gTrainerPalette_Imakuni),
+    TRAINER_PAL(IMAKUNI_RED, gTrainerPalette_ImakuniRed),
 };

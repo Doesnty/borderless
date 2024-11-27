@@ -421,5 +421,8 @@ const u8 gMoveNames[][15] = {
 	_("Flight"),
 	_("Core Surge"),
 	_("Cataclysm"),
+	_("Blossoming"),
+	_("Spatial Rend"),
+	_("Passion Dance"),
     _("Me First"),
 };

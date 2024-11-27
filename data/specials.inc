@@ -454,4 +454,5 @@ gSpecials:: @ 815FD60
 	def_special CreateEventLegalEnemyMon
     def_special SelectZunStarter
 	def_special SetNatureOverride
+	def_special CountBadges
 gSpecialsEnd::

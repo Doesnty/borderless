@@ -993,12 +993,19 @@ static const u16 sDexCategory_Special_Page3[] = {
 };
 
 static const u16 sDexCategory_Special_Page4[] = {
+	SPECIES_CRENKO,
+	SPECIES_TRRENKO,
+	SPECIES_CMARIBEL,
+	SPECIES_TRMARIBEL,
+};
+
+static const u16 sDexCategory_Special_Page5[] = {
 	SPECIES_XSUWAKO,
 	SPECIES_XUTSUHO,
 	SPECIES_XTENSHI,
 };
 
-static const u16 sDexCategory_Special_Page5[] = {
+static const u16 sDexCategory_Special_Page6[] = {
 	SPECIES_XTENMA,
 	SPECIES_XSENDAI,
 };
@@ -1239,6 +1246,7 @@ static const struct PokedexCategoryPage sDexCategory_SpecialPkmn[] = {
 	DEX_CATEGORY(Special_Page3),
 	DEX_CATEGORY(Special_Page4),
 	DEX_CATEGORY(Special_Page5),
+	DEX_CATEGORY(Special_Page6),
 };
 
 

@@ -167,6 +167,7 @@
 #define TRAINER_PIC_LADY                  146
 #define TRAINER_PIC_PAINTER               147
 #define TRAINER_PIC_IMAKUNI               148
+#define TRAINER_PIC_IMAKUNI_RED           149
 
 // Leftover from R/S
 #define TRAINER_SECRET_BASE                 1024
@@ -281,6 +282,9 @@
 #define TRAINER_CLASS_STRANGER            107
 #define TRAINER_CLASS_WILD                108
 #define TRAINER_CLASS_BLACK_BELT_IMAKUNI  109
+#define TRAINER_CLASS_STRANGEST           110
+#define TRAINER_CLASS_FAKE_ACE            111
+
 
 #define FACILITY_CLASS_AQUA_LEADER_ARCHIE     0
 #define FACILITY_CLASS_AQUA_GRUNT_M           1

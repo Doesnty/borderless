@@ -10,21 +10,22 @@ PokemonLeague_ChampionsRoom_MapScripts:: @ 8162AE2
 PokemonLeague_ChampionsRoom_OnResume:: @ 8162AF2
 	setvar VAR_0x8004, 4
 	call PokemonLeague_EventScript_DoLightingEffect
-	compare VAR_STARTER_MON, 2
+	checkplayergender
+	compare VAR_RESULT, 0
 	call_if_eq PokemonLeague_ChampionsRoom_EventScript_CheckStopTriggerSquirtle
-	compare VAR_STARTER_MON, 1
+	compare VAR_RESULT, 1
 	call_if_eq PokemonLeague_ChampionsRoom_EventScript_CheckStopTriggerBulbasaur
-	compare VAR_STARTER_MON, 0
-	call_if_eq PokemonLeague_ChampionsRoom_EventScript_CheckStopTriggerCharmander
 	end
 
 PokemonLeague_ChampionsRoom_EventScript_CheckStopTriggerSquirtle:: @ 8162B1E
-	goto_if_defeated TRAINER_CHAMPION_FIRST_SQUIRTLE, PokemonLeague_ChampionsRoom_EventScript_StopSceneTrigger
+	setvar VAR_OBJ_GFX_ID_0, OBJ_EVENT_GFX_GREEN_NORMAL
+	goto_if_defeated TRAINER_CHAMPION_MARIBEL, PokemonLeague_ChampionsRoom_EventScript_StopSceneTrigger
 	goto_if_defeated TRAINER_CHAMPION_REMATCH_SQUIRTLE, PokemonLeague_ChampionsRoom_EventScript_StopSceneTrigger
 	return
 
 PokemonLeague_ChampionsRoom_EventScript_CheckStopTriggerBulbasaur:: @ 8162B31
-	goto_if_defeated TRAINER_CHAMPION_FIRST_BULBASAUR, PokemonLeague_ChampionsRoom_EventScript_StopSceneTrigger
+	setvar VAR_OBJ_GFX_ID_0, OBJ_EVENT_GFX_RED_NORMAL
+	goto_if_defeated TRAINER_CHAMPION_RENKO, PokemonLeague_ChampionsRoom_EventScript_StopSceneTrigger
 	goto_if_defeated TRAINER_CHAMPION_REMATCH_BULBASAUR, PokemonLeague_ChampionsRoom_EventScript_StopSceneTrigger
 	return
 
@@ -107,12 +108,11 @@ PokemonLeague_ChampionsRoom_EventScript_QuestLogEnd:: @ 8162C68
 	end
 
 PokemonLeague_ChampionsRoom_EventScript_Battle:: @ 8162C6F
-	compare VAR_STARTER_MON, 2
+	checkplayergender
+	compare VAR_RESULT, 0
 	call_if_eq PokemonLeague_ChampionsRoom_EventScript_BattleSquirtle
-	compare VAR_STARTER_MON, 1
+	compare VAR_RESULT, 1
 	call_if_eq PokemonLeague_ChampionsRoom_EventScript_BattleBulbasaur
-	compare VAR_STARTER_MON, 0
-	call_if_eq PokemonLeague_ChampionsRoom_EventScript_BattleCharmander
 	return
 
 PokemonLeague_ChampionsRoom_EventScript_Rematch:: @ 8162C91
@@ -133,11 +133,11 @@ PokemonLeague_ChampionsRoom_EventScript_RematchIntro:: @ 8162CBC
 	return
 
 PokemonLeague_ChampionsRoom_EventScript_BattleSquirtle:: @ 8162CC5
-	trainerbattle_no_intro TRAINER_CHAMPION_FIRST_SQUIRTLE, PokemonLeague_ChampionsRoom_Text_Defeat
+	trainerbattle_no_intro TRAINER_CHAMPION_MARIBEL, PokemonLeague_ChampionsRoom_Text_Defeat
 	return
 
 PokemonLeague_ChampionsRoom_EventScript_BattleBulbasaur:: @ 8162CD0
-	trainerbattle_no_intro TRAINER_CHAMPION_FIRST_BULBASAUR, PokemonLeague_ChampionsRoom_Text_Defeat
+	trainerbattle_no_intro TRAINER_CHAMPION_RENKO, PokemonLeague_ChampionsRoom_Text_Defeat
 	return
 
 PokemonLeague_ChampionsRoom_EventScript_BattleCharmander:: @ 8162CDB

@@ -889,4 +889,5 @@ const union AnimCmd *const *const gTrainerFrontAnimsPtrTable[] =
     sAnims_82390D4,
     sAnims_82390D8,
     sAnims_82390D8,
+	sAnims_82390D8,
 };

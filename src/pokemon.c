@@ -600,6 +600,10 @@ static const u16 sSpeciesToNationalPokedexNum[] = // Assigns all species to the 
     NATIONAL_DEX_YOUKI,
     NATIONAL_DEX_TORI,
     NATIONAL_DEX_2HU,
+	NATIONAL_DEX_CRENKO,
+	NATIONAL_DEX_TRRENKO,
+	NATIONAL_DEX_CMARIBEL,
+	NATIONAL_DEX_TRMARIBEL,
     NATIONAL_DEX_XSUWAKO,
     NATIONAL_DEX_XUTSUHO,
     NATIONAL_DEX_XTENSHI,
@@ -1862,6 +1866,39 @@ s32 CalculateBaseDamage(struct BattlePokemon *attacker, struct BattlePokemon *de
     {
         gBattleMovePower = (150 * gBattleMovePower) / 100;
     }
+    if (attacker->ability == ABILITY_TOXICOLOGIST && type == TYPE_POISON)
+    {
+        gBattleMovePower = (150 * gBattleMovePower) / 100;
+    }
+	if (attacker->ability == ABILITY_SWORDMASTER && gBattleMoves[move].priority > 0)
+	{
+        gBattleMovePower = (150 * gBattleMovePower) / 100;
+	}
+	if (attacker->ability == ABILITY_CHARISMATIC && attacker->hp <= (attacker->maxHP / 2))
+	{
+		gBattleMovePower = (50 * gBattleMovePower) / 100;
+	}
+	if (attacker->ability == ABILITY_IRON_FIST && gBattleMoves[move].flags & FLAG_PUNCHING)
+	{
+		gBattleMovePower = (120 * gBattleMovePower) / 100;
+	}
+	if (attacker->ability == ABILITY_ANALYTIC)
+	{
+		for (i = 0; i < gBattlersCount; i++)
+		{
+			if (gBattlerByTurnOrder[i] == battlerIdDef)
+			{
+				gBattleMovePower = (130 * gBattleMovePower) / 100;
+				i = gBattlersCount;
+			}
+			else if (gBattlerByTurnOrder[i] == battlerIdAtk)
+				i = gBattlersCount;
+		}
+	}
+	if (attacker->ability == ABILITY_TWIN_SPARK)
+	{
+		gBattleMovePower = (60 * gBattleMovePower) / 100;
+	}
     if (defenderAbility == ABILITY_CHEERFUL && defender->hp == defender->maxHP)
     {
         defense *= 2;
@@ -1902,13 +1939,20 @@ s32 CalculateBaseDamage(struct BattlePokemon *attacker, struct BattlePokemon *de
     {
         u8 i = 0;
         u8 boost = 0;
+		u8 partysize = 0;
         struct Pokemon *party;
         //oh fuckin' boy here we go
         if (GET_BATTLER_SIDE(battlerIdAtk) != B_SIDE_PLAYER)
-            party = gEnemyParty;
+		{
+			party = gEnemyParty;
+			partysize = gEnemyPartyCount;
+		}
         else
-            party = gPlayerParty;
-        for (i = 0; i < PARTY_SIZE; i++)
+		{
+			party = gPlayerParty;
+			partysize = PARTY_SIZE;
+		}
+        for (i = 0; i < partysize; i++)
         {
             if (i != gBattlerPartyIndexes[battlerIdAtk])
             {
@@ -1927,13 +1971,20 @@ s32 CalculateBaseDamage(struct BattlePokemon *attacker, struct BattlePokemon *de
     {
         u8 i = 0;
         u8 boost = 0;
+		u8 partysize = 0;
         struct Pokemon *party;
         //oh fuckin' boy here we go
         if (GET_BATTLER_SIDE(battlerIdAtk) != B_SIDE_PLAYER)
-            party = gEnemyParty;
+        {
+			party = gEnemyParty;
+			partysize = gEnemyPartyCount;
+		}
         else
-            party = gPlayerParty;
-        for (i = 0; i < PARTY_SIZE && !boost; i++)
+        {
+			party = gPlayerParty;
+			partysize = PARTY_SIZE;
+		}
+        for (i = 0; i < partysize && !boost; i++)
         {
             if (i != gBattlerPartyIndexes[battlerIdAtk])
             {
@@ -1957,6 +2008,11 @@ s32 CalculateBaseDamage(struct BattlePokemon *attacker, struct BattlePokemon *de
         gBattleMovePower *= 12;
         gBattleMovePower /= 10;
     }
+	if (attacker->ability == ABILITY_TECHNICIAN && gBattleMovePower <= 60)
+	{
+		gBattleMovePower *= 150;
+		gBattleMovePower /= 100;
+	}
     
     if (weatherHasEffect)
     {
@@ -5088,9 +5144,11 @@ static u16 GetBattleBGM(void)
         case TRAINER_CLASS_STRANGER:
         case TRAINER_CLASS_WILD:
 		case TRAINER_CLASS_BLACK_BELT_IMAKUNI:
+		case TRAINER_CLASS_STRANGEST:
             gBattleTypeFlags |= BATTLE_TYPE_IMAKUNI;
             return MUS_VS_IMAKUNI;
         case TRAINER_CLASS_BOSS:
+		case TRAINER_CLASS_FAKE_ACE:
 			return MUS_RS_VS_GYM_LEADER;
         case TRAINER_CLASS_TEAM_ROCKET:
         case TRAINER_CLASS_COOLTRAINER:
@@ -5743,7 +5801,7 @@ static const u16 sZunStarters[] =
     
     SPECIES_CKOTOHIME,
     SPECIES_CKANA,
-    SPECIES_RIKAKO,
+    SPECIES_CRIKAKO,
     SPECIES_CCHIYURI,
     SPECIES_CYUMEMI,
     SPECIES_RUUKOTO,

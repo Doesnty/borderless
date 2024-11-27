@@ -57,75 +57,7 @@ ViridianCity_Mart_EventScript_Clerk:: @ 816A268
 	compare VAR_MAP_SCENE_VIRIDIAN_CITY_MART, 1
 	goto_if_eq ViridianCity_Mart_EventScript_SayHiToOak
 	goto_if_questlog EventScript_ReleaseEnd
-	message Text_MayIHelpYou
-	waitmessage
-	pokemart ViridianCity_Mart_Items
-	msgbox Text_PleaseComeAgain
-	release
-	end
-
-	.align 2
-ViridianCity_Mart_Items:: @ 816A298
-	.2byte ITEM_POKE_BALL
-	.2byte ITEM_POTION
-	.2byte ITEM_ANTIDOTE
-	.2byte ITEM_PARALYZE_HEAL
-	.2byte ITEM_POWER_SHARD
-	.2byte ITEM_GUARD_SHARD
-	.2byte ITEM_SWIFT_SHARD
-	.2byte ITEM_TECH_SHARD
-	.2byte ITEM_ASSIST_SHARD
-	.2byte ITEM_SOLAR_SHARD
-	.2byte ITEM_AUTUMN_LEAF
-	.2byte ITEM_DUBIOUS_TOME
-	.2byte ITEM_OLD_TEXTBOOK
-	.2byte ITEM_SEAL_CRYSTAL
-    .2byte ITEM_BLAZER
-    .2byte ITEM_MIKO_UNIFORM
-    .2byte ITEM_WITCHS_ROBE
-    .2byte ITEM_MISTRESS
-    .2byte ITEM_CHINA_DRESS
-    .2byte ITEM_GOTHIC_DRESS
-    .2byte ITEM_CAMOUFLAGE
-    .2byte ITEM_SWIMSUIT
-    .2byte ITEM_NINJA_SUIT
-    .2byte ITEM_THICK_FUR
-    .2byte ITEM_NURSE_OUTFIT
-    .2byte ITEM_BUNNY_SUIT
-    .2byte ITEM_GYM_SWEATER
-    .2byte ITEM_KIMONO
-    .2byte ITEM_STEWARDESS
-    .2byte ITEM_MAID_UNIFORM
-    .2byte ITEM_BRIDAL_GOWN
-    .2byte ITEM_BLOOMERS
-    .2byte ITEM_KUSANAGI
-    .2byte ITEM_YATA_MIRROR
-    .2byte ITEM_ICE_BALL
-    .2byte ITEM_DARK_RIBBON
-    .2byte ITEM_MASTER_BALL
-    .2byte ITEM_OCCA_BERRY
-    .2byte ITEM_PASSHO_BERRY
-    .2byte ITEM_WACAN_BERRY
-    .2byte ITEM_RINDO_BERRY
-    .2byte ITEM_YACHE_BERRY
-    .2byte ITEM_CHOPLE_BERRY
-    .2byte ITEM_KEBIA_BERRY
-    .2byte ITEM_SHUCA_BERRY
-    .2byte ITEM_COBA_BERRY
-    .2byte ITEM_PAYAPA_BERRY
-    .2byte ITEM_TANGA_BERRY
-    .2byte ITEM_CHARTI_BERRY
-    .2byte ITEM_KASIB_BERRY
-    .2byte ITEM_HABAN_BERRY
-    .2byte ITEM_COLBUR_BERRY
-    .2byte ITEM_BABIRI_BERRY
-    .2byte ITEM_CHILAN_BERRY
-    .2byte ITEM_ENIGMA_RESIST_BERRY
-    .2byte ITEM_CHESTO_BERRY
-	.2byte ITEM_RARE_CANDY
-	.2byte ITEM_NONE
-	release
-	end
+	goto EventScript_ScaledShop
 
 ViridianCity_Mart_EventScript_SayHiToOak:: @ 816A2A4
 	msgbox ViridianCity_Mart_Text_SayHiToOakForMe

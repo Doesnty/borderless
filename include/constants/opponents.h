@@ -4,7 +4,7 @@
 #define TRAINER_NONE                               0
 // Dummy trainers for all the RS trainer classes
 #define TRAINER_IMAKUNI_2                          1
-#define TRAINER_AQUA_GRUNT_M                       2
+#define TRAINER_IMAKUNI_4                          2
 #define TRAINER_AQUA_GRUNT_F                       3
 #define TRAINER_RS_AROMA_LADY                      4
 #define TRAINER_RS_RUIN_MANIAC                     5
@@ -441,8 +441,8 @@
 #define TRAINER_RIVAL_ROUTE22_LATE_SQUIRTLE      435
 #define TRAINER_RIVAL_ROUTE22_LATE_BULBASAUR     436
 #define TRAINER_RIVAL_ROUTE22_LATE_CHARMANDER    437
-#define TRAINER_CHAMPION_FIRST_SQUIRTLE          438
-#define TRAINER_CHAMPION_FIRST_BULBASAUR         439
+#define TRAINER_CHAMPION_MARIBEL                 438
+#define TRAINER_CHAMPION_RENKO                   439
 #define TRAINER_CHAMPION_FIRST_CHARMANDER        440
 #define TRAINER_CHANNELER_PATRICIA               441
 #define TRAINER_CHANNELER_CARLY                  442

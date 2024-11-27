@@ -162,9 +162,9 @@ SeafoamIslands_B4F_EventScript_Articuno:: @ 81631AC
 	special QuestLog_CutRecording
 	lock
 	faceplayer
-	setwildbattle SPECIES_ARTICUNO, 50, ITEM_NONE
+	setwildbattle SPECIES_NAMAZU, 50, ITEM_NONE
 	waitse
-	playmoncry SPECIES_ARTICUNO, 2
+	playmoncry SPECIES_NAMAZU, 2
 	message Text_Gyaoo
 	waitmessage
 	waitmoncry
@@ -192,7 +192,7 @@ SeafoamIslands_B4F_EventScript_DefeatedArticuno:: @ 816320F
 	end
 
 SeafoamIslands_B4F_EventScript_RanFromArticuno:: @ 8163218
-	setvar VAR_0x8004, SPECIES_ARTICUNO
+	setvar VAR_0x8004, SPECIES_NAMAZU
 	goto EventScript_MonFlewAway
 	end
 

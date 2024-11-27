@@ -373,8 +373,8 @@ const u8 gTypeEffectiveness[20][20] =
         20, 10, 20, 10, 10,
     },
     { // Illusion
-        10, 10, 10, 10, 10,
-        10, 10, 10, 10, 10,
+         5, 10, 10, 10, 10,
+        10, 10, 10, 10, 20,
         10, 10, 10, 10, 10,
         10, 10, 10, 10, 10,
     },
@@ -578,6 +578,7 @@ const struct TrainerMoney gTrainerMoneyTable[] =
     { TRAINER_CLASS_BOSS, 25 },
     { TRAINER_CLASS_STRANGER, 2 },
     { TRAINER_CLASS_WILD, 2 },
+    { TRAINER_CLASS_STRANGEST, 2 },
     { 0xFF, 5 },
 };
 
@@ -2272,7 +2273,6 @@ static void BattleStartClearSetData(void)
     for (i = 0; i < 8; ++i)
     {
         *((u8 *)gBattleStruct->lastTakenMove + i) = MOVE_NONE;
-        *((u8 *)gBattleStruct->usedHeldItems + i) = ITEM_NONE;
         *((u8 *)gBattleStruct->choicedMove + i) = MOVE_NONE;
         *((u8 *)gBattleStruct->changedItems + i) = ITEM_NONE;
         *(i + 0 * 8 + (u8 *)(gBattleStruct->lastTakenMoveFrom) + 0) = 0;
@@ -2280,9 +2280,17 @@ static void BattleStartClearSetData(void)
         *(i + 2 * 8 + (u8 *)(gBattleStruct->lastTakenMoveFrom) + 0) = 0;
         *(i + 3 * 8 + (u8 *)(gBattleStruct->lastTakenMoveFrom) + 0) = 0;
     }
+	for (i = 0; i < 12; ++i)
+	{
+        gBattleStruct->usedHeldItems[i] = ITEM_NONE;
+	}
     *(gBattleStruct->AI_monToSwitchIntoId + 0) = PARTY_SIZE;
     *(gBattleStruct->AI_monToSwitchIntoId + 1) = PARTY_SIZE;
     *(&gBattleStruct->givenExpMons) = 0;
+	for (i = 0; i < PARTY_SIZE; i++)
+	{
+		gBattleStruct->itemsAtBattleStart[i] = GetMonData(&gPlayerParty[i], MON_DATA_HELD_ITEM, 0);
+	}
     for (i = 0; i < 11; ++i)
         gBattleResults.catchAttempts[i] = 0;
     gBattleResults.battleTurnCounter = 0;
@@ -3348,16 +3356,16 @@ void SwapTurnOrder(u8 id1, u8 id2)
 u32 GetBattlerSpeed(u8 battler)
 {
     u8 holdEffect, holdEffectParam;
-    u8 speed = 0;
-    u8 weatherMultiplier = 1;
+    u32 speed = 0;
+    u32 weatherMultiplier = 1;
     u16 species = gBattleMons[battler].species;
 
     if (WEATHER_HAS_EFFECT)
     {
-        if ((gBattleMons[battler].ability == ABILITY_SWIFT_SWIM && gBattleWeather & WEATHER_RAIN_ANY)
-         || (gBattleMons[battler].ability == ABILITY_CHLOROPHYLL && gBattleWeather & WEATHER_SUN_ANY)
-         || (gBattleMons[battler].ability == ABILITY_SAND_RUSH && gBattleWeather & WEATHER_SANDSTORM_ANY)
-         || (gBattleMons[battler].ability == ABILITY_SLUSH_RUSH && gBattleWeather & WEATHER_HAIL))
+        if ((gBattleMons[battler].ability == ABILITY_SWIFT_SWIM && (gBattleWeather & WEATHER_RAIN_ANY))
+         || (gBattleMons[battler].ability == ABILITY_CHLOROPHYLL && (gBattleWeather & WEATHER_SUN_ANY))
+         || (gBattleMons[battler].ability == ABILITY_SAND_RUSH && (gBattleWeather & WEATHER_SANDSTORM_ANY))
+         || (gBattleMons[battler].ability == ABILITY_SLUSH_RUSH && (gBattleWeather & WEATHER_HAIL)))
             weatherMultiplier = 2;
     }
     speed = (gBattleMons[battler].speed * weatherMultiplier)
@@ -3485,10 +3493,14 @@ u8 GetWhoStrikesFirst(u8 battler1, u8 battler2, bool8 ignoreChosenMoves)
         priorityBattler1++;
 	if (gBattleMoves[moveBattler1].type == TYPE_WIND && gBattleMons[battler1].ability == ABILITY_GALE_WINGS)
 		priorityBattler1++;
+	if (gBattleMons[battler1].ability == ABILITY_TIME_CONTROL)
+		priorityBattler1++;
 
     if (gBattleMoves[moveBattler2].moveClass == CLASS_STATUS && gBattleMons[battler2].ability == ABILITY_PRANKSTER)
         priorityBattler2++;
 	if (gBattleMoves[moveBattler2].type == TYPE_WIND && gBattleMons[battler2].ability == ABILITY_GALE_WINGS)
+		priorityBattler2++;
+	if (gBattleMons[battler2].ability == ABILITY_TIME_CONTROL)
 		priorityBattler2++;
 	
     

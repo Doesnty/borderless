@@ -420,6 +420,9 @@ const u8 gMoveDescription_Shriek[] = _("30%: Foe flinches.");
 const u8 gMoveDescription_Flight[] = _("Sets user's Ability\nto Levitate, letting\nthem avoid Earth\nmoves.");
 const u8 gMoveDescription_CoreSurge[] = _("If used by Tensoku,\nswitches its form.");
 const u8 gMoveDescription_Cataclysm[] = _("A 2-turn attack.\n80%: Foe flinches.\nHigh critical rate.");
+const u8 gMoveDescription_Blossoming[] = _("50%: +1 Attack.\n50%: +1 Sp. Atk.");
+const u8 gMoveDescription_SpatialRend[] = _("High critical rate.");
+const u8 gMoveDescription_PassionDance[] = _("Attacks blindly for\n2-3 turns, then\nconfuses the user.");
 const u8 gMoveDescription_MeFirst[] = _("Uses the move the\nfoe is about to\nuse, and with 50%\nmore power.");
 const u8 gMoveDescription_Dummy[] = _("lol");
 
@@ -844,5 +847,8 @@ const u8 *const gMoveDescriptionPointers[MOVES_COUNT - 1] = {
 	[MOVE_FLIGHT        - 1] = gMoveDescription_Flight,
 	[MOVE_CORE_SURGE    - 1] = gMoveDescription_CoreSurge,
 	[MOVE_CATACLYSM     - 1] = gMoveDescription_Cataclysm,
+	[MOVE_BLOSSOMING    - 1] = gMoveDescription_Blossoming,
+	[MOVE_SPATIAL_REND  - 1] = gMoveDescription_SpatialRend,
+	[MOVE_PASSION_DANCE - 1] = gMoveDescription_PassionDance,
     [MOVE_ME_FIRST      - 1] = gMoveDescription_MeFirst,
 };

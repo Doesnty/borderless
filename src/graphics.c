@@ -735,6 +735,9 @@ const u32 gBattleAnimSpritePal_BreakingEgg[] = INCBIN_U32("graphics/battle_anims
 const u32 gBattleAnimSpriteGfx_ThinRing[] = INCBIN_U32("graphics/battle_anims/sprites/thin_ring.4bpp.lz");
 const u32 gBattleAnimSpritePal_ThinRing[] = INCBIN_U32("graphics/battle_anims/sprites/thin_ring.gbapal.lz");
 
+const u32 gBattleAnimSpriteGfx_Hexagram[] = INCBIN_U32("graphics/battle_anims/sprites/hexagram.4bpp.lz");
+const u32 gBattleAnimSpritePal_Hexagram[] = INCBIN_U32("graphics/battle_anims/sprites/hexagram.gbapal.lz");
+
 const u32 gBattleAnimSpriteGfx_MusicNotes2[] = INCBIN_U32("graphics/battle_anims/sprites/music_notes_2.4bpp.lz");
 const u32 gBattleAnimSpritePal_MusicNotes2[] = INCBIN_U32("graphics/battle_anims/sprites/music_notes_2.gbapal.lz");
 

@@ -2606,6 +2606,26 @@ extern const u32 gMonPalette_tensokug[];
 extern const u32 gMonBackPic_tensokug[];
 extern const u32 gMonShinyPalette_tensokug[];
 extern const u8 gMonIcon_tensokug[];
+extern const u32 gMonFrontPic_crenko[];
+extern const u32 gMonPalette_crenko[];
+extern const u32 gMonBackPic_crenko[];
+extern const u32 gMonShinyPalette_crenko[];
+extern const u8 gMonIcon_crenko[];
+extern const u32 gMonFrontPic_trrenko[];
+extern const u32 gMonPalette_trrenko[];
+extern const u32 gMonBackPic_trrenko[];
+extern const u32 gMonShinyPalette_trrenko[];
+extern const u8 gMonIcon_trrenko[];
+extern const u32 gMonFrontPic_cmaribel[];
+extern const u32 gMonPalette_cmaribel[];
+extern const u32 gMonBackPic_cmaribel[];
+extern const u32 gMonShinyPalette_cmaribel[];
+extern const u8 gMonIcon_cmaribel[];
+extern const u32 gMonFrontPic_trmaribel[];
+extern const u32 gMonPalette_trmaribel[];
+extern const u32 gMonBackPic_trmaribel[];
+extern const u32 gMonShinyPalette_trmaribel[];
+extern const u8 gMonIcon_trmaribel[];
 
 extern const u8 gMonFootprint_Metapod[];
 extern const u32 gMonFrontPic_Egg[];
@@ -2772,6 +2792,7 @@ extern const u32 gTrainerFrontPic_RuinManiac[];
 extern const u32 gTrainerFrontPic_Lady[];
 extern const u32 gTrainerFrontPic_Painter[];
 extern const u32 gTrainerFrontPic_Imakuni[];
+extern const u32 gTrainerFrontPic_ImakuniRed[];
 
 extern const u32 gTrainerPalette_AquaLeaderArchie[];
 extern const u32 gTrainerPalette_AquaGruntM[];
@@ -2926,6 +2947,7 @@ extern const u32 gTrainerPalette_RuinManiac[];
 extern const u32 gTrainerPalette_Lady[];
 extern const u32 gTrainerPalette_Painter[];
 extern const u32 gTrainerPalette_Imakuni[];
+extern const u32 gTrainerPalette_ImakuniRed[];
 
 extern const u8 gFireRedMenuElements_Gfx[];
 extern const u16 gFireRedMenuElements1_Pal[];
@@ -3237,6 +3259,10 @@ extern const u8 gFile_graphics_items_icons_vitamin_sheet[];
 extern const u8 gFile_graphics_items_icon_palettes_carbos_palette[];
 extern const u8 gFile_graphics_items_icons_vitamin_sheet[];
 extern const u8 gFile_graphics_items_icon_palettes_calcium_palette[];
+extern const u8 gFile_graphics_items_icons_ability_capsule_sheet[];
+extern const u8 gFile_graphics_items_icon_palettes_ability_capsule_palette[];
+extern const u8 gFile_graphics_items_icons_dream_capsule_sheet[];
+extern const u8 gFile_graphics_items_icon_palettes_dream_capsule_palette[];
 extern const u8 gFile_graphics_items_icons_rare_candy_sheet[];
 extern const u8 gFile_graphics_items_icon_palettes_rare_candy_palette[];
 extern const u8 gFile_graphics_items_icons_pp_up_sheet[];
@@ -4251,6 +4277,7 @@ extern const u32 gBattleAnimSpriteGfx_Apollon[];
 extern const u32 gBattleAnimSpriteGfx_BrokenRing[];
 extern const u32 gBattleAnimSpriteGfx_DestitutionOrb[];
 extern const u32 gBattleAnimSpriteGfx_Vine3[];
+extern const u32 gBattleAnimSpriteGfx_Hexagram[];
 
 // battle anim particle pals
 extern const u32 gBattleAnimSpritePal_Bone[];
@@ -4509,6 +4536,7 @@ extern const u32 gBattleAnimSpritePal_Tailwind[];
 extern const u32 gBattleAnimSpritePal_DestitutionOrb[];
 extern const u32 gBattleAnimSpritePal_Vine3[];
 extern const u32 gBattleAnimSpritePal_ChargeBeam[];
+extern const u32 gBattleAnimSpritePal_Hexagram[];
 
 
 // battle anim task

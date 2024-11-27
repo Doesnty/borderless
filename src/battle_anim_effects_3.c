@@ -944,6 +944,17 @@ const struct SpriteTemplate gAssistPawprintSpriteTemplate =
     .callback = AnimAssistPawprint,
 };
 
+const struct SpriteTemplate gIdentifySpriteTemplate =
+{
+    .tileTag = ANIM_TAG_MAGNIFYING_GLASS,
+    .paletteTag = ANIM_TAG_MAGNIFYING_GLASS,
+    .oam = &gOamData_AffineOff_ObjBlend_32x32,
+    .anims = gDummySpriteAnimTable,
+    .images = NULL,
+    .affineAnims = gDummySpriteAffineAnimTable,
+    .callback = AnimAssistPawprint,
+};
+
 static const union AffineAnimCmd sBarrageBallAffineAnimCmds1[] =
 {
     AFFINEANIMCMD_FRAME(0, 0, -4, 24),

@@ -410,6 +410,7 @@ static const u32 sBattleTerrainPalette_Champion[] = INCBIN_U32("graphics/battle_
 static const u32 sBattleTerrainPalette_Plain[] = INCBIN_U32("graphics/battle_terrain/indoor/plain.gbapal.lz");
 static const u32 sBattleTerrainTiles_Indoor[] = INCBIN_U32("graphics/battle_terrain/indoor/terrain.4bpp.lz");
 static const u32 sBattleTerrainTilemap_Indoor[] = INCBIN_U32("graphics/battle_terrain/indoor/terrain.bin.lz");
+static const u32 sBattleTerrainPalette_IceCave[] = INCBIN_U32("graphics/battle_terrain/cave/ice.gbapal.lz");
 
 static const struct BattleBackground sBattleTerrainTable[] = {
     [BATTLE_TERRAIN_GRASS] =
@@ -571,7 +572,15 @@ static const struct BattleBackground sBattleTerrainTable[] = {
         .entryTileset = sBattleTerrainAnimTiles_Building,
         .entryTilemap = sBattleTerrainAnimTilemap_Building,
         .palette = sBattleTerrainPalette_Champion
-    }
+    },
+	[BATTLE_TERRAIN_ICE_CAVE] =
+	{
+        .tileset = sBattleTerrainTiles_Cave,
+        .tilemap = sBattleTerrainTilemap_Cave,
+        .entryTileset = sBattleTerrainAnimTiles_Cave,
+        .entryTilemap = sBattleTerrainAnimTilemap_Cave,
+        .palette = sBattleTerrainPalette_IceCave
+	},
 };
 
 static const struct {

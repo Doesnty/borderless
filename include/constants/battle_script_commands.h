@@ -118,14 +118,17 @@
 #define ATK49_UPDATE_LAST_MOVES                 14
 #define ATK49_MIRROR_MOVE                       15
 #define ATK49_GLAIVE_RUSH                       16
-#define ATK49_NEXT_TARGET                       17
-#define ATK49_ECHO_ABILITY_BATTLER0             18
-#define ATK49_ECHO_ABILITY_BATTLER1             19
-#define ATK49_ECHO_ABILITY_BATTLER2             20
-#define ATK49_ECHO_ABILITY_BATTLER3             21
-#define ATK49_WALL_MASTER                       22
-#define ATK49_WALL_MASTER_CLEANUP               23
-#define ATK49_COUNT                             24
+#define ATK49_MOXIE                             17
+#define ATK49_NEXT_TARGET                       18
+#define ATK49_ECHO_ABILITY_BATTLER0             19
+#define ATK49_ECHO_ABILITY_BATTLER1             20
+#define ATK49_ECHO_ABILITY_BATTLER2             21
+#define ATK49_ECHO_ABILITY_BATTLER3             22
+#define ATK49_WALL_MASTER                       23
+#define ATK49_WALL_MASTER_CLEANUP               24
+#define ATK49_TWIN_SPARK                        25
+#define ATK49_TWIN_SPARK_CLEANUP                26
+#define ATK49_COUNT                             27
 
 #define BIT_HP                      0x1
 #define BIT_ATK                     0x2

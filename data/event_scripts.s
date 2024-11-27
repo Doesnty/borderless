@@ -803,6 +803,7 @@ gStdScriptsEnd::
 
 	.include "data/scripts/std_msgbox.inc"
 	.include "data/scripts/trainer_battle.inc"
+	.include "data/scripts/shops.inc"
 
 @ Unused
 Text_WouldYouLikeToMixRecords:: @ 81A5028

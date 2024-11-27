@@ -2556,6 +2556,26 @@ const u8 g2huPokedexText[] = _(
     "that they are necessary for survival.");
     // she's a reference to the How to Draw a Touhou Girl meme
 
+const u8 gcrenkoPokedexText[] = _(
+	"An outside world human."
+	"She can tell the time by looking"
+	"at the sky, but only in JST.");
+
+const u8 gtrrenkoPokedexText[] = _(
+	"Despite studying physics, Renko"
+	"firmly believes in the fantasy"
+	"worlds that Maribel can see.");
+
+const u8 gcmaribelPokedexText[] = _(
+	"An outside world human."
+	"She can see boundaries, including"
+	"those leading to other worlds.");
+
+const u8 gtrmaribelPokedexText[] = _(
+	"Gensokyo accepts all."
+	"That's a cruel thing."
+	"");
+
 const u8 gxsuwakoPokedexText[] = _(
     "A native god that controls the earth\n"
     "and curses. Kanako and Sanae do most\n"

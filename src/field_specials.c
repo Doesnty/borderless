@@ -2405,8 +2405,8 @@ static void Task_DoDeoxysTriangleInteraction(u8 taskId)
 static void MoveDeoxysObject(u8 num)
 {
     u8 mapObjId;
-    LoadPalette(sDeoxysObjectPals[num], 0x1A0, 0x08);
-    ApplyGlobalFieldPaletteTint(10);
+    LoadPalette(sDeoxysObjectPals[num], 0x100 + (IndexOfSpritePaletteTag(0x1113) * 0x10), 0x08);
+    ApplyGlobalFieldPaletteTint(IndexOfSpritePaletteTag(0x1113));
     TryGetObjectEventIdByLocalIdAndMap(1, gSaveBlock1Ptr->location.mapNum, gSaveBlock1Ptr->location.mapGroup, &mapObjId);
     if (num == 0)
         PlaySE(SE_M_CONFUSE_RAY);
@@ -2552,4 +2552,17 @@ static void Task_WingFlapSound(u8 taskId)
     }
     if (data[0] == gSpecialVar_0x8004 - 1)
         DestroyTask(taskId);
+}
+
+u16 CountBadges(void)
+{
+	u16 nbadges = 0;
+	u32 flagId;
+    
+    for (flagId = FLAG_BADGE01_GET; flagId < FLAG_BADGE01_GET + 8; flagId++)
+    {
+        if (FlagGet(flagId))
+            nbadges++;
+    }
+	return nbadges;
 }

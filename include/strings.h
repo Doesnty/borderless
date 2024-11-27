@@ -190,6 +190,8 @@ extern const u8 gText_WontHaveEffect[];
 extern const u8 gUnknown_841623D[];
 extern const u8 gUnknown_84162BD[];
 extern const u8 gText_Ghost[];
+extern const u8 gText_SwitchAbility[];
+extern const u8 gText_AbilityBecame[];
 
 // pokemon
 extern const u8 gBattleText_Rose[];
@@ -781,6 +783,14 @@ extern const u8 gText_Clefairy_750Coins[];
 extern const u8 gText_Pinsir_2500Coins[];
 extern const u8 gText_Dratini_4600Coins[];
 extern const u8 gText_Porygon_6500Coins[];
+extern const u8 gText_Surf[];
+extern const u8 gText_ManaBurst[];
+extern const u8 gText_BodySlam[];
+extern const u8 gText_FirePunch[];
+extern const u8 gText_Hecatia[];
+extern const u8 gText_DPatchouli[];
+extern const u8 gText_Kogasa[];
+extern const u8 gText_TKomachi[];
 extern const u8 gText_NoThanks_2[];
 extern const u8 gText_HelixFossil[];
 extern const u8 gText_DomeFossil[];

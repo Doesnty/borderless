@@ -60,22 +60,22 @@ static const u8 sItemEffect_MaxRevive[7] = {
 
 static const u8 sItemEffect_FreshWater[7] = {
     [4] = ITEM4_HEAL_HP,
-    [6] = 50,
+    [6] = 40,
 };
 
 static const u8 sItemEffect_SodaPop[7] = {
     [4] = ITEM4_HEAL_HP,
-    [6] = 60,
+    [6] = 80,
 };
 
 static const u8 sItemEffect_Lemonade[7] = {
     [4] = ITEM4_HEAL_HP,
-    [6] = 80,
+    [6] = 120,
 };
 
 static const u8 sItemEffect_MoomooMilk[7] = {
     [4] = ITEM4_HEAL_HP,
-    [6] = 100,
+    [6] = 200,
 };
 
 static const u8 sItemEffect_EnergyPowder[10] = {
@@ -390,6 +390,7 @@ const u8 *const gItemEffectTable[] =
     [ITEM_CARBOS - ITEM_POTION] = sItemEffect_Carbos,
     [ITEM_CALCIUM - ITEM_POTION] = sItemEffect_Calcium,
     [ITEM_RARE_CANDY - ITEM_POTION] = sItemEffect_RareCandy,
+	[ITEM_NORMAL_CANDY - ITEM_POTION] = sItemEffect_RareCandy,
     [ITEM_PP_UP - ITEM_POTION] = sItemEffect_PPUp,
     [ITEM_ZINC - ITEM_POTION] = sItemEffect_Zinc,
     [ITEM_PP_MAX - ITEM_POTION] = sItemEffect_PPMax,

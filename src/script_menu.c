@@ -809,7 +809,20 @@ static const struct MenuAction sScriptMultiChoiceMenu_NatureChanger6[] = {
 	{ gUnknown_841B2D4 }, // Sp. Def
 };
 
+static const struct MenuAction sScriptMultiChoiceMenu_CinnabarQuiz1[] = {
+	{ gText_Surf },
+	{ gText_ManaBurst },
+	{ gText_BodySlam },
+	{ gText_FirePunch },
+};
 
+static const struct MenuAction sScriptMultiChoiceMenu_CinnabarQuiz2[] = {
+	{ gText_Hecatia },
+	{ gText_DPatchouli },
+	{ gText_Kogasa },
+	{ gText_TKomachi },
+	{ gText_FirePunch },
+};
 
 const struct MultichoiceListStruct gScriptMultiChoiceMenus[] = {
     { sScriptMultiChoiceMenu_YesNo,  NELEMS(sScriptMultiChoiceMenu_YesNo)  },
@@ -904,6 +917,8 @@ const struct MultichoiceListStruct gScriptMultiChoiceMenus[] = {
 	{ sScriptMultiChoiceMenu_NatureChanger4, NELEMS(sScriptMultiChoiceMenu_NatureChanger4) },
 	{ sScriptMultiChoiceMenu_NatureChanger5, NELEMS(sScriptMultiChoiceMenu_NatureChanger5) },
 	{ sScriptMultiChoiceMenu_NatureChanger6, NELEMS(sScriptMultiChoiceMenu_NatureChanger6) },
+	{ sScriptMultiChoiceMenu_CinnabarQuiz1, NELEMS(sScriptMultiChoiceMenu_CinnabarQuiz1) },
+	{ sScriptMultiChoiceMenu_CinnabarQuiz2, NELEMS(sScriptMultiChoiceMenu_CinnabarQuiz2) },
 };
 
 // From Cool to Berries goes unused

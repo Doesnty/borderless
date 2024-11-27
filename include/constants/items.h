@@ -73,7 +73,7 @@
 #define ITEM_PP_UP 69
 #define ITEM_ZINC 70
 #define ITEM_PP_MAX 71
-#define ITEM_048 72
+#define ITEM_NORMAL_CANDY 72
 #define ITEM_GUARD_SPEC 73
 #define ITEM_DIRE_HIT 74
 #define ITEM_X_ATTACK 75
@@ -88,8 +88,8 @@
 #define ITEM_MAX_REPEL 84
 #define ITEM_ESCAPE_ROPE 85
 #define ITEM_REPEL 86
-#define ITEM_057 87
-#define ITEM_058 88
+#define ITEM_ABILI_CAPSULE 87
+#define ITEM_DREAM_CAPSULE 88
 #define ITEM_059 89
 #define ITEM_05A 90
 #define ITEM_05B 91

@@ -109,8 +109,8 @@ CinnabarIsland_Gym_Text_DustyDefeat:: @ 8199AB9
     .string "Too hot!$"
 
 CinnabarIsland_Gym_Text_DustyPostBattle:: @ 8199AC9
-    .string "PONYTA, NINETALES…\n"
-    .string "Those are popular FIRE POKéMON.$"
+    .string "Fire Punch…\n"
+    .string "Is not always the right answer?$"
 
 CinnabarIsland_Gym_Text_ZacIntro:: @ 8199AFC
     .string "Fire is weak against H2O.$"
@@ -160,25 +160,26 @@ CinnabarIsland_Gym_Text_PokemonQuizRules:: @ 8199C9F
     .string "Here we go!$"
 
 CinnabarIsland_Gym_Text_QuizQuestion1:: @ 8199D5A
-    .string "CATERPIE evolves into METAPOD?$"
+    .string "Sunny, Luna, and Star are called\n"
+	.string "the Three Elemental Fairies?$"
 
 CinnabarIsland_Gym_Text_QuizQuestion2:: @ 8199D79
-    .string "There are nine certified POKéMON\n"
-    .string "LEAGUE BADGES?$"
+    .string "Evolving Chibi Rin to Speed Rin\n"
+    .string "can create a Zombie Fairy?$"
 
 CinnabarIsland_Gym_Text_QuizQuestion3:: @ 8199DA9
-    .string "POLIWAG evolves three times?$"
+    .string "TM51 contains Fiery Dance?$"
 
 CinnabarIsland_Gym_Text_QuizQuestion4:: @ 8199DC6
-    .string "Are electric moves effective\n"
-    .string "against GROUND-type POKéMON?$"
+    .string "TCirno can learn Flamethrower?$"
 
 CinnabarIsland_Gym_Text_QuizQuestion5:: @ 8199E00
-    .string "POKéMON of the same kind and level\n"
-    .string "are not identical?$"
+    .string "Which of these moves is the safest\n"
+    .string "and most effective to use on Chiyari?$"
 
 CinnabarIsland_Gym_Text_QuizQuestion6:: @ 8199E36
-    .string "TM28 contains TOMBSTONY?$"
+    .string "Which of these Puppets is the best\n"
+	.string "choice to take hits from Mimi-chan?$"
 
 CinnabarIsland_Gym_Text_CorrectGoOnThrough:: @ 8199E4F
     .string "You're absolutely correct!\p"

@@ -534,6 +534,10 @@ const u8 *const gMonIconTable[] = {
     [SPECIES_YOUKI] = gMonIcon_youki,
     [SPECIES_TORI] = gMonIcon_tori,
     [SPECIES_2HU] = gMonIcon_2hu,
+	[SPECIES_CRENKO] = gMonIcon_crenko,
+	[SPECIES_TRRENKO] = gMonIcon_trrenko,
+	[SPECIES_CMARIBEL] = gMonIcon_cmaribel,
+	[SPECIES_TRMARIBEL] = gMonIcon_trmaribel,
     [SPECIES_XSUWAKO] = gMonIcon_xsuwako,
     [SPECIES_XUTSUHO] = gMonIcon_xutsuho,
     [SPECIES_XTENSHI] = gMonIcon_xtenshi,
@@ -1210,6 +1214,12 @@ const u8 gMonIconPaletteIndices[] = {
     
     [SPECIES_TORI] = 0,
     [SPECIES_2HU] = 0,
+	
+	[SPECIES_CRENKO] = 2,
+	[SPECIES_TRRENKO] = 2,
+	
+	[SPECIES_CMARIBEL] = 1,
+	[SPECIES_TRMARIBEL] = 1,
     
     [SPECIES_XSUWAKO] = 1,
     [SPECIES_XUTSUHO] = 0,

@@ -5268,6 +5268,123 @@ static bool8 MonCanEvolve(void)
         return TRUE;
 }
 
+static void Task_HandleCapsuleYesNoInput(u8 taskId)
+{
+    u16 item;
+
+    switch (Menu_ProcessInputNoWrapClearOnChoose())
+    {
+    case 0: // Yes, use the capsule
+	{
+		u8 ability;
+		u8 value;
+		if (gSpecialVar_ItemId == ITEM_ABILI_CAPSULE)
+		{
+			if (GetMonData(&gPlayerParty[gPartyMenu.slotId], MON_DATA_HIDDEN_ABILITY))
+			{
+				value = 0;
+				SetMonData(&gPlayerParty[gPartyMenu.slotId], MON_DATA_HIDDEN_ABILITY, &value);
+			}
+			else
+			{
+				value = !GetMonData(&gPlayerParty[gPartyMenu.slotId], MON_DATA_ABILITY_NUM);
+				SetMonData(&gPlayerParty[gPartyMenu.slotId], MON_DATA_ABILITY_NUM, &value);
+			}
+		}
+		else if (gSpecialVar_ItemId == ITEM_DREAM_CAPSULE)
+		{
+			value = 1;
+			SetMonData(&gPlayerParty[gPartyMenu.slotId], MON_DATA_HIDDEN_ABILITY, &value);
+		}
+		ability = GetMonAbility(&gPlayerParty[gPartyMenu.slotId]);
+		RemoveBagItem(gSpecialVar_ItemId, 1);
+		
+        GetMonNickname(&gPlayerParty[gPartyMenu.slotId], gStringVar1);
+		StringCopy(gStringVar2, gAbilityNames[ability]);
+		StringExpandPlaceholders(gStringVar4, gText_AbilityBecame);
+		
+        PlaySE(SE_USE_ITEM);
+		DisplayPartyMenuMessage(gStringVar4, 1);
+		ScheduleBgCopyTilemapToVram(2);
+		gTasks[taskId].func = Task_ClosePartyMenuAfterText;
+		break;
+	}
+    case MENU_B_PRESSED:
+        PlaySE(SE_SELECT);
+        // fallthrough
+    case 1: // no
+        Task_ClosePartyMenu(taskId);
+        break;
+	}
+}
+
+static void TaskPartyMenuConfirmCapsule(u8 taskId)
+{
+    if (IsPartyMenuTextPrinterActive() != TRUE)
+    {
+        PartyMenuDisplayYesNoMenu();
+        gTasks[taskId].func = Task_HandleCapsuleYesNoInput;
+    }
+}
+
+void ItemUseCB_AbilityCapsule(u8 taskId, TaskFunc func)
+{
+	u16 species;
+	u8 currentability, newability;
+	u8 hasaltabil, hashiddenabil;
+	
+	bool8 noEffect;
+	
+	species = GetMonData(&gPlayerParty[gPartyMenu.slotId], MON_DATA_SPECIES);
+	currentability = GetMonAbility(&gPlayerParty[gPartyMenu.slotId]);
+	hashiddenabil = GetMonData(&gPlayerParty[gPartyMenu.slotId], MON_DATA_HIDDEN_ABILITY);
+	hasaltabil = GetMonData(&gPlayerParty[gPartyMenu.slotId], MON_DATA_ABILITY_NUM);
+	
+	if (gSpecialVar_ItemId == ITEM_ABILI_CAPSULE)
+	{
+        if (hashiddenabil && hasaltabil)
+            newability = GetAbilityBySpecies(species, 1, 0);
+        else if (hashiddenabil)
+            newability = GetAbilityBySpecies(species, 0, 0);
+        else if (hasaltabil)
+            newability = GetAbilityBySpecies(species, 0, 0);
+        else
+            newability = GetAbilityBySpecies(species, 1, 0);
+	}
+	else // if dream capsule
+	{
+		if (hashiddenabil)
+			newability = 0;
+		else
+			newability = GetAbilityBySpecies(species, 0, 1);
+	}
+	
+	if (currentability == newability || !newability)
+	{
+        gPartyMenuUseExitCallback = FALSE;
+        DisplayPartyMenuMessage(gText_WontHaveEffect, TRUE);
+        ScheduleBgCopyTilemapToVram(2);
+        gTasks[taskId].func = func;
+	}
+	else
+	{
+        StringCopy(gStringVar1, gAbilityNames[currentability]);
+        StringCopy(gStringVar2, gAbilityNames[newability]);
+        StringExpandPlaceholders(gStringVar4, gText_SwitchAbility);
+        DisplayPartyMenuMessage(gStringVar4, 1);
+        ScheduleBgCopyTilemapToVram(2);
+		
+		
+		gTasks[taskId].func = TaskPartyMenuConfirmCapsule;
+        //gItemUseCB = TaskPartyMenuConfirmCapsule;
+		//TaskPartyMenuConfirmCapsule(taskId, NULL);
+		
+        //CreateTask(TaskPartyMenuConfirmCapsule, 5);
+	}
+	
+	PlaySE(SE_SELECT);
+}
+
 u8 GetItemEffectType(u16 item)
 {
     const u8 *itemEffect;

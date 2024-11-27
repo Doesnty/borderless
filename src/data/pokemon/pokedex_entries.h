@@ -3054,6 +3054,30 @@ const struct PokedexEntry gPokedexEntries[] =
         .categoryName = _("ZUN Art Lesson"),
         .description = g2huPokedexText,
     },
+	
+	[NATIONAL_DEX_CRENKO] =
+	{
+		.categoryName = _("Grad Student"),
+		.description = gcrenkoPokedexText,
+	},
+	
+	[NATIONAL_DEX_TRRENKO] =
+	{
+		.categoryName = _("Transcendant"),
+		.description = gtrrenkoPokedexText,
+	},
+	
+	[NATIONAL_DEX_CMARIBEL] =
+	{
+		.categoryName = _("Grad Student"),
+		.description = gcmaribelPokedexText,
+	},
+	
+	[NATIONAL_DEX_TRMARIBEL] =
+	{
+		.categoryName = _("Transcendant"),
+		.description = gtrmaribelPokedexText,
+	},
 
     [NATIONAL_DEX_XSUWAKO] = 
     {

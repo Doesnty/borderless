@@ -436,6 +436,12 @@ void FieldUseFunc_EvoItem(u8 taskId)
     sub_80A16D0(taskId);
 }
 
+void FieldUseFunc_AbilityCapsule(u8 taskId)
+{
+    gItemUseCB = ItemUseCB_AbilityCapsule;
+    sub_80A16D0(taskId);
+}
+
 void FieldUseFunc_SacredAsh(u8 taskId)
 {
     gItemUseCB = ItemUseCB_SacredAsh;
