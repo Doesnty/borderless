@@ -4,18 +4,18 @@ VSSeeker_Text_BatteryNotChargedNeedXSteps:: @ 81C137C
 	.string "charge the battery: {STR_VAR_1}{PAUSE_UNTIL_PRESS}$"
 
 VSSeeker_Text_NoTrainersWithinRange:: @ 81C13D6
-	.string "There are no TRAINERS within range\n"
+	.string "There are no Trainers within range\n"
 	.string "who can battle…\p"
-	.string "The VS SEEKER was turned off.{PAUSE_UNTIL_PRESS}$"
+	.string "The VS Seeker was turned off.{PAUSE_UNTIL_PRESS}$"
 
 VSSeeker_Text_TrainersNotReady:: @ 81C1429
-	.string "The other TRAINERS don't appear\n"
+	.string "The other Trainers don't appear\n"
 	.string "to be ready for battle.\p"
 	.string "Let's wait till later.{PAUSE_UNTIL_PRESS}$"
 
 Route3_Text_ColtonRematchIntro:: @ 81C147A
 	.string "Hey!\n"
-	.string "I saw you in VIRIDIAN FOREST!$"
+	.string "I saw you in Viridian Forest!$"
 
 Route3_Text_BenRematchIntro:: @ 81C149D
 	.string "Hi! I like shorts!\n"
@@ -27,7 +27,7 @@ Route3_Text_JaniceRematchIntro:: @ 81C14F3
 	.string "You keep looking at me, don't you?$"
 
 Route3_Text_GregRematchIntro:: @ 81C1521
-	.string "You're a TRAINER, aren't you?\n"
+	.string "You're a Trainer, aren't you?\n"
 	.string "Let's get with it right away!$"
 
 Route3_Text_SallyRematchIntro:: @ 81C155D
@@ -39,7 +39,7 @@ Route3_Text_CalvinRematchIntro:: @ 81C1588
 	.string "You're still not wearing shorts!$"
 
 Route3_Text_JamesRematchIntro:: @ 81C15C5
-	.string "I'll battle you with the POKéMON\n"
+	.string "I'll battle you with the Puppets\n"
 	.string "I started raising.$"
 
 Route3_Text_RobinRematchIntro:: @ 81C15F9
@@ -47,8 +47,8 @@ Route3_Text_RobinRematchIntro:: @ 81C15F9
 	.string "Did you push me?$"
 
 Route4_Text_CrissyRematchIntro:: @ 81C160F
-	.string "I always catch mushroom POKéMON\n"
-	.string "on MT. MOON.$"
+	.string "I always look for mushrooms\n"
+	.string "in Viridian Forest.$"
 
 Route6_Text_RickyRematchIntro:: @ 81C163C
 	.string "Oh! You're that nosy kid who\n"
@@ -62,7 +62,7 @@ Route6_Text_NancyRematchIntro:: @ 81C166D
 
 Route6_Text_KeigoRematchIntro:: @ 81C16E2
 	.string "I'm trying to find something good\n"
-	.string "that's not a BUG POKéMON, but…$"
+	.string "that's not a Fairy Puppet, but…$"
 
 Route6_Text_JeffRematchIntro:: @ 81C1723
 	.string "Huh?\n"
@@ -77,7 +77,7 @@ Route6_Text_ElijahRematchIntro:: @ 81C176B
 	.string "Have you gotten better?$"
 
 Route8_Text_AidanRematchIntro:: @ 81C1793
-	.string "You are good at POKéMON, but how\n"
+	.string "You are good at Puppets, but how\n"
 	.string "is your chemistry grade?$"
 
 Route8_Text_StanRematchIntro:: @ 81C17CD

@@ -1209,7 +1209,7 @@ static const struct TrainerMonFullControl sParty_PokemaniacWinston[] = {
         .gender = MON_MALE,
         .ability = 0,
         .ball = ITEM_POKE_BALL,
-        .moves = {MOVE_BLOCK, MOVE_SAND_TOMB, MOVE_DECISION, MOVE_SPIKES},
+        .moves = {MOVE_BLOCK, MOVE_SAND_TOMB, MOVE_DECISION, MOVE_FIRE_SPIN},
     },
     {
         .iv = 5,
@@ -5282,7 +5282,7 @@ static const struct TrainerMonFullControl sParty_CooltrainerGeorge[] = {
 		.evs = {0, 0, 0, 30, 30, 0},
 		.nature = NATURE_MODEST,
 		.gender = MON_MALE,
-		.ability = 2, // Drought
+		.ability = 0, // Chlorophyll
 		.ball = ITEM_POKE_BALL,
 		.moves = {MOVE_EARTH_POWER, MOVE_NATURE_SOUND, MOVE_NASTY_PLOT, MOVE_HEAT_WAVE},
     },
@@ -5294,7 +5294,7 @@ static const struct TrainerMonFullControl sParty_CooltrainerGeorge[] = {
 		.evs = {0, 30, 0, 30, 0, 0},
 		.nature = NATURE_NAIVE,
 		.gender = MON_MALE,
-		.ability = 2, // Drought
+		.ability = 0, // Hustle
 		.ball = ITEM_POKE_BALL,
 		.moves = {MOVE_FIRE_BLAST, MOVE_HYPER_BEAM, MOVE_SUPERPOWER, MOVE_SELF_DESTRUCT},
     },
@@ -5306,7 +5306,7 @@ static const struct TrainerMonFullControl sParty_CooltrainerGeorge[] = {
 		.evs = {0, 30, 0, 30, 0, 0},
 		.nature = NATURE_MODEST,
 		.gender = MON_MALE,
-		.ability = 2, // Drought
+		.ability = 2, // Moxie
 		.ball = ITEM_POKE_BALL,
 		.moves = {MOVE_FLARE_BLITZ, MOVE_HEAT_CLAW, MOVE_MEGA_KICK, MOVE_SUNNY_DAY},
     },
@@ -5455,7 +5455,7 @@ static const struct TrainerMonFullControl sParty_CooltrainerRolando[] = {
         .gender = MON_MALE,
         .ability = 0, // Hustle
         .ball = ITEM_POKE_BALL,
-        .moves = {MOVE_SPIKES, MOVE_POISON_BOMB, MOVE_LEECH_SEED, MOVE_SLEEP_POWDER},
+        .moves = {MOVE_GIGA_IMPACT, MOVE_SUPERPOWER, MOVE_FIRE_PUNCH, MOVE_SELF_DESTRUCT},
     },
     {
         .iv = 10,
@@ -7157,7 +7157,7 @@ static const struct TrainerMonFullControl sParty_RivalSilphSquirtle[] = {
         .gender = MON_MALE,
         .ability = 1, // Sturdy
         .ball = ITEM_ULTRA_BALL,
-        .moves = {MOVE_EARTH_POWER, MOVE_EXTRASENSORY, MOVE_RECOVER, MOVE_SPIKES},
+        .moves = {MOVE_EARTH_POWER, MOVE_EXTRASENSORY, MOVE_RECOVER, MOVE_FIRE_SPIN},
     },
     {
         .iv = 12,
@@ -7382,7 +7382,7 @@ static const struct TrainerMonFullControl sParty_RivalRoute22LateSquirtle[] = {
         .gender = MON_MALE,
         .ability = 1, // Sturdy
         .ball = ITEM_ULTRA_BALL,
-        .moves = {MOVE_EARTH_POWER, MOVE_EXTRASENSORY, MOVE_RECOVER, MOVE_SPIKES},
+        .moves = {MOVE_EARTH_POWER, MOVE_EXTRASENSORY, MOVE_RECOVER, MOVE_FIRE_SPIN},
     },
     {
         .iv = 12,

@@ -131,13 +131,13 @@ struct LearnMoveGfxResources
     u8 unk_18;
     u8 scrollPositionMaybe;
     u8 numLearnableMoves;
-    u8 unk_1B;
+    u8 eggMoveMode;
     u8 unk_1C;
     u8 unk_1D;
     u8 unk_1E;
     struct ListMenuItem listMenuItems[25];
     u16 learnableMoves[25];
-    u8 listMenuStrbufs[25][13];
+    u8 listMenuStrbufs[25][15];
     bool8 scheduleMoveInfoUpdate;
     u8 selectedPartyMember;
     u8 selectedMoveSlot;
@@ -420,6 +420,8 @@ static void CB2_MoveRelearner_Init(void)
     sMoveRelearner = AllocZeroed(sizeof(struct LearnMoveGfxResources));
     InitMoveRelearnerStateVariables();
     sMoveRelearner->selectedPartyMember = gSpecialVar_0x8004;
+	if (gSpecialVar_0x8005 == 1)
+		sMoveRelearner->eggMoveMode = 1;
     MoveRelearnerInitListMenuBuffersEtc();
     SetVBlankCallback(VBlankCB_MoveRelearner);
     MoveRelearnerLoadBgGfx();
@@ -703,7 +705,7 @@ static void InitMoveRelearnerStateVariables(void)
     sMoveRelearner->unk_18 = 0;
     sMoveRelearner->unk_1C = 0;
     sMoveRelearner->numLearnableMoves = 0;
-    sMoveRelearner->unk_1B = 0;
+    sMoveRelearner->eggMoveMode = 0;
     sMoveRelearner->unk_1D = 0;
     sMoveRelearner->unk_1E = 0;
     sMoveRelearner->scheduleMoveInfoUpdate = FALSE;
@@ -750,10 +752,13 @@ static void MoveRelearnerInitListMenuBuffersEtc(void)
 {
     int i;
     s32 count;
-    u8 nickname[11];
+    u8 nickname[POKEMON_NAME_LENGTH];
 
-    sMoveRelearner->numLearnableMoves = GetMoveRelearnerMoves(&gPlayerParty[sMoveRelearner->selectedPartyMember], sMoveRelearner->learnableMoves);
-    count = GetMoveRelearnerMoves(&gPlayerParty[sMoveRelearner->selectedPartyMember], sMoveRelearner->learnableMoves);
+	if (sMoveRelearner->eggMoveMode)
+		sMoveRelearner->numLearnableMoves = GetEggRelearnerMoves(&gPlayerParty[sMoveRelearner->selectedPartyMember], sMoveRelearner->learnableMoves);
+	else
+		sMoveRelearner->numLearnableMoves = GetMoveRelearnerMoves(&gPlayerParty[sMoveRelearner->selectedPartyMember], sMoveRelearner->learnableMoves);
+    count = sMoveRelearner->numLearnableMoves; //GetMoveRelearnerMoves(&gPlayerParty[sMoveRelearner->selectedPartyMember], sMoveRelearner->learnableMoves);
     for (i = 0; i < sMoveRelearner->numLearnableMoves; i++)
         StringCopy(sMoveRelearner->listMenuStrbufs[i], gMoveNames[sMoveRelearner->learnableMoves[i]]);
     GetMonData(&gPlayerParty[sMoveRelearner->selectedPartyMember], MON_DATA_NICKNAME, nickname);
@@ -777,15 +782,42 @@ static void MoveRelearnerMenuHandleInput(void)
     ListMenu_ProcessInput(sMoveRelearner->listMenuTaskId);
     if (JOY_NEW(A_BUTTON))
     {
-        PlaySE(SE_SELECT);
         if (sMoveRelearner->selectedIndex != 0xFE)
         {
-            sMoveRelearner->state = 8;
-            StringCopy(gStringVar2, sMoveRelearner->listMenuStrbufs[sMoveRelearner->selectedIndex]);
-            StringExpandPlaceholdersAndPrintTextOnWindow7Color2(gText_TeachMoveQues);
+			u8 canLearn = TRUE;
+			if (sMoveRelearner->eggMoveMode)
+			{
+				//must have puppet in party with move
+				u16 move = sMoveRelearner->learnableMoves[sMoveRelearner->selectedIndex];
+				u8 i;
+				u8 j;
+				canLearn = FALSE;
+				for (i = 0; i < 6 && !canLearn; i++)
+				{
+					for (j = 0; j < 4 && !canLearn; j++)
+					{
+						if (GetMonData(&gPlayerParty[i], MON_DATA_MOVE1 + j, NULL) == move)
+							canLearn = TRUE;
+					}
+				}
+			}
+			
+			if (canLearn)
+            {
+				PlaySE(SE_SELECT);
+				sMoveRelearner->state = MENU_STATE_PRINT_TEACH_MOVE_PROMPT;
+				StringCopy(gStringVar2, sMoveRelearner->listMenuStrbufs[sMoveRelearner->selectedIndex]);
+				StringExpandPlaceholdersAndPrintTextOnWindow7Color2(gText_TeachMoveQues);
+			}
+			else
+			{
+				PlaySE(SE_FAILURE);
+				StringExpandPlaceholdersAndPrintTextOnWindow7Color2(gText_CantTutorMove);
+			}
         }
         else
         {
+			PlaySE(SE_SELECT);
             StringExpandPlaceholdersAndPrintTextOnWindow7Color2(gText_GiveUpTryingToTeachNewMove);
             sMoveRelearner->state = 12;
         }

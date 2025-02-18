@@ -167,6 +167,17 @@ const struct SpriteTemplate gPinMissileSpriteTemplate =
     .callback = AnimMissileArc,
 };
 
+const struct SpriteTemplate gAnchorShotSpriteTemplate =
+{
+    .tileTag = ANIM_TAG_ANCHOR,
+    .paletteTag = ANIM_TAG_ANCHOR,
+    .oam = &gOamData_AffineNormal_ObjNormal_32x32,
+    .anims = gDummySpriteAnimTable,
+    .images = NULL,
+    .affineAnims = gDummySpriteAffineAnimTable,
+    .callback = AnimMissileArc,
+};
+
 const struct SpriteTemplate gIcicleSpearSpriteTemplate =
 {
     .tileTag = ANIM_TAG_ICICLE_SPEAR,

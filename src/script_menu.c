@@ -824,6 +824,13 @@ static const struct MenuAction sScriptMultiChoiceMenu_CinnabarQuiz2[] = {
 	{ gText_FirePunch },
 };
 
+static const struct MenuAction sScriptMultiChoiceMenu_MoveTutor[] = {
+	{ gText_Relearn },
+	{ gText_Tutor },
+	{ gText_Forget },
+	{ gPCText_Cancel },
+};
+
 const struct MultichoiceListStruct gScriptMultiChoiceMenus[] = {
     { sScriptMultiChoiceMenu_YesNo,  NELEMS(sScriptMultiChoiceMenu_YesNo)  },
     { sScriptMultiChoiceMenu_Eeveelutions,  NELEMS(sScriptMultiChoiceMenu_Eeveelutions)  },
@@ -919,6 +926,7 @@ const struct MultichoiceListStruct gScriptMultiChoiceMenus[] = {
 	{ sScriptMultiChoiceMenu_NatureChanger6, NELEMS(sScriptMultiChoiceMenu_NatureChanger6) },
 	{ sScriptMultiChoiceMenu_CinnabarQuiz1, NELEMS(sScriptMultiChoiceMenu_CinnabarQuiz1) },
 	{ sScriptMultiChoiceMenu_CinnabarQuiz2, NELEMS(sScriptMultiChoiceMenu_CinnabarQuiz2) },
+	{ sScriptMultiChoiceMenu_MoveTutor, NELEMS(sScriptMultiChoiceMenu_MoveTutor) },
 };
 
 // From Cool to Berries goes unused

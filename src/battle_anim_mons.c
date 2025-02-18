@@ -1772,6 +1772,12 @@ void AnimTask_GetFrustrationPowerLevel(u8 taskId)
     DestroyAnimVisualTask(taskId);
 }
 
+void AnimTask_GetMoodSwingAnimation(u8 taskId)
+{
+	gBattleAnimArgs[7] = gBattleScripting.statChanger - 17;
+	DestroyAnimVisualTask(taskId);
+}
+
 // not used
 static void SetOamPriorityOfAllVisibleBattlers(u8 priority)
 {

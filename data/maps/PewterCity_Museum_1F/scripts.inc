@@ -157,12 +157,12 @@ PewterCity_Museum_1F_EventScript_OldAmberScientist:: @ 816A4AE
 	faceplayer
 	goto_if_set FLAG_GOT_OLD_AMBER, PewterCity_Museum_1F_EventScript_AlreadyGotOldAmber
 	msgbox PewterCity_Museum_1F_Text_WantYouToGetAmberExamined
-	checkitemspace ITEM_OLD_AMBER, 1
+	checkitemspace ITEM_TM70, 1
 	compare VAR_RESULT, FALSE
 	goto_if_eq PewterCity_Museum_1F_EventScript_NoRoomForOldAmber
 	setflag FLAG_GOT_OLD_AMBER
 	removeobject LOCALID_OLD_AMBER
-	giveitem_msg PewterCity_Museum_1F_Text_ReceivedOldAmberFromMan, ITEM_OLD_AMBER, 1, MUS_OBTAIN_KEY_ITEM
+	giveitem_msg PewterCity_Museum_1F_Text_ReceivedOldAmberFromMan, ITEM_TM70, 1, MUS_OBTAIN_KEY_ITEM
 	release
 	end
 

@@ -812,6 +812,9 @@ extern const u8 gText_PokemonJump[];
 extern const u8 gText_DodrioBerryPicking[];
 extern const u8 gText_2Tinymushrooms[];
 extern const u8 gText_1BigMushroom[];
+extern const u8 gText_Relearn[];
+extern const u8 gText_Tutor[];
+extern const u8 gText_Forget[];
 extern const u8 gText_SeviiIslands[];
 extern const u8 gText_NavelRock[];
 extern const u8 gText_BirthIsland[];
@@ -926,6 +929,7 @@ extern const u8 gText_1_2_and_Poof[];
 extern const u8 gText_MonForgotOldMoveAndMonLearnedNewMove[];
 extern const u8 gText_WhichMoveShouldBeForgotten[];
 extern const u8 gText_TeachMoveQues[];
+extern const u8 gText_CantTutorMove[];
 extern const u8 gText_GiveUpTryingToTeachNewMove[];
 
 // pokemon_size_record

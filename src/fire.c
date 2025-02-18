@@ -82,6 +82,46 @@ const struct SpriteTemplate gFireSpreadSpriteTemplate =
     .callback = AnimFireSpread,
 };
 
+static const union AnimCmd sRazorLeafParticleAnimCmds1[] =
+{
+    ANIMCMD_FRAME(0, 5),
+    ANIMCMD_FRAME(4, 5),
+    ANIMCMD_FRAME(8, 5),
+    ANIMCMD_FRAME(12, 5),
+    ANIMCMD_FRAME(16, 5),
+    ANIMCMD_FRAME(20, 5),
+    ANIMCMD_FRAME(16, 5),
+    ANIMCMD_FRAME(12, 5),
+    ANIMCMD_FRAME(8, 5),
+    ANIMCMD_FRAME(4, 5),
+    ANIMCMD_JUMP(0),
+};
+
+static const union AnimCmd sRazorLeafParticleAnimCmds2[] =
+{
+    ANIMCMD_FRAME(24, 5),
+    ANIMCMD_FRAME(28, 5),
+    ANIMCMD_FRAME(32, 5),
+    ANIMCMD_END,
+};
+
+static const union AnimCmd *const sRazorLeafParticleAnimTable[] =
+{
+    sRazorLeafParticleAnimCmds1,
+    sRazorLeafParticleAnimCmds2,
+};
+
+const struct SpriteTemplate gTropKickLeavesSpriteTemplate =
+{
+    .tileTag = ANIM_TAG_LEAF,
+    .paletteTag = ANIM_TAG_LEAF,
+    .oam = &gOamData_AffineOff_ObjNormal_16x16,
+    .anims = sRazorLeafParticleAnimTable,
+    .images = NULL,
+    .affineAnims = gDummySpriteAffineAnimTable,
+    .callback = AnimFireSpread,
+};
+
 const struct SpriteTemplate gFlameChargeSpriteTemplate =
 {
     .tileTag = ANIM_TAG_SMALL_EMBER,

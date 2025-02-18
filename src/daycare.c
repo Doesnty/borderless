@@ -81,8 +81,6 @@ EWRAM_DATA static u16 sHatchedEggFinalMoves[4] = {0};
 EWRAM_DATA static u16 sHatchedEggEggMoves[EGG_MOVES_ARRAY_COUNT] = {0};
 EWRAM_DATA static u16 sHatchedEggMotherMoves[4] = {0};
 
-#include "data/pokemon/egg_moves.h"
-
 static const struct WindowTemplate sDaycareLevelMenuWindowTemplate =
 {
     .bg = 0,
@@ -856,33 +854,20 @@ static u8 GetEggMoves(struct Pokemon *pokemon, u16 *eggMoves)
     u16 eggMoveIdx;
     u16 numEggMoves;
     u16 species;
-    u16 i;
+    u16 i = 0;
 
     numEggMoves = 0;
     eggMoveIdx = 0;
     species = GetMonData(pokemon, MON_DATA_SPECIES);
-    for (i = 0; i < NELEMS(gEggMoves) - 1; i++)
-    {
-        if (gEggMoves[i] == species + EGG_MOVES_SPECIES_OFFSET)
-        {
-            eggMoveIdx = i + 1;
-            break;
-        }
-    }
-
-    for (i = 0; i < EGG_MOVES_ARRAY_COUNT; i++)
-    {
-        if (gEggMoves[eggMoveIdx + i] > EGG_MOVES_SPECIES_OFFSET)
-        {
-            // TODO: the curly braces around this if statement are required for a matching build.
-            break;
-        }
-
-        eggMoves[i] = gEggMoves[eggMoveIdx + i];
-        numEggMoves++;
-    }
-
-    return numEggMoves;
+	
+	while (gEggMoveLearnsets[species][i] != 0)
+	{
+		eggMoves[i] = gEggMoveLearnsets[species][i];
+		numEggMoves++;
+		i++;
+	}
+	
+	return numEggMoves;
 }
 
 static void BuildEggMoveset(struct Pokemon *egg, struct BoxPokemon *father, struct BoxPokemon *mother)

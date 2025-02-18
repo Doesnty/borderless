@@ -114,6 +114,28 @@ const struct SpriteTemplate gMudsportMudSpriteTemplate =
     .callback = AnimMudSportDirt,
 };
 
+static const union AnimCmd sAnim_FlyingRock_2[] =
+{
+    ANIMCMD_FRAME(64, 1),
+    ANIMCMD_END,
+};
+
+static const union AnimCmd *const sAnims_CataclysmRock[] =
+{
+    sAnim_FlyingRock_2,
+};
+
+const struct SpriteTemplate gCataclysmSetupSpriteTemplate =
+{
+    .tileTag = ANIM_TAG_ROCKS,
+    .paletteTag = ANIM_TAG_ROCKS,
+    .oam = &gOamData_AffineOff_ObjNormal_32x32,
+    .anims = sAnims_CataclysmRock,
+    .images = NULL,
+    .affineAnims = gDummySpriteAffineAnimTable,
+    .callback = AnimMudSportDirt,
+};
+
 const struct SpriteTemplate gDirtPlumeSpriteTemplate =
 {
     .tileTag = ANIM_TAG_MUD_SAND,

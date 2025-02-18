@@ -110,7 +110,7 @@
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "VictoryRoad_2F_EventScript_ItemTM07",
+      "script": "VictoryRoad_2F_EventScript_ItemTM63",
       "flag": "FLAG_HIDE_VICTORY_ROAD_2F_TM07"
     },
     {

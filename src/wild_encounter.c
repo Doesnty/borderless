@@ -212,6 +212,10 @@ static void GenerateWildMon(u16 species, u8 level, u8 slot)
     u32 personality;
     s8 chamber;
     ZeroEnemyPartyMons();
+	if (species == SPECIES_ZUN_STARTER)
+		species = VarGet(VAR_ZUN_STARTER_SPECIES);
+	if (species == 0 || species >= NUM_SPECIES)
+		species = SPECIES_CKOISHI;
     CreateMonWithNature(&gEnemyParty[0], species, level, 32, Random() % 25);
 }
 

@@ -774,7 +774,9 @@ static const u16 sMovesForbiddenToCopy[] =
     MOVE_METRONOME,
     MOVE_STRUGGLE,
     MOVE_SKETCH,
+	MOVE_THIRD_EYE,
     MOVE_MIMIC,
+	MOVE_DEMON_BOOK,
     MIMIC_FORBIDDEN_END,
     MOVE_COUNTER,
     MOVE_MIRROR_COAT,
@@ -10151,6 +10153,10 @@ static void sp1c_roost(void);
 static void sp1d_flight(void);
 static void sp1e_core_surge(void);
 static void sp1f_switchin_ability(void);
+static void sp20_souvenir(void);
+static void sp21_demon_book(void);
+static void sp22_hold_hands(void);
+static void sp23_group_prank_animation_setup(void);
 
 void (* const gBattleScriptingSpecialsTable[])(void) =
 {
@@ -10186,6 +10192,10 @@ void (* const gBattleScriptingSpecialsTable[])(void) =
 	sp1d_flight,
 	sp1e_core_surge,
 	sp1f_switchin_ability,
+	sp20_souvenir,
+	sp21_demon_book,
+	sp22_hold_hands,
+	sp23_group_prank_animation_setup,
 };
 
 static void atkF8_special(void)
@@ -10816,4 +10826,142 @@ static void sp1e_core_surge(void)
 static void sp1f_switchin_ability(void)
 {
 	AbilityBattleEffects(ABILITYEFFECT_ON_SWITCHIN, gBattleScripting.battler, 0, 0, 0);
+}
+
+static void sp20_souvenir(void)
+{
+    gChosenMove = 0xFFFF;
+    if (!(gBattleMons[gBattlerAttacker].status2 & STATUS2_TRANSFORMED)
+     && gLastPrintedMoves[gBattlerTarget] != MOVE_STRUGGLE
+     && gLastPrintedMoves[gBattlerTarget] != 0
+     && gLastPrintedMoves[gBattlerTarget] != 0xFFFF
+     && gLastPrintedMoves[gBattlerTarget] != MOVE_SKETCH
+	 && gLastPrintedMoves[gBattlerTarget] != MOVE_THIRD_EYE)
+    {
+        s32 i;
+		struct MovePpInfo movePpData;
+
+		gBattleMons[gBattlerAttacker].moves[0] = gLastPrintedMoves[gBattlerTarget];
+		gBattleMons[gBattlerAttacker].pp[0] = gBattleMoves[gLastPrintedMoves[gBattlerTarget]].pp;
+		gBattleMons[gBattlerAttacker].moves[1] = MOVE_NONE;
+		gBattleMons[gBattlerAttacker].pp[1] = 0;
+		gBattleMons[gBattlerAttacker].moves[2] = MOVE_NONE;
+		gBattleMons[gBattlerAttacker].pp[2] = 0;
+		gBattleMons[gBattlerAttacker].moves[3] = MOVE_NONE;
+		gBattleMons[gBattlerAttacker].pp[3] = 0;
+		gActiveBattler = gBattlerAttacker;
+		for (i = 0; i < MAX_MON_MOVES; ++i)
+		{
+			movePpData.moves[i] = gBattleMons[gBattlerAttacker].moves[i];
+			movePpData.pp[i] = gBattleMons[gBattlerAttacker].pp[i];
+		}
+		movePpData.ppBonuses = gBattleMons[gBattlerAttacker].ppBonuses;
+		BtlController_EmitSetMonData(0, REQUEST_MOVES_PP_BATTLE, 0, sizeof(struct MovePpInfo), &movePpData);
+		MarkBattlerForControllerExec(gActiveBattler);
+		PREPARE_MOVE_BUFFER(gBattleTextBuff1, gLastPrintedMoves[gBattlerTarget])
+		
+		gMoveSelectionCursor[gBattlerAttacker] = 0;
+    }
+    else
+    {
+		gBattlescriptCurrInstr = BattleScript_ButItFailed;
+    }
+}
+
+// The order of this is assumed to be the same as the types
+static const u16 demonbookmoves[] = {
+    MOVE_FACADE,
+    MOVE_BRICK_BREAK,
+    MOVE_WING_ATTACK, // todo: drill peck?
+    MOVE_POISON_JAB,
+    MOVE_ROCK_SLIDE,
+    MOVE_CRUNCH,
+    MOVE_HEADBUTT,
+    MOVE_SHADOW_HIT,
+    MOVE_DRAWN_LINE,
+    MOVE_SECRET_POWER,
+    MOVE_FIRE_PUNCH,
+    MOVE_WATERFALL,
+    MOVE_SEED_BOMB,
+    MOVE_THUNDER_PUNCH,
+    MOVE_ZEN_HEADBUTT,
+    MOVE_ICE_PUNCH,
+    MOVE_FORCE_PALM,
+    MOVE_FRUSTRATION,
+    0x00,
+};
+
+
+static void sp21_demon_book()
+{
+	u8 i = 0;
+	u16 moveUsed = 0;
+	u16 highestDamage = 0;
+	s32 baseDamage[18];
+    u16 sideStatus = gSideStatuses[GET_BATTLER_SIDE(gBattlerTarget)];
+	
+	// we don't need this to be as intelligent as goodruby
+	// don't consider using whirlwind or OHKOs
+	
+	for (i = 0; i < 18; i++)
+	{
+		gCurrentMove = demonbookmoves[i];
+		gBattleMoveDamage = CalculateBaseDamage(&gBattleMons[gBattlerAttacker], &gBattleMons[gBattlerTarget], gCurrentMove, sideStatus, 0, 0, gBattlerAttacker, gBattlerTarget);
+		AI_TypeCalc(gCurrentMove, gBattleMons[gBattlerTarget].species, gBattleMons[gBattlerTarget].ability);
+		baseDamage[i] = gBattleMoveDamage;
+	}
+	
+	// Check for immunity abilities
+	if (gBattleMons[gBattlerTarget].ability == ABILITY_VOLT_ABSORB ||
+		gBattleMons[gBattlerTarget].ability == ABILITY_LIGHTNING_ROD ||
+		gBattleMons[gBattlerTarget].ability == ABILITY_MOTOR_DRIVE)
+		baseDamage[TYPE_ELECTRIC] = 0;
+
+	if (gBattleMons[gBattlerTarget].ability == ABILITY_WATER_ABSORB ||
+		gBattleMons[gBattlerTarget].ability == ABILITY_STORM_DRAIN)
+		baseDamage[TYPE_WATER] = 0;
+		
+	if (gBattleMons[gBattlerTarget].ability == ABILITY_FLASH_FIRE)
+		baseDamage[TYPE_FIRE] = 0;
+	
+	if (gBattleMons[gBattlerTarget].ability == ABILITY_SAP_SIPPER)
+		baseDamage[TYPE_NATURE] = 0;
+	
+	if (gBattleMons[gBattlerTarget].ability == ABILITY_LEVITATE)
+		baseDamage[TYPE_EARTH] = 0;
+	
+	// find the highest damage move
+	for (i = 0; i < 18; i++)
+	{
+		if (baseDamage[i] > highestDamage)
+		{
+			moveUsed = demonbookmoves[i];
+			highestDamage = baseDamage[i];
+		}
+	}
+	
+	// somehow didn't find one that does more than 0
+	if (moveUsed == 0)
+		moveUsed = demonbookmoves[Random() % 18];
+	
+	gBattleMoveDamage = 0;
+	gHitMarker &= ~(HITMARKER_ATTACKSTRING_PRINTED);
+	gCurrentMove = moveUsed;
+	gBattlescriptCurrInstr = gBattleScriptsForMoveEffects[gBattleMoves[gCurrentMove].effect];
+}
+
+static void sp22_hold_hands()
+{
+	// move fails if target has no hands
+	if (gBattleMons[gBattlerTarget].species == SPECIES_CMAGAN ||
+		gBattleMons[gBattlerTarget].species == SPECIES_MAGAN ||
+		gBattleMons[gBattlerTarget].species == SPECIES_NAMAZU ||
+		gBattleMons[gBattlerTarget].species == SPECIES_TORI ||
+		gBattleMons[gBattlerTarget].species == SPECIES_SEKI_HEAD)
+		gBattlescriptCurrInstr = BattleScript_ButItFailed;
+}
+
+static void sp23_group_prank_animation_setup()
+{
+	gAnimMoveTurn++;
 }

@@ -98,6 +98,7 @@
 #define MULTICHOICE_NATURE_CHANGER6                            91
 #define MULTICHOICE_CINNABAR_QUIZ1                             92
 #define MULTICHOICE_CINNABAR_QUIZ2                             93
+#define MULTICHOICE_MOVE_TUTOR                                 94
 
 #define LISTMENU_BADGES                    0
 #define LISTMENU_SILPHCO_FLOORS            1

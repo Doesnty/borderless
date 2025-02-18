@@ -75,6 +75,8 @@ static u8 GetLevelFromMonExp(struct Pokemon *mon);
 static u16 CalculateBoxMonChecksum(struct BoxPokemon *boxMon);
 
 #include "data/battle_moves.h"
+#include "data/pokemon/egg_moves.h"
+#include "data/pokemon/egg_move_pointers.h"
 
 // Used in an unreferenced function in RS.
 // Unreferenced here and in Emerald.
@@ -1721,8 +1723,12 @@ s32 CalculateBaseDamage(struct BattlePokemon *attacker, struct BattlePokemon *de
     spDefense = defender->spDefense;
     if (move == MOVE_FOUL_PLAY && attacker->ability == ABILITY_PERVERSION)
         attack = defender->spAttack;
+	else if (move == MOVE_TAKE_OVER && attacker->ability == ABILITY_PERVERSION)
+		attack = defender->attack;
     else if (move == MOVE_FOUL_PLAY)
         attack = defender->attack;
+	else if (move == MOVE_TAKE_OVER)
+		attack = defender->spAttack;
     else if (attacker->ability == ABILITY_PERVERSION)
     {
         u16 buffer = spAttack;
@@ -2018,17 +2024,38 @@ s32 CalculateBaseDamage(struct BattlePokemon *attacker, struct BattlePokemon *de
     {
         if (attacker->ability == ABILITY_SOLAR_POWER && gBattleWeather & WEATHER_SUN_ANY)
             spAttack = (spAttack * 150) / 100;
+		if (gBattleWeather & WEATHER_SUN_ANY)
+		{
+            if (attacker->ability == ABILITY_FLOWER_GIFT)
+            {
+                attack *= 3;
+                attack /= 2;
+                spAttack *= 3;
+                spAttack /= 2;
+            }
+            if (defenderAbility == ABILITY_FLOWER_GIFT)
+            {
+                defense *= 3;
+				defense /= 2;
+                spDefense *= 3;
+				spDefense /= 2;
+            }
+		}
         if (gBattleWeather & WEATHER_HAIL)
         {
             if (attacker->ability == ABILITY_WINTER_GIFT)
             {
-                attack *= 2;
-                spAttack *= 2;
+                attack *= 3;
+                attack /= 2;
+                spAttack *= 3;
+                spAttack /= 2;
             }
             if (defenderAbility == ABILITY_WINTER_GIFT)
             {
-                defense *= 2;
-                spDefense *= 2;
+                defense *= 3;
+				defense /= 2;
+                spDefense *= 3;
+				spDefense /= 2;
             }
         }
         if (gBattleWeather && defenderAbility == ABILITY_STORM_SHAWL)
@@ -2078,7 +2105,11 @@ s32 CalculateBaseDamage(struct BattlePokemon *attacker, struct BattlePokemon *de
     {
         u8 atkStatMod = attacker->statStages[STAT_SPATK];
         u8 defStatMod = defender->statStages[STAT_SPDEF];
-        if (attacker->ability == ABILITY_PERVERSION)
+		if (move == MOVE_TAKE_OVER && attacker->ability == ABILITY_PERVERSION)
+			atkStatMod = defender->statStages[STAT_ATK];
+		else if (move == MOVE_TAKE_OVER)
+			atkStatMod = defender->statStages[STAT_SPATK];
+        else if (attacker->ability == ABILITY_PERVERSION)
             atkStatMod = attacker->statStages[STAT_ATK];
         if (move == MOVE_MANASHOCK)
         {
@@ -5055,6 +5086,20 @@ u8 GetMoveRelearnerMoves(struct Pokemon *mon, u16 *moves)
     }
 
     return numMoves;
+}
+
+u8 GetEggRelearnerMoves(struct Pokemon *mon, u16 *moves)
+{
+	u8 i = 0;
+	u16 species = GetMonData(mon, MON_DATA_SPECIES, NULL);
+	
+	while (gEggMoveLearnsets[species][i] != 0)
+	{
+		moves[i] = gEggMoveLearnsets[species][i];
+		i++;
+	}
+	
+	return i;
 }
 
 u8 GetLevelUpMovesBySpecies(u16 species, u16 *moves)

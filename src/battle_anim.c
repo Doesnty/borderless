@@ -1416,6 +1416,9 @@ const struct CompressedSpriteSheet gBattleAnimPicTable[] =
     {gBattleAnimSpriteGfx_Vine3, 0x0a00, ANIM_TAG_VINE_3},
     {gBattleAnimSpriteGfx_Vine3, 0x0a00, ANIM_TAG_CHARGE_BEAM},
     {gBattleAnimSpriteGfx_Hexagram, 0x0800, ANIM_TAG_HEXAGRAM},
+    {gBattleAnimSpriteGfx_Anchor, 0x1000, ANIM_TAG_ANCHOR},
+    {gBattleAnimSpriteGfx_SpatialTear, 0x0080, ANIM_TAG_SPATIAL_TEAR},
+    {gBattleAnimSpriteGfx_SpatialTear, 0x0080, ANIM_TAG_OMINOUS_WIND},
 };
 
 const struct CompressedSpritePalette gBattleAnimPaletteTable[] =
@@ -1723,6 +1726,9 @@ const struct CompressedSpritePalette gBattleAnimPaletteTable[] =
     {gBattleAnimSpritePal_Vine3, ANIM_TAG_VINE_3},
     {gBattleAnimSpritePal_ChargeBeam, ANIM_TAG_CHARGE_BEAM},
     {gBattleAnimSpritePal_Hexagram, ANIM_TAG_HEXAGRAM},
+    {gBattleAnimSpritePal_Apollon, ANIM_TAG_ANCHOR},
+    {gBattleAnimSpritePal_SpatialTear, ANIM_TAG_SPATIAL_TEAR},
+    {gBattleAnimSpritePal_OminousWind, ANIM_TAG_OMINOUS_WIND},
 };
 
 const struct BattleAnimBackground gBattleAnimBackgroundTable[] =

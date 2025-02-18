@@ -104,6 +104,35 @@ const struct SpriteTemplate gKarateChopSpriteTemplate =
     .callback = AnimSlideHandOrFootToTarget,
 };
 
+static const union AnimCmd sAnim_BasicRock_0[] =
+{
+    ANIMCMD_FRAME(0, 1),
+    ANIMCMD_END,
+};
+
+static const union AnimCmd sAnim_BasicRock_1[] =
+{
+    ANIMCMD_FRAME(16, 1),
+    ANIMCMD_END,
+};
+
+static const union AnimCmd *const sAnims_BasicRock[] =
+{
+    sAnim_BasicRock_0,
+    sAnim_BasicRock_1,
+};
+
+const struct SpriteTemplate gEarthPressSpriteTemplate =
+{
+    .tileTag = ANIM_TAG_ROCKS,
+    .paletteTag = ANIM_TAG_ROCKS,
+    .oam = &gOamData_AffineOff_ObjNormal_32x32,
+    .anims = sAnims_BasicRock,
+    .images = NULL,
+    .affineAnims = gDummySpriteAffineAnimTable,
+    .callback = AnimSlideHandOrFootToTarget,
+};
+
 const struct SpriteTemplate gJumpKickSpriteTemplate =
 {
     .tileTag = ANIM_TAG_HANDS_AND_FEET,
@@ -244,6 +273,61 @@ const struct SpriteTemplate gDizzyPunchDuckSpriteTemplate =
     .paletteTag = ANIM_TAG_DUCK,
     .oam = &gOamData_AffineOff_ObjNormal_16x16,
     .anims = gDummySpriteAnimTable,
+    .images = NULL,
+    .affineAnims = gDummySpriteAffineAnimTable,
+    .callback = AnimDizzyPunchDuck,
+};
+
+static const union AnimCmd sPetalDanceBigFlowerAnimCmds[] =
+{
+    ANIMCMD_FRAME(0, 1),
+    ANIMCMD_END,
+};
+
+static const union AnimCmd *const sPetalDanceBigFlowerAnimTable[] =
+{
+    sPetalDanceBigFlowerAnimCmds,
+};
+
+const struct SpriteTemplate gPassionDance1SpriteTemplate =
+{
+    .tileTag = ANIM_TAG_FLOWER,
+    .paletteTag = ANIM_TAG_FLOWER,
+    .oam = &gOamData_AffineOff_ObjNormal_16x16,
+    .anims = sPetalDanceBigFlowerAnimTable,
+    .images = NULL,
+    .affineAnims = gDummySpriteAffineAnimTable,
+    .callback = AnimDizzyPunchDuck,
+};
+
+const struct SpriteTemplate gPassionDance2SpriteTemplate =
+{
+    .tileTag = ANIM_TAG_RED_HEART,
+    .paletteTag = ANIM_TAG_RED_HEART,
+    .oam = &gOamData_AffineOff_ObjNormal_16x16,
+    .anims = gDummySpriteAnimTable,
+    .images = NULL,
+    .affineAnims = gDummySpriteAffineAnimTable,
+    .callback = AnimDizzyPunchDuck,
+};
+
+static const union AnimCmd sPassionDanceFlameAnimCmds[] =
+{
+    ANIMCMD_FRAME(32, 1),
+    ANIMCMD_END,
+};
+
+static const union AnimCmd *const sPassionDanceFlameAnimTable[] =
+{
+    sPassionDanceFlameAnimCmds,
+};
+
+const struct SpriteTemplate gPassionDance3SpriteTemplate =
+{
+    .tileTag = ANIM_TAG_SMALL_EMBER,
+    .paletteTag = ANIM_TAG_SMALL_EMBER,
+    .oam = &gOamData_AffineOff_ObjNormal_32x32,
+    .anims = sPassionDanceFlameAnimTable,
     .images = NULL,
     .affineAnims = gDummySpriteAffineAnimTable,
     .callback = AnimDizzyPunchDuck,

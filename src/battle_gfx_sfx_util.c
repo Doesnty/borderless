@@ -660,7 +660,7 @@ void HandleSpeciesGfxDataChange(u8 battlerAtk, u8 battlerDef, u8 notTransform)
     void *buffer;
 
     //TODO: notTransform is bool8 in pokeem. Document it with a more reasonable name here. 
-    if (notTransform == 255) // castform?
+    if (notTransform == 255) // the GHOST
     {
         const void *src;
         void *dst;
@@ -748,10 +748,20 @@ void HandleSpeciesGfxDataChange(u8 battlerAtk, u8 battlerDef, u8 notTransform)
 		personalityValue = GetMonData(&party[gBattlerPartyIndexes[battlerAtk]], MON_DATA_PERSONALITY);
 		otId = GetMonData(&party[gBattlerPartyIndexes[battlerAtk]], MON_DATA_OT_ID);
 
-		HandleLoadSpecialPokePic_DontHandleDeoxys(&gMonBackPicTable[targetSpecies],
-												  gMonSpritesGfxPtr->sprites[position],
-												  targetSpecies,
-												  gTransformedPersonalities[battlerAtk]);
+		if (GetBattlerSide(battlerAtk) == B_SIDE_OPPONENT)
+		{
+			HandleLoadSpecialPokePic_DontHandleDeoxys(&gMonFrontPicTable[targetSpecies],
+													  gMonSpritesGfxPtr->sprites[position],
+													  targetSpecies,
+													  gTransformedPersonalities[battlerAtk]);
+		}
+		else //if (GetBattlerSide(party) == B_SIDE_PLAYER)
+		{
+			HandleLoadSpecialPokePic_DontHandleDeoxys(&gMonBackPicTable[targetSpecies],
+													  gMonSpritesGfxPtr->sprites[position],
+													  targetSpecies,
+													  gTransformedPersonalities[battlerAtk]);
+		}
 
 
         src = gMonSpritesGfxPtr->sprites[position];

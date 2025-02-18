@@ -16,3 +16,26 @@ ViridianCity_PokemonCenter_1F_Text_PokeCentersHealMons:: @ 8190450
     .string "They make all POKéMON completely\n"
     .string "healthy.$"
 
+GlobalMoveTutor_Text_Intro::
+	.string "I can teach your Puppets moves.\n"
+	.string "What would you like?$"
+
+GlobalMoveTutor_Text_Egg::
+	.string "That's an Egg.\n"
+	.string "Not much I can teach it.$"
+
+GlobalMoveTutor_Text_NothingToLearn::
+	.string "There's nothing I can teach\n"
+	.string "this Puppet. Sorry.$"
+
+GlobalMoveTutor_Text_NothingToForget::
+	.string "This Puppet can't forget the\n"
+	.string "last move it knows.$"
+
+GlobalMoveTutor_Text_RelearnWhich::
+	.string "Which Puppet wants to learn\n"
+	.string "a move it used to know?$"
+
+GlobalMoveTutor_Text_TutorWhich::
+	.string "Which Puppet wants to learn\n"
+	.string "from another Puppet?$"

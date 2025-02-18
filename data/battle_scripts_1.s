@@ -271,6 +271,8 @@ gBattleScriptsForMoveEffects::
 	.4byte BattleScript_EffectFlight
 	.4byte BattleScript_EffectCoreSurge
 	.4byte BattleScript_EffectBlossoming
+	.4byte BattleScript_EffectDemonBook
+	.4byte BattleScript_EffectHoldHands
 
 BattleScript_EffectHit::
 BattleScript_HitFromAtkCanceler::
@@ -923,9 +925,34 @@ BattleScript_EffectTripleHit::
 	goto BattleScript_MultiHitLoop
 
 BattleScript_EffectRecoilIfMiss::
+	jumpifability BS_ATTACKER, ABILITY_MAGIC_GUARD, BattleScript_EffectHit
 	attackcanceler
 	accuracycheck BattleScript_MoveMissedDoDamage, ACC_CURR_MOVE
-	goto BattleScript_HitFromAtkString
+	attackstring
+	ppreduce
+	critcalc
+	damagecalc
+	typecalc
+	adjustnormaldamage
+	attackanimation
+	waitanimation
+	effectivenesssound
+	hitanimation BS_TARGET
+	waitstate
+	healthbarupdate BS_TARGET
+	datahpupdate BS_TARGET
+	critmessage
+	waitmessage 64
+	resultmessage
+	waitmessage 64
+	
+	jumpifbyte CMP_COMMON_BITS, gMoveResultFlags, MOVE_RESULT_DOESNT_AFFECT_FOE, BattleScript_MoveMissedDoDamage
+	
+	seteffectwithchance
+	tryfaintmon BS_TARGET, FALSE, NULL
+	setbyte sMOVEEND_STATE, 0
+	moveend 0, 0
+	end
 
 BattleScript_MoveMissedDoDamage::
 	attackstring
@@ -1163,9 +1190,17 @@ BattleScript_EffectThrash::
 	goto BattleScript_EffectHit
 
 BattleScript_EffectSkyAttack::
+	jumpifmove MOVE_CATACLYSM, BattleScript_EffectCataclysm
 	jumpifstatus2 BS_ATTACKER, STATUS2_MULTIPLETURNS, BattleScript_TwoTurnMovesSecondTurn
 	jumpifword CMP_COMMON_BITS, gHitMarker, HITMARKER_NO_ATTACKSTRING, BattleScript_TwoTurnMovesSecondTurn
 	setbyte sTWOTURN_STRINGID, 3
+	call BattleScriptFirstChargingTurn
+	goto BattleScript_MoveEnd
+
+BattleScript_EffectCataclysm::
+	jumpifstatus2 BS_ATTACKER, STATUS2_MULTIPLETURNS, BattleScript_TwoTurnMovesSecondTurn
+	jumpifword CMP_COMMON_BITS, gHitMarker, HITMARKER_NO_ATTACKSTRING, BattleScript_TwoTurnMovesSecondTurn
+	setbyte sTWOTURN_STRINGID, 9
 	call BattleScriptFirstChargingTurn
 	goto BattleScript_MoveEnd
 
@@ -1391,6 +1426,7 @@ BattleScript_EffectLockOn::
 	goto BattleScript_MoveEnd
 
 BattleScript_EffectSketch::
+    jumpifmove MOVE_THIRD_EYE, BattleScript_EffectSouvenir
 	attackcanceler
 	attackstring
 	ppreduce
@@ -2171,9 +2207,15 @@ BattleScript_AlreadyAtFullHp::
 	goto BattleScript_MoveEnd
 
 BattleScript_EffectFakeOut::
+	jumpifmove MOVE_ALPHA_STRIKE, BattleScript_EffectAlphaStrike
 	attackcanceler
 	jumpifnotfirstturn BattleScript_ButItFailedAtkStringPpReduce
 	setmoveeffect MOVE_EFFECT_FLINCH | MOVE_EFFECT_CERTAIN
+	goto BattleScript_EffectHit
+
+BattleScript_EffectAlphaStrike::
+	attackcanceler
+	jumpifnotfirstturn BattleScript_ButItFailedAtkStringPpReduce
 	goto BattleScript_EffectHit
 
 BattleScript_ButItFailedAtkStringPpReduce::
@@ -5761,6 +5803,7 @@ BattleScript_EffectGroupPrank::
 	goto BattleScript_MoveEnd
 
 BattleScript_GroupPrankSecondTurn::
+	special 0x23
 	attackcanceler
 	setmoveeffect MOVE_EFFECT_CHARGING
 	setbyte sB_ANIM_TURN, 1
@@ -6156,3 +6199,34 @@ BattleScript_Devourer::
 	healthbarupdate BS_ATTACKER
 	datahpupdate BS_ATTACKER
 	return
+
+BattleScript_EffectSouvenir::
+	attackcanceler
+	attackstring
+	ppreduce
+	jumpifstatus2 BS_TARGET, STATUS2_SUBSTITUTE, BattleScript_ButItFailed
+	special 0x20
+	attackanimation
+	waitanimation
+	printstring STRINGID_THIRDEYE
+	waitmessage 0x40
+	goto BattleScript_MoveEnd
+
+BattleScript_EffectDemonBook::
+	attackcanceler
+	attackstring
+	pause 0x20
+	setbyte sB_ANIM_TURN, 0
+	setbyte sB_ANIM_TARGETS_HIT, 0
+	special 0x21
+
+BattleScript_EffectHoldHands::
+	attackcanceler
+	attackstring
+	ppreduce
+	special 0x22
+	attackanimation
+	waitanimation
+	printstring STRINGID_HELD_HANDS
+	waitmessage 0x40
+	goto BattleScript_MoveEnd

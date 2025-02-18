@@ -175,7 +175,7 @@ PokemonTower_6F_EventScript_ItemRareCandy:: @ 81BE796
 	end
 
 PokemonTower_6F_EventScript_ItemXAccuracy:: @ 81BE7A3
-	finditem ITEM_X_ACCURACY
+	finditem ITEM_SUPER_POTION
 	end
 
 Route12_EventScript_ItemTM48:: @ 81BE7B0
@@ -254,8 +254,8 @@ SilphCo_5F_EventScript_ItemProtein:: @ 81BE89A
 	finditem ITEM_PROTEIN
 	end
 
-SilphCo_5F_EventScript_ItemTM01:: @ 81BE8A7
-	finditem ITEM_TM01
+SilphCo_5F_EventScript_ItemTM54:: @ 81BE8A7
+	finditem ITEM_TM54
 	end
 
 SilphCo_5F_EventScript_ItemCardKey:: @ 81BE8B4
@@ -346,20 +346,20 @@ PokemonMansion_B1F_EventScript_ItemSecretKey:: @ 81BE9C5
 	finditem ITEM_SECRET_KEY
 	end
 
-VictoryRoad_1F_EventScript_ItemRareCandy:: @ 81BE9D2
-	finditem ITEM_RARE_CANDY
+VictoryRoad_1F_EventScript_ItemTM01:: @ 81BE9D2
+	finditem ITEM_TM01
 	end
 
-VictoryRoad_1F_EventScript_ItemTM02:: @ 81BE9DF
-	finditem ITEM_TM02
+VictoryRoad_1F_EventScript_ItemTM34:: @ 81BE9DF
+	finditem ITEM_TM34
 	end
 
 VictoryRoad_2F_EventScript_ItemGuardSpec:: @ 81BE9EC
 	finditem ITEM_HYPER_POTION
 	end
 
-VictoryRoad_2F_EventScript_ItemTM07:: @ 81BE9F9
-	finditem ITEM_TM07
+VictoryRoad_2F_EventScript_ItemTM63:: @ 81BE9F9
+	finditem ITEM_TM63
 	end
 
 VictoryRoad_2F_EventScript_ItemFullHeal:: @ 81BEA06

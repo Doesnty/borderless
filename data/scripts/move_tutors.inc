@@ -1,3 +1,100 @@
+EventScript_GlobalMoveTutor::
+	lock
+	message GlobalMoveTutor_Text_Intro
+	waitmessage
+	multichoice 0, 0, MULTICHOICE_MOVE_TUTOR, FALSE
+	switch VAR_RESULT
+	case 0, EventScript_GlobalMoveTutorRelearner
+	case 1, EventScript_GlobalMoveTutorInheritor
+	case 2, EventScript_GlobalMoveTutorDeleter
+EventScript_GlobalMoveTutorEnd::
+	release
+	end
+
+EventScript_GlobalMoveTutorSelectedEgg::
+	msgbox GlobalMoveTutor_Text_Egg
+	release
+	end
+
+EventScript_GlobalMoveTutorNothingToLearn::
+	msgbox GlobalMoveTutor_Text_NothingToLearn
+	release
+	end
+
+EventScript_GlobalMoveTutorNothingToForget::
+	msgbox GlobalMoveTutor_Text_NothingToForget
+	release
+	end
+
+EventScript_GlobalMoveTutorRelearner::
+	msgbox GlobalMoveTutor_Text_RelearnWhich
+	special SelectMoveTutorMon
+	waitstate
+	compare VAR_0x8004, PARTY_SIZE
+	goto_if_ge EventScript_GlobalMoveTutorEnd
+	special IsSelectedMonEgg
+	compare VAR_RESULT, TRUE
+	goto_if_eq EventScript_GlobalMoveTutorSelectedEgg
+	compare VAR_0x8005, 0
+	goto_if_eq EventScript_GlobalMoveTutorNothingToLearn
+	
+	setvar VAR_0x8005, 0
+	special DisplayMoveTutorMenu
+	waitstate
+	release
+	end
+
+
+EventScript_GlobalMoveTutorInheritor::
+	msgbox GlobalMoveTutor_Text_TutorWhich
+	special SelectMoveTutorMon
+	waitstate
+	compare VAR_0x8004, PARTY_SIZE
+	goto_if_ge EventScript_GlobalMoveTutorEnd
+	special IsSelectedMonEgg
+	compare VAR_RESULT, TRUE
+	goto_if_eq EventScript_GlobalMoveTutorSelectedEgg
+	compare VAR_0x8005, 0
+	goto_if_eq EventScript_GlobalMoveTutorNothingToLearn
+	
+	setvar VAR_0x8005, 1
+	special DisplayMoveTutorMenu
+	waitstate
+	release
+	end
+
+EventScript_GlobalMoveTutorDeleter::	
+	msgbox FuchsiaCity_House3_Text_WhichMonShouldForgetMove
+	special ChoosePartyMon
+	waitstate
+	compare VAR_0x8004, PARTY_SIZE
+	goto_if_ge EventScript_GlobalMoveTutorEnd
+	special IsSelectedMonEgg
+	compare VAR_RESULT, TRUE
+	goto_if_eq EventScript_GlobalMoveTutorSelectedEgg
+	special GetNumMovesSelectedMonHas
+	compare VAR_RESULT, 1
+	goto_if_eq EventScript_GlobalMoveTutorNothingToForget
+	msgbox FuchsiaCity_House3_Text_WhichMoveShouldBeForgotten
+	fadescreen FADE_TO_BLACK
+	special SelectMoveDeleterMove
+	fadescreen FADE_FROM_BLACK
+	compare VAR_0x8005, MAX_MON_MOVES
+	goto_if_eq EventScript_GlobalMoveTutorDeleter
+	special BufferMoveDeleterNicknameAndMove
+	msgbox FuchsiaCity_House3_Text_MonsMoveShouldBeForgotten, MSGBOX_YESNO
+	compare VAR_RESULT, YES
+	goto_if_eq EventScript_GlobalMoveTutorDeleterDoDelete
+	goto EventScript_GlobalMoveTutorDeleter
+
+EventScript_GlobalMoveTutorDeleterDoDelete::
+	special MoveDeleterForgetMove
+	playfanfare MUS_MOVE_DELETED
+	waitfanfare
+	msgbox FuchsiaCity_House3_Text_MonHasForgottenMoveCompletely
+	release
+	end
+
 VictoryRoad_2F_EventScript_DoubleEdgeTutor:: @ 81C47AE
 	lock
 	faceplayer
@@ -289,6 +386,8 @@ EventScript_SwordsDanceTaught:: @ 81C4BB4
 	end
 
 PewterCity_Museum_1F_EventScript_SeismicTossTutor:: @ 81C4BBE
+	msgbox Text_SeismicTossTeach, MSGBOX_NPC
+	end
 	lock
 	faceplayer
 	goto_if_set FLAG_TUTOR_SEISMIC_TOSS, EventScript_SeismicTossTaught
@@ -448,7 +547,7 @@ EventScript_BodySlamTaught:: @ 81C4DE2
 
 .set LOCALID_CAPE_BRINK_TUTOR, 1
 
-TwoIsland_CapeBrink_House_EventScript_StarterTutor:: @ 81C4DEC
+:: @ 81C4DEC
 	goto_if_questlog EventScript_ReleaseEnd
 	special QuestLog_CutRecording
 	lock
@@ -488,11 +587,6 @@ CapeBrinkTutor_EventScript_FadeTaughtMove:: @ 81C4E8F
 
 CapeBrinkTutor_EventScript_MoveJustTaught:: @ 81C4E97
 	msgbox Text_MakeBestUseOfMove
-	release
-	end
-
-CapeBrinkTutor_EventScript_TaughtAllMoves:: @ 81C4EA1
-	msgbox Text_FeelRejuvenated
 	release
 	end
 

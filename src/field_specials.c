@@ -2221,21 +2221,15 @@ bool8 CapeBrinkGetMoveToTeachLeadPokemon(void)
     //   8006 = Num moves known by lead mon
     //   8007 = Index of lead mon
     //   to specialvar = whether a move can be taught in the first place
-    u8 tutorMonId = 0;
-    u8 numMovesKnown = 0;
+	
+	// touhou hijack: we just care about if any mon can learn shadow force or not
     u8 leadMonSlot = GetLeadMonIndex();
-    u8 i;
     gSpecialVar_0x8007 = leadMonSlot;
-    for (i = 0; i < NELEMS(sCapeBrinkCompatibleSpecies); i++)
-    {
-        if (GetMonData(&gPlayerParty[leadMonSlot], MON_DATA_SPECIES2, NULL) == sCapeBrinkCompatibleSpecies[i])
-        {
-            tutorMonId = i;
-            break;
-        }
-    }
-    if (i == NELEMS(sCapeBrinkCompatibleSpecies) || GetMonData(&gPlayerParty[leadMonSlot], MON_DATA_FRIENDSHIP) != 255)
-        return FALSE;
+	gSpecialVar_0x8005 = 0;
+	if (CanMonLearnTMHM(&gPlayerParty[leadMonSlot], 58)) /* TM59 is shadow force */
+	{
+		return TRUE;
+	}
     return FALSE;
     /*
     if (tutorMonId == 0)

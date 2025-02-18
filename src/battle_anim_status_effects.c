@@ -79,6 +79,17 @@ const struct SpriteTemplate gWeatherBallUpSpriteTemplate =
     .callback = SpriteCB_WeatherBallUp,
 };
 
+const struct SpriteTemplate gGroupPrankUpSpriteTemplate =
+{
+    .tileTag = ANIM_TAG_ITEM_BAG,
+    .paletteTag = ANIM_TAG_ITEM_BAG,
+    .oam = &gOamData_AffineOff_ObjNormal_32x32,
+    .anims = sSpriteAnimTable_83BF430,
+    .images = NULL,
+    .affineAnims = gDummySpriteAffineAnimTable,
+    .callback = SpriteCB_WeatherBallUp,
+};
+
 const struct SpriteTemplate gWeatherBallNormalDownSpriteTemplate =
 {
     .tileTag = ANIM_TAG_WEATHER_BALL,

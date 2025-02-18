@@ -45,26 +45,23 @@ PewterCity_Museum_1F_Text_ShouldBeGratefulForLongLife:: @ 81906B4
     .string "see the bones of a dragon!$"
 
 PewterCity_Museum_1F_Text_WantYouToGetAmberExamined:: @ 8190717
-    .string "Ssh! Listen, I need to share a\n"
-    .string "secret with someone.\p"
-    .string "I think that this chunk of AMBER\n"
-    .string "contains POKéMON DNA!\p"
-    .string "It would be a shattering scientific\n"
-    .string "breakthrough if POKéMON could be\l"
-    .string "resurrected from it.\p"
-    .string "But, my colleagues just ignore\n"
-    .string "what I have to say.\p"
-    .string "So, I have a favor to ask!\p"
-    .string "I want you to get this examined at\n"
-    .string "a POKéMON LAB somewhere.$"
+    .string "Hm, quite resourceful to get back\n"
+    .string "here, aren't we?\p"
+    .string "I'm studying how Puppet battles\n"
+    .string "went in ancient times.\p"
+    .string "It seems that almost every Puppet\n"
+    .string "used to be able to fly.\p"
+    .string "I've put my findings into this\n"
+    .string "TM that unlocks that potential.\p"
+    .string "Here, take it!$"
 
 PewterCity_Museum_1F_Text_ReceivedOldAmberFromMan:: @ 8190866
-    .string "{PLAYER} received the OLD AMBER\n"
+    .string "{PLAYER} received the TM70\n"
     .string "from the man.$"
 
 PewterCity_Museum_1F_Text_GetOldAmberChecked:: @ 819088E
-    .string "Ssh!\n"
-    .string "Get the OLD AMBER checked!$"
+    .string "Now, to figure out how to get\n"
+    .string "them all to shoot bullets...$"
 
 PewterCity_Museum_1F_Text_DontHaveSpaceForThis:: @ 81908AE
     .string "You don't have space for this.$"
@@ -74,8 +71,7 @@ PewterCity_Museum_1F_Text_WeHaveTwoFossilsOnExhibit:: @ 81908CD
     .string "prehistoric POKéMON on exhibit.$"
 
 PewterCity_Museum_1F_Text_BeautifulPieceOfAmber:: @ 819090A
-    .string "There is a beautiful piece of\n"
-    .string "AMBER in a clear gold color.$"
+    .string "There is a TM on display.$"
 
 PewterCity_Museum_1F_Text_AerodactylFossil:: @ 8190945
     .string "AERODACTYL Fossil\n"

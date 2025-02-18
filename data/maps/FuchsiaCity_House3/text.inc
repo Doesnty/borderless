@@ -6,7 +6,7 @@ FuchsiaCity_House3_Text_WouldYouLikeToForgetMove:: @ 81993B9
     .string "Would you like me to do that?$"
 
 FuchsiaCity_House3_Text_WhichMonShouldForgetMove:: @ 8199421
-    .string "Which POKéMON should forget a\n"
+    .string "Which Puppet should forget a\n"
     .string "move?$"
 
 FuchsiaCity_House3_Text_WhichMoveShouldBeForgotten:: @ 8199445
@@ -17,11 +17,10 @@ FuchsiaCity_House3_Text_MonOnlyKnowsOneMove:: @ 8199465
     .string "move…$"
 
 FuchsiaCity_House3_Text_MonsMoveShouldBeForgotten:: @ 8199485
-    .string "Hm! {STR_VAR_1}'s {STR_VAR_2}?\n"
-    .string "That move should be forgotten?$"
+    .string "{STR_VAR_1}'s {STR_VAR_2}\n"
+    .string "should be forgotten?$"
 
 FuchsiaCity_House3_Text_MonHasForgottenMoveCompletely:: @ 81994B1
-    .string "It worked to perfection!\p"
     .string "{STR_VAR_1} has forgotten\n"
     .string "{STR_VAR_2} completely.$"
 

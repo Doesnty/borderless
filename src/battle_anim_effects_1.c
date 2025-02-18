@@ -1046,6 +1046,17 @@ const struct SpriteTemplate gNeedleArmSpikeSpriteTemplate =
     .callback = AnimNeedleArmSpike,
 };
 
+const struct SpriteTemplate gSpatialRendSpriteTemplate =    
+{
+    .tileTag = ANIM_TAG_SPATIAL_TEAR,
+    .paletteTag = ANIM_TAG_SPATIAL_TEAR,
+    .oam = &gOamData_AffineNormal_ObjNormal_16x16,
+    .anims = gDummySpriteAnimTable,
+    .images = NULL,
+    .affineAnims = gDummySpriteAffineAnimTable,
+    .callback = AnimNeedleArmSpike,
+};
+
 const struct SpriteTemplate gLeafStormLeafSpriteTemplate =    
 {
     .tileTag = ANIM_TAG_LEAF,
@@ -1072,6 +1083,17 @@ const struct SpriteTemplate gApollon2SpriteTemplate =
 {
     .tileTag = ANIM_TAG_APOLLON,
     .paletteTag = ANIM_TAG_APOLLON,
+    .oam = &gOamData_AffineNormal_ObjNormal_32x32,
+    .anims = gDummySpriteAnimTable,
+    .images = NULL,
+    .affineAnims = gDummySpriteAffineAnimTable,
+    .callback = AnimApollon2,
+};
+
+const struct SpriteTemplate gGroupPrankFallSpriteTemplate =    
+{
+    .tileTag = ANIM_TAG_ITEM_BAG,
+    .paletteTag = ANIM_TAG_ITEM_BAG,
     .oam = &gOamData_AffineNormal_ObjNormal_32x32,
     .anims = gDummySpriteAnimTable,
     .images = NULL,

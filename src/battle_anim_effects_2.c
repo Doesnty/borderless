@@ -327,6 +327,17 @@ const struct SpriteTemplate gSeedThrowSpriteTemplate =
     .callback = AnimThrowProjectile,
 };
 
+const struct SpriteTemplate gHappyHourThrowSpriteTemplate =    
+{
+    .tileTag = ANIM_TAG_COIN,
+    .paletteTag = ANIM_TAG_COIN,
+    .oam = &gOamData_AffineOff_ObjNormal_16x16,
+    .anims = gDummySpriteAnimTable,
+    .images = NULL,
+    .affineAnims = gDummySpriteAffineAnimTable,
+    .callback = AnimThrowProjectile,
+};
+
 static const struct SpriteTemplate sUnknown_83E3D18 =
 {
     .tileTag = ANIM_TAG_VOID_LINES,

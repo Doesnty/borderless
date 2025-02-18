@@ -512,7 +512,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .moveClass = CLASS_PHYSICAL,
         .accuracy = 100,
         .pp = 10,
-        .secondaryEffectChance = 0,
+        .secondaryEffectChance = 100,
         .priority = 0,
         .target = MOVE_TARGET_SELECTED,
         .flags = FLAG_MAKES_CONTACT | FLAG_PROTECT_AFFECTED,
@@ -5616,7 +5616,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
 
     [MOVE_HOLD_HANDS] = 
     {
-        .effect = EFFECT_NEW,
+        .effect = EFFECT_HOLD_HANDS,
         .power = 0,
         .type = TYPE_NORMAL,
         .moveClass = CLASS_STATUS,
@@ -5624,7 +5624,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 40,
         .secondaryEffectChance = 0,
         .priority = 0,
-        .target = MOVE_TARGET_USER,
+        .target = MOVE_TARGET_SELECTED,
         .flags = 0,
     },
 
@@ -5933,6 +5933,62 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .secondaryEffectChance = 100,
         .priority = 0,
         .target = MOVE_TARGET_RANDOM,
+        .flags = FLAG_MAKES_CONTACT | FLAG_PROTECT_AFFECTED,
+    },
+
+    [MOVE_TAKE_OVER] = 
+    {
+        .effect = EFFECT_HIT,
+        .power = 95,
+        .type = TYPE_GHOST,
+        .moveClass = CLASS_SPECIAL,
+        .accuracy = 100,
+        .pp = 15,
+        .secondaryEffectChance = 0,
+        .priority = 0,
+        .target = MOVE_TARGET_SELECTED,
+        .flags = FLAG_PROTECT_AFFECTED,
+    },
+	
+	[MOVE_THIRD_EYE] =
+	{
+        .effect = EFFECT_SKETCH,
+        .power = 0,
+        .type = TYPE_HEART,
+        .moveClass = CLASS_STATUS,
+        .accuracy = 0,
+        .pp = 1,
+        .secondaryEffectChance = 0,
+        .priority = 0,
+        .target = MOVE_TARGET_SELECTED,
+        .flags = 0,
+	},
+
+    [MOVE_DEMON_BOOK] = 
+    {
+        .effect = EFFECT_DEMON_BOOK,
+        .power = 0,
+        .type = TYPE_NORMAL,
+        .moveClass = CLASS_STATUS,
+        .accuracy = 0,
+        .pp = 10,
+        .secondaryEffectChance = 0,
+        .priority = 0,
+        .target = MOVE_TARGET_DEPENDS,
+        .flags = 0,
+    },
+
+    [MOVE_DRILL_PECK] = 
+    {
+        .effect = EFFECT_HIT,
+        .power = 80,
+        .type = TYPE_WIND,
+        .moveClass = CLASS_PHYSICAL,
+        .accuracy = 100,
+        .pp = 20,
+        .secondaryEffectChance = 0,
+        .priority = 0,
+        .target = MOVE_TARGET_SELECTED,
         .flags = FLAG_MAKES_CONTACT | FLAG_PROTECT_AFFECTED,
     },
 

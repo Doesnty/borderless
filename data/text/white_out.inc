@@ -1,19 +1,19 @@
 Text_FirstShouldRestoreMonsHealth:: @ 81A5E89
 	.string "First, you should restore your\n"
-	.string "POKéMON to full health.$"
+	.string "Puppets to full health.$"
 
 Text_MonsHealedShouldBuyPotions:: @ 81A5EC0
-	.string "Your POKéMON have been healed\n"
+	.string "Your Puppets have been healed\n"
 	.string "to perfect health.\p"
-	.string "If your POKéMON's energy, HP,\n"
+	.string "If your Puppet's energy, HP,\n"
 	.string "is down, please come see us.\p"
 	.string "If you're planning to go far in the\n"
-	.string "field, you should buy some POTIONS\l"
-	.string "at the POKéMON MART.\p"
+	.string "field, you should buy some Potions\l"
+	.string "at the Supply Store.\p"
 	.string "We hope you excel!$"
 
 Text_MonsHealed:: @ 81A5F9B
-	.string "Your POKéMON have been healed\n"
+	.string "Your Puppets have been healed\n"
 	.string "to perfect health.\p"
 	.string "We hope you excel!$"
 
@@ -27,27 +27,27 @@ Text_HadQuiteAnExperienceTakeRest:: @ 81A5FDF
 
 Text_MomExplainHPGetPotions:: @ 81A6046
 	.string "MOM: Oh, good! You and your\n"
-	.string "POKéMON are looking great.\p"
-	.string "I just heard from PROF. OAK.\p"
-	.string "He said that POKéMON's energy is\n"
+	.string "Puppets are looking great.\p"
+	.string "I just heard from Prof. Oak.\p"
+	.string "He said that a Puppet's energy is\n"
 	.string "measured in HP.\p"
-	.string "If your POKéMON lose their HP,\n"
+	.string "If your Puppets lose their HP,\n"
 	.string "you can restore them at any\l"
-	.string "POKéMON CENTER.\p"
+	.string "Puppet Center.\p"
 	.string "If you're going to travel far away,\n"
-	.string "the smart TRAINER stocks up on\l"
-	.string "POTIONS at the POKéMON MART.\p"
+	.string "the smart Trainer stocks up on\l"
+	.string "Potions at the Supply Store.\p"
 	.string "Make me proud, honey!\p"
 	.string "Take care!$"
 
 Text_WhitedOutLostMoney:: @ 81A6197
 	.string "{PLAYER} is out of usable\n"
-	.string "POKéMON!\p"
+	.string "Puppets!\p"
 	.string "{PLAYER} panicked and lost ¥{STR_VAR_1}…\p"
 	.string "… … … …\p"
 	.string "{PLAYER} whited out!$"
 
 Text_WhitedOut:: @ 81A61E5
 	.string "{PLAYER} is out of usable\n"
-	.string "POKéMON!\p"
+	.string "Puppets!\p"
 	.string "{PLAYER} whited out!$"

@@ -13,12 +13,15 @@ Text_JustMistaken:: @ 81A4737
 
 Text_AllowMeToTeachMonUltimateMove:: @ 81A4751
     .string "Oh! This is the one!\n"
-    .string "This is the POKéMON!\p"
+    .string "This is the Puppet!\p"
     .string "This {STR_VAR_1} is worthy of\n"
     .string "learning my ultimate move!\p"
-    .string "Will you allow it?\p"
-    .string "Will you allow your {STR_VAR_1} to\n"
-    .string "learn my {STR_VAR_2}?$"
+    .string "This TM! Here!\n"
+    .string "Teach it my Shadow Force!$"
+
+Text_ReceivedTM59:: @ 8190866
+    .string "{PLAYER} received the TM59\n"
+    .string "from the woman.$"
 
 Text_YouRejectIt:: @ 81A47E5
     .string "Gaah! You reject it?\n"

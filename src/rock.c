@@ -71,6 +71,28 @@ const struct SpriteTemplate gRockFragmentSpriteTemplate =
     .callback = AnimRockFragment,
 };
 
+const struct SpriteTemplate gFlightSpriteTemplate =
+{
+    .tileTag = ANIM_TAG_WHITE_FEATHER,
+    .paletteTag = ANIM_TAG_WHITE_FEATHER,
+    .oam = &gOamData_AffineOff_ObjNormal_32x32,
+    .anims = gDummySpriteAnimTable,
+    .images = NULL,
+    .affineAnims = gDummySpriteAffineAnimTable,
+    .callback = AnimRockFragment,
+};
+
+const struct SpriteTemplate gTakeOverSpriteTemplate =
+{
+    .tileTag = ANIM_TAG_GHOSTLY_SPIRIT,
+    .paletteTag = ANIM_TAG_GHOSTLY_SPIRIT,
+    .oam = &gOamData_AffineOff_ObjNormal_32x32,
+    .anims = gDummySpriteAnimTable,
+    .images = NULL,
+    .affineAnims = gDummySpriteAffineAnimTable,
+    .callback = AnimRockFragment,
+};
+
 const struct SpriteTemplate gSwirlingDirtSpriteTemplate =
 {
     .tileTag = ANIM_TAG_MUD_SAND,
@@ -154,6 +176,17 @@ const struct SpriteTemplate gFlyingSandCrescentSpriteTemplate =
 {
     .tileTag = ANIM_TAG_FLYING_DIRT,
     .paletteTag = ANIM_TAG_FLYING_DIRT,
+    .oam = &gOamData_AffineOff_ObjNormal_32x16,
+    .anims = gDummySpriteAnimTable,
+    .images = NULL,
+    .affineAnims = gDummySpriteAffineAnimTable,
+    .callback = AnimDirtParticleAcrossScreen,
+};
+
+const struct SpriteTemplate gOminousWindCrescentSpriteTemplate =
+{
+    .tileTag = ANIM_TAG_FLYING_DIRT,
+    .paletteTag = ANIM_TAG_OMINOUS_WIND,
     .oam = &gOamData_AffineOff_ObjNormal_32x16,
     .anims = gDummySpriteAnimTable,
     .images = NULL,
@@ -483,6 +516,34 @@ void AnimTask_LoadTailwindBackground(u8 taskId)
     AnimLoadCompressedBgTilemap(animBg.bgId, gFile_graphics_battle_anims_backgrounds_sandstorm_brew_tilemap);
     AnimLoadCompressedBgGfx(animBg.bgId, gFile_graphics_battle_anims_backgrounds_sandstorm_brew_sheet, animBg.tilesOffset);
     LoadCompressedPalette(gBattleAnimSpritePal_Tailwind, animBg.paletteId * 16, 32);
+    if (IsContest())
+        RelocateBattleBgPal(animBg.paletteId, animBg.bgTilemap, 0, 0);
+    if (gBattleAnimArgs[0] && GetBattlerSide(gBattleAnimAttacker) != B_SIDE_PLAYER)
+        var0 = 1;
+    gTasks[taskId].data[0] = var0;
+    gTasks[taskId].func = sub_80B490C;
+}
+
+void AnimTask_LoadOminousWindBackground(u8 taskId)
+{
+    s32 var0;
+    struct BattleAnimBgData animBg;
+
+    var0 = 0;
+    SetGpuReg(REG_OFFSET_BLDCNT, BLDCNT_TGT1_BG1 | BLDCNT_TGT2_ALL | BLDCNT_EFFECT_BLEND);
+    SetGpuReg(REG_OFFSET_BLDALPHA, BLDALPHA_BLEND(0, 16));
+    SetAnimBgAttribute(1, BG_ANIM_PRIORITY, 1);
+    SetAnimBgAttribute(1, BG_ANIM_SCREEN_SIZE, 0);
+    if (!IsContest())
+        SetAnimBgAttribute(1, BG_ANIM_CHAR_BASE_BLOCK, 1);
+    gBattle_BG1_X = 0;
+    gBattle_BG1_Y = 0;
+    SetGpuReg(REG_OFFSET_BG1HOFS, gBattle_BG1_X);
+    SetGpuReg(REG_OFFSET_BG1VOFS, gBattle_BG1_Y);
+    GetBattleAnimBg1Data(&animBg);
+    AnimLoadCompressedBgTilemap(animBg.bgId, gFile_graphics_battle_anims_backgrounds_sandstorm_brew_tilemap);
+    AnimLoadCompressedBgGfx(animBg.bgId, gFile_graphics_battle_anims_backgrounds_sandstorm_brew_sheet, animBg.tilesOffset);
+    LoadCompressedPalette(gBattleAnimSpritePal_OminousWind, animBg.paletteId * 16, 32);
     if (IsContest())
         RelocateBattleBgPal(animBg.paletteId, animBg.bgTilemap, 0, 0);
     if (gBattleAnimArgs[0] && GetBattlerSide(gBattleAnimAttacker) != B_SIDE_PLAYER)

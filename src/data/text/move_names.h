@@ -424,5 +424,9 @@ const u8 gMoveNames[][15] = {
 	_("Blossoming"),
 	_("Spatial Rend"),
 	_("Passion Dance"),
+	_("Take Over"),
+	_("Third Eye"),
+	_("Demon Book"),
+	_("Drill Peck"),
     _("Me First"),
 };

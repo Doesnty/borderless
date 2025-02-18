@@ -202,11 +202,13 @@ const u32 gBattleAnimSpritePal_Ring[] = INCBIN_U32("graphics/battle_anims/sprite
 
 const u32 gBattleAnimSpriteGfx_Apollon[] = INCBIN_U32("graphics/battle_anims/sprites/apollon.4bpp.lz");
 const u32 gBattleAnimSpritePal_Apollon[] = INCBIN_U32("graphics/battle_anims/sprites/apollon.gbapal.lz");
+const u32 gBattleAnimSpriteGfx_Anchor[] = INCBIN_U32("graphics/battle_anims/sprites/anchor.4bpp.lz");
 
 const u32 gBattleAnimSpriteGfx_BrokenRing[] = INCBIN_U32("graphics/battle_anims/sprites/broken_ring.4bpp.lz");
 const u32 gBattleAnimSpritePal_BrokenRing[] = INCBIN_U32("graphics/battle_anims/sprites/broken_ring.gbapal.lz");
 
 const u32 gBattleAnimSpritePal_Tailwind[] = INCBIN_U32("graphics/battle_anims/sprites/tailwind.gbapal.lz");
+const u32 gBattleAnimSpritePal_OminousWind[] = INCBIN_U32("graphics/battle_anims/sprites/ominous_wind.gbapal.lz");
 
 const u32 gBattleAnimSpriteGfx_Rocks[] = INCBIN_U32("graphics/battle_anims/sprites/rocks.4bpp.lz");
 const u32 gBattleAnimSpritePal_Rocks[] = INCBIN_U32("graphics/battle_anims/sprites/rocks.gbapal.lz");
@@ -1093,6 +1095,8 @@ const u32 gBattleAnimSpritePal_Hail[] = INCBIN_U32("graphics/battle_anims/sprite
 
 const u32 gBattleAnimSpriteGfx_GreenSpike[] = INCBIN_U32("graphics/battle_anims/sprites/green_spike.4bpp.lz");
 const u32 gBattleAnimSpritePal_GreenSpike[] = INCBIN_U32("graphics/battle_anims/sprites/green_spike.gbapal.lz");
+const u32 gBattleAnimSpriteGfx_SpatialTear[] = INCBIN_U32("graphics/battle_anims/sprites/spatial_tear.4bpp.lz");
+const u32 gBattleAnimSpritePal_SpatialTear[] = INCBIN_U32("graphics/battle_anims/sprites/spatial_tear.gbapal.lz");
 const u32 gBattleAnimSpritePal_WhiteCircleOfLight[] = INCBIN_U32("graphics/battle_anims/sprites/white_circle_of_light.gbapal.lz");
 const u32 gBattleAnimSpritePal_GlowyBlueOrb[] = INCBIN_U32("graphics/battle_anims/sprites/glowy_blue_orb.gbapal.lz");
 

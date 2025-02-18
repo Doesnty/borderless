@@ -310,6 +310,9 @@
 #define ANIM_TAG_VINE_3                     (ANIM_SPRITES_START + 300)
 #define ANIM_TAG_CHARGE_BEAM                (ANIM_SPRITES_START + 301)
 #define ANIM_TAG_HEXAGRAM                   (ANIM_SPRITES_START + 302)
+#define ANIM_TAG_ANCHOR						(ANIM_SPRITES_START + 303)
+#define ANIM_TAG_SPATIAL_TEAR               (ANIM_SPRITES_START + 304)
+#define ANIM_TAG_OMINOUS_WIND               (ANIM_SPRITES_START + 305)
 
 // battlers
 #define ANIM_ATTACKER    0
@@ -426,6 +429,7 @@
 #define TRAP_ANIM_CLAMP 3
 #define TRAP_ANIM_SAND_TOMB 4
 #define TRAP_ANIM_DESTITUTION 5
+#define TRAP_ANIM_SNAP_TRAP 6
 
 // Weather defines for battle animation scripts.
 #define ANIM_WEATHER_NONE 0

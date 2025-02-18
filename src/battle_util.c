@@ -2015,6 +2015,7 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u8 ability, u8 special, u16 moveA
                         ++effect;
                     }
                     break;
+				/* (handled with sandstorm/hail in battle script commands)
                 case ABILITY_SOLAR_POWER:
                     if (WEATHER_HAS_EFFECT && (gBattleWeather & WEATHER_SUN_ANY)
                      && gBattleMons[battler].hp > 0)
@@ -2025,7 +2026,7 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u8 ability, u8 special, u16 moveA
                             gBattleMoveDamage = 1;
                         ++effect;
                     }
-                    break;
+                    break; */
                 case ABILITY_POISON_HEAL:
                     if (gBattleMons[battler].maxHP > gBattleMons[battler].hp &&
                         gBattleMons[battler].status1 & (STATUS1_POISON | STATUS1_TOXIC_POISON))

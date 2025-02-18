@@ -587,6 +587,10 @@ const u8 sText_HarvestActivates[] = _("{B_ATK_NAME_WITH_PREFIX} Harvested\none {
 const u8 sText_CursedBody[] = _("{B_ATK_NAME_WITH_PREFIX}'s {B_BUFF1}\nwas disabled by Cursed Body!");
 const u8 sText_IntimBackfire[] = _("{B_SCR_ACTIVE_NAME_WITH_PREFIX}'s {B_SCR_ACTIVE_ABILITY}\nups {B_DEF_NAME_WITH_PREFIX}'s Attack!");
 const u8 sText_Devourer[] = _("{B_ATK_NAME_WITH_PREFIX} Devoured\n{B_DEF_NAME_WITH_PREFIX}'s HP!");
+const u8 sText_ThirdEye[] = _("{B_ATK_NAME_WITH_PREFIX} learned\n{B_BUFF1}!");
+const u8 sText_HeldHands[] = _("{B_ATK_NAME_WITH_PREFIX} held hands\nwith {B_DEF_NAME_WITH_PREFIX}!");
+const u8 sText_EarthIsShaking[] = _("Look!\nThe world is shaking!");
+const u8 sText_SnapTrapped[] = _("{B_DEF_NAME_WITH_PREFIX} was trapped by\n{B_ATK_NAME_WITH_PREFIX}!");
 
 
 const u8 *const gBattleStringsTable[] = {
@@ -1039,6 +1043,10 @@ const u8 *const gBattleStringsTable[] = {
 	[STRINGID_CURSEDBODY - 12]                    = sText_CursedBody,
 	[STRINGID_INTIMBACKFIRE - 12]                 = sText_IntimBackfire,
 	[STRINGID_DEVOURER - 12]                      = sText_Devourer,
+	[STRINGID_THIRDEYE - 12]                      = sText_ThirdEye,
+	[STRINGID_HELD_HANDS - 12]                    = sText_HeldHands,
+	[STRINGID_EARTHISSHAKING - 12]                = sText_EarthIsShaking,
+	[STRINGID_SNAPTRAPPED - 12]                   = sText_SnapTrapped,
 };
 
 const u16 gMissStringIds[] = {
@@ -1171,6 +1179,7 @@ const u16 gFirstTurnOfTwoStringIds[] = {
     STRINGID_PKMNHIDUNDERWATER,
     STRINGID_PKMNSPRANGUP,
     STRINGID_SCHEMING,
+    STRINGID_EARTHISSHAKING,
 };
 
 const u16 gWrappedStringIds[] = {
@@ -1181,6 +1190,7 @@ const u16 gWrappedStringIds[] = {
     STRINGID_PKMNTRAPPEDINVORTEX,
     STRINGID_PKMNTRAPPEDBYSANDTOMB,
     STRINGID_PKMNTRAPPEDINDESTITUTION,
+    STRINGID_SNAPTRAPPED,
 };
 
 const u16 gMistUsedStringIds[] = {
@@ -1370,6 +1380,7 @@ const u16 gTrappingMoves[] = {
     MOVE_WHIRLPOOL,
     MOVE_SAND_TOMB,
     MOVE_DESTITUTION,
+	MOVE_SNAP_TRAP,
     0xFFFF
 };
 
