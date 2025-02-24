@@ -1,5 +1,5 @@
 Route8_Text_AidanIntro:: @ 81840C5
-    .string "You look good at POKéMON, but how\n"
+    .string "You look good at Puppets, but how\n"
     .string "is your chemistry grade?$"
 
 Route8_Text_AidanDefeat:: @ 8184100
@@ -28,22 +28,22 @@ Route8_Text_GlennDefeat:: @ 81841B6
     .string "It's not logical!$"
 
 Route8_Text_GlennPostBattle:: @ 81841C8
-    .string "Go with GRIMER first…and…\n"
+    .string "Go with Yuyuko first…and…\n"
     .string "…and…then…$"
 
 Route8_Text_PaigeIntro:: @ 81841ED
-    .string "I like NIDORAN, so I collect them!$"
+    .string "I like rabbits, so I collect them!$"
 
 Route8_Text_PaigeDefeat:: @ 8184210
     .string "Why?\n"
     .string "Why??$"
 
 Route8_Text_PaigePostBattle:: @ 818421B
-    .string "When POKéMON grow up, they get\n"
+    .string "When Puppets grow up, they get\n"
     .string "ugly! They shouldn't evolve.$"
 
 Route8_Text_LeslieIntro:: @ 8184257
-    .string "School is fun, but so are POKéMON.$"
+    .string "School is fun, but so are Puppets.$"
 
 Route8_Text_LeslieDefeat:: @ 818427A
     .string "You made it clear to me that\n"
@@ -53,17 +53,17 @@ Route8_Text_LesliePostBattle:: @ 81842B3
     .string "I was planning on getting some\n"
     .string "fresh air for a change, but…\p"
     .string "We're stuck here because of the\n"
-    .string "gates at SAFFRON.$"
+    .string "gates at Saffron.$"
 
 Route8_Text_AndreaIntro:: @ 8184321
-    .string "MEOWTH is so cute, meow, meow,\n"
+    .string "Rin is so cute, meow, meow,\n"
     .string "meow!$"
 
 Route8_Text_AndreaDefeat:: @ 8184346
     .string "Meeeeyow!$"
 
 Route8_Text_AndreaPostBattle:: @ 8184350
-    .string "I think PIDGEY and RATTATA are\n"
+    .string "I think Chen and Mike are\n"
     .string "cute, too!$"
 
 Route8_Text_MeganIntro:: @ 818437A
@@ -72,10 +72,10 @@ Route8_Text_MeganIntro:: @ 818437A
 
 Route8_Text_MeganDefeat:: @ 81843A6
     .string "Look what you did to my poor, cute\n"
-    .string "POKéMON!$"
+    .string "Puppet!$"
 
 Route8_Text_MeganPostBattle:: @ 81843D2
-    .string "SAFFRON's gatekeeper won't let us\n"
+    .string "Saffron's gatekeeper won't let us\n"
     .string "go through.\p"
     .string "I know he's doing his job, but I\n"
     .string "think he's mean.$"
@@ -87,21 +87,21 @@ Route8_Text_RichDefeat:: @ 818444F
     .string "Missed the big chance!$"
 
 Route8_Text_RichPostBattle:: @ 8184466
-    .string "Playing games and POKéMON are like\n"
+    .string "Playing games and Puppets are like\n"
     .string "eating peanuts! I just can't stop!$"
 
 Route8_Text_JuliaIntro:: @ 81844AC
     .string "What's a cute, round, and fluffy\n"
-    .string "POKéMON?$"
+    .string "Puppet?$"
 
 Route8_Text_JuliaDefeat:: @ 81844D6
     .string "Stop!\p"
-    .string "Don't be so mean to my CLEFAIRY!$"
+    .string "Don't be so mean to my Tewi!$"
 
 Route8_Text_JuliaPostBattle:: @ 81844FD
-    .string "I read that CLEFAIRY evolves when\n"
-    .string "it's exposed to a MOON STONE.\p"
-    .string "I read that in a POKéMON JOURNAL.\n"
+    .string "I read that Tewi puppets are\n"
+    .string "mean to Reisen puppets.\p"
+    .string "I read that in a Touhou Journal.\n"
     .string "I wonder if it's true?$"
 
 Route8_Text_UndergroundPathSign:: @ 8184576

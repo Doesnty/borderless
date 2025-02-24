@@ -23,9 +23,8 @@ Route2_EastBuilding_Text_ReceivedHM05FromAide:: @ 819D7A1
 Route2_EastBuilding_Text_ExplainHM05:: @ 819D7C1
     .string "HM05 contains the hidden move\n"
     .string "Flash.\p"
-    .string "Flash isn't actually used on the\n"
-    .string "field, unlike most HMs, but it's\p$"
-	.string "still a decent attack.$"
+    .string "Flash isn't very useful, but it\n"
+    .string "can be a helpful battle move.$"
 
 Route2_EastBuilding_Text_CanGetThroughRockTunnel:: @ 819D81E
     .string "I hear you don't need Flash anymore\n"

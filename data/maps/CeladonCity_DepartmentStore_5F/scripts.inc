@@ -58,6 +58,7 @@ CeladonCity_DepartmentStore_5F_Vitamins:: @ 816BCBC
 	.2byte ITEM_CARBOS
 	.2byte ITEM_ABILI_CAPSULE
 	.2byte ITEM_DREAM_CAPSULE
+	.2byte ITEM_CLEAR_MOCHI
 	.2byte ITEM_NONE
 	release
 	end

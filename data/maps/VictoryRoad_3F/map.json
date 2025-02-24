@@ -46,10 +46,10 @@
     {
       "graphics_id": "OBJ_EVENT_GFX_COOLTRAINER_M",
       "in_connection": false,
-      "x": 6,
-      "y": 13,
+      "x": 13,
+      "y": 12,
       "elevation": 3,
-      "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
+      "movement_type": "MOVEMENT_TYPE_HYPER_SPINNER",
       "movement_range_x": 1,
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NORMAL",
@@ -60,10 +60,10 @@
     {
       "graphics_id": "OBJ_EVENT_GFX_COOLTRAINER_F",
       "in_connection": false,
-      "x": 4,
-      "y": 13,
+      "x": 14,
+      "y": 17,
       "elevation": 3,
-      "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
+      "movement_type": "MOVEMENT_TYPE_HYPER_SPINNER",
       "movement_range_x": 1,
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NORMAL",
@@ -96,8 +96,8 @@
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "VictoryRoad_3F_EventScript_ItemTM50",
-      "flag": "FLAG_HIDE_VICTORY_ROAD_3F_TM50"
+      "script": "VictoryRoad_3F_EventScript_ItemUltraBall",
+      "flag": "FLAG_HIDE_VICTORY_ROAD_3F_ULTRA_BALL"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_PUSHABLE_BOULDER",

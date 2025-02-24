@@ -109,5 +109,6 @@
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "CeruleanCity_Gym_EventScript_GymStatue"
     }
-  ]
+  ],
+  "waterType": "MAP_WATER_STERILE"
 }

@@ -423,11 +423,11 @@ gBattleAnims_Moves::
 	.4byte Move_HORSEPOWER
 	.4byte Move_HEALING_WISH
 	.4byte Move_GALE
-	.4byte Move_ABYSS_NOVA
-	.4byte Move_ABYSS_NOVA
-	.4byte Move_ABYSS_NOVA
-	.4byte Move_ABYSS_NOVA
-	.4byte Move_ABYSS_NOVA
+	.4byte Move_POUND
+	.4byte Move_POUND
+	.4byte Move_POUND
+	.4byte Move_POUND
+	.4byte Move_POUND
 	.4byte Move_FIRE_FANG
 	.4byte Move_ICE_FANG
 	.4byte Move_THUNDER_FANG
@@ -13003,10 +13003,6 @@ _DarkVoidSub:
 
 Move_TRICK_ROOM:
 	loadspritegfx ANIM_TAG_EYE_SPARKLE
-	monbg ANIM_ATTACKER
-	monbg ANIM_TARGET
-	monbg ANIM_ATK_PARTNER
-	monbg ANIM_DEF_PARTNER
 	call SetPsychicBackground
     delay 10
     
@@ -13023,10 +13019,6 @@ Move_TRICK_ROOM:
     
 	call UnsetPsychicBg
 	waitforvisualfinish
-	clearmonbg ANIM_ATTACKER
-	clearmonbg ANIM_TARGET
-	clearmonbg ANIM_ATK_PARTNER
-	clearmonbg ANIM_DEF_PARTNER
 	end    
 
 

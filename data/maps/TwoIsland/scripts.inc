@@ -121,9 +121,10 @@ TwoIsland_EventScript_ShopInitial:: @ 81676D3
 	end
 
 	.align 2
-TwoIsland_Items_ShopInitial:: @ 81676E4
-	.2byte ITEM_GREAT_BALL
-	.2byte ITEM_FRESH_WATER
+TwoIsland_Items_ShopInitial:: @ 81676E4RRY
+	.2byte ITEM_SITRUS_BERRY
+	.2byte ITEM_LUM_BERRY
+	.2byte ITEM_CHESTO_BERRY
 	.2byte ITEM_NONE
 	release
 	end
@@ -136,10 +137,15 @@ TwoIsland_EventScript_ShopExpanded1:: @ 81676EC
 
 	.align 2
 TwoIsland_Items_ShopExpanded1:: @ 81676FC
-	.2byte ITEM_ULTRA_BALL
-	.2byte ITEM_GREAT_BALL
-	.2byte ITEM_SODA_POP
-	.2byte ITEM_FRESH_WATER
+	.2byte ITEM_SITRUS_BERRY
+	.2byte ITEM_LUM_BERRY
+	.2byte ITEM_CHESTO_BERRY
+	.2byte ITEM_LIECHI_BERRY
+	.2byte ITEM_GANLON_BERRY
+	.2byte ITEM_PETAYA_BERRY
+	.2byte ITEM_APICOT_BERRY
+	.2byte ITEM_SALAC_BERRY
+	.2byte ITEM_LANSAT_BERRY
 	.2byte ITEM_NONE
 	release
 	end
@@ -152,12 +158,16 @@ TwoIsland_EventScript_ShopExpanded2:: @ 8167708
 
 	.align 2
 TwoIsland_Items_ShopExpanded2:: @ 8167718
-	.2byte ITEM_ULTRA_BALL
-	.2byte ITEM_GREAT_BALL
-	.2byte ITEM_LEMONADE
-	.2byte ITEM_SODA_POP
-	.2byte ITEM_FRESH_WATER
-	.2byte ITEM_MOOMOO_MILK
+	.2byte ITEM_SITRUS_BERRY
+	.2byte ITEM_LUM_BERRY
+	.2byte ITEM_CHESTO_BERRY
+	.2byte ITEM_LIECHI_BERRY
+	.2byte ITEM_GANLON_BERRY
+	.2byte ITEM_PETAYA_BERRY
+	.2byte ITEM_APICOT_BERRY
+	.2byte ITEM_SALAC_BERRY
+	.2byte ITEM_LANSAT_BERRY
+	.2byte ITEM_STARF_BERRY
 	.2byte ITEM_NONE
 	release
 	end
@@ -170,14 +180,18 @@ TwoIsland_EventScript_ShopExpanded3:: @ 8167728
 
 	.align 2
 TwoIsland_Items_ShopExpanded3:: @ 8167738
-	.2byte ITEM_ULTRA_BALL
-	.2byte ITEM_REPEAT_BALL
-	.2byte ITEM_TIMER_BALL
-	.2byte ITEM_LEMONADE
-	.2byte ITEM_SODA_POP
-	.2byte ITEM_FRESH_WATER
-	.2byte ITEM_MOOMOO_MILK
-	.2byte ITEM_LAVA_COOKIE
+	.2byte ITEM_SITRUS_BERRY
+	.2byte ITEM_LUM_BERRY
+	.2byte ITEM_CHESTO_BERRY
+	.2byte ITEM_LIECHI_BERRY
+	.2byte ITEM_GANLON_BERRY
+	.2byte ITEM_PETAYA_BERRY
+	.2byte ITEM_APICOT_BERRY
+	.2byte ITEM_SALAC_BERRY
+	.2byte ITEM_LANSAT_BERRY
+	.2byte ITEM_STARF_BERRY
+	.2byte ITEM_LEPPA_BERRY
+	.2byte ITEM_SACRED_ASH
 	.2byte ITEM_NONE
 	release
 	end
@@ -221,3 +235,20 @@ TwoIsland_EventScript_JoyfulGameCornerSign:: @ 816779B
 TwoIsland_EventScript_FastCurrentSign:: @ 81677A4
 	msgbox TwoIsland_Text_DangerFastCurrent, MSGBOX_SIGN
 	end
+
+TwoIsland_EventScript_TMMerchant::
+	message Text_MayIHelpYou
+	waitmessage
+	pokemart TwoIsland_Items_TMShopInventory
+	msgbox Text_PleaseComeAgain
+	release
+	end
+
+TwoIsland_Items_TMShopInventory::
+	.2byte ITEM_TM13
+	.2byte ITEM_TM24
+	.2byte ITEM_TM35
+	.2byte ITEM_TM21
+	.2byte ITEM_TM30
+	.2byte ITEM_TM78
+	.2byte ITEM_NONE

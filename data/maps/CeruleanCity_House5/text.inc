@@ -1,10 +1,10 @@
 CeruleanCity_House1_Text_AnyInterestInBerries:: @ 8192F67
     .string "I concoct a variety of medicine\n"
-    .string "from BERRY POWDER.\p"
-    .string "Using good BERRY POWDER, I can\n"
+    .string "from Berry Powder.\p"
+    .string "Using good Berry Powder, I can\n"
     .string "make any kind of medicine.\p"
     .string "Now tell me, have you any interest\n"
-    .string "in BERRIES?$"
+    .string "in Berries?$"
 
 CeruleanCity_House1_Text_HaveJustTheThing:: @ 8193003
     .string "Ah, good! For you, then, I have\n"
@@ -30,11 +30,11 @@ CeruleanCity_House1_Text_GoCrushBerriesAtDirectCorner:: @ 8193033
 
 CeruleanCity_House1_Text_WhyMustYouLieNoBerries:: @ 819321D
     .string "Why must you lie to me?\p"
-    .string "How many BERRIES do you have?\n"
-    .string "Not a one!$"
+    .string "How many Berries do you have?\n"
+    .string "Not even {STR_VAR_1}!$"
 
 CeruleanCity_House1_Text_TakeInterestInAllSortsOfThings:: @ 819325E
-    .string "You have no interest in BERRIES?\p"
+    .string "You have no interest in Berries?\p"
     .string "Young one, it's important to take an\n"
     .string "interest in all sorts of things.$"
 

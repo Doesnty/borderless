@@ -1792,13 +1792,15 @@ static void Task_ItemContext_Sell(u8 taskId)
     s16 *data = gTasks[taskId].data;
     if (gSpecialVar_ItemId == ITEM_TM_CASE)
     {
-        ItemMenu_SetExitCallback(GoToTMCase_Sell);
-        ItemMenu_StartFadeToExitCallback(taskId);
+        CopyItemName(gSpecialVar_ItemId, gStringVar1);
+        StringExpandPlaceholders(gStringVar4, gText_OhNoICantBuyTMs);
+        DisplayItemMessageInBag(taskId, GetDialogBoxFontId(), gStringVar4, Task_ReturnToBagFromContextMenu);
     }
     else if (gSpecialVar_ItemId == ITEM_BERRY_POUCH)
     {
-        ItemMenu_SetExitCallback(GoToBerryPouch_Sell);
-        ItemMenu_StartFadeToExitCallback(taskId);
+        CopyItemName(gSpecialVar_ItemId, gStringVar1);
+        StringExpandPlaceholders(gStringVar4, gText_OhNoICantBuyBerries);
+        DisplayItemMessageInBag(taskId, GetDialogBoxFontId(), gStringVar4, Task_ReturnToBagFromContextMenu);
     }
     else if (itemid_get_market_price(gSpecialVar_ItemId) == 0)
     {

@@ -23,7 +23,6 @@
 
 static const struct TrainerMonNoItemDefaultMoves sParty_AquaLeader[] = {DUMMY_TRAINER_MON};
 static const struct TrainerMonNoItemDefaultMoves sParty_AquaGruntM[] = {DUMMY_TRAINER_MON};
-static const struct TrainerMonNoItemDefaultMoves sParty_AquaGruntF[] = {DUMMY_TRAINER_MON};
 static const struct TrainerMonNoItemDefaultMoves sParty_RSAromaLady[] = {DUMMY_TRAINER_MON};
 static const struct TrainerMonNoItemDefaultMoves sParty_RSRuinManiac[] = {DUMMY_TRAINER_MON};
 static const struct TrainerMonNoItemDefaultMoves sParty_Interviewer[] = {DUMMY_TRAINER_MON};
@@ -7736,7 +7735,7 @@ static const struct TrainerMonFullControl sParty_ChampionRenko[] = {
         .iv = 30,
         .lvl = 72,
         .species = SPECIES_TRRENKO,
-        .heldItem = ITEM_BRIDAL_GOWN,
+        .heldItem = ITEM_CHINA_DRESS,
         .evs = {60, 0, 0, 0, 60, 0},
         .nature = NATURE_MODEST,
         .gender = MON_MALE,
@@ -12316,5 +12315,40 @@ static const struct TrainerMonFullControl sParty_Imakuni4[] = {
         .ability = 2, // Contrary
         .ball = ITEM_POKE_BALL,
         .moves = {MOVE_LEAF_STORM, MOVE_MIRROR_SHOT, MOVE_SWAGGER, MOVE_EXTRASENSORY},
+    },
+};
+
+
+static const struct TrainerMonNoItemDefaultMoves sParty_AquaGruntF[] = 
+{
+    {
+        .iv = 0,
+        .lvl = 5,
+        .species = SPECIES_CJOON,
+    },
+    {
+        .iv = 0,
+        .lvl = 5,
+        .species = SPECIES_JOON,
+    },
+    {
+        .iv = 0,
+        .lvl = 5,
+        .species = SPECIES_CSHION,
+    },
+    {
+        .iv = 0,
+        .lvl = 5,
+        .species = SPECIES_SHION,
+    },
+    {
+        .iv = 0,
+        .lvl = 5,
+        .species = SPECIES_RIKAKO,
+    },
+    {
+        .iv = 0,
+        .lvl = 5,
+        .species = SPECIES_TRIKA,
     },
 };

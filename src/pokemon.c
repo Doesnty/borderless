@@ -1830,12 +1830,21 @@ s32 CalculateBaseDamage(struct BattlePokemon *attacker, struct BattlePokemon *de
 		attack = (attack * 11) / 10;
 		spAttack = (spAttack * 11) / 10;
 	}
+	if (attackerHoldEffect == HOLD_EFFECT_ROUKANKEN && 
+		(attacker->species == SPECIES_CYOUMU || attacker->species == SPECIES_YOUMU ||
+		 attacker->species == SPECIES_DYOUMU || attacker->species == SPECIES_SYOUMU ||
+		 attacker->species == SPECIES_LYOUMU ||
+		 attacker->species == SPECIES_CYOUKI || attacker->species == SPECIES_YOUKI) &&
+		(type == TYPE_STEEL || type == TYPE_GHOST))
+	{
+		attack = (attack * (100 + attackerHoldEffectParam)) / 100;
+		spAttack = (spAttack * (100 + attackerHoldEffectParam)) / 100;
+	}
     /*
     if (defenderHoldEffect == HOLD_EFFECT_METAL_POWDER && defender->species == SPECIES_DITTO)
         defense *= 2; */
     if (attackerHoldEffect == HOLD_EFFECT_THICK_CLUB && 
-        (attacker->species == SPECIES_CHINA || attacker->species == SPECIES_HINA ||
-         attacker->species == SPECIES_AHINA || attacker->species == SPECIES_DHINA))
+        (attacker->species == SPECIES_CHINA || attacker->species == SPECIES_HINA))
         attack *= 2;
     if (defenderHoldEffect == HOLD_EFFECT_HANIWA_GUARD && (defender->species == SPECIES_CMAYUMI || defender->species == SPECIES_MAYUMI))
         defense = (150 * defense) / 100;
@@ -3916,29 +3925,30 @@ bool8 PokemonUseItemEffects(struct Pokemon *mon, u16 item, u8 partyIndex, u8 mov
                             retVal = FALSE;
                         }
                         break;
-                    case 5: // FRIENDSHIP_LOW
-                        if (GetMonData(mon, MON_DATA_FRIENDSHIP, NULL) < 100 && retVal == 0 && friendshipDelta == 0)
-                        {
-                            friendshipDelta = itemEffect[idx];
-                            friendship = GetMonData(mon, MON_DATA_FRIENDSHIP, NULL);
-                            if (friendshipDelta > 0 && holdEffect == HOLD_EFFECT_HAPPINESS_UP)
-                                friendship += 150 * friendshipDelta / 100;
-                            else
-                                friendship += friendshipDelta;
-                            if (friendshipDelta > 0)
-                            {
-                                if (GetMonData(mon, MON_DATA_POKEBALL, NULL) == 11)
-                                    friendship++;
-                                if (GetMonData(mon, MON_DATA_MET_LOCATION, NULL) == GetCurrentRegionMapSectionId())
-                                    friendship++;
-                            }
-                            if (friendship < 0)
-                                friendship = 0;
-                            if (friendship > 255)
-                                friendship = 255;
-                            SetMonData(mon, MON_DATA_FRIENDSHIP, &friendship);
-                        }
-                        idx++;
+                    case 5: // EFFORT_CLEAR
+						evDelta = 0;
+						{
+							u8 whichEv = 0;
+							for (whichEv = 0; whichEv < 6; whichEv++)
+							{
+								data = GetMonData(mon, MON_DATA_HP_EV + whichEv, NULL);
+								if (data > 0)
+								{
+									evDelta += data;
+									data = 0;
+									SetMonData(mon, MON_DATA_HP_EV + whichEv, &data);
+								}
+							}
+						}
+						if (evDelta > 0)
+						{
+							data = GetMonData(mon, MON_DATA_FREE_EV, NULL);
+							data += evDelta;
+							if (data > 999)
+								data = 999;
+							SetMonData(mon, MON_DATA_FREE_EV, &data);
+							retVal = FALSE;
+						}
                         break;
                     case 6: // FRIENDSHIP_MID
                         if (GetMonData(mon, MON_DATA_FRIENDSHIP, NULL) >= 100 && GetMonData(mon, MON_DATA_FRIENDSHIP, NULL) < 200
@@ -4252,12 +4262,20 @@ bool8 PokemonItemUseNoEffect(struct Pokemon *mon, u16 item, u8 partyIndex, u8 mo
                         if (data < 3 && tmp > 4)
                             retVal = FALSE;
                         break;
-                    case 5: // FRIENDSHIP_LOW
-                        if (GetMonData(mon, MON_DATA_FRIENDSHIP, NULL) < 100
-                         && retVal == FALSE
-                         && sp18 == 0)
-                            sp18 = itemEffect[idx];
-                        idx++;
+                    case 5: // EFFORT_CLEAR
+						{
+							u8 whichEv;
+							data = 0;
+							for (whichEv = 0; whichEv < 6; whichEv++)
+							{
+								data = GetMonData(mon, MON_DATA_HP_EV + whichEv, NULL);
+								if (data)
+								{
+									whichEv = 6;
+									retVal = FALSE;
+								}
+							}
+						}
                         break;
                     case 6: // FRIENDSHIP_MID
                         if (GetMonData(mon, MON_DATA_FRIENDSHIP, NULL) >= 100

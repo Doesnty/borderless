@@ -1,5 +1,5 @@
 Route15_Text_KindraIntro:: @ 818650B
-    .string "I just got some POKéMON in trades.\n"
+    .string "I just got some Puppets in trades.\n"
     .string "Can I try them out on you?$"
 
 Route15_Text_KindraDefeat:: @ 8186549
@@ -7,8 +7,8 @@ Route15_Text_KindraDefeat:: @ 8186549
 
 Route15_Text_KindraPostBattle:: @ 818655A
     .string "You can't change the nickname of\n"
-    .string "any POKéMON you get in a trade.\p"
-    .string "Only the Original TRAINER can get\n"
+    .string "any Puppet you get in a trade.\p"
+    .string "Only the Original Trainer can get\n"
     .string "the nickname changed.$"
 
 Route15_Text_BeckyIntro:: @ 81865D3
@@ -20,12 +20,12 @@ Route15_Text_BeckyDefeat:: @ 8186612
     .string "No, wrong!$"
 
 Route15_Text_BeckyPostBattle:: @ 818661D
-    .string "I'm afraid of BIKERS. They look so\n"
+    .string "I'm afraid of Bikers. They look so\n"
     .string "ugly and mean!$"
 
 Route15_Text_EdwinIntro:: @ 818664F
-    .string "When I whistle, I can summon bird\n"
-    .string "POKéMON.$"
+    .string "When I whistle, I can summon bug\n"
+    .string "Puppets.$"
 
 Route15_Text_EdwinDefeat:: @ 818667A
     .string "Ow!\n"
@@ -45,12 +45,12 @@ Route15_Text_ChesterDefeat:: @ 8186707
 Route15_Text_ChesterPostBattle:: @ 818671A
     .string "This is so obvious, you should know\n"
     .string "this, but…\p"
-    .string "Moves like EARTHQUAKE and FISSURE\n"
-    .string "have no effect on bird POKéMON.$"
+    .string "Moves like Earthquake and Fissure\n"
+    .string "have no effect on bird Puppets.$"
 
 Route15_Text_GraceIntro:: @ 818678B
     .string "Oh, you're a little cutie!\n"
-    .string "So like a darling POKéMON!$"
+    .string "So like a darling Puppet!$"
 
 Route15_Text_GraceDefeat:: @ 81867C1
     .string "You looked so cute, too!$"
@@ -61,15 +61,15 @@ Route15_Text_GracePostBattle:: @ 81867DA
     .string "I'm a big girl now.$"
 
 Route15_Text_OliviaIntro:: @ 818680C
-    .string "I raise POKéMON for protection\n"
+    .string "I raise Puppets for protection\n"
     .string "because I live alone.$"
 
 Route15_Text_OliviaDefeat:: @ 8186841
-    .string "POKéMON isn't about winning or\n"
+    .string "Puppets aren't about winning or\n"
     .string "losing for me.$"
 
 Route15_Text_OliviaPostBattle:: @ 818686F
-    .string "I love having my POKéMON greet me\n"
+    .string "I love having my Puppet greet me\n"
     .string "when I get home.\p"
     .string "It's so reassuring.$"
 
@@ -98,17 +98,17 @@ Route15_Text_AlexPostBattle:: @ 818697C
 
 Route15_Text_CeliaIntro:: @ 81869BA
     .string "What's cool and happening?\n"
-    .string "Trading POKéMON!$"
+    .string "Trading Puppets!$"
 
 Route15_Text_CeliaDefeat:: @ 81869E6
     .string "I said trade!$"
 
 Route15_Text_CeliaPostBattle:: @ 81869F4
-    .string "I trade POKéMON with my friends\n"
+    .string "I trade Puppets with my friends\n"
     .string "all the time.$"
 
 Route15_Text_YazminIntro:: @ 8186A22
-    .string "Want to play with my POKéMON?$"
+    .string "Want to play with my Puppets?$"
 
 Route15_Text_YazminDefeat:: @ 8186A40
     .string "I was too impatient!$"
@@ -118,7 +118,7 @@ Route15_Text_YazminPostBattle:: @ 8186A55
 
 Route15_Text_RouteSign:: @ 8186A77
     .string "ROUTE 15\n"
-    .string "West to FUCHSIA CITY$"
+    .string "West to Fuchsia City$"
 
 Route15_Text_MyaIntro:: @ 8186A95
     .string "MYA: You're perfect.\n"

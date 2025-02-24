@@ -293,6 +293,12 @@ extern const u8 BattleScript_DownloadAtk[];
 extern const u8 BattleScript_DownloadSpAtk[];
 extern const u8 BattleScript_Berserk[];
 extern const u8 BattleScript_Devourer[];
+extern const u8 BattleScript_LastGrudge[];
+extern const u8 BattleScript_MadeLastWish[];
+extern const u8 BattleScript_SalvageArmorActivates[];
+extern const u8 BattleScript_MagicBounceBounce[];
+extern const u8 BattleScript_AnticipationShudder[];
+extern const u8 BattleScript_TauntWearsOff[];
 
 extern const u8 *const gBattleScriptsForMoveEffects[];
 extern const u8 *const gBattlescriptsForBallThrow[];

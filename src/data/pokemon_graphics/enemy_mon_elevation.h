@@ -2,6 +2,9 @@
 // is during battle. Species that float or fly have nonzero values.
 const u8 gEnemyMonElevation[NUM_SPECIES] =
 {
+	[SPECIES_ADMARISA] = 2,
+	
+	
     [SPECIES_DARK_ALICE] = 6,
     
     [SPECIES_CAYA] = 4,
@@ -106,9 +109,9 @@ const u8 gEnemyMonElevation[NUM_SPECIES] =
     
     [SPECIES_AREMILIA] = 6,
     
-    [SPECIES_RIKA] = 3,
+    [SPECIES_TRIKA] = 3,
     
-    [SPECIES_RIKAKO] = 9,
+    [SPECIES_RIKAKO] = 5,
     
     [SPECIES_SRIN] = 6,
     
@@ -130,6 +133,8 @@ const u8 gEnemyMonElevation[NUM_SPECIES] =
     [SPECIES_SHINKI] = 3,
     
     [SPECIES_ASHINMYOUMARU] = 5,
+	
+	[SPECIES_SUWAKO] = 3,
     
     [SPECIES_CTOJIKO] = 7,
     [SPECIES_TOJIKO] = 9,
@@ -161,4 +166,7 @@ const u8 gEnemyMonElevation[NUM_SPECIES] =
     [SPECIES_DYUYUKO] = 3,
     
     [SPECIES_ZFAIRY] = 9,
+	
+	[SPECIES_CSHION] = 2,
+	[SPECIES_SHION] = 6,
 };

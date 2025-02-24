@@ -1,6 +1,6 @@
 Route10_Text_MarkIntro:: @ 8184B8A
     .string "Wow, you came all the way here?\n"
-    .string "Maybe you're a POKéMANIAC, too?\l"
+    .string "Maybe you're a Tohomaniac, too?\l"
     .string "Want to see my collection?$"
 
 Route10_Text_MarkDefeat:: @ 8184BE5
@@ -8,7 +8,7 @@ Route10_Text_MarkDefeat:: @ 8184BE5
     .string "I'm not angry!$"
 
 Route10_Text_MarkPostBattle:: @ 8184BFB
-    .string "I have more rare POKéMON at home!$"
+    .string "I have more rare Puppets at home!$"
 
 Route10_Text_ClarkIntro:: @ 8184C1D
     .string "Ha-hahah-ah-ha!$"
@@ -25,18 +25,18 @@ Route10_Text_ClarkPostBattle:: @ 8184C60
 
 Route10_Text_HermanIntro:: @ 8184C86
     .string "Hi, kid!\n"
-    .string "Want to see my POKéMON?$"
+    .string "Want to see my Puppets?$"
 
 Route10_Text_HermanDefeat:: @ 8184CA7
     .string "Oh, no!\n"
-    .string "My POKéMON!$"
+    .string "My Puppets!$"
 
 Route10_Text_HermanPostBattle:: @ 8184CBB
     .string "I don't like you.\n"
     .string "I don't like anyone better than me!$"
 
 Route10_Text_HeidiIntro:: @ 8184CF1
-    .string "I've been out at a POKéMON GYM\n"
+    .string "I've been out at a Puppet Gym\n"
     .string "a few times.\p"
     .string "…But I always lose.$"
 
@@ -45,7 +45,7 @@ Route10_Text_HeidiDefeat:: @ 8184D31
     .string "After all my training!$"
 
 Route10_Text_HeidiPostBattle:: @ 8184D4D
-    .string "I noticed some POKéMANIACS\n"
+    .string "I noticed some Tohomaniacs\n"
     .string "prowling around.\p"
     .string "Can you imagine? Them?\n"
     .string "Up here in the mountains?$"
@@ -69,9 +69,9 @@ Route10_Text_CarolDefeat:: @ 8184E3B
     .string "I wasn't up for it.$"
 
 Route10_Text_CarolPostBattle:: @ 8184E5E
-    .string "The POKéMON here in the mountains\n"
+    .string "The Puppets here in the mountains\n"
     .string "are so chunky…\p"
-    .string "I wish there were pink POKéMON\n"
+    .string "I wish there were pink Puppets\n"
     .string "with a floral pattern!$"
 
 Route10_Text_RockTunnelDetourToLavender:: @ 8184EC5

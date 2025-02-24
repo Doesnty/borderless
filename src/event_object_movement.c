@@ -151,6 +151,7 @@ static void MovementType_VsSeeker4D(struct Sprite *);
 static void MovementType_VsSeeker4E(struct Sprite *);
 static void MovementType_VsSeeker4F(struct Sprite *);
 static void MovementType_WanderAroundSlower(struct Sprite *);
+static void MovementType_HyperSpinner(struct Sprite *);
 
 #define movement_type_def(setup, table)                                                          \
 static u8 setup##_callback(struct ObjectEvent *, struct Sprite *);                               \
@@ -274,6 +275,7 @@ static void (*const sMovementTypeCallbacks[MOVEMENT_TYPES_COUNT])(struct Sprite 
     [MOVEMENT_TYPE_VS_SEEKER_4E]                          = MovementType_VsSeeker4E,
     [MOVEMENT_TYPE_VS_SEEKER_4F]                          = MovementType_VsSeeker4F,
     [MOVEMENT_TYPE_WANDER_AROUND_SLOWER]                  = MovementType_WanderAroundSlower,
+	[MOVEMENT_TYPE_HYPER_SPINNER]                         = MovementType_HyperSpinner,
 };
 
 static const bool8 gRangedMovementTypes[MOVEMENT_TYPES_COUNT] = {
@@ -3616,6 +3618,50 @@ static bool8 MovementType_RotateClockwise_Step3(struct ObjectEvent *objectEvent,
     if (direction == DIR_NONE)
     {
         direction = directions[objectEvent->facingDirection];
+    }
+    SetObjectEventDirection(objectEvent, direction);
+    sprite->data[1] = 0;
+    return TRUE;
+}
+
+movement_type_def(MovementType_HyperSpinner, gMovementTypeFuncs_HyperSpinner)
+
+static bool8 MovementType_HyperSpinner_Step0(struct ObjectEvent *objectEvent, struct Sprite *sprite)
+{
+    ClearObjectEventMovement(objectEvent, sprite);
+    ObjectEventSetSingleMovement(objectEvent, sprite, GetFaceDirectionMovementAction(objectEvent->facingDirection));
+    sprite->data[1] = 1;
+    return TRUE;
+}
+
+static bool8 MovementType_HyperSpinner_Step1(struct ObjectEvent *objectEvent, struct Sprite *sprite)
+{
+    if (ObjectEventExecSingleMovementAction(objectEvent, sprite))
+    {
+        SetMovementDelay(sprite, 4 + (Random() % 4));
+        sprite->data[1] = 2;
+    }
+    return FALSE;
+}
+
+static bool8 MovementType_HyperSpinner_Step2(struct ObjectEvent *objectEvent, struct Sprite *sprite)
+{
+    if (WaitForMovementDelay(sprite) || ObjectEventIsTrainerAndCloseToPlayer(objectEvent))
+    {
+        sprite->data[1] = 3;
+    }
+    return FALSE;
+}
+
+static bool8 MovementType_HyperSpinner_Step3(struct ObjectEvent *objectEvent, struct Sprite *sprite)
+{
+    u8 direction;
+    u8 directions[5];
+    memcpy(directions, gClockwiseDirections, sizeof gClockwiseDirections);
+    direction = TryGetTrainerEncounterDirection(objectEvent, RUNFOLLOW_ANY);
+    if (direction == DIR_NONE)
+    {
+        direction = directions[Random() % 4];
     }
     SetObjectEventDirection(objectEvent, direction);
     sprite->data[1] = 0;

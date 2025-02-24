@@ -726,15 +726,21 @@ void HandleSpeciesGfxDataChange(u8 battlerAtk, u8 battlerDef, u8 notTransform)
 		struct Pokemon *targetparty;
 
         position = GetBattlerPosition(battlerAtk);
-        if (GetBattlerSide(battlerDef) == B_SIDE_OPPONENT)
+		if (GetBattlerSide(battlerAtk) == B_SIDE_OPPONENT)
 		{
 			party = gEnemyParty;
-			targetparty = gPlayerParty;
+		}
+		else
+		{
+			party = gPlayerParty;
+		}
+        if (GetBattlerSide(battlerDef) == B_SIDE_OPPONENT)
+		{
+			targetparty = gEnemyParty;
 		}
         else
 		{
-			party = gPlayerParty;
-			targetparty = gEnemyParty;
+			targetparty = gPlayerParty;
 		}
 		
 		if (notTransform == 254)
@@ -762,7 +768,6 @@ void HandleSpeciesGfxDataChange(u8 battlerAtk, u8 battlerDef, u8 notTransform)
 													  targetSpecies,
 													  gTransformedPersonalities[battlerAtk]);
 		}
-
 
         src = gMonSpritesGfxPtr->sprites[position];
         dst = (void *)(VRAM + 0x10000 + gSprites[gBattlerSpriteIds[battlerAtk]].oam.tileNum * 32);

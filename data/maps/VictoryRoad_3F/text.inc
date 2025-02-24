@@ -28,11 +28,11 @@ VictoryRoad_3F_Text_GeorgeDefeat:: @ 8174B83
     .string "The rumors were true!$"
 
 VictoryRoad_3F_Text_GeorgePostBattle:: @ 8174B99
-    .string "So, it was you who beat GIOVANNI\n"
-    .string "of TEAM ROCKET?$"
+    .string "So, it was you who beat Giovanni\n"
+    .string "of Team Rocket?$"
 
 VictoryRoad_3F_Text_AlexaIntro:: @ 8174BCA
-    .string "TRAINERS live to seek stronger\n"
+    .string "Trainers live to seek stronger\n"
     .string "opponents.$"
 
 VictoryRoad_3F_Text_AlexaDefeat:: @ 8174BF4
@@ -61,8 +61,8 @@ VictoryRoad_3F_Text_ColbyDefeat:: @ 8174CA9
     .string "I don't believe it!$"
 
 VictoryRoad_3F_Text_ColbyPostBattle:: @ 8174CBD
-    .string "All TRAINERS here are headed to\n"
-    .string "the POKéMON LEAGUE.\p"
+    .string "All Trainers here are headed to\n"
+    .string "the Puppet League.\p"
     .string "Don't let down your guard.$"
 
 VictoryRoad_3F_Text_RayIntro:: @ 8174D0C

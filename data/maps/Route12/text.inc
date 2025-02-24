@@ -1,21 +1,21 @@
 Route12_Text_MonSprawledOutInSlumber:: @ 8185317
-    .string "A POKéMON is sprawled out in\n"
-    .string "a deep and comfortable slumber.$"
+    .string "A pink blob is blocking the way.\n"
+    .string "It feels weird to touch...$"
 
 Text_SnorlaxWokeUp:: @ 8185354
-    .string "SNORLAX woke up!\p"
+    .string "CDoremy woke up!\p"
     .string "It attacked in a grumpy rage!$"
 
 Text_SnorlaxReturnedToMountains:: @ 8185383
-    .string "SNORLAX calmed down.\n"
+    .string "CDoremy calmed down.\n"
     .string "It gave a huge yawn…\l"
     .string "And returned to the mountains.$"
 
 Text_WantToUsePokeFlute:: @ 81853CC
-    .string "Want to use the POKé FLUTE?$"
+    .string "Want to use the Merlin Flute?$"
 
 Text_PlayedPokeFlute:: @ 81853E8
-    .string "{PLAYER} played the POKé FLUTE.$"
+    .string "{PLAYER} played the Merlin Flute.$"
 
 Route12_Text_NedIntro:: @ 8185402
     .string "Yeah!\n"
@@ -37,24 +37,24 @@ Route12_Text_ChipDefeat:: @ 8185475
     .string "That one got away!$"
 
 Route12_Text_ChipPostBattle:: @ 8185488
-    .string "With a better ROD, I could catch\n"
-    .string "better POKéMON…$"
+    .string "With a better Rod, I could catch\n"
+    .string "better Puppets…$"
 
 Route12_Text_JustinIntro:: @ 81854B9
-    .string "I'm searching for a MOON STONE.\n"
+    .string "I'm searching for a Dubious Tome.\n"
     .string "Have you found one?$"
 
 Route12_Text_JustinDefeat:: @ 81854ED
     .string "Oww!$"
 
 Route12_Text_JustinPostBattle:: @ 81854F2
-    .string "I could have made my POKéMON\n"
-    .string "evolve with a MOON STONE.\p"
+    .string "I could have made my Puppet\n"
+    .string "evolve with a Dubious Tome.\p"
     .string "I would have won then, I bet.$"
 
 Route12_Text_LucaIntro:: @ 8185547
     .string "Electricity is my specialty.\p"
-    .string "I don't know a thing about POKéMON\n"
+    .string "I don't know a thing about Puppets\n"
     .string "of the sea, though.$"
 
 Route12_Text_LucaDefeat:: @ 818559B
@@ -62,11 +62,11 @@ Route12_Text_LucaDefeat:: @ 818559B
 
 Route12_Text_LucaPostBattle:: @ 81855A6
     .string "Water conducts electricity, so you\n"
-    .string "should zap sea POKéMON.$"
+    .string "should zap sea Puppets.$"
 
 Route12_Text_HankIntro:: @ 81855E1
-    .string "The FISHING FOOL versus POKéMON\n"
-    .string "KID!$"
+    .string "The Fishing Fool versus Puppet\n"
+    .string "Kid!$"
 
 Route12_Text_HankDefeat:: @ 8185606
     .string "Touch too much!$"
@@ -74,7 +74,7 @@ Route12_Text_HankDefeat:: @ 8185606
 Route12_Text_HankPostBattle:: @ 8185616
     .string "I guess you get to be good at\n"
     .string "what you like.\p"
-    .string "Well, you beat me at POKéMON,\n"
+    .string "Well, you beat me at Puppets,\n"
     .string "but you can't top me at fishing.$"
 
 Route12_Text_ElliotIntro:: @ 8185682
@@ -98,7 +98,7 @@ Route12_Text_AndrewDefeat:: @ 8185744
     .string "Lost it!$"
 
 Route12_Text_AndrewPostBattle:: @ 818574D
-    .string "What, MAGIKARP?\p"
+    .string "What, Hina?\p"
     .string "I catch them all the time, sure.\n"
     .string "But, boy are they wimpy.$"
 

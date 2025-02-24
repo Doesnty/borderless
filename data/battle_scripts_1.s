@@ -324,11 +324,11 @@ BattleScript_SleepPowderChecks:
     goto BattleScript_EffectDoSleep
 
 BattleScript_EffectSleep::
-    jumpifmove MOVE_SLEEP_POWDER BattleScript_SleepPowderChecks
-BattleScript_EffectDoSleep:
 	attackcanceler
 	attackstring
 	ppreduce
+    jumpifmove MOVE_SLEEP_POWDER BattleScript_SleepPowderChecks
+BattleScript_EffectDoSleep:
 	jumpifstatus2 BS_TARGET, STATUS2_SUBSTITUTE, BattleScript_ButItFailed
 	jumpifstatus BS_TARGET, STATUS1_SLEEP, BattleScript_AlreadyAsleep
 	jumpifcantmakeasleep BattleScript_CantMakeAsleep
@@ -1100,11 +1100,11 @@ BattleScript_PoisonPowderCheck:
     goto BattleScript_EffectDoPoison
 
 BattleScript_EffectPoison::
-    jumpifmove MOVE_POISON_POWDER, BattleScript_PoisonPowderCheck
-BattleScript_EffectDoPoison:
 	attackcanceler
 	attackstring
 	ppreduce
+    jumpifmove MOVE_POISON_POWDER, BattleScript_PoisonPowderCheck
+BattleScript_EffectDoPoison:
 	jumpifability BS_TARGET, ABILITY_IMMUNITY, BattleScript_ImmunityProtected
 	jumpifstatus2 BS_TARGET, STATUS2_SUBSTITUTE, BattleScript_ButItFailed
 	jumpifstatus BS_TARGET, STATUS1_POISON, BattleScript_AlreadyPoisoned
@@ -1128,11 +1128,11 @@ BattleScript_ParalyzePowderCheck:
     goto BattleScript_EffectDoParalyze
 
 BattleScript_EffectParalyze::
-    jumpifmove MOVE_STUN_SPORE, BattleScript_ParalyzePowderCheck
-BattleScript_EffectDoParalyze:
 	attackcanceler
 	attackstring
 	ppreduce
+    jumpifmove MOVE_STUN_SPORE, BattleScript_ParalyzePowderCheck
+BattleScript_EffectDoParalyze:
 	jumpifability BS_TARGET, ABILITY_LIMBER, BattleScript_LimberProtected
 	jumpifstatus2 BS_TARGET, STATUS2_SUBSTITUTE, BattleScript_ButItFailed
 	typecalc
@@ -2348,11 +2348,11 @@ BattleScript_BurnPowderCheck:
     goto BattleScript_EffectDoWillOWisp
 
 BattleScript_EffectWillOWisp::
-    jumpifmove MOVE_BURN_POWDER, BattleScript_BurnPowderCheck
-BattleScript_EffectDoWillOWisp:
 	attackcanceler
 	attackstring
 	ppreduce
+    jumpifmove MOVE_BURN_POWDER, BattleScript_BurnPowderCheck
+BattleScript_EffectDoWillOWisp:
 	jumpifstatus2 BS_TARGET, STATUS2_SUBSTITUTE, BattleScript_ButItFailed
 	jumpifstatus BS_TARGET, STATUS1_BURN, BattleScript_AlreadyBurned
 	jumpiftype BS_TARGET, TYPE_FIRE, BattleScript_NotAffected
@@ -2985,21 +2985,25 @@ BattleScript_EffectCamouflage::
 	goto BattleScript_MoveEnd
 
 BattleScript_FaintAttacker::
+	special 0x24
 	playfaintcry BS_ATTACKER
 	pause 0x40
 	dofaintanimation BS_ATTACKER
 	cleareffectsonfaint BS_ATTACKER
 	printstring STRINGID_ATTACKERFAINTED
 	printstring STRINGID_EMPTYSTRING3
+	call BattleScript_SalvageArmor
 	return
 
 BattleScript_FaintTarget::
+	special 0x26
 	playfaintcry BS_TARGET
 	pause 0x40
 	dofaintanimation BS_TARGET
 	cleareffectsonfaint BS_TARGET
 	printstring STRINGID_TARGETFAINTED
 	printstring STRINGID_EMPTYSTRING3
+	call BattleScript_SalvageArmor
 	return
 
 BattleScript_GiveExp::
@@ -3826,7 +3830,17 @@ BattleScript_MagicCoatBounce::
 	pause 0x20
 	printstring STRINGID_PKMNMOVEBOUNCED
 	waitmessage 0x40
-	orword gHitMarker, HITMARKER_ATTACKSTRING_PRINTED | HITMARKER_NO_PPDEDUCT | HITMARKER_x800000
+	orword gHitMarker, HITMARKER_ATTACKSTRING_PRINTED | HITMARKER_NO_PPDEDUCT | HITMARKER_x800000 | HITMARKER_BOUNCED
+	setmagiccoattarget BS_ATTACKER
+	return
+
+BattleScript_MagicBounceBounce::
+	attackstring
+	ppreduce
+	pause 0x20
+	printstring STRINGID_PKMNMOVEMAGICBOUNCED
+	waitmessage 0x40
+	orword gHitMarker, HITMARKER_ATTACKSTRING_PRINTED | HITMARKER_NO_PPDEDUCT | HITMARKER_x800000 | HITMARKER_BOUNCED
 	setmagiccoattarget BS_ATTACKER
 	return
 
@@ -5126,6 +5140,8 @@ BattleScript_EffectPurify:
 	goto BattleScript_MoveEnd
 
 BattleScript_HazardsAttacker::
+	special 0x25
+	call BattleScript_LastWishOnAttacker
 	special 0xA
 	call BattleScript_HealingWishOnAttacker
 	special 0xB
@@ -5133,6 +5149,8 @@ BattleScript_HazardsAttacker::
 	return
 
 BattleScript_HazardsTarget::
+	special 0x25
+	call BattleScript_LastWishOnTarget
 	special 0xA
 	call BattleScript_HealingWishOnTarget
 	special 0xB
@@ -5140,6 +5158,8 @@ BattleScript_HazardsTarget::
 	return
 
 BattleScript_HazardsFaintedBattler::
+	special 0x25
+	call BattleScript_LastWishOnFaintedBattler
 	special 0xA
 	call BattleScript_HealingWishOnFaintedBattler
 	special 0xB
@@ -6230,3 +6250,60 @@ BattleScript_EffectHoldHands::
 	printstring STRINGID_HELD_HANDS
 	waitmessage 0x40
 	goto BattleScript_MoveEnd
+
+BattleScript_LastGrudge::
+	printstring STRINGID_LASTGRUDGE
+	waitmessage 0x40
+	return
+
+BattleScript_MadeLastWish::
+	printstring STRINGID_MADELASTWISH
+	waitmessage 0x40
+	return
+
+BattleScript_PrintLastWishMessage:
+	printstring STRINGID_LASTWISHACTIVATES
+	waitmessage 64
+	return
+
+BattleScript_LastWishOnAttacker::
+	orword gHitMarker, HITMARKER_IGNORE_SUBSTITUTE | HITMARKER_PASSIVE_DAMAGE
+	healthbarupdate BS_ATTACKER
+	datahpupdate BS_ATTACKER
+	call BattleScript_PrintLastWishMessage
+	return
+
+BattleScript_LastWishOnTarget::
+	orword gHitMarker, HITMARKER_IGNORE_SUBSTITUTE | HITMARKER_PASSIVE_DAMAGE
+	healthbarupdate BS_TARGET
+	datahpupdate BS_TARGET
+	call BattleScript_PrintLastWishMessage
+	return
+
+BattleScript_LastWishOnFaintedBattler::
+	orword gHitMarker, HITMARKER_IGNORE_SUBSTITUTE | HITMARKER_PASSIVE_DAMAGE
+	healthbarupdate BS_FAINTED
+	datahpupdate BS_FAINTED
+	call BattleScript_PrintLastWishMessage
+	return
+
+BattleScript_SalvageArmor::
+	special 0x27
+	special 0x28
+	return
+
+BattleScript_SalvageArmorActivates::
+	playanimation BS_SCRIPTING, B_ANIM_STATS_CHANGE, sB_ANIM_ARG1
+	printstring STRINGID_PKMNABILITYRAISEDDEF
+	waitmessage 0x40
+	return
+
+BattleScript_AnticipationShudder::
+	printstring STRINGID_ANTICIPATIONSHUDDER
+	waitmessage 64
+	return
+
+BattleScript_TauntWearsOff::
+	printstring STRINGID_TAUNTWEARSOFF
+	waitmessage 64
+	end2

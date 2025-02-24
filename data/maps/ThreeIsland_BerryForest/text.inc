@@ -31,27 +31,27 @@ ThreeIsland_BerryForest_Text_ImakuniLoss::
 ThreeIsland_BerryForest_Text_ThankYouHaveThis:: @ 817AEE1
     .string "Ohh! That was so scary!\n"
     .string "Thank you!\p"
-    .string "LOSTELLE came to pick some\n"
-    .string "BERRIES.\p"
+    .string "Lostelle came to pick some\n"
+    .string "Berries.\p"
     .string "You can have this!$"
 
 ThreeIsland_BerryForest_Text_LetsGoHome:: @ 817AF3B
     .string "What's your name?\p"
-    .string "LOSTELLE's scared, so can I go\n"
+    .string "Lostelle's scared, so can I go\n"
     .string "with you to my daddy's house?\p"
     .string "Okay!\n"
     .string "Let's go home!$"
 
 ThreeIsland_BerryForest_Text_BerryPouchIsFull:: @ 817AF9F
-    .string "Your BERRY POUCH is full.\n"
+    .string "Your Berry Pouch is full.\n"
     .string "I guess you don't want this.$"
 
 ThreeIsland_BerryForest_Text_WelcomeToBerryForest:: @ 817AFD6
-    .string "Welcome to the BERRY FOREST\p"
-    .string "Be friendly and share BERRIES with\n"
-    .string "others and POKéMON.$"
+    .string "Welcome to the Berry Forest\p"
+    .string "Be friendly and share Berries with\n"
+    .string "others and Puppets.$"
 
 ThreeIsland_BerryForest_Text_BewareWildBerryLovingMons:: @ 817B029
-    .string "Beware of wild, BERRY-loving\n"
-    .string "POKéMON!$"
+    .string "Beware of wild, Berry-loving\n"
+    .string "Puppets!$"
 

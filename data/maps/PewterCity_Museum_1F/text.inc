@@ -20,19 +20,19 @@ PewterCity_Museum_1F_Text_DoYouKnowWhatAmberIs:: @ 8190550
     .string "You can't sneak in the back way!\n"
     .string "Nice try, kid, but no.\p"
     .string "Oh, whatever!\n"
-    .string "Do you know what AMBER is?$"
+    .string "Do you know what amber is?$"
 
 PewterCity_Museum_1F_Text_AmberContainsGeneticMatter:: @ 81905B1
-    .string "AMBER contains the genetic matter\n"
-    .string "of ancient POKéMON.\p"
-    .string "There's a LAB somewhere trying to\n"
-    .string "resurrect POKéMON from AMBER.$"
+    .string "Amber contains the genetic matter\n"
+    .string "of ancient creatures.\p"
+    .string "There's a Lab somewhere trying to\n"
+    .string "resurrect Pokémon from amber.$"
 
 PewterCity_Museum_1F_Text_AmberIsFossilizedSap:: @ 8190627
-    .string "AMBER is actually sap, that gooey\n"
+    .string "Amber is actually sap, that gooey\n"
     .string "stuff that oozes from trees.\p"
     .string "The ancient sap fossilized over\n"
-    .string "time to become rock-hard AMBER.$"
+    .string "time to become rock-hard amber.$"
 
 @ Unused
 PewterCity_Museum_1F_Text_PleaseGoAround:: @ 81906A6

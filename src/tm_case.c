@@ -258,7 +258,8 @@ static const u16 sTMSpritePaletteOffsetByType[] = {
     [TYPE_PSYCHIC]  = 0x0d0,
     [TYPE_STEEL]    = 0x0e0,
     [TYPE_DARK]     = 0x0f0,
-    [TYPE_DRAGON]   = 0x100
+    [TYPE_DRAGON]   = 0x010,
+	[TYPE_ILLUSION] = 0x100
 };
 
 void InitTMCase(u8 type, void (* callback)(void), u8 a2)

@@ -13,7 +13,7 @@ SaffronCity_Gym_Text_SabrinaDefeat:: @ 819B602
     .string "I admit, I didn't work hard enough\n"
     .string "to win.\p"
     .string "Your victory has earned you the\n"
-    .string "MARSHBADGE.$"
+    .string "SoulBadge.$"
 
 SaffronCity_Gym_Text_SabrinaPostBattle:: @ 819B685
     .string "Psychic power isn't something that\n"
@@ -22,17 +22,17 @@ SaffronCity_Gym_Text_SabrinaPostBattle:: @ 819B685
     .string "People just don't realize it.$"
 
 SaffronCity_Gym_Text_ExplainMarshBadgeTakeThis:: @ 819B6FA
-    .string "The MARSHBADGE makes POKéMON up\n"
-    .string "to Lv. 70 obey you.\p"
-    .string "Stronger POKéMON will become wild,\n"
+    .string "The SoulBadge makes Puppets up\n"
+    .string "to Lv. 80 obey you.\p"
+    .string "Stronger Puppets will become wild,\n"
     .string "ignoring your orders in battle.\p"
-    .string "Just don't raise your POKéMON too\n"
+    .string "Just don't raise your Puppet too\n"
     .string "much to avoid that problem.\p"
     .string "Wait, please take this TM with you.$"
 
 SaffronCity_Gym_Text_ReceivedTM04FromSabrina:: @ 819B7D3
     .string "{PLAYER} received TM29 from\n"
-    .string "SABRINA.$"
+    .string "Sabrina.$"
 
 SaffronCity_Gym_Text_ExplainTM04:: @ 819B7F2
     .string "TM29 is Mana Burst.\p"
@@ -40,10 +40,10 @@ SaffronCity_Gym_Text_ExplainTM04:: @ 819B7F2
     .string "attack that many Puppets can use.$"
 
 SaffronCity_Gym_Text_BagFullOfOtherItems:: @ 819B849
-    .string "Your BAG is full of other items.$"
+    .string "Your Bag is full of other items.$"
 
 SaffronCity_Gym_Text_AmandaIntro:: @ 819B86A
-    .string "SABRINA is far younger than I,\n"
+    .string "Sabrina is far younger than I,\n"
     .string "but she has earned my respect.$"
 
 SaffronCity_Gym_Text_AmandaDefeat:: @ 819B8A8
@@ -52,7 +52,7 @@ SaffronCity_Gym_Text_AmandaDefeat:: @ 819B8A8
 SaffronCity_Gym_Text_AmandaPostBattle:: @ 819B8B9
     .string "In a battle of equals, the one\n"
     .string "with the stronger will wins.\p"
-    .string "If you wish to beat SABRINA, focus\n"
+    .string "If you wish to beat Sabrina, focus\n"
     .string "and will yourself to victory.$"
 
 SaffronCity_Gym_Text_JohanIntro:: @ 819B936
@@ -62,36 +62,38 @@ SaffronCity_Gym_Text_JohanDefeat:: @ 819B957
     .string "I never foresaw this!$"
 
 SaffronCity_Gym_Text_JohanPostBattle:: @ 819B96D
-    .string "PSYCHIC POKéMON fear only ghosts\n"
-    .string "and bugs!$"
+    .string "Reason Puppets fear only ghosts\n"
+    .string "and darkness!$"
 
 SaffronCity_Gym_Text_StacyIntro:: @ 819B998
-    .string "POKéMON take on the appearance of\n"
-    .string "their TRAINERS.\p"
-    .string "Your POKéMON must be tough, then!$"
+    .string "Puppets take on the appearance of\n"
+    .string "their Trainers.\p"
+    .string "Your Puppets must be tough, then!$"
 
 SaffronCity_Gym_Text_StacyDefeat:: @ 819B9EC
     .string "I knew it!$"
 
 SaffronCity_Gym_Text_StacyPostBattle:: @ 819B9F7
     .string "I have much to learn still…\p"
-    .string "I must master PSYCHIC and teach it\n"
-    .string "to my POKéMON…$"
+    .string "I must master Mana Burst and teach\n"
+    .string "it to my Puppets…$"
 
 SaffronCity_Gym_Text_TyronIntro:: @ 819BA45
     .string "You understand, don't you?\p"
     .string "That power alone isn't enough to\n"
-    .string "win in the world of POKéMON?$"
+    .string "win in the world of Puppets?$"
 
 SaffronCity_Gym_Text_TyronDefeat:: @ 819BA9E
     .string "I don't believe this!$"
 
 SaffronCity_Gym_Text_TyronPostBattle:: @ 819BAB4
-    .string "SABRINA just wiped out the KARATE\n"
-    .string "MASTER next door.$"
+    .string "Sabrina just wiped out the Karate\n"
+    .string "Master next door.\p"
+	.string "He fled in shame and left some\n"
+	.string "really weird guy in charge.$"
 
 SaffronCity_Gym_Text_TashaIntro:: @ 819BAE8
-    .string "You and I, our POKéMON shall\n"
+    .string "You and I, our Puppets shall\n"
     .string "battle!$"
 
 SaffronCity_Gym_Text_TashaDefeat:: @ 819BB0D
@@ -102,8 +104,8 @@ SaffronCity_Gym_Text_TashaPostBattle:: @ 819BB1F
     .string "place.$"
 
 SaffronCity_Gym_Text_CameronIntro:: @ 819BB49
-    .string "SABRINA is young, but she's also\n"
-    .string "our highly skilled LEADER.\p"
+    .string "Sabrina is young, but she's also\n"
+    .string "our highly skilled Leader.\p"
     .string "You won't reach her easily!$"
 
 SaffronCity_Gym_Text_CameronDefeat:: @ 819BBA1
@@ -111,17 +113,17 @@ SaffronCity_Gym_Text_CameronDefeat:: @ 819BBA1
     .string "Down and out!$"
 
 SaffronCity_Gym_Text_CameronPostBattle:: @ 819BBB3
-    .string "There used to be two POKéMON GYMS\n"
-    .string "in SAFFRON.\p"
-    .string "The FIGHTING DOJO next door lost\n"
-    .string "its GYM status, though.\p"
+    .string "There used to be two Puppet Gyms\n"
+    .string "in Saffron.\p"
+    .string "The Fighting Dojo next door lost\n"
+    .string "its Gym status, though.\p"
     .string "We simply creamed them when we\n"
-    .string "decided to have just one GYM.$"
+    .string "decided to have just one Gym.$"
 
 SaffronCity_Gym_Text_PrestonIntro:: @ 819BC57
-    .string "SAFFRON POKéMON GYM is famous for\n"
+    .string "Saffron Puppet Gym is famous for\n"
     .string "training psychics.\p"
-    .string "You want to see SABRINA, don't\n"
+    .string "You want to see Sabrina, don't\n"
     .string "you? I can tell!$"
 
 SaffronCity_Gym_Text_PrestonDefeat:: @ 819BCBC
@@ -147,13 +149,13 @@ SaffronCity_Gym_Text_GymGuyPostVictory:: @ 819BDBB
     .string "at the slots!$"
 
 SaffronCity_Gym_Text_GymStatue:: @ 819BDFE
-    .string "SAFFRON POKéMON GYM\n"
+    .string "SAFFRON PUPPET GYM\n"
     .string "LEADER: SABRINA\p"
     .string "WINNING TRAINERS:\n"
     .string "{RIVAL}$"
 
 SaffronCity_Gym_Text_GymStatuePlayerWon:: @ 819BE37
-    .string "SAFFRON POKéMON GYM\n"
+    .string "SAFFRON PUPPET GYM\n"
     .string "LEADER: SABRINA\p"
     .string "WINNING TRAINERS:\n"
     .string "{RIVAL}, {PLAYER}$"

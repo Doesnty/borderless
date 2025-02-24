@@ -22,15 +22,15 @@ Route6_Text_NancyPostBattle:: @ 8183E8D
     .string "Whisper…$"
 
 Route6_Text_KeigoIntro:: @ 8183E9F
-    .string "There aren't many bugs out here.$"
+    .string "There aren't many fairies out here.$"
 
 Route6_Text_KeigoDefeat:: @ 8183EC0
     .string "No!\n"
     .string "You're kidding!$"
 
 Route6_Text_KeigoPostBattle:: @ 8183ED4
-    .string "I like bugs, so I'm going back to\n"
-    .string "VIRIDIAN FOREST.$"
+    .string "I like fairies, so I'm going back to\n"
+    .string "Viridian Forest.$"
 
 Route6_Text_JeffIntro:: @ 8183F07
     .string "Huh?\n"
@@ -41,7 +41,7 @@ Route6_Text_JeffDefeat:: @ 8183F24
     .string "I couldn't beat your challenge…$"
 
 Route6_Text_JeffPostBattle:: @ 8183F51
-    .string "I should bring more POKéMON with\n"
+    .string "I should bring more Puppets with\n"
     .string "me. I'll feel safer that way.$"
 
 Route6_Text_IsabelleIntro:: @ 8183F90
@@ -63,7 +63,7 @@ Route6_Text_ElijahDefeat:: @ 818401A
     .string "You're too good!$"
 
 Route6_Text_ElijahPostBattle:: @ 818402B
-    .string "Are my POKéMON weak?\n"
+    .string "Are my Puppets weak?\n"
     .string "Or, am I just bad?\l"
     .string "Which do you think?$"
 

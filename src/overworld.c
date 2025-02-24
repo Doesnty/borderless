@@ -1216,6 +1216,21 @@ u8 GetCurrentMapType(void)
     return GetMapTypeByWarpData(&gSaveBlock1Ptr->location);
 }
 
+u8 GetMapWaterTypeByGroupAndId(s8 mapGroup, s8 mapNum)
+{
+    return Overworld_GetMapHeaderByGroupAndId(mapGroup, mapNum)->waterType;
+}
+
+static u8 GetMapWaterTypeByWarpData(struct WarpData *warp)
+{
+    return GetMapWaterTypeByGroupAndId(warp->mapGroup, warp->mapNum);
+}
+
+u8 GetCurrentMapWaterType(void)
+{
+    return GetMapWaterTypeByWarpData(&gSaveBlock1Ptr->location);
+}
+
 u8 GetLastUsedWarpMapType(void)
 {
     return GetMapTypeByWarpData(&gLastUsedWarp);

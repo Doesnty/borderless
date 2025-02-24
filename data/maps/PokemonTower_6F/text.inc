@@ -35,9 +35,9 @@ PokemonTower_6F_Text_BeGoneIntruders:: @ 817A2F8
 
 PokemonTower_6F_Text_GhostWasCubonesMother:: @ 817A30C
     .string "The ghost was the restless spirit\n"
-    .string "of CUBONE's mother!$"
+    .string "of Layla Prismriver!$"
 
 PokemonTower_6F_Text_MothersSpiritWasCalmed:: @ 817A342
-    .string "The mother's spirit was calmed.\p"
+    .string "The ghost's spirit was calmed.\p"
     .string "It departed to the afterlife…$"
 

@@ -373,6 +373,13 @@
       "elevation": 3,
       "dest_map": "MAP_SAFFRON_CITY_GYM",
       "dest_warp_id": 3
+    },
+    {
+      "x": 17,
+      "y": 11,
+      "elevation": 0,
+      "dest_map": "MAP_SAFFRON_CITY_GYM",
+      "dest_warp_id": 3
     }
   ],
   "coord_events": [

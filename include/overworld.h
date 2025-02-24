@@ -101,6 +101,7 @@ void CB2_ReturnToField(void);
 void CB2_ReturnToFieldContinueScriptPlayMapMusic(void);
 void WarpIntoMap(void);
 u8 GetMapTypeByGroupAndId(s8 mapGroup, s8 mapNum);
+u8 GetMapWaterTypeByGroupAndId(s8 mapGroup, s8 mapNum);
 void SetWarpDestinationToMapWarp(s8 mapGroup, s8 mapNum, s8 warpNum);
 void c2_load_new_map(void);
 void SetWarpDestinationToDynamicWarp(u8 unused);
@@ -147,6 +148,7 @@ bool32 Overworld_IsBikingAllowed(void);
 void Overworld_ResetStateAfterDigEscRope(void);
 bool32 Overworld_LinkRecvQueueLengthMoreThan2(void);
 u8 GetCurrentMapType(void);
+u8 GetCurrentMapWaterType(void);
 
 u8 GetLastUsedWarpMapType(void);
 const struct MapHeader *const GetDestinationWarpMapHeader(void);

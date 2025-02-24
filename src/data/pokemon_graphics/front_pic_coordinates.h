@@ -1128,7 +1128,7 @@ const struct MonCoords gMonFrontPicCoords[] =
 	[SPECIES_MOMIJI] = 
 	{
 		.size = 0x66,
-		.y_offset = 5,
+		.y_offset = 1,
 	},
 	[SPECIES_DMOMIJI] = 
 	{
@@ -1443,7 +1443,7 @@ const struct MonCoords gMonFrontPicCoords[] =
 	[SPECIES_RIKA] = 
 	{
 		.size = 0x55,
-		.y_offset = 4,
+		.y_offset = 0,
 	},
 	[SPECIES_TRIKA] = 
 	{
@@ -2090,6 +2090,11 @@ const struct MonCoords gMonFrontPicCoords[] =
 		.size = 0x48,
 		.y_offset = 0,
 	},
+	[SPECIES_CYOUKI] = 
+	{
+		.size = 0x56,
+		.y_offset = 4,
+	},
 	[SPECIES_YOUKI] = 
 	{
 		.size = 0x78,
@@ -2248,7 +2253,7 @@ const struct MonCoords gMonFrontPicCoords[] =
     	[SPECIES_CAUNN] = 
 	{
 		.size = 0x67,
-		.y_offset = 4,
+		.y_offset = 1,
 	},
 	[SPECIES_AUNN] = 
 	{
@@ -2278,12 +2283,12 @@ const struct MonCoords gMonFrontPicCoords[] =
 	[SPECIES_CEIKA] = 
 	{
 		.size = 0x45,
-		.y_offset = 6,
+		.y_offset = 2,
 	},
 	[SPECIES_EIKA] = 
 	{
 		.size = 0x58,
-		.y_offset = 4,
+		.y_offset = 12,
 	},
 	[SPECIES_CETERNITY] = 
 	{
@@ -2303,7 +2308,7 @@ const struct MonCoords gMonFrontPicCoords[] =
 	[SPECIES_JOON] = 
 	{
 		.size = 0x67,
-		.y_offset = 4,
+		.y_offset = 1,
 	},
 	[SPECIES_CKEIKI] = 
 	{
@@ -2418,7 +2423,7 @@ const struct MonCoords gMonFrontPicCoords[] =
 	[SPECIES_CSANNYO] = 
 	{
 		.size = 0x76,
-		.y_offset = 4,
+		.y_offset = 1,
 	},
 	[SPECIES_SANNYO] = 
 	{

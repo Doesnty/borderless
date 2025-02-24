@@ -41,7 +41,6 @@ Route12_EventScript_Snorlax:: @ 8168014
 	playmoncry SPECIES_CDOREMY, 2
 	delay 40
 	waitmoncry
-	setflag FLAG_HIDE_MTMOON_SNORLAX
 	setflag FLAG_SYS_SPECIAL_WILD_BATTLE
 	setflag FLAG_WOKE_UP_ROUTE_12_SNORLAX
 	dowildbattle

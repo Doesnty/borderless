@@ -591,6 +591,13 @@ const u8 sText_ThirdEye[] = _("{B_ATK_NAME_WITH_PREFIX} learned\n{B_BUFF1}!");
 const u8 sText_HeldHands[] = _("{B_ATK_NAME_WITH_PREFIX} held hands\nwith {B_DEF_NAME_WITH_PREFIX}!");
 const u8 sText_EarthIsShaking[] = _("Look!\nThe world is shaking!");
 const u8 sText_SnapTrapped[] = _("{B_DEF_NAME_WITH_PREFIX} was trapped by\n{B_ATK_NAME_WITH_PREFIX}!");
+const u8 sText_LastGrudge[] = _("{B_DEF_NAME_WITH_PREFIX}'s Last Grudge\nreduced {B_BUFF1} to 1 PP!");
+const u8 sText_MadeLastWish[] = _("{B_SCR_ACTIVE_NAME_WITH_PREFIX} made\nits Last Wish...");
+const u8 sText_LastWishActivates[] = _("The Last Wish came true!");
+const u8 sText_PkmnAbilityRaisedDefense[] = _("{B_SCR_ACTIVE_NAME_WITH_PREFIX}'s {B_SCR_ACTIVE_ABILITY}\nraised its Defense!");
+const u8 sText_PkmnMoveMagicBounced[] = _("{B_ATK_NAME_WITH_PREFIX}'s {B_CURRENT_MOVE}\nwas bounced back by Magic Bounce!");
+const u8 sText_AnticipationShudder[] = ("{B_SCR_ACTIVE_NAME_WITH_PREFIX}'s Anticipation\nmade it shudder!");
+const u8 sText_TauntWearsOff[] = _("{B_EFF_NAME_WITH_PREFIX}\nregained its cool!");
 
 
 const u8 *const gBattleStringsTable[] = {
@@ -1047,6 +1054,13 @@ const u8 *const gBattleStringsTable[] = {
 	[STRINGID_HELD_HANDS - 12]                    = sText_HeldHands,
 	[STRINGID_EARTHISSHAKING - 12]                = sText_EarthIsShaking,
 	[STRINGID_SNAPTRAPPED - 12]                   = sText_SnapTrapped,
+	[STRINGID_LASTGRUDGE - 12]                    = sText_LastGrudge,
+	[STRINGID_MADELASTWISH - 12]                  = sText_MadeLastWish,
+	[STRINGID_LASTWISHACTIVATES - 12]             = sText_LastWishActivates,
+	[STRINGID_PKMNABILITYRAISEDDEF - 12]          = sText_PkmnAbilityRaisedDefense,
+	[STRINGID_PKMNMOVEMAGICBOUNCED - 12]          = sText_PkmnMoveMagicBounced,
+	[STRINGID_ANTICIPATIONSHUDDER - 12]           = sText_AnticipationShudder,
+	[STRINGID_TAUNTWEARSOFF - 12]                 = sText_TauntWearsOff,
 };
 
 const u16 gMissStringIds[] = {

@@ -603,6 +603,8 @@ const u32 gFile_graphics_items_icon_palettes_ground_tm_hm_palette[] = INCBIN_U32
 const u32 gFile_graphics_items_icon_palettes_ghost_tm_hm_palette[] = INCBIN_U32("graphics/items/icon_palettes/ghost_tm_hm.gbapal.lz");
 const u32 gFile_graphics_items_icon_palettes_rock_tm_hm_palette[] = INCBIN_U32("graphics/items/icon_palettes/rock_tm_hm.gbapal.lz");
 const u32 gFile_graphics_items_icon_palettes_flying_tm_hm_palette[] = INCBIN_U32("graphics/items/icon_palettes/flying_tm_hm.gbapal.lz");
+const u32 gFile_graphics_items_icon_palettes_heart_tm_hm_palette[] = INCBIN_U32("graphics/items/icon_palettes/heart_tm_hm.gbapal.lz");
+const u32 gFile_graphics_items_icon_palettes_faith_tm_hm_palette[] = INCBIN_U32("graphics/items/icon_palettes/faith_tm_hm.gbapal.lz");
 
 const u32 gFile_graphics_items_icons_oaks_parcel_sheet[] = INCBIN_U32("graphics/items/icons/oaks_parcel.4bpp.lz");
 const u32 gFile_graphics_items_icon_palettes_oaks_parcel_palette[] = INCBIN_U32("graphics/items/icon_palettes/oaks_parcel.gbapal.lz");
@@ -823,3 +825,17 @@ const u32 gFile_graphics_items_icons_solar_shard_sheet[] = INCBIN_U32("graphics/
 const u32 gFile_graphics_items_icon_palettes_solar_shard_palette[] = INCBIN_U32("graphics/items/icon_palettes/solar_shard.gbapal.lz");
 
 const u32 gFile_graphics_items_icons_old_plate_sheet[] = INCBIN_U32("graphics/items/icons/old_plate.4bpp.lz");
+
+const u32 gFile_graphics_items_icons_scarlet_rock_sheet[] = INCBIN_U32("graphics/items/icons/scarlet_rock.4bpp.lz");
+const u32 gFile_graphics_items_icon_palettes_scarlet_rock_palette[] = INCBIN_U32("graphics/items/icon_palettes/scarlet_rock.gbapal.lz");
+
+const u32 gFile_graphics_items_icons_roukanken_sheet[] = INCBIN_U32("graphics/items/icons/roukanken.4bpp.lz");
+const u32 gFile_graphics_items_icon_palettes_roukanken_palette[] = INCBIN_U32("graphics/items/icon_palettes/roukanken.gbapal.lz");
+
+const u32 gFile_graphics_items_icons_clear_mochi_sheet[] = INCBIN_U32("graphics/items/icons/clear_mochi.4bpp.lz");
+
+const u32 gFile_graphics_items_icons_wide_lens_sheet[] = INCBIN_U32("graphics/items/icons/wide_lens.4bpp.lz");
+const u32 gFile_graphics_items_icon_palettes_wide_lens_palette[] = INCBIN_U32("graphics/items/icon_palettes/wide_lens.gbapal.lz");
+
+const u32 gFile_graphics_items_icons_light_clay_sheet[] = INCBIN_U32("graphics/items/icons/light_clay.4bpp.lz");
+const u32 gFile_graphics_items_icon_palettes_light_clay_palette[] = INCBIN_U32("graphics/items/icon_palettes/light_clay.gbapal.lz");

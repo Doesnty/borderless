@@ -2060,7 +2060,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
 
     [MOVE_FLASH] = 
     {
-        .effect = EFFECT_ACCURACY_DOWN,
+        .effect = EFFECT_ACCURACY_DOWN_HIT,
         .power = 65,
         .type = TYPE_FAITH,
         .moveClass = CLASS_SPECIAL,
@@ -3082,7 +3082,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
 
     [MOVE_SACRED_FIRE] = 
     {
-        .effect = EFFECT_THAW_HIT,
+        .effect = EFFECT_ATTACK_UP_HIT,
         .power = 100,
         .type = TYPE_FAITH,
         .moveClass = CLASS_PHYSICAL,
@@ -3208,7 +3208,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
 
     [MOVE_NATURE_POWER] = 
     {
-        .effect = EFFECT_LOW_KICK,
+        .effect = EFFECT_HIT,
         .power = 1,
         .type = TYPE_NATURE,
         .moveClass = CLASS_SPECIAL,
@@ -3964,7 +3964,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
 
     [MOVE_ERUPTION] = 
     {
-        .effect = EFFECT_ERUPTION,
+        .effect = EFFECT_HIT,
         .power = 150,
         .type = TYPE_FIRE,
         .moveClass = CLASS_SPECIAL,
@@ -4286,7 +4286,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
 
     [MOVE_FLARE_BLITZ] = 
     {
-        .effect = EFFECT_NEW,
+        .effect = EFFECT_DOUBLE_EDGE,
         .power = 120,
         .type = TYPE_FIRE,
         .moveClass = CLASS_PHYSICAL,
@@ -4510,7 +4510,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
 
     [MOVE_AQUA_SHOWER] = 
     {
-        .effect = EFFECT_ERUPTION,
+        .effect = EFFECT_HIT,
         .power = 150,
         .type = TYPE_WATER,
         .moveClass = CLASS_SPECIAL,
@@ -4706,7 +4706,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
 
     [MOVE_HEAT_CLAW] = 
     {
-        .effect = EFFECT_LOW_KICK,
+        .effect = EFFECT_HIT,
         .power = 1,
         .type = TYPE_BEAST,
         .moveClass = CLASS_PHYSICAL,

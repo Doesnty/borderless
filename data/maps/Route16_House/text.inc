@@ -9,7 +9,7 @@ Route16_House_Text_ReceivedHM02FromGirl:: @ 819F8C0
     .string "from the girl.$"
 
 Route16_House_Text_ExplainHM02:: @ 819F8E0
-    .string "HM02 is FLY.\n"
+    .string "HM02 is Fly.\n"
     .string "It's a wonderfully convenient move.\p"
     .string "Please, put it to good use.$"
 

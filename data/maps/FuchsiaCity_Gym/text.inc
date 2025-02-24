@@ -9,36 +9,34 @@ FuchsiaCity_Gym_Text_KogaIntro:: @ 819832E
     .string "Poison brings steady doom.\n"
     .string "Sleep renders foes helpless.\p"
     .string "Despair to the creeping horror of\n"
-    .string "POISON-type POKéMON!{PLAY_BGM}{MUS_ENCOUNTER_GYM_LEADER}$"
+    .string "Miasma-type Puppets!{PLAY_BGM}{MUS_ENCOUNTER_GYM_LEADER}$"
 
 FuchsiaCity_Gym_Text_KogaDefeat:: @ 8198444
     .string "Humph!\n"
     .string "You have proven your worth!\p"
     .string "Here!\n"
-    .string "Take the SOULBADGE!$"
+    .string "Take the MarshBadge!$"
 
 FuchsiaCity_Gym_Text_KogaPostBattle:: @ 8198481
-    .string "When afflicted by TOXIC, a POKéMON\n"
+    .string "When afflicted by Toxic, a Puppet\n"
     .string "suffers more and more.\p"
     .string "It suffers worsening damage as the\n"
     .string "battle wears on!\p"
     .string "It will surely terrorize foes!$"
 
 FuchsiaCity_Gym_Text_KogaExplainSoulBadge:: @ 819850E
-    .string "Now that you have the SOULBADGE,\n"
-    .string "the DEFENSE of your POKéMON rises.\p"
-    .string "It also lets you SURF outside of\n"
-    .string "battle.\p"
+    .string "Now that you have the MarshBadge,\n"
+    .string "you can use Surf outside of battle.\p"
     .string "Ah!\n"
     .string "Take this, too!$"
 
 FuchsiaCity_Gym_Text_ReceivedTM06FromKoga:: @ 819858F
     .string "{PLAYER} received TM06\n"
-    .string "from KOGA.$"
+    .string "from Koga.$"
 
 FuchsiaCity_Gym_Text_KogaExplainTM06:: @ 81985AB
     .string "Sealed within that TM06 lies\n"
-    .string "TOXIC!\p"
+    .string "Toxic!\p"
     .string "It is a secret technique dating\n"
     .string "back some four hundred years.$"
 
@@ -46,9 +44,9 @@ FuchsiaCity_Gym_Text_MakeSpaceForThis:: @ 819860D
     .string "Make space for this, child!$"
 
 FuchsiaCity_Gym_Text_KaydenIntro:: @ 8198629
-    .string "Strength isn't the key for POKéMON.\n"
+    .string "Strength isn't the key for Puppets.\n"
     .string "Do you understand this?\p"
-    .string "POKéMON is about strategy!\p"
+    .string "Puppets is about strategy!\p"
     .string "I'll show you how strategy can\n"
     .string "beat brute strength.$"
 
@@ -60,12 +58,12 @@ FuchsiaCity_Gym_Text_KaydenPostBattle:: @ 81986C9
     .string "So, you mix brawn with brains?\n"
     .string "Good strategy!\p"
     .string "That's remarkable for a child\n"
-    .string "TRAINER.$"
+    .string "Trainer.$"
 
 FuchsiaCity_Gym_Text_KirkIntro:: @ 819871E
     .string "I was a magician once upon a time.\p"
     .string "But I dreamt of becoming a ninja,\n"
-    .string "so I joined this GYM.$"
+    .string "so I joined this Gym.$"
 
 FuchsiaCity_Gym_Text_KirkDefeat:: @ 8198779
     .string "I'm done for!$"
@@ -73,7 +71,7 @@ FuchsiaCity_Gym_Text_KirkDefeat:: @ 8198779
 FuchsiaCity_Gym_Text_KirkPostBattle:: @ 8198787
     .string "Even though I've lost, I will keep\n"
     .string "training according to the teachings\l"
-    .string "of KOGA, my ninja master.$"
+    .string "of Koga, my ninja master.$"
 
 FuchsiaCity_Gym_Text_NateIntro:: @ 81987E8
     .string "Let's see you beat my special\n"
@@ -89,7 +87,7 @@ FuchsiaCity_Gym_Text_NatePostBattle:: @ 8198825
 FuchsiaCity_Gym_Text_PhilIntro:: @ 8198866
     .string "Stop right there!\p"
     .string "The famed invisible walls of\n"
-    .string "FUCHSIA GYM have you frustrated?$"
+    .string "Fuchsia Gym have you frustrated?$"
 
 FuchsiaCity_Gym_Text_PhilDefeat:: @ 81988B6
     .string "Whoa!\n"
@@ -103,7 +101,7 @@ FuchsiaCity_Gym_Text_PhilPostBattle:: @ 81988CB
 
 FuchsiaCity_Gym_Text_EdgarIntro:: @ 819891F
     .string "I also study the way of the ninja\n"
-    .string "with Master KOGA!\p"
+    .string "with Master Koga!\p"
     .string "Ninja have a long history of using\n"
     .string "animals!$"
 
@@ -114,7 +112,7 @@ FuchsiaCity_Gym_Text_EdgarPostBattle:: @ 8198985
     .string "I still have much to learn.$"
 
 FuchsiaCity_Gym_Text_ShawnIntro:: @ 81989A1
-    .string "Master KOGA comes from a long line\n"
+    .string "Master Koga comes from a long line\n"
     .string "of ninjas.\p"
     .string "What did you descend from?$"
 

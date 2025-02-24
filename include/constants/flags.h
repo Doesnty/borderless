@@ -403,7 +403,7 @@
 #define FLAG_HIDE_SAFARI_ZONE_NORTH_TM47                        0x187
 #define FLAG_HIDE_SAFARI_ZONE_WEST_TM32                         0x188
 #define FLAG_HIDE_SAFARI_ZONE_WEST_GOLD_TEETH                   0x189
-#define FLAG_HIDE_SAFARI_ZONE_WEST_MAX_POTION                   0x18A
+#define FLAG_HIDE_SAFARI_ZONE_WEST_SCARLET_ROCK                 0x18A
 #define FLAG_HIDE_SAFARI_ZONE_WEST_MAX_REVIVE                   0x18B
 #define FLAG_HIDE_SILPH_CO_3F_HYPER_POTION                      0x18C
 #define FLAG_HIDE_SILPH_CO_4F_MAX_REVIVE                        0x18D
@@ -429,7 +429,7 @@
 #define FLAG_HIDE_POKEMON_MANSION_2F_CALCIUM                    0x1A1
 #define FLAG_HIDE_POKEMON_MANSION_3F_MAX_POTION                 0x1A2
 #define FLAG_HIDE_POKEMON_MANSION_3F_IRON                       0x1A3
-#define FLAG_HIDE_POKEMON_MANSION_B1F_TM14                      0x1A4
+#define FLAG_HIDE_POKEMON_MANSION_B1F_TM36                      0x1A4
 #define FLAG_HIDE_POKEMON_MANSION_B1F_FULL_RESTORE              0x1A5
 #define FLAG_0x1A6                                              0x1A6
 #define FLAG_HIDE_POKEMON_MANSION_B1F_TM22                      0x1A7
@@ -437,11 +437,11 @@
 #define FLAG_HIDE_VICTORY_ROAD_1F_RARE_CANDY                    0x1A9
 #define FLAG_HIDE_VICTORY_ROAD_1F_TM02                          0x1AA
 #define FLAG_HIDE_VICTORY_ROAD_2F_GUARD_SPEC                    0x1AB
-#define FLAG_HIDE_VICTORY_ROAD_2F_TM07                          0x1AC
+#define FLAG_HIDE_VICTORY_ROAD_2F_TM63                          0x1AC
 #define FLAG_HIDE_VICTORY_ROAD_2F_FULL_HEAL                     0x1AD
-#define FLAG_HIDE_VICTORY_ROAD_2F_TM37                          0x1AE
+#define FLAG_HIDE_VICTORY_ROAD_2F_TM80                          0x1AE
 #define FLAG_HIDE_VICTORY_ROAD_3F_MAX_REVIVE                    0x1AF
-#define FLAG_HIDE_VICTORY_ROAD_3F_TM50                          0x1B0
+#define FLAG_HIDE_VICTORY_ROAD_3F_ULTRA_BALL                    0x1B0
 #define FLAG_HIDE_CERULEAN_CAVE_1F_MAX_ELIXIR                   0x1B1
 #define FLAG_HIDE_CERULEAN_CAVE_1F_NUGGET                       0x1B2
 #define FLAG_HIDE_CERULEAN_CAVE_1F_FULL_RESTORE                 0x1B3
@@ -453,8 +453,8 @@
 #define FLAG_HIDE_FUCHSIA_CITY_WARDENS_HOUSE_RARE_CANDY         0x1B9
 #define FLAG_HIDE_TWO_ISLAND_REVIVE                             0x1BA
 #define FLAG_HIDE_THREE_ISLAND_ZINC                             0x1BB
-#define FLAG_0x1BC                                              0x1BC
-#define FLAG_0x1BD                                              0x1BD
+#define FLAG_HIDE_ROCK_TUNNEL_TM64                              0x1BC
+#define FLAG_HIDE_DIGLETTS_CAVE_TM10                            0x1BD
 #define FLAG_HIDE_VIRIDIAN_FOREST_POTION_2                      0x1BE
 #define FLAG_HIDE_MT_MOON_B2F_REVIVE                            0x1BF
 #define FLAG_HIDE_MT_MOON_B2F_ANTIDOTE                          0x1C0
@@ -481,7 +481,7 @@
 #define FLAG_HIDE_SEAFOAM_ISLANDS_B1F_WATER_STONE               0x1D5
 #define FLAG_HIDE_SEAFOAM_ISLANDS_B1F_REVIVE                    0x1D6
 #define FLAG_HIDE_SEAFOAM_ISLANDS_B2F_BIG_PEARL                 0x1D7
-#define FLAG_HIDE_SEAFOAM_ISLANDS_B4F_ULTRA_BALL                0x1D8
+#define FLAG_HIDE_SEAFOAM_ISLANDS_B4F_TM14                      0x1D8
 #define FLAG_HIDE_FOUR_ISLAND_STAR_PIECE                        0x1D9
 #define FLAG_HIDE_FOUR_ISLAND_STARDUST                          0x1DA
 #define FLAG_HIDE_ONE_ISLAND_KINDLE_ROAD_ETHER                  0x1DB
@@ -525,9 +525,9 @@
 #define FLAG_HIDE_WEST_VIRIDIAN_FOREST_TM58                     0x1FF
 #define FLAG_HIDE_WEST_VIRIDIAN_FOREST_TM68                     0x200
 #define FLAG_ROCK_TUNNEL_IMAKUNI_FOUGHT                         0x201
-#define FLAG_0x202               0x202
-#define FLAG_0x203               0x203
-#define FLAG_0x204               0x204
+#define FLAG_HIDE_MT_MOON_B4F_RARE_CANDY                        0x202
+#define FLAG_HIDE_MT_MOON_B4F_TM50                              0x203
+#define FLAG_HIDE_MT_EMBER_EXTERIOR_TM04                        0x204
 #define FLAG_0x205               0x205
 #define FLAG_0x206               0x206
 #define FLAG_0x207               0x207

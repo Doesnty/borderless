@@ -144,5 +144,6 @@
       "quantity": 1,
       "underfoot": false
     }
-  ]
+  ],
+  "waterType": "MAP_WATER_SALTWATER"
 }

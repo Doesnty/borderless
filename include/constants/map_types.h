@@ -22,4 +22,10 @@
 #define MAP_BATTLE_SCENE_LANCE    7
 #define MAP_BATTLE_SCENE_LINK     8
 
+#define MAP_WATER_FRESHWATER      0
+#define MAP_WATER_SALTWATER       1
+#define MAP_WATER_POLLUTED        2
+#define MAP_WATER_STERILE         3
+
+
 #endif  // GUARD_CONSTANTS_MAP_TYPES_H

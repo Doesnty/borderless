@@ -53,7 +53,7 @@
 #define ITEM_SLEEP_RAY 49
 #define ITEM_FREEZE_RAY 50
 #define ITEM_GREEN_SHARD 51
-#define ITEM_034 52
+#define ITEM_HYPHENS 52
 #define ITEM_035 53
 #define ITEM_036 54
 #define ITEM_037 55
@@ -90,7 +90,7 @@
 #define ITEM_REPEL 86
 #define ITEM_ABILI_CAPSULE 87
 #define ITEM_DREAM_CAPSULE 88
-#define ITEM_059 89
+#define ITEM_CLEAR_MOCHI 89
 #define ITEM_05A 90
 #define ITEM_05B 91
 #define ITEM_05C 92
@@ -236,10 +236,10 @@
 #define ITEM_HANIWA_CHARM 230
 #define ITEM_HANIWA_STEED 231
 #define ITEM_OLD_PLATE 232
-#define ITEM_0E9 233
-#define ITEM_0EA 234
-#define ITEM_0EB 235
-#define ITEM_0EC 236
+#define ITEM_SCARLET_ROCK 233
+#define ITEM_ROUKANKEN 234
+#define ITEM_WIDE_LENS 235
+#define ITEM_LIGHT_CLAY 236
 #define ITEM_0ED 237
 #define ITEM_0EE 238
 #define ITEM_0EF 239

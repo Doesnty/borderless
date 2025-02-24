@@ -24,7 +24,7 @@ RockTunnel_B1F_Text_DudleyPostBattle:: @ 8179712
     .string "thinking.$"
 
 RockTunnel_B1F_Text_CooperIntro:: @ 817973A
-    .string "You have a POKéDEX?\n"
+    .string "You have a Tohodex?\n"
     .string "I want one, too.$"
 
 RockTunnel_B1F_Text_CooperDefeat:: @ 817975F
@@ -32,23 +32,23 @@ RockTunnel_B1F_Text_CooperDefeat:: @ 817975F
     .string "I am so jealous!$"
 
 RockTunnel_B1F_Text_CooperPostBattle:: @ 8179777
-    .string "When you finish your POKéDEX,\n"
+    .string "When you finish your Tohodex,\n"
     .string "can I have it?$"
 
 RockTunnel_B1F_Text_SteveIntro:: @ 81797A4
-    .string "Um… Do you know about POKéMON\n"
+    .string "Um… Do you know about Touhou\n"
     .string "cosplay?$"
 
 RockTunnel_B1F_Text_SteveDefeat:: @ 81797CB
     .string "Well, that's that.$"
 
 RockTunnel_B1F_Text_StevePostBattle:: @ 81797DE
-    .string "POKéMON cosplay is dressing up as\n"
-    .string "POKéMON for fun.\p"
-    .string "CLEFAIRY is a favorite.$"
+    .string "Touhou cosplay is dressing up as\n"
+    .string "Puppet for fun.\p"
+    .string "Youmu is a favorite.$"
 
 RockTunnel_B1F_Text_AllenIntro:: @ 8179829
-    .string "My POKéMON techniques will leave\n"
+    .string "My Puppet techniques will leave\n"
     .string "you crying!$"
 
 RockTunnel_B1F_Text_AllenDefeat:: @ 8179856
@@ -57,7 +57,7 @@ RockTunnel_B1F_Text_AllenDefeat:: @ 8179856
 
 RockTunnel_B1F_Text_AllenPostBattle:: @ 817987A
     .string "In mountains, you'll often find\n"
-    .string "ROCK-type POKéMON.$"
+    .string "Steel-type Puppets.$"
 
 RockTunnel_B1F_Text_MarthaIntro:: @ 81798AD
     .string "I don't often come here, but I will\n"
@@ -68,7 +68,7 @@ RockTunnel_B1F_Text_MarthaDefeat:: @ 81798DD
     .string "I lost!$"
 
 RockTunnel_B1F_Text_MarthaPostBattle:: @ 81798E9
-    .string "I like tiny POKéMON.\n"
+    .string "I like tiny Puppets.\n"
     .string "Big ones are too scary!$"
 
 RockTunnel_B1F_Text_EricIntro:: @ 8179916
@@ -78,11 +78,11 @@ RockTunnel_B1F_Text_EricDefeat:: @ 8179932
     .string "Fired away!$"
 
 RockTunnel_B1F_Text_EricPostBattle:: @ 817993E
-    .string "I'll raise my POKéMON to beat\n"
+    .string "I'll raise my Puppets to beat\n"
     .string "yours, kid.$"
 
 RockTunnel_B1F_Text_WinstonIntro:: @ 8179968
-    .string "I draw illustrations of POKéMON\n"
+    .string "I draw illustrations of Puppets\n"
     .string "when I'm home.$"
 
 RockTunnel_B1F_Text_WinstonDefeat:: @ 8179997

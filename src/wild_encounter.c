@@ -39,6 +39,7 @@ static u16 WildEncounterRandom(void);
 static void AddToWildEncounterRateBuff(u8 encouterRate);
 
 #include "data/wild_encounters.h"
+#include "data/wild_encounters_fish.h"
 
 void DisableWildEncounters(bool8 state)
 {
@@ -119,18 +120,24 @@ static u8 ChooseWildMonIndex_Fishing(u8 rod)
             wildMonIndex = 3;
         if (rand >= ENCOUNTER_CHANCE_FISHING_MONS_GOOD_ROD_SLOT_3 && rand < ENCOUNTER_CHANCE_FISHING_MONS_GOOD_ROD_SLOT_4)
             wildMonIndex = 4;
+        if (rand >= ENCOUNTER_CHANCE_FISHING_MONS_GOOD_ROD_SLOT_4 && rand < ENCOUNTER_CHANCE_FISHING_MONS_GOOD_ROD_SLOT_5)
+            wildMonIndex = 5;
+        if (rand >= ENCOUNTER_CHANCE_FISHING_MONS_GOOD_ROD_SLOT_5 && rand < ENCOUNTER_CHANCE_FISHING_MONS_GOOD_ROD_SLOT_6)
+            wildMonIndex = 6;
         break;
     case SUPER_ROD:
-        if (rand < ENCOUNTER_CHANCE_FISHING_MONS_SUPER_ROD_SLOT_5)
-            wildMonIndex = 5;
-        if (rand >= ENCOUNTER_CHANCE_FISHING_MONS_SUPER_ROD_SLOT_5 && rand < ENCOUNTER_CHANCE_FISHING_MONS_SUPER_ROD_SLOT_6)
-            wildMonIndex = 6;
-        if (rand >= ENCOUNTER_CHANCE_FISHING_MONS_SUPER_ROD_SLOT_6 && rand < ENCOUNTER_CHANCE_FISHING_MONS_SUPER_ROD_SLOT_7)
+        if (rand < ENCOUNTER_CHANCE_FISHING_MONS_SUPER_ROD_SLOT_7)
             wildMonIndex = 7;
         if (rand >= ENCOUNTER_CHANCE_FISHING_MONS_SUPER_ROD_SLOT_7 && rand < ENCOUNTER_CHANCE_FISHING_MONS_SUPER_ROD_SLOT_8)
             wildMonIndex = 8;
         if (rand >= ENCOUNTER_CHANCE_FISHING_MONS_SUPER_ROD_SLOT_8 && rand < ENCOUNTER_CHANCE_FISHING_MONS_SUPER_ROD_SLOT_9)
             wildMonIndex = 9;
+        if (rand >= ENCOUNTER_CHANCE_FISHING_MONS_SUPER_ROD_SLOT_9 && rand < ENCOUNTER_CHANCE_FISHING_MONS_SUPER_ROD_SLOT_10)
+            wildMonIndex = 10;
+        if (rand >= ENCOUNTER_CHANCE_FISHING_MONS_SUPER_ROD_SLOT_10 && rand < ENCOUNTER_CHANCE_FISHING_MONS_SUPER_ROD_SLOT_11)
+            wildMonIndex = 11;
+        if (rand >= ENCOUNTER_CHANCE_FISHING_MONS_SUPER_ROD_SLOT_11 && rand < ENCOUNTER_CHANCE_FISHING_MONS_SUPER_ROD_SLOT_12)
+            wildMonIndex = 12;
         break;
     }
     return wildMonIndex;
@@ -491,17 +498,25 @@ bool8 SweetScentWildEncounter(void)
 
 bool8 DoesCurrentMapHaveFishingMons(void)
 {
-    u16 headerIdx = GetCurrentMapWildMonHeaderId();
+	return GetCurrentMapWaterType() != MAP_WATER_STERILE;
+    /* u16 headerIdx = GetCurrentMapWildMonHeaderId();
     if (headerIdx == 0xFFFF)
         return FALSE;
     if (gWildMonHeaders[headerIdx].fishingMonsInfo == NULL)
         return FALSE;
-    return TRUE;
+    return TRUE; */
 }
 
 void FishingWildEncounter(u8 rod)
 {
-    GenerateFishingEncounter(gWildMonHeaders[GetCurrentMapWildMonHeaderId()].fishingMonsInfo, rod);
+	switch (GetCurrentMapWaterType())
+	{
+		default: // fallthrough
+		case MAP_WATER_FRESHWATER: GenerateFishingEncounter(&sFreshWaterFishingEncountersInfo, rod); break;
+		case MAP_WATER_SALTWATER: GenerateFishingEncounter(&sSaltWaterFishingEncountersInfo, rod); break;
+		case MAP_WATER_POLLUTED: GenerateFishingEncounter(&sPollutedWaterFishingEncountersInfo, rod); break;
+	}
+    //GenerateFishingEncounter(gWildMonHeaders[GetCurrentMapWildMonHeaderId()].fishingMonsInfo, rod);
     IncrementGameStat(GAME_STAT_FISHING_CAPTURES);
     StartWildBattle();
 }

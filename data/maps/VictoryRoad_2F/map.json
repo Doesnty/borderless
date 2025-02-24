@@ -111,7 +111,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "VictoryRoad_2F_EventScript_ItemTM63",
-      "flag": "FLAG_HIDE_VICTORY_ROAD_2F_TM07"
+      "flag": "FLAG_HIDE_VICTORY_ROAD_2F_TM63"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
@@ -138,8 +138,8 @@
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "VictoryRoad_2F_EventScript_ItemTM37",
-      "flag": "FLAG_HIDE_VICTORY_ROAD_2F_TM37"
+      "script": "VictoryRoad_2F_EventScript_ItemTM80",
+      "flag": "FLAG_HIDE_VICTORY_ROAD_2F_TM80"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_PUSHABLE_BOULDER",

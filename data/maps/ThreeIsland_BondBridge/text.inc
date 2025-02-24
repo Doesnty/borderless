@@ -8,7 +8,7 @@ ThreeIsland_BondBridge_Text_NikkiDefeat:: @ 8189E72
 
 ThreeIsland_BondBridge_Text_NikkiPostBattle:: @ 8189E9E
     .string "Perhaps that reek is your sweaty\n"
-    .string "POKéMON's body odor…$"
+    .string "Puppet's body odor…$"
 
 ThreeIsland_BondBridge_Text_VioletIntro:: @ 8189ED4
     .string "Where are you off to in such\n"
@@ -16,11 +16,11 @@ ThreeIsland_BondBridge_Text_VioletIntro:: @ 8189ED4
 
 ThreeIsland_BondBridge_Text_VioletDefeat:: @ 8189EFA
     .string "You're raising some wonderful\n"
-    .string "POKéMON.$"
+    .string "Puppets.$"
 
 ThreeIsland_BondBridge_Text_VioletPostBattle:: @ 8189F21
     .string "If you keep going this way, you'll\n"
-    .string "eventually reach BERRY FOREST.$"
+    .string "eventually reach Berry Forest.$"
 
 ThreeIsland_BondBridge_Text_AmiraIntro:: @ 8189F63
     .string "My mommy said that I can't swim\n"
@@ -36,7 +36,7 @@ ThreeIsland_BondBridge_Text_AmiraPostBattle:: @ 8189FA8
 
 ThreeIsland_BondBridge_Text_AlexisIntro:: @ 8189FDB
     .string "Yay, yay!\n"
-    .string "POKéMON!$"
+    .string "Puppets!$"
 
 ThreeIsland_BondBridge_Text_AlexisDefeat:: @ 8189FEE
     .string "What happens now?$"
@@ -54,13 +54,13 @@ ThreeIsland_BondBridge_Text_TishaDefeat:: @ 818A053
     .string "Now will you please go away?$"
 
 ThreeIsland_BondBridge_Text_TishaPostBattle:: @ 818A082
-    .string "A POKéMON bit through my \n"
+    .string "A Puppet bit through my \n"
     .string "swimsuit.\p"
     .string "I can't get out of the water!$"
 
 ThreeIsland_BondBridge_Text_JoyIntro:: @ 818A0C4
     .string "JOY: We'll teach you what our\n"
-    .string "favorite POKéMON is!$"
+    .string "favorite Puppet is!$"
 
 ThreeIsland_BondBridge_Text_JoyDefeat:: @ 818A0F7
     .string "JOY: Ohh…\n"

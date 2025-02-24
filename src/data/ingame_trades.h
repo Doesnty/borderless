@@ -103,7 +103,7 @@ static const struct InGameTrade sInGameTrades[] = {
     }, 
     [INGAME_TRADE_ELECTRODE] = 
     {
-        .nickname = _("FAVEDOLL"),
+        .nickname = _("FAVE DOLL"),
         .species = SPECIES_YUMEKO,
 		.level = 50,
         .ivs = {20, 31, 20, 20, 20, 20},

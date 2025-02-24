@@ -8,7 +8,7 @@ CeladonCity_DepartmentStore_Roof_Text_GiveWhichDrink:: @ 8195D5F
 
 CeladonCity_DepartmentStore_Roof_Text_YayFreshWaterHaveThis:: @ 8195D75
     .string "Yay!\p"
-    .string "FRESH WATER!\p"
+    .string "Fresh Water!\p"
     .string "Thank you!\n"
     .string "You can have this from me!$"
 
@@ -17,29 +17,29 @@ Text_ReceivedItemFromLittleGirl:: @ 8195DAD
     .string "from the little girl.$"
 
 CeladonCity_DepartmentStore_Roof_Text_ExplainTM16:: @ 8195DD4
-    .string "TM16 contains LIGHT SCREEN.\p"
+    .string "TM16 contains Light Screen.\p"
     .string "It's a move that weakens the power\n"
     .string "of special attacks by your foe.$"
 
 CeladonCity_DepartmentStore_Roof_Text_YaySodaPopHaveThis:: @ 8195E33
     .string "Yay!\p"
-    .string "SODA POP!\p"
+    .string "Soda Pop!\p"
     .string "Thank you!\n"
     .string "You can have this from me!$"
 
 CeladonCity_DepartmentStore_Roof_Text_ExplainTM20:: @ 8195E68
-    .string "TM20 contains SAFEGUARD.\p"
+    .string "TM20 contains Safeguard.\p"
     .string "It's a move that prevents status\n"
-    .string "problems among your POKéMON.$"
+    .string "problems among your Puppets.$"
 
 CeladonCity_DepartmentStore_Roof_Text_YayLemonadeHaveThis:: @ 8195EBF
     .string "Yay!\p"
-    .string "LEMONADE!\p"
+    .string "Lemonade!\p"
     .string "Thank you!\n"
     .string "You can have this from me!$"
 
 CeladonCity_DepartmentStore_Roof_Text_ExplainTM33:: @ 8195EF4
-    .string "TM33 contains REFLECT.\p"
+    .string "TM33 contains Reflect.\p"
     .string "It's a move that weakens the power\n"
     .string "of physical attacks by your foe.$"
 
@@ -51,7 +51,7 @@ CeladonCity_DepartmentStore_Roof_Text_ImNotThirstyAfterAll:: @ 8195F6E
     .string "I'm not thirsty after all!$"
 
 CeladonCity_DepartmentStore_Roof_Text_MySisterIsImmature:: @ 8195F98
-    .string "My sister is a TRAINER, believe it\n"
+    .string "My sister is a Trainer, believe it\n"
     .string "or not.\p"
     .string "But, she's so immature, she drives\n"
     .string "me nuts!$"

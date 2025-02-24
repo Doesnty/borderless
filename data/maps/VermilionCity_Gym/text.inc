@@ -3,7 +3,7 @@ VermilionCity_Gym_Text_LtSurgeIntro:: @ 8194BA4
     .string "doing here?\p"
     .string "You won't live long in combat!\n"
     .string "Not with your puny power!\p"
-    .string "I tell you, kid, electric POKéMON\n"
+    .string "I tell you, kid, electric Puppets\n"
     .string "saved me during the war!\p"
     .string "They zapped my enemies into\n"
     .string "paralysis!\p"
@@ -12,35 +12,35 @@ VermilionCity_Gym_Text_LtSurgeIntro:: @ 8194BA4
 VermilionCity_Gym_Text_LtSurgePostBattle:: @ 8194C8E
     .string "A little word of advice, kid!\p"
     .string "Electricity is sure powerful!\p"
-    .string "But, it's useless against GROUND-\n"
-    .string "type POKéMON!$"
+    .string "But, it's useless against Earth-\n"
+    .string "type Puppets!$"
 
 VermilionCity_Gym_Text_ExplainThunderBadgeTakeThis:: @ 8194CFA
-    .string "The THUNDERBADGE cranks up your\n"
-    .string "POKéMON's SPEED!\p"
-    .string "It also lets your POKéMON FLY\n"
+    .string "The ThunderBadge proves that you've\n"
+    .string "got real skill!\p"
+    .string "It also lets your Puppets Fly\n"
     .string "lightning-quick anytime, kid!\p"
     .string "You're special, kid!\n"
     .string "Take this!$"
 
 VermilionCity_Gym_Text_ReceivedTM34FromLtSurge:: @ 8194D87
-    .string "{PLAYER} received TM34\n"
+    .string "{PLAYER} received TM55\n"
     .string "from LT. SURGE.$"
 
 VermilionCity_Gym_Text_ExplainTM34:: @ 8194DA8
-    .string "TM34 contains SHOCK WAVE!\p"
-    .string "Teach it to an ELECTRIC POKéMON!$"
+    .string "TM55 contains Volt Switch!\p"
+    .string "Teach it to an Electric Puppet!$"
 
 VermilionCity_Gym_Text_MakeRoomInYourBag:: @ 8194DE3
-    .string "Yo, kid, make room in your BAG!$"
+    .string "Yo, kid, make room in your Bag!$"
 
 VermilionCity_Gym_Text_LtSurgeDefeat:: @ 8194E03
     .string "Now that's a shocker!\p"
     .string "You're the real deal, kid!\p"
-    .string "Fine, then, take the THUNDERBADGE!$"
+    .string "Fine, then, take the ThunderBadge!$"
 
 VermilionCity_Gym_Text_TuckerIntro:: @ 8194E57
-    .string "When I was in the Army, LT. SURGE\n"
+    .string "When I was in the Army, Lt. Surge\n"
     .string "was my strict CO.\p"
     .string "He was a hard taskmaster.$"
 
@@ -50,20 +50,20 @@ VermilionCity_Gym_Text_TuckerDefeat:: @ 8194EA5
 
 VermilionCity_Gym_Text_TuckerPostBattle:: @ 8194EBD
     .string "It's not easy opening that door.\p"
-    .string "LT. SURGE was always famous for\n"
+    .string "Lt. Surge was always famous for\n"
     .string "his cautious nature in the Army.$"
 
 VermilionCity_Gym_Text_BailyIntro:: @ 8194F1F
     .string "I'm a lightweight, but I'm good\n"
     .string "with electricity!\p"
-    .string "That's why I joined this GYM.$"
+    .string "That's why I joined this Gym.$"
 
 VermilionCity_Gym_Text_BailyDefeat:: @ 8194F6F
     .string "Fried!$"
 
 VermilionCity_Gym_Text_BailyPostBattle:: @ 8194F76
     .string "Okay, I'll talk!\p"
-    .string "LT. SURGE said he hid door\n"
+    .string "Lt. Surge said he hid door\n"
     .string "switches inside something.$"
 
 VermilionCity_Gym_Text_DwayneIntro:: @ 8194FBD
@@ -75,8 +75,8 @@ VermilionCity_Gym_Text_DwayneDefeat:: @ 8194FF1
     .string "Surprised me!$"
 
 VermilionCity_Gym_Text_DwaynePostBattle:: @ 8195004
-    .string "LT. SURGE installed the traps in\n"
-    .string "the GYM himself.\p"
+    .string "Lt. Surge installed the traps in\n"
+    .string "the Gym himself.\p"
     .string "He set up double locks everywhere.\n"
     .string "Let me give you a hint.\p"
     .string "When you open the first lock, the\n"
@@ -85,11 +85,11 @@ VermilionCity_Gym_Text_DwaynePostBattle:: @ 8195004
 VermilionCity_Gym_Text_GymGuyAdvice:: @ 81950B4
     .string "Yo!\n"
     .string "Champ in the making!\p"
-    .string "LT. SURGE has a nickname.\p"
+    .string "Lt. Surge has a nickname.\p"
     .string "People refer to him as the\n"
     .string "Lightning American!\p"
     .string "He's an expert on electric\n"
-    .string "POKéMON.\p"
+    .string "P.\p"
     .string "BIRD/WATER-type POKéMON match\n"
     .string "poorly against the ELECTRIC type.\p"
     .string "Beware of paralysis, too.\p"

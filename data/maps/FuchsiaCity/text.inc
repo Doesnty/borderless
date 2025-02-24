@@ -1,23 +1,23 @@
 FuchsiaCity_Text_DidYouTrySafariGame:: @ 818056E
-    .string "Did you try the SAFARI GAME?\p"
-    .string "There are some rare POKéMON that\n"
+    .string "Did you try the Safari Game?\p"
+    .string "There are some rare Puppets that\n"
     .string "can only be caught there.$"
 
 FuchsiaCity_Text_SafariZoneZooInFront:: @ 81805C6
-    .string "The SAFARI ZONE has a zoo in front\n"
+    .string "The Safari Zone has a zoo in front\n"
     .string "of the entrance.\p"
-    .string "Out back is the SAFARI GAME for\n"
-    .string "catching POKéMON.$"
+    .string "Out back is the Safari game for\n"
+    .string "catching Puppets.$"
 
 FuchsiaCity_Text_WheresSara:: @ 818062C
-    .string "ERIK: Where's SARA?\n"
+    .string "ERIK: Where's Sara?\n"
     .string "I said I'd meet her here.$"
 
 FuchsiaCity_Text_ItemBallInThere:: @ 818065A
     .string "That item ball in there…\n"
     .string "Were you wanting that?\p"
     .string "Me, too!\n"
-    .string "…Huh? That's a POKéMON?$"
+    .string "…Huh? That's a Pokémon?$"
 
 FuchsiaCity_Text_CitySign:: @ 81806AB
     .string "FUCHSIA CITY\n"
@@ -29,15 +29,15 @@ FuchsiaCity_Text_SafariZoneSign:: @ 81806D3
 
 FuchsiaCity_Text_SafariGameSign:: @ 81806F0
     .string "SAFARI GAME\n"
-    .string "POKéMON-U-CATCH!$"
+    .string "PUPPET-U-CATCH!$"
 
 FuchsiaCity_Text_WardensHomeSign:: @ 818070D
     .string "SAFARI ZONE\n"
     .string "WARDEN'S HOME$"
 
 FuchsiaCity_Text_SafariZoneOfficeSign:: @ 8180727
-    .string "POKéMON PARADISE!\n"
-    .string "Welcome to the SAFARI ZONE!\l"
+    .string "POKéMON-PUPPET PARADISE!\n"
+    .string "Welcome to the Safari Zone!\l"
     .string "SAFARI ZONE OFFICE$"
 
 FuchsiaCity_Text_GymSign:: @ 8180768
@@ -105,9 +105,9 @@ Text_SubstituteTaught:: @ 8180A80
     .string "a KANGASKHAN belly pouch…$"
 
 FuchsiaCity_Text_MyFatherIsGymLeader:: @ 8180ABD
-    .string "My father is the GYM LEADER of\n"
+    .string "My father is the Gym Leader of\n"
     .string "this town.\p"
-    .string "I'm training to use POISON POKéMON\n"
+    .string "I'm training to use Miasma Puppets\n"
     .string "as well as my father.$"
 
 FuchsiaCity_Text_GymGuard::

@@ -1,12 +1,12 @@
 Route21_South_Text_JackIntro:: @ 81884D4
-	.string "I caught my POKéMON at sea.$"
+	.string "I caught my Puppet at sea.$"
 
 Route21_South_Text_JackDefeat:: @ 81884F0
 	.string "Diver!!\n"
 	.string "Down!!$"
 
 Route21_South_Text_JackPostBattle:: @ 81884FF
-	.string "Where'd you catch your POKéMON?$"
+	.string "Where'd you catch your Puppets?$"
 
 Route21_South_Text_JeromeIntro:: @ 818851F
 	.string "Right now, I'm in a triathlon meet.$"
@@ -67,7 +67,7 @@ Route21_North_Text_LilPostBattle:: @ 8188734
 Route21_North_Text_LilNotEnoughMons:: @ 818875E
 	.string "LIL: Huh? A battle?\n"
 	.string "I can't be bothered to do it alone.\l"
-	.string "Bring two POKéMON, won't you?$"
+	.string "Bring two Puppets, won't you?$"
 
 Route21_North_Text_IanIntro:: @ 81887B4
 	.string "IAN: My sis doesn't get enough\n"

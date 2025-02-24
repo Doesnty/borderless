@@ -47,10 +47,10 @@ SilphCo_2F_Text_Grunt2PostBattle:: @ 81756E2
 Text_ThunderWaveTeach:: @ 8175711
     .string "Eeek!\n"
     .string "No! Stop! Help!\p"
-    .string "Oh, you're not with TEAM ROCKET.\n"
+    .string "Oh, you're not with Team Rocket.\n"
     .string "I'm sorry, I thought…\p"
     .string "Will you forgive me if I teach\n"
-    .string "you the THUNDER WAVE technique?$"
+    .string "you the Thunder Wave technique?$"
 
 Text_ThunderWaveDeclined:: @ 817579D
     .string "Oh…\n"
@@ -61,12 +61,16 @@ Text_ThunderWaveWhichMon:: @ 81757C1
     .string "THUNDER WAVE?$"
 
 Text_ThunderWaveTaught:: @ 81757EC
-    .string "THUNDER WAVE causes paralysis in\n"
-    .string "the target POKéMON.\p"
-    .string "A paralyzed POKéMON may be unable\n"
+    .string "Thunder Wave causes paralysis in\n"
+    .string "the target Puppet.\p"
+    .string "A paralyzed Puppet may be unable\n"
     .string "to move in battle.\p"
-    .string "It's an ELECTRIC-type move, so it\n"
-    .string "won't work on some POKéMON.$"
+    .string "It's an Electric-type move, so it\n"
+    .string "won't work on some Puppets.$"
+
+SilphCo_2F_Text_GotTM40::
+    .string "{PLAYER} received the TM40\n"
+    .string "from the woman.$"
 
 SilphCo_2F_Text_FloorSign:: @ 8175894
     .string "SILPH CO. HEAD OFFICE\n"

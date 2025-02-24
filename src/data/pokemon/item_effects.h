@@ -237,49 +237,49 @@ static const u8 sItemEffect_PPMax[9] = {
 
 static const u8 sItemEffect_GuardSpec[8] = {
     [3] = ITEM3_MIST,
-    [5] = ITEM5_FRIENDSHIP_LOW | ITEM5_FRIENDSHIP_MID,
+    [5] = ITEM5_FRIENDSHIP_MID,
     [6] = 1,
     [7] = 1,
 };
 
 static const u8 sItemEffect_DireHit[8] = {
     [0] = 2 << 4,
-    [5] = ITEM5_FRIENDSHIP_LOW | ITEM5_FRIENDSHIP_MID,
+    [5] = ITEM5_FRIENDSHIP_MID,
     [6] = 1,
     [7] = 1,
 };
 
 static const u8 sItemEffect_XAttack[8] = {
     [0] = 1,
-    [5] = ITEM5_FRIENDSHIP_LOW | ITEM5_FRIENDSHIP_MID,
+    [5] = ITEM5_FRIENDSHIP_MID,
     [6] = 1,
     [7] = 1,
 };
 
 static const u8 sItemEffect_XDefend[8] = {
     [1] = 1 << 4,
-    [5] = ITEM5_FRIENDSHIP_LOW | ITEM5_FRIENDSHIP_MID,
+    [5] = ITEM5_FRIENDSHIP_MID,
     [6] = 1,
     [7] = 1,
 };
 
 static const u8 sItemEffect_XSpeed[8] = {
     [1] = 1,
-    [5] = ITEM5_FRIENDSHIP_LOW | ITEM5_FRIENDSHIP_MID,
+    [5] = ITEM5_FRIENDSHIP_MID,
     [6] = 1,
     [7] = 1,
 };
 
 static const u8 sItemEffect_XAccuracy[8] = {
     [2] = 1 << 4,
-    [5] = ITEM5_FRIENDSHIP_LOW | ITEM5_FRIENDSHIP_MID,
+    [5] = ITEM5_FRIENDSHIP_MID,
     [6] = 1,
     [7] = 1,
 };
 
 static const u8 sItemEffect_XSpecial[8] = {
     [2] = 1,
-    [5] = ITEM5_FRIENDSHIP_LOW | ITEM5_FRIENDSHIP_MID,
+    [5] = ITEM5_FRIENDSHIP_MID,
     [6] = 1,
     [7] = 1,
 };
@@ -351,6 +351,10 @@ static const u8 sItemEffect_SitrusBerry[7] = {
     [6] = 252,
 };
 
+static const u8 sItemEffect_ClearMochi[7] = {
+	[5] = ITEM5_EFFORT_RESET,
+};
+
 const u8 *const gItemEffectTable[] =
 {
     [ITEM_POTION - ITEM_POTION] = sItemEffect_Potion,
@@ -401,6 +405,7 @@ const u8 *const gItemEffectTable[] =
     [ITEM_X_SPEED - ITEM_POTION] = sItemEffect_XSpeed,
     [ITEM_X_ACCURACY - ITEM_POTION] = sItemEffect_XAccuracy,
     [ITEM_X_SPECIAL - ITEM_POTION] = sItemEffect_XSpecial,
+	[ITEM_CLEAR_MOCHI - ITEM_POTION] = sItemEffect_ClearMochi,
     [ITEM_SOLAR_SHARD - ITEM_POTION] = sItemEffect_SunStone,
     [ITEM_POWER_SHARD - ITEM_POTION] = sItemEffect_MoonStone,
     [ITEM_GUARD_SHARD - ITEM_POTION] = sItemEffect_FireStone,

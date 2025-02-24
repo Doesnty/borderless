@@ -471,5 +471,6 @@
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "OneIsland_KindleRoad_EventScript_RouteSign"
     }
-  ]
+  ],
+  "waterType": "MAP_WATER_SALTWATER"
 }

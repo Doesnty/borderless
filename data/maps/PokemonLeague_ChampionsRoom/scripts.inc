@@ -52,13 +52,18 @@ PokemonLeague_ChampionsRoom_OnFrame:: @ 8162B6C
 
 PokemonLeague_ChampionsRoom_EventScript_EnterRoom:: @ 8162B76
 	lockall
-	textcolor 0
+	textcolor 1
 	setflag FLAG_TEMP_2
 	applymovement OBJ_EVENT_ID_PLAYER, PokemonLeague_ChampionsRoom_Movement_PlayerEnter
 	waitmovement 0
 	delay 20
-	call_if_unset FLAG_SYS_GAME_CLEAR, PokemonLeague_ChampionsRoom_EventScript_Intro
-	call_if_set FLAG_SYS_GAME_CLEAR, PokemonLeague_ChampionsRoom_EventScript_RematchIntro
+	
+	checkplayergender
+	compare VAR_RESULT, 0
+	call_if_eq PokemonLeague_ChampionsRoom_EventScript_IntroMaribelChamp
+	compare VAR_RESULT, 1
+	call_if_eq PokemonLeague_ChampionsRoom_EventScript_IntroRenkoChamp
+	
 	goto_if_questlog PokemonLeague_ChampionsRoom_EventScript_QuestLogEnd
 	setflag FLAG_TEMP_3
 	setflag FLAG_TEMP_5
@@ -124,8 +129,12 @@ PokemonLeague_ChampionsRoom_EventScript_Rematch:: @ 8162C91
 	call_if_eq PokemonLeague_ChampionsRoom_EventScript_RematchCharmander
 	return
 
-PokemonLeague_ChampionsRoom_EventScript_Intro:: @ 8162CB3
-	msgbox PokemonLeague_ChampionsRoom_Text_Intro
+PokemonLeague_ChampionsRoom_EventScript_IntroRenkoChamp:: @ 8162CB3
+	msgbox PokemonLeague_ChampionsRoom_Text_IntroRenko
+	return
+
+PokemonLeague_ChampionsRoom_EventScript_IntroMaribelChamp::
+	msgbox PokemonLeague_ChampionsRoom_Text_IntroMaribel
 	return
 
 PokemonLeague_ChampionsRoom_EventScript_RematchIntro:: @ 8162CBC

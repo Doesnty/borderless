@@ -116,6 +116,7 @@ static void RecolorItemDescriptionBox(bool32 a0);
 static void BuyMenuDrawGraphics(void);
 static bool8 BuyMenuBuildListMenuTemplate(void);
 static void PokeMartWriteNameAndIdAt(struct ListMenuItem *list, u16 index, u8* dst);
+static void PrintItemDescriptionAndShowItemIcon(s32 item, bool8 onInit);
 static void BuyMenuPrintItemDescriptionAndShowItemIcon(s32 item, bool8 onInit, struct ListMenu *list);
 static void BuyMenuPrintPriceInList(u8 windowId, u32 itemId, u8 y);
 static void LoadTmHmNameInMart(s32 item);
@@ -570,19 +571,24 @@ bool8 BuyMenuBuildListMenuTemplate(void)
 
 static void PokeMartWriteNameAndIdAt(struct ListMenuItem *list, u16 index, u8* dst)
 {
-    CopyItemName(index, dst);
+	if (gShopData.martType == 1 && CheckBagHasItem(index, 1))
+		CopyItemName(ITEM_HYPHENS, dst);
+	else
+		CopyItemName(index, dst);
     list->label = dst;
     list->index = index;
 }
 
-static void BuyMenuPrintItemDescriptionAndShowItemIcon(s32 item, bool8 onInit, struct ListMenu *list)
+static void PrintItemDescriptionAndShowItemIcon(s32 item, bool8 onInit)
 {
     const u8 *description;
     
     if (onInit != TRUE)
         PlaySE(SE_SELECT);
 
-    if (item != INDEX_CANCEL)
+	if (gShopData.martType == 1 && CheckBagHasItem(item, 1))
+		description = gText_SoldOut;
+    else if (item != INDEX_CANCEL)
         description = ItemId_GetDescription(item);
     else
         description = gText_QuitShopping;
@@ -603,8 +609,13 @@ static void BuyMenuPrintItemDescriptionAndShowItemIcon(s32 item, bool8 onInit, s
     {
         FillWindowPixelBuffer(6, PIXEL_FILL(0));
         LoadTmHmNameInMart(item);
-        BuyMenuPrint(5, 2, description, 2, 3, 1, 0, 0, 0);
+		BuyMenuPrint(5, 2, description, 2, 3, 1, 0, 0, 0);
     }
+}
+
+static void BuyMenuPrintItemDescriptionAndShowItemIcon(s32 item, bool8 onInit, struct ListMenu *list)
+{
+	PrintItemDescriptionAndShowItemIcon(item, onInit);
 }
 
 static void BuyMenuPrintPriceInList(u8 windowId, u32 item, u8 y)
@@ -612,7 +623,7 @@ static void BuyMenuPrintPriceInList(u8 windowId, u32 item, u8 y)
     s32 x;
     u8 *loc;
 
-    if (item != INDEX_CANCEL)
+    if (item != INDEX_CANCEL && !(gShopData.martType == 1 && CheckBagHasItem(item, 1)))
     {
         ConvertIntToDecimalStringN(gStringVar1, itemid_get_market_price(item), 0, 4);
         x = 4 - StringLength(gStringVar1);
@@ -626,7 +637,7 @@ static void BuyMenuPrintPriceInList(u8 windowId, u32 item, u8 y)
 
 static void LoadTmHmNameInMart(s32 item)
 {
-    if (item != INDEX_CANCEL)
+    if (item != INDEX_CANCEL && !CheckBagHasItem(item, 1))
     {
         ConvertIntToDecimalStringN(gStringVar1, item - ITEM_DEVON_SCOPE, 2, 2);
         StringCopy(gStringVar4, gOtherText_UnkF9_08_Clear_01);
@@ -911,6 +922,20 @@ static void Task_BuyMenu(u8 taskId)
             {
                 BuyMenuDisplayMessage(taskId, gText_YouDontHaveMoney, BuyMenuReturnToItemList);
             }
+			else if (gShopData.martType == 1 && CheckBagHasItem(itemId, 1))
+			{
+                BuyMenuDisplayMessage(taskId, gText_ThatsSoldOut, BuyMenuReturnToItemList);
+			}
+			else if (gShopData.martType == 1)
+			{
+                CopyItemName(itemId, gStringVar1);
+				tItemCount = 1;
+				gShopData.itemPrice = itemid_get_market_price(tItemId) * tItemCount;
+				CopyItemName(tItemId, gStringVar1);
+				ConvertIntToDecimalStringN(gStringVar2, tItemCount, STR_CONV_MODE_LEFT_ALIGN, 2);
+				ConvertIntToDecimalStringN(gStringVar3, gShopData.itemPrice, STR_CONV_MODE_LEFT_ALIGN, 8);
+				BuyMenuDisplayMessage(taskId, gText_Var1AndYouWantedVar2, CreateBuyMenuConfirmPurchaseWindow);
+			}
             else
             {
                 CopyItemName(itemId, gStringVar1);
@@ -1035,7 +1060,15 @@ static void BuyMenuReturnToItemList(u8 taskId)
     PutWindowTilemap(4);
     PutWindowTilemap(5);
     if (gShopData.martType == MART_TYPE_TMHM)
-        PutWindowTilemap(6);
+	{
+		u32 i;
+		PutWindowTilemap(6);
+		for (i = 0; i < gShopData.itemCount; i++)
+		{
+			PokeMartWriteNameAndIdAt(&sShopMenuListMenu[i], gShopData.itemList[i], sShopMenuItemStrings[i]);
+		}
+		RedrawListMenu(tListTaskId);
+	}
     
     ScheduleBgCopyTilemapToVram(0);
     BuyMenuAddScrollIndicatorArrows();

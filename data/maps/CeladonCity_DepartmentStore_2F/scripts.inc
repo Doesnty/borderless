@@ -55,11 +55,36 @@ CeladonCity_DepartmentStore_2F_TMs:: @ 816BB74
 	.2byte ITEM_TM15
 	.2byte ITEM_TM27
 	.2byte ITEM_TM31
+	.2byte ITEM_TM44
 	.2byte ITEM_TM45
 	.2byte ITEM_TM57
 	.2byte ITEM_TM60
+	.2byte ITEM_TM75
 	.2byte ITEM_TM77
 	.2byte ITEM_TM79
+	.2byte ITEM_NONE
+	release
+	end
+
+CeladonCity_DepartmentStore_2F_EventScript_ClerkMoreTMs:: @ 816BB4E
+	goto_if_questlog EventScript_ReleaseEnd
+	lock
+	faceplayer
+	message Text_MayIHelpYou
+	waitmessage
+	pokemart CeladonCity_DepartmentStore_2F_MoreTMs
+	msgbox Text_PleaseComeAgain
+	release
+	end
+
+	.align 2
+CeladonCity_DepartmentStore_2F_MoreTMs:: @ 816BB74
+	.2byte ITEM_TM61
+	.2byte ITEM_TM62
+	.2byte ITEM_TM66
+	.2byte ITEM_TM67
+	.2byte ITEM_TM71
+	.2byte ITEM_TM72
 	.2byte ITEM_NONE
 	release
 	end

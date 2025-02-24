@@ -1,30 +1,30 @@
 CeruleanCity_Gym_Text_MistyIntro:: @ 81921EF
     .string "Hi, you're a new face!\p"
-    .string "Only those TRAINERS who have a\n"
-    .string "policy about POKéMON can turn pro.\p"
+    .string "Only those Trainers who have a\n"
+    .string "policy about Puppets can turn pro.\p"
     .string "What is your approach when you\n"
-    .string "catch and train POKéMON?\p"
+    .string "catch and train Puppets?\p"
     .string "My policy is an all-out offensive\n"
-    .string "with WATER-type POKéMON!{PLAY_BGM}{MUS_ENCOUNTER_GYM_LEADER}$"
+    .string "with Water-type Puppets!{PLAY_BGM}{MUS_ENCOUNTER_GYM_LEADER}$"
 
 CeruleanCity_Gym_Text_ExplainTM03:: @ 81922BF
-    .string "TM03 teaches WATER PULSE.\p"
-    .string "Use it on an aquatic POKéMON!$"
+    .string "TM03 teaches Water Pulse.\p"
+    .string "Use it on an aquatic Puppet!$"
 
 CeruleanCity_Gym_Text_ExplainCascadeBadge:: @ 81922F7
-    .string "The CASCADEBADGE makes all\n"
-    .string "POKéMON up to Lv. 30 obey.\p"
+    .string "The CascadeBadge makes all\n"
+    .string "Puppets up to Lv. 40 obey.\p"
     .string "That includes even outsiders you\n"
     .string "got in trades.\p"
-    .string "There's more. You can now use CUT\n"
+    .string "There's more. You can now use Cut\n"
     .string "anytime, even out of battle.\p"
-    .string "You can CUT down small trees to\n"
+    .string "You can Cut down small trees to\n"
     .string "open new pathways.\p"
     .string "You can also have my favorite TM.$"
 
 CeruleanCity_Gym_Text_ReceivedTM03FromMisty:: @ 81923F1
     .string "{PLAYER} received TM03\n"
-    .string "from MISTY.$"
+    .string "from Misty.$"
 
 CeruleanCity_Gym_Text_BetterMakeRoomForThis:: @ 819240E
     .string "You better make room for this!$"
@@ -33,19 +33,19 @@ CeruleanCity_Gym_Text_MistyDefeat:: @ 819242D
     .string "Wow!\n"
     .string "You're too much!\p"
     .string "All right!\p"
-    .string "You can have the CASCADEBADGE to\n"
+    .string "You can have the CascadeBadge to\n"
     .string "show you beat me.$"
 
 CeruleanCity_Gym_Text_DianaIntro:: @ 8192481
     .string "What? You?\n"
     .string "I'm more than good enough for you!\p"
-    .string "MISTY won't have to be bothered.$"
+    .string "Misty won't have to be bothered.$"
 
 CeruleanCity_Gym_Text_DianaDefeat:: @ 81924D0
     .string "You overwhelmed me!$"
 
 CeruleanCity_Gym_Text_DianaPostBattle:: @ 81924E4
-    .string "You have to face other TRAINERS\n"
+    .string "You have to face other Trainers\n"
     .string "to see how good you really are.$"
 
 CeruleanCity_Gym_Text_LuisIntro:: @ 8192524
@@ -57,7 +57,7 @@ CeruleanCity_Gym_Text_LuisDefeat:: @ 8192547
     .string "That can't be!$"
 
 CeruleanCity_Gym_Text_LuisPostBattle:: @ 8192556
-    .string "MISTY is a TRAINER who's going to\n"
+    .string "Misty is a Trainer who's going to\n"
     .string "keep improving.\p"
     .string "She won't lose to someone like you!$"
 

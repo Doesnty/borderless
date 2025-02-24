@@ -44,7 +44,7 @@ Text_ExplosionTaughtJP:: @ 817A811
 MtEmber_Exterior_Text_WellTryDiggingHere:: @ 817A82A
     .string "Over here.\n"
     .string "We'll try digging here.\p"
-    .string "That treasure the ADMINS've been\n"
+    .string "That treasure the Admins've been\n"
     .string "talking about should be here.$"
 
 MtEmber_Exterior_Text_YoureInTheWayGetLost:: @ 817A88C
@@ -57,15 +57,15 @@ MtEmber_Exterior_Text_PunchedThroughAtLast:: @ 817A8B4
 
 MtEmber_Exterior_Text_WhatsPasswordAgain:: @ 817A8EE
     .string "Any treasure we find, we haul back\n"
-    .string "to the WAREHOUSE, understood?\p"
+    .string "to the Warehouse, understood?\p"
     .string "…Oh, and what're the passwords?\n"
-    .string "At the ROCKET WAREHOUSE, I mean.$"
+    .string "At the Rocket Warehouse, I mean.$"
 
 MtEmber_Exterior_Text_FirstPasswordGoldeen:: @ 817A970
     .string "What, you forgot the password?\n"
     .string "There're actually two.\p"
-    .string "The first one's “GOLDEEN need\n"
-    .string "log.”\p"
+    .string "The first one's “Radical\n"
+    .string "Konngara.”\p"
     .string "And the second one is…$"
 
 MtEmber_Exterior_Text_SnoopsBeenListeningIn:: @ 817A9E1

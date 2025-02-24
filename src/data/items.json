@@ -833,8 +833,8 @@
       "secondaryId": 0
     },
     {
-      "english": "????????",
-      "itemId": "ITEM_NONE",
+      "english": "----------",
+      "itemId": "ITEM_HYPHENS",
       "price": 0,
       "holdEffect": "HOLD_EFFECT_NONE",
       "holdEffectParam": 0,
@@ -1425,17 +1425,17 @@
       "secondaryId": 0
     },
     {
-      "english": "????????",
-      "itemId": "ITEM_NONE",
-      "price": 0,
+      "english": "Clear Mochi",
+      "itemId": "ITEM_CLEAR_MOCHI",
+      "price": 3000,
       "holdEffect": "HOLD_EFFECT_NONE",
       "holdEffectParam": 0,
-      "description_english": "?????",
+      "description_english": "A curiously flavorless snack.\\nResets a Puppet's Effort, freeing\\nit to be used for other stats.",
       "importance": 0,
       "exitsBagOnUse": 0,
       "pocket": "POCKET_ITEMS",
-      "type": 4,
-      "fieldUseFunc": "FieldUseFunc_OakStopsYou",
+      "type": 1,
+      "fieldUseFunc": "FieldUseFunc_Medicine",
       "battleUsage": 0,
       "battleUseFunc": "NULL",
       "secondaryId": 0
@@ -1590,7 +1590,7 @@
       "price": 2100,
       "holdEffect": "HOLD_EFFECT_NONE",
       "holdEffectParam": 0,
-      "description_english": "A peculiar item that influences the\\nevolution of certain puppets. Smells\\nlike sweet potatoes and fallen leaves.",
+      "description_english": "A peculiar item that influences the\\nevolution of certain puppets. It\\nsmells like sweet potatoes.",
       "importance": 0,
       "exitsBagOnUse": 0,
       "pocket": "POCKET_ITEMS",
@@ -1606,7 +1606,7 @@
       "price": 2100,
       "holdEffect": "HOLD_EFFECT_NONE",
       "holdEffectParam": 0,
-      "description_english": "A peculiar item that influences the\\nevolution of a certain puppet. Records\\nblack magic and disturbing rituals.",
+      "description_english": "A peculiar item that influences the\\nevolution of a certain puppet.\\nTeaches disturbing black magic.",
       "importance": 0,
       "exitsBagOnUse": 0,
       "pocket": "POCKET_ITEMS",
@@ -1638,7 +1638,7 @@
       "price": 2100,
       "holdEffect": "HOLD_EFFECT_NONE",
       "holdEffectParam": 0,
-      "description_english": "A peculiar item that influences the\\nevolution of a certain puppet. The\\nword to describe it escapes you.",
+      "description_english": "A peculiar item that influences the\\nevolution of certain puppets. The\\nword to describe it escapes you.",
       "importance": 0,
       "exitsBagOnUse": 0,
       "pocket": "POCKET_ITEMS",
@@ -2131,7 +2131,7 @@
     {
       "english": "Cheri Berry",
       "itemId": "ITEM_CHERI_BERRY",
-      "price": 20,
+      "price": 500,
       "holdEffect": "HOLD_EFFECT_CURE_PAR",
       "holdEffectParam": 0,
       "description_english": "When held by a Puppet, it will be\\nused in battle to heal paralysis.",
@@ -2147,7 +2147,7 @@
     {
       "english": "Chesto Berry",
       "itemId": "ITEM_CHESTO_BERRY",
-      "price": 20,
+      "price": 500,
       "holdEffect": "HOLD_EFFECT_CURE_SLP",
       "holdEffectParam": 0,
       "description_english": "When held by a Puppet, it will be\\nused in battle to wake up.",
@@ -2163,7 +2163,7 @@
     {
       "english": "Pecha Berry",
       "itemId": "ITEM_PECHA_BERRY",
-      "price": 20,
+      "price": 500,
       "holdEffect": "HOLD_EFFECT_CURE_PSN",
       "holdEffectParam": 0,
       "description_english": "When held by a Puppet, it will be\\nused in battle to cure poison.",
@@ -2179,7 +2179,7 @@
     {
       "english": "Rawst Berry",
       "itemId": "ITEM_RAWST_BERRY",
-      "price": 20,
+      "price": 500,
       "holdEffect": "HOLD_EFFECT_CURE_BRN",
       "holdEffectParam": 0,
       "description_english": "When held by a Puppet, it will be\\nused in battle to heal a burn.",
@@ -2195,7 +2195,7 @@
     {
       "english": "Aspear Berry",
       "itemId": "ITEM_ASPEAR_BERRY",
-      "price": 20,
+      "price": 500,
       "holdEffect": "HOLD_EFFECT_CURE_FRZ",
       "holdEffectParam": 0,
       "description_english": "When held by a Puppet, it will be\\nused in battle for defrosting.",
@@ -2211,7 +2211,7 @@
     {
       "english": "Leppa Berry",
       "itemId": "ITEM_LEPPA_BERRY",
-      "price": 20,
+      "price": 2000,
       "holdEffect": "HOLD_EFFECT_RESTORE_PP",
       "holdEffectParam": 10,
       "description_english": "When held by a Puppet, it will be\\nused in battle to restore 10 PP.",
@@ -2227,7 +2227,7 @@
     {
       "english": "Oran Berry",
       "itemId": "ITEM_ORAN_BERRY",
-      "price": 20,
+      "price": 300,
       "holdEffect": "HOLD_EFFECT_RESTORE_HP",
       "holdEffectParam": 10,
       "description_english": "When held by a Puppet, it will be\\nused in battle to restore 10 HP.",
@@ -2243,7 +2243,7 @@
     {
       "english": "Persim Berry",
       "itemId": "ITEM_PERSIM_BERRY",
-      "price": 20,
+      "price": 500,
       "holdEffect": "HOLD_EFFECT_CURE_CONFUSION",
       "holdEffectParam": 0,
       "description_english": "When held by a Puppet, it will be\\nused in battle to lift confusion.",
@@ -2259,7 +2259,7 @@
     {
       "english": "Lum Berry",
       "itemId": "ITEM_LUM_BERRY",
-      "price": 20,
+      "price": 1000,
       "holdEffect": "HOLD_EFFECT_CURE_STATUS",
       "holdEffectParam": 0,
       "description_english": "When held by a Puppet, it will be\\nused in battle to heal any problem.",
@@ -2275,10 +2275,10 @@
     {
       "english": "Sitrus Berry",
       "itemId": "ITEM_SITRUS_BERRY",
-      "price": 20,
+      "price": 1000,
       "holdEffect": "HOLD_EFFECT_SITRUS",
       "holdEffectParam": 30,
-      "description_english": "When held by a Puppet, it will be\\nused in battle to restore 30 HP.",
+      "description_english": "When held by a Puppet, it will be\\nused in battle to restore 25% HP.",
       "importance": 0,
       "exitsBagOnUse": 0,
       "pocket": "POCKET_BERRY_POUCH",
@@ -2291,7 +2291,7 @@
     {
       "english": "Figy Berry",
       "itemId": "ITEM_FIGY_BERRY",
-      "price": 20,
+      "price": 1250,
       "holdEffect": "HOLD_EFFECT_CONFUSE_SPICY",
       "holdEffectParam": 2,
       "description_english": "A hold item that restores HP but\\nmay cause confusion when used.",
@@ -2307,7 +2307,7 @@
     {
       "english": "Wiki Berry",
       "itemId": "ITEM_WIKI_BERRY",
-      "price": 20,
+      "price": 1250,
       "holdEffect": "HOLD_EFFECT_CONFUSE_DRY",
       "holdEffectParam": 2,
       "description_english": "A hold item that restores HP but\\nmay cause confusion when used.",
@@ -2323,7 +2323,7 @@
     {
       "english": "Mago Berry",
       "itemId": "ITEM_MAGO_BERRY",
-      "price": 20,
+      "price": 1250,
       "holdEffect": "HOLD_EFFECT_CONFUSE_SWEET",
       "holdEffectParam": 2,
       "description_english": "A hold item that restores HP but\\nmay cause confusion when used.",
@@ -2339,7 +2339,7 @@
     {
       "english": "Aguav Berry",
       "itemId": "ITEM_AGUAV_BERRY",
-      "price": 20,
+      "price": 1250,
       "holdEffect": "HOLD_EFFECT_CONFUSE_BITTER",
       "holdEffectParam": 2,
       "description_english": "A hold item that restores HP but\\nmay cause confusion when used.",
@@ -2355,7 +2355,7 @@
     {
       "english": "Iapapa Berry",
       "itemId": "ITEM_IAPAPA_BERRY",
-      "price": 20,
+      "price": 1250,
       "holdEffect": "HOLD_EFFECT_CONFUSE_SOUR",
       "holdEffectParam": 2,
       "description_english": "A hold item that restores HP but\\nmay cause confusion when used.",
@@ -2371,7 +2371,7 @@
     {
       "english": "Occa Berry",
       "itemId": "ITEM_OCCA_BERRY",
-      "price": 20,
+      "price": 1000,
       "holdEffect": "HOLD_EFFECT_RESIST_BERRY",
       "holdEffectParam": "TYPE_FIRE",
       "description_english": "A hold item that halves damage\\nfrom a super-effective Fire hit.",
@@ -2387,7 +2387,7 @@
     {
       "english": "Passho Berry",
       "itemId": "ITEM_PASSHO_BERRY",
-      "price": 20,
+      "price": 1000,
       "holdEffect": "HOLD_EFFECT_RESIST_BERRY",
       "holdEffectParam": "TYPE_WATER",
       "description_english": "A hold item that halves damage\\nfrom a super-effective Water hit.",
@@ -2403,7 +2403,7 @@
     {
       "english": "Wacan Berry",
       "itemId": "ITEM_WACAN_BERRY",
-      "price": 20,
+      "price": 1000,
       "holdEffect": "HOLD_EFFECT_RESIST_BERRY",
       "holdEffectParam": "TYPE_ELECTRIC",
       "description_english": "A hold item that halves damage\\nfrom a super-effective Electric hit.",
@@ -2419,7 +2419,7 @@
     {
       "english": "Rindo Berry",
       "itemId": "ITEM_RINDO_BERRY",
-      "price": 20,
+      "price": 1000,
       "holdEffect": "HOLD_EFFECT_RESIST_BERRY",
       "holdEffectParam": "TYPE_NATURE",
       "description_english": "A hold item that halves damage\\nfrom a super-effective Nature hit.",
@@ -2435,7 +2435,7 @@
     {
       "english": "Yache Berry",
       "itemId": "ITEM_YACHE_BERRY",
-      "price": 20,
+      "price": 1000,
       "holdEffect": "HOLD_EFFECT_RESIST_BERRY",
       "holdEffectParam": "TYPE_ICE",
       "description_english": "A hold item that halves damage\\nfrom a super-effective Ice hit.",
@@ -2451,7 +2451,7 @@
     {
       "english": "Chople Berry",
       "itemId": "ITEM_CHOPLE_BERRY",
-      "price": 20,
+      "price": 1000,
       "holdEffect": "HOLD_EFFECT_RESIST_BERRY",
       "holdEffectParam": "TYPE_FIGHTING",
       "description_english": "A hold item that halves damage\\nfrom a super-effective Fighting hit.",
@@ -2467,7 +2467,7 @@
     {
       "english": "Kebia Berry",
       "itemId": "ITEM_KEBIA_BERRY",
-      "price": 20,
+      "price": 1000,
       "holdEffect": "HOLD_EFFECT_RESIST_BERRY",
       "holdEffectParam": "TYPE_MIASMA",
       "description_english": "A hold item that halves damage\\nfrom a super-effective Miasma hit.",
@@ -2483,7 +2483,7 @@
     {
       "english": "Shuca Berry",
       "itemId": "ITEM_SHUCA_BERRY",
-      "price": 20,
+      "price": 1000,
       "holdEffect": "HOLD_EFFECT_RESIST_BERRY",
       "holdEffectParam": "TYPE_EARTH",
       "description_english": "A hold item that halves damage\\nfrom a super-effective Earth hit.",
@@ -2499,7 +2499,7 @@
     {
       "english": "Coba Berry",
       "itemId": "ITEM_COBA_BERRY",
-      "price": 20,
+      "price": 1000,
       "holdEffect": "HOLD_EFFECT_RESIST_BERRY",
       "holdEffectParam": "TYPE_WIND",
       "description_english": "A hold item that halves damage\\nfrom a super-effective Wind hit.",
@@ -2515,7 +2515,7 @@
     {
       "english": "Payapa Berry",
       "itemId": "ITEM_PAYAPA_BERRY",
-      "price": 20,
+      "price": 1000,
       "holdEffect": "HOLD_EFFECT_RESIST_BERRY",
       "holdEffectParam": "TYPE_REASON",
       "description_english": "A hold item that halves damage\\nfrom a super-effective Reason hit.",
@@ -2531,7 +2531,7 @@
     {
       "english": "Tanga Berry",
       "itemId": "ITEM_TANGA_BERRY",
-      "price": 20,
+      "price": 1000,
       "holdEffect": "HOLD_EFFECT_RESIST_BERRY",
       "holdEffectParam": "TYPE_HEART",
       "description_english": "A hold item that halves damage\\nfrom a super-effective Heart hit.",
@@ -2547,7 +2547,7 @@
     {
       "english": "Charti Berry",
       "itemId": "ITEM_CHARTI_BERRY",
-      "price": 20,
+      "price": 1000,
       "holdEffect": "HOLD_EFFECT_RESIST_BERRY",
       "holdEffectParam": "TYPE_BEAST",
       "description_english": "A hold item that halves damage\\nfrom a super-effective Beast hit.",
@@ -2563,7 +2563,7 @@
     {
       "english": "Kasib Berry",
       "itemId": "ITEM_KASIB_BERRY",
-      "price": 20,
+      "price": 1000,
       "holdEffect": "HOLD_EFFECT_RESIST_BERRY",
       "holdEffectParam": "TYPE_GHOST",
       "description_english": "A hold item that halves damage\\nfrom a super-effective Ghost hit.",
@@ -2579,7 +2579,7 @@
     {
       "english": "Haban Berry",
       "itemId": "ITEM_HABAN_BERRY",
-      "price": 20,
+      "price": 1000,
       "holdEffect": "HOLD_EFFECT_RESIST_BERRY",
       "holdEffectParam": "TYPE_FAITH",
       "description_english": "A hold item that halves damage\\nfrom a super-effective Faith hit.",
@@ -2595,7 +2595,7 @@
     {
       "english": "Colbur Berry",
       "itemId": "ITEM_COLBUR_BERRY",
-      "price": 20,
+      "price": 1000,
       "holdEffect": "HOLD_EFFECT_RESIST_BERRY",
       "holdEffectParam": "TYPE_DARK",
       "description_english": "A hold item that halves damage\\nfrom a super-effective Dark hit.",
@@ -2611,7 +2611,7 @@
     {
       "english": "Babiri Berry",
       "itemId": "ITEM_BABIRI_BERRY",
-      "price": 20,
+      "price": 1000,
       "holdEffect": "HOLD_EFFECT_RESIST_BERRY",
       "holdEffectParam": "TYPE_STEEL",
       "description_english": "A hold item that halves damage\\nfrom a super-effective Steel hit.",
@@ -2627,7 +2627,7 @@
     {
       "english": "Chilan Berry",
       "itemId": "ITEM_CHILAN_BERRY",
-      "price": 20,
+      "price": 1000,
       "holdEffect": "HOLD_EFFECT_RESIST_BERRY",
       "holdEffectParam": "TYPE_NORMAL",
       "description_english": "A hold item that halves damage\\nfrom a Normal-type hit.",
@@ -2643,7 +2643,7 @@
     {
       "english": "Enigma Berry",
       "itemId": "ITEM_ENIGMA_RESIST_BERRY",
-      "price": 20,
+      "price": 1000,
       "holdEffect": "HOLD_EFFECT_RESIST_BERRY",
       "holdEffectParam": "TYPE_ILLUSION",
       "description_english": "A hold item that halves damage\\nfrom an Illusion-type hit.",
@@ -2659,7 +2659,7 @@
     {
       "english": "Durin Berry",
       "itemId": "ITEM_DURIN_BERRY",
-      "price": 20,
+      "price": 1000,
       "holdEffect": "HOLD_EFFECT_NONE",
       "holdEffectParam": 0,
       "description_english": "Can be ground up into a powder as\\nan ingredient for medicine.",
@@ -2675,7 +2675,7 @@
     {
       "english": "Belue Berry",
       "itemId": "ITEM_BELUE_BERRY",
-      "price": 20,
+      "price": 6666,
       "holdEffect": "HOLD_EFFECT_NONE",
       "holdEffectParam": 0,
       "description_english": "Can be ground up into a powder as\\nan ingredient for medicine.",
@@ -2691,7 +2691,7 @@
     {
       "english": "Liechi Berry",
       "itemId": "ITEM_LIECHI_BERRY",
-      "price": 20,
+      "price": 1500,
       "holdEffect": "HOLD_EFFECT_ATTACK_UP",
       "holdEffectParam": 4,
       "description_english": "When held by a Puppet, it raises\\nthe Attack stat in a pinch.",
@@ -2707,7 +2707,7 @@
     {
       "english": "Ganlon Berry",
       "itemId": "ITEM_GANLON_BERRY",
-      "price": 20,
+      "price": 800,
       "holdEffect": "HOLD_EFFECT_DEFENSE_UP",
       "holdEffectParam": 4,
       "description_english": "When held by a Puppet, it raises\\nthe Defense stat in a pinch.",
@@ -2723,7 +2723,7 @@
     {
       "english": "Salac Berry",
       "itemId": "ITEM_SALAC_BERRY",
-      "price": 20,
+      "price": 1500,
       "holdEffect": "HOLD_EFFECT_SPEED_UP",
       "holdEffectParam": 4,
       "description_english": "When held by a Puppet, it raises\\nthe Speed stat in a pinch.",
@@ -2739,7 +2739,7 @@
     {
       "english": "Petaya Berry",
       "itemId": "ITEM_PETAYA_BERRY",
-      "price": 20,
+      "price": 1500,
       "holdEffect": "HOLD_EFFECT_SP_ATTACK_UP",
       "holdEffectParam": 4,
       "description_english": "When held by a Puppet, it raises\\nthe Sp. Atk stat in a pinch.",
@@ -2755,7 +2755,7 @@
     {
       "english": "Apicot Berry",
       "itemId": "ITEM_APICOT_BERRY",
-      "price": 20,
+      "price": 800,
       "holdEffect": "HOLD_EFFECT_SP_DEFENSE_UP",
       "holdEffectParam": 4,
       "description_english": "When held by a Puppet, it raises\\nthe Sp. Def stat in a pinch.",
@@ -2771,7 +2771,7 @@
     {
       "english": "Lansat Berry",
       "itemId": "ITEM_LANSAT_BERRY",
-      "price": 20,
+      "price": 800,
       "holdEffect": "HOLD_EFFECT_CRITICAL_UP",
       "holdEffectParam": 4,
       "description_english": "When held by a Puppet, it raises\\nthe critical-hit ratio in a pinch.",
@@ -2787,7 +2787,7 @@
     {
       "english": "Starf Berry",
       "itemId": "ITEM_STARF_BERRY",
-      "price": 20,
+      "price": 1000,
       "holdEffect": "HOLD_EFFECT_RANDOM_STAT_UP",
       "holdEffectParam": 4,
       "description_english": "When held by a Puppet, it sharply\\nraises one stat in a pinch.",
@@ -3011,7 +3011,7 @@
     {
       "english": "Blazer",
       "itemId": "ITEM_BLAZER",
-      "price": 100,
+      "price": 3000,
       "holdEffect": "HOLD_EFFECT_HEART_POWER",
       "holdEffectParam": 20,
       "description_english": "A costume to be worn by a Puppet.\\nA matching skirt and jacket that\\nboosts Heart-type moves by 20%.",
@@ -3187,7 +3187,7 @@
     {
       "english": "Maid Uniform",
       "itemId": "ITEM_MAID_UNIFORM",
-      "price": 100,
+      "price": 3000,
       "holdEffect": "HOLD_EFFECT_STEEL_POWER",
       "holdEffectParam": 20,
       "description_english": "A costume to be worn by a puppet.\\nA maid's signature outfit, it\\nboosts Steel-type moves by 20%.",
@@ -3251,7 +3251,7 @@
     {
       "english": "Gym Sweater",
       "itemId": "ITEM_GYM_SWEATER",
-      "price": 100,
+      "price": 3000,
       "holdEffect": "HOLD_EFFECT_EARTH_POWER",
       "holdEffectParam": 20,
       "description_english": "A costume to be worn by a Puppet.\\nA loose, athletic uniform that\\nboosts Earth-type moves by 20%.",
@@ -3267,7 +3267,7 @@
     {
       "english": "Bunny Suit",
       "itemId": "ITEM_BUNNY_SUIT",
-      "price": 100,
+      "price": 3000,
       "holdEffect": "HOLD_EFFECT_BEAST_POWER",
       "holdEffectParam": 20,
       "description_english": "A costume to be worn by a Puppet.\\nA notorious showgirl outfit, it\\nboosts Beast-type moves by 20%.",
@@ -3283,7 +3283,7 @@
     {
       "english": "Camouflage",
       "itemId": "ITEM_CAMOUFLAGE",
-      "price": 100,
+      "price": 3000,
       "holdEffect": "HOLD_EFFECT_GRASS_POWER",
       "holdEffectParam": 20,
       "description_english": "A costume to be worn by a Puppet.\\nFor covert woodland operations, it\\nboosts Nature-type moves by 20%.",
@@ -3299,7 +3299,7 @@
     {
       "english": "Mistress",
       "itemId": "ITEM_MISTRESS",
-      "price": 100,
+      "price": 3000,
       "holdEffect": "HOLD_EFFECT_DARK_POWER",
       "holdEffectParam": 20,
       "description_english": "A costume to be worn by a Puppet.\\nQuestionable attire in public, it\\nboosts Dark-type moves by 20%.",
@@ -3315,7 +3315,7 @@
     {
       "english": "China Dress",
       "itemId": "ITEM_CHINA_DRESS",
-      "price": 100,
+      "price": 3000,
       "holdEffect": "HOLD_EFFECT_FIGHTING_POWER",
       "holdEffectParam": 20,
       "description_english": "A costume to be worn by a Puppet.\\nA traditional Chinese red, it\\nboosts Fighting-type moves by 20%.",
@@ -3331,7 +3331,7 @@
     {
       "english": "Ninja Suit",
       "itemId": "ITEM_NINJA_SUIT",
-      "price": 100,
+      "price": 3000,
       "holdEffect": "HOLD_EFFECT_ELECTRIC_POWER",
       "holdEffectParam": 20,
       "description_english": "A costume to be worn by a Puppet.\\nFor covert urban operations, it\\nboosts Electric-type moves by 20%.",
@@ -3347,7 +3347,7 @@
     {
       "english": "Swimsuit",
       "itemId": "ITEM_SWIMSUIT",
-      "price": 100,
+      "price": 3000,
       "holdEffect": "HOLD_EFFECT_WATER_POWER",
       "holdEffectParam": 20,
       "description_english": "A costume to be worn by a Puppet.\\nPractical and conservative swimwear, it\\nboosts Water-type moves by 20%.",
@@ -3363,7 +3363,7 @@
     {
       "english": "Stewardess",
       "itemId": "ITEM_STEWARDESS",
-      "price": 100,
+      "price": 3000,
       "holdEffect": "HOLD_EFFECT_WIND_POWER",
       "holdEffectParam": 20,
       "description_english": "A costume to be worn by a Puppet.\\nA flight attendant's uniform, it\\nboosts Wind-type moves by 20%.",
@@ -3379,7 +3379,7 @@
     {
       "english": "Nurse Outfit",
       "itemId": "ITEM_NURSE_OUTFIT",
-      "price": 100,
+      "price": 3000,
       "holdEffect": "HOLD_EFFECT_MIASMA_POWER",
       "holdEffectParam": 20,
       "description_english": "A costume to be worn by a Puppet.\\nFor those sworn to do no harm, it\\nboosts Miasma-type moves by 20%.",
@@ -3395,7 +3395,7 @@
     {
       "english": "Thick Fur",
       "itemId": "ITEM_THICK_FUR",
-      "price": 100,
+      "price": 3000,
       "holdEffect": "HOLD_EFFECT_ICE_POWER",
       "holdEffectParam": 20,
       "description_english": "A costume to be worn by a Puppet.\\nComfy but bulky winter garb, it\\nboosts Ice-type moves by 20%.",
@@ -3411,7 +3411,7 @@
     {
       "english": "Kimono",
       "itemId": "ITEM_KIMONO",
-      "price": 100,
+      "price": 3000,
       "holdEffect": "HOLD_EFFECT_GHOST_POWER",
       "holdEffectParam": 20,
       "description_english": "A costume to be worn by a Puppet.\\nWhite and pale as a bedsheet, it\\nboosts Ghost-type moves by 20%.",
@@ -3427,7 +3427,7 @@
     {
       "english": "Witch's Robe",
       "itemId": "ITEM_WITCHS_ROBE",
-      "price": 100,
+      "price": 3000,
       "holdEffect": "HOLD_EFFECT_REASON_POWER",
       "holdEffectParam": 20,
       "description_english": "A costume to be worn by a Puppet.\\nA traditional witch garb, in purple.\\nBoosts Reason-type moves by 20%.",
@@ -3443,7 +3443,7 @@
     {
       "english": "Gothic Dress",
       "itemId": "ITEM_GOTHIC_DRESS",
-      "price": 9800,
+      "price": 3000,
       "holdEffect": "HOLD_EFFECT_FIRE_POWER",
       "holdEffectParam": 20,
       "description_english": "A costume to be worn by a Puppet.\\nA fashionable and frilly dress, it\\nboosts Fire-type moves by 20%.",
@@ -3459,7 +3459,7 @@
     {
       "english": "Miko Uniform",
       "itemId": "ITEM_MIKO_UNIFORM",
-      "price": 100,
+      "price": 3000,
       "holdEffect": "HOLD_EFFECT_FAITH_POWER",
       "holdEffectParam": 20,
       "description_english": "A costume to be worn by a Puppet.\\nA classic shrine maiden's outfit, it\\nboosts Faith-type moves by 20%.",
@@ -3475,7 +3475,7 @@
     {
       "english": "Bridal Gown",
       "itemId": "ITEM_BRIDAL_GOWN",
-      "price": 100,
+      "price": 9999,
       "holdEffect": "HOLD_EFFECT_ILLUSION_POWER",
       "holdEffectParam": 20,
       "description_english": "A costume to be worn by a Puppet.\\nPrecious. On non-fateful days, it\\nboosts Illusion-type moves by 20%.",
@@ -3491,7 +3491,7 @@
     {
       "english": "Bloomers",
       "itemId": "ITEM_BLOOMERS",
-      "price": 100,
+      "price": 200,
       "holdEffect": "HOLD_EFFECT_NORMAL_POWER",
       "holdEffectParam": 20,
       "description_english": "An item to be worn by a Puppet.\\nIt's just a pair of bloomers...\\nBoosts Normal-type moves by 20%.",
@@ -3590,7 +3590,7 @@
       "price": 500,
       "holdEffect": "HOLD_EFFECT_THICK_CLUB",
       "holdEffectParam": 0,
-      "description_english": "A plain, horribly cursed ribbon\\nto be held by any Hina Puppet.\\nIt doubles her Attack stat.",
+      "description_english": "A plain, horribly cursed ribbon\\nto be held by a normal Hina.\\nIt doubles her Attack stat.",
       "importance": 0,
       "exitsBagOnUse": 0,
       "pocket": "POCKET_ITEMS",
@@ -3718,7 +3718,7 @@
       "price": 2000,
       "holdEffect": "HOLD_EFFECT_OLD_PLATE",
       "holdEffectParam": 10,
-      "description_english": "An old cracked dinner plate.\\nWhen held by a puppet, it boosts\\nthe power of all moves by 10%.",
+      "description_english": "An old cracked dinner plate.\\nWhen held by a Puppet, it boosts\\nthe power of all moves by 10%.",
       "importance": 0,
       "exitsBagOnUse": 0,
       "pocket": "POCKET_ITEMS",
@@ -3729,12 +3729,12 @@
       "secondaryId": 0
     },
     {
-      "english": "????????",
-      "itemId": "ITEM_NONE",
-      "price": 0,
-      "holdEffect": "HOLD_EFFECT_NONE",
+      "english": "Scarlet Rock",
+      "itemId": "ITEM_SCARLET_ROCK",
+      "price": 2000,
+      "holdEffect": "HOLD_EFFECT_SCARLET_ROCK",
       "holdEffectParam": 0,
-      "description_english": "?????",
+      "description_english": "A brittle crimson stone.\\nWhen held by a Puppet, it extends\\nthe duration of weather changes.",
       "importance": 0,
       "exitsBagOnUse": 0,
       "pocket": "POCKET_ITEMS",
@@ -3745,12 +3745,12 @@
       "secondaryId": 0
     },
     {
-      "english": "????????",
-      "itemId": "ITEM_NONE",
-      "price": 0,
-      "holdEffect": "HOLD_EFFECT_NONE",
-      "holdEffectParam": 0,
-      "description_english": "?????",
+      "english": "Roukanken",
+      "itemId": "ITEM_ROUKANKEN",
+      "price": 2000,
+      "holdEffect": "HOLD_EFFECT_ROUKANKEN",
+      "holdEffectParam": 20,
+      "description_english": "A sword for Youmu and Youki.\\nWhen held by either, it boosts\\nGhost and Steel moves by 20%.",
       "importance": 0,
       "exitsBagOnUse": 0,
       "pocket": "POCKET_ITEMS",
@@ -3761,12 +3761,12 @@
       "secondaryId": 0
     },
     {
-      "english": "????????",
-      "itemId": "ITEM_NONE",
-      "price": 0,
-      "holdEffect": "HOLD_EFFECT_NONE",
-      "holdEffectParam": 0,
-      "description_english": "?????",
+      "english": "Wide Lens",
+      "itemId": "ITEM_WIDE_LENS",
+      "price": 2000,
+      "holdEffect": "HOLD_EFFECT_WIDE_LENS",
+      "holdEffectParam": 10,
+      "description_english": "An item to be held by a Puppet.\\nIt boosts the accuracy of moves by\\n10% of the base value.",
       "importance": 0,
       "exitsBagOnUse": 0,
       "pocket": "POCKET_ITEMS",
@@ -3777,12 +3777,12 @@
       "secondaryId": 0
     },
     {
-      "english": "????????",
-      "itemId": "ITEM_NONE",
-      "price": 0,
-      "holdEffect": "HOLD_EFFECT_NONE",
+      "english": "Light Clay",
+      "itemId": "ITEM_LIGHT_CLAY",
+      "price": 2000,
+      "holdEffect": "HOLD_EFFECT_LIGHT_CLAY",
       "holdEffectParam": 0,
-      "description_english": "?????",
+      "description_english": "An item to be held by a Puppet.\\nIt extends the duration of Reflect\\nand Light Screen by 3 turns.",
       "importance": 0,
       "exitsBagOnUse": 0,
       "pocket": "POCKET_ITEMS",

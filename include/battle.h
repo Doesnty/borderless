@@ -260,6 +260,8 @@ struct SideTimer
     /*0x0A*/ u8 spikesAmount;
     /*0x0B*/ u8 tailwindTimer;
     /*0x0C*/ u8 healingWish;
+	/*0x0D*/ u8 lastWish;
+	/*0x0E*/ u16 lastWishStrength;
 };
 
 extern struct SideTimer gSideTimers[];
@@ -271,6 +273,7 @@ struct WishFutureKnock
     s32 futureSightDmg[MAX_BATTLERS_COUNT];
     u16 futureSightMove[MAX_BATTLERS_COUNT];
     u8 wishCounter[MAX_BATTLERS_COUNT];
+	u16 wishStrength[MAX_BATTLERS_COUNT];
     u8 wishMonId[MAX_BATTLERS_COUNT];
     u8 weatherDuration;
     u8 trickRoomDuration;

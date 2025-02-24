@@ -4225,7 +4225,7 @@ static void sub_8124E48(void)
     {
         GiveMoveToMon(&gPlayerParty[gPartyMenu.slotId], ItemIdToBattleMoveId(gSpecialVar_ItemId));
         AdjustFriendship(&gPlayerParty[gPartyMenu.slotId], FRIENDSHIP_EVENT_LEARN_TMHM);
-        if (gSpecialVar_ItemId <= ITEM_TM50)
+        if (gSpecialVar_ItemId < ITEM_TM01)
             RemoveBagItem(gSpecialVar_ItemId, 1);
         SetMainCallback2(gPartyMenu.exitCallback);
     }
@@ -4247,7 +4247,7 @@ static void sub_8124EFC(void)
         SetMonMoveSlot(mon, ItemIdToBattleMoveId(gSpecialVar_ItemId), moveIdx);
         AdjustFriendship(mon, FRIENDSHIP_EVENT_LEARN_TMHM);
         ItemUse_SetQuestLogEvent(QL_EVENT_USED_ITEM, mon, gSpecialVar_ItemId, move);
-        if (gSpecialVar_ItemId <= ITEM_TM50)
+        if (gSpecialVar_ItemId <= ITEM_TM01)
             RemoveBagItem(gSpecialVar_ItemId, 1);
         SetMainCallback2(gPartyMenu.exitCallback);
     }
@@ -4340,6 +4340,9 @@ static void GetMedicineItemEffectMessage(u16 item)
     case ITEM_EFFECT_HEAL_PP:
         StringExpandPlaceholders(gStringVar4, gText_PPWasRestored);
         break;
+	case ITEM_EFFECT_EFFORT_CLEAR:
+        StringExpandPlaceholders(gStringVar4, gText_EffortWasReset);
+		break;
     default:
         StringExpandPlaceholders(gStringVar4, gText_WontHaveEffect);
         break;
@@ -4464,7 +4467,15 @@ void ItemUseCB_MedicineStep(u8 taskId, TaskFunc func)
         GetMedicineItemEffectMessage(item);
         DisplayPartyMenuMessage(gStringVar4, TRUE);
         ScheduleBgCopyTilemapToVram(2);
-        gTasks[taskId].func = func;
+		
+		if (CheckBagHasItem(gSpecialVar_ItemId, 1) && gPartyMenu.menuType != PARTY_MENU_TYPE_IN_BATTLE)
+		{
+			gTasks[taskId].func = Task_ReturnToChooseMonAfterText;
+		}
+		else
+		{
+			gTasks[taskId].func = func;
+		}
     }
 }
 
@@ -4475,7 +4486,15 @@ static void Task_DisplayHPRestoredMessage(u8 taskId)
     DisplayPartyMenuMessage(gStringVar4, FALSE);
     ScheduleBgCopyTilemapToVram(2);
     HandleBattleLowHpMusicChange();
-    gTasks[taskId].func = Task_ClosePartyMenuAfterText;
+	
+	if (CheckBagHasItem(gSpecialVar_ItemId, 1) && gPartyMenu.menuType != PARTY_MENU_TYPE_IN_BATTLE)
+	{
+        gTasks[taskId].func = Task_ReturnToChooseMonAfterText;
+	}
+	else
+	{
+		gTasks[taskId].func = Task_ClosePartyMenuAfterText;
+	}
 }
 
 static void Task_ClosePartyMenuAfterText(u8 taskId)
@@ -5445,6 +5464,8 @@ u8 GetItemEffectType(u16 item)
         return ITEM_EFFECT_PP_MAX;
     else if (itemEffect[4] & (ITEM4_HEAL_PP_ALL | ITEM4_HEAL_PP_ONE))
         return ITEM_EFFECT_HEAL_PP;
+	else if (itemEffect[5] & ITEM5_EFFORT_RESET)
+		return ITEM_EFFECT_EFFORT_CLEAR;
     else
         return ITEM_EFFECT_NONE;
 }

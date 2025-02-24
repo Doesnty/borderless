@@ -116,10 +116,7 @@ ViridianCity_EventScript_TutorialOldMan:: @ 81659F6
 	end
 
 ViridianCity_EventScript_AskIfTeachyTVHelpful:: @ 8165A23
-	msgbox ViridianCity_Text_HowsTeachyTVHelping, MSGBOX_YESNO
-	compare VAR_RESULT, NO
-	goto_if_eq ViridianCity_EventScript_TeachyTVNotHelpful
-	msgbox ViridianCity_Text_MyGrandsonOnTheShow
+	msgbox ViridianCity_Text_HowsTeachyTVHelping
 	release
 	end
 

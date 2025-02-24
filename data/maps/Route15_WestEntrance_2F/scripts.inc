@@ -6,11 +6,11 @@ Route15_WestEntrance_2F_MapScripts:: @ 8170092
 Route15_WestEntrance_2F_EventScript_LeftBinoculars:: @ 8170093
 	lockall
 	msgbox Route15_WestEntrance_2F_Text_LargeShiningBird
-	drawmonpic SPECIES_ARTICUNO, 10, 3
+	drawmonpic SPECIES_NAMAZU, 10, 3
 	delay 20
 	waitbuttonpress
 	erasemonpic
-	setvar VAR_0x8004, SPECIES_ARTICUNO
+	setvar VAR_0x8004, SPECIES_NAMAZU
 	special SetSeenMon
 	releaseall
 	end

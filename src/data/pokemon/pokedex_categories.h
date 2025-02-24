@@ -38,7 +38,7 @@ static const u16 sDexCategory_EOSD_Page6[] = {
 static const u16 sDexCategory_EOSD_Page7[] = {
 	SPECIES_CKOAKUMA,
 	SPECIES_KOAKUMA,
-	SPECIES_PATCHOULI,
+	SPECIES_HKOAKUMA,
 };
 
 static const u16 sDexCategory_EOSD_Page8[] = {

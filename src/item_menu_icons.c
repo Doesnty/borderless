@@ -256,7 +256,7 @@ static const void *const sItemIconGfxPtrs[][2] = {
     {gFile_graphics_items_icons_repel_sheet, gFile_graphics_items_icon_palettes_repel_palette},
     {gFile_graphics_items_icons_ability_capsule_sheet, gFile_graphics_items_icon_palettes_ability_capsule_palette},
     {gFile_graphics_items_icons_dream_capsule_sheet, gFile_graphics_items_icon_palettes_dream_capsule_palette},
-    {gFile_graphics_items_icons_question_mark_sheet, gFile_graphics_items_icon_palettes_question_mark_palette},
+    {gFile_graphics_items_icons_clear_mochi_sheet, gFile_graphics_items_icon_palettes_lucky_egg_palette},
     {gFile_graphics_items_icons_question_mark_sheet, gFile_graphics_items_icon_palettes_question_mark_palette},
     {gFile_graphics_items_icons_question_mark_sheet, gFile_graphics_items_icon_palettes_question_mark_palette},
     {gFile_graphics_items_icons_question_mark_sheet, gFile_graphics_items_icon_palettes_question_mark_palette},
@@ -400,10 +400,10 @@ static const void *const sItemIconGfxPtrs[][2] = {
     {gFile_graphics_items_icons_question_mark_sheet, gFile_graphics_items_icon_palettes_question_mark_palette},
     {gFile_graphics_items_icons_question_mark_sheet, gFile_graphics_items_icon_palettes_question_mark_palette},
     {gFile_graphics_items_icons_old_plate_sheet, gFile_graphics_items_icon_palettes_pearl_palette},
-    {gFile_graphics_items_icons_question_mark_sheet, gFile_graphics_items_icon_palettes_question_mark_palette},
-    {gFile_graphics_items_icons_question_mark_sheet, gFile_graphics_items_icon_palettes_question_mark_palette},
-    {gFile_graphics_items_icons_question_mark_sheet, gFile_graphics_items_icon_palettes_question_mark_palette},
-    {gFile_graphics_items_icons_question_mark_sheet, gFile_graphics_items_icon_palettes_question_mark_palette},
+    {gFile_graphics_items_icons_scarlet_rock_sheet, gFile_graphics_items_icon_palettes_scarlet_rock_palette},
+    {gFile_graphics_items_icons_roukanken_sheet, gFile_graphics_items_icon_palettes_roukanken_palette},
+    {gFile_graphics_items_icons_wide_lens_sheet, gFile_graphics_items_icon_palettes_wide_lens_palette},
+    {gFile_graphics_items_icons_light_clay_sheet, gFile_graphics_items_icon_palettes_light_clay_palette},
     {gFile_graphics_items_icons_question_mark_sheet, gFile_graphics_items_icon_palettes_question_mark_palette},
     {gFile_graphics_items_icons_question_mark_sheet, gFile_graphics_items_icon_palettes_question_mark_palette},
     {gFile_graphics_items_icons_question_mark_sheet, gFile_graphics_items_icon_palettes_question_mark_palette},
@@ -456,87 +456,87 @@ static const void *const sItemIconGfxPtrs[][2] = {
     {gFile_graphics_items_icons_root_fossil_sheet, gFile_graphics_items_icon_palettes_hoenn_fossil_palette},
     {gFile_graphics_items_icons_claw_fossil_sheet, gFile_graphics_items_icon_palettes_hoenn_fossil_palette},
     {gFile_graphics_items_icons_devon_scope_sheet, gFile_graphics_items_icon_palettes_devon_scope_palette},
-    {gFile_graphics_items_icons_tm_sheet, gFile_graphics_items_icon_palettes_fighting_tm_hm_palette},
-    {gFile_graphics_items_icons_tm_sheet, gFile_graphics_items_icon_palettes_dragon_tm_hm_palette},
-    {gFile_graphics_items_icons_tm_sheet, gFile_graphics_items_icon_palettes_water_tm_hm_palette},
-    {gFile_graphics_items_icons_tm_sheet, gFile_graphics_items_icon_palettes_psychic_tm_hm_palette},
-    {gFile_graphics_items_icons_tm_sheet, gFile_graphics_items_icon_palettes_normal_tm_hm_palette},
-    {gFile_graphics_items_icons_tm_sheet, gFile_graphics_items_icon_palettes_poison_tm_hm_palette},
-    {gFile_graphics_items_icons_tm_sheet, gFile_graphics_items_icon_palettes_ice_tm_hm_palette},
-    {gFile_graphics_items_icons_tm_sheet, gFile_graphics_items_icon_palettes_fighting_tm_hm_palette},
-    {gFile_graphics_items_icons_tm_sheet, gFile_graphics_items_icon_palettes_grass_tm_hm_palette},
-    {gFile_graphics_items_icons_tm_sheet, gFile_graphics_items_icon_palettes_normal_tm_hm_palette},
-    {gFile_graphics_items_icons_tm_sheet, gFile_graphics_items_icon_palettes_fire_tm_hm_palette},
-    {gFile_graphics_items_icons_tm_sheet, gFile_graphics_items_icon_palettes_dark_tm_hm_palette},
-    {gFile_graphics_items_icons_tm_sheet, gFile_graphics_items_icon_palettes_ice_tm_hm_palette},
-    {gFile_graphics_items_icons_tm_sheet, gFile_graphics_items_icon_palettes_ice_tm_hm_palette},
-    {gFile_graphics_items_icons_tm_sheet, gFile_graphics_items_icon_palettes_normal_tm_hm_palette},
-    {gFile_graphics_items_icons_tm_sheet, gFile_graphics_items_icon_palettes_psychic_tm_hm_palette},
-    {gFile_graphics_items_icons_tm_sheet, gFile_graphics_items_icon_palettes_normal_tm_hm_palette},
-    {gFile_graphics_items_icons_tm_sheet, gFile_graphics_items_icon_palettes_water_tm_hm_palette},
-    {gFile_graphics_items_icons_tm_sheet, gFile_graphics_items_icon_palettes_grass_tm_hm_palette},
-    {gFile_graphics_items_icons_tm_sheet, gFile_graphics_items_icon_palettes_normal_tm_hm_palette},
-    {gFile_graphics_items_icons_tm_sheet, gFile_graphics_items_icon_palettes_normal_tm_hm_palette},
-    {gFile_graphics_items_icons_tm_sheet, gFile_graphics_items_icon_palettes_grass_tm_hm_palette},
-    {gFile_graphics_items_icons_tm_sheet, gFile_graphics_items_icon_palettes_steel_tm_hm_palette},
-    {gFile_graphics_items_icons_tm_sheet, gFile_graphics_items_icon_palettes_electric_tm_hm_palette},
-    {gFile_graphics_items_icons_tm_sheet, gFile_graphics_items_icon_palettes_electric_tm_hm_palette},
-    {gFile_graphics_items_icons_tm_sheet, gFile_graphics_items_icon_palettes_ground_tm_hm_palette},
-    {gFile_graphics_items_icons_tm_sheet, gFile_graphics_items_icon_palettes_normal_tm_hm_palette},
-    {gFile_graphics_items_icons_tm_sheet, gFile_graphics_items_icon_palettes_ground_tm_hm_palette},
-    {gFile_graphics_items_icons_tm_sheet, gFile_graphics_items_icon_palettes_psychic_tm_hm_palette},
-    {gFile_graphics_items_icons_tm_sheet, gFile_graphics_items_icon_palettes_ghost_tm_hm_palette},
-    {gFile_graphics_items_icons_tm_sheet, gFile_graphics_items_icon_palettes_fighting_tm_hm_palette},
-    {gFile_graphics_items_icons_tm_sheet, gFile_graphics_items_icon_palettes_normal_tm_hm_palette},
-    {gFile_graphics_items_icons_tm_sheet, gFile_graphics_items_icon_palettes_psychic_tm_hm_palette},
-    {gFile_graphics_items_icons_tm_sheet, gFile_graphics_items_icon_palettes_electric_tm_hm_palette},
-    {gFile_graphics_items_icons_tm_sheet, gFile_graphics_items_icon_palettes_fire_tm_hm_palette},
-    {gFile_graphics_items_icons_tm_sheet, gFile_graphics_items_icon_palettes_poison_tm_hm_palette},
-    {gFile_graphics_items_icons_tm_sheet, gFile_graphics_items_icon_palettes_rock_tm_hm_palette},
-    {gFile_graphics_items_icons_tm_sheet, gFile_graphics_items_icon_palettes_fire_tm_hm_palette},
-    {gFile_graphics_items_icons_tm_sheet, gFile_graphics_items_icon_palettes_rock_tm_hm_palette},
-    {gFile_graphics_items_icons_tm_sheet, gFile_graphics_items_icon_palettes_flying_tm_hm_palette},
-    {gFile_graphics_items_icons_tm_sheet, gFile_graphics_items_icon_palettes_dark_tm_hm_palette},
-    {gFile_graphics_items_icons_tm_sheet, gFile_graphics_items_icon_palettes_normal_tm_hm_palette},
-    {gFile_graphics_items_icons_tm_sheet, gFile_graphics_items_icon_palettes_normal_tm_hm_palette},
-    {gFile_graphics_items_icons_tm_sheet, gFile_graphics_items_icon_palettes_psychic_tm_hm_palette},
-    {gFile_graphics_items_icons_tm_sheet, gFile_graphics_items_icon_palettes_normal_tm_hm_palette},
-    {gFile_graphics_items_icons_tm_sheet, gFile_graphics_items_icon_palettes_dark_tm_hm_palette},
-    {gFile_graphics_items_icons_tm_sheet, gFile_graphics_items_icon_palettes_steel_tm_hm_palette},
-    {gFile_graphics_items_icons_tm_sheet, gFile_graphics_items_icon_palettes_psychic_tm_hm_palette},
-    {gFile_graphics_items_icons_tm_sheet, gFile_graphics_items_icon_palettes_dark_tm_hm_palette},
-    {gFile_graphics_items_icons_tm_sheet, gFile_graphics_items_icon_palettes_fire_tm_hm_palette},
-    {gFile_graphics_items_icons_tm_sheet, gFile_graphics_items_icon_palettes_water_tm_hm_palette},
-    {gFile_graphics_items_icons_tm_sheet, gFile_graphics_items_icon_palettes_water_tm_hm_palette},
-    {gFile_graphics_items_icons_tm_sheet, gFile_graphics_items_icon_palettes_water_tm_hm_palette},
-    {gFile_graphics_items_icons_tm_sheet, gFile_graphics_items_icon_palettes_water_tm_hm_palette},
-    {gFile_graphics_items_icons_tm_sheet, gFile_graphics_items_icon_palettes_water_tm_hm_palette},
-    {gFile_graphics_items_icons_tm_sheet, gFile_graphics_items_icon_palettes_water_tm_hm_palette},
-    {gFile_graphics_items_icons_tm_sheet, gFile_graphics_items_icon_palettes_water_tm_hm_palette},
-    {gFile_graphics_items_icons_tm_sheet, gFile_graphics_items_icon_palettes_water_tm_hm_palette},
-    {gFile_graphics_items_icons_tm_sheet, gFile_graphics_items_icon_palettes_water_tm_hm_palette},
-    {gFile_graphics_items_icons_tm_sheet, gFile_graphics_items_icon_palettes_water_tm_hm_palette},
-    {gFile_graphics_items_icons_tm_sheet, gFile_graphics_items_icon_palettes_water_tm_hm_palette},
-    {gFile_graphics_items_icons_tm_sheet, gFile_graphics_items_icon_palettes_water_tm_hm_palette},
-    {gFile_graphics_items_icons_tm_sheet, gFile_graphics_items_icon_palettes_water_tm_hm_palette},
-    {gFile_graphics_items_icons_tm_sheet, gFile_graphics_items_icon_palettes_water_tm_hm_palette},
-    {gFile_graphics_items_icons_tm_sheet, gFile_graphics_items_icon_palettes_water_tm_hm_palette},
-    {gFile_graphics_items_icons_tm_sheet, gFile_graphics_items_icon_palettes_water_tm_hm_palette},
-    {gFile_graphics_items_icons_tm_sheet, gFile_graphics_items_icon_palettes_water_tm_hm_palette},
-    {gFile_graphics_items_icons_tm_sheet, gFile_graphics_items_icon_palettes_water_tm_hm_palette},
-    {gFile_graphics_items_icons_tm_sheet, gFile_graphics_items_icon_palettes_water_tm_hm_palette},
-    {gFile_graphics_items_icons_tm_sheet, gFile_graphics_items_icon_palettes_water_tm_hm_palette},
-    {gFile_graphics_items_icons_tm_sheet, gFile_graphics_items_icon_palettes_water_tm_hm_palette},
-    {gFile_graphics_items_icons_tm_sheet, gFile_graphics_items_icon_palettes_water_tm_hm_palette},
-    {gFile_graphics_items_icons_tm_sheet, gFile_graphics_items_icon_palettes_water_tm_hm_palette},
-    {gFile_graphics_items_icons_tm_sheet, gFile_graphics_items_icon_palettes_water_tm_hm_palette},
-    {gFile_graphics_items_icons_tm_sheet, gFile_graphics_items_icon_palettes_water_tm_hm_palette},
-    {gFile_graphics_items_icons_tm_sheet, gFile_graphics_items_icon_palettes_water_tm_hm_palette},
-    {gFile_graphics_items_icons_tm_sheet, gFile_graphics_items_icon_palettes_water_tm_hm_palette},
-    {gFile_graphics_items_icons_tm_sheet, gFile_graphics_items_icon_palettes_water_tm_hm_palette},
-    {gFile_graphics_items_icons_tm_sheet, gFile_graphics_items_icon_palettes_water_tm_hm_palette},
-    {gFile_graphics_items_icons_tm_sheet, gFile_graphics_items_icon_palettes_water_tm_hm_palette},
-    {gFile_graphics_items_icons_tm_sheet, gFile_graphics_items_icon_palettes_normal_tm_hm_palette},
+    {gFile_graphics_items_icons_tm_sheet, gFile_graphics_items_icon_palettes_fighting_tm_hm_palette}, // focus punch
+    {gFile_graphics_items_icons_tm_sheet, gFile_graphics_items_icon_palettes_dark_tm_hm_palette}, // frustration
+    {gFile_graphics_items_icons_tm_sheet, gFile_graphics_items_icon_palettes_water_tm_hm_palette}, // water pulse
+    {gFile_graphics_items_icons_tm_sheet, gFile_graphics_items_icon_palettes_faith_tm_hm_palette}, // calm mind
+    {gFile_graphics_items_icons_tm_sheet, gFile_graphics_items_icon_palettes_rock_tm_hm_palette}, // roar
+    {gFile_graphics_items_icons_tm_sheet, gFile_graphics_items_icon_palettes_poison_tm_hm_palette}, // toxic
+    {gFile_graphics_items_icons_tm_sheet, gFile_graphics_items_icon_palettes_flying_tm_hm_palette}, // razor wind
+    {gFile_graphics_items_icons_tm_sheet, gFile_graphics_items_icon_palettes_ghost_tm_hm_palette}, // curse
+    {gFile_graphics_items_icons_tm_sheet, gFile_graphics_items_icon_palettes_faith_tm_hm_palette}, // decision
+    {gFile_graphics_items_icons_tm_sheet, gFile_graphics_items_icon_palettes_poison_tm_hm_palette}, // poison jab
+    {gFile_graphics_items_icons_tm_sheet, gFile_graphics_items_icon_palettes_fire_tm_hm_palette}, // sunny day
+    {gFile_graphics_items_icons_tm_sheet, gFile_graphics_items_icon_palettes_dark_tm_hm_palette}, // taunt
+    {gFile_graphics_items_icons_tm_sheet, gFile_graphics_items_icon_palettes_ice_tm_hm_palette}, // ice beam
+    {gFile_graphics_items_icons_tm_sheet, gFile_graphics_items_icon_palettes_ice_tm_hm_palette}, // blizzard
+    {gFile_graphics_items_icons_tm_sheet, gFile_graphics_items_icon_palettes_steel_tm_hm_palette}, // sonicboom
+    {gFile_graphics_items_icons_tm_sheet, gFile_graphics_items_icon_palettes_psychic_tm_hm_palette}, // light screen
+    {gFile_graphics_items_icons_tm_sheet, gFile_graphics_items_icon_palettes_normal_tm_hm_palette}, // detect
+    {gFile_graphics_items_icons_tm_sheet, gFile_graphics_items_icon_palettes_water_tm_hm_palette}, // rain dance
+    {gFile_graphics_items_icons_tm_sheet, gFile_graphics_items_icon_palettes_grass_tm_hm_palette}, // giga drain
+    {gFile_graphics_items_icons_tm_sheet, gFile_graphics_items_icon_palettes_faith_tm_hm_palette}, // safeguard
+    {gFile_graphics_items_icons_tm_sheet, gFile_graphics_items_icon_palettes_heart_tm_hm_palette}, // signal beam
+    {gFile_graphics_items_icons_tm_sheet, gFile_graphics_items_icon_palettes_grass_tm_hm_palette}, // solarbeam
+    {gFile_graphics_items_icons_tm_sheet, gFile_graphics_items_icon_palettes_steel_tm_hm_palette}, // steel fist
+    {gFile_graphics_items_icons_tm_sheet, gFile_graphics_items_icon_palettes_electric_tm_hm_palette}, // thunderbolt
+    {gFile_graphics_items_icons_tm_sheet, gFile_graphics_items_icon_palettes_electric_tm_hm_palette}, // thunder
+    {gFile_graphics_items_icons_tm_sheet, gFile_graphics_items_icon_palettes_ground_tm_hm_palette}, // earthquake
+    {gFile_graphics_items_icons_tm_sheet, gFile_graphics_items_icon_palettes_normal_tm_hm_palette}, // mega punch
+    {gFile_graphics_items_icons_tm_sheet, gFile_graphics_items_icon_palettes_ground_tm_hm_palette}, // dig
+    {gFile_graphics_items_icons_tm_sheet, gFile_graphics_items_icon_palettes_psychic_tm_hm_palette}, // mana burst
+    {gFile_graphics_items_icons_tm_sheet, gFile_graphics_items_icon_palettes_ghost_tm_hm_palette}, // shadow ball
+    {gFile_graphics_items_icons_tm_sheet, gFile_graphics_items_icon_palettes_fighting_tm_hm_palette}, // brick break
+    {gFile_graphics_items_icons_tm_sheet, gFile_graphics_items_icon_palettes_heart_tm_hm_palette}, // psych up
+    {gFile_graphics_items_icons_tm_sheet, gFile_graphics_items_icon_palettes_psychic_tm_hm_palette}, // reflect
+    {gFile_graphics_items_icons_tm_sheet, gFile_graphics_items_icon_palettes_fighting_tm_hm_palette}, // focus blast
+    {gFile_graphics_items_icons_tm_sheet, gFile_graphics_items_icon_palettes_fire_tm_hm_palette}, // flamethrower
+    {gFile_graphics_items_icons_tm_sheet, gFile_graphics_items_icon_palettes_poison_tm_hm_palette}, // poison bomb
+    {gFile_graphics_items_icons_tm_sheet, gFile_graphics_items_icon_palettes_psychic_tm_hm_palette}, // psycho cut
+    {gFile_graphics_items_icons_tm_sheet, gFile_graphics_items_icon_palettes_fire_tm_hm_palette}, // fire blast
+    {gFile_graphics_items_icons_tm_sheet, gFile_graphics_items_icon_palettes_ground_tm_hm_palette}, // rock tomb
+    {gFile_graphics_items_icons_tm_sheet, gFile_graphics_items_icon_palettes_electric_tm_hm_palette}, // thunder wave
+    {gFile_graphics_items_icons_tm_sheet, gFile_graphics_items_icon_palettes_fire_tm_hm_palette}, // will-o-wisp
+    {gFile_graphics_items_icons_tm_sheet, gFile_graphics_items_icon_palettes_normal_tm_hm_palette}, // facade
+    {gFile_graphics_items_icons_tm_sheet, gFile_graphics_items_icon_palettes_dragon_tm_hm_palette}, // secret power
+    {gFile_graphics_items_icons_tm_sheet, gFile_graphics_items_icon_palettes_normal_tm_hm_palette}, // rest
+    {gFile_graphics_items_icons_tm_sheet, gFile_graphics_items_icon_palettes_heart_tm_hm_palette}, // attract
+    {gFile_graphics_items_icons_tm_sheet, gFile_graphics_items_icon_palettes_dark_tm_hm_palette}, // thief
+    {gFile_graphics_items_icons_tm_sheet, gFile_graphics_items_icon_palettes_steel_tm_hm_palette}, // steel wing
+    {gFile_graphics_items_icons_tm_sheet, gFile_graphics_items_icon_palettes_normal_tm_hm_palette}, // sleep talk
+    {gFile_graphics_items_icons_tm_sheet, gFile_graphics_items_icon_palettes_dark_tm_hm_palette}, // snatch
+    {gFile_graphics_items_icons_tm_sheet, gFile_graphics_items_icon_palettes_heart_tm_hm_palette}, // mind bomb
+    {gFile_graphics_items_icons_tm_sheet, gFile_graphics_items_icon_palettes_fire_tm_hm_palette}, // fire punch
+    {gFile_graphics_items_icons_tm_sheet, gFile_graphics_items_icon_palettes_ice_tm_hm_palette}, // ice punch
+    {gFile_graphics_items_icons_tm_sheet, gFile_graphics_items_icon_palettes_electric_tm_hm_palette}, // thunder punch
+    {gFile_graphics_items_icons_tm_sheet, gFile_graphics_items_icon_palettes_normal_tm_hm_palette}, // u-turn
+    {gFile_graphics_items_icons_tm_sheet, gFile_graphics_items_icon_palettes_electric_tm_hm_palette}, // volt switch
+    {gFile_graphics_items_icons_tm_sheet, gFile_graphics_items_icon_palettes_faith_tm_hm_palette}, // extrasensory
+    {gFile_graphics_items_icons_tm_sheet, gFile_graphics_items_icon_palettes_grass_tm_hm_palette}, // energy light
+    {gFile_graphics_items_icons_tm_sheet, gFile_graphics_items_icon_palettes_dragon_tm_hm_palette}, // hidden power
+    {gFile_graphics_items_icons_tm_sheet, gFile_graphics_items_icon_palettes_ghost_tm_hm_palette}, // shadow force
+    {gFile_graphics_items_icons_tm_sheet, gFile_graphics_items_icon_palettes_fighting_tm_hm_palette}, // endure
+    {gFile_graphics_items_icons_tm_sheet, gFile_graphics_items_icon_palettes_fighting_tm_hm_palette}, // counter
+    {gFile_graphics_items_icons_tm_sheet, gFile_graphics_items_icon_palettes_psychic_tm_hm_palette}, // mirror coat
+    {gFile_graphics_items_icons_tm_sheet, gFile_graphics_items_icon_palettes_psychic_tm_hm_palette}, // trick
+    {gFile_graphics_items_icons_tm_sheet, gFile_graphics_items_icon_palettes_ice_tm_hm_palette}, // icy wind
+    {gFile_graphics_items_icons_tm_sheet, gFile_graphics_items_icon_palettes_normal_tm_hm_palette}, // substitute
+    {gFile_graphics_items_icons_tm_sheet, gFile_graphics_items_icon_palettes_flying_tm_hm_palette}, // tailwind
+    {gFile_graphics_items_icons_tm_sheet, gFile_graphics_items_icon_palettes_psychic_tm_hm_palette}, // trick room
+    {gFile_graphics_items_icons_tm_sheet, gFile_graphics_items_icon_palettes_ground_tm_hm_palette}, // spikes
+    {gFile_graphics_items_icons_tm_sheet, gFile_graphics_items_icon_palettes_dragon_tm_hm_palette}, // metronome
+    {gFile_graphics_items_icons_tm_sheet, gFile_graphics_items_icon_palettes_flying_tm_hm_palette}, // flight
+    {gFile_graphics_items_icons_tm_sheet, gFile_graphics_items_icon_palettes_ground_tm_hm_palette}, // sandstorm
+    {gFile_graphics_items_icons_tm_sheet, gFile_graphics_items_icon_palettes_ice_tm_hm_palette}, // hail
+    {gFile_graphics_items_icons_tm_sheet, gFile_graphics_items_icon_palettes_electric_tm_hm_palette}, // shock wave
+    {gFile_graphics_items_icons_tm_sheet, gFile_graphics_items_icon_palettes_grass_tm_hm_palette}, // magical leaf
+    {gFile_graphics_items_icons_tm_sheet, gFile_graphics_items_icon_palettes_rock_tm_hm_palette}, // heat claw
+    {gFile_graphics_items_icons_tm_sheet, gFile_graphics_items_icon_palettes_dark_tm_hm_palette}, // dark pulse
+    {gFile_graphics_items_icons_tm_sheet, gFile_graphics_items_icon_palettes_normal_tm_hm_palette}, // danmaku
+    {gFile_graphics_items_icons_tm_sheet, gFile_graphics_items_icon_palettes_normal_tm_hm_palette}, // double-edge
+    {gFile_graphics_items_icons_tm_sheet, gFile_graphics_items_icon_palettes_grass_tm_hm_palette}, // seed bomb
+    {gFile_graphics_items_icons_tm_sheet, gFile_graphics_items_icon_palettes_normal_tm_hm_palette}, // mega kick
+    {gFile_graphics_items_icons_tm_sheet, gFile_graphics_items_icon_palettes_normal_tm_hm_palette}, // cut
     {gFile_graphics_items_icons_tm_sheet, gFile_graphics_items_icon_palettes_flying_tm_hm_palette},
     {gFile_graphics_items_icons_tm_sheet, gFile_graphics_items_icon_palettes_water_tm_hm_palette},
     {gFile_graphics_items_icons_tm_sheet, gFile_graphics_items_icon_palettes_normal_tm_hm_palette},

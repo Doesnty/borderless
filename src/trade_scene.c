@@ -2448,10 +2448,10 @@ static void CreateInGameTradePokemonInternal(u8 playerSlot, u8 inGameTradeIdx)
     SetMonData(tradeMon, MON_DATA_OT_NAME, inGameTrade->otName);
     SetMonData(tradeMon, MON_DATA_OT_GENDER, &inGameTrade->otGender);
     SetMonData(tradeMon, MON_DATA_ABILITY_NUM, &inGameTrade->abilityNum);
-    SetMonData(tradeMon, MON_DATA_MOVE1, &inGameTrade->moves[0]);
-    SetMonData(tradeMon, MON_DATA_MOVE2, &inGameTrade->moves[1]);
-    SetMonData(tradeMon, MON_DATA_MOVE3, &inGameTrade->moves[2]);
-    SetMonData(tradeMon, MON_DATA_MOVE4, &inGameTrade->moves[3]);
+    SetMonMoveSlot(tradeMon, inGameTrade->moves[0], 0);
+    SetMonMoveSlot(tradeMon, inGameTrade->moves[1], 1);
+    SetMonMoveSlot(tradeMon, inGameTrade->moves[2], 2);
+    SetMonMoveSlot(tradeMon, inGameTrade->moves[3], 3);
     
     SetMonData(tradeMon, MON_DATA_SHEEN, &inGameTrade->sheen);
     SetMonData(tradeMon, MON_DATA_MET_LOCATION, &metLocation);

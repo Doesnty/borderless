@@ -200,47 +200,47 @@ CeladonCity_GameCorner_PrizeRoom_EventScript_ChoosePrizeTM:: @ 816CE47
 	waitmessage
 	multichoice 11, 0, MULTICHOICE_GAME_CORNER_TMPRIZES, FALSE
 	switch VAR_RESULT
-	case 0, CeladonCity_GameCorner_PrizeRoom_EventScript_TM13
-	case 1, CeladonCity_GameCorner_PrizeRoom_EventScript_TM23
-	case 2, CeladonCity_GameCorner_PrizeRoom_EventScript_TM24
-	case 3, CeladonCity_GameCorner_PrizeRoom_EventScript_TM30
-	case 4, CeladonCity_GameCorner_PrizeRoom_EventScript_TM35
+	case 0, CeladonCity_GameCorner_PrizeRoom_EventScript_TM51
+	case 1, CeladonCity_GameCorner_PrizeRoom_EventScript_TM52
+	case 2, CeladonCity_GameCorner_PrizeRoom_EventScript_TM53
+	case 3, CeladonCity_GameCorner_PrizeRoom_EventScript_TM23
+	case 4, CeladonCity_GameCorner_PrizeRoom_EventScript_TM65
 	case 5, CeladonCity_GameCorner_PrizeRoom_EventScript_EndPrizeExchange
 	case 127, CeladonCity_GameCorner_PrizeRoom_EventScript_EndPrizeExchange
 	end
 
-CeladonCity_GameCorner_PrizeRoom_EventScript_TM13:: @ 816CEA5
-	setvar VAR_TEMP_1, ITEM_TM13
-	setvar VAR_TEMP_2, 4000
-	getmovename 1, MOVE_ICE_BEAM
+CeladonCity_GameCorner_PrizeRoom_EventScript_TM51:: @ 816CEA5
+	setvar VAR_TEMP_1, ITEM_TM51
+	setvar VAR_TEMP_2, 2000
+	getmovename 1, MOVE_FIRE_PUNCH
 	goto CeladonCity_GameCorner_PrizeRoom_EventScript_ConfirmPrizeTM
 	end
 
-CeladonCity_GameCorner_PrizeRoom_EventScript_TM23:: @ 816CEB9
+CeladonCity_GameCorner_PrizeRoom_EventScript_TM52:: @ 816CEB9
+	setvar VAR_TEMP_1, ITEM_TM52
+	setvar VAR_TEMP_2, 2000
+	getmovename 1, MOVE_THUNDER_PUNCH
+	goto CeladonCity_GameCorner_PrizeRoom_EventScript_ConfirmPrizeTM
+	end
+
+CeladonCity_GameCorner_PrizeRoom_EventScript_TM53:: @ 816CECD
+	setvar VAR_TEMP_1, ITEM_TM53
+	setvar VAR_TEMP_2, 2000
+	getmovename 1, MOVE_ICE_PUNCH
+	goto CeladonCity_GameCorner_PrizeRoom_EventScript_ConfirmPrizeTM
+	end
+
+CeladonCity_GameCorner_PrizeRoom_EventScript_TM23:: @ 816CEE1
 	setvar VAR_TEMP_1, ITEM_TM23
 	setvar VAR_TEMP_2, 3500
 	getmovename 1, MOVE_STEEL_FIST
 	goto CeladonCity_GameCorner_PrizeRoom_EventScript_ConfirmPrizeTM
 	end
 
-CeladonCity_GameCorner_PrizeRoom_EventScript_TM24:: @ 816CECD
-	setvar VAR_TEMP_1, ITEM_TM24
-	setvar VAR_TEMP_2, 4000
-	getmovename 1, MOVE_THUNDERBOLT
-	goto CeladonCity_GameCorner_PrizeRoom_EventScript_ConfirmPrizeTM
-	end
-
-CeladonCity_GameCorner_PrizeRoom_EventScript_TM30:: @ 816CEE1
-	setvar VAR_TEMP_1, ITEM_TM30
-	setvar VAR_TEMP_2, 4500
-	getmovename 1, MOVE_SHADOW_BALL
-	goto CeladonCity_GameCorner_PrizeRoom_EventScript_ConfirmPrizeTM
-	end
-
-CeladonCity_GameCorner_PrizeRoom_EventScript_TM35:: @ 816CEF5
-	setvar VAR_TEMP_1, ITEM_TM35
-	setvar VAR_TEMP_2, 4000
-	getmovename 1, MOVE_FLAMETHROWER
+CeladonCity_GameCorner_PrizeRoom_EventScript_TM65:: @ 816CEF5
+	setvar VAR_TEMP_1, ITEM_TM65
+	setvar VAR_TEMP_2, 7000
+	getmovename 1, MOVE_SUBSTITUTE
 	goto CeladonCity_GameCorner_PrizeRoom_EventScript_ConfirmPrizeTM
 	end
 
@@ -267,6 +267,10 @@ CeladonCity_GameCorner_PrizeRoom_EventScript_TryGivePrize:: @ 816CF3F
 	checkitemspace VAR_TEMP_1, 1
 	compare VAR_RESULT, FALSE
 	goto_if_eq CeladonCity_GameCorner_PrizeRoom_EventScript_BagFull
+	checkitem VAR_TEMP_1, 1
+	compare VAR_RESULT, TRUE
+	goto_if_eq CeladonCity_GameCorner_PrizeRoom_EventScript_AlreadyHaveTM
+	
 	removecoins VAR_TEMP_2
 	updatecoinsbox 0, 5
 	giveitem VAR_TEMP_1
@@ -276,6 +280,13 @@ CeladonCity_GameCorner_PrizeRoom_EventScript_TryGivePrize:: @ 816CF3F
 CeladonCity_GameCorner_PrizeRoom_EventScript_BagFull:: @ 816CF79
 	textcolor 3
 	msgbox Text_TooBadBagFull
+	hidecoinsbox 0, 0
+	release
+	end
+
+CeladonCity_GameCorner_PrizeRoom_EventScript_AlreadyHaveTM::
+	textcolor 3
+	msgbox CeladonCity_GameCorner_PrizeRoom_Text_AlreadyHaveTM
 	hidecoinsbox 0, 0
 	release
 	end
@@ -311,19 +322,19 @@ CeladonCity_GameCorner_PrizeRoom_EventScript_SmokeBall:: @ 816D010
 	end
 
 CeladonCity_GameCorner_PrizeRoom_EventScript_MiracleSeed:: @ 816D020
-	setvar VAR_TEMP_1, ITEM_WITCHS_ROBE
+	setvar VAR_TEMP_1, ITEM_WHITE_HERB
 	setvar VAR_TEMP_2, 1000
 	goto CeladonCity_GameCorner_PrizeRoom_EventScript_ConfirmPrizeItem
 	end
 
 CeladonCity_GameCorner_PrizeRoom_EventScript_Charcoal:: @ 816D030
-	setvar VAR_TEMP_1, ITEM_MIKO_UNIFORM
+	setvar VAR_TEMP_1, ITEM_SCOPE_LENS
 	setvar VAR_TEMP_2, 1000
 	goto CeladonCity_GameCorner_PrizeRoom_EventScript_ConfirmPrizeItem
 	end
 
 CeladonCity_GameCorner_PrizeRoom_EventScript_MysticWater:: @ 816D040
-	setvar VAR_TEMP_1, ITEM_BLAZER
+	setvar VAR_TEMP_1, ITEM_WIDE_LENS
 	setvar VAR_TEMP_2, 1000
 	goto CeladonCity_GameCorner_PrizeRoom_EventScript_ConfirmPrizeItem
 	end

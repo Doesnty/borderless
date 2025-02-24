@@ -4,10 +4,10 @@ CeladonCity_Condominiums_RoofRoom_Text_TheresNothingIDontKnow:: @ 81964D7
     .string "I know about the world of Touhoumon\n"
     .string "in your Game Boy Advance!\p"
     .string "Get together with your friends and\n"
-    .string "enjoy trading POKéMON!$"
+    .string "enjoy trading Puppets!$"
 
 CeladonCity_Condominiums_RoofRoom_Text_ObtainedAnEevee:: @ 8196591
-    .string "{PLAYER} obtained an EEVEE!$"
+    .string "{PLAYER} obtained a CMayumi!$"
 
 CeladonCity_Condominiums_RoofRoom_Text_BoxIsFull:: @ 81965A7
     .string "ポケモンが　いっぱいだ\n"

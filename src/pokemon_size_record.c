@@ -180,14 +180,14 @@ void GetMagikarpSizeRecordInfo(void)
 {
     u16 *sizeRecord = GetVarPointer(VAR_MAGIKARP_SIZE_RECORD);
 
-    GetMonSizeRecordInfo(SPECIES_MAGIKARP, sizeRecord);
+    GetMonSizeRecordInfo(SPECIES_CSHINMYOUMARU, sizeRecord);
 }
 
 void CompareMagikarpSize(void)
 {
     u16 *sizeRecord = GetVarPointer(VAR_MAGIKARP_SIZE_RECORD);
 
-    gSpecialVar_Result = CompareMonSize(SPECIES_MAGIKARP, sizeRecord);
+    gSpecialVar_Result = CompareMonSize(SPECIES_CSHINMYOUMARU, sizeRecord);
 }
 
 void GiveGiftRibbonToParty(u8 index, u8 ribbonId)

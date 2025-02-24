@@ -18,7 +18,7 @@ Route19_Text_ReeceDefeat:: @ 818783E
     .string "That's chilly!$"
 
 Route19_Text_ReecePostBattle:: @ 8187852
-    .string "Watch out for TENTACOOL.\n"
+    .string "Watch out for Tentacool.\n"
     .string "They sting so painfully.$"
 
 Route19_Text_MatthewIntro:: @ 8187884
@@ -29,7 +29,7 @@ Route19_Text_MatthewDefeat:: @ 81878A5
     .string "Belly flop!$"
 
 Route19_Text_MatthewPostBattle:: @ 81878B1
-    .string "I can beat even marine POKéMON\n"
+    .string "I can beat even marine Puppets\n"
     .string "at swimming.$"
 
 Route19_Text_DouglasIntro:: @ 81878DD
@@ -43,7 +43,7 @@ Route19_Text_DouglasPostBattle:: @ 81878FE
     .string "yonder!$"
 
 Route19_Text_DavidIntro:: @ 8187925
-    .string "I tried diving for POKéMON, but it\n"
+    .string "I tried diving for Puppets, but it\n"
     .string "was a no-go.$"
 
 Route19_Text_DavidDefeat:: @ 8187955
@@ -51,7 +51,7 @@ Route19_Text_DavidDefeat:: @ 8187955
 
 Route19_Text_DavidPostBattle:: @ 818795B
     .string "I guess you have to fish for sea\n"
-    .string "POKéMON.$"
+    .string "Puppets.$"
 
 Route19_Text_TonyIntro:: @ 8187985
     .string "I look at the sea to forget all\n"
@@ -74,8 +74,8 @@ Route19_Text_AnyaDefeat:: @ 8187A44
 
 Route19_Text_AnyaPostBattle:: @ 8187A50
     .string "It's still a long way to go to\n"
-    .string "SEAFOAM ISLANDS…\p"
-    .string "I want to go back to FUCHSIA…$"
+    .string "Seafoam Islands…\p"
+    .string "I want to go back to Fuchsia…$"
 
 Route19_Text_AliceIntro:: @ 8187A9E
     .string "Swimming's great!\n"
@@ -86,7 +86,7 @@ Route19_Text_AliceDefeat:: @ 8187AC1
 
 Route19_Text_AlicePostBattle:: @ 8187ACA
     .string "My boyfriend wanted to swim to\n"
-    .string "SEAFOAM ISLANDS.$"
+    .string "Seafoam Islands.$"
 
 Route19_Text_AxleIntro:: @ 8187AFA
     .string "Ahoy, there!\n"
@@ -108,9 +108,9 @@ Route19_Text_ConnieDefeat:: @ 8187B85
     .string "I'm exhausted…$"
 
 Route19_Text_ConniePostBattle:: @ 8187B94
-    .string "If I were to ride a POKéMON on\n"
-    .string "the sea, I'd like a LAPRAS.\p"
-    .string "LAPRAS is so big, I bet it\n"
+    .string "If I were to ride a Puppet on\n"
+    .string "the sea, I'd like a Genji.\p"
+    .string "Genji is so big, I bet it\n"
     .string "would keep me dry on water.$"
 
 Route19_Text_RouteSign:: @ 8187C06
@@ -119,7 +119,7 @@ Route19_Text_RouteSign:: @ 8187C06
 
 Route19_Text_LiaIntro:: @ 8187C32
     .string "LIA: I'm looking after my brother.\n"
-    .string "He just became a TRAINER.$"
+    .string "He just became a Trainer.$"
 
 Route19_Text_LiaDefeat:: @ 8187C6F
     .string "LIA: That's no way to treat my\n"

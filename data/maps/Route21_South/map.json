@@ -94,5 +94,6 @@
   ],
   "warp_events": [],
   "coord_events": [],
-  "bg_events": []
+  "bg_events": [],
+  "waterType": "MAP_WATER_SALTWATER"
 }

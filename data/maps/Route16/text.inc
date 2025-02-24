@@ -9,14 +9,14 @@ Route16_Text_LaoPostBattle:: @ 8186C75
     .string "What's it to you?$"
 
 Route16_Text_KojiIntro:: @ 8186CA2
-    .string "Nice BIKE!\n"
+    .string "Nice bike!\n"
     .string "Hand it over!$"
 
 Route16_Text_KojiDefeat:: @ 8186CBB
     .string "Knockout!$"
 
 Route16_Text_KojiPostBattle:: @ 8186CC5
-    .string "Forget it, who needs your BIKE!$"
+    .string "Forget it, who needs your bike!$"
 
 Route16_Text_LukeIntro:: @ 8186CE5
     .string "Come out and play, little mouse!$"
@@ -37,8 +37,8 @@ Route16_Text_HideoDefeat:: @ 8186D52
 Route16_Text_HideoPostBattle:: @ 8186D5A
     .string "We'll always be hanging around here\n"
     .string "even if you don't like it.\p"
-    .string "You can detour to VERMILION from\n"
-    .string "FUCHSIA going along the coast.$"
+    .string "You can detour to Vermilion from\n"
+    .string "Fuchsia going along the coast.$"
 
 Route16_Text_CamronIntro:: @ 8186DD9
     .string "I'm feeling hungry and mean!\n"
@@ -48,7 +48,7 @@ Route16_Text_CamronDefeat:: @ 8186E0D
     .string "Bad, bad, bad!$"
 
 Route16_Text_CamronPostBattle:: @ 8186E1C
-    .string "If I'm going to have POKéMON, they\n"
+    .string "If I'm going to have Puppets, they\n"
     .string "may as well be ferocious.\p"
     .string "I'd use them to leave my enemies\n"
     .string "in tatters.$"
@@ -62,13 +62,13 @@ Route16_Text_RubenDefeat:: @ 8186EB4
 
 Route16_Text_RubenPostBattle:: @ 8186EC7
     .string "I get my kicks by harassing people\n"
-    .string "with my stinking POKéMON.\p"
+    .string "with my stinking Puppets.\p"
     .string "They're great for startling people.\n"
     .string "And, they bite, too.$"
 
 Route16_Text_MonSprawledOutInSlumber:: @ 8186F3D
-    .string "A POKéMON is sprawled out in\n"
-    .string "a deep and comfortable slumber.$"
+    .string "A pink blob is blocking the way.\n"
+    .string "It feels weird to touch...$"
 
 Route16_Text_CyclingRoadSign:: @ 8186F7A
     .string "Enjoy the slope!\n"

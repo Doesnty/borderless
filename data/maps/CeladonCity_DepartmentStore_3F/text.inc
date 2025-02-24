@@ -1,24 +1,22 @@
 CeladonCity_DepartmentStore_3F_Text_OTStandsForOriginalTrainer:: @ 81956E9
-    .string "Captured POKéMON are registered\n"
+    .string "Captured Puppets are registered\n"
     .string "with an ID No. and the OT.\p"
-    .string "OT stands for “Original TRAINER” -\n"
-    .string "the TRAINER that caught it first.$"
+    .string "OT stands for “Original Trainer” -\n"
+    .string "the Trainer that caught it first.$"
 
 CeladonCity_DepartmentStore_3F_Text_BuddyTradingKangaskhanForHaunter:: @ 8195769
     .string "All right!\p"
     .string "My buddy's going to trade me his\n"
-    .string "KANGASKHAN for my HAUNTER!$"
+    .string "Megumu for my Kagerou!$"
 
 CeladonCity_DepartmentStore_3F_Text_HaunterEvolvedOnTrade:: @ 81957B0
-    .string "Come on, HAUNTER!\p"
-    .string "I love HAUNTER!\n"
+    .string "Come on, Kagerou!\p"
+    .string "I love Kagerou!\n"
     .string "I collect them!\p"
-    .string "Huh?\p"
-    .string "HAUNTER turned into a different\n"
-    .string "POKéMON while being traded!$"
+    .string "Huh?\p$"
 
 CeladonCity_DepartmentStore_3F_Text_CanIdentifyTradeMonsByID:: @ 8195823
-    .string "You can identify POKéMON you get\n"
+    .string "You can identify Puppets you get\n"
     .string "in trades by their ID Numbers.$"
 
 CeladonCity_DepartmentStore_3F_Text_ItsSuperNES:: @ 8195863
@@ -45,7 +43,7 @@ CeladonCity_DepartmentStore_3F_Text_TVGameShop:: @ 81958F6
 
 CeladonCity_DepartmentStore_3F_Text_RedGreenBothArePokemon:: @ 8195907
     .string "Red and Green!\n"
-    .string "Both are POKéMON!$"
+    .string "Both are Pokémon!$"
 
 Text_CounterTeach:: @ 8195928
     .string "Oh, hi!\n"

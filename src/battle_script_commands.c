@@ -867,7 +867,8 @@ static const struct PickupItem sPickupBerriesNovice[] =
 
 static const struct PickupItem sPickupBerriesVeteran[] =
 {
-    { ITEM_SITRUS_BERRY, 25 },
+    { ITEM_SITRUS_BERRY, 20 },
+	{ ITEM_OCCA_BERRY, 25 },
     { ITEM_CHERI_BERRY, 30 },
     { ITEM_PECHA_BERRY, 35 },
     { ITEM_CHESTO_BERRY, 40 },
@@ -893,11 +894,7 @@ static const struct PickupItem sPickupBerriesVeteran[] =
 static const struct PickupItem sPickupBerriesElite[] =
 {
     { ITEM_SITRUS_BERRY, 25 },
-    { ITEM_CHERI_BERRY, 27 },
-    { ITEM_PECHA_BERRY, 29 },
-    { ITEM_ASPEAR_BERRY, 31 },
-    { ITEM_RAWST_BERRY, 33 },
-    { ITEM_PERSIM_BERRY, 35 },
+    { ITEM_OCCA_BERRY, 35 },
     { ITEM_CHESTO_BERRY, 40 },
     { ITEM_LUM_BERRY, 60 },
     { ITEM_LEPPA_BERRY, 71 },
@@ -1215,7 +1212,19 @@ static void atk00_attackcanceler(void)
         }
     }
     gHitMarker |= HITMARKER_OBEYS;
-    if (gProtectStructs[gBattlerTarget].bounceMove && gBattleMoves[gCurrentMove].flags & FLAG_MAGICCOAT_AFFECTED)
+    if (gBattleMons[gBattlerAttacker].ability != ABILITY_MOLD_BREAKER
+        && gBattleMons[gBattlerAttacker].ability != ABILITY_PURE_FURIES
+		&& gBattleMons[gBattlerTarget].ability == ABILITY_MAGIC_BOUNCE && gBattleMoves[gCurrentMove].flags & FLAG_MAGICCOAT_AFFECTED
+		&& !(gHitMarker & HITMARKER_BOUNCED))
+    {
+        PressurePPLose(gBattlerAttacker, gBattlerTarget, MOVE_MAGIC_COAT);
+        gProtectStructs[gBattlerTarget].bounceMove = FALSE;
+        BattleScriptPushCursor();
+        gBattlescriptCurrInstr = BattleScript_MagicBounceBounce;
+        return;
+    }
+    if (gProtectStructs[gBattlerTarget].bounceMove && gBattleMoves[gCurrentMove].flags & FLAG_MAGICCOAT_AFFECTED
+		&& !(gHitMarker & HITMARKER_BOUNCED))
     {
         PressurePPLose(gBattlerAttacker, gBattlerTarget, MOVE_MAGIC_COAT);
         gProtectStructs[gBattlerTarget].bounceMove = FALSE;
@@ -1223,6 +1232,7 @@ static void atk00_attackcanceler(void)
         gBattlescriptCurrInstr = BattleScript_MagicCoatBounce;
         return;
     }
+	gHitMarker &= ~(HITMARKER_BOUNCED);
     for (i = 0; i < gBattlersCount; ++i)
     {
         if ((gProtectStructs[gBattlerByTurnOrder[i]].stealMove) && gBattleMoves[gCurrentMove].flags & FLAG_SNATCH_AFFECTED)
@@ -1382,9 +1392,15 @@ static void atk01_accuracycheck(void)
     }
     else
     {
-        u8 type, moveAcc, holdEffect, param, targetAbility;
+        u8 type, moveAcc, holdEffect, atkHoldEffect, param, targetAbility;
         s8 buff;
         u16 calc;
+		
+		
+		if (gBattleMons[gBattlerAttacker].ability == ABILITY_KLUTZ)
+			atkHoldEffect = 0;
+		else
+			atkHoldEffect = ItemId_GetHoldEffect(gBattleMons[gBattlerAttacker].item);
 
         if (move == MOVE_NONE)
             move = gCurrentMove;
@@ -1423,6 +1439,8 @@ static void atk01_accuracycheck(void)
         calc /= sAccuracyStageRatios[buff].divisor;
         if (gBattleMons[gBattlerAttacker].ability == ABILITY_FOCUS)
             calc = (calc * 130) / 100; // 1.3 compound eyes boost
+		if (atkHoldEffect == HOLD_EFFECT_WIDE_LENS)
+			calc = (calc * 110) / 100; // 1.1 wide lens boost
         if (WEATHER_HAS_EFFECT && targetAbility == ABILITY_SAND_VEIL && gBattleWeather & WEATHER_SANDSTORM_ANY)
             calc = (calc * 80) / 100; // 1.2 sand veil loss
         if (WEATHER_HAS_EFFECT && targetAbility == ABILITY_SNOW_CLOAK && gBattleWeather & WEATHER_HAIL)
@@ -1719,6 +1737,12 @@ static void atk06_typecalc(void)
 	{
 		gBattleMoveDamage *= 3;
 		gBattleMoveDamage /= 4;
+	}
+	
+	if (gMoveResultFlags & MOVE_RESULT_SUPER_EFFECTIVE && gBattleMoveDamage > 0 && gBattleMons[gBattlerAttacker].ability == ABILITY_NEUROFORCE)
+	{
+		gBattleMoveDamage *= 125;
+		gBattleMoveDamage /= 100;
 	}
     
     if (((gMoveResultFlags & MOVE_RESULT_SUPER_EFFECTIVE) || moveType == TYPE_NORMAL || moveType == TYPE_ILLUSION) &&
@@ -2678,7 +2702,8 @@ void SetMoveEffect(bool8 primary, u8 certain)
                 else
                     break;
             }
-            if (gBattleMons[gEffectBattler].status1)
+            if (gBattleMons[gEffectBattler].status1 || gBattleMons[gEffectBattler].type1 == TYPE_ELECTRIC ||
+				gBattleMons[gEffectBattler].type2 == TYPE_ELECTRIC)
                 break;
             statusChanged = TRUE;
             break;
@@ -2731,7 +2756,7 @@ void SetMoveEffect(bool8 primary, u8 certain)
         {
             BattleScriptPush(gBattlescriptCurrInstr + 1);
             if (sStatusFlagsForMoveEffects[gBattleCommunication[MOVE_EFFECT_BYTE]] == STATUS1_SLEEP)
-                gBattleMons[gEffectBattler].status1 |= ((Random() & 3) + 2);
+                gBattleMons[gEffectBattler].status1 |= ((Random() % 3) + 2);
             else
                 gBattleMons[gEffectBattler].status1 |= sStatusFlagsForMoveEffects[gBattleCommunication[MOVE_EFFECT_BYTE]];
             gBattlescriptCurrInstr = sMoveEffectBS_Ptrs[gBattleCommunication[MOVE_EFFECT_BYTE]];
@@ -6757,9 +6782,17 @@ static void atk7D_setrain(void)
     }
     else
     {
+		u16 holdEffect = ItemId_GetHoldEffect(gBattleMons[gBattlerAttacker].item);
+		if (gBattleMons[gBattlerAttacker].ability == ABILITY_KLUTZ)
+			holdEffect = 0;
+		
         gBattleWeather = WEATHER_RAIN_TEMPORARY;
         gBattleCommunication[MULTISTRING_CHOOSER] = 0;
-        gWishFutureKnock.weatherDuration = 5;
+		
+        if (holdEffect == HOLD_EFFECT_SCARLET_ROCK)
+			gWishFutureKnock.weatherDuration = 8;
+		else
+			gWishFutureKnock.weatherDuration = 5;
     }
     ++gBattlescriptCurrInstr;
 }
@@ -6773,8 +6806,15 @@ static void atk7E_setreflect(void)
     }
     else
     {
+		u16 itemEffect = ItemId_GetHoldEffect(gBattleMons[gBattlerAttacker].item);
+		if (gBattleMons[gBattlerAttacker].ability == ABILITY_KLUTZ)
+			itemEffect = 0;
+		
         gSideStatuses[GET_BATTLER_SIDE(gBattlerAttacker)] |= SIDE_STATUS_REFLECT;
-        gSideTimers[GET_BATTLER_SIDE(gBattlerAttacker)].reflectTimer = 5;
+		if (itemEffect == HOLD_EFFECT_LIGHT_CLAY)
+			gSideTimers[GET_BATTLER_SIDE(gBattlerAttacker)].reflectTimer = 8;
+		else
+			gSideTimers[GET_BATTLER_SIDE(gBattlerAttacker)].reflectTimer = 5;
         gSideTimers[GET_BATTLER_SIDE(gBattlerAttacker)].reflectBattlerId = gBattlerAttacker;
 
         if (gBattleTypeFlags & BATTLE_TYPE_DOUBLE && CountAliveMonsInBattle(BATTLE_ALIVE_ATK_SIDE) == 2)
@@ -7400,8 +7440,15 @@ static void atk92_setlightscreen(void)
     }
     else
     {
+		u16 itemEffect = ItemId_GetHoldEffect(gBattleMons[gBattlerAttacker].item);
+		if (gBattleMons[gBattlerAttacker].ability == ABILITY_KLUTZ)
+			itemEffect = 0;
+		
         gSideStatuses[GET_BATTLER_SIDE(gBattlerAttacker)] |= SIDE_STATUS_LIGHTSCREEN;
-        gSideTimers[GET_BATTLER_SIDE(gBattlerAttacker)].lightscreenTimer = 5;
+		if (itemEffect == HOLD_EFFECT_LIGHT_CLAY)
+			gSideTimers[GET_BATTLER_SIDE(gBattlerAttacker)].lightscreenTimer = 8;
+		else
+			gSideTimers[GET_BATTLER_SIDE(gBattlerAttacker)].lightscreenTimer = 5;
         gSideTimers[GET_BATTLER_SIDE(gBattlerAttacker)].lightscreenBattlerId = gBattlerAttacker;
         if (gBattleTypeFlags & BATTLE_TYPE_DOUBLE && CountAliveMonsInBattle(BATTLE_ALIVE_ATK_SIDE) == 2)
             gBattleCommunication[MULTISTRING_CHOOSER] = 4;
@@ -7522,9 +7569,17 @@ static void atk95_setsandstorm(void)
     }
     else
     {
+		u16 holdEffect = ItemId_GetHoldEffect(gBattleMons[gBattlerAttacker].item);
+		if (gBattleMons[gBattlerAttacker].ability == ABILITY_KLUTZ)
+			holdEffect = 0;
+		
         gBattleWeather = WEATHER_SANDSTORM_TEMPORARY;
         gBattleCommunication[MULTISTRING_CHOOSER] = 3;
-        gWishFutureKnock.weatherDuration = 5;
+		
+        if (holdEffect == HOLD_EFFECT_SCARLET_ROCK)
+			gWishFutureKnock.weatherDuration = 8;
+		else
+			gWishFutureKnock.weatherDuration = 5;
     }
     ++gBattlescriptCurrInstr;
 }
@@ -8171,7 +8226,7 @@ static void atkAD_tryspiteppreduce(void)
                 break;
         if (i != MAX_MON_MOVES && gBattleMons[gBattlerTarget].pp[i] > 1)
         {
-            s32 ppToDeduct = (Random() & 3) + 2;
+            s32 ppToDeduct = 4;
 
             if (gBattleMons[gBattlerTarget].pp[i] < ppToDeduct)
                 ppToDeduct = gBattleMons[gBattlerTarget].pp[i];
@@ -8543,9 +8598,17 @@ static void atkBB_setsunny(void)
     }
     else
     {
+		u16 holdEffect = ItemId_GetHoldEffect(gBattleMons[gBattlerAttacker].item);
+		if (gBattleMons[gBattlerAttacker].ability == ABILITY_KLUTZ)
+			holdEffect = 0;
+		
         gBattleWeather = WEATHER_SUN_TEMPORARY;
         gBattleCommunication[MULTISTRING_CHOOSER] = 4;
-        gWishFutureKnock.weatherDuration = 5;
+		
+        if (holdEffect == HOLD_EFFECT_SCARLET_ROCK)
+			gWishFutureKnock.weatherDuration = 8;
+		else
+			gWishFutureKnock.weatherDuration = 5;
     }
     ++gBattlescriptCurrInstr;
 }
@@ -8795,9 +8858,17 @@ static void atkC8_sethail(void)
     }
     else
     {
+		u16 holdEffect = ItemId_GetHoldEffect(gBattleMons[gBattlerAttacker].item);
+		if (gBattleMons[gBattlerAttacker].ability == ABILITY_KLUTZ)
+			holdEffect = 0;
+		
         gBattleWeather = WEATHER_HAIL;
         gBattleCommunication[MULTISTRING_CHOOSER] = 5;
-        gWishFutureKnock.weatherDuration = 5;
+		
+        if (holdEffect == HOLD_EFFECT_SCARLET_ROCK)
+			gWishFutureKnock.weatherDuration = 8;
+		else
+			gWishFutureKnock.weatherDuration = 5;
     }
     ++gBattlescriptCurrInstr;
 }
@@ -8995,6 +9066,7 @@ static void atkD4_trywish(void)
         if (gWishFutureKnock.wishCounter[gBattlerAttacker] == 0)
         {
             gWishFutureKnock.wishCounter[gBattlerAttacker] = 2;
+			gWishFutureKnock.wishStrength[gBattlerAttacker] = gBattleMons[gBattlerAttacker].maxHP / 2;
             gWishFutureKnock.wishMonId[gBattlerAttacker] = gBattlerPartyIndexes[gBattlerAttacker];
             gBattlescriptCurrInstr += 6;
         }
@@ -9005,7 +9077,7 @@ static void atkD4_trywish(void)
         break;
     case 1: // heal effect
         PREPARE_MON_NICK_WITH_PREFIX_BUFFER(gBattleTextBuff1, gBattlerTarget, gWishFutureKnock.wishMonId[gBattlerTarget])
-        gBattleMoveDamage = gBattleMons[gBattlerTarget].maxHP / 2;
+        gBattleMoveDamage = gWishFutureKnock.wishStrength[gBattlerTarget];
         if (gBattleMoveDamage == 0)
             gBattleMoveDamage = 1;
         gBattleMoveDamage *= -1;
@@ -9278,6 +9350,13 @@ static void atkE2_switchoutabilities(void)
         BtlController_EmitSetMonData(0, REQUEST_STATUS_BATTLE, gBitTable[*(gBattleStruct->battlerPartyIndexes + gActiveBattler)], 4, &gBattleMons[gActiveBattler].status1);
         MarkBattlerForControllerExec(gActiveBattler);
         break;
+	case ABILITY_REGENERATOR:
+        gBattleMons[gActiveBattler].hp += gBattleMons[gActiveBattler].maxHP / 3;
+        if (gBattleMons[gActiveBattler].hp > gBattleMons[gActiveBattler].maxHP)
+            gBattleMons[gActiveBattler].hp = gBattleMons[gActiveBattler].maxHP;
+        BtlController_EmitSetMonData(0, REQUEST_HP_BATTLE, 0, 2, &gBattleMons[gActiveBattler].hp);
+        MarkBattlerForControllerExec(gActiveBattler);
+        break;
     }
     gBattlescriptCurrInstr += 2;
 }
@@ -9490,6 +9569,33 @@ static void atkE5_pickup(void)
                     if (pickuplist[j].chance > random)
                         break;
                 newItem = pickuplist[j].itemId;
+				
+				if (newItem == ITEM_OCCA_BERRY)
+				{
+					u8 type = (Random() % 2) ? gBaseStats[species].type1 : gBaseStats[species].type2;
+					switch(type)
+					{
+						case TYPE_NORMAL: newItem = ITEM_CHILAN_BERRY; break;
+						case TYPE_FIGHTING: newItem = ITEM_CHOPLE_BERRY; break;
+						case TYPE_WIND: newItem = ITEM_COBA_BERRY; break;
+						case TYPE_MIASMA: newItem = ITEM_KEBIA_BERRY; break;
+						case TYPE_EARTH: newItem = ITEM_SHUCA_BERRY; break;
+						case TYPE_BEAST: newItem = ITEM_CHARTI_BERRY; break;
+						case TYPE_HEART: newItem = ITEM_TANGA_BERRY; break;
+						case TYPE_GHOST: newItem = ITEM_KASIB_BERRY; break;
+						case TYPE_STEEL: newItem = ITEM_BABIRI_BERRY; break;
+						case TYPE_FIRE: newItem = ITEM_OCCA_BERRY; break;
+						case TYPE_WATER: newItem = ITEM_PASSHO_BERRY; break;
+						case TYPE_NATURE: newItem = ITEM_RINDO_BERRY; break;
+						case TYPE_ELECTRIC: newItem = ITEM_WACAN_BERRY; break;
+						case TYPE_REASON: newItem = ITEM_PAYAPA_BERRY; break;
+						case TYPE_ICE: newItem = ITEM_YACHE_BERRY; break;
+						case TYPE_FAITH: newItem = ITEM_HABAN_BERRY; break;
+						case TYPE_DARK: newItem = ITEM_COLBUR_BERRY; break;
+						default:
+						case TYPE_ILLUSION: newItem = ITEM_ENIGMA_RESIST_BERRY; break;
+					}
+				}
             }
             
             if (newItem)
@@ -10157,6 +10263,11 @@ static void sp20_souvenir(void);
 static void sp21_demon_book(void);
 static void sp22_hold_hands(void);
 static void sp23_group_prank_animation_setup(void);
+static void sp24_set_last_wish_attacker(void);
+static void sp25_last_wish_affect(void);
+static void sp26_set_last_wish_target(void);
+static void sp27_salvage_armor_bank0(void);
+static void sp28_salvage_armor_bank1(void);
 
 void (* const gBattleScriptingSpecialsTable[])(void) =
 {
@@ -10196,6 +10307,11 @@ void (* const gBattleScriptingSpecialsTable[])(void) =
 	sp21_demon_book,
 	sp22_hold_hands,
 	sp23_group_prank_animation_setup,
+	sp24_set_last_wish_attacker,
+	sp25_last_wish_affect,
+	sp26_set_last_wish_target,
+	sp27_salvage_armor_bank0,
+	sp28_salvage_armor_bank1,
 };
 
 static void atkF8_special(void)
@@ -10378,7 +10494,6 @@ static void sp07_uturncheck(void)
 
 static void sp08_purify(void)
 {
-    
 	if (gBattleMons[gBattlerTarget].type1 == TYPE_NORMAL && gBattleMons[gBattlerTarget].type2 == TYPE_NORMAL)
 	{
 		// don't jump 5 so we goto butitfailed
@@ -10964,4 +11079,84 @@ static void sp22_hold_hands()
 static void sp23_group_prank_animation_setup()
 {
 	gAnimMoveTurn++;
+}
+
+static void sp24_set_last_wish_attacker()
+{
+	u8 side;
+	gActiveBattler = gBattlerAttacker;
+	side = GetBattlerSide(gActiveBattler);
+	if (gBattleMons[gActiveBattler].ability == ABILITY_LAST_WISH)
+	{
+		gSideTimers[side].lastWish = 1;
+		gSideTimers[side].lastWishStrength = gBattleMons[gActiveBattler].maxHP / 2;
+        BattleScriptPushCursor();
+        gBattlescriptCurrInstr = BattleScript_MadeLastWish;
+	}
+}
+
+static void sp25_last_wish_affect(void)
+{
+	u8 wish;
+	u8 side;
+	gActiveBattler = gBattleScripting.battler;
+	side = GetBattlerSide(gActiveBattler);
+	wish = gSideTimers[side].lastWish;
+	if (!wish)
+	{
+		gBattlescriptCurrInstr += 5;
+	}
+	else
+	{
+		gSideTimers[side].lastWish = 0;
+		gBattleMoveDamage = gSideTimers[side].lastWishStrength;
+		if (gBattleMoveDamage < 1)
+			gBattleMoveDamage = 1;
+		gBattleMoveDamage *= -1;
+		//MarkBattlerForControllerExec(gActiveBattler);
+	}
+}
+
+static void sp26_set_last_wish_target()
+{
+	u8 side;
+	gActiveBattler = gBattlerTarget;
+	side = GetBattlerSide(gActiveBattler);
+	if (gBattleMons[gActiveBattler].ability == ABILITY_LAST_WISH)
+	{
+		gSideTimers[side].lastWish = 1;
+		gSideTimers[side].lastWishStrength = gBattleMons[gActiveBattler].maxHP / 2;
+        BattleScriptPushCursor();
+        gBattlescriptCurrInstr = BattleScript_MadeLastWish;
+	}
+}
+
+static void sp27_salvage_armor_bank0()
+{
+	if (gBattleMons[0].ability == ABILITY_SALVAGE_ARMOR &&
+		gBattleMons[0].hp > 0 &&
+		gBattleMons[0].statStages[STAT_DEF] < 12)
+	{
+		gBattleScripting.battler = 0;
+		gBattleMons[gBattleScripting.battler].statStages[STAT_DEF]++;
+		gBattleScripting.animArg1 = 0x10;
+		gBattleScripting.animArg2 = 0;
+        BattleScriptPushCursor();
+        gBattlescriptCurrInstr = BattleScript_SalvageArmorActivates;
+	}
+}
+
+static void sp28_salvage_armor_bank1()
+{
+	if (gBattleMons[1].ability == ABILITY_SALVAGE_ARMOR &&
+		gBattleMons[1].hp > 0 &&
+		gBattleMons[1].statStages[STAT_DEF] < 12)
+	{
+		gBattleScripting.battler = 1;
+		gBattleMons[gBattleScripting.battler].statStages[STAT_DEF]++;
+		gBattleScripting.animArg1 = 0x10;
+		gBattleScripting.animArg2 = 0;
+        BattleScriptPushCursor();
+        gBattlescriptCurrInstr = BattleScript_SalvageArmorActivates;
+	}
 }

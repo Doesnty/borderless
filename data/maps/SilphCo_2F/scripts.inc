@@ -34,3 +34,39 @@ SilphCo_2F_EventScript_Grunt2:: @ 81616AE
 	trainerbattle_single TRAINER_TEAM_ROCKET_GRUNT_24, SilphCo_2F_Text_Grunt2Intro, SilphCo_2F_Text_Grunt2Defeat
 	msgbox SilphCo_2F_Text_Grunt2PostBattle, MSGBOX_AUTOCLOSE
 	end
+
+EventScript_ThunderWaveTutor:: @ 81C4816
+	lock
+	faceplayer
+	goto_if_set FLAG_TUTOR_THUNDER_WAVE, EventScript_ThunderWaveTaught
+	msgbox Text_ThunderWaveTeach
+	
+	setflag FLAG_TUTOR_THUNDER_WAVE
+	giveitem_msg SilphCo_2F_Text_GotTM40, ITEM_TM40, 1, MUS_OBTAIN_KEY_ITEM
+	release
+	end
+	
+	
+	compare VAR_RESULT, NO
+	goto_if_eq EventScript_ThunderWaveDeclined
+	call EventScript_CanOnlyBeLearnedOnce
+	compare VAR_RESULT, NO
+	goto_if_eq EventScript_ThunderWaveDeclined
+	msgbox Text_ThunderWaveWhichMon
+	setvar VAR_0x8005, MOVETUTOR_THUNDER_WAVE
+	call EventScript_ChooseMoveTutorMon
+	compare VAR_RESULT, FALSE
+	goto_if_eq EventScript_ThunderWaveDeclined
+	setflag FLAG_TUTOR_THUNDER_WAVE
+	goto EventScript_ThunderWaveTaught
+	end
+
+EventScript_ThunderWaveDeclined:: @ 81C486A
+	msgbox Text_ThunderWaveDeclined
+	release
+	end
+
+EventScript_ThunderWaveTaught:: @ 81C4874
+	msgbox Text_ThunderWaveTaught
+	release
+	end

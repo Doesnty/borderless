@@ -132,17 +132,30 @@ PokemonLeague_LancesRoom_EventScript_Rematch:: @ 8162A96
 	trainerbattle_no_intro TRAINER_ELITE_FOUR_LANCE_2, PokemonLeague_LancesRoom_Text_Defeat
 	return
 
-PokemonLeague_LancesRoom_EventScript_PostBattle:: @ 8162AA1
-	msgbox PokemonLeague_LancesRoom_Text_PostBattle
-	release
-	end
-
 PokemonLeague_LancesRoom_EventScript_DefeatedLance:: @ 8162AAB
 	setvar VAR_0x8004, 0
 	special Script_TryGainNewFanFromCounter
 	setflag FLAG_DEFEATED_LANCE
 	call PokemonLeague_EventScript_OpenDoorLance
-	msgbox PokemonLeague_LancesRoom_Text_PostBattle
+
+PokemonLeague_LancesRoom_EventScript_PostBattle:: @ 8162AA1
+	checkplayergender
+	compare VAR_RESULT, 0
+	goto_if_eq PokemonLeague_LancesRoom_EventScript_MaribelIsChampion
+	compare VAR_RESULT, 1
+	goto_if_eq PokemonLeague_ChampionsRoom_EventScript_CheckStopTriggerBulbasaur
+	closemessage
+	release
+	end
+
+PokemonLeague_LancesRoom_EventScript_MaribelIsChampion::
+	msgbox PokemonLeague_LancesRoom_Text_PostBattleMaribelChampion
+	closemessage
+	release
+	end
+
+PokemonLeague_LancesRoom_EventScript_RenkoIsChampion::
+	msgbox PokemonLeague_LancesRoom_Text_PostBattleRenkoChampion
 	closemessage
 	release
 	end

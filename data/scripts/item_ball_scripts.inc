@@ -58,6 +58,14 @@ MtMoon_B2F_EventScript_ItemTM46:: @ 81BE62A
 	finditem ITEM_TM46
 	end
 
+MtMoon_B4F_EventScript_ItemRareCandy:: @ 81BE62A
+	finditem ITEM_RARE_CANDY
+	end
+
+MtMoon_B4F_EventScript_ItemTM50:: @ 81BE62A
+	finditem ITEM_TM50
+	end
+
 Route4_EventScript_ItemTM05:: @ 81BE637
 	finditem ITEM_TM05
 	end
@@ -190,8 +198,8 @@ Route15_EventScript_ItemTM18:: @ 81BE7CA
 	finditem ITEM_TM18
 	end
 
-SafariZone_Center_EventScript_ItemNugget:: @ 81BE7D7
-	finditem ITEM_NUGGET
+SafariZone_Center_EventScript_ItemLightClay:: @ 81BE7D7
+	finditem ITEM_LIGHT_CLAY
 	end
 
 SafariZone_East_EventScript_ItemMaxPotion:: @ 81BE7E4
@@ -226,8 +234,8 @@ SafariZone_West_EventScript_ItemGoldTeeth:: @ 81BE83F
 	finditem ITEM_GOLD_TEETH
 	end
 
-SafariZone_West_EventScript_ItemMaxPotion:: @ 81BE84C
-	finditem ITEM_MAX_POTION
+SafariZone_West_EventScript_ItemScarletRock:: @ 81BE84C
+	finditem ITEM_SCARLET_ROCK
 	end
 
 SafariZone_West_EventScript_ItemMaxRevive:: @ 81BE859
@@ -330,8 +338,8 @@ PokemonMansion_3F_EventScript_ItemIron:: @ 81BE991
 	finditem ITEM_IRON
 	end
 
-PokemonMansion_B1F_EventScript_ItemTM14:: @ 81BE99E
-	finditem ITEM_TM14
+PokemonMansion_B1F_EventScript_ItemTM36:: @ 81BE99E
+	finditem ITEM_TM36
 	end
 
 PokemonMansion_B1F_EventScript_ItemFullRestore:: @ 81BE9AB
@@ -366,16 +374,16 @@ VictoryRoad_2F_EventScript_ItemFullHeal:: @ 81BEA06
 	finditem ITEM_FULL_HEAL
 	end
 
-VictoryRoad_2F_EventScript_ItemTM37:: @ 81BEA13
-	finditem ITEM_TM37
+VictoryRoad_2F_EventScript_ItemTM80:: @ 81BEA13
+	finditem ITEM_TM80
 	end
 
 VictoryRoad_3F_EventScript_ItemMaxRevive:: @ 81BEA20
 	finditem ITEM_MAX_REVIVE
 	end
 
-VictoryRoad_3F_EventScript_ItemTM50:: @ 81BEA2D
-	finditem ITEM_TM50
+VictoryRoad_3F_EventScript_ItemUltraBall:: @ 81BEA2D
+	finditem ITEM_ULTRA_BALL
 	end
 
 CeruleanCave_1F_EventScript_ItemMaxElixir:: @ 81BEA3A
@@ -462,6 +470,10 @@ RockTunnel_B1F_EventScript_ItemMaxEther:: @ 81BEB3E
 	finditem ITEM_MAX_ETHER
 	end
 
+RockTunnel_B1F_EventScript_ItemTM64:: @ 81BEB31
+	finditem ITEM_TM64
+	end
+
 SilphCo_8F_EventScript_ItemIron:: @ 81BEB4B
 	finditem ITEM_IRON
 	end
@@ -498,6 +510,10 @@ PokemonTower_5F_EventScript_ItemCleanseTag:: @ 81BEBB3
 	finditem ITEM_CLEANSE_TAG
 	end
 
+DiglettsCave_B2F_EventScript_ItemTM10::
+	finditem ITEM_TM10
+	end
+
 CeladonCity_EventScript_ItemEther:: @ 81BEBC0
 	finditem ITEM_ETHER
 	end
@@ -526,8 +542,8 @@ SeafoamIslands_B2F_EventScript_ItemBigPearl:: @ 81BEC0E
 	finditem ITEM_BIG_PEARL
 	end
 
-SeafoamIslands_B4F_EventScript_ItemUltraBall:: @ 81BEC1B
-	finditem ITEM_ULTRA_BALL
+SeafoamIslands_B4F_EventScript_ItemTM14:: @ 81BEC1B
+	finditem ITEM_TM14
 	end
 
 FourIsland_EventScript_ItemStarPiece:: @ 81BEC28
@@ -620,6 +636,10 @@ MtEmber_Exterior_EventScript_ItemFireStone:: @ 81BED39
 
 MtEmber_Exterior_EventScript_ItemDireHit:: @ 81BED46
 	finditem ITEM_HYPER_POTION
+	end
+
+MtEmber_Exterior_EventScript_ItemTM04:: @ 81BED46
+	finditem ITEM_TM04
 	end
 
 FourIsland_IcefallCave_1F_EventScript_ItemUltraBall:: @ 81BED53

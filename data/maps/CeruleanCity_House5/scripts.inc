@@ -8,6 +8,8 @@ CeruleanCity_House5_EventScript_BerryPowderMan:: @ 816AE50
 	msgbox CeruleanCity_House1_Text_AnyInterestInBerries, MSGBOX_YESNO
 	compare VAR_RESULT, NO
 	goto_if_eq CeruleanCity_House5_EventScript_NoInterestInBerries
+	goto CeruleanCity_House5_EventScript_NoBerries
+	
 	goto_if_unset FLAG_SYS_GOT_BERRY_POUCH, CeruleanCity_House5_EventScript_NoBerries
 	msgbox CeruleanCity_House1_Text_HaveJustTheThing
 	setflag FLAG_GOT_POWDER_JAR
@@ -19,6 +21,7 @@ CeruleanCity_House5_EventScript_BerryPowderMan:: @ 816AE50
 	end
 
 CeruleanCity_House5_EventScript_NoBerries:: @ 816AEA3
+	special CountBerries
 	msgbox CeruleanCity_House1_Text_WhyMustYouLieNoBerries
 	release
 	end

@@ -124,35 +124,6 @@ EventScript_DoubleEdgeTaught:: @ 81C480C
 	release
 	end
 
-EventScript_ThunderWaveTutor:: @ 81C4816
-	lock
-	faceplayer
-	goto_if_set FLAG_TUTOR_THUNDER_WAVE, EventScript_ThunderWaveTaught
-	msgbox Text_ThunderWaveTeach, MSGBOX_YESNO
-	compare VAR_RESULT, NO
-	goto_if_eq EventScript_ThunderWaveDeclined
-	call EventScript_CanOnlyBeLearnedOnce
-	compare VAR_RESULT, NO
-	goto_if_eq EventScript_ThunderWaveDeclined
-	msgbox Text_ThunderWaveWhichMon
-	setvar VAR_0x8005, MOVETUTOR_THUNDER_WAVE
-	call EventScript_ChooseMoveTutorMon
-	compare VAR_RESULT, FALSE
-	goto_if_eq EventScript_ThunderWaveDeclined
-	setflag FLAG_TUTOR_THUNDER_WAVE
-	goto EventScript_ThunderWaveTaught
-	end
-
-EventScript_ThunderWaveDeclined:: @ 81C486A
-	msgbox Text_ThunderWaveDeclined
-	release
-	end
-
-EventScript_ThunderWaveTaught:: @ 81C4874
-	msgbox Text_ThunderWaveTaught
-	release
-	end
-
 RockTunnel_B1F_EventScript_RockSlideTutor:: @ 81C487E
 	lock
 	faceplayer
@@ -444,77 +415,6 @@ EventScript_CounterTaught:: @ 81C4C84
 	msgbox Text_CounterTaught
 	release
 	end
-
-EventScript_MetronomeTutor:: @ 81C4C8E
-	lock
-	faceplayer
-	goto_if_set FLAG_TUTOR_METRONOME, EventScript_MetronomeTaught
-	msgbox Text_MetronomeTeach, MSGBOX_YESNO
-	compare VAR_RESULT, NO
-	goto_if_eq EventScript_MetronomeDeclined
-	call EventScript_CanOnlyBeLearnedOnce
-	compare VAR_RESULT, NO
-	goto_if_eq EventScript_MetronomeDeclined
-	msgbox Text_MetronomeWhichMon
-	setvar VAR_0x8005, MOVETUTOR_METRONOME
-	call EventScript_ChooseMoveTutorMon
-	compare VAR_RESULT, FALSE
-	goto_if_eq EventScript_MetronomeDeclined
-	setflag FLAG_TUTOR_METRONOME
-	goto EventScript_MetronomeTaught
-	end
-
-EventScript_MetronomeDeclined:: @ 81C4CE2
-	msgbox Text_MetronomeDeclined
-	release
-	end
-
-EventScript_MetronomeTaught:: @ 81C4CEC
-	msgbox Text_MetronomeTaught
-	release
-	end
-
-EventScript_MimicTutor:: @ 81C4CF6
-	goto_if_set FLAG_TUTOR_MIMIC, EventScript_MimicTaught
-	msgbox Text_MimicTeach, MSGBOX_YESNO
-	compare VAR_RESULT, NO
-	goto_if_eq EventScript_MimicDeclined
-	call EventScript_CanOnlyBeLearnedOnce
-	compare VAR_RESULT, NO
-	goto_if_eq EventScript_MimicDeclined
-	msgbox Text_MimicWhichMon
-	setvar VAR_0x8005, MOVETUTOR_MIMIC
-	call EventScript_ChooseMoveTutorMon
-	lock
-	faceplayer
-	compare VAR_RESULT, 0
-	goto_if_eq EventScript_MimicDeclined
-	removeitem ITEM_POKE_DOLL, 1
-	setflag FLAG_TUTOR_MIMIC
-	goto EventScript_MimicTaught
-	end
-
-EventScript_MimicDeclined:: @ 81C4D4F
-	msgbox Text_MimicDeclined
-	release
-	end
-
-EventScript_MimicTaught:: @ 81C4D59
-	checkplayergender
-	compare VAR_RESULT, MALE
-	call_if_eq EventScript_MimicTaughtMale
-	compare VAR_RESULT, FEMALE
-	call_if_eq EventScript_MimicTaughtFemale
-	release
-	end
-
-EventScript_MimicTaughtMale:: @ 81C4D72
-	msgbox Text_MimicTaughtMale
-	return
-
-EventScript_MimicTaughtFemale:: @ 81C4D7B
-	msgbox Text_MimicTaughtFemale
-	return
 
 FourIsland_House1_EventScript_BodySlamTutor:: @ 81C4D84
 	lock

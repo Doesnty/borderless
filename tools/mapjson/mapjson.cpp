@@ -126,7 +126,16 @@ string generate_map_header_text(Json map_data, Json layouts_data) {
         text << "\t.byte " << map_data["floor_number"].int_value() << "\n";
     }
 
-     text << "\t.byte " << map_data["battle_scene"].string_value() << "\n\n";
+     text << "\t.byte " << map_data["battle_scene"].string_value() << "\n";
+	 
+	if (map_data["waterType"] == Json())
+		text << "\t.byte MAP_WATER_FRESHWATER\n\n";
+	else
+		text << "\t.byte " << map_data["waterType"].string_value() << "\n";
+	
+	text << "\t.byte 0\n";
+	text << "\t.byte 0\n";
+	text << "\t.byte 0\n\n";
 
     return text.str();
 }

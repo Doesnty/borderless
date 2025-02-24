@@ -1,8 +1,8 @@
 CinnabarIsland_Gym_Text_BlaineIntro:: @ 8199543
     .string "Hah!\p"
-    .string "I am BLAINE, the red-hot LEADER\n"
-    .string "of CINNABAR GYM!\p"
-    .string "My fiery POKéMON are all rough\n"
+    .string "I am Blaine, the red-hot Leader\n"
+    .string "of Cinnabar Gym!\p"
+    .string "My fiery Puppets are all rough\n"
     .string "and ready with intense heat!\p"
     .string "They incinerate all challengers!\p"
     .string "Hah!\n"
@@ -11,35 +11,35 @@ CinnabarIsland_Gym_Text_BlaineIntro:: @ 8199543
 CinnabarIsland_Gym_Text_BlaineDefeat:: @ 81995FA
     .string "I have burned down to nothing!\n"
     .string "Not even ashes remain!\p"
-    .string "You have earned the VOLCANOBADGE.$"
+    .string "You have earned the VolcanoBadge.$"
 
 CinnabarIsland_Gym_Text_FireBlastIsUltimateFireMove:: @ 8199652
-    .string "FIRE BLAST is the ultimate fire\n"
+    .string "Fire Blast is the ultimate fire\n"
     .string "technique.\p"
-    .string "Don't waste it on WATER POKéMON.$"
+    .string "Don't waste it on Water Puppets.$"
 
 CinnabarIsland_Gym_Text_ExplainVolcanoBadge:: @ 819969E
     .string "Hah!\p"
-    .string "The VOLCANOBADGE heightens the\n"
-    .string "SPECIAL stats of your POKéMON.\p"
+    .string "The VolcanoBadge shows that your\n"
+    .string "Puppets can take the heat.\p"
     .string "Here, you can have this, too!$"
 
 CinnabarIsland_Gym_Text_ReceivedTM38FromBlaine:: @ 81996FF
     .string "{PLAYER} received TM38\n"
-    .string "from BLAINE.$"
+    .string "from Blaine.$"
 
 CinnabarIsland_Gym_Text_BlainePostBattle:: @ 819971D
-    .string "TM38 contains FIRE BLAST.\n"
-    .string "Teach it to FIRE-type POKéMON.\p"
-    .string "VULPIX or CHARMELEON would be\n"
+    .string "TM38 contains Fire Blast.\n"
+    .string "Teach it to Fire-type Puppets.\p"
+    .string "Utsuho or Yuki would be\n"
     .string "ideal for that move.$"
 
 CinnabarIsland_Gym_Text_MakeSpaceForThis:: @ 8199789
     .string "Make space for this, child!$"
 
 CinnabarIsland_Gym_Text_ErikIntro:: @ 81997A5
-    .string "Do you know how hot POKéMON fire\n"
-    .string "breath can get?$"
+    .string "Do you know how hot Puppet fire\n"
+    .string "can get?$"
 
 CinnabarIsland_Gym_Text_ErikDefeat:: @ 81997D6
     .string "Yow!\n"
@@ -53,17 +53,17 @@ CinnabarIsland_Gym_Text_ErikPostBattle:: @ 81997EA
 
 CinnabarIsland_Gym_Text_QuinnIntro:: @ 819983F
     .string "I was a thief, but I went straight\n"
-    .string "as a TRAINER.$"
+    .string "as a Trainer.$"
 
 CinnabarIsland_Gym_Text_QuinnDefeat:: @ 8199870
     .string "I surrender!$"
 
 CinnabarIsland_Gym_Text_QuinnPostBattle:: @ 819987D
     .string "I get this uncontrollable urge to\n"
-    .string "steal other people's POKéMON.$"
+    .string "steal other people's Puppets.$"
 
 CinnabarIsland_Gym_Text_AveryIntro:: @ 81998BD
-    .string "I've studied POKéMON thoroughly.\n"
+    .string "I've studied Puppets thoroughly.\n"
     .string "You can't win!$"
 
 CinnabarIsland_Gym_Text_AveryDefeat:: @ 81998ED
@@ -75,33 +75,33 @@ CinnabarIsland_Gym_Text_AveryPostBattle:: @ 8199911
     .string "for you to understand.$"
 
 CinnabarIsland_Gym_Text_RamonIntro:: @ 8199948
-    .string "I like using FIRE-type POKéMON.\n"
+    .string "I like using Fire-type Puppets.\n"
     .string "I just do.$"
 
 CinnabarIsland_Gym_Text_RamonDefeat:: @ 8199973
     .string "Too hot to handle!$"
 
 CinnabarIsland_Gym_Text_RamonPostBattle:: @ 8199986
-    .string "I wish there were a thief POKéMON.\n"
-    .string "I'd use that!$"
+    .string "I like using Marisa, since she's\n"
+    .string "a thief Puppet.$"
 
 CinnabarIsland_Gym_Text_DerekIntro:: @ 81999B7
-    .string "I know why BLAINE became a\n"
-    .string "TRAINER.$"
+    .string "I know why Blaine became a\n"
+    .string "Trainer.$"
 
 CinnabarIsland_Gym_Text_DerekDefeat:: @ 81999DB
     .string "Ow!$"
 
 CinnabarIsland_Gym_Text_DerekPostBattle:: @ 81999DF
-    .string "Our LEADER, BLAINE, became lost\n"
+    .string "Our Leader, Blaine, became lost\n"
     .string "in the mountains but good.\p"
     .string "Night fell when a fiery bird\n"
-    .string "POKéMON appeared.\p"
-    .string "Its light allowed BLAINE to find\n"
+    .string "Puppet appeared.\p"
+    .string "Its light allowed Blaine to find\n"
     .string "his way down safely.$"
 
 CinnabarIsland_Gym_Text_DustyIntro:: @ 8199A7F
-    .string "I've been to many GYMS, but this\n"
+    .string "I've been to many Gyms, but this\n"
     .string "one best suits my style.$"
 
 CinnabarIsland_Gym_Text_DustyDefeat:: @ 8199AB9
@@ -121,8 +121,8 @@ CinnabarIsland_Gym_Text_ZacDefeat:: @ 8199B16
 
 CinnabarIsland_Gym_Text_ZacPostBattle:: @ 8199B27
     .string "Water beats fire, of course.\p"
-    .string "But fire melts ice, so the FIRE\n"
-    .string "type beats ICE-type POKéMON.$"
+    .string "But fire melts ice, so the Fire\n"
+    .string "type beats Ice-type Puppets.$"
 
 CinnabarIsland_Gym_Text_GymGuyAdvice:: @ 8199B81
     .string "Yo!\n"
@@ -138,24 +138,24 @@ CinnabarIsland_Gym_Text_GymGuyPostVictory:: @ 8199C0C
     .string "You beat that firebrand!$"
 
 CinnabarIsland_Gym_Text_GymStatue:: @ 8199C29
-    .string "CINNABAR POKéMON GYM\n"
+    .string "CINNABAR PUPPET GYM\n"
     .string "LEADER: BLAINE\p"
     .string "WINNING TRAINERS:\n"
     .string "{RIVAL}$"
 
 CinnabarIsland_Gym_Text_GymStatuePlayerWon:: @ 8199C62
-    .string "CINNABAR POKéMON GYM\n"
+    .string "CINNABAR PUPPET GYM\n"
     .string "LEADER: BLAINE\p"
     .string "WINNING TRAINERS:\n"
     .string "{RIVAL}, {PLAYER}$"
 
 CinnabarIsland_Gym_Text_PokemonQuizRules:: @ 8199C9F
-    .string "POKéMON Quiz!\p"
+    .string "Puppetry Quiz!\p"
     .string "Get it right, and the door opens to\n"
     .string "the next room.\p"
-    .string "Get it wrong, and face a TRAINER!\p"
+    .string "Get it wrong, and face a Trainer!\p"
     .string "If you want to conserve your\n"
-    .string "POKéMON for the GYM LEADER…\p"
+    .string "Puppets for the Gym Leader…\p"
     .string "Then get it right!\n"
     .string "Here we go!$"
 

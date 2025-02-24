@@ -1,4 +1,4 @@
-PokemonLeague_ChampionsRoom_Text_Intro:: @ 8178B6C
+asdfasdfsadfsdf:: @ 8178B6C
     .string "{RIVAL}: Hey, {PLAYER}!\p"
     .string "I was looking forward to seeing\n"
     .string "you, {PLAYER}.\p"
@@ -15,6 +15,51 @@ PokemonLeague_ChampionsRoom_Text_Intro:: @ 8178B6C
     .string "I'll tell you.\p"
     .string "I am the most powerful TRAINER in\n"
     .string "the world!$"
+
+PokemonLeague_ChampionsRoom_Text_IntroMaribel::
+	.string "MARIBEL: fite me bich$"
+
+	.string "MARIBEL: {PLAYER}?! You made it here?\p"
+	.string "How did you even follow me into this\n"
+	.string "world? Was the boundary open?\p"
+	.string "I'm sorry for not contacting you for\n"
+	.string "so long, but I got caught up in things\p."
+	.string "Well...as nice as it is to see you, you\n"
+	.string "know what this meeting means, right?\p"
+	.string "I've been diligently cataloguing the\n"
+	.string "Puppets here to understand them.\p"
+	.string "I've found Puppets of some of the\n"
+	.string "strongest beings of fantasy here.\p"
+	.string "And now that I've reached the level of\n"
+	.string "Champion, I'm not going to lose!\p"
+	.string "As the strongest Puppet Trainer in\n"
+	.string "this world, I won't lose!\p"
+	.string "Not even to you, {PLAYER}!$"
+
+PokemonLeague_ChampionsRoom_Text_IntroRenko::
+	.string "RENKO: fite me bich$"
+	
+	.string "RENKO: {PLAYER}!\n"
+	.string "About time I ran into you!\p"
+	.string "You left the gate open in your room.\n"
+	.string "Of course I'd come looking for you!\p"
+	.string "But, what a world this is!\p"
+	.string "All these Puppets are just like the\n"
+	.string "people of that world of fantasy...\p"
+	.string "I don't know what this all means.\n"
+	.string "How is it all connected?\p"
+	.string "Well, that aside...\p"
+	.string "You're here as a challenger, right?\p"
+	.string "I won't sugarcoat it, {PLAYER}.\n"
+	.string "I've become stronger here.\p"
+	.string "I've spent time learning how the\n"
+	.string "Puppets do battle, and perfecting it.\p"
+	.string "The ones I've assembled can take on\n"
+	.string "any Puppet type you could muster.\p"
+	.string "I'm sorry, {PLAYER}, but I won't\n"
+	.string "be losing to you today!$"
+	
+	
 
 PokemonLeague_ChampionsRoom_Text_RematchIntro:: @ 8178CD4
     .string "{RIVAL}: Hey, {PLAYER}!\p"

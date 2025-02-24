@@ -4,7 +4,7 @@ Route7_EastEntrance_Text_ThirstyOnGuardDuty:: @ 819E2B7
     .string "Oh, wait there, the road's closed.$"
 
 Route7_EastEntrance_Text_ThatTeaLooksTasty:: @ 819E307
-    .string "Oh, that TEA…\n"
+    .string "Oh, that Tea…\n"
     .string "It looks awfully tasty…$"
 
 Route7_EastEntrance_Text_ThanksIllShareTeaWithGuards:: @ 819E32D
@@ -18,7 +18,7 @@ Route7_EastEntrance_Text_ThanksIllShareTeaWithGuards:: @ 819E32D
     .string "CITY…\l"
     .string "… …\l"
     .string "You can go on through.\p"
-    .string "I'll share this TEA with the other\n"
+    .string "I'll share this Tea with the other\n"
     .string "guards!$"
 
 Route7_EastEntrance_Text_HiHowsItGoing:: @ 819E3D9

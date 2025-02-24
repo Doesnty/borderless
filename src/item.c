@@ -685,3 +685,17 @@ u8 ItemId_GetSecondaryId(u16 itemId)
 {
     return gItems[SanitizeItemId(itemId)].secondaryId;
 }
+
+u32 CountBerries(void)
+{
+	u32 berryTotal = 1;
+	u16 i;
+	
+	for (i = 0; i < BAG_BERRIES_COUNT; i++)
+	{
+		if (gSaveBlock1Ptr->bagPocket_Berries[i].itemId)
+			berryTotal += GetBagItemQuantity(&gSaveBlock1Ptr->bagPocket_Berries[i].quantity);
+	}
+	ConvertIntToDecimalStringN(gStringVar1, berryTotal, STR_CONV_MODE_LEFT_ALIGN, 6);
+	return berryTotal;
+}

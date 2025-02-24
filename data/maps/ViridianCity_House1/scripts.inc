@@ -2,7 +2,6 @@ ViridianCity_House1_MapScripts:: @ 8169E9A
 	.byte 0
 
 ViridianCity_House1_EventScript_BaldingMan:: @ 8169E9B
-    goto ViridianCity_House1_EventScript_Cheat
 	msgbox ViridianCity_House1_Text_NicknamingIsFun, MSGBOX_NPC
 	end
 
@@ -10,7 +9,8 @@ ViridianCity_House1_EventScript_LittleGirl:: @ 8169EA4
 	msgbox ViridianCity_House1_Text_MyDaddyLovesMonsToo, MSGBOX_NPC
 	end
 
-ViridianCity_House1_EventScript_Speary:: @ 8169EAD
+
+ViridianCity_House1_EventScript_Speary::
 	lock
 	faceplayer
 	waitse
@@ -62,4 +62,17 @@ loop3start:
     goto_if_lt loop3start
     release
     end
+	
+ViridianCity_House1_EventScript_DebugFight::
+	lock
+	faceplayer
+	waitse
+	playmoncry SPECIES_SPEAROW, 0
+	waitmoncry
+	trainerbattle_single TRAINER_AQUA_GRUNT_F, ViridianCity_House1_Text_Speary, ViridianCity_House1_Text_Speary, ViridianCity_House1_EventScript_DebugFightEnd, NO_MUSIC
+ViridianCity_House1_EventScript_DebugFightEnd::
+	release
+	end
+
+
 

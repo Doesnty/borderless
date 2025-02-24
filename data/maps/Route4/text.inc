@@ -1,10 +1,10 @@
 Route4_Text_TrippedOverGeodude:: @ 81838D7
     .string "Ouch! I tripped over a rocky\n"
-    .string "POKéMON, GEODUDE!$"
+    .string "Puppet, CYamame!$"
 
 Route4_Text_CrissyIntro:: @ 8183906
-    .string "I came to MT. MOON in search of\n"
-    .string "mushroom POKéMON.$"
+    .string "I came to Mt. Moon in search of\n"
+    .string "mushroom Pokémon.$"
 
 Route4_Text_CrissyDefeat:: @ 8183938
     .string "After all I did to catch them!$"

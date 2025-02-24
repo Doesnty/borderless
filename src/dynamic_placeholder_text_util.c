@@ -4,6 +4,8 @@
 
 static EWRAM_DATA const u8 *sStringPointers[8] = {0};
 
+//
+
 static const u8 sTextColorTable[] =
 {
  // [LOW_NYBBLE / 2]                            = 0xXY, // HIGH_NYBBLE
@@ -83,6 +85,9 @@ static const u8 sTextColorTable[] =
     [OBJ_EVENT_GFX_CELEBI / 2]                  = 0x22, // OBJ_EVENT_GFX_KABUTO
     [OBJ_EVENT_GFX_DEOXYS_D / 2]                = 0x22, // OBJ_EVENT_GFX_DEOXYS_A
     [OBJ_EVENT_GFX_DEOXYS_N / 2]                = 0x32, // OBJ_EVENT_GFX_SS_ANNE
+	[OBJ_EVENT_GFX_MAMIZOU_DISGUISED / 2]       = 0x21, // OBJ_EVENT_GFX_IMAKUNI
+	[OBJ_EVENT_GFX_ZUN / 2]                     = 0x20,
+	[(OBJ_EVENT_GFX_ZUN+2) / 2]                 = 0x20,
 };
 
 void DynamicPlaceholderTextUtil_Reset(void)
