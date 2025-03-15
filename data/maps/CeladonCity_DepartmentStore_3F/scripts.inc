@@ -68,8 +68,8 @@ CeladonCity_DepartmentStore_3F_EventScript_Psychiatrist::
     msgbox CeladonCity_DepartmentStore_3F_Text_Psychiatrist_WhichMon, 4
 	special ChoosePartyMon
 	waitstate
-    compare VAR_0x8004, 255
-	goto_if_eq CeladonCity_DepartmentStore_3F_EventScript_PsychiatristBye
+    compare VAR_0x8004, PARTY_SIZE
+	goto_if_ge CeladonCity_DepartmentStore_3F_EventScript_PsychiatristBye
     
 	specialvar VAR_RESULT, GetPartyMonSpecies
 	compare VAR_RESULT, SPECIES_EGG

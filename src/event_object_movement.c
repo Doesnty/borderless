@@ -360,6 +360,7 @@ static const bool8 gRangedMovementTypes[MOVEMENT_TYPES_COUNT] = {
     [MOVEMENT_TYPE_VS_SEEKER_4E] = FALSE,
     [MOVEMENT_TYPE_VS_SEEKER_4F] = FALSE,
     [MOVEMENT_TYPE_WANDER_AROUND_SLOWER] = TRUE,
+    [MOVEMENT_TYPE_HYPER_SPINNER] = FALSE,
 };
 
 static const u8 gInitialMovementTypeFacingDirections[MOVEMENT_TYPES_COUNT] = {
@@ -444,6 +445,7 @@ static const u8 gInitialMovementTypeFacingDirections[MOVEMENT_TYPES_COUNT] = {
     [MOVEMENT_TYPE_VS_SEEKER_4E] = DIR_SOUTH,
     [MOVEMENT_TYPE_VS_SEEKER_4F] = DIR_SOUTH,
     [MOVEMENT_TYPE_WANDER_AROUND_SLOWER] = DIR_SOUTH,
+    [MOVEMENT_TYPE_HYPER_SPINNER] = DIR_SOUTH,
 };
 
 #define OBJ_EVENT_PAL_TAG_PLAYER_RED                  0x1100
@@ -477,6 +479,8 @@ static const u8 gInitialMovementTypeFacingDirections[MOVEMENT_TYPES_COUNT] = {
 #define OBJ_EVENT_PAL_TAG_MAMIZOU                     0x111C
 #define OBJ_EVENT_PAL_TAG_ZUN                         0x111D
 #define OBJ_EVENT_PAL_TAG_DOREMY                      0x111E
+#define OBJ_EVENT_PAL_TAG_NAMAZU                      0x111F
+#define OBJ_EVENT_PAL_TAG_TENSOKU                     0x1120
 
 #define OBJ_EVENT_PAL_TAG_NONE                        0x11FF
 
@@ -510,6 +514,8 @@ static const struct SpritePalette sObjectEventSpritePalettes[] = {
     {gObjectEventPal_Mamizou,                 OBJ_EVENT_PAL_TAG_MAMIZOU},
     {gObjectEventPal_Zun,                     OBJ_EVENT_PAL_TAG_ZUN},
     {gObjectEventPal_Doremy,                  OBJ_EVENT_PAL_TAG_DOREMY},
+    {gObjectEventPal_Namazu,                  OBJ_EVENT_PAL_TAG_NAMAZU},
+	{gObjectEventPal_Tensoku,                 OBJ_EVENT_PAL_TAG_TENSOKU},
     {},
 };
 

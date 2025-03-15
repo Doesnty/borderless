@@ -18,7 +18,7 @@ Text_OnlyPassWithBadgeDontHaveYet:: @ 81A57C1
 	.string "You don't have the {STR_VAR_1}\n"
 	.string "yet.\p"
 	.string "You have to have it to get to\n"
-	.string "the Puppet League.$"
+	.string "the Puppetry League.$"
 
 Text_OnlyPassWithBadgeOhGoAhead:: @ 81A5839
 	.string "You can pass here only if you have\n"

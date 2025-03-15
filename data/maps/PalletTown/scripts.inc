@@ -61,7 +61,7 @@ PalletTown_EventScript_OakRatingScene:: @ 81654D8
 	copyvar VAR_0x8009, VAR_0x8006
 	getnumberstring 0, VAR_0x8008
 	getnumberstring 1, VAR_0x8009
-	compare VAR_0x8009, 60
+	compare VAR_0x8009, 1 @ was 60
 	goto_if_lt PalletTown_EventScript_NotEnoughMonsForNationalDex
 	msgbox PalletTown_Text_CaughtXImpressiveFollowMe
 	closemessage

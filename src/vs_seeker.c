@@ -1066,8 +1066,8 @@ int GetRematchTrainerId(u16 trainerId)
     j = GetNextAvailableRematchTrainer(sVsSeekerData, trainerId, &i);
     if (!j)
         return 0;
-    TryGetRematchTrainerIdGivenGameState(sVsSeekerData[i].trainerIdxs, &j);
-    return sVsSeekerData[i].trainerIdxs[j];
+    //TryGetRematchTrainerIdGivenGameState(sVsSeekerData[i].trainerIdxs, &j);
+    return sVsSeekerData[i].trainerIdxs[0];
 }
 
 u8 IsTrainerReadyForRematch(void)

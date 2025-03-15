@@ -107,6 +107,8 @@ AI_CheckBadMove_CheckSoundproof:: @ 81D9CE0
 	if_move MOVE_PERFORMANCE, Score_Minus10
 	if_move MOVE_BINDING_VOICE, Score_Minus10
 	if_move MOVE_NATURE_SOUND, Score_Minus10
+	if_move MOVE_SHRIEK, Score_Minus10
+	if_move MOVE_SUTRA, Score_Minus10
 
 AI_CheckBadMove_CheckEffect:: @ 81D9D27
 	if_effect EFFECT_SLEEP, AI_CBM_Sleep
@@ -218,6 +220,7 @@ AI_CheckBadMove_CheckEffect:: @ 81D9D27
 	if_effect EFFECT_WATER_SPORT, AI_CBM_WaterSport
 	if_effect EFFECT_CALM_MIND, AI_CBM_CalmMind
 	if_effect EFFECT_DRAGON_DANCE, AI_CBM_DragonDance
+	if_effect EFFECT_WISH, AI_CBM_Wish
 	end
 
 AI_CBM_Sleep:: @ 81D9FB6
@@ -285,6 +288,8 @@ AI_CBM_AttackDown:: @ 81DA05F
 
 AI_CBM_DefenseDown:: @ 81DA074
 	if_stat_level_equal AI_TARGET, STAT_DEF, 0, Score_Minus10
+	get_ability AI_TARGET
+	if_equal ABILITY_FIRM_DEFENSE, Score_Minus10
 	goto CheckIfAbilityBlocksStatChange
 
 AI_CBM_SpeedDown:: @ 81DA081
@@ -605,6 +610,12 @@ AI_CBM_CalmMind:: @ 81DA402
 AI_CBM_DragonDance:: @ 81DA413
 	if_stat_level_equal AI_USER, STAT_ATK, 12, Score_Minus10
 	if_stat_level_equal AI_USER, STAT_SPEED, 12, Score_Minus8
+	end
+
+AI_CBM_Wish::
+	get_last_used_move AI_USER
+	get_move_effect_from_result
+	if_equal EFFECT_WISH, Score_Minus10
 	end
 
 Score_Minus1:: @ 81DA424
@@ -3193,7 +3204,8 @@ AI_Roaming:: @ 81DBCA8
 	if_equal 2, AI_Roaming_MaybeEnd
 	if_equal 3, AI_Roaming_MaybeEnd
 	if_equal 4, AI_Roaming_MaybeEnd
-    
+
+AI_Roaming_TryFlee::
 	if_status2 AI_USER, STATUS2_WRAPPED, AI_Roaming_End
 	if_status2 AI_USER, STATUS2_ESCAPE_PREVENTION, AI_Roaming_End
 	get_ability AI_TARGET
@@ -3203,7 +3215,7 @@ AI_Roaming_Flee:: @ 81DBCD4
 	flee
 
 AI_Roaming_MaybeEnd::
-	if_random_less_than 128, AI_Roaming_Flee
+	if_random_less_than 128, AI_Roaming_TryFlee
     end
 
 AI_Roaming_End:: @ 81DBCD5

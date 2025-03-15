@@ -423,11 +423,11 @@ gBattleAnims_Moves::
 	.4byte Move_HORSEPOWER
 	.4byte Move_HEALING_WISH
 	.4byte Move_GALE
-	.4byte Move_POUND
-	.4byte Move_POUND
-	.4byte Move_POUND
-	.4byte Move_POUND
-	.4byte Move_POUND
+	.4byte Move_EXPLOSION @ abyss nova
+	.4byte Move_MISHAGUJI
+	.4byte Move_AEGIS_MERGE
+	.4byte Move_EXTERMINATE
+	.4byte Move_OBLIVION_WING
 	.4byte Move_FIRE_FANG
 	.4byte Move_ICE_FANG
 	.4byte Move_THUNDER_FANG
@@ -14697,4 +14697,156 @@ Move_OMINOUS_WIND::
 	delay 4
 	createsprite gSimplePaletteBlendSpriteTemplate, ANIM_BATTLER_ATTACKER, 2, 1, 0, 12, 0, 0
 	waitforvisualfinish
+	end
+
+Move_MISHAGUJI::
+	loadspritegfx ANIM_TAG_IMPACT
+	createvisualtask AnimTask_InvertScreenColor, 2, 257, 257, 257
+	waitforvisualfinish
+	monbg 1
+	setalpha 12, 8
+	playsewithpan SE_M_DOUBLE_SLAP, 63
+	createsprite gBasicHitSplatSpriteTemplate, ANIM_ATTACKER, 2, 0, 0, 1, 2
+	createvisualtask AnimTask_ShakeMon, 2, 1, 3, 0, 6, 1
+	waitforvisualfinish
+	clearmonbg 1
+	blendoff
+	createvisualtask AnimTask_InvertScreenColor, 2, 257, 257, 257
+	waitforvisualfinish
+	end
+	
+Move_AEGIS_MERGE::
+	loopsewithpan SE_SHINY, 192, 28, 2
+	createvisualtask AnimTask_MetallicShine, 5, 0, 1, RGB(31, 31, 10)
+	createsprite gComplexPaletteBlendSpriteTemplate, ANIM_ATTACKER, 2, 1, 8, 2, -1, 14, -1, 0
+	waitforvisualfinish
+	end
+
+Move_OBLIVION_WING::
+	loadspritegfx ANIM_TAG_ORBS
+	loadspritegfx ANIM_TAG_BLUE_STAR
+	monbg ANIM_DEF_PARTNER
+	monbgprio_2A 1
+	setalpha 8, 8
+	createvisualtask AnimTask_InvertScreenColor, 2, 257, 257, 257
+	waitforvisualfinish
+	playsewithpan SE_M_MINIMIZE, 63
+	createvisualtask AnimTask_ShakeMon, 2, 1, 5, 0, 15, 1
+	createvisualtask AnimTask_ScaleMonAndRestore, 5, -6, -6, 15, 1, 1
+	waitforvisualfinish
+	setalpha 12, 8
+	createvisualtask AnimTask_ShakeMon, 2, 1, 0, 2, 25, 1
+	call OblivionWingAbsorb
+	waitforvisualfinish
+	createvisualtask AnimTask_InvertScreenColor, 2, 257, 257, 257
+	waitforvisualfinish
+	delay 15
+	call HealingEffect
+	waitforvisualfinish
+	clearmonbg ANIM_DEF_PARTNER
+	blendoff
+	delay 1
+	end
+
+OblivionWingAbsorb::
+	playsewithpan SE_M_SWAGGER, 63
+	createsprite gAbsorptionOrbSpriteTemplate, ANIM_ATTACKER, 3, 0, 5, 8, 26
+	createsprite gAbsorptionOrbSpriteTemplate, ANIM_ATTACKER, 3, 5, -18, -40, 35
+	createsprite gAbsorptionOrbSpriteTemplate, ANIM_ATTACKER, 3, -10, 20, 20, 39
+	delay 4
+	playsewithpan SE_M_SWAGGER, 63
+	createsprite gAbsorptionOrbSpriteTemplate, ANIM_ATTACKER, 3, 0, 5, 28, 26
+	createsprite gAbsorptionOrbSpriteTemplate, ANIM_ATTACKER, 3, 10, -5, -8, 26
+	createsprite gAbsorptionOrbSpriteTemplate, ANIM_ATTACKER, 3, -10, 20, 40, 39
+	delay 4
+	playsewithpan SE_M_SWAGGER, 63
+	createsprite gAbsorptionOrbSpriteTemplate, ANIM_ATTACKER, 3, 10, -5, -8, 26
+	createsprite gAbsorptionOrbSpriteTemplate, ANIM_ATTACKER, 3, -5, 15, 16, 33
+	createsprite gAbsorptionOrbSpriteTemplate, ANIM_ATTACKER, 3, 10, -5, -32, 26
+	delay 4
+	playsewithpan SE_M_SWAGGER, 63
+	createsprite gAbsorptionOrbSpriteTemplate, ANIM_ATTACKER, 3, 0, -15, -16, 36
+	createsprite gAbsorptionOrbSpriteTemplate, ANIM_ATTACKER, 3, 0, 5, 8, 26
+	createsprite gAbsorptionOrbSpriteTemplate, ANIM_ATTACKER, 3, 10, -5, -8, 26
+	delay 4
+	playsewithpan SE_M_SWAGGER, 63
+	createsprite gAbsorptionOrbSpriteTemplate, ANIM_ATTACKER, 3, -5, 15, 16, 33
+	createsprite gAbsorptionOrbSpriteTemplate, ANIM_ATTACKER, 3, 0, -15, -16, 36
+	createsprite gAbsorptionOrbSpriteTemplate, ANIM_ATTACKER, 3, 0, 5, 8, 26
+	delay 4
+	playsewithpan SE_M_SWAGGER, 63
+	createsprite gAbsorptionOrbSpriteTemplate, ANIM_ATTACKER, 3, 0, 5, 8, 26
+	createsprite gAbsorptionOrbSpriteTemplate, ANIM_ATTACKER, 3, -5, 15, 16, 33
+	createsprite gAbsorptionOrbSpriteTemplate, ANIM_ATTACKER, 3, 10, -5, -40, 26
+	delay 4
+	playsewithpan SE_M_SWAGGER, 63
+	createsprite gAbsorptionOrbSpriteTemplate, ANIM_ATTACKER, 3, -5, 15, 36, 33
+	createsprite gAbsorptionOrbSpriteTemplate, ANIM_ATTACKER, 3, 10, -5, -8, 26
+	createsprite gAbsorptionOrbSpriteTemplate, ANIM_ATTACKER, 3, -10, 20, 20, 39
+	delay 4
+	playsewithpan SE_M_SWAGGER, 63
+	createsprite gAbsorptionOrbSpriteTemplate, ANIM_ATTACKER, 3, 0, 5, 8, 26
+	createsprite gAbsorptionOrbSpriteTemplate, ANIM_ATTACKER, 3, 0, 5, 8, 26
+	createsprite gAbsorptionOrbSpriteTemplate, ANIM_ATTACKER, 3, 5, -18, -20, 35
+	delay 4
+	return
+
+Move_EXTERMINATE::
+	loadspritegfx 10135
+	loadspritegfx 10143
+
+	createvisualtask AnimTask_InvertScreenColor, 2, 257, 257, 257
+	waitforvisualfinish
+	monbg ANIM_DEF_PARTNER
+	setalpha 12, 8
+	createsprite gSlideMonToOffsetSpriteTemplate, ANIM_ATTACKER, 2, 0, 20, 0, 0, 4
+	delay 4
+	
+	createsprite gBasicHitSplatSpriteTemplate, ANIM_ATTACKER, 2, 12, -18, 1, 0
+	playsewithpan SE_M_VITAL_THROW2, 63
+	delay 1
+	createvisualtask AnimTask_ShakeMon, 2, ANIM_TARGET, 5, 0, 25, 1
+	createsprite gFistFootSpriteTemplate, ANIM_ATTACKER, 3, 12, -18, 8, 1, 0
+	delay 3
+	
+	createsprite gBasicHitSplatSpriteTemplate, ANIM_ATTACKER, 2, 0, 12, 1, 0
+	playsewithpan SE_M_VITAL_THROW2, 63
+	delay 1
+	createsprite gFistFootSpriteTemplate, ANIM_ATTACKER, 3, 0, 12, 8, 1, 0
+	delay 3
+	
+	createsprite gBasicHitSplatSpriteTemplate, ANIM_ATTACKER, 2, -12, -18, 1, 0
+	playsewithpan SE_M_VITAL_THROW2, 63
+	delay 1
+	createsprite gFistFootSpriteTemplate, ANIM_ATTACKER, 3, -12, -18, 8, 1, 0
+	delay 3
+	
+	createsprite gBasicHitSplatSpriteTemplate, ANIM_ATTACKER, 2, 12, 11, 1, 0
+	playsewithpan SE_M_VITAL_THROW2, 63
+	delay 1
+	createsprite gFistFootSpriteTemplate, ANIM_ATTACKER, 3, 12, 11, 8, 1, 0
+	delay 3
+	
+	createsprite gBasicHitSplatSpriteTemplate, ANIM_ATTACKER, 2, -12, 11, 1, 0
+	playsewithpan SE_M_VITAL_THROW2, 63
+	delay 1
+	createsprite gFistFootSpriteTemplate, ANIM_ATTACKER, 3, -12, 11, 8, 1, 0
+	delay 3
+	
+	createsprite gBasicHitSplatSpriteTemplate, ANIM_ATTACKER, 2, 0, -6, 1, 0
+	playsewithpan SE_M_VITAL_THROW2, 63
+	delay 1
+	createsprite gFistFootSpriteTemplate, ANIM_ATTACKER, 3, 0, -6, 8, 1, 0
+	delay 5
+	
+	createsprite gSlideMonToOriginalPosSpriteTemplate, ANIM_ATTACKER, 2, 0, 0, 5
+	waitforvisualfinish
+
+	createvisualtask AnimTask_InvertScreenColor, 2, 257, 257, 257
+	waitforvisualfinish
+	clearmonbg ANIM_DEF_PARTNER
+	blendoff
+	delay 1
+	setarg 7, 4096
+	delay 1
 	end

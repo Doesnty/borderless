@@ -146,3 +146,28 @@ CeladonCity_GameCorner_Text_SomeonesKeys:: @ 8196FA0
     .string "Someone's keys!\n"
     .string "They'll be back.$"
 
+CeladonCity_GameCorner_Text_Mamizou::
+	.string "Hohohoho!\p"
+	.string "Try the machine next to me.\n"
+	.string "It's, ah, let's call it “lucky”.\p"
+	.string "...Don't look at me like that.\p"
+	.string "Gambling ain't no fun if you\n"
+	.string "aren't cheating, y'know?\p"
+	.string "Also, the owners of this place\n"
+	.string "deserve to get fleeced.\p"
+	.string "Just sit down and aim for\n"
+	.string "the sevens.$"
+
+CeladonCity_GameCorner_Text_MamizouPostGiovanni::
+	.string "Hohohoho!\p"
+	.string "Try the machine next to me.\n"
+	.string "It's, ah, let's call it “lucky”.\p"
+	.string "...Don't look at me like that.\p"
+	.string "Gambling ain't no fun if you\n"
+	.string "aren't cheating, y'know?\p"
+	.string "Also, you know full well the\n"
+	.string "owners of this place deserve\l"
+	.string "to get fleeced.\p"
+	.string "Just sit down and aim for\n"
+	.string "the sevens.$"
+

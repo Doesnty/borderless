@@ -579,6 +579,7 @@ const struct TrainerMoney gTrainerMoneyTable[] =
     { TRAINER_CLASS_STRANGER, 2 },
     { TRAINER_CLASS_WILD, 2 },
     { TRAINER_CLASS_STRANGEST, 2 },
+    { TRAINER_CLASS_ROCKET_ADMIN, 25 },
     { 0xFF, 5 },
 };
 
@@ -2922,7 +2923,7 @@ void BattleTurnPassed(void)
         if (DoBattlerEndTurnEffects())
             return;
     }
-    if (HandleFaintedMonActions())
+    if (HandleFaintedMonActions(TRUE))
         return;
     gBattleStruct->faintedActionsState = 0;
     if (HandleWishPerishSongOnTurnEnd())
@@ -4461,7 +4462,7 @@ static void HandleAction_OldManBallThrow(void)
 
 static void HandleAction_TryFinish(void)
 {
-    if (!HandleFaintedMonActions())
+    if (!HandleFaintedMonActions(FALSE))
     {
         gBattleStruct->faintedActionsState = 0;
         gCurrentActionFuncId = B_ACTION_FINISHED;

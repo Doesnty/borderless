@@ -20,13 +20,13 @@ PokemonLeague_ChampionsRoom_OnResume:: @ 8162AF2
 PokemonLeague_ChampionsRoom_EventScript_CheckStopTriggerSquirtle:: @ 8162B1E
 	setvar VAR_OBJ_GFX_ID_0, OBJ_EVENT_GFX_GREEN_NORMAL
 	goto_if_defeated TRAINER_CHAMPION_MARIBEL, PokemonLeague_ChampionsRoom_EventScript_StopSceneTrigger
-	goto_if_defeated TRAINER_CHAMPION_REMATCH_SQUIRTLE, PokemonLeague_ChampionsRoom_EventScript_StopSceneTrigger
+	goto_if_defeated TRAINER_CHAMPION_REMATCH_MARIBEL, PokemonLeague_ChampionsRoom_EventScript_StopSceneTrigger
 	return
 
 PokemonLeague_ChampionsRoom_EventScript_CheckStopTriggerBulbasaur:: @ 8162B31
 	setvar VAR_OBJ_GFX_ID_0, OBJ_EVENT_GFX_RED_NORMAL
 	goto_if_defeated TRAINER_CHAMPION_RENKO, PokemonLeague_ChampionsRoom_EventScript_StopSceneTrigger
-	goto_if_defeated TRAINER_CHAMPION_REMATCH_BULBASAUR, PokemonLeague_ChampionsRoom_EventScript_StopSceneTrigger
+	goto_if_defeated TRAINER_CHAMPION_REMATCH_RENKO, PokemonLeague_ChampionsRoom_EventScript_StopSceneTrigger
 	return
 
 PokemonLeague_ChampionsRoom_EventScript_CheckStopTriggerCharmander:: @ 8162B44
@@ -74,9 +74,16 @@ PokemonLeague_ChampionsRoom_EventScript_EnterRoom:: @ 8162B76
 	clearflag FLAG_TEMP_5
 	setflag FLAG_DEFEATED_CHAMP
 	setflag FLAG_TEMP_4
-	msgbox PokemonLeague_ChampionsRoom_Text_PostBattle
+	
+	@ checkplayergender
+	@ compare VAR_RESULT, 0
+	@ call_if_eq PokemonLeague_ChampionsRoom_EventScript_PostBatleMaribel
+	@ compare VAR_RESULT, 1
+	@ call_if_eq PokemonLeague_ChampionsRoom_EventScript_PostBatleRenko
+	
 	playbgm MUS_SLOW_PALLET, 0
 	addobject LOCALID_PROF_OAK
+	textcolor 0
 	msgbox PokemonLeague_ChampionsRoom_Text_OakPlayer
 	closemessage
 	applymovement OBJ_EVENT_ID_PLAYER, PokemonLeague_ChampionsRoom_Movement_PlayerWatchOakEnter
@@ -87,15 +94,17 @@ PokemonLeague_ChampionsRoom_EventScript_EnterRoom:: @ 8162B76
 	specialvar VAR_RESULT, GetStarterSpecies
 	getspeciesname 0, VAR_RESULT
 	msgbox PokemonLeague_ChampionsRoom_Text_OakCongratulations
-	applymovement LOCALID_PROF_OAK, Movement_WalkInPlaceFastestRight
-	applymovement LOCALID_RIVAL, Movement_WalkInPlaceFastestLeft
-	waitmovement 0
-	msgbox PokemonLeague_ChampionsRoom_Text_OakImDisappointedRival
-	closemessage
-	applymovement LOCALID_PROF_OAK, Movement_WalkInPlaceFastestDown
-	waitmovement 0
-	delay 20
-	msgbox PokemonLeague_ChampionsRoom_Text_OakPlayerComeWithMe
+	
+	
+	@ applymovement LOCALID_PROF_OAK, Movement_WalkInPlaceFastestRight
+	@ applymovement LOCALID_RIVAL, Movement_WalkInPlaceFastestLeft
+	@ waitmovement 0
+	@ msgbox PokemonLeague_ChampionsRoom_Text_OakImDisappointedRival
+	@ closemessage
+	@ applymovement LOCALID_PROF_OAK, Movement_WalkInPlaceFastestDown
+	@ waitmovement 0
+	@ delay 20
+	@ msgbox PokemonLeague_ChampionsRoom_Text_OakPlayerComeWithMe
 	closemessage
 	delay 13
 	applymovement LOCALID_PROF_OAK, PokemonLeague_ChampionsRoom_Movement_OakExit
@@ -121,6 +130,13 @@ PokemonLeague_ChampionsRoom_EventScript_Battle:: @ 8162C6F
 	return
 
 PokemonLeague_ChampionsRoom_EventScript_Rematch:: @ 8162C91
+	checkplayergender
+	compare VAR_RESULT, 0
+	call_if_eq PokemonLeague_ChampionsRoom_EventScript_RematchSquirtle
+	compare VAR_RESULT, 1
+	call_if_eq PokemonLeague_ChampionsRoom_EventScript_RematchBulbasaur
+	return
+	
 	compare VAR_STARTER_MON, 2
 	call_if_eq PokemonLeague_ChampionsRoom_EventScript_RematchSquirtle
 	compare VAR_STARTER_MON, 1
@@ -141,12 +157,21 @@ PokemonLeague_ChampionsRoom_EventScript_RematchIntro:: @ 8162CBC
 	msgbox PokemonLeague_ChampionsRoom_Text_RematchIntro
 	return
 
+PokemonLeague_ChampionsRoom_EventScript_PostBatleMaribel::
+	msgbox PokemonLeague_ChampionsRoom_Text_PostBattleMaribel
+	return
+
+PokemonLeague_ChampionsRoom_EventScript_PostBatleRenko::
+	msgbox PokemonLeague_ChampionsRoom_Text_PostBattleRenko
+	return
+
+
 PokemonLeague_ChampionsRoom_EventScript_BattleSquirtle:: @ 8162CC5
-	trainerbattle_no_intro TRAINER_CHAMPION_MARIBEL, PokemonLeague_ChampionsRoom_Text_Defeat
+	trainerbattle_no_intro TRAINER_CHAMPION_MARIBEL, PokemonLeague_ChampionsRoom_Text_MaribelDefeat
 	return
 
 PokemonLeague_ChampionsRoom_EventScript_BattleBulbasaur:: @ 8162CD0
-	trainerbattle_no_intro TRAINER_CHAMPION_RENKO, PokemonLeague_ChampionsRoom_Text_Defeat
+	trainerbattle_no_intro TRAINER_CHAMPION_RENKO, PokemonLeague_ChampionsRoom_Text_RenkoDefeat
 	return
 
 PokemonLeague_ChampionsRoom_EventScript_BattleCharmander:: @ 8162CDB
@@ -154,11 +179,11 @@ PokemonLeague_ChampionsRoom_EventScript_BattleCharmander:: @ 8162CDB
 	return
 
 PokemonLeague_ChampionsRoom_EventScript_RematchSquirtle:: @ 8162CE6
-	trainerbattle_no_intro TRAINER_CHAMPION_REMATCH_SQUIRTLE, PokemonLeague_ChampionsRoom_Text_Defeat
+	trainerbattle_no_intro TRAINER_CHAMPION_REMATCH_MARIBEL, PokemonLeague_ChampionsRoom_Text_MaribelDefeat
 	return
 
 PokemonLeague_ChampionsRoom_EventScript_RematchBulbasaur:: @ 8162CF1
-	trainerbattle_no_intro TRAINER_CHAMPION_REMATCH_BULBASAUR, PokemonLeague_ChampionsRoom_Text_Defeat
+	trainerbattle_no_intro TRAINER_CHAMPION_REMATCH_RENKO, PokemonLeague_ChampionsRoom_Text_RenkoDefeat
 	return
 
 PokemonLeague_ChampionsRoom_EventScript_RematchCharmander:: @ 8162CFC

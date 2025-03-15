@@ -22,9 +22,9 @@ MtMoon_B2F_Text_LabOnCinnabarRegeneratesFossils:: @ 8172BFB
     .string "fossils.$"
 
 MtMoon_B2F_Text_Grunt1Intro:: @ 8172C5A
-    .string "We, TEAM ROCKET, shall find the\n"
+    .string "We, Team Rocket, shall find the\n"
     .string "fossils!\p"
-    .string "Reviving POKéMON from them will\n"
+    .string "Reviving Puppets from them will\n"
     .string "earn us huge riches!$"
 
 MtMoon_B2F_Text_Grunt1Defeat:: @ 8172CB8
@@ -33,10 +33,10 @@ MtMoon_B2F_Text_Grunt1Defeat:: @ 8172CB8
 
 MtMoon_B2F_Text_Grunt1PostBattle:: @ 8172CCB
     .string "You made me mad!\n"
-    .string "TEAM ROCKET will blacklist you!$"
+    .string "Team Rocket will blacklist you!$"
 
 MtMoon_B2F_Text_Grunt2Intro:: @ 8172CFC
-    .string "We, TEAM ROCKET, are POKéMON\n"
+    .string "We, Team Rocket, are Puppetry\n"
     .string "gangsters!\l"
     .string "We strike fear with our strength!$"
 
@@ -67,7 +67,7 @@ MtMoon_B2F_Text_Grunt4Defeat:: @ 8172E3E
     .string "I'm steamed!$"
 
 MtMoon_B2F_Text_Grunt4PostBattle:: @ 8172E4B
-    .string "POKéMON lived here long before\n"
+    .string "Puppets lived here long before\n"
     .string "people came.$"
 
 MtMoon_B2F_Text_YouWantDomeFossil:: @ 8172E77

@@ -1194,6 +1194,12 @@ static void atk00_attackcanceler(void)
         gMoveResultFlags |= MOVE_RESULT_MISSED;
         return;
     }
+	if (gBattleMons[gBattlerTarget].hp == 0 && gCurrentMove != MOVE_EXPLOSION && gCurrentMove != MOVE_SELF_DESTRUCT && gCurrentMove != MOVE_ABYSS_NOVA)
+	{
+        gBattlescriptCurrInstr = BattleScript_NoTarget;
+        gMoveResultFlags |= MOVE_RESULT_MISSED;
+        return;
+	}
     gHitMarker &= ~(HITMARKER_x800000);
     if (!(gHitMarker & HITMARKER_OBEYS) 
      && !(gBattleMons[gBattlerAttacker].status2 & STATUS2_MULTIPLETURNS))
@@ -1542,7 +1548,7 @@ static void atk02_attackstring(void)
                 break;
             }
         }
-        if (!(gHitMarker & (HITMARKER_NO_PPDEDUCT | HITMARKER_NO_ATTACKSTRING)) && gBattleMons[gBattlerAttacker].pp[gCurrMovePos])
+        if (!(gHitMarker & (HITMARKER_NO_PPDEDUCT | HITMARKER_NO_ATTACKSTRING)) && gBattleMons[gBattlerAttacker].pp[gCurrMovePos] && (!gBattleStruct->twinSparkTracker))
         {
             gProtectStructs[gBattlerAttacker].notFirstStrike = 1;
 
@@ -1743,6 +1749,11 @@ static void atk06_typecalc(void)
 	{
 		gBattleMoveDamage *= 125;
 		gBattleMoveDamage /= 100;
+	}
+	
+	if (gMoveResultFlags & MOVE_RESULT_NOT_VERY_EFFECTIVE && gBattleMoveDamage > 0 && gBattleMons[gBattlerAttacker].ability == ABILITY_BELLIGERENT)
+	{
+		gBattleMoveDamage *= 2;
 	}
     
     if (((gMoveResultFlags & MOVE_RESULT_SUPER_EFFECTIVE) || moveType == TYPE_NORMAL || moveType == TYPE_ILLUSION) &&
@@ -2892,7 +2903,7 @@ void SetMoveEffect(bool8 primary, u8 certain)
                 }
                 else
                 {
-                    gBattleMons[gEffectBattler].status2 |= ((Random() & 3) + 3) << 0xD;
+                    gBattleMons[gEffectBattler].status2 |= ((Random() % 2) + 5) << 0xD;
                     *(gBattleStruct->wrappedMove + gEffectBattler * 2 + 0) = gCurrentMove;
                     *(gBattleStruct->wrappedMove + gEffectBattler * 2 + 1) = gCurrentMove >> 8;
                     *(gBattleStruct->wrappedBy + gEffectBattler) = gBattlerAttacker;
@@ -3457,7 +3468,7 @@ static void atk1F_jumpifsideaffecting(void)
     if (gBattleMons[gBattlerAttacker].ability == ABILITY_INFILTRATOR && GetBattlerSide(gBattlerAttacker) != side
         && (flags == SIDE_STATUS_SAFEGUARD || flags == SIDE_STATUS_MIST))
         gBattlescriptCurrInstr += 8;
-    if (gSideStatuses[side] & flags)
+    else if (gSideStatuses[side] & flags)
         gBattlescriptCurrInstr = jumpPtr;
     else
         gBattlescriptCurrInstr += 8;
@@ -3560,7 +3571,7 @@ static void atk23_getexp(void)
     u8 holdEffect;
     s32 sentIn;
     s32 viaExpShare = 0;
-    u16 *exp = &gBattleStruct->expValue;
+    u32 *exp = &gBattleStruct->expValue;
 
     gBattlerFainted = GetBattlerForBattleScript(gBattlescriptCurrInstr[1]);
     sentIn = gSentPokesToOpponent[(gBattlerFainted & 2) >> 1];
@@ -3725,6 +3736,11 @@ static void atk23_getexp(void)
                                 gBattleMoveDamage = cappedExp;
                         }
                     }
+					
+					// how much of an experience is it, really, to watch the boss throw a master ball at xtenma?
+					// this also hopefully stops some overflows
+					if (gBattleMoveDamage > 30000)
+						gBattleMoveDamage = 30000;
                     
                     PREPARE_MON_NICK_WITH_PREFIX_BUFFER(gBattleTextBuff1, gBattleStruct->expGetterBattlerId, gBattleStruct->expGetterMonId);
                     // buffer 'gained' or 'gained a boosted'
@@ -4444,7 +4460,8 @@ static void atk48_playstatchangeanimation(void)
                         && gBattleMons[gActiveBattler].ability != ABILITY_HAKUREI_MIKO
                         && gBattleMons[gActiveBattler].ability != ABILITY_MAGIC_BARRIER
                         && !(gBattleMons[gActiveBattler].ability == ABILITY_KEEN_EYE && currStat == STAT_ACC)
-                        && !(gBattleMons[gActiveBattler].ability == ABILITY_HI_STRENGTH && currStat == STAT_ATK))
+                        && !(gBattleMons[gActiveBattler].ability == ABILITY_HI_STRENGTH && currStat == STAT_ATK)
+                        && !(gBattleMons[gActiveBattler].ability == ABILITY_FIRM_DEFENSE && currStat == STAT_DEF))
                 {
                     if (gBattleMons[gActiveBattler].statStages[currStat] > 0)
                     {
@@ -7136,6 +7153,19 @@ static u8 ChangeStatBuffs(s8 statValue, u8 statId, u8 flags, const u8 *BS_ptr)
             }
             return STAT_CHANGE_DIDNT_WORK;
         }
+        else if (gBattleMons[gActiveBattler].ability == ABILITY_FIRM_DEFENSE
+                 && !certain && statId == STAT_DEF)
+        {
+            if (flags == STAT_CHANGE_BS_PTR)
+            {
+                BattleScriptPush(BS_ptr);
+                gBattleScripting.battler = gActiveBattler;
+                gBattlescriptCurrInstr = BattleScript_AbilityNoSpecificStatLoss;
+                gLastUsedAbility = gBattleMons[gActiveBattler].ability;
+                RecordAbilityBattle(gActiveBattler, gLastUsedAbility);
+            }
+            return STAT_CHANGE_DIDNT_WORK;
+        }
         else if (gBattleMons[gActiveBattler].ability == ABILITY_FLAWLESS && !flags)
         {
             return STAT_CHANGE_DIDNT_WORK;
@@ -7593,6 +7623,12 @@ static void atk96_weatherdamage(void)
         ++gBattlescriptCurrInstr;
         return;
     }
+	if (gBattleMons[gBattlerAttacker].hp == 0)
+    {
+        gBattleMoveDamage = 0;
+        ++gBattlescriptCurrInstr;
+        return;
+    } 
     if (WEATHER_HAS_EFFECT)
     {
         if (gBattleWeather & WEATHER_SANDSTORM_ANY)
@@ -9439,6 +9475,7 @@ static void atkE5_pickup(void)
 			else
 				newItem = oldItem;
 			SetMonData(&gPlayerParty[i], MON_DATA_HELD_ITEM, &newItem);
+			heldItem = newItem;
 		}
 		
 		// now consider picking something up
@@ -9458,7 +9495,7 @@ static void atkE5_pickup(void)
             if (!newItem && !(Random() % 10))
             {
                 // marisa and the fairies like mushrooms
-                if ((species >= SPECIES_CMARISA && species <= SPECIES_LMARISA) ||
+                if ((species >= SPECIES_CMARISA && species <= SPECIES_ADMARISA) ||
                     (species >= SPECIES_CSUNNY && species <= SPECIES_HSTAR))
                 {
                     if (Random() % 5)
@@ -9491,7 +9528,7 @@ static void atkE5_pickup(void)
 				// dumb unlucky idiot who can't find anything useful
 				if (species == SPECIES_CSHION || species == SPECIES_SHION)
 				{
-					rn = Random() % 20;
+					rn = Random() % 10;
 					switch (rn)
 					{
 						case 0: newItem = ITEM_RAWST_BERRY; break;
@@ -10268,6 +10305,8 @@ static void sp25_last_wish_affect(void);
 static void sp26_set_last_wish_target(void);
 static void sp27_salvage_armor_bank0(void);
 static void sp28_salvage_armor_bank1(void);
+static void sp29_check_explosion_viability(void);
+static void sp2a_set_jump_kick_recoil(void);
 
 void (* const gBattleScriptingSpecialsTable[])(void) =
 {
@@ -10312,6 +10351,8 @@ void (* const gBattleScriptingSpecialsTable[])(void) =
 	sp26_set_last_wish_target,
 	sp27_salvage_armor_bank0,
 	sp28_salvage_armor_bank1,
+	sp29_check_explosion_viability,
+	sp2a_set_jump_kick_recoil,
 };
 
 static void atkF8_special(void)
@@ -10987,7 +11028,7 @@ static void sp20_souvenir(void)
 static const u16 demonbookmoves[] = {
     MOVE_FACADE,
     MOVE_BRICK_BREAK,
-    MOVE_WING_ATTACK, // todo: drill peck?
+    MOVE_DRILL_PECK,
     MOVE_POISON_JAB,
     MOVE_ROCK_SLIDE,
     MOVE_CRUNCH,
@@ -11159,4 +11200,17 @@ static void sp28_salvage_armor_bank1()
         BattleScriptPushCursor();
         gBattlescriptCurrInstr = BattleScript_SalvageArmorActivates;
 	}
+}
+
+static void sp29_check_explosion_viability()
+{
+	if (gBattleMons[gBattlerTarget].hp == 0)
+		gBattlescriptCurrInstr = BattleScriptExplosionEndLoop;
+}
+
+static void sp2a_set_jump_kick_recoil()
+{
+	gBattleMoveDamage = gBattleMons[gBattlerAttacker].maxHP / 2;
+	if (gBattleMoveDamage == 0)
+		gBattleMoveDamage = 0;
 }

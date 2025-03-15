@@ -41,12 +41,8 @@ PowerPlant_EventScript_Zapdos:: @ 81637B8
 	setwildbattle SPECIES_TENSOKU, 50, ITEM_NONE
 	waitse
 	playmoncry SPECIES_TENSOKU, 2
-	message Text_Gyaoo
-	waitmessage
 	waitmoncry
 	delay 10
-	playbgm MUS_ENCOUNTER_GYM_LEADER, 0
-	waitbuttonpress
 	setflag FLAG_SYS_SPECIAL_WILD_BATTLE
 	special StartLegendaryBattle
 	waitstate
@@ -68,7 +64,7 @@ PowerPlant_EventScript_DefeatedZapdos:: @ 816381B
 	end
 
 PowerPlant_EventScript_RanFromZapdos:: @ 8163824
-	setvar VAR_0x8004, SPECIES_ZAPDOS
+	setvar VAR_0x8004, SPECIES_TENSOKU
 	goto EventScript_MonFlewAway
 	end
 

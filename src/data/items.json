@@ -1622,7 +1622,7 @@
       "price": 2100,
       "holdEffect": "HOLD_EFFECT_NONE",
       "holdEffectParam": 0,
-      "description_english": "A peculiar item that influences the\\nevolution of a certain puppet. Teaches...\\nhigh-school military robotics?",
+      "description_english": "A peculiar item that influences the\\nevolution of a certain puppet. For…\\nhigh-school military robotics?",
       "importance": 0,
       "exitsBagOnUse": 0,
       "pocket": "POCKET_ITEMS",
@@ -1633,12 +1633,12 @@
       "secondaryId": 0
     },
     {
-      "english": "Seal Crystal",
-      "itemId": "ITEM_SEAL_CRYSTAL",
+      "english": "Ibuki Gourd",
+      "itemId": "ITEM_IBUKI_GOURD",
       "price": 2100,
       "holdEffect": "HOLD_EFFECT_NONE",
       "holdEffectParam": 0,
-      "description_english": "A peculiar item that influences the\\nevolution of certain puppets. The\\nword to describe it escapes you.",
+      "description_english": "A peculiar item that influences the\\nevolution of certain puppets. It\\nsmells very strongly of alcohol.",
       "importance": 0,
       "exitsBagOnUse": 0,
       "pocket": "POCKET_ITEMS",
@@ -3793,12 +3793,12 @@
       "secondaryId": 0
     },
     {
-      "english": "????????",
-      "itemId": "ITEM_NONE",
-      "price": 0,
-      "holdEffect": "HOLD_EFFECT_NONE",
+      "english": "Toxic Orb",
+      "itemId": "ITEM_TOXIC_ORB",
+      "price": 2000,
+      "holdEffect": "HOLD_EFFECT_TOXIC_ORB",
       "holdEffectParam": 0,
-      "description_english": "?????",
+      "description_english": "An item to be held by a Puppet.\\nA bizarre and dangerous orb, it\\nbadly poisons its holder.",
       "importance": 0,
       "exitsBagOnUse": 0,
       "pocket": "POCKET_ITEMS",
@@ -3809,12 +3809,12 @@
       "secondaryId": 0
     },
     {
-      "english": "????????",
-      "itemId": "ITEM_NONE",
-      "price": 0,
-      "holdEffect": "HOLD_EFFECT_NONE",
+      "english": "Flame Orb",
+      "itemId": "ITEM_FLAME_ORB",
+      "price": 2000,
+      "holdEffect": "HOLD_EFFECT_FLAME_ORB",
       "holdEffectParam": 0,
-      "description_english": "?????",
+      "description_english": "An item to be held by a Puppet.\\nA bizarre and dangerous orb, it\\nburns its holder.",
       "importance": 0,
       "exitsBagOnUse": 0,
       "pocket": "POCKET_ITEMS",
@@ -4831,7 +4831,7 @@
     {
       "english": "TM13",
       "itemId": "ITEM_TM13",
-      "price": 3000,
+      "price": 8000,
       "holdEffect": "HOLD_EFFECT_NONE",
       "holdEffectParam": 0,
       "description_english": "An icy-cold beam is shot at the\\nfoe. It may leave the target\\nfrozen.",
@@ -4865,7 +4865,7 @@
     {
       "english": "TM15",
       "itemId": "ITEM_TM15",
-      "price": 7500,
+      "price": 4000,
       "holdEffect": "HOLD_EFFECT_NONE",
       "holdEffectParam": 0,
       "description_english": "A harsh attack that inflicts severe\\ndamage on the foe. However, the\\nuser must rest the next turn.",
@@ -4967,7 +4967,7 @@
     {
       "english": "TM21",
       "itemId": "ITEM_TM21",
-      "price": 1000,
+      "price": 8000,
       "holdEffect": "HOLD_EFFECT_NONE",
       "holdEffectParam": 0,
       "description_english": "This attack move grows more\\npowerful the more the POKéMON\\ndislikes its TRAINER.",
@@ -5018,7 +5018,7 @@
     {
       "english": "TM24",
       "itemId": "ITEM_TM24",
-      "price": 3000,
+      "price": 8000,
       "holdEffect": "HOLD_EFFECT_NONE",
       "holdEffectParam": 0,
       "description_english": "A massive jolt of electricity is\\nlaunched at the foe. It may cause\\nparalysis.",
@@ -5069,7 +5069,7 @@
     {
       "english": "TM27",
       "itemId": "ITEM_TM27",
-      "price": 1000,
+      "price": 4000,
       "holdEffect": "HOLD_EFFECT_NONE",
       "holdEffectParam": 0,
       "description_english": "This attack move grows more\\npowerful the more the POKéMON\\nlikes its TRAINER.",
@@ -5120,7 +5120,7 @@
     {
       "english": "TM30",
       "itemId": "ITEM_TM30",
-      "price": 3000,
+      "price": 8000,
       "holdEffect": "HOLD_EFFECT_NONE",
       "holdEffectParam": 0,
       "description_english": "The foe is attacked with a shadowy\\nlump. It may lower the target's\\nSP. DEF stat.",
@@ -5137,7 +5137,7 @@
     {
       "english": "TM31",
       "itemId": "ITEM_TM31",
-      "price": 3000,
+      "price": 4000,
       "holdEffect": "HOLD_EFFECT_NONE",
       "holdEffectParam": 0,
       "description_english": "Strikes the foe with a rock-hard\\nfist, etc. It shatters barriers such\\nas REFLECT and LIGHT SCREEN.",
@@ -5205,7 +5205,7 @@
     {
       "english": "TM35",
       "itemId": "ITEM_TM35",
-      "price": 3000,
+      "price": 8000,
       "holdEffect": "HOLD_EFFECT_NONE",
       "holdEffectParam": 0,
       "description_english": "The foe is roasted with a heavy\\nblast of fire. It may leave the\\ntarget with a burn.",
@@ -5358,7 +5358,7 @@
     {
       "english": "TM44",
       "itemId": "ITEM_TM44",
-      "price": 3000,
+      "price": 4000,
       "holdEffect": "HOLD_EFFECT_NONE",
       "holdEffectParam": 0,
       "description_english": "A move that makes the user fall\\nasleep over two turns to restore HP\\nand heal any status problems.",
@@ -5375,7 +5375,7 @@
     {
       "english": "TM45",
       "itemId": "ITEM_TM45",
-      "price": 3000,
+      "price": 4000,
       "holdEffect": "HOLD_EFFECT_NONE",
       "holdEffectParam": 0,
       "description_english": "The foe, if it is the opposite\\ngender as the user, becomes\\ninfatuated and may not attack.",
@@ -5579,7 +5579,7 @@
     {
       "english": "TM57",
       "itemId": "ITEM_TM57",
-      "price": 3000,
+      "price": 4000,
       "holdEffect": "HOLD_EFFECT_NONE",
       "holdEffectParam": 0,
       "description_english": "",
@@ -5630,7 +5630,7 @@
     {
       "english": "TM60",
       "itemId": "ITEM_TM60",
-      "price": 3000,
+      "price": 4000,
       "holdEffect": "HOLD_EFFECT_NONE",
       "holdEffectParam": 0,
       "description_english": "",
@@ -5885,7 +5885,7 @@
     {
       "english": "TM75",
       "itemId": "ITEM_TM75",
-      "price": 3000,
+      "price": 4000,
       "holdEffect": "HOLD_EFFECT_NONE",
       "holdEffectParam": 0,
       "description_english": "",
@@ -5919,7 +5919,7 @@
     {
       "english": "TM77",
       "itemId": "ITEM_TM77",
-      "price": 3000,
+      "price": 4000,
       "holdEffect": "HOLD_EFFECT_NONE",
       "holdEffectParam": 0,
       "description_english": "",
@@ -5936,7 +5936,7 @@
     {
       "english": "TM78",
       "itemId": "ITEM_TM78",
-      "price": 3000,
+      "price": 8000,
       "holdEffect": "HOLD_EFFECT_NONE",
       "holdEffectParam": 0,
       "description_english": "",
@@ -5953,7 +5953,7 @@
     {
       "english": "TM79",
       "itemId": "ITEM_TM79",
-      "price": 3000,
+      "price": 4000,
       "holdEffect": "HOLD_EFFECT_NONE",
       "holdEffectParam": 0,
       "description_english": "",

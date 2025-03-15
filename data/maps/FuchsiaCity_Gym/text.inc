@@ -129,26 +129,27 @@ FuchsiaCity_Gym_Text_ShawnPostBattle:: @ 8198A10
 FuchsiaCity_Gym_Text_GymGuyAdvice:: @ 8198A5E
     .string "Yo!\n"
     .string "Champ in the making!\p"
-    .string "FUCHSIA GYM is a tricked-up place.\n"
+    .string "Fuchsia Gym is a tricked-up place.\n"
     .string "It's riddled with invisible walls!\p"
-    .string "KOGA might appear close, but he's\n"
-    .string "blocked off.\p"
-    .string "You have to find gaps in the walls\n"
-    .string "to reach him.$"
+    .string "Koga himself is a tricky customer\n"
+    .string "as well.\p"
+    .string "If you don't have a strong Reason\n"
+    .string "or Earth Puppet, be ready for\l"
+	.string "a long, long fight.$"
 
 FuchsiaCity_Gym_Text_GymGuyPostVictory:: @ 8198B1D
     .string "It's amazing how ninja can terrify,\n"
     .string "even now!$"
 
 FuchsiaCity_Gym_Text_GymStatue:: @ 8198B4B
-    .string "FUCHSIA POKéMON GYM\n"
+    .string "FUCHSIA PUPPETRY GYM\n"
     .string "LEADER: KOGA\p"
     .string "WINNING TRAINERS:\n"
-    .string "{RIVAL}$"
+    .string "{OTHER_PC}, {RIVAL}$"
 
 FuchsiaCity_Gym_Text_GymStatuePlayerWon:: @ 8198B81
-    .string "FUCHSIA POKéMON GYM\n"
+    .string "FUCHSIA PUPPETRY GYM\n"
     .string "LEADER: KOGA\p"
     .string "WINNING TRAINERS:\n"
-    .string "{RIVAL}, {PLAYER}$"
+    .string "{OTHER_PC}, {RIVAL}, {PLAYER}$"
 

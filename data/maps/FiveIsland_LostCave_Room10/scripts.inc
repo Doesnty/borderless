@@ -30,6 +30,7 @@ FiveIsland_LostCave_Room10_EventScript_FindSelphyScene:: @ 8164C52
 	trainerbattle_no_intro TRAINER_LADY_SELPHY, FiveIsland_LostCave_Room10_Text_SelphyDefeat
 	msgbox FiveIsland_LostCave_Room10_Text_MayIAskYouToTakeMeHome
 	closemessage
+	clearflag FLAG_HIDE_SELPHY_LUCKY_EGG
 	call FiveIsland_LostCave_Room10_EventScript_SetSelphyFound
 	warp MAP_FIVE_ISLAND_RESORT_GORGEOUS, 255, 39, 10
 	waitstate

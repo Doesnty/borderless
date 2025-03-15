@@ -32,13 +32,14 @@ struct HallofFameMon
     u32 personality;
     u16 species;
     u8 lvl;
-    u8 nick[10];
+    u8 nick[13];
 };
 
 struct HallofFameTeam
 {
     struct HallofFameMon mon[PARTY_SIZE];
 };
+
 
 struct HofGfx
 {
@@ -52,7 +53,7 @@ static EWRAM_DATA u32 sSelectedPaletteIndices = 0;
 static EWRAM_DATA struct HallofFameTeam * sHofMonPtr = NULL;
 static EWRAM_DATA struct HofGfx * sHofGfxPtr = NULL;
 
-#define HALL_OF_FAME_MAX_TEAMS 50
+#define HALL_OF_FAME_MAX_TEAMS 40
 #define HALL_OF_FAME_BG_PAL    (RGB(22, 24, 29))
 
 static void Task_Hof_InitMonData(u8 taskId);

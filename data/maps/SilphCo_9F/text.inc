@@ -9,18 +9,18 @@ SilphCo_9F_Text_ThankYouSoMuch:: @ 8176B90
     .string "Thank you so much.$"
 
 SilphCo_9F_Text_Grunt1Intro:: @ 8176BA3
-    .string "Your POKéMON seem to adore you,\n"
+    .string "Your Puppets seem to adore you,\n"
     .string "kid!$"
 
 SilphCo_9F_Text_Grunt1Defeat:: @ 8176BC8
     .string "Ghaaah!$"
 
 SilphCo_9F_Text_Grunt1PostBattle:: @ 8176BD0
-    .string "If I had started as a TRAINER at\n"
+    .string "If I had started as a Trainer at\n"
     .string "your age…$"
 
 SilphCo_9F_Text_EdIntro:: @ 8176BFB
-    .string "Your POKéMON have weak points!\n"
+    .string "Your Puppets have weak points!\n"
     .string "I can nail them!$"
 
 SilphCo_9F_Text_EdDefeat:: @ 8176C2B
@@ -31,8 +31,8 @@ SilphCo_9F_Text_EdPostBattle:: @ 8176C3C
     .string "Think about type advantages.$"
 
 SilphCo_9F_Text_Grunt2Intro:: @ 8176C7A
-    .string "I am one of the four ROCKET\n"
-    .string "BROTHERS!$"
+    .string "I am one of the four Rocket\n"
+    .string "Brothers!$"
 
 SilphCo_9F_Text_Grunt2Defeat:: @ 8176CA0
     .string "Warg!\n"

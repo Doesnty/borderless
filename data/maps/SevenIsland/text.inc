@@ -22,8 +22,8 @@ SevenIsland_Text_IslandSign:: @ 8183046
     .string "Quest Island of Infinity$"
 
 SevenIsland_Text_IslandsMadeInSevenDays:: @ 818306C
-    .string "These islands are called the SEVII\n"
-    .string "ISLANDS because there are seven.\p"
+    .string "These islands are called the Sevii\n"
+    .string "Islands because there are seven.\p"
     .string "…Or at least that's what the young\n"
     .string "people believe.\p"
     .string "The truth is, these islands are so\n"

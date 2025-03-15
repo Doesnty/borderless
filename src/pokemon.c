@@ -104,7 +104,6 @@ static const u16 sSpeciesToNationalPokedexNum[] = // Assigns all species to the 
     NATIONAL_DEX_AMARISA,
     NATIONAL_DEX_SMARISA,
     NATIONAL_DEX_ADMARISA,
-    NATIONAL_DEX_LMARISA,
     NATIONAL_DEX_CRUMIA,
     NATIONAL_DEX_RUMIA,
     NATIONAL_DEX_ARUMIA,
@@ -177,14 +176,13 @@ static const u16 sSpeciesToNationalPokedexNum[] = // Assigns all species to the 
     NATIONAL_DEX_HLYRICA,
     NATIONAL_DEX_CYOUMU,
     NATIONAL_DEX_YOUMU,
+    NATIONAL_DEX_AYOUMU,
     NATIONAL_DEX_DYOUMU,
     NATIONAL_DEX_SYOUMU,
-    NATIONAL_DEX_LYOUMU,
     NATIONAL_DEX_CYUYUKO,
     NATIONAL_DEX_YUYUKO,
     NATIONAL_DEX_AYUYUKO,
     NATIONAL_DEX_DYUYUKO,
-    NATIONAL_DEX_LYUYUKO,
     NATIONAL_DEX_CRAN,
     NATIONAL_DEX_RAN,
     NATIONAL_DEX_ARAN,
@@ -199,6 +197,7 @@ static const u16 sSpeciesToNationalPokedexNum[] = // Assigns all species to the 
     NATIONAL_DEX_SUIKA,
     NATIONAL_DEX_ASUIKA,
     NATIONAL_DEX_TSUIKA,
+    NATIONAL_DEX_MPSUIKA,
     NATIONAL_DEX_CWRIGGLE,
     NATIONAL_DEX_WRIGGLE,
     NATIONAL_DEX_DWRIGGLE,
@@ -406,6 +405,7 @@ static const u16 sSpeciesToNationalPokedexNum[] = // Assigns all species to the 
     NATIONAL_DEX_STOJIKO,
     NATIONAL_DEX_CFUTO,
     NATIONAL_DEX_FUTO,
+    NATIONAL_DEX_AFUTO,
     NATIONAL_DEX_TFUTO,
     NATIONAL_DEX_CMIKO,
     NATIONAL_DEX_MIKO,
@@ -448,6 +448,8 @@ static const u16 sSpeciesToNationalPokedexNum[] = // Assigns all species to the 
     NATIONAL_DEX_HKASEN,
     NATIONAL_DEX_CSUMIREKO,
     NATIONAL_DEX_SUMIREKO,
+    NATIONAL_DEX_SSUMIREKO,
+    NATIONAL_DEX_TSUMIREKO,
     NATIONAL_DEX_CSEIRAN,
     NATIONAL_DEX_SEIRAN,
     NATIONAL_DEX_CRINGO,
@@ -474,6 +476,7 @@ static const u16 sSpeciesToNationalPokedexNum[] = // Assigns all species to the 
     NATIONAL_DEX_AUNN,
     NATIONAL_DEX_CNARUMI,
     NATIONAL_DEX_NARUMI,
+    NATIONAL_DEX_ANARUMI,
     NATIONAL_DEX_CMAI_AND_SATONO,
     NATIONAL_DEX_MAI_AND_SATONO,
     NATIONAL_DEX_COKINA,
@@ -512,6 +515,8 @@ static const u16 sSpeciesToNationalPokedexNum[] = // Assigns all species to the 
     NATIONAL_DEX_MOMOYO,
     NATIONAL_DEX_CMIYOI,
     NATIONAL_DEX_MIYOI,
+    NATIONAL_DEX_CMIZUCHI,
+    NATIONAL_DEX_MIZUCHI,
     NATIONAL_DEX_CBITEN,
     NATIONAL_DEX_BITEN,
     NATIONAL_DEX_CENOKO,
@@ -562,6 +567,7 @@ static const u16 sSpeciesToNationalPokedexNum[] = // Assigns all species to the 
     NATIONAL_DEX_CHIYURI,
     NATIONAL_DEX_CYUMEMI,
     NATIONAL_DEX_YUMEMI,
+    NATIONAL_DEX_TYUMEMI,
     NATIONAL_DEX_RUUKOTO,
     NATIONAL_DEX_MIMI_CHAN,
     NATIONAL_DEX_CORANGE,
@@ -591,6 +597,7 @@ static const u16 sSpeciesToNationalPokedexNum[] = // Assigns all species to the 
     NATIONAL_DEX_YUMEKO,
     NATIONAL_DEX_CSHINKI,
     NATIONAL_DEX_SHINKI,
+    NATIONAL_DEX_ASHINKI,
     NATIONAL_DEX_CSENDAI,
     NATIONAL_DEX_SENDAI,
     NATIONAL_DEX_CTENMA,
@@ -1498,7 +1505,7 @@ void SetBattleMonMoveSlot(struct BattlePokemon *mon, u16 move, u8 slot)
     mon->pp[slot] = gBattleMoves[move].pp;
 }
 
-static void GiveMonInitialMoveset(struct Pokemon *mon)
+void GiveMonInitialMoveset(struct Pokemon *mon)
 {
     GiveBoxMonInitialMoveset(&mon->box);
 }
@@ -1508,6 +1515,41 @@ static void GiveBoxMonInitialMoveset(struct BoxPokemon *boxMon)
     u16 species = GetBoxMonData(boxMon, MON_DATA_SPECIES, NULL);
     s32 level = GetLevelFromBoxMonExp(boxMon);
     s32 i;
+	
+	switch (species)
+	{
+		case SPECIES_XUTSUHO:
+			GiveMoveToBoxMon(boxMon, MOVE_FLAMETHROWER);
+			GiveMoveToBoxMon(boxMon, MOVE_SKY_ATTACK);
+			GiveMoveToBoxMon(boxMon, MOVE_SACRED_FIRE);
+			GiveMoveToBoxMon(boxMon, MOVE_ROOST);
+			return;
+		case SPECIES_XSUWAKO:
+			GiveMoveToBoxMon(boxMon, MOVE_EARTHQUAKE);
+			GiveMoveToBoxMon(boxMon, MOVE_SPLASHBACK);
+			GiveMoveToBoxMon(boxMon, MOVE_MISHAGUJI);
+			GiveMoveToBoxMon(boxMon, MOVE_AQUA_RING);
+			return;
+		case SPECIES_XTENSHI:
+			GiveMoveToBoxMon(boxMon, MOVE_EARTHQUAKE);
+			GiveMoveToBoxMon(boxMon, MOVE_DRAWN_LINE);
+			GiveMoveToBoxMon(boxMon, MOVE_SWORDS_DANCE);
+			GiveMoveToBoxMon(boxMon, MOVE_AEGIS_MERGE);
+			return;
+		case SPECIES_XTENMA:
+			GiveMoveToBoxMon(boxMon, MOVE_OBLIVION_WING);
+			GiveMoveToBoxMon(boxMon, MOVE_DISCHARGE);
+			GiveMoveToBoxMon(boxMon, MOVE_SILVER_WIND);
+			GiveMoveToBoxMon(boxMon, MOVE_NASTY_PLOT);
+			return;
+		case SPECIES_XSENDAI:
+			GiveMoveToBoxMon(boxMon, MOVE_EXTERMINATE);
+			GiveMoveToBoxMon(boxMon, MOVE_CLOSE_COMBAT);
+			GiveMoveToBoxMon(boxMon, MOVE_GALE_DANCE);
+			GiveMoveToBoxMon(boxMon, MOVE_REST);
+			return;
+	}
+		
 
     for (i = 0; gLevelUpLearnsets[species][i] != LEVEL_UP_END; i++)
     {
@@ -1624,8 +1666,8 @@ static const u8 sFlailHpScaleToPowerTable[] =
     4, 150,
     9, 100,
     16, 80,
-    32, 40,
-    48, 20
+    32, 50,
+    48, 40
 };
 
 
@@ -1724,11 +1766,11 @@ s32 CalculateBaseDamage(struct BattlePokemon *attacker, struct BattlePokemon *de
     if (move == MOVE_FOUL_PLAY && attacker->ability == ABILITY_PERVERSION)
         attack = defender->spAttack;
 	else if (move == MOVE_TAKE_OVER && attacker->ability == ABILITY_PERVERSION)
-		attack = defender->attack;
+		spAttack = defender->attack;
     else if (move == MOVE_FOUL_PLAY)
         attack = defender->attack;
 	else if (move == MOVE_TAKE_OVER)
-		attack = defender->spAttack;
+		spAttack = defender->spAttack;
     else if (attacker->ability == ABILITY_PERVERSION)
     {
         u16 buffer = spAttack;
@@ -1832,8 +1874,8 @@ s32 CalculateBaseDamage(struct BattlePokemon *attacker, struct BattlePokemon *de
 	}
 	if (attackerHoldEffect == HOLD_EFFECT_ROUKANKEN && 
 		(attacker->species == SPECIES_CYOUMU || attacker->species == SPECIES_YOUMU ||
-		 attacker->species == SPECIES_DYOUMU || attacker->species == SPECIES_SYOUMU ||
-		 attacker->species == SPECIES_LYOUMU ||
+		 attacker->species == SPECIES_AYOUMU || attacker->species == SPECIES_DYOUMU ||
+		 attacker->species == SPECIES_SYOUMU ||
 		 attacker->species == SPECIES_CYOUKI || attacker->species == SPECIES_YOUKI) &&
 		(type == TYPE_STEEL || type == TYPE_GHOST))
 	{
@@ -1854,6 +1896,11 @@ s32 CalculateBaseDamage(struct BattlePokemon *attacker, struct BattlePokemon *de
     {
         attack /= 2;
         spAttack /= 2;
+    }
+    if (defenderAbility == ABILITY_ATHEISM && (type == TYPE_FAITH))
+    {
+        attack /= 4;
+        spAttack /= 4;
     }
     if (attacker->ability == ABILITY_HUSTLE)
         attack = (150 * attack) / 100;
@@ -5109,15 +5156,49 @@ u8 GetMoveRelearnerMoves(struct Pokemon *mon, u16 *moves)
 u8 GetEggRelearnerMoves(struct Pokemon *mon, u16 *moves)
 {
 	u8 i = 0;
+	u8 movesindex = 0;
 	u16 species = GetMonData(mon, MON_DATA_SPECIES, NULL);
+	u16 knownmoves[4];
+	u16 currMove;
 	
-	while (gEggMoveLearnsets[species][i] != 0)
+	knownmoves[0] = GetMonData(mon, MON_DATA_MOVE1, 0);
+	knownmoves[1] = GetMonData(mon, MON_DATA_MOVE2, 0);
+	knownmoves[2] = GetMonData(mon, MON_DATA_MOVE3, 0);
+	knownmoves[3] = GetMonData(mon, MON_DATA_MOVE4, 0);
+	
+	if (species == SPECIES_AKYUU)
 	{
-		moves[i] = gEggMoveLearnsets[species][i];
-		i++;
+		u8 j;
+		u8 k;
+		for (j = 0; j < 6; j++)
+		{
+			for (k = 0; k < 4; k++)
+			{
+				currMove = GetMonData(&gPlayerParty[j], MON_DATA_MOVE1 + k, 0);
+				if (currMove && currMove != knownmoves[0] && currMove != knownmoves[1] && currMove != knownmoves[2] && currMove != knownmoves[3])
+				{
+					moves[movesindex] = currMove;
+					movesindex++;
+				}
+			}
+		}
+	}
+	else
+	{
+		while (gEggMoveLearnsets[species][i] != 0)
+		{
+			currMove = gEggMoveLearnsets[species][i];
+			if (currMove != knownmoves[0] && currMove != knownmoves[1] && currMove != knownmoves[2] && currMove != knownmoves[3])
+			{
+				moves[movesindex] = gEggMoveLearnsets[species][i];
+				movesindex++;
+			}
+			i++;
+		}
 	}
 	
-	return i;
+	
+	return movesindex;
 }
 
 u8 GetLevelUpMovesBySpecies(u16 species, u16 *moves)
@@ -5174,6 +5255,50 @@ u8 GetNumberOfRelearnableMoves(struct Pokemon *mon)
     return numMoves;
 }
 
+u8 GetNumberOfEggLearnableMoves(struct Pokemon *mon)
+{
+	u8 i = 0;
+	u8 movesindex = 0;
+	u16 species = GetMonData(mon, MON_DATA_SPECIES, NULL);
+	u16 knownmoves[4];
+	u16 currMove;
+	
+	knownmoves[0] = GetMonData(mon, MON_DATA_MOVE1, 0);
+	knownmoves[1] = GetMonData(mon, MON_DATA_MOVE2, 0);
+	knownmoves[2] = GetMonData(mon, MON_DATA_MOVE3, 0);
+	knownmoves[3] = GetMonData(mon, MON_DATA_MOVE4, 0);
+	
+	if (species == SPECIES_AKYUU)
+	{
+		u8 j;
+		u8 k;
+		for (j = 0; j < 6; j++)
+		{
+			for (k = 0; k < 4; k++)
+			{
+				currMove = GetMonData(&gPlayerParty[j], MON_DATA_MOVE1 + k, 0);
+				if (currMove && currMove != knownmoves[0] && currMove != knownmoves[1] && currMove != knownmoves[2] && currMove != knownmoves[3])
+				{
+					movesindex++;
+				}
+			}
+		}
+	}
+	else
+	{
+		while (gEggMoveLearnsets[species][i] != 0)
+		{
+			currMove = gEggMoveLearnsets[species][i];
+			if (currMove != knownmoves[0] && currMove != knownmoves[1] && currMove != knownmoves[2] && currMove != knownmoves[3])
+			{
+				movesindex++;
+			}
+			i++;
+		}
+	}
+	return movesindex;
+}
+
 u16 SpeciesToPokedexNum(u16 species)
 {
     species = SpeciesToNationalPokedexNum(species);
@@ -5211,6 +5336,7 @@ static u16 GetBattleBGM(void)
             gBattleTypeFlags |= BATTLE_TYPE_IMAKUNI;
             return MUS_VS_IMAKUNI;
         case TRAINER_CLASS_BOSS:
+        case TRAINER_CLASS_ROCKET_ADMIN:
 		case TRAINER_CLASS_FAKE_ACE:
 			return MUS_RS_VS_GYM_LEADER;
         case TRAINER_CLASS_TEAM_ROCKET:
@@ -5841,9 +5967,10 @@ static const u16 sZunStarters[] =
     SPECIES_CCHIMATA,
     SPECIES_CMOMOYO,
     SPECIES_CMIYOI,
+	SPECIES_CMIZUCHI,
     SPECIES_CBITEN,
+	
     SPECIES_CENOKO,
-    
     SPECIES_CCHIYARI,
     SPECIES_CHISAMI,
     SPECIES_CZANMU,
@@ -5851,13 +5978,12 @@ static const u16 sZunStarters[] =
     SPECIES_CKIRISAME,
     SPECIES_CSHINGYOKU,
     SPECIES_CMAGAN,
+	
     SPECIES_CMIMA,
-    
     SPECIES_CELIS,
     SPECIES_CKIKURI,
     SPECIES_CKONNGARA,
     SPECIES_CSARIEL,
-    SPECIES_GENJI,
     SPECIES_CRIKA,
     SPECIES_CMEIRA,
     SPECIES_CELLEN,
@@ -5900,6 +6026,16 @@ u16 SelectZunStarter(void)
         value = sZunStarters[Random() % (NELEMS(sZunStarters))];
     
     return value;
+}
+
+u16 GetZunStarterEvolution(void)
+{
+	u16 zunstarter = VarGet(VAR_ZUN_STARTER_SPECIES);
+	
+	if (gEvolutionTable[zunstarter][0].targetSpecies != 0)
+		return gEvolutionTable[zunstarter][0].targetSpecies;
+	else
+		return zunstarter;
 }
 
 u8 GetNatureStringIndex(struct Pokemon *mon)

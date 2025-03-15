@@ -21,7 +21,7 @@ CinnabarIsland_Text_PokemonLab:: @ 8180C3E
     .string "POKéMON+PUPPET LAB$"
 
 CinnabarIsland_Text_GymSign:: @ 8180C4A
-    .string "CINNABAR ISLAND PUPPET GYM\n"
+    .string "CINNABAR ISLAND PUPPETRY GYM\n"
     .string "LEADER: BLAINE\l"
     .string "The Hotheaded Quiz Master!$"
 

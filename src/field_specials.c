@@ -1519,9 +1519,9 @@ void ForcePlayerToStartSurfing(void)
 }
 
 static const u16 sStarterSpecies[] = {
-    SPECIES_BULBASAUR,
-    SPECIES_SQUIRTLE,
-    SPECIES_CHARMANDER
+    SPECIES_CSUMIREKO,
+    SPECIES_CFUTO,
+    SPECIES_CKOKORO
 };
 
 static u16 GetStarterSpeciesById(u16 idx)

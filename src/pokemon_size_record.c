@@ -161,14 +161,14 @@ void GetHeracrossSizeRecordInfo(void)
 {
     u16 *sizeRecord = GetVarPointer(VAR_HERACROSS_SIZE_RECORD);
 
-    GetMonSizeRecordInfo(SPECIES_HERACROSS, sizeRecord);
+    GetMonSizeRecordInfo(SPECIES_MOMOYO, sizeRecord);
 }
 
 void CompareHeracrossSize(void)
 {
     u16 *sizeRecord = GetVarPointer(VAR_HERACROSS_SIZE_RECORD);
 
-    gSpecialVar_Result = CompareMonSize(SPECIES_HERACROSS, sizeRecord);
+    gSpecialVar_Result = CompareMonSize(SPECIES_MOMOYO, sizeRecord);
 }
 
 void InitMagikarpSizeRecord(void)

@@ -136,10 +136,10 @@ SaffronCity_Gym_Text_PrestonPostBattle:: @ 819BCC4
 SaffronCity_Gym_Text_GymGuyAdvice:: @ 819BCF6
     .string "Yo!\n"
     .string "Champ in the making!\p"
-    .string "SABRINA's POKéMON use psychic\n"
+    .string "Sabrina's Puppets use magic\n"
     .string "power instead of force.\p"
-    .string "FIGHTING POKéMON are especially\n"
-    .string "weak against PSYCHIC POKéMON.\p"
+    .string "Fighting Puppets are especially\n"
+    .string "weak against Reason Puppets.\p"
     .string "They'll get destroyed before they\n"
     .string "can even aim a punch!$"
 
@@ -149,14 +149,14 @@ SaffronCity_Gym_Text_GymGuyPostVictory:: @ 819BDBB
     .string "at the slots!$"
 
 SaffronCity_Gym_Text_GymStatue:: @ 819BDFE
-    .string "SAFFRON PUPPET GYM\n"
+    .string "SAFFRON PUPPETRY GYM\n"
     .string "LEADER: SABRINA\p"
     .string "WINNING TRAINERS:\n"
-    .string "{RIVAL}$"
+    .string "{OTHER_PC}, {RIVAL}$"
 
 SaffronCity_Gym_Text_GymStatuePlayerWon:: @ 819BE37
-    .string "SAFFRON PUPPET GYM\n"
+    .string "SAFFRON PUPPETRY GYM\n"
     .string "LEADER: SABRINA\p"
     .string "WINNING TRAINERS:\n"
-    .string "{RIVAL}, {PLAYER}$"
+    .string "{OTHER_PC}, {RIVAL}, {PLAYER}$"
 

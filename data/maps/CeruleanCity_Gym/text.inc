@@ -65,28 +65,28 @@ CeruleanCity_Gym_Text_GymGuyAdvice:: @ 81925AC
     .string "Yo!\n"
     .string "Champ in the making!\p"
     .string "Let me give you some advice!\p"
-    .string "The LEADER, MISTY, is a pro who\n"
-    .string "uses WATER-type POKéMON.\p"
-    .string "You can drain all their water with\n"
-    .string "GRASS-type POKéMON.\p"
-    .string "Or, you might use ELECTRIC-type\n"
-    .string "POKéMON and zap them!$"
+    .string "The Leader, Misty, is a pro who\n"
+    .string "uses Water-type Puppets.\p"
+    .string "You can bust through with Nature\n"
+    .string "or Electric-type moves.\p"
+    .string "Have you found any TMs?\n"
+    .string "Don't be afraid to use them!$"
 
 CeruleanCity_Gym_Text_WeMakePrettyGoodTeam:: @ 8192688
-    .string "You beat MISTY!\n"
+    .string "You beat Misty!\n"
     .string "See, what'd I tell ya?\p"
     .string "You and me, kid, we make a pretty\n"
     .string "darn-good team!$"
 
 CeruleanCity_Gym_Text_GymStatue:: @ 81926E1
-    .string "CERULEAN POKéMON GYM\n"
+    .string "CERULEAN PUPPETRY GYM\n"
     .string "LEADER: MISTY\p"
     .string "WINNING TRAINERS:\n"
-    .string "{RIVAL}$"
+    .string "{OTHER_PC}, {RIVAL}$"
 
 CeruleanCity_Gym_Text_GymStatuePlayerWon:: @ 8192719
-    .string "CERULEAN POKéMON GYM\n"
+    .string "CERULEAN PUPPETRY GYM\n"
     .string "LEADER: MISTY\p"
     .string "WINNING TRAINERS:\n"
-    .string "{RIVAL}, {PLAYER}$"
+    .string "{OTHER_PC}, {RIVAL}, {PLAYER}$"
 

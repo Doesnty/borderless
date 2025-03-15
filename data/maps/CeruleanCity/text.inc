@@ -156,7 +156,7 @@ CeruleanCity_Text_ThisIsCeruleanCave:: @ 817F319
     .string "It takes a very special Trainer to\n"
     .string "be allowed inside there.\p"
     .string "You'd have to be strong enough to\n"
-    .string "become the Puppet League\l"
+    .string "become the Puppetry League\l"
     .string "Champion for starters.\p"
     .string "And, you would have to have\n"
     .string "made a great achievement.$"
@@ -178,7 +178,7 @@ CeruleanCity_Text_BikeShopSign:: @ 817F4C5
     .string "BIKE SHOP$"
 
 CeruleanCity_Text_GymSign:: @ 817F4EF
-    .string "CERULEAN CITY PUPPET GYM\n"
+    .string "CERULEAN CITY PUPPETRY GYM\n"
     .string "LEADER: MISTY\l"
     .string "The Tomboyish Mermaid!$"
 

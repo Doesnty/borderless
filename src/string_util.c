@@ -36,6 +36,8 @@ extern u8 gExpandedPlaceholder_Kyogre[];
 extern u8 gExpandedPlaceholder_Groudon[];
 extern u8 gExpandedPlaceholder_Red[];
 extern u8 gExpandedPlaceholder_Green[];
+extern u8 gText_Renko[];
+extern u8 gText_Maribel[];
 
 u8 *StringCopy10(u8 *dest, const u8 *src)
 {
@@ -416,11 +418,9 @@ static u8 *ExpandPlaceholder_RivalName(void)
 
 static u8 *ExpandPlaceholder_Version(void)
 {
-#if defined(FIRERED)
-    return gExpandedPlaceholder_Ruby;
-#elif defined(LEAFGREEN)
-    return gExpandedPlaceholder_Sapphire;
-#endif
+	if (gSaveBlock2Ptr->playerGender == MALE)
+		return gText_Maribel;
+	return gText_Renko;
 }
 
 static u8 *ExpandPlaceholder_Magma(void)

@@ -2,8 +2,12 @@
 #define GUARD_METATILE_LABELS_H
 
 // gTileset_Building
-#define METATILE_Building_PCOff  0x062
-#define METATILE_Building_PCOn   0x063
+#define METATILE_Building_PCOff             0x062
+#define METATILE_Building_PCOn              0x063
+#define METATILE_Building_SwitchOff         0x242
+#define METATILE_Building_SwitchOffCovered  0x244
+#define METATILE_Building_SwitchOn          0x243
+#define METATILE_Building_SwitchOnCovered   0x245
 
 // gTileset_Cave
 #define METATILE_Cave_Floor_Ledge_Bottom  0x2E1

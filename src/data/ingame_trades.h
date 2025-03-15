@@ -65,7 +65,7 @@ static const struct InGameTrade sInGameTrades[] = {
         .otName = _("Kalt"),
         .otGender = MALE,
         .sheen = 0,
-        .requestedSpecies = SPECIES_REISEN_II
+        .requestedSpecies = SPECIES_CREISEN_II
     }, 
     [INGAME_TRADE_NIDORINOA] = 
     {

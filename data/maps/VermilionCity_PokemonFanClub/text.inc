@@ -37,7 +37,7 @@ VermilionCity_PokemonFanClub_Text_DidYouComeToHearAboutMyMons:: @ 819457E
 VermilionCity_PokemonFanClub_Text_ChairmansStory:: @ 8194628
     .string "Good!\n"
     .string "Then listen up!\p"
-    .string "My favorite Shinki…\p"
+    .string "My favorite {STR_VAR_1}…\p"
     .string "It's…cute…lovely…smart… \n"
     .string "plus…amazing…you think so?…\l"
     .string "oh yes…it's…stunning…\l"
@@ -71,7 +71,7 @@ VermilionCity_PokemonFanClub_Text_ComeBackToHearStory:: @ 8194860
 VermilionCity_PokemonFanClub_Text_DidntComeToSeeAboutMonsAgain:: @ 819488E
     .string "Hello, {PLAYER}!\p"
     .string "Did you come see me about my\n"
-    .string "Puppets again?\p"
+    .string "{STR_VAR_1} again?\p"
     .string "No?\n"
     .string "Too bad!$"
 

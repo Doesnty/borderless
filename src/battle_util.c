@@ -1179,7 +1179,7 @@ bool8 HandleWishPerishSongOnTurnEnd(void)
 
 #define FAINTED_ACTIONS_MAX_CASE 7
 
-bool8 HandleFaintedMonActions(void)
+bool8 HandleFaintedMonActions(u8 replace)
 {
     if (gBattleTypeFlags & BATTLE_TYPE_SAFARI)
         return FALSE;
@@ -1230,7 +1230,10 @@ bool8 HandleFaintedMonActions(void)
                 if (gBattleMons[gBattleStruct->faintedActionsBattlerId].hp == 0
                  && !(gAbsentBattlerFlags & gBitTable[gBattleStruct->faintedActionsBattlerId]))
                 {
-                    BattleScriptExecute(BattleScript_HandleFaintedMon);
+					if (replace)
+						BattleScriptExecute(BattleScript_HandleFaintedMon);
+					else
+						BattleScriptExecute(BattleScript_HandleFaintedMonMidTurn);
                     gBattleStruct->faintedActionsState = 5;
                     return TRUE;
                 }
@@ -2157,7 +2160,7 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u8 ability, u8 special, u16 moveA
                 switch (gLastUsedAbility)
                 {
                 case ABILITY_VOLT_ABSORB:
-                    if (moveType == TYPE_ELECTRIC)
+                    if (moveType == TYPE_ELECTRIC && gBattleMons[battler].hp > 0)
                     {
                         if (gProtectStructs[gBattlerAttacker].notFirstStrike)
                             gBattlescriptCurrInstr = BattleScript_MoveHPDrain;
@@ -2167,7 +2170,7 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u8 ability, u8 special, u16 moveA
                     }
                     break;
                 case ABILITY_WATER_ABSORB:
-                    if (moveType == TYPE_WATER && gBattlerAttacker != gBattlerTarget)
+                    if (moveType == TYPE_WATER && gBattlerAttacker != gBattlerTarget && gBattleMons[battler].hp > 0)
                     {
                         if (gProtectStructs[gBattlerAttacker].notFirstStrike)
                             gBattlescriptCurrInstr = BattleScript_MoveHPDrain;
@@ -2177,7 +2180,7 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u8 ability, u8 special, u16 moveA
                     }
                     break;
                 case ABILITY_STORM_DRAIN:
-                    if (moveType == TYPE_WATER && gBattlerAttacker != gBattlerTarget)
+                    if (moveType == TYPE_WATER && gBattlerAttacker != gBattlerTarget && gBattleMons[battler].hp > 0)
                     {
                         gBattleScripting.battler = gBattlerTarget;
                         if (gBattleMons[gBattlerTarget].statStages[STAT_SPATK] == 12)
@@ -2201,7 +2204,7 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u8 ability, u8 special, u16 moveA
                     }
                     break;
                 case ABILITY_FLASH_FIRE:
-                    if (moveType == TYPE_FIRE && !(gBattleMons[battler].status1 & STATUS1_FREEZE))
+                    if (moveType == TYPE_FIRE && !(gBattleMons[battler].status1 & STATUS1_FREEZE) && gBattleMons[battler].hp > 0)
                     {
                         if (!(gBattleResources->flags->flags[battler] & RESOURCE_FLAG_FLASH_FIRE))
                         {
@@ -2225,7 +2228,7 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u8 ability, u8 special, u16 moveA
                     }
                     break;
                 case ABILITY_LIGHTNING_ROD:
-                    if (moveType == TYPE_ELECTRIC)
+                    if (moveType == TYPE_ELECTRIC && gBattleMons[battler].hp > 0)
                     {
                         gBattleScripting.battler = gBattlerTarget;
                         if (gBattleMons[gBattlerTarget].statStages[STAT_SPATK] == 12)
@@ -2249,7 +2252,7 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u8 ability, u8 special, u16 moveA
                     }
                     break;
                 case ABILITY_MOTOR_DRIVE:
-                    if (moveType == TYPE_ELECTRIC)
+                    if (moveType == TYPE_ELECTRIC && gBattleMons[battler].hp > 0)
                     {
                         gBattleScripting.battler = gBattlerTarget;
                         if (gBattleMons[gBattlerTarget].statStages[STAT_SPEED] == 12)
@@ -2273,7 +2276,7 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u8 ability, u8 special, u16 moveA
                     }
                     break;
                 case ABILITY_SAP_SIPPER:
-                    if (moveType == TYPE_NATURE)
+                    if (moveType == TYPE_NATURE && gBattleMons[battler].hp > 0)
                     {
                         gBattleScripting.battler = gBattlerTarget;
                         if (gBattleMons[gBattlerTarget].statStages[STAT_ATK] == 12)
@@ -3128,13 +3131,13 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u8 ability, u8 special, u16 moveA
 						}
 					}
 					
+                    gStatuses3[i] &= ~(STATUS3_TRACE);
 					if (effect)
 					{
                         BattleScriptPushCursorAndCallback(BattleScript_AnticipationShudder);
 						gBattleScripting.battler = i;
 						break;
 					}
-                    gStatuses3[i] &= ~(STATUS3_TRACE);
 				}
             }
             break;
@@ -3900,6 +3903,32 @@ u8 ItemBattleEffects(u8 caseID, u8 battlerId, bool8 moveTurn)
                     effect = ITEM_EFFECT_OTHER;
                 }
                 break;
+			case HOLD_EFFECT_TOXIC_ORB:
+				if (!gBattleMons[battlerId].status1 && gBattleMons[battlerId].hp > 0 && !moveTurn &&
+					gBattleMons[battlerId].ability != ABILITY_IMMUNITY &&
+					gBattleMons[battlerId].type1 != TYPE_MIASMA &&
+					gBattleMons[battlerId].type1 != TYPE_STEEL &&
+					gBattleMons[battlerId].type2 != TYPE_MIASMA &&
+					gBattleMons[battlerId].type2 != TYPE_STEEL)
+				{
+					gBattleMons[battlerId].status1 |= STATUS1_TOXIC_POISON;
+                    BattleScriptExecute(BattleScript_ItemToxicOrb);
+					gBattlerAttacker = battlerId;
+                    effect = ITEM_STATUS_CHANGE;
+				}
+				break;
+			case HOLD_EFFECT_FLAME_ORB:
+				if (!gBattleMons[battlerId].status1 && gBattleMons[battlerId].hp > 0 && !moveTurn &&
+					gBattleMons[battlerId].ability != ABILITY_WATER_VEIL &&
+					gBattleMons[battlerId].type1 != TYPE_FIRE &&
+					gBattleMons[battlerId].type2 != TYPE_FIRE)
+				{
+					gBattleMons[battlerId].status1 |= STATUS1_BURN;
+                    BattleScriptExecute(BattleScript_ItemFlameOrb);
+					gBattlerAttacker = battlerId;
+                    effect = ITEM_STATUS_CHANGE;
+				}
+				break;
             }
             if (effect)
             {

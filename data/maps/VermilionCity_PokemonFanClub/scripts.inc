@@ -10,6 +10,8 @@ VermilionCity_PokemonFanClub_MapScripts:: @ 816B47E
 VermilionCity_PokemonFanClub_EventScript_Chairman:: @ 816B47F
 	lock
 	faceplayer
+    specialvar VAR_TEMP_1, GetZunStarterEvolution
+    getspeciesname 0, VAR_TEMP_1
 	goto_if_set FLAG_GOT_BIKE_VOUCHER, VermilionCity_PokemonFanClub_EventScript_AlreadyHeardStory
 	msgbox VermilionCity_PokemonFanClub_Text_DidYouComeToHearAboutMyMons, MSGBOX_YESNO
 	compare VAR_RESULT, YES

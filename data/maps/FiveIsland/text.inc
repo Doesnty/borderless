@@ -4,7 +4,7 @@ FiveIsland_Text_IslandSign:: @ 8182DFB
 
 FiveIsland_Text_WeirdBuildingInMeadow:: @ 8182E26
     .string "Oh, this stinks. I wanted to play in\n"
-    .string "the MEADOW.\p"
+    .string "the Meadow.\p"
     .string "But they put up a weird building\n"
     .string "on it, so I can't play there.$"
 

@@ -689,8 +689,8 @@ const u32 gFile_graphics_items_icons_dubious_tome_sheet[] = INCBIN_U32("graphics
 const u32 gFile_graphics_items_icon_palettes_old_textbook_palette[] = INCBIN_U32("graphics/items/icon_palettes/old_textbook.gbapal.lz");
 const u32 gFile_graphics_items_icons_old_textbook_sheet[] = INCBIN_U32("graphics/items/icons/old_textbook.4bpp.lz");
 
-const u32 gFile_graphics_items_icon_palettes_seal_crystal_palette[] = INCBIN_U32("graphics/items/icon_palettes/seal_crystal.gbapal.lz");
-const u32 gFile_graphics_items_icons_seal_crystal_sheet[] = INCBIN_U32("graphics/items/icons/seal_crystal.4bpp.lz");
+const u32 gFile_graphics_items_icon_palettes_ibuki_gourd_palette[] = INCBIN_U32("graphics/items/icon_palettes/ibuki_gourd.gbapal.lz");
+const u32 gFile_graphics_items_icons_ibuki_gourd_sheet[] = INCBIN_U32("graphics/items/icons/ibuki_gourd.4bpp.lz");
 
 const u32 gFile_graphics_items_icons_blazer_sheet[] = INCBIN_U32("graphics/items/icons/blazer.4bpp.lz");
 const u32 gFile_graphics_items_icon_palettes_blazer_palette[] = INCBIN_U32("graphics/items/icon_palettes/blazer.gbapal.lz");
@@ -839,3 +839,9 @@ const u32 gFile_graphics_items_icon_palettes_wide_lens_palette[] = INCBIN_U32("g
 
 const u32 gFile_graphics_items_icons_light_clay_sheet[] = INCBIN_U32("graphics/items/icons/light_clay.4bpp.lz");
 const u32 gFile_graphics_items_icon_palettes_light_clay_palette[] = INCBIN_U32("graphics/items/icon_palettes/light_clay.gbapal.lz");
+
+const u32 gFile_graphics_items_icons_toxic_orb_sheet[] = INCBIN_U32("graphics/items/icons/toxic_orb.4bpp.lz");
+const u32 gFile_graphics_items_icon_palettes_toxic_orb_palette[] = INCBIN_U32("graphics/items/icon_palettes/toxic_orb.gbapal.lz");
+
+const u32 gFile_graphics_items_icons_flame_orb_sheet[] = INCBIN_U32("graphics/items/icons/flame_orb.4bpp.lz");
+const u32 gFile_graphics_items_icon_palettes_flame_orb_palette[] = INCBIN_U32("graphics/items/icon_palettes/flame_orb.gbapal.lz");

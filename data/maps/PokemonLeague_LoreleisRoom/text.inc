@@ -1,5 +1,5 @@
 PokemonLeague_LoreleisRoom_Text_Intro:: @ 8177FA4
-    .string "Welcome to the Puppet League.\p"
+    .string "Welcome to the Puppetry League.\p"
     .string "I am Lorelei of the Elite Four.\p"
     .string "No one can best me when it comes\n"
     .string "to icy Puppets.\p"
@@ -10,7 +10,7 @@ PokemonLeague_LoreleisRoom_Text_Intro:: @ 8177FA4
     .string "Are you ready?{PLAY_BGM}{MUS_ENCOUNTER_GYM_LEADER}$"
 
 PokemonLeague_LoreleisRoom_Text_RematchIntro:: @ 8178089
-    .string "Welcome to the Puppet League.\p"
+    .string "Welcome to the Puppetry League.\p"
     .string "I, Lorelei of the Elite Four,\n"
     .string "have returned!\p"
     .string "You know how it goes.\n"
@@ -29,5 +29,5 @@ PokemonLeague_LoreleisRoom_Text_PostBattle:: @ 81781B0
     .string "You're better than I thought.\n"
     .string "Go on ahead.\p"
     .string "You only got a taste of the\n"
-    .string "Puppet League's power.$"
+    .string "Puppetry League's power.$"
 

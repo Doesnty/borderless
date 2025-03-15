@@ -64,7 +64,7 @@ FourIsland_House2_Text_WowHoFHigh:: @ 81B2133
 	.string "Whoa! You've made it into the\n"
 	.string "Hall of Fame that often?\l"
 	.string "That's seriously incredible, yup!\p"
-	.string "You own the Puppet League!\n"
+	.string "You own the Puppetry League!\n"
 	.string "I'll give you one of these.$"
 
 FourIsland_House2_Text_WowHoFHighest:: @ 81B21C4

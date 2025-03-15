@@ -114,3 +114,6 @@ Braille_Text_WorldWaits:: @ 81A93B4
 
 Braille_Text_ForYou:: @ 81A93C0
 	.braille "FOR YOU.$"
+
+Braille_Text_FindTheGems::
+	.braille "FIND THE GEMS.$"

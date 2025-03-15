@@ -6,7 +6,7 @@ FiveIsland_ResortGorgeous_House_Text_PleaseHearMyWish:: @ 81A42A0
     .string "Please, hear my wish.$"
 
 FiveIsland_ResortGorgeous_House_Text_WishToSeeMonPlease:: @ 81A4315
-    .string "I wish to see a POKéMON.\n"
+    .string "I wish to see a Puppet.\n"
     .string "A darling {STR_VAR_1}.\p"
     .string "I want to see one right away.\n"
     .string "Please, make my wish come true.$"
@@ -29,27 +29,27 @@ FiveIsland_ResortGorgeous_House_Text_MonYouCaughtForMeThankYou:: @ 81A43F7
     .string "You may leave.\p"
     .string "… …  … …  … …\n"
     .string "Oh, fine. I understand now.\p"
-    .string "SEBASTIAN!\n"
+    .string "Sebastian!\n"
     .string "I need you here this instant!$"
 
 FiveIsland_ResortGorgeous_House_Text_ButlerYesMyLady:: @ 81A450B
-    .string "Butler: Yes, my lady.$"
+    .string "BUTLER: Yes, my lady.$"
 
 FiveIsland_ResortGorgeous_House_Text_SelphyGiveTokenOfAppreciation:: @ 81A4521
     .string "SELPHY: See to it that this person\n"
     .string "is given a token of appreciation.$"
 
 FiveIsland_ResortGorgeous_House_Text_ButlerIShallDoAsYouBid:: @ 81A4566
-    .string "Butler: I shall do as you bid,\n"
+    .string "BUTLER: I shall do as you bid,\n"
     .string "my lady.$"
 
 FiveIsland_ResortGorgeous_House_Text_ButlerPleaseAcceptThisAsHerThanks:: @ 81A458E
-    .string "Butler: I sincerely thank you for\n"
-    .string "pleasing Lady SELPHY.\p"
+    .string "BUTLER: I sincerely thank you for\n"
+    .string "pleasing Lady Selphy.\p"
     .string "Please accept this as her thanks…$"
 
 FiveIsland_ResortGorgeous_House_Text_ButlerBagAppearsToBeFull:: @ 81A45E8
-    .string "Butler: Your BAG appears to be\n"
+    .string "BUTLER: Your Bag appears to be\n"
     .string "unfortunately full.$"
 
 FiveIsland_ResortGorgeous_House_Text_OhHowDisappointing:: @ 81A461B
@@ -61,8 +61,8 @@ FiveIsland_ResortGorgeous_House_Text_SelphyWishYouBestOfLuck:: @ 81A4632
     .string "luck.$"
 
 FiveIsland_ResortGorgeous_House_Text_LadySelphySmileHasBrillianceOfSun:: @ 81A4657
-    .string "Butler: The smile of Lady SELPHY\n"
+    .string "Butler: The smile of Lady Selphy\n"
     .string "has the brilliance of the sun.\p"
     .string "Please, I beg you to bring joy\n"
-    .string "to Lady SELPHY.$"
+    .string "to Lady Selphy.$"
 

@@ -72,7 +72,7 @@ SaffronCity_Text_FightingDojo:: @ 8181354
     .string "FIGHTING DOJO$"
 
 SaffronCity_Text_GymSign:: @ 8181362
-    .string "SAFFRON CITY PUPPET GYM\n"
+    .string "SAFFRON CITY PUPPETRY GYM\n"
     .string "LEADER: SABRINA\l"
     .string "The Master of Psychic Power!$"
 

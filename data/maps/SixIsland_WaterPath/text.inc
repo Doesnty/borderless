@@ -9,7 +9,7 @@ SixIsland_WaterPath_Text_RoseDefeat:: @ 818B8C8
 SixIsland_WaterPath_Text_RosePostBattle:: @ 818B8F7
     .string "I want to go to the woods over\n"
     .string "there, but…\p"
-    .string "There are lots of BUG POKéMON.\n"
+    .string "There are lots of Bug Puppets.\n"
     .string "They scare me a little.$"
 
 SixIsland_WaterPath_Text_EdwardIntro:: @ 818B959
@@ -25,7 +25,7 @@ SixIsland_WaterPath_Text_EdwardPostBattle:: @ 818B9A5
 
 SixIsland_WaterPath_Text_SamirIntro:: @ 818B9EC
     .string "What, you're suggesting that you're\n"
-    .string "sick of seeing SWIMMERS like me?\p"
+    .string "sick of seeing Swimmers like me?\p"
     .string "Aww, don't be hatin'!$"
 
 SixIsland_WaterPath_Text_SamirDefeat:: @ 818BA47
@@ -33,7 +33,7 @@ SixIsland_WaterPath_Text_SamirDefeat:: @ 818BA47
 
 SixIsland_WaterPath_Text_SamirPostBattle:: @ 818BA57
     .string "I couldn't lift the stigma of being\n"
-    .string "a SWIMMER…$"
+    .string "a Swimmer…$"
 
 SixIsland_WaterPath_Text_DeniseIntro:: @ 818BA86
     .string "My boyfriend's always busy, so I\n"
@@ -44,7 +44,7 @@ SixIsland_WaterPath_Text_DeniseDefeat:: @ 818BAC0
 
 SixIsland_WaterPath_Text_DenisePostBattle:: @ 818BAE0
     .string "When I can't be with my boyfriend,\n"
-    .string "I spend time with the POKéMON he\l"
+    .string "I spend time with the Puppet he\l"
     .string "gave me.$"
 
 SixIsland_WaterPath_Text_EarlIntro:: @ 818BB2D

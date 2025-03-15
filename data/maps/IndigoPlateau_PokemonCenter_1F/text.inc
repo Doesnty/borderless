@@ -1,8 +1,8 @@
 IndigoPlateau_PokemonCenter_1F_Text_GymGuyAdvice:: @ 819A837
     .string "Yo!\n"
     .string "Champ in the making!\p"
-    .string "At the POKéMON LEAGUE, you will\n"
-    .string "face the ELITE FOUR all in a row.\p"
+    .string "At the Puppetry League, you will\n"
+    .string "face the Elite Four all in a row.\p"
     .string "If you lose, you have to start all\n"
     .string "over again!\p"
     .string "This is it!\n"
@@ -19,7 +19,7 @@ IndigoPlateau_PokemonCenter_1F_Text_LoreleiIsAbsentClosedForTimeBeing:: @ 819A94
     .string "your time coming here.\p"
     .string "Lorelei of the Elite Four is\n"
     .string "absent, you see.\p"
-    .string "As a result, the Puppet League is\n"
+    .string "As a result, the Puppetry League is\n"
     .string "closed for the time being.$"
 
 IndigoPlateau_PokemonCenter_1F_Text_AgathaWhuppedUs:: @ 819A9E7
@@ -41,3 +41,14 @@ IndigoPlateau_PokemonCenter_1F_Text_LancesCousinGymLeaderFarAway:: @ 819AB16
     .string "a cousin who's a Gym Leader\l"
     .string "somewhere far away.$"
 
+IndigoPlateau_PokemonCenter_1F_Text_Blue::
+	.string "{RIVAL}: Hey, {PLAYER}!\p"
+	.string "The Elite Four is crazy strong.\p"
+	.string "I just barely got through, but\n"
+	.string "the Champion was too much.\p"
+	.string "I hate to admit it, but my\n"
+	.string "Puppets aren't strong enough yet.\p"
+	.string "I'm going to go back and fill in\n"
+	.string "the gaps in my Tohodex.\p"
+	.string "Good luck if you go in.\n"
+	.string "Knowing you, you'll need it!$"

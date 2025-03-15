@@ -142,42 +142,41 @@ static const u16 sDexCategory_PCB_Page12[] = {
 };
 
 static const u16 sDexCategory_PCB_Page13[] = {
+	SPECIES_AYOUMU,
 	SPECIES_DYOUMU,
 	SPECIES_SYOUMU,
-	SPECIES_LYOUMU,
 };
 
 static const u16 sDexCategory_PCB_Page14[] = {
 	SPECIES_CYUYUKO,
 	SPECIES_YUYUKO,
+	SPECIES_AYUYUKO,
+	SPECIES_DYUYUKO,
 };
 
 static const u16 sDexCategory_PCB_Page15[] = {
-	SPECIES_AYUYUKO,
-	SPECIES_DYUYUKO,
-	SPECIES_LYUYUKO,
-};
-
-static const u16 sDexCategory_PCB_Page16[] = {
 	SPECIES_CRAN,
 	SPECIES_RAN,
 };
 
-static const u16 sDexCategory_PCB_Page17[] = {
+static const u16 sDexCategory_PCB_Page16[] = {
 	SPECIES_ARAN,
 	SPECIES_HRAN,
 	SPECIES_ADRAN,
 };
 
-static const u16 sDexCategory_PCB_Page18[] = {
+static const u16 sDexCategory_PCB_Page17[] = {
 	SPECIES_CYUKARI,
 	SPECIES_YUKARI,
 };
 
-static const u16 sDexCategory_PCB_Page19[] = {
+static const u16 sDexCategory_PCB_Page18[] = {
 	SPECIES_DYUKARI,
 	SPECIES_TYUKARI,
 	SPECIES_ADYUKARI,
+};
+
+static const u16 sDexCategory_PCB_Page19[] = {
 };
 
 static const u16 sDexCategory_IN_Page1[] = {
@@ -502,6 +501,7 @@ static const u16 sDexCategory_TD_Page4[] = {
 static const u16 sDexCategory_TD_Page5[] = {
 	SPECIES_CFUTO,
 	SPECIES_FUTO,
+	SPECIES_AFUTO,
 	SPECIES_TFUTO,
 };
 
@@ -597,11 +597,16 @@ static const u16 sDexCategory_HSIFS_Page1[] = {
 static const u16 sDexCategory_HSIFS_Page2[] = {
 	SPECIES_CAUNN,
 	SPECIES_AUNN,
-	SPECIES_CNARUMI,
-	SPECIES_NARUMI,
 };
 
 static const u16 sDexCategory_HSIFS_Page3[] = {
+	SPECIES_CNARUMI,
+	SPECIES_NARUMI,
+	SPECIES_ANARUMI,
+};
+
+
+static const u16 sDexCategory_HSIFS_Page4[] = {
 	SPECIES_CMAI_AND_SATONO,
 	SPECIES_MAI_AND_SATONO,
 	SPECIES_COKINA,
@@ -692,48 +697,54 @@ static const u16 sDexCategory_UDOALG_Page4[] = {
 static const u16 sDexCategory_Fighters_Page1[] = {
 	SPECIES_CSUIKA,
 	SPECIES_SUIKA,
-	SPECIES_ASUIKA,
-	SPECIES_TSUIKA,
 };
 
 static const u16 sDexCategory_Fighters_Page2[] = {
+	SPECIES_ASUIKA,
+	SPECIES_TSUIKA,
+	SPECIES_MPSUIKA,
+};
+
+static const u16 sDexCategory_Fighters_Page3[] = {
 	SPECIES_CIKU,
 	SPECIES_IKU,
 	SPECIES_DIKU,
 	SPECIES_TIKU,
 };
 
-static const u16 sDexCategory_Fighters_Page3[] = {
+static const u16 sDexCategory_Fighters_Page4[] = {
 	SPECIES_CTENSHI,
 	SPECIES_TENSHI,
 	SPECIES_ATENSHI,
 	SPECIES_DTENSHI,
 };
 
-static const u16 sDexCategory_Fighters_Page4[] = {
+static const u16 sDexCategory_Fighters_Page5[] = {
 	SPECIES_TENSOKU,
 	SPECIES_NAMAZU,
 };
 
-static const u16 sDexCategory_Fighters_Page5[] = {
+static const u16 sDexCategory_Fighters_Page6[] = {
 	SPECIES_SHANGHAI,
 	SPECIES_HOURAI,
 	SPECIES_GOLIATH,
 };
 
-static const u16 sDexCategory_Fighters_Page6[] = {
+static const u16 sDexCategory_Fighters_Page7[] = {
 	SPECIES_CKOKORO,
 	SPECIES_KOKORO,
 	SPECIES_AKOKORO,
 	SPECIES_TKOKORO,
 };
 
-static const u16 sDexCategory_Fighters_Page7[] = {
+static const u16 sDexCategory_Fighters_Page8[] = {
 	SPECIES_CSUMIREKO,
 	SPECIES_SUMIREKO,
+	SPECIES_SSUMIREKO,
+	SPECIES_TSUMIREKO,
 };
 
-static const u16 sDexCategory_Fighters_Page8[] = {
+static const u16 sDexCategory_Fighters_Page9[] = {
 	SPECIES_CJOON,
 	SPECIES_JOON,
 	SPECIES_CSHION,
@@ -810,6 +821,11 @@ static const u16 sDexCategory_WrittenWorks_Page12[] = {
 static const u16 sDexCategory_WrittenWorks_Page13[] = {
 	SPECIES_CMIYOI,
 	SPECIES_MIYOI,
+};
+
+static const u16 sDexCategory_WrittenWorks_Page14[] = {
+	SPECIES_CMIZUCHI,
+	SPECIES_MIZUCHI,
 };
 
 static const u16 sDexCategory_HRTP_Page1[] = {
@@ -889,11 +905,15 @@ static const u16 sDexCategory_PODD_Page2[] = {
 static const u16 sDexCategory_PODD_Page3[] = {
 	SPECIES_CCHIYURI,
 	SPECIES_CHIYURI,
-	SPECIES_CYUMEMI,
-	SPECIES_YUMEMI,
 };
 
 static const u16 sDexCategory_PODD_Page4[] = {
+	SPECIES_CYUMEMI,
+	SPECIES_YUMEMI,
+	SPECIES_TYUMEMI,
+};
+
+static const u16 sDexCategory_PODD_Page5[] = {
 	SPECIES_RUUKOTO,
 	SPECIES_MIMI_CHAN,
 };
@@ -947,8 +967,12 @@ static const u16 sDexCategory_MS_Page3[] = {
 static const u16 sDexCategory_MS_Page4[] = {
 	SPECIES_CYUMEKO,
 	SPECIES_YUMEKO,
+};
+
+static const u16 sDexCategory_MS_Page5[] = {
 	SPECIES_CSHINKI,
 	SPECIES_SHINKI,
+	SPECIES_ASHINKI,
 };
 
 
@@ -958,17 +982,22 @@ static const u16 sDexCategory_Fanon_Page1[] = {
 };
 
 static const u16 sDexCategory_Fanon_Page2[] = {
+	SPECIES_CTENMA,
+	SPECIES_TENMA,
+};
+
+static const u16 sDexCategory_Fanon_Page3[] = {
 	SPECIES_CLAYLA,
 	SPECIES_LAYLA,
 	SPECIES_DLAYLA,
 };
 
-static const u16 sDexCategory_Fanon_Page3[] = {
+static const u16 sDexCategory_Fanon_Page4[] = {
 	SPECIES_CYOUKI,
 	SPECIES_YOUKI,
 };
 
-static const u16 sDexCategory_Fanon_Page4[] = {
+static const u16 sDexCategory_Fanon_Page5[] = {
 	SPECIES_TORI,
 	SPECIES_2HU,
 };
@@ -989,7 +1018,6 @@ static const u16 sDexCategory_Special_Page3[] = {
 	SPECIES_AMARISA,
 	SPECIES_SMARISA,
 	SPECIES_ADMARISA,
-	SPECIES_LMARISA,
 };
 
 static const u16 sDexCategory_Special_Page4[] = {
@@ -1050,7 +1078,7 @@ static const struct PokedexCategoryPage sDexCategory_PCBPkmn[] = {
     DEX_CATEGORY(PCB_Page16),
     DEX_CATEGORY(PCB_Page17),
     DEX_CATEGORY(PCB_Page18),
-    DEX_CATEGORY(PCB_Page19),
+    //DEX_CATEGORY(PCB_Page19),
 };
 
 static const struct PokedexCategoryPage sDexCategory_INPkmn[] = {
@@ -1145,6 +1173,7 @@ static const struct PokedexCategoryPage sDexCategory_HSIFSPkmn[] = {
 	DEX_CATEGORY(HSIFS_Page1),
 	DEX_CATEGORY(HSIFS_Page2),
 	DEX_CATEGORY(HSIFS_Page3),
+	DEX_CATEGORY(HSIFS_Page4),
 };
 
 static const struct PokedexCategoryPage sDexCategory_WBAWCPkmn[] = {
@@ -1178,6 +1207,7 @@ static const struct PokedexCategoryPage sDexCategory_FightersPkmn[] = {
 	DEX_CATEGORY(Fighters_Page6),
 	DEX_CATEGORY(Fighters_Page7),
 	DEX_CATEGORY(Fighters_Page8),
+	DEX_CATEGORY(Fighters_Page9),
 };
 
 static const struct PokedexCategoryPage sDexCategory_WrittenWorksPkmn[] = {
@@ -1194,6 +1224,7 @@ static const struct PokedexCategoryPage sDexCategory_WrittenWorksPkmn[] = {
 	DEX_CATEGORY(WrittenWorks_Page11),
 	DEX_CATEGORY(WrittenWorks_Page12),
 	DEX_CATEGORY(WrittenWorks_Page13),
+	DEX_CATEGORY(WrittenWorks_Page14),
 };
 
 static const struct PokedexCategoryPage sDexCategory_HRTPPkmn[] = {
@@ -1217,6 +1248,7 @@ static const struct PokedexCategoryPage sDexCategory_PODDPkmn[] = {
 	DEX_CATEGORY(PODD_Page2),
 	DEX_CATEGORY(PODD_Page3),
 	DEX_CATEGORY(PODD_Page4),
+	DEX_CATEGORY(PODD_Page5),
 };
 
 static const struct PokedexCategoryPage sDexCategory_LLSPkmn[] = {
@@ -1231,6 +1263,7 @@ static const struct PokedexCategoryPage sDexCategory_MSPkmn[] = {
 	DEX_CATEGORY(MS_Page2),
 	DEX_CATEGORY(MS_Page3),
 	DEX_CATEGORY(MS_Page4),
+	DEX_CATEGORY(MS_Page5),
 };
 
 static const struct PokedexCategoryPage sDexCategory_FanonPkmn[] = {
@@ -1238,6 +1271,7 @@ static const struct PokedexCategoryPage sDexCategory_FanonPkmn[] = {
 	DEX_CATEGORY(Fanon_Page2),
 	DEX_CATEGORY(Fanon_Page3),
 	DEX_CATEGORY(Fanon_Page4),
+	DEX_CATEGORY(Fanon_Page5),
 };
 
 static const struct PokedexCategoryPage sDexCategory_SpecialPkmn[] = {

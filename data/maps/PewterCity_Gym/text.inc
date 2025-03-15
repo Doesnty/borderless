@@ -85,8 +85,8 @@ PewterCity_Gym_Text_LetMeTakeYouToTheTop:: @ 8191298
     .string "Hiya!\n"
     .string "Do you want to dream big?\p"
     .string "Do you dare to dream of becoming\n"
-    .string "the POKéMON champ?\p"
-    .string "I'm no TRAINER, but I can advise\n"
+    .string "the Puppetry champ?\p"
+    .string "I'm no Trainer, but I can advise\n"
     .string "you on how to win.\p"
     .string "Let me take you to the top!$"
 
@@ -95,12 +95,16 @@ PewterCity_Gym_Text_LetsGetHappening:: @ 819133C
     .string "Let's get happening!$"
 
 PewterCity_Gym_Text_TryDifferentPartyOrders:: @ 819135C
-    .string "The first POKéMON out in a match is\n"
-    .string "at the left of the POKéMON LIST.\p"
-    .string "By changing the order of POKéMON,\n"
-    .string "you may gain an advantage.\p"
-    .string "Try different orders to suit your\n"
-    .string "opponent's party.$"
+    .string "Brock uses Earth-type Puppets\n"
+    .string "and Earth-type attacks.\p"
+    .string "Wind-type Puppets are immune to\n"
+    .string "Earth moves, even the ones that.\l"
+	.string "are rocks falling and such\p"
+    .string "If you've got a Nature or Wind\n"
+    .string "Puppet, this shouldn't be hard.\p"
+	.string "Do pay attention during the fight\n"
+	.string "though! His Puppets have some\l"
+	.string "unique Abilities to take note of.$"
 
 PewterCity_Gym_Text_ItsFreeLetsGetHappening:: @ 8191412
     .string "It's a free service!\n"
@@ -108,17 +112,17 @@ PewterCity_Gym_Text_ItsFreeLetsGetHappening:: @ 8191412
 
 PewterCity_Gym_Text_YoureChampMaterial:: @ 819143C
     .string "Just as I thought!\n"
-    .string "You're POKéMON champ material!$"
+    .string "You're Puppetry champ material!$"
 
 PewterCity_Gym_Text_GymStatue:: @ 819146E
-    .string "PEWTER POKéMON GYM\n"
+    .string "PEWTER PUPPETRY GYM\n"
     .string "LEADER: BROCK\p"
     .string "WINNING TRAINERS:\n"
-    .string "{RIVAL}$"
+    .string "{OTHER_PC}, {RIVAL}$"
 
 PewterCity_Gym_Text_GymStatuePlayerWon:: @ 81914A4
-    .string "PEWTER POKéMON GYM\n"
+    .string "PEWTER PUPPETRY GYM\n"
     .string "LEADER: BROCK\p"
     .string "WINNING TRAINERS:\n"
-    .string "{RIVAL}, {PLAYER}$"
+    .string "{OTHER_PC}, {RIVAL}, {PLAYER}$"
 

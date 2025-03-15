@@ -1,6 +1,6 @@
 Route22_Text_EarlyRivalIntro:: @ 8188890
 	.string "{RIVAL}: Hey! {PLAYER}!\p"
-	.string "You're off to the Puppet League?\n"
+	.string "You're off to the Puppetry League?\n"
 	.string "Forget about it!\p"
 	.string "You probably don't have any\n"
 	.string "Badges, do you?\p"
@@ -14,7 +14,7 @@ Route22_Text_EarlyRivalDefeat:: @ 8188959
 	.string "You just lucked out!$"
 
 Route22_Text_EarlyRivalPostBattle:: @ 8188974
-	.string "I heard the Puppet League is\n"
+	.string "I heard the Puppetry League is\n"
 	.string "crawling with tough Trainers.\p"
 	.string "I have to figure out how to get\n"
 	.string "past them.\p"
@@ -32,7 +32,7 @@ Route22_Text_RivalShouldCatchSomeMons:: @ 8188A07
 Route22_Text_LateRivalIntro:: @ 8188A3C
 	.string "{RIVAL}: What? {PLAYER}!\n"
 	.string "What a surprise to see you here!\p"
-	.string "So you're going to the Puppet\n"
+	.string "So you're going to the Puppetry\n"
 	.string "League?\p"
 	.string "You collected all the Badges, too?\n"
 	.string "That's cool!\p"
@@ -46,7 +46,7 @@ Route22_Text_LateRivalDefeat:: @ 8188B08
 
 Route22_Text_LateRivalPostBattle:: @ 8188B29
 	.string "That loosened me up.\n"
-	.string "I'm ready for the Puppet League!\p"
+	.string "I'm ready for the Puppetry League!\p"
 	.string "{PLAYER}, you need more practice.\p"
 	.string "But hey, you know that!\n"
 	.string "I'm out of here. Smell ya!$"
@@ -61,6 +61,6 @@ Route22_Text_LateRivalVictory:: @ 8188BAF
 	.string "あははーッ！$"
 
 Route22_Text_LeagueGateSign:: @ 8188BFF
-	.string "PUPPET LEAGUE\n"
+	.string "PUPPETRY LEAGUE\n"
 	.string "Front Gate$"
 

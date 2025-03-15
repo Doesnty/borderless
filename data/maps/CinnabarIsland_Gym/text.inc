@@ -127,27 +127,27 @@ CinnabarIsland_Gym_Text_ZacPostBattle:: @ 8199B27
 CinnabarIsland_Gym_Text_GymGuyAdvice:: @ 8199B81
     .string "Yo!\n"
     .string "Champ in the making!\p"
-    .string "The hotheaded BLAINE is a FIRE\n"
-    .string "POKéMON pro.\p"
+    .string "The hotheaded Blaine is a Fire\n"
+    .string "Puppet pro.\p"
     .string "Douse his spirits with water!\p"
     .string "You'd better take some\n"
-    .string "BURN HEALS, too.$"
+    .string "Burn Heals, too.$"
 
 CinnabarIsland_Gym_Text_GymGuyPostVictory:: @ 8199C0C
     .string "{PLAYER}!\n"
     .string "You beat that firebrand!$"
 
 CinnabarIsland_Gym_Text_GymStatue:: @ 8199C29
-    .string "CINNABAR PUPPET GYM\n"
+    .string "CINNABAR PUPPETRY GYM\n"
     .string "LEADER: BLAINE\p"
     .string "WINNING TRAINERS:\n"
-    .string "{RIVAL}$"
+    .string "{OTHER_PC}, {RIVAL}$"
 
 CinnabarIsland_Gym_Text_GymStatuePlayerWon:: @ 8199C62
-    .string "CINNABAR PUPPET GYM\n"
+    .string "CINNABAR PUPPETRY GYM\n"
     .string "LEADER: BLAINE\p"
     .string "WINNING TRAINERS:\n"
-    .string "{RIVAL}, {PLAYER}$"
+    .string "{OTHER_PC}, {RIVAL}, {PLAYER}$"
 
 CinnabarIsland_Gym_Text_PokemonQuizRules:: @ 8199C9F
     .string "Puppetry Quiz!\p"

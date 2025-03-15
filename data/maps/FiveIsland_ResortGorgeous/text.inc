@@ -20,7 +20,7 @@ FiveIsland_ResortGorgeous_Text_CelinaDefeat:: @ 818A49E
     .string "I feel like I'm whiting out…$"
 
 FiveIsland_ResortGorgeous_Text_CelinaPostBattle:: @ 818A4C6
-    .string "GILLIAN?\n"
+    .string "Gillian?\n"
     .string "Please tilt your head slightly…\l"
     .string "There! That's the look I want!$"
 
@@ -51,7 +51,7 @@ FiveIsland_ResortGorgeous_Text_JackiPostBattle:: @ 818A601
 
 FiveIsland_ResortGorgeous_Text_GillianIntro:: @ 818A645
     .string "I'm thinking of having a pool\n"
-    .string "made specially for POKéMON.$"
+    .string "made specially for Puppets.$"
 
 FiveIsland_ResortGorgeous_Text_GillianDefeat:: @ 818A67F
     .string "Oh, my goodness gracious!$"

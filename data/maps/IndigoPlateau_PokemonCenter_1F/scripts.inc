@@ -54,3 +54,7 @@ IndigoPlateau_PokemonCenter_1F_EventScript_Nurse:: @ 816EB06
 	call EventScript_PkmnCenterNurse
 	release
 	end
+
+IndigoPlateau_PokemonCenter_1F_EventScript_Blue:: @ 816EAC3
+	msgbox IndigoPlateau_PokemonCenter_1F_Text_Blue, MSGBOX_NPC
+	end

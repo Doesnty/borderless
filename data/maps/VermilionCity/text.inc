@@ -46,7 +46,7 @@ VermilionCity_Text_PokemonFanClubSign:: @ 817F9A1
     .string "All Puppet fans welcome!$"
 
 VermilionCity_Text_GymSign:: @ 817F9CC
-    .string "VERMILION CITY POKéMON GYM\n"
+    .string "VERMILION CITY PUPPETRY GYM\n"
     .string "LEADER: Lt. Surge\l"
     .string "The Lightning American!$"
 

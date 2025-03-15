@@ -49,7 +49,7 @@ NavelRock_Summit_EventScript_HoOh:: @ 8164FFB
 	setweather 0
 	doweather
 	waitse
-	playmoncry SPECIES_HO_OH, 2
+	playmoncry SPECIES_XUTSUHO, 2
 	delay 30
 	waitmoncry
 	delay 60
@@ -60,8 +60,8 @@ NavelRock_Summit_EventScript_HoOh:: @ 8164FFB
 	applymovement LOCALID_HO_OH, Movement_HoOhApproach
 	waitmovement 0
 	special RemoveCameraObject
-	setvar VAR_0x8004, SPECIES_HO_OH
-	setvar VAR_0x8005, 70  @ Level
+	setvar VAR_0x8004, SPECIES_XUTSUHO
+	setvar VAR_0x8005, 90  @ Level
 	setvar VAR_0x8006, ITEM_NONE
 	special CreateEventLegalEnemyMon
 	setflag FLAG_SYS_SPECIAL_WILD_BATTLE
@@ -82,12 +82,12 @@ NavelRock_Summit_EventScript_HoOh:: @ 8164FFB
 
 NavelRock_Summit_EventScript_DefeatedHoOh:: @ 81650B4
 	setflag FLAG_HO_OH_FLEW_AWAY
-	setvar VAR_0x8004, SPECIES_HO_OH
+	setvar VAR_0x8004, SPECIES_XUTSUHO
 	goto EventScript_MonFlewAway
 	end
 
 NavelRock_Summit_EventScript_RanFromHoOh:: @ 81650C2
-	setvar VAR_0x8004, SPECIES_HO_OH
+	setvar VAR_0x8004, SPECIES_XUTSUHO
 	goto EventScript_MonFlewAway
 	end
 

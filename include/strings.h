@@ -1049,7 +1049,14 @@ extern const u8 gText_Next[];
 extern const u8 gText_CancelPreviousData[];
 extern const u8 gText_Area[];
 extern const u8 gText_Size[];
+extern const u8 gText_DexStatsHP[];
+extern const u8 gText_DexStatsAtk[];
+extern const u8 gText_DexStatsDef[];
+extern const u8 gText_DexStatsSpA[];
+extern const u8 gText_DexStatsSpD[];
+extern const u8 gText_DexStatsSpe[];
 extern const u8 gText_AreaUnknown[];
+extern const u8 gText_DexStatsH[];
 
 // daycare
 extern const u8 gText_Lv[];
@@ -1717,6 +1724,7 @@ extern const u8 gText_ZunMegumu[];
 extern const u8 gText_ZunChimata[];
 extern const u8 gText_ZunMomoyo[];
 extern const u8 gText_ZunMiyoi[];
+extern const u8 gText_ZunMizuchi[];
 extern const u8 gText_ZunBiten[];
 extern const u8 gText_ZunEnoko[];
 extern const u8 gText_ZunChiyari[];
@@ -1762,6 +1770,8 @@ extern const u8 gText_ZunTori[];
 extern const u8 gText_ZunRandom[];
 extern const u8 gText_ZunNextPage[];
 extern const u8 gText_ZunPreviousPage[];
+extern const u8 gText_Renko[];
+extern const u8 gText_Maribel[];
 
 extern const u8 gText_ImakuniRockTunnelDefeat[];
 

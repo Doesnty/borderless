@@ -451,6 +451,7 @@ BattleScript_ExplosionLoop::
 	waitmessage 0x40
 	tryfaintmon BS_TARGET, 0, NULL
 	moveendto 16
+BattleScriptExplosionEndLoop::
 	jumpifnexttargetvalid BattleScript_ExplosionLoop
 	tryfaintmon BS_ATTACKER, 0, NULL
 	end
@@ -946,7 +947,7 @@ BattleScript_EffectRecoilIfMiss::
 	resultmessage
 	waitmessage 64
 	
-	jumpifbyte CMP_COMMON_BITS, gMoveResultFlags, MOVE_RESULT_DOESNT_AFFECT_FOE, BattleScript_MoveMissedDoDamage
+	jumpifbyte CMP_COMMON_BITS, gMoveResultFlags, MOVE_RESULT_DOESNT_AFFECT_FOE, BattleScript_MoveMissedDoDamage2
 	
 	seteffectwithchance
 	tryfaintmon BS_TARGET, FALSE, NULL
@@ -960,14 +961,12 @@ BattleScript_MoveMissedDoDamage::
 	pause 0x40
 	resultmessage
 	waitmessage 0x40
-	jumpifbyte CMP_COMMON_BITS, gMoveResultFlags, MOVE_RESULT_DOESNT_AFFECT_FOE, BattleScript_MoveEnd
+BattleScript_MoveMissedDoDamage2:
 	printstring STRINGID_PKMNCRASHED
 	waitmessage 0x40
-	damagecalc
-	typecalc
-	adjustnormaldamage
-	manipulatedamage 1
+	special 0x2a
 	bicbyte gMoveResultFlags, MOVE_RESULT_MISSED
+	bicbyte gMoveResultFlags, MOVE_RESULT_DOESNT_AFFECT_FOE
 	orword gHitMarker, HITMARKER_IGNORE_SUBSTITUTE
 	healthbarupdate BS_ATTACKER
 	datahpupdate BS_ATTACKER
@@ -1132,6 +1131,7 @@ BattleScript_EffectParalyze::
 	attackstring
 	ppreduce
     jumpifmove MOVE_STUN_SPORE, BattleScript_ParalyzePowderCheck
+	jumpiftype BS_TARGET, TYPE_ELECTRIC, BattleScript_NotAffectedPpReduce
 BattleScript_EffectDoParalyze:
 	jumpifability BS_TARGET, ABILITY_LIMBER, BattleScript_LimberProtected
 	jumpifstatus2 BS_TARGET, STATUS2_SUBSTITUTE, BattleScript_ButItFailed
@@ -3075,6 +3075,11 @@ BattleScript_FaintedMonChooseAnother::
 BattleScript_FaintedMonEnd::
 	end2
 
+BattleScript_HandleFaintedMonMidTurn::
+	atk24 BattleScript_LinkBattleHandleFaint
+	end2
+
+
 BattleScript_ImakuniShiftMode::
 	printstring STRINGID_IMAKUNIABOUTTOSWITCHPKMN
 	setbyte gBattleCommunication, 0
@@ -3720,6 +3725,13 @@ BattleScript_NoPPForMove::
 	attackstring
 	pause 0x20
 	printstring STRINGID_BUTNOPPLEFT
+	waitmessage 0x40
+	goto BattleScript_MoveEnd
+
+BattleScript_NoTarget::
+	attackstring
+	pause 0x20
+	printstring STRINGID_NOTARGET
 	waitmessage 0x40
 	goto BattleScript_MoveEnd
 
@@ -5027,17 +5039,20 @@ BattleScript_EffectCloseCombat:
 BattleScript_CloseCombatStartDrops:
 	jumpifmovehadnoeffect BattleScript_CloseCombatFinish
 	setbyte sSTAT_ANIM_PLAYED, 0
-	playstatchangeanimation BS_ATTACKER, 0x24, 1
+	playstatchangeanimation BS_ATTACKER, BIT_DEF | BIT_SPDEF, ATK48_STAT_NEGATIVE | ATK48_ONLY_MULTIPLE | ATK48_DONT_CHECK_LOWER
+	playstatchangeanimation BS_ATTACKER, BIT_DEF, ATK48_STAT_NEGATIVE | ATK48_DONT_CHECK_LOWER
+	playstatchangeanimation BS_ATTACKER, 0x24, ATK48_STAT_NEGATIVE | ATK48_ONLY_MULTIPLE | ATK48_DONT_CHECK_LOWER
 
 	jumpifstat BS_ATTACKER, CMP_EQUAL, STAT_DEF, 0, BattleScriptCloseCombatSDefDrop
 	setstatchanger STAT_DEF, 1, TRUE
-	statbuffchange MOVE_EFFECT_AFFECTS_USER | 0x1, BattleScriptCloseCombatSDefDrop
+	statbuffchange MOVE_EFFECT_AFFECTS_USER | 0x1 | MOVE_EFFECT_CERTAIN, BattleScriptCloseCombatSDefDrop
 	printfromtable gStatDownStringIds
 	waitmessage 64
 BattleScriptCloseCombatSDefDrop:
 	jumpifstat BS_ATTACKER, CMP_EQUAL, STAT_SPDEF, 0, BattleScript_CloseCombatFinish
+	playstatchangeanimation BS_ATTACKER, BIT_SPDEF, ATK48_STAT_NEGATIVE | ATK48_DONT_CHECK_LOWER
 	setstatchanger STAT_SPDEF, 1, TRUE
-	statbuffchange MOVE_EFFECT_AFFECTS_USER | 0x1, BattleScript_CloseCombatFinish
+	statbuffchange MOVE_EFFECT_AFFECTS_USER | 0x1 | MOVE_EFFECT_CERTAIN, BattleScript_CloseCombatFinish
 	printfromtable gStatDownStringIds
 	waitmessage 64
 	
@@ -5045,6 +5060,7 @@ BattleScript_CloseCombatFinish:
 	tryfaintmon BS_TARGET, FALSE, NULL
 	moveendall
 	end
+	
 
 BattleScript_EffectTrickRoom:
 	attackcanceler
@@ -6301,9 +6317,23 @@ BattleScript_SalvageArmorActivates::
 BattleScript_AnticipationShudder::
 	printstring STRINGID_ANTICIPATIONSHUDDER
 	waitmessage 64
-	return
+	end3
 
 BattleScript_TauntWearsOff::
 	printstring STRINGID_TAUNTWEARSOFF
 	waitmessage 64
+	end2
+
+BattleScript_ItemToxicOrb::
+	playanimation BS_EFFECT_BATTLER, B_ANIM_ITEM_EFFECT, NULL
+	printstring STRINGID_TOXICORBACTIVATES
+	waitmessage 0x40
+	updatestatusicon BS_ATTACKER
+	end2
+
+BattleScript_ItemFlameOrb::
+	playanimation BS_EFFECT_BATTLER, B_ANIM_ITEM_EFFECT, NULL
+	printstring STRINGID_FLAMEORBACTIVATES
+	waitmessage 0x40
+	updatestatusicon BS_ATTACKER
 	end2

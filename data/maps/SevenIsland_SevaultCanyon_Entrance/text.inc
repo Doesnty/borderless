@@ -22,7 +22,7 @@ SevenIsland_SevaultCanyon_Entrance_Text_MasonDefeat:: @ 818C473
 
 SevenIsland_SevaultCanyon_Entrance_Text_MasonPostBattle:: @ 818C4BA
     .string "Lalalah…\n"
-    .string "My POKéMON, I send them out,\l"
+    .string "My Puppets, I send them out,\l"
     .string "all the girls scream and shout!$"
 
 SevenIsland_SevaultCanyon_Entrance_Text_NicolasIntro:: @ 818C500
@@ -33,21 +33,21 @@ SevenIsland_SevaultCanyon_Entrance_Text_NicolasDefeat:: @ 818C543
     .string "Uh-huh…$"
 
 SevenIsland_SevaultCanyon_Entrance_Text_NicolasPostBattle:: @ 818C54B
-    .string "TRAINERS like you from cities,\n"
+    .string "Puppeteers like you from cities,\n"
     .string "they sure are tough.\p"
-    .string "You'll be headed for the TOWER,\n"
+    .string "You'll be headed for the Tower,\n"
     .string "won't you?$"
 
 SevenIsland_SevaultCanyon_Entrance_Text_MadelineIntro:: @ 818C5AA
     .string "I punish people who abuse\n"
-    .string "POKéMON!$"
+    .string "Puppets!$"
 
 SevenIsland_SevaultCanyon_Entrance_Text_MadelineDefeat:: @ 818C5CD
     .string "You don't seem to be a problem\n"
-    .string "TRAINER.$"
+    .string "Puppeteer.$"
 
 SevenIsland_SevaultCanyon_Entrance_Text_MadelinePostBattle:: @ 818C5F5
-    .string "If you treat your POKéMON with\n"
+    .string "If you treat your Puppets with\n"
     .string "kindness, they'll understand.$"
 
 SevenIsland_SevaultCanyon_Entrance_Text_EveIntro:: @ 818C632

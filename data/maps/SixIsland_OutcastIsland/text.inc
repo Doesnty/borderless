@@ -1,5 +1,5 @@
 SixIsland_OutcastIsland_Text_RocketIntro:: @ 818B35A
-    .string "There're no rare POKéMON around\n"
+    .string "There're no rare Puppets around\n"
     .string "these parts! Not a one!\p"
     .string "That burns me up, man.\n"
     .string "I'll take it out on you!$"
@@ -9,7 +9,7 @@ SixIsland_OutcastIsland_Text_RocketDefeat:: @ 818B3C2
 
 SixIsland_OutcastIsland_Text_RocketPostBattle:: @ 818B3C8
     .string "So listen, you haven't seen any\n"
-    .string "rare POKéMON, have you?$"
+    .string "rare Puppets, have you?$"
 
 SixIsland_OutcastIsland_Text_TylorIntro:: @ 818B400
     .string "I'm having no luck at all.\n"
@@ -24,7 +24,7 @@ SixIsland_OutcastIsland_Text_TylorPostBattle:: @ 818B451
 
 SixIsland_OutcastIsland_Text_MymoIntro:: @ 818B48F
     .string "Gasp… Gasp…\p"
-    .string "I swam here from SIX ISLE PORT\n"
+    .string "I swam here from Six Isle Port\n"
     .string "in one go.$"
 
 SixIsland_OutcastIsland_Text_MymoDefeat:: @ 818B4C5
@@ -36,7 +36,7 @@ SixIsland_OutcastIsland_Text_MymoPostBattle:: @ 818B4D1
     .string "I'm beat…$"
 
 SixIsland_OutcastIsland_Text_NicoleIntro:: @ 818B4FA
-    .string "It's not so easy sending POKéMON\n"
+    .string "It's not so easy sending Puppets\n"
     .string "out while swimming, you know?$"
 
 SixIsland_OutcastIsland_Text_NicoleDefeat:: @ 818B539

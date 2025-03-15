@@ -48,7 +48,7 @@ RockTunnel_B1F_Text_StevePostBattle:: @ 81797DE
     .string "Youmu is a favorite.$"
 
 RockTunnel_B1F_Text_AllenIntro:: @ 8179829
-    .string "My Puppet techniques will leave\n"
+    .string "My Puppetry techniques will leave\n"
     .string "you crying!$"
 
 RockTunnel_B1F_Text_AllenDefeat:: @ 8179856

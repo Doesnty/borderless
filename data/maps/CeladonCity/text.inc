@@ -50,7 +50,7 @@ CeladonCity_Text_CitySign:: @ 818017A
     .string "The City of Rainbow Dreams$"
 
 CeladonCity_Text_GymSign:: @ 81801A2
-    .string "CELADON CITY POKéMON GYM\n"
+    .string "CELADON CITY PUPPETRY GYM\n"
     .string "LEADER: Erika\l"
     .string "The Nature-Loving Princess!$"
 

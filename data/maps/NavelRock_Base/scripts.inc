@@ -53,12 +53,12 @@ NavelRock_Base_EventScript_Lugia:: @ 8165134
 	delay 30
 	delay 50
 	waitse
-	playmoncry SPECIES_LUGIA, 2
+	playmoncry SPECIES_XSUWAKO, 2
 	waitmoncry
 	delay 20
-	setvar VAR_0x8004, SPECIES_LUGIA
-	setvar VAR_0x8005, 70  @ Level
-	setvar VAR_0x8006, ITEM_NONE
+	setvar VAR_0x8004, SPECIES_XSUWAKO
+	setvar VAR_0x8005, 90  @ Level
+	setvar VAR_0x8006, ITEM_LEFTOVERS
 	special CreateEventLegalEnemyMon
 	setflag FLAG_SYS_SPECIAL_WILD_BATTLE
 	special StartLegendaryBattle
@@ -77,11 +77,11 @@ NavelRock_Base_EventScript_Lugia:: @ 8165134
 
 NavelRock_Base_EventScript_DefeatedLugia:: @ 81651D9
 	setflag FLAG_LUGIA_FLEW_AWAY
-	setvar VAR_0x8004, SPECIES_LUGIA
+	setvar VAR_0x8004, SPECIES_XSUWAKO
 	goto EventScript_MonFlewAway
 	end
 
 NavelRock_Base_EventScript_RanFromLugia:: @ 81651E7
-	setvar VAR_0x8004, SPECIES_LUGIA
+	setvar VAR_0x8004, SPECIES_XSUWAKO
 	goto EventScript_MonFlewAway
 	end

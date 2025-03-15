@@ -19,6 +19,7 @@ extern const u8 BattleScript_FaintAttacker[];
 extern const u8 BattleScript_FaintTarget[];
 extern const u8 BattleScript_GiveExp[];
 extern const u8 BattleScript_HandleFaintedMon[];
+extern const u8 BattleScript_HandleFaintedMonMidTurn[];
 extern const u8 BattleScript_LocalTrainerBattleWon[];
 extern const u8 BattleScript_LocalTwoTrainersDefeated[];
 extern const u8 BattleScript_LocalBattleWonLoseTexts[];
@@ -299,6 +300,10 @@ extern const u8 BattleScript_SalvageArmorActivates[];
 extern const u8 BattleScript_MagicBounceBounce[];
 extern const u8 BattleScript_AnticipationShudder[];
 extern const u8 BattleScript_TauntWearsOff[];
+extern const u8 BattleScript_NoTarget[];
+extern const u8 BattleScriptExplosionEndLoop[];
+extern const u8 BattleScript_ItemToxicOrb[];
+extern const u8 BattleScript_ItemFlameOrb[];
 
 extern const u8 *const gBattleScriptsForMoveEffects[];
 extern const u8 *const gBattlescriptsForBallThrow[];

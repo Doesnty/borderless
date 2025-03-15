@@ -4,6 +4,7 @@ const u8 gEnemyMonElevation[NUM_SPECIES] =
 {
 	[SPECIES_ADMARISA] = 2,
 	
+	[SPECIES_AUNN] = 4,
 	
     [SPECIES_DARK_ALICE] = 6,
     
@@ -18,6 +19,7 @@ const u8 gEnemyMonElevation[NUM_SPECIES] =
     
     [SPECIES_CIRNO] = 2,
     [SPECIES_SCIRNO] = 5,
+    [SPECIES_TCIRNO] = 4,
     
     [SPECIES_CDAIYOUSEI] = 4,
     
@@ -38,6 +40,7 @@ const u8 gEnemyMonElevation[NUM_SPECIES] =
     
     [SPECIES_CHECATIA] = 3,
     
+	[SPECIES_CHINA] = 2,
     [SPECIES_DHINA] = 3,
     [SPECIES_HINA] = 3,
     
@@ -90,6 +93,9 @@ const u8 gEnemyMonElevation[NUM_SPECIES] =
     [SPECIES_MIMA] = 4,
     
     [SPECIES_MIMI_CHAN] = 9,
+	
+	[SPECIES_CMIZUCHI] = 6,
+	[SPECIES_MIZUCHI] = 6,
     
     [SPECIES_ADMYSTIA] = 4,
     [SPECIES_HMYSTIA] = 4,
@@ -141,8 +147,12 @@ const u8 gEnemyMonElevation[NUM_SPECIES] =
     [SPECIES_STOJIKO] = 4,
     
     [SPECIES_CTOKIKO] = 14,
+	
+	[SPECIES_TSEKIBANKI] = 1,
     
     [SPECIES_SUTSUHO] = 4,
+
+	[SPECIES_CWAKASAGIHIME] = 2,
     
     [SPECIES_WRIGGLE] = 2,
     

@@ -52,10 +52,11 @@ const u8 gadmarisaPokedexText[] = _(
     "land. Extremely protective of Alice\n"
     "and constantly worries about her.");
 
+/*
 const u8 glmarisaPokedexText[] = _(
     "An otherworldly magician. Traded her own\n"
     "name for magic power, but it went out of\n"
-    "control and nearly melted the world.");
+    "control and nearly melted the world."); */
 
 const u8 gcrumiaPokedexText[] = _(
     "Wanders about in an orb of darkness\n"
@@ -413,6 +414,11 @@ const u8 gcyoumuPokedexText[] = _(
     "");
 
 const u8 gyoumuPokedexText[] = _(
+    "She wields the katana Roukanken,\n"
+    "forged by youkai to kill phantoms,\n"
+    "and the shortsword Hakurouken.");
+
+const u8 gayoumuPokedexText[] = _(
     "A skilled swordsman that uses two swords.\n"
     "Boldly claims that there are few things\n"
     "that she cannot cut through.");
@@ -427,10 +433,11 @@ const u8 gsyoumuPokedexText[] = _(
     "the naked eye. Not even slowing time\n"
     "would make it possible to see her.");
 
+/*
 const u8 glyoumuPokedexText[] = _(
     "The Youmu of a damned world, black with\n"
     "sin. Uses her nameless swords to cut\n"
-    "things like doubt, time, and souls.");
+    "things like doubt, time, and souls."); */
 
 const u8 gcyuyukoPokedexText[] = _(
     "The mistress of the Netherworld.\n"
@@ -452,10 +459,11 @@ const u8 gdyuyukoPokedexText[] = _(
     "cunning. She's often among the first\n"
     "to understand an incident's nature.");
 
+/*
 const u8 glyuyukoPokedexText[] = _(
     "The Yuyuko of another world. Over-\n"
     "exposure to time dilation has drained her\n"
-    "age. A skilled and enthusiastic chef.");
+    "age. A skilled and enthusiastic chef."); */
 
 const u8 gcranPokedexText[] = _(
     "A nine-tailed kitsune serving as\n"
@@ -518,14 +526,19 @@ const u8 gsuikaPokedexText[] = _(
     "arranging a large party.");
 
 const u8 gasuikaPokedexText[] = _(
+    "Despite her small size, she possesses\n"
+    "considerable strength. She can easily\n"
+    "throw boulders as if they were pebbles.");
+
+const u8 gtsuikaPokedexText[] = _(
     "She is capable of turning bits of\n"
     "hair into copies of herself.\n"
     "");
 
-const u8 gtsuikaPokedexText[] = _(
-    "Despite her small size, she possesses\n"
-    "considerable strength. She can easily\n"
-    "throw boulders as if they were pebbles.");
+const u8 gmpsuikaPokedexText[] = _(
+    "She has the ability to manipulate the\n"
+    "density of objects, which she uses to\n"
+    "make herself extremely large.");
 
 const u8 gcwrigglePokedexText[] = _(
     "A firefly youkai. Can command\n"
@@ -1562,6 +1575,11 @@ const u8 gfutoPokedexText[] = _(
     "old-fashioned and is having a hard\n"
     "time adjusting to Gensokyo.");
 
+const u8 gafutoPokedexText[] = _(
+    "She is friendly to humans, and very\n"
+    "proactive at attacking perceived threats\n"
+    "to humanity, such as Buddhists.");
+
 const u8 gtfutoPokedexText[] = _(
     "Though a devout Taoist, her ability\n"
     "to manipulate feng shui is virtually\n"
@@ -1770,9 +1788,19 @@ const u8 gcsumirekoPokedexText[] = _(
     "Allegedly founded the Sealing Club.");
 
 const u8 gsumirekoPokedexText[] = _(
-    "Visits Gensokyo in her sleep via a\n"
-    "doppelganger body. Works a part-time job\n"
-    "advising Rinnosuke on obsolete technology.");
+    "She badly wanted to enter Gensokyo,\n"
+    "and her attempts to break in endangered\n"
+    "its very existence.");
+
+const u8 gssumirekoPokedexText[] = _(
+    "Works a part-time job advising\n"
+    "Rinnosuke on obsolete technology\n"
+    "that he can't properly identify.");
+
+const u8 gtsumirekoPokedexText[] = _(
+    "She lives a double life through her\n"
+    "doppelganger in Gensokyo, which she\n"
+    "inhabits while sleeping in reality.");
 
 const u8 gcseiranPokedexText[] = _(
     "A moon rabbit sent as cannon fodder to\n"
@@ -1904,6 +1932,11 @@ const u8 gnarumiPokedexText[] = _(
     "Because of her reclusive nature, little\n"
     "else is known about her magic.");
 
+const u8 ganarumiPokedexText[] = _(
+    "Though Narumi is peaceful by nature,\n"
+    "her beloved Bullet Golem, wreathed\n"
+    "in hellfire, is extremely dangerous.");
+
 const u8 gcmai_and_satonoPokedexText[] = _(
     "Okina's unsettling servants. They release\n"
     "people's latent talents by dancing behind\n"
@@ -2021,7 +2054,7 @@ const u8 gmikePokedexText[] = _(
     "live a carefree life in the mountains.");
 
 const u8 gctakanePokedexText[] = _(
-    "A fairly typicaly yamawaro with an\n"
+    "A fairly typical yamawaro with an\n"
     "interest in business. Has the ability\n"
     "to manipulate forest qi.");
 
@@ -2100,6 +2133,16 @@ const u8 gmiyoiPokedexText[] = _(
     "She can manipulate memories and dreams.\n"
     "Uses this ability to make Geidontei's\n"
     "owner unaware of her existence.");
+
+const u8 gcmizuchiPokedexText[] = _(
+    "An especially vengeful spirit\n"
+    "with the ability to possess\n"
+    "anyone.");
+
+const u8 gmizuchiPokedexText[] = _(
+    "She's meant to be under lock and key\n"
+    "in Old Hell, but her ability makes it\n"
+    "very hard to keep her in one place.");
 
 const u8 gcbitenPokedexText[] = _(
     "A monkey who became a youkai by\n"
@@ -2342,7 +2385,7 @@ const u8 gchiyuriPokedexText[] = _(
     "");
 
 const u8 gcyumemiPokedexText[] = _(
-    "A professor from the outside world\n"
+    "A professor from another world\n"
     "that visited Gensokyo to study magic.\n"
     "");
 
@@ -2350,6 +2393,11 @@ const u8 gyumemiPokedexText[] = _(
     "A human that uses artificial magic.\n"
     "Kicked out of university for showing\n"
     "her theories about magic to her peers.");
+
+const u8 gtyumemiPokedexText[] = _(
+    "She captains the Probability Space\n"
+    "Hypervessel, which lets her explore\n"
+    "across time and space.");
 
 const u8 gruukotoPokedexText[] = _(
     "A robot maid in Reimu's possession.\n"
@@ -2492,6 +2540,11 @@ const u8 gcshinkiPokedexText[] = _(
     "");
 
 const u8 gshinkiPokedexText[] = _(
+    "She rules over Makai, an infinite\n"
+    "magic-infused realm of chaos, from\n"
+    "the fortress Pandemonium.");
+
+const u8 gashinkiPokedexText[] = _(
     "She can destroy and re-create Makai\n"
     "as she sees fit. She once leveled the\n"
     "entire realm in a single duel.");
@@ -2557,23 +2610,23 @@ const u8 g2huPokedexText[] = _(
     // she's a reference to the How to Draw a Touhou Girl meme
 
 const u8 gcrenkoPokedexText[] = _(
-	"An outside world human."
-	"She can tell the time by looking"
+	"An outside world human.\n"
+	"She can tell the time by looking\n"
 	"at the sky, but only in JST.");
 
 const u8 gtrrenkoPokedexText[] = _(
-	"Despite studying physics, Renko"
-	"firmly believes in the fantasy"
+	"Despite studying physics, Renko\n"
+	"firmly believes in the fantasy\n"
 	"worlds that Maribel can see.");
 
 const u8 gcmaribelPokedexText[] = _(
-	"An outside world human."
-	"She can see boundaries, including"
+	"An outside world human.\n"
+	"She can see boundaries, including\n"
 	"those leading to other worlds.");
 
 const u8 gtrmaribelPokedexText[] = _(
-	"Gensokyo accepts all."
-	"That's a cruel thing."
+	"Gensokyo accepts all.\n"
+	"That's a cruel thing.\n"
 	"");
 
 const u8 gxsuwakoPokedexText[] = _(

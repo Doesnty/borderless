@@ -27,15 +27,18 @@ CeladonCity_DepartmentStore_4F_EventScript_Clerk:: @ 816BC0A
 	.align 2
 CeladonCity_DepartmentStore_4F_Items:: @ 816BC30
 	.2byte ITEM_POKE_DOLL
-	.2byte ITEM_RETRO_MAIL
 	.2byte ITEM_POWER_SHARD
 	.2byte ITEM_GUARD_SHARD
 	.2byte ITEM_SWIFT_SHARD
 	.2byte ITEM_TECH_SHARD
 	.2byte ITEM_ASSIST_SHARD
+	.2byte ITEM_SOLAR_SHARD
 	.2byte ITEM_AUTUMN_LEAF
 	.2byte ITEM_DUBIOUS_TOME
-	.2byte ITEM_SEAL_CRYSTAL
+	.2byte ITEM_OLD_TEXTBOOK
+	.2byte ITEM_IBUKI_GOURD
+	.2byte ITEM_TOXIC_ORB
+	.2byte ITEM_FLAME_ORB
 	.2byte ITEM_NONE
 	release
 	end

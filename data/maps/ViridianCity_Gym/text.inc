@@ -46,7 +46,7 @@ ViridianCity_Gym_Text_ExplainTM26:: @ 818F695
     .string "TM26 contains Earthquake.\p"
     .string "It is a powerful attack that causes\n"
     .string "a massive tremor.\p"
-    .string "I made it when I ran the GYM here,\n"
+    .string "I made it when I ran the Gym here,\n"
     .string "far too long ago… $"
 
 ViridianCity_Gym_Text_YouDoNotHaveSpace:: @ 818F71B
@@ -114,7 +114,7 @@ ViridianCity_Gym_Text_TakashiDefeat:: @ 818F95A
     .string "Ayah!$"
 
 ViridianCity_Gym_Text_TakashiPostBattle:: @ 818F960
-    .string "The Puppet League?\n"
+    .string "The Puppetry League?\n"
     .string "You? Don't get cocky!$"
 
 ViridianCity_Gym_Text_ColeIntro:: @ 818F98A
@@ -138,34 +138,36 @@ ViridianCity_Gym_Text_SamuelDefeat:: @ 818FA2D
     .string "I was beaten?$"
 
 ViridianCity_Gym_Text_SamuelPostBattle:: @ 818FA3B
-    .string "You can go on to the Puppet\n"
+    .string "You can go on to the Puppetry\n"
     .string "League only by defeating our Gym\l"
     .string "Leader!$"
 
 ViridianCity_Gym_Text_GymGuyAdvice:: @ 818FA81
     .string "Yo!\n"
     .string "Champ in the making!\p"
-    .string "Even I don't know the VIRIDIAN\n"
-    .string "LEADER's identity.\p"
+    .string "Even I don't know the Viridian\n"
+    .string "Leader's identity.\p"
     .string "But one thing's certain.\n"
     .string "This will be the toughest of all\l"
-    .string "the GYM LEADERS.\p"
-    .string "Also, I heard that the TRAINERS\n"
-    .string "here like GROUND-type POKéMON.$"
+    .string "the Gym Leaders.\p"
+    .string "Also, I heard that the Trainers\n"
+    .string "here like all sorts of Puppets.\p"
+	.string "You'll want to be ready for any\n"
+	.string "type going forward.$"
 
 ViridianCity_Gym_Text_GymGuyPostVictory:: @ 818FB56
-    .string "Blow me away! GIOVANNI was the\n"
-    .string "GYM LEADER of VIRIDIAN?$"
+    .string "Blow me away! Giovanni was the\n"
+    .string "Gym Leader of Viridian?$"
 
 ViridianCity_Gym_Text_GymStatue:: @ 818FB8D
-    .string "VIRIDIAN PUPPET GYM\n"
+    .string "VIRIDIAN PUPPETRY GYM\n"
     .string "LEADER: ?\p"
     .string "WINNING TRAINERS:\n"
-    .string "{RIVAL}$"
+    .string "{OTHER_PC}, {RIVAL}$"
 
 ViridianCity_Gym_Text_GymStatuePlayerWon:: @ 818FBC1
-    .string "VIRIDIAN PUPPET GYM\n"
+    .string "VIRIDIAN PUPPETRY GYM\n"
     .string "LEADER: GIOVANNI\p"
     .string "WINNING TRAINERS:\n"
-    .string "{RIVAL}, {PLAYER}$"
+    .string "{OTHER_PC}, {RIVAL}, {PLAYER}$"
 

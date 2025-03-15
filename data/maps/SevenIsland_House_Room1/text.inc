@@ -2,7 +2,7 @@ SevenIsland_House_Room1_Text_OnlyEnjoymentWatchingBattles:: @ 81A049B
     .string "I may not look like much now,\n"
     .string "but when I was younger…\p"
     .string "I flew everywhere, challenging\n"
-    .string "TRAINERS wherever I found them.\p"
+    .string "Puppeteers wherever I found them.\p"
     .string "Now, my only source of enjoyment\n"
     .string "is reminiscing about the past while\l"
     .string "watching battles.$"

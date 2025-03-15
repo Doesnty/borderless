@@ -974,7 +974,7 @@ static void Cmd_get_how_powerful_move_is(void)
             break;
     }
 
-    if (gBattleMoves[AI_THINKING_STRUCT->moveConsidered].power > 1
+    if (gBattleMoves[AI_THINKING_STRUCT->moveConsidered].power > 0
         && sDiscouragedPowerfulMoveEffects[i] == 0xFFFF)
     {
         gDynamicBasePower = 0;

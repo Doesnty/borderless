@@ -695,13 +695,14 @@ static const struct MenuAction sScriptMultiChoiceMenu_Zun16[] = {
     { gText_ZunChimata },
     { gText_ZunMomoyo },
     { gText_ZunMiyoi },
+    { gText_ZunMizuchi },
     { gText_ZunBiten },
-    { gText_ZunEnoko },
     { gText_ZunPreviousPage },
 };
 
 static const struct MenuAction sScriptMultiChoiceMenu_Zun17[] = {
     { gText_ZunNextPage },
+    { gText_ZunEnoko },
     { gText_ZunChiyari },
     { gText_ZunHisami },
     { gText_ZunZanmu },
@@ -709,17 +710,16 @@ static const struct MenuAction sScriptMultiChoiceMenu_Zun17[] = {
     { gText_ZunKirisame },
     { gText_ZunShingyoku },
     { gText_ZunMagan },
-    { gText_ZunMima },
     { gText_ZunPreviousPage },
 };
 
 static const struct MenuAction sScriptMultiChoiceMenu_Zun18[] = {
     { gText_ZunNextPage },
+    { gText_ZunMima },
     { gText_ZunElis },
     { gText_ZunKikuri },
     { gText_ZunKonngara },
     { gText_ZunSariel },
-    { gText_ZunGenji },
     { gText_ZunRika },
     { gText_ZunMeira },
     { gText_ZunEllen },

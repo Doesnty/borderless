@@ -43,19 +43,19 @@ FiveIsland_WaterLabyrinth_Text_CuteMonRemindsMeOfDaisy:: @ 818AA0C
     .string "That's a cute {STR_VAR_2}.\p"
     .string "Seeing it reminds me of a sweet \n"
     .string "little girl I met while traveling.\p"
-    .string "She was gently grooming POKéMON…\n"
+    .string "She was gently grooming Puppets…\n"
     .string "She was a little angel.\p"
     .string "That little girl's name…\n"
-    .string "I think it was DAISY.$"
+    .string "I think it was Daisy.$"
 
 FiveIsland_WaterLabyrinth_Text_AlizeIntro:: @ 818AAD5
     .string "This is an excellent environment\n"
-    .string "for raising POKéMON.$"
+    .string "for raising Puppets.$"
 
 FiveIsland_WaterLabyrinth_Text_AlizeDefeat:: @ 818AB0B
-    .string "Your POKéMON are growing up\n"
+    .string "Your Puppets are growing up\n"
     .string "admirably well!$"
 
 FiveIsland_WaterLabyrinth_Text_AlizePostBattle:: @ 818AB37
     .string "You know, I think you have the\n"
-    .string "talent to be a good BREEDER.$"
+    .string "talent to be a good Breeder.$"

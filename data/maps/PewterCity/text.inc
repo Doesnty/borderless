@@ -89,7 +89,7 @@ PewterCity_Text_MuseumOfScience:: @ 817E7C5
     .string "PEWTER MUSEUM OF SCIENCE$"
 
 PewterCity_Text_GymSign:: @ 817E7DE
-    .string "PEWTER CITY POKéMON GYM\n"
+    .string "PEWTER CITY PUPPETRY GYM\n"
     .string "LEADER: BROCK\l"
     .string "The Rock-Solid Puppet Trainer!$"
 

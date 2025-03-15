@@ -13,3 +13,7 @@ SilphCo_1F_EventScript_Receptionist:: @ 816162F
 SilphCo_1F_EventScript_FloorSign:: @ 8161638
 	msgbox SilphCo_1F_Text_FloorSign, MSGBOX_SIGN
 	end
+
+SilphCo_1F_EventScript_Mamizou:: @ 816162F
+	msgbox SilphCo_1F_Text_Mamizou, MSGBOX_NPC
+	end

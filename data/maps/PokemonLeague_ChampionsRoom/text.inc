@@ -17,32 +17,26 @@ asdfasdfsadfsdf:: @ 8178B6C
     .string "the world!$"
 
 PokemonLeague_ChampionsRoom_Text_IntroMaribel::
-	.string "MARIBEL: fite me bich$"
-
-	.string "MARIBEL: {PLAYER}?! You made it here?\p"
-	.string "How did you even follow me into this\n"
-	.string "world? Was the boundary open?\p"
-	.string "I'm sorry for not contacting you for\n"
-	.string "so long, but I got caught up in things\p."
-	.string "Well...as nice as it is to see you, you\n"
-	.string "know what this meeting means, right?\p"
+	.string "MARIBEL: {PLAYER}?!\n"
+	.string "You made it here?\p"
+	.string "Sorry for not telling you where I\n"
+	.string "went, but I got caught up in things…\p"
+	.string "Well…as nice as it is to meet up,\n"
+	.string "you know what comes next, right?\p"
 	.string "I've been diligently cataloguing the\n"
 	.string "Puppets here to understand them.\p"
 	.string "I've found Puppets of some of the\n"
 	.string "strongest beings of fantasy here.\p"
-	.string "And now that I've reached the level of\n"
-	.string "Champion, I'm not going to lose!\p"
+	.string "With their power, it was easy\n"
+	.string "to become the Champion.\p"
 	.string "As the strongest Puppet Trainer in\n"
 	.string "this world, I won't lose!\p"
 	.string "Not even to you, {PLAYER}!$"
 
 PokemonLeague_ChampionsRoom_Text_IntroRenko::
-	.string "RENKO: fite me bich$"
-	
-	.string "RENKO: {PLAYER}!\n"
-	.string "About time I ran into you!\p"
-	.string "You left the gate open in your room.\n"
-	.string "Of course I'd come looking for you!\p"
+	.string "RENKO: {PLAYER}!\p"
+	.string "About time I ran into you!\n"
+	.string "I've been looking all over!\p"
 	.string "But, what a world this is!\p"
 	.string "All these Puppets are just like the\n"
 	.string "people of that world of fantasy...\p"
@@ -51,7 +45,7 @@ PokemonLeague_ChampionsRoom_Text_IntroRenko::
 	.string "Well, that aside...\p"
 	.string "You're here as a challenger, right?\p"
 	.string "I won't sugarcoat it, {PLAYER}.\n"
-	.string "I've become stronger here.\p"
+	.string "I've become stronger.\p"
 	.string "I've spent time learning how the\n"
 	.string "Puppets do battle, and perfecting it.\p"
 	.string "The ones I've assembled can take on\n"
@@ -79,7 +73,7 @@ PokemonLeague_ChampionsRoom_Text_RematchIntro:: @ 8178CD4
     .string "I am the most powerful TRAINER in\n"
     .string "the world!$"
 
-PokemonLeague_ChampionsRoom_Text_Defeat:: @ 8178E3F
+PokemonLeague_ChampionsRoom_Text_Defeat::
     .string "NO!\n"
     .string "That can't be!\l"
     .string "You beat me at my best!\p"
@@ -88,18 +82,46 @@ PokemonLeague_ChampionsRoom_Text_Defeat:: @ 8178E3F
     .string "My reign is over already?\n"
     .string "It's not fair!$"
 
-PokemonLeague_ChampionsRoom_Text_Victory:: @ 8178EC3
-    .string "はーはッ！\n"
-    .string "かった！　かった！　かった！\p"
-    .string "{PLAYER}に　まける　ような\n"
-    .string "おれさま　では　なーい！\p"
-    .string "ま！　ポケモンの\n"
-    .string "てんさい　{RIVAL}さま　あいてに\l"
-    .string "ここまで　よく　がんばった！\p"
-    .string "ほめて　つかわす！\n"
-    .string "はーッ！　はーはッはッ！$"
+PokemonLeague_ChampionsRoom_Text_MaribelDefeat::
+	.string "I…lost?\p"
+	.string "{PLAYER}, I…\p"
+	.string "… …\p"
+	.string "…Sorry. {PLAYER}, after that\n"
+	.string "performance, I'm more than satisfied.\p"
+	.string "You are now the new Puppetry\n"
+	.string "League Champion!$"
 
-PokemonLeague_ChampionsRoom_Text_PostBattle:: @ 8178F2F
+PokemonLeague_ChampionsRoom_Text_RenkoDefeat::
+	.string "…Absolutely incredible.\p"
+	.string "{PLAYER}, you're not going anywhere\n"
+	.string "after this, right?\p"
+	.string "I really want to talk more.\n"
+	.string "I want to know what you've seen here.\p"
+	.string "We'll have plenty of time, since you're\n"
+	.string "the new Puppetry League Champion!$"
+	
+    .string "NO!\n"
+    .string "That can't be!\l"
+    .string "You beat me at my best!\p"
+    .string "After all that work to become\n"
+    .string "the LEAGUE CHAMP?\p"
+    .string "My reign is over already?\n"
+    .string "It's not fair!$"
+
+PokemonLeague_ChampionsRoom_Text_PostBattleMaribel::
+	.string "Oh, that Puppet of myself?\p"
+	.string "Right, I should explain. Keep it\n"
+	.string "a secret for now, though.\p"
+	.string "I went exploring in Cerulean-$"
+	
+PokemonLeague_ChampionsRoom_Text_PostBattleRenko::
+	.string "Oh, {PLAYER}! There's something\n"
+	.string "important I should tell you.\p"
+	.string "That Puppet I used that looked like\n"
+	.string "me. Keep this under wraps, but…\p"
+	.string "I ran into it while exploring the\n"
+	.string "cave by Cerulean-$"
+
     .string "Why?\n"
     .string "Why did I lose?\p"
     .string "I never made any mistakes raising\n"
@@ -114,12 +136,17 @@ PokemonLeague_ChampionsRoom_Text_OakPlayer:: @ 8178FC6
 PokemonLeague_ChampionsRoom_Text_OakCongratulations:: @ 8178FCF
     .string "OAK: So, you've won!\n"
     .string "Sincerely, congratulations!\p"
-    .string "You're the new POKéMON LEAGUE\n"
-    .string "CHAMPION!\p"
+    .string "You're the new Puppetry League\n"
+    .string "Champion!\p"
     .string "You've grown up so much since you\n"
     .string "first left with {STR_VAR_1} to work\l"
-    .string "on the POKéDEX.\p"
-    .string "{PLAYER}, you have come of age!$"
+    .string "on the Tohodex.\p"
+    .string "You understand that your victory\n"
+    .string "was not just your own doing.\p"
+    .string "The bond you share with your\n"
+    .string "Puppets is marvelous.\p"
+    .string "{PLAYER}!\n"
+    .string "Come with me!$"
 
 PokemonLeague_ChampionsRoom_Text_OakImDisappointedRival:: @ 817908F
     .string "OAK: {RIVAL}…\n"
@@ -140,7 +167,7 @@ PokemonLeague_ChampionsRoom_Text_OakPlayerComeWithMe:: @ 81791A3
     .string "You understand that your victory\n"
     .string "was not just your own doing.\p"
     .string "The bond you share with your\n"
-    .string "POKéMON is marvelous.\p"
+    .string "Puppets is marvelous.\p"
     .string "{PLAYER}!\n"
     .string "Come with me!$"
 

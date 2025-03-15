@@ -67,12 +67,6 @@ const struct PokedexEntry gPokedexEntries[] =
         .description = gadmarisaPokedexText,
     },
 
-    [NATIONAL_DEX_LMARISA] = 
-    {
-        .categoryName = _("Lost"),
-        .description = glmarisaPokedexText,
-    },
-
     [NATIONAL_DEX_CRUMIA] = 
     {
         .categoryName = _("Darkness"),
@@ -505,6 +499,12 @@ const struct PokedexEntry gPokedexEntries[] =
         .description = gyoumuPokedexText,
     },
 
+    [NATIONAL_DEX_AYOUMU] = 
+    {
+        .categoryName = _("Half-Phantom"),
+        .description = gayoumuPokedexText,
+    },
+
     [NATIONAL_DEX_DYOUMU] = 
     {
         .categoryName = _("Half-Phantom"),
@@ -515,12 +515,6 @@ const struct PokedexEntry gPokedexEntries[] =
     {
         .categoryName = _("Half-Phantom"),
         .description = gsyoumuPokedexText,
-    },
-
-    [NATIONAL_DEX_LYOUMU] = 
-    {
-        .categoryName = _("Lost"),
-        .description = glyoumuPokedexText,
     },
 
     [NATIONAL_DEX_CYUYUKO] = 
@@ -545,12 +539,6 @@ const struct PokedexEntry gPokedexEntries[] =
     {
         .categoryName = _("Ghost"),
         .description = gdyuyukoPokedexText,
-    },
-
-    [NATIONAL_DEX_LYUYUKO] = 
-    {
-        .categoryName = _("Lost"),
-        .description = glyuyukoPokedexText,
     },
 
     [NATIONAL_DEX_CRAN] = 
@@ -635,6 +623,12 @@ const struct PokedexEntry gPokedexEntries[] =
     {
         .categoryName = _("Drunk Oni"),
         .description = gtsuikaPokedexText,
+    },
+
+    [NATIONAL_DEX_MPSUIKA] = 
+    {
+        .categoryName = _("Missing Power"),
+        .description = gmpsuikaPokedexText,
     },
 
     [NATIONAL_DEX_CWRIGGLE] = 
@@ -1879,6 +1873,12 @@ const struct PokedexEntry gPokedexEntries[] =
         .description = gfutoPokedexText,
     },
 
+    [NATIONAL_DEX_AFUTO] = 
+    {
+        .categoryName = _("Shikaisen"),
+        .description = gafutoPokedexText,
+    },
+
     [NATIONAL_DEX_TFUTO] = 
     {
         .categoryName = _("Shikaisen"),
@@ -2131,6 +2131,18 @@ const struct PokedexEntry gPokedexEntries[] =
         .description = gsumirekoPokedexText,
     },
 
+    [NATIONAL_DEX_SSUMIREKO] = 
+    {
+        .categoryName = _("High School"),
+        .description = gssumirekoPokedexText,
+    },
+
+    [NATIONAL_DEX_TSUMIREKO] = 
+    {
+        .categoryName = _("High School"),
+        .description = gtsumirekoPokedexText,
+    },
+
     [NATIONAL_DEX_CSEIRAN] = 
     {
         .categoryName = _("Moon Rabbit"),
@@ -2285,6 +2297,12 @@ const struct PokedexEntry gPokedexEntries[] =
     {
         .categoryName = _("Magician"),
         .description = gnarumiPokedexText,
+    },
+
+    [NATIONAL_DEX_ANARUMI] = 
+    {
+        .categoryName = _("Magician"),
+        .description = ganarumiPokedexText,
     },
 
     [NATIONAL_DEX_CMAI_AND_SATONO] = 
@@ -2457,13 +2475,13 @@ const struct PokedexEntry gPokedexEntries[] =
 
     [NATIONAL_DEX_CTSUKASA] = 
     {
-        .categoryName = _("Pipe Fox"),
+        .categoryName = _("Tube Fox"),
         .description = gctsukasaPokedexText,
     },
 
     [NATIONAL_DEX_TSUKASA] = 
     {
-        .categoryName = _("Pipe Fox"),
+        .categoryName = _("Tube Fox"),
         .description = gtsukasaPokedexText,
     },
 
@@ -2513,6 +2531,18 @@ const struct PokedexEntry gPokedexEntries[] =
     {
         .categoryName = _("Waitress"),
         .description = gmiyoiPokedexText,
+    },
+
+    [NATIONAL_DEX_CMIZUCHI] = 
+    {
+        .categoryName = _("Jailbreak"),
+        .description = gcmizuchiPokedexText,
+    },
+
+    [NATIONAL_DEX_MIZUCHI] = 
+    {
+        .categoryName = _("Jailbreak"),
+        .description = gmizuchiPokedexText,
     },
 
     [NATIONAL_DEX_CBITEN] = 
@@ -2815,6 +2845,12 @@ const struct PokedexEntry gPokedexEntries[] =
         .description = gyumemiPokedexText,
     },
 
+    [NATIONAL_DEX_TYUMEMI] = 
+    {
+        .categoryName = _("Professor"),
+        .description = gtyumemiPokedexText,
+    },
+
     [NATIONAL_DEX_RUUKOTO] = 
     {
         .categoryName = _("Robot Maid"),
@@ -2987,6 +3023,12 @@ const struct PokedexEntry gPokedexEntries[] =
     {
         .categoryName = _("Goddess"),
         .description = gshinkiPokedexText,
+    },
+
+    [NATIONAL_DEX_ASHINKI] = 
+    {
+        .categoryName = _("Goddess"),
+        .description = gashinkiPokedexText,
     },
 
     [NATIONAL_DEX_CSENDAI] = 

@@ -61,7 +61,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_ANGER_POINT,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
-        .cost = 80,
+        .cost = 90,
     },
     [SPECIES_REIMU] = 
     {
@@ -154,7 +154,7 @@ const struct BaseStats gBaseStats[] =
         .type1 = TYPE_ELECTRIC,
         .type2 = TYPE_NORMAL,
         .item1 = ITEM_NONE,
-        .item2 = ITEM_NONE,
+        .item2 = ITEM_STARDUST,
         .genderRatio = PERCENT_FEMALE(50),
         .eggCycles = 20,
         .friendship = 70,
@@ -165,7 +165,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_POWER_LEAK,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
-        .cost = 40,
+        .cost = 60,
     },
     [SPECIES_MARISA] = 
     {
@@ -180,7 +180,7 @@ const struct BaseStats gBaseStats[] =
         .type1 = TYPE_ELECTRIC,
         .type2 = TYPE_REASON,
         .item1 = ITEM_NONE,
-        .item2 = ITEM_NONE,
+        .item2 = ITEM_STARDUST,
         .genderRatio = PERCENT_FEMALE(50),
         .eggCycles = 20,
         .friendship = 70,
@@ -206,7 +206,7 @@ const struct BaseStats gBaseStats[] =
         .type1 = TYPE_ELECTRIC,
         .type2 = TYPE_FIRE,
         .item1 = ITEM_NONE,
-        .item2 = ITEM_NONE,
+        .item2 = ITEM_STARDUST,
         .genderRatio = PERCENT_FEMALE(50),
         .eggCycles = 20,
         .friendship = 70,
@@ -232,7 +232,7 @@ const struct BaseStats gBaseStats[] =
         .type1 = TYPE_ELECTRIC,
         .type2 = TYPE_NORMAL,
         .item1 = ITEM_NONE,
-        .item2 = ITEM_NONE,
+        .item2 = ITEM_STARDUST,
         .genderRatio = PERCENT_FEMALE(50),
         .eggCycles = 20,
         .friendship = 70,
@@ -258,7 +258,7 @@ const struct BaseStats gBaseStats[] =
         .type1 = TYPE_ELECTRIC,
         .type2 = TYPE_ELECTRIC,
         .item1 = ITEM_NONE,
-        .item2 = ITEM_NONE,
+        .item2 = ITEM_STARDUST,
         .genderRatio = PERCENT_FEMALE(50),
         .eggCycles = 20,
         .friendship = 70,
@@ -266,32 +266,6 @@ const struct BaseStats gBaseStats[] =
         .eggGroup1 = EGG_GROUP_HUMAN_LIKE,
         .eggGroup2 = EGG_GROUP_HUMAN_LIKE,
         .abilities = { ABILITY_COLLECTOR, ABILITY_COLLECTOR },
-        .hiddenAbility = ABILITY_POWER_LEAK,
-        .safariZoneFleeRate = 0,
-        .noFlip = TRUE,
-        .cost = 80,
-    },
-    [SPECIES_LMARISA] = 
-    {
-        .baseHP = 110,
-        .baseAttack = 120,
-        .baseDefense = 30,
-        .baseSpAttack = 120,
-        .baseSpDefense = 100,
-        .baseSpeed = 50,
-        .catchRate = 55,
-        .expYield = 239,
-        .type1 = TYPE_ILLUSION,
-        .type2 = TYPE_FIRE,
-        .item1 = ITEM_NONE,
-        .item2 = ITEM_NONE,
-        .genderRatio = PERCENT_FEMALE(50),
-        .eggCycles = 20,
-        .friendship = 70,
-        .growthRate = GROWTH_MEDIUM_FAST,
-        .eggGroup1 = EGG_GROUP_HUMAN_LIKE,
-        .eggGroup2 = EGG_GROUP_HUMAN_LIKE,
-        .abilities = { ABILITY_DROUGHT, ABILITY_DROUGHT },
         .hiddenAbility = ABILITY_POWER_LEAK,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
@@ -321,7 +295,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_HUSTLE,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
-        .cost = 20,
+        .cost = 45,
     },
     [SPECIES_RUMIA] = 
     {
@@ -425,7 +399,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_SOLAR_POWER,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
-        .cost = 20,
+        .cost = 30,
     },
     [SPECIES_DAIYOUSEI] = 
     {
@@ -529,7 +503,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_SLUSH_RUSH,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
-        .cost = 20,
+        .cost = 45,
     },
     [SPECIES_CIRNO] = 
     {
@@ -659,7 +633,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_SCRAPPY,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
-        .cost = 20,
+        .cost = 45,
     },
     [SPECIES_MEILING] = 
     {
@@ -789,7 +763,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_MAGIC_BOUNCE,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
-        .cost = 20,
+        .cost = 30,
     },
     [SPECIES_KOAKUMA] = 
     {
@@ -867,7 +841,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_PROTEAN,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
-        .cost = 40,
+        .cost = 60,
     },
     [SPECIES_PATCHOULI] = 
     {
@@ -971,7 +945,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_INNER_FOCUS,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
-        .cost = 40,
+        .cost = 60,
     },
     [SPECIES_SAKUYA] = 
     {
@@ -1075,7 +1049,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_SUPER_LUCK,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
-        .cost = 80,
+        .cost = 90,
     },
     [SPECIES_REMILIA] = 
     {
@@ -1179,7 +1153,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_PRESSURE,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
-        .cost = 80,
+        .cost = 90,
     },
     [SPECIES_FLANDRE] = 
     {
@@ -1283,7 +1257,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_FOCUS,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
-        .cost = 20,
+        .cost = 45,
     },
     [SPECIES_LETTY] = 
     {
@@ -1413,7 +1387,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_QUICK_FEET,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
-        .cost = 20,
+        .cost = 30,
     },
     [SPECIES_CHEN] = 
     {
@@ -1543,7 +1517,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_SKILL_LINK,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
-        .cost = 40,
+        .cost = 60,
     },
     [SPECIES_ALICE] = 
     {
@@ -1699,7 +1673,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_FIRE_VEIL,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
-        .cost = 20,
+        .cost = 30,
     },
     [SPECIES_LILYWHITE] = 
     {
@@ -1803,7 +1777,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_WALL_OF_ICE,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
-        .cost = 20,
+        .cost = 30,
     },
     [SPECIES_LILYBLACK] = 
     {
@@ -1907,7 +1881,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_DOUR_ECHO,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
-        .cost = 20,
+        .cost = 45,
     },
     [SPECIES_LUNASA] = 
     {
@@ -1985,7 +1959,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_MANIC_ECHO,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
-        .cost = 20,
+        .cost = 45,
     },
     [SPECIES_MERLIN] = 
     {
@@ -2063,7 +2037,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_HARMONIZE,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
-        .cost = 20,
+        .cost = 45,
     },
     [SPECIES_LYRICA] = 
     {
@@ -2141,7 +2115,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_UNAWARE,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
-        .cost = 40,
+        .cost = 60,
     },
     [SPECIES_YOUMU] = 
     {
@@ -2165,6 +2139,32 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_HUMAN_LIKE,
         .abilities = { ABILITY_INNER_FOCUS, ABILITY_STEADFAST },
         .hiddenAbility = ABILITY_UNAWARE,
+        .safariZoneFleeRate = 0,
+        .noFlip = TRUE,
+        .cost = 80,
+    },
+    [SPECIES_AYOUMU] = 
+    {
+        .baseHP = 65,
+        .baseAttack = 110,
+        .baseDefense = 65,
+        .baseSpAttack = 120,
+        .baseSpDefense = 65,
+        .baseSpeed = 105,
+        .catchRate = 55,
+        .expYield = 239,
+        .type1 = TYPE_STEEL,
+        .type2 = TYPE_STEEL,
+        .item1 = ITEM_KASIB_BERRY,
+        .item2 = ITEM_ROUKANKEN,
+        .genderRatio = PERCENT_FEMALE(50),
+        .eggCycles = 20,
+        .friendship = 70,
+        .growthRate = GROWTH_MEDIUM_FAST,
+        .eggGroup1 = EGG_GROUP_HUMAN_LIKE,
+        .eggGroup2 = EGG_GROUP_HUMAN_LIKE,
+        .abilities = { ABILITY_INNER_FOCUS, ABILITY_STEADFAST },
+        .hiddenAbility = ABILITY_SWORDMASTER,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
         .cost = 80,
@@ -2221,32 +2221,6 @@ const struct BaseStats gBaseStats[] =
         .noFlip = TRUE,
         .cost = 80,
     },
-    [SPECIES_LYOUMU] = 
-    {
-        .baseHP = 65,
-        .baseAttack = 115,
-        .baseDefense = 60,
-        .baseSpAttack = 145,
-        .baseSpDefense = 40,
-        .baseSpeed = 105,
-        .catchRate = 55,
-        .expYield = 239,
-        .type1 = TYPE_ILLUSION,
-        .type2 = TYPE_STEEL,
-        .item1 = ITEM_KASIB_BERRY,
-        .item2 = ITEM_ROUKANKEN,
-        .genderRatio = PERCENT_FEMALE(50),
-        .eggCycles = 20,
-        .friendship = 70,
-        .growthRate = GROWTH_MEDIUM_FAST,
-        .eggGroup1 = EGG_GROUP_HUMAN_LIKE,
-        .eggGroup2 = EGG_GROUP_HUMAN_LIKE,
-        .abilities = { ABILITY_PRESSURE, ABILITY_PRESSURE },
-        .hiddenAbility = ABILITY_SWORDMASTER,
-        .safariZoneFleeRate = 0,
-        .noFlip = TRUE,
-        .cost = 80,
-    },
     [SPECIES_CYUYUKO] = 
     {
         .baseHP = 80,
@@ -2271,7 +2245,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_SAP_SIPPER,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
-        .cost = 80,
+        .cost = 90,
     },
     [SPECIES_YUYUKO] = 
     {
@@ -2351,32 +2325,6 @@ const struct BaseStats gBaseStats[] =
         .noFlip = TRUE,
         .cost = 120,
     },
-    [SPECIES_LYUYUKO] = 
-    {
-        .baseHP = 80,
-        .baseAttack = 80,
-        .baseDefense = 90,
-        .baseSpAttack = 100,
-        .baseSpDefense = 90,
-        .baseSpeed = 110,
-        .catchRate = 35,
-        .expYield = 248,
-        .type1 = TYPE_ILLUSION,
-        .type2 = TYPE_GHOST,
-        .item1 = ITEM_NONE,
-        .item2 = ITEM_NONE,
-        .genderRatio = PERCENT_FEMALE(50),
-        .eggCycles = 20,
-        .friendship = 70,
-        .growthRate = GROWTH_MEDIUM_FAST,
-        .eggGroup1 = EGG_GROUP_HUMAN_LIKE,
-        .eggGroup2 = EGG_GROUP_HUMAN_LIKE,
-        .abilities = { ABILITY_LEVITATE, ABILITY_GUTS },
-        .hiddenAbility = ABILITY_IMMUNITY,
-        .safariZoneFleeRate = 0,
-        .noFlip = TRUE,
-        .cost = 120,
-    },
     [SPECIES_CRAN] = 
     {
         .baseHP = 55,
@@ -2390,7 +2338,7 @@ const struct BaseStats gBaseStats[] =
         .type1 = TYPE_BEAST,
         .type2 = TYPE_BEAST,
         .item1 = ITEM_NONE,
-        .item2 = ITEM_NONE,
+        .item2 = ITEM_BLOOMERS,
         .genderRatio = PERCENT_FEMALE(50),
         .eggCycles = 20,
         .friendship = 70,
@@ -2401,7 +2349,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_STEADFAST,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
-        .cost = 80,
+        .cost = 90,
     },
     [SPECIES_RAN] = 
     {
@@ -2416,7 +2364,7 @@ const struct BaseStats gBaseStats[] =
         .type1 = TYPE_BEAST,
         .type2 = TYPE_REASON,
         .item1 = ITEM_NONE,
-        .item2 = ITEM_NONE,
+        .item2 = ITEM_BLOOMERS,
         .genderRatio = PERCENT_FEMALE(50),
         .eggCycles = 20,
         .friendship = 70,
@@ -2442,7 +2390,7 @@ const struct BaseStats gBaseStats[] =
         .type1 = TYPE_BEAST,
         .type2 = TYPE_REASON,
         .item1 = ITEM_NONE,
-        .item2 = ITEM_NONE,
+        .item2 = ITEM_BLOOMERS,
         .genderRatio = PERCENT_FEMALE(50),
         .eggCycles = 20,
         .friendship = 70,
@@ -2468,7 +2416,7 @@ const struct BaseStats gBaseStats[] =
         .type1 = TYPE_BEAST,
         .type2 = TYPE_REASON,
         .item1 = ITEM_NONE,
-        .item2 = ITEM_NONE,
+        .item2 = ITEM_BLOOMERS,
         .genderRatio = PERCENT_FEMALE(50),
         .eggCycles = 20,
         .friendship = 70,
@@ -2494,7 +2442,7 @@ const struct BaseStats gBaseStats[] =
         .type1 = TYPE_BEAST,
         .type2 = TYPE_BEAST,
         .item1 = ITEM_NONE,
-        .item2 = ITEM_NONE,
+        .item2 = ITEM_BLOOMERS,
         .genderRatio = PERCENT_FEMALE(50),
         .eggCycles = 20,
         .friendship = 70,
@@ -2531,7 +2479,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_HIBERNATION,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
-        .cost = 80,
+        .cost = 90,
     },
     [SPECIES_YUKARI] = 
     {
@@ -2661,7 +2609,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_TANGLED_FEET,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
-        .cost = 60,
+        .cost = 75,
     },
     [SPECIES_SUIKA] = 
     {
@@ -2741,6 +2689,32 @@ const struct BaseStats gBaseStats[] =
         .noFlip = TRUE,
         .cost = 100,
     },
+    [SPECIES_MPSUIKA] = 
+    {
+        .baseHP = 130,
+        .baseAttack = 150,
+        .baseDefense = 110,
+        .baseSpAttack = 110,
+        .baseSpDefense = 50,
+        .baseSpeed = 100,
+        .catchRate = 45,
+        .expYield = 243,
+        .type1 = TYPE_EARTH,
+        .type2 = TYPE_FIGHTING,
+        .item1 = ITEM_NONE,
+        .item2 = ITEM_NONE,
+        .genderRatio = PERCENT_FEMALE(50),
+        .eggCycles = 20,
+        .friendship = 70,
+        .growthRate = GROWTH_MEDIUM_FAST,
+        .eggGroup1 = EGG_GROUP_HUMAN_LIKE,
+        .eggGroup2 = EGG_GROUP_HUMAN_LIKE,
+        .abilities = { ABILITY_TRUANT, ABILITY_TRUANT },
+        .hiddenAbility = ABILITY_TRUANT,
+        .safariZoneFleeRate = 0,
+        .noFlip = TRUE,
+        .cost = 120,
+    },
     [SPECIES_CWRIGGLE] = 
     {
         .baseHP = 70,
@@ -2765,7 +2739,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_INFILTRATOR,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
-        .cost = 20,
+        .cost = 45,
     },
     [SPECIES_WRIGGLE] = 
     {
@@ -2869,7 +2843,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_MANIC_ECHO,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
-        .cost = 20,
+        .cost = 45,
     },
     [SPECIES_MYSTIA] = 
     {
@@ -2999,7 +2973,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_STEADFAST,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
-        .cost = 20,
+        .cost = 45,
     },
     [SPECIES_KEINE] = 
     {
@@ -3129,7 +3103,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_NATURAL_CURE,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
-        .cost = 20,
+        .cost = 30,
     },
     [SPECIES_TEWI] = 
     {
@@ -3259,7 +3233,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_RATTLED,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
-        .cost = 40,
+        .cost = 60,
     },
     [SPECIES_REISEN] = 
     {
@@ -3386,10 +3360,10 @@ const struct BaseStats gBaseStats[] =
         .eggGroup1 = EGG_GROUP_HUMAN_LIKE,
         .eggGroup2 = EGG_GROUP_HUMAN_LIKE,
         .abilities = { ABILITY_NATURAL_CURE, ABILITY_LONG_REACH },
-        .hiddenAbility = ABILITY_REACTIVE,
+        .hiddenAbility = ABILITY_ANTICIPATION,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
-        .cost = 80,
+        .cost = 90,
     },
     [SPECIES_EIRIN] = 
     {
@@ -3412,7 +3386,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup1 = EGG_GROUP_HUMAN_LIKE,
         .eggGroup2 = EGG_GROUP_HUMAN_LIKE,
         .abilities = { ABILITY_NATURAL_CURE, ABILITY_LONG_REACH },
-        .hiddenAbility = ABILITY_REACTIVE,
+        .hiddenAbility = ABILITY_ANTICIPATION,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
         .cost = 120,
@@ -3464,7 +3438,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup1 = EGG_GROUP_HUMAN_LIKE,
         .eggGroup2 = EGG_GROUP_HUMAN_LIKE,
         .abilities = { ABILITY_NATURAL_CURE, ABILITY_LONG_REACH },
-        .hiddenAbility = ABILITY_REACTIVE,
+        .hiddenAbility = ABILITY_ANTICIPATION,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
         .cost = 120,
@@ -3493,7 +3467,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_TRUANT,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
-        .cost = 80,
+        .cost = 90,
     },
     [SPECIES_KAGUYA] = 
     {
@@ -3597,7 +3571,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_ANGER_POINT,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
-        .cost = 80,
+        .cost = 90,
     },
     [SPECIES_MOKOU] = 
     {
@@ -3646,7 +3620,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup1 = EGG_GROUP_HUMAN_LIKE,
         .eggGroup2 = EGG_GROUP_HUMAN_LIKE,
         .abilities = { ABILITY_NATURAL_CURE, ABILITY_FLAME_BODY },
-        .hiddenAbility = ABILITY_ANGER_POINT,
+        .hiddenAbility = ABILITY_BELLIGERENT,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
         .cost = 120,
@@ -3727,7 +3701,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_FRISK,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
-        .cost = 40,
+        .cost = 60,
     },
     [SPECIES_AYA] = 
     {
@@ -3819,8 +3793,8 @@ const struct BaseStats gBaseStats[] =
         .expYield = 68,
         .type1 = TYPE_MIASMA,
         .type2 = TYPE_NATURE,
-        .item1 = ITEM_NONE,
-        .item2 = ITEM_NONE,
+        .item1 = ITEM_SITRUS_BERRY,
+        .item2 = ITEM_TOXIC_ORB,
         .genderRatio = PERCENT_FEMALE(50),
         .eggCycles = 20,
         .friendship = 70,
@@ -3831,7 +3805,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_DOLL_WALL,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
-        .cost = 20,
+        .cost = 30,
     },
     [SPECIES_MEDICINE] = 
     {
@@ -3845,8 +3819,8 @@ const struct BaseStats gBaseStats[] =
         .expYield = 221,
         .type1 = TYPE_MIASMA,
         .type2 = TYPE_NATURE,
-        .item1 = ITEM_NONE,
-        .item2 = ITEM_NONE,
+        .item1 = ITEM_SITRUS_BERRY,
+        .item2 = ITEM_TOXIC_ORB,
         .genderRatio = PERCENT_FEMALE(50),
         .eggCycles = 20,
         .friendship = 70,
@@ -3871,8 +3845,8 @@ const struct BaseStats gBaseStats[] =
         .expYield = 221,
         .type1 = TYPE_MIASMA,
         .type2 = TYPE_NATURE,
-        .item1 = ITEM_NONE,
-        .item2 = ITEM_NONE,
+        .item1 = ITEM_SITRUS_BERRY,
+        .item2 = ITEM_TOXIC_ORB,
         .genderRatio = PERCENT_FEMALE(50),
         .eggCycles = 20,
         .friendship = 70,
@@ -3897,8 +3871,8 @@ const struct BaseStats gBaseStats[] =
         .expYield = 221,
         .type1 = TYPE_MIASMA,
         .type2 = TYPE_NATURE,
-        .item1 = ITEM_NONE,
-        .item2 = ITEM_NONE,
+        .item1 = ITEM_SITRUS_BERRY,
+        .item2 = ITEM_TOXIC_ORB,
         .genderRatio = PERCENT_FEMALE(50),
         .eggCycles = 20,
         .friendship = 70,
@@ -3923,8 +3897,8 @@ const struct BaseStats gBaseStats[] =
         .expYield = 221,
         .type1 = TYPE_MIASMA,
         .type2 = TYPE_NATURE,
-        .item1 = ITEM_NONE,
-        .item2 = ITEM_NONE,
+        .item1 = ITEM_SITRUS_BERRY,
+        .item2 = ITEM_TOXIC_ORB,
         .genderRatio = PERCENT_FEMALE(50),
         .eggCycles = 20,
         .friendship = 70,
@@ -3961,7 +3935,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_PRESSURE,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
-        .cost = 60,
+        .cost = 75,
     },
     [SPECIES_YUUKA] = 
     {
@@ -4065,7 +4039,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_SLUSH_RUSH,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
-        .cost = 40,
+        .cost = 60,
     },
     [SPECIES_KOMACHI] = 
     {
@@ -4157,7 +4131,7 @@ const struct BaseStats gBaseStats[] =
         .expYield = 82,
         .type1 = TYPE_REASON,
         .type2 = TYPE_FAITH,
-        .item1 = ITEM_NONE,
+        .item1 = ITEM_PAYAPA_BERRY,
         .item2 = ITEM_NONE,
         .genderRatio = PERCENT_FEMALE(50),
         .eggCycles = 20,
@@ -4169,7 +4143,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_PRESSURE,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
-        .cost = 80,
+        .cost = 90,
     },
     [SPECIES_EIKI] = 
     {
@@ -4183,7 +4157,7 @@ const struct BaseStats gBaseStats[] =
         .expYield = 252,
         .type1 = TYPE_REASON,
         .type2 = TYPE_FAITH,
-        .item1 = ITEM_NONE,
+        .item1 = ITEM_PAYAPA_BERRY,
         .item2 = ITEM_NONE,
         .genderRatio = PERCENT_FEMALE(50),
         .eggCycles = 20,
@@ -4209,7 +4183,7 @@ const struct BaseStats gBaseStats[] =
         .expYield = 252,
         .type1 = TYPE_REASON,
         .type2 = TYPE_FAITH,
-        .item1 = ITEM_NONE,
+        .item1 = ITEM_PAYAPA_BERRY,
         .item2 = ITEM_NONE,
         .genderRatio = PERCENT_FEMALE(50),
         .eggCycles = 20,
@@ -4235,7 +4209,7 @@ const struct BaseStats gBaseStats[] =
         .expYield = 252,
         .type1 = TYPE_REASON,
         .type2 = TYPE_FAITH,
-        .item1 = ITEM_NONE,
+        .item1 = ITEM_PAYAPA_BERRY,
         .item2 = ITEM_NONE,
         .genderRatio = PERCENT_FEMALE(50),
         .eggCycles = 20,
@@ -4273,7 +4247,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_LECTURE,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
-        .cost = 20,
+        .cost = 40,
     },
     [SPECIES_CSHIZUHA] = 
     {
@@ -4288,7 +4262,7 @@ const struct BaseStats gBaseStats[] =
         .type1 = TYPE_NATURE,
         .type2 = TYPE_NATURE,
         .item1 = ITEM_OCCA_BERRY,
-        .item2 = ITEM_NONE,
+        .item2 = ITEM_AUTUMN_LEAF,
         .genderRatio = PERCENT_FEMALE(50),
         .eggCycles = 20,
         .friendship = 70,
@@ -4299,7 +4273,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_OWN_TEMPO,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
-        .cost = 20,
+        .cost = 30,
     },
     [SPECIES_SHIZUHA] = 
     {
@@ -4314,7 +4288,7 @@ const struct BaseStats gBaseStats[] =
         .type1 = TYPE_NATURE,
         .type2 = TYPE_NATURE,
         .item1 = ITEM_OCCA_BERRY,
-        .item2 = ITEM_NONE,
+        .item2 = ITEM_AUTUMN_LEAF,
         .genderRatio = PERCENT_FEMALE(50),
         .eggCycles = 20,
         .friendship = 70,
@@ -4340,7 +4314,7 @@ const struct BaseStats gBaseStats[] =
         .type1 = TYPE_NATURE,
         .type2 = TYPE_EARTH,
         .item1 = ITEM_OCCA_BERRY,
-        .item2 = ITEM_NONE,
+        .item2 = ITEM_AUTUMN_LEAF,
         .genderRatio = PERCENT_FEMALE(50),
         .eggCycles = 20,
         .friendship = 70,
@@ -4366,7 +4340,7 @@ const struct BaseStats gBaseStats[] =
         .type1 = TYPE_NATURE,
         .type2 = TYPE_NATURE,
         .item1 = ITEM_OCCA_BERRY,
-        .item2 = ITEM_NONE,
+        .item2 = ITEM_AUTUMN_LEAF,
         .genderRatio = PERCENT_FEMALE(50),
         .eggCycles = 20,
         .friendship = 70,
@@ -4392,7 +4366,7 @@ const struct BaseStats gBaseStats[] =
         .type1 = TYPE_NATURE,
         .type2 = TYPE_NATURE,
         .item1 = ITEM_SITRUS_BERRY,
-        .item2 = ITEM_NONE,
+        .item2 = ITEM_AUTUMN_LEAF,
         .genderRatio = PERCENT_FEMALE(50),
         .eggCycles = 20,
         .friendship = 70,
@@ -4403,7 +4377,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_GOURMAND,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
-        .cost = 20,
+        .cost = 30,
     },
     [SPECIES_MINORIKO] = 
     {
@@ -4418,7 +4392,7 @@ const struct BaseStats gBaseStats[] =
         .type1 = TYPE_NATURE,
         .type2 = TYPE_NATURE,
         .item1 = ITEM_SITRUS_BERRY,
-        .item2 = ITEM_NONE,
+        .item2 = ITEM_AUTUMN_LEAF,
         .genderRatio = PERCENT_FEMALE(50),
         .eggCycles = 20,
         .friendship = 70,
@@ -4444,7 +4418,7 @@ const struct BaseStats gBaseStats[] =
         .type1 = TYPE_NATURE,
         .type2 = TYPE_EARTH,
         .item1 = ITEM_SITRUS_BERRY,
-        .item2 = ITEM_NONE,
+        .item2 = ITEM_AUTUMN_LEAF,
         .genderRatio = PERCENT_FEMALE(50),
         .eggCycles = 20,
         .friendship = 70,
@@ -4470,7 +4444,7 @@ const struct BaseStats gBaseStats[] =
         .type1 = TYPE_NATURE,
         .type2 = TYPE_NATURE,
         .item1 = ITEM_SITRUS_BERRY,
-        .item2 = ITEM_NONE,
+        .item2 = ITEM_AUTUMN_LEAF,
         .genderRatio = PERCENT_FEMALE(50),
         .eggCycles = 20,
         .friendship = 70,
@@ -4522,7 +4496,7 @@ const struct BaseStats gBaseStats[] =
         .type1 = TYPE_MIASMA,
         .type2 = TYPE_MIASMA,
         .item1 = ITEM_NONE,
-        .item2 = ITEM_NONE,
+        .item2 = ITEM_DARK_RIBBON,
         .genderRatio = PERCENT_FEMALE(50),
         .eggCycles = 20,
         .friendship = 70,
@@ -4533,7 +4507,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_STRANGE_MIST,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
-        .cost = 20,
+        .cost = 30,
     },
     [SPECIES_HINA] = 
     {
@@ -4637,7 +4611,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_SALVAGE_ARMOR,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
-        .cost = 40,
+        .cost = 60,
     },
     [SPECIES_NITORI] = 
     {
@@ -4741,7 +4715,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_UNNERVE,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
-        .cost = 20,
+        .cost = 30,
     },
     [SPECIES_MOMIJI] = 
     {
@@ -4807,7 +4781,7 @@ const struct BaseStats gBaseStats[] =
         .expYield = 76,
         .type1 = TYPE_FAITH,
         .type2 = TYPE_WIND,
-        .item1 = ITEM_PAYAPA_BERRY,
+        .item1 = ITEM_CHILAN_BERRY,
         .item2 = ITEM_NONE,
         .genderRatio = PERCENT_FEMALE(50),
         .eggCycles = 20,
@@ -4819,7 +4793,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_SUPER_LUCK,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
-        .cost = 40,
+        .cost = 60,
     },
     [SPECIES_SANAE] = 
     {
@@ -4833,7 +4807,7 @@ const struct BaseStats gBaseStats[] =
         .expYield = 239,
         .type1 = TYPE_FAITH,
         .type2 = TYPE_WIND,
-        .item1 = ITEM_PAYAPA_BERRY,
+        .item1 = ITEM_CHILAN_BERRY,
         .item2 = ITEM_NONE,
         .genderRatio = PERCENT_FEMALE(50),
         .eggCycles = 20,
@@ -4859,7 +4833,7 @@ const struct BaseStats gBaseStats[] =
         .expYield = 239,
         .type1 = TYPE_FAITH,
         .type2 = TYPE_WATER,
-        .item1 = ITEM_PAYAPA_BERRY,
+        .item1 = ITEM_CHILAN_BERRY,
         .item2 = ITEM_NONE,
         .genderRatio = PERCENT_FEMALE(50),
         .eggCycles = 20,
@@ -4885,7 +4859,7 @@ const struct BaseStats gBaseStats[] =
         .expYield = 239,
         .type1 = TYPE_FAITH,
         .type2 = TYPE_NATURE,
-        .item1 = ITEM_PAYAPA_BERRY,
+        .item1 = ITEM_CHILAN_BERRY,
         .item2 = ITEM_NONE,
         .genderRatio = PERCENT_FEMALE(50),
         .eggCycles = 20,
@@ -4911,7 +4885,7 @@ const struct BaseStats gBaseStats[] =
         .expYield = 239,
         .type1 = TYPE_WATER,
         .type2 = TYPE_NATURE,
-        .item1 = ITEM_PAYAPA_BERRY,
+        .item1 = ITEM_CHILAN_BERRY,
         .item2 = ITEM_NONE,
         .genderRatio = PERCENT_FEMALE(50),
         .eggCycles = 20,
@@ -4949,7 +4923,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_FLAWLESS,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
-        .cost = 80,
+        .cost = 90,
     },
     [SPECIES_KANAKO] = 
     {
@@ -5053,7 +5027,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_CURSED_BODY,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
-        .cost = 80,
+        .cost = 90,
     },
     [SPECIES_SUWAKO] = 
     {
@@ -5157,7 +5131,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_TECHNICIAN,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
-        .cost = 20,
+        .cost = 30,
     },
     [SPECIES_REISEN_II] = 
     {
@@ -5209,7 +5183,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_FLAWLESS,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
-        .cost = 80,
+        .cost = 90,
     },
     [SPECIES_TOYOHIME] = 
     {
@@ -5287,7 +5261,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_FLAWLESS,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
-        .cost = 80,
+        .cost = 90,
     },
     [SPECIES_YORIHIME] = 
     {
@@ -5365,7 +5339,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_STORM_SHAWL,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
-        .cost = 40,
+        .cost = 60,
     },
     [SPECIES_IKU] = 
     {
@@ -5469,7 +5443,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_STURDY,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
-        .cost = 60,
+        .cost = 75,
     },
     [SPECIES_TENSHI] = 
     {
@@ -5573,7 +5547,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_STORM_DRAIN,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
-        .cost = 20,
+        .cost = 30,
     },
     [SPECIES_KISUME] = 
     {
@@ -5651,7 +5625,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_UNNERVE,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
-        .cost = 20,
+        .cost = 30,
     },
     [SPECIES_YAMAME] = 
     {
@@ -5755,7 +5729,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_LAST_GRUDGE,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
-        .cost = 20,
+        .cost = 45,
     },
     [SPECIES_PARSEE] = 
     {
@@ -5859,7 +5833,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_JUSTIFIED,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
-        .cost = 60,
+        .cost = 75,
     },
     [SPECIES_YUUGI] = 
     {
@@ -5963,7 +5937,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_FOREWARN,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
-        .cost = 40,
+        .cost = 60,
     },
     [SPECIES_SATORI] = 
     {
@@ -6067,7 +6041,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_MOXIE,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
-        .cost = 40,
+        .cost = 60,
     },
     [SPECIES_RIN] = 
     {
@@ -6171,7 +6145,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_LAST_WISH,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
-        .cost = 40,
+        .cost = 30,
     },
     [SPECIES_CUTSUHO] = 
     {
@@ -6197,7 +6171,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_AFTERMATH,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
-        .cost = 60,
+        .cost = 75,
     },
     [SPECIES_UTSUHO] = 
     {
@@ -6290,7 +6264,7 @@ const struct BaseStats gBaseStats[] =
         .type1 = TYPE_NORMAL,
         .type2 = TYPE_NORMAL,
         .item1 = ITEM_NONE,
-        .item2 = ITEM_NONE,
+        .item2 = ITEM_BELUE_BERRY,
         .genderRatio = PERCENT_FEMALE(50),
         .eggCycles = 20,
         .friendship = 70,
@@ -6301,7 +6275,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_CLOUD_NINE,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
-        .cost = 80,
+        .cost = 90,
     },
     [SPECIES_KOISHI] = 
     {
@@ -6316,7 +6290,7 @@ const struct BaseStats gBaseStats[] =
         .type1 = TYPE_NORMAL,
         .type2 = TYPE_NORMAL,
         .item1 = ITEM_NONE,
-        .item2 = ITEM_NONE,
+        .item2 = ITEM_BELUE_BERRY,
         .genderRatio = PERCENT_FEMALE(50),
         .eggCycles = 20,
         .friendship = 70,
@@ -6342,7 +6316,7 @@ const struct BaseStats gBaseStats[] =
         .type1 = TYPE_NORMAL,
         .type2 = TYPE_NORMAL,
         .item1 = ITEM_NONE,
-        .item2 = ITEM_NONE,
+        .item2 = ITEM_BELUE_BERRY,
         .genderRatio = PERCENT_FEMALE(50),
         .eggCycles = 20,
         .friendship = 70,
@@ -6368,7 +6342,7 @@ const struct BaseStats gBaseStats[] =
         .type1 = TYPE_NORMAL,
         .type2 = TYPE_NORMAL,
         .item1 = ITEM_NONE,
-        .item2 = ITEM_NONE,
+        .item2 = ITEM_BELUE_BERRY,
         .genderRatio = PERCENT_FEMALE(50),
         .eggCycles = 20,
         .friendship = 70,
@@ -6405,7 +6379,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_SAND_RUSH,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
-        .cost = 20,
+        .cost = 45,
     },
     [SPECIES_NAZRIN] = 
     {
@@ -6509,7 +6483,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_UNNERVE,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
-        .cost = 20,
+        .cost = 45,
     },
     [SPECIES_KOGASA] = 
     {
@@ -6613,7 +6587,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_CLOUD_NINE,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
-        .cost = 20,
+        .cost = 45,
     },
     [SPECIES_ICHIRIN] = 
     {
@@ -6717,7 +6691,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_STORM_DRAIN,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
-        .cost = 40,
+        .cost = 60,
     },
     [SPECIES_MURASA] = 
     {
@@ -6821,7 +6795,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_PRESSURE,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
-        .cost = 60,
+        .cost = 75,
     },
     [SPECIES_SHOU] = 
     {
@@ -6925,7 +6899,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_OBLIVIOUS,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
-        .cost = 80,
+        .cost = 90,
     },
     [SPECIES_BYAKUREN] = 
     {
@@ -7029,7 +7003,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_MYSTERIOUS,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
-        .cost = 80,
+        .cost = 90,
     },
     [SPECIES_NUE] = 
     {
@@ -7117,8 +7091,8 @@ const struct BaseStats gBaseStats[] =
         .baseSpAttack = 60,
         .baseSpDefense = 60,
         .baseSpeed = 50,
-        .catchRate = 35,
-        .expYield = 248,
+        .catchRate = 20,
+        .expYield = 743,
         .type1 = TYPE_FIRE,
         .type2 = TYPE_STEEL,
         .item1 = ITEM_NONE,
@@ -7159,7 +7133,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_DOWNLOAD,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
-        .cost = 20,
+        .cost = 30,
     },
     [SPECIES_HOURAI] = 
     {
@@ -7185,7 +7159,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_DOWNLOAD,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
-        .cost = 20,
+        .cost = 30,
     },
     [SPECIES_GOLIATH] = 
     {
@@ -7221,8 +7195,8 @@ const struct BaseStats gBaseStats[] =
         .baseSpAttack = 80,
         .baseSpDefense = 80,
         .baseSpeed = 40,
-        .catchRate = 35,
-        .expYield = 230,
+        .catchRate = 20,
+        .expYield = 689,
         .type1 = TYPE_EARTH,
         .type2 = TYPE_ELECTRIC,
         .item1 = ITEM_NONE,
@@ -7237,7 +7211,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_ANTICIPATION,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
-        .cost = 60,
+        .cost = 80,
     },
     [SPECIES_CHATATE] = 
     {
@@ -7263,7 +7237,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_FOREWARN,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
-        .cost = 40,
+        .cost = 60,
     },
     [SPECIES_HATATE] = 
     {
@@ -7367,7 +7341,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_SOLAR_POWER,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
-        .cost = 20,
+        .cost = 30,
     },
     [SPECIES_SUNNY] = 
     {
@@ -7471,7 +7445,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_SOUNDPROOF,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
-        .cost = 20,
+        .cost = 30,
     },
     [SPECIES_LUNA] = 
     {
@@ -7575,7 +7549,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_FRISK,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
-        .cost = 20,
+        .cost = 30,
     },
     [SPECIES_STAR] = 
     {
@@ -7705,7 +7679,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_REACTIVE,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
-        .cost = 20,
+        .cost = 30,
     },
     [SPECIES_TOKIKO] = 
     {
@@ -7783,7 +7757,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_SOUNDPROOF,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
-        .cost = 20,
+        .cost = 30,
     },
     [SPECIES_KYOUKO] = 
     {
@@ -7861,7 +7835,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_AFTERMATH,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
-        .cost = 20,
+        .cost = 45,
     },
     [SPECIES_YOSHIKA] = 
     {
@@ -7939,7 +7913,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_MERCILESS,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
-        .cost = 40,
+        .cost = 60,
     },
     [SPECIES_SEIGA] = 
     {
@@ -8017,7 +7991,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_CURSED_BODY,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
-        .cost = 40,
+        .cost = 60,
     },
     [SPECIES_TOJIKO] = 
     {
@@ -8095,7 +8069,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_FOCUS,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
-        .cost = 40,
+        .cost = 60,
     },
     [SPECIES_FUTO] = 
     {
@@ -8109,6 +8083,32 @@ const struct BaseStats gBaseStats[] =
         .expYield = 239,
         .type1 = TYPE_FAITH,
         .type2 = TYPE_WATER,
+        .item1 = ITEM_OLD_PLATE,
+        .item2 = ITEM_NONE,
+        .genderRatio = PERCENT_FEMALE(50),
+        .eggCycles = 20,
+        .friendship = 70,
+        .growthRate = GROWTH_MEDIUM_FAST,
+        .eggGroup1 = EGG_GROUP_HUMAN_LIKE,
+        .eggGroup2 = EGG_GROUP_HUMAN_LIKE,
+        .abilities = { ABILITY_FLASH_FIRE, ABILITY_MOXIE },
+        .hiddenAbility = ABILITY_FOCUS,
+        .safariZoneFleeRate = 0,
+        .noFlip = TRUE,
+        .cost = 80,
+    },
+    [SPECIES_AFUTO] = 
+    {
+        .baseHP = 70,
+        .baseAttack = 105,
+        .baseDefense = 65,
+        .baseSpAttack = 125,
+        .baseSpDefense = 65,
+        .baseSpeed = 100,
+        .catchRate = 55,
+        .expYield = 239,
+        .type1 = TYPE_FAITH,
+        .type2 = TYPE_WIND,
         .item1 = ITEM_OLD_PLATE,
         .item2 = ITEM_NONE,
         .genderRatio = PERCENT_FEMALE(50),
@@ -8173,7 +8173,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_LOGICIAN,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
-        .cost = 80,
+        .cost = 90,
     },
     [SPECIES_MIKO] = 
     {
@@ -8277,7 +8277,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_LIMBER,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
-        .cost = 80,
+        .cost = 90,
     },
     [SPECIES_MAMIZOU] = 
     {
@@ -8355,7 +8355,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_RATTLED,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
-        .cost = 20,
+        .cost = 30,
     },
     [SPECIES_KOSUZU] = 
     {
@@ -8433,7 +8433,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_OBLIVIOUS,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
-        .cost = 40,
+        .cost = 60,
     },
     [SPECIES_KOKORO] = 
     {
@@ -8526,7 +8526,7 @@ const struct BaseStats gBaseStats[] =
         .type1 = TYPE_WATER,
         .type2 = TYPE_WATER,
         .item1 = ITEM_RINDO_BERRY,
-        .item2 = ITEM_NONE,
+        .item2 = ITEM_SHELL_BELL,
         .genderRatio = PERCENT_FEMALE(50),
         .eggCycles = 20,
         .friendship = 70,
@@ -8537,7 +8537,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_STORM_DRAIN,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
-        .cost = 20,
+        .cost = 30,
     },
     [SPECIES_WAKASAGIHIME] = 
     {
@@ -8552,7 +8552,7 @@ const struct BaseStats gBaseStats[] =
         .type1 = TYPE_WATER,
         .type2 = TYPE_WATER,
         .item1 = ITEM_RINDO_BERRY,
-        .item2 = ITEM_NONE,
+        .item2 = ITEM_SHELL_BELL,
         .genderRatio = PERCENT_FEMALE(50),
         .eggCycles = 20,
         .friendship = 70,
@@ -8578,7 +8578,7 @@ const struct BaseStats gBaseStats[] =
         .type1 = TYPE_WATER,
         .type2 = TYPE_WATER,
         .item1 = ITEM_RINDO_BERRY,
-        .item2 = ITEM_NONE,
+        .item2 = ITEM_SHELL_BELL,
         .genderRatio = PERCENT_FEMALE(50),
         .eggCycles = 20,
         .friendship = 70,
@@ -8615,7 +8615,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_SKILL_LINK,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
-        .cost = 20,
+        .cost = 45,
     },
     [SPECIES_SEKIBANKI] = 
     {
@@ -8693,7 +8693,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_NO_GUARD,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
-        .cost = 20,
+        .cost = 45,
     },
     [SPECIES_KAGEROU] = 
     {
@@ -8771,7 +8771,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_ANALYTIC,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
-        .cost = 20,
+        .cost = 45,
     },
     [SPECIES_BENBEN] = 
     {
@@ -8823,7 +8823,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_CHEERFUL,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
-        .cost = 20,
+        .cost = 45,
     },
     [SPECIES_YATSUHASHI] = 
     {
@@ -8875,7 +8875,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_PERVERSION,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
-        .cost = 40,
+        .cost = 60,
     },
     [SPECIES_SEIJA] = 
     {
@@ -8953,7 +8953,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_SCRAPPY,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
-        .cost = 80,
+        .cost = 90,
     },
     [SPECIES_SHINMYOUMARU] = 
     {
@@ -9031,7 +9031,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_STATIC,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
-        .cost = 60,
+        .cost = 75,
     },
     [SPECIES_RAIKO] = 
     {
@@ -9109,7 +9109,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_PRESSURE,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
-        .cost = 80,
+        .cost = 90,
     },
     [SPECIES_KASEN] = 
     {
@@ -9187,7 +9187,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_INSOMNIA,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
-        .cost = 40,
+        .cost = 60,
     },
     [SPECIES_SUMIREKO] = 
     {
@@ -9215,6 +9215,58 @@ const struct BaseStats gBaseStats[] =
         .noFlip = TRUE,
         .cost = 80,
     },
+    [SPECIES_SSUMIREKO] = 
+    {
+        .baseHP = 80,
+        .baseAttack = 80,
+        .baseDefense = 75,
+        .baseSpAttack = 105,
+        .baseSpDefense = 60,
+        .baseSpeed = 130,
+        .catchRate = 55,
+        .expYield = 239,
+        .type1 = TYPE_STEEL,
+        .type2 = TYPE_REASON,
+        .item1 = ITEM_NONE,
+        .item2 = ITEM_NONE,
+        .genderRatio = PERCENT_FEMALE(50),
+        .eggCycles = 20,
+        .friendship = 70,
+        .growthRate = GROWTH_MEDIUM_FAST,
+        .eggGroup1 = EGG_GROUP_HUMAN_LIKE,
+        .eggGroup2 = EGG_GROUP_HUMAN_LIKE,
+        .abilities = { ABILITY_KEEN_EYE, ABILITY_NEUROFORCE },
+        .hiddenAbility = ABILITY_INSOMNIA,
+        .safariZoneFleeRate = 0,
+        .noFlip = TRUE,
+        .cost = 80,
+    },
+    [SPECIES_TSUMIREKO] = 
+    {
+        .baseHP = 100,
+        .baseAttack = 70,
+        .baseDefense = 115,
+        .baseSpAttack = 110,
+        .baseSpDefense = 95,
+        .baseSpeed = 40,
+        .catchRate = 55,
+        .expYield = 239,
+        .type1 = TYPE_ELECTRIC,
+        .type2 = TYPE_REASON,
+        .item1 = ITEM_NONE,
+        .item2 = ITEM_NONE,
+        .genderRatio = PERCENT_FEMALE(50),
+        .eggCycles = 20,
+        .friendship = 70,
+        .growthRate = GROWTH_MEDIUM_FAST,
+        .eggGroup1 = EGG_GROUP_HUMAN_LIKE,
+        .eggGroup2 = EGG_GROUP_HUMAN_LIKE,
+        .abilities = { ABILITY_KEEN_EYE, ABILITY_NEUROFORCE },
+        .hiddenAbility = ABILITY_TWIN_SPARK,
+        .safariZoneFleeRate = 0,
+        .noFlip = TRUE,
+        .cost = 80,
+    },
     [SPECIES_CSEIRAN] = 
     {
         .baseHP = 45,
@@ -9235,11 +9287,11 @@ const struct BaseStats gBaseStats[] =
         .growthRate = GROWTH_MEDIUM_FAST,
         .eggGroup1 = EGG_GROUP_HUMAN_LIKE,
         .eggGroup2 = EGG_GROUP_HUMAN_LIKE,
-        .abilities = { ABILITY_NO_GUARD, ABILITY_RECKLESS },
+        .abilities = { ABILITY_NO_GUARD, ABILITY_RUN_AWAY },
         .hiddenAbility = ABILITY_INFILTRATOR,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
-        .cost = 20,
+        .cost = 30,
     },
     [SPECIES_SEIRAN] = 
     {
@@ -9291,7 +9343,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_OBLIVIOUS,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
-        .cost = 20,
+        .cost = 30,
     },
     [SPECIES_RINGO] = 
     {
@@ -9343,7 +9395,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_INSOMNIA,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
-        .cost = 40,
+        .cost = 60,
     },
     [SPECIES_DOREMY] = 
     {
@@ -9395,7 +9447,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_UNAWARE,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
-        .cost = 60,
+        .cost = 75,
     },
     [SPECIES_SAGUME] = 
     {
@@ -9447,7 +9499,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_LUNACY,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
-        .cost = 40,
+        .cost = 60,
     },
     [SPECIES_CLOWNPIECE] = 
     {
@@ -9487,8 +9539,8 @@ const struct BaseStats gBaseStats[] =
         .expYield = 80,
         .type1 = TYPE_NORMAL,
         .type2 = TYPE_NORMAL,
-        .item1 = ITEM_NONE,
-        .item2 = ITEM_NONE,
+        .item1 = ITEM_LUM_BERRY,
+        .item2 = ITEM_LUM_BERRY,
         .genderRatio = PERCENT_FEMALE(50),
         .eggCycles = 20,
         .friendship = 70,
@@ -9499,7 +9551,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_PURE_FURIES,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
-        .cost = 80,
+        .cost = 90,
     },
     [SPECIES_JUNKO] = 
     {
@@ -9513,8 +9565,8 @@ const struct BaseStats gBaseStats[] =
         .expYield = 248,
         .type1 = TYPE_NORMAL,
         .type2 = TYPE_NORMAL,
-        .item1 = ITEM_NONE,
-        .item2 = ITEM_NONE,
+        .item1 = ITEM_LUM_BERRY,
+        .item2 = ITEM_LUM_BERRY,
         .genderRatio = PERCENT_FEMALE(50),
         .eggCycles = 20,
         .friendship = 70,
@@ -9551,7 +9603,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_MAGIC_BARRIER,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
-        .cost = 80,
+        .cost = 90,
     },
     [SPECIES_HECATIA] = 
     {
@@ -9603,7 +9655,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_MOXIE,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
-        .cost = 40,
+        .cost = 60,
     },
     [SPECIES_JOON] = 
     {
@@ -9644,7 +9696,7 @@ const struct BaseStats gBaseStats[] =
         .type1 = TYPE_MIASMA,
         .type2 = TYPE_DARK,
         .item1 = ITEM_NONE,
-        .item2 = ITEM_NONE,
+        .item2 = ITEM_CLEANSE_TAG,
         .genderRatio = PERCENT_FEMALE(50),
         .eggCycles = 20,
         .friendship = 70,
@@ -9655,7 +9707,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_RAIN_DISH,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
-        .cost = 40,
+        .cost = 60,
     },
     [SPECIES_SHION] = 
     {
@@ -9670,7 +9722,7 @@ const struct BaseStats gBaseStats[] =
         .type1 = TYPE_MIASMA,
         .type2 = TYPE_DARK,
         .item1 = ITEM_NONE,
-        .item2 = ITEM_NONE,
+        .item2 = ITEM_CLEANSE_TAG,
         .genderRatio = PERCENT_FEMALE(50),
         .eggCycles = 20,
         .friendship = 70,
@@ -9707,16 +9759,16 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_FLOWER_GIFT,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
-        .cost = 20,
+        .cost = 30,
     },
     [SPECIES_ETERNITY] = 
     {
-        .baseHP = 65,
-        .baseAttack = 50,
-        .baseDefense = 50,
+        .baseHP = 70,
+        .baseAttack = 55,
+        .baseDefense = 55,
         .baseSpAttack = 105,
         .baseSpDefense = 105,
-        .baseSpeed = 105,
+        .baseSpeed = 90,
         .catchRate = 105,
         .expYield = 216,
         .type1 = TYPE_NATURE,
@@ -9759,7 +9811,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_INTIMIDATE,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
-        .cost = 20,
+        .cost = 45,
     },
     [SPECIES_NEMUNO] = 
     {
@@ -9811,15 +9863,15 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_INTIMIDATE,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
-        .cost = 20,
+        .cost = 30,
     },
     [SPECIES_AUNN] = 
     {
-        .baseHP = 55,
+        .baseHP = 65,
         .baseAttack = 95,
         .baseDefense = 80,
         .baseSpAttack = 55,
-        .baseSpDefense = 120,
+        .baseSpDefense = 110,
         .baseSpeed = 85,
         .catchRate = 95,
         .expYield = 221,
@@ -9863,7 +9915,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_STONEWORKER,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
-        .cost = 20,
+        .cost = 45,
     },
     [SPECIES_NARUMI] = 
     {
@@ -9887,6 +9939,32 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_HUMAN_LIKE,
         .abilities = { ABILITY_WIDE_HAT, ABILITY_LIGHTNING_ROD },
         .hiddenAbility = ABILITY_STONEWORKER,
+        .safariZoneFleeRate = 0,
+        .noFlip = TRUE,
+        .cost = 60,
+    },
+    [SPECIES_ANARUMI] = 
+    {
+        .baseHP = 110,
+        .baseAttack = 100,
+        .baseDefense = 30,
+        .baseSpAttack = 120,
+        .baseSpDefense = 100,
+        .baseSpeed = 50,
+        .catchRate = 75,
+        .expYield = 230,
+        .type1 = TYPE_FIRE,
+        .type2 = TYPE_FIRE,
+        .item1 = ITEM_NONE,
+        .item2 = ITEM_NONE,
+        .genderRatio = PERCENT_FEMALE(50),
+        .eggCycles = 20,
+        .friendship = 70,
+        .growthRate = GROWTH_MEDIUM_FAST,
+        .eggGroup1 = EGG_GROUP_HUMAN_LIKE,
+        .eggGroup2 = EGG_GROUP_HUMAN_LIKE,
+        .abilities = { ABILITY_WIDE_HAT, ABILITY_FLAME_BODY },
+        .hiddenAbility = ABILITY_DROUGHT,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
         .cost = 60,
@@ -9915,7 +9993,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_CONTRARY,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
-        .cost = 20,
+        .cost = 45,
     },
     [SPECIES_MAI_AND_SATONO] = 
     {
@@ -9967,7 +10045,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_PURE_POWER,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
-        .cost = 80,
+        .cost = 90,
     },
     [SPECIES_OKINA] = 
     {
@@ -10019,7 +10097,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_CHEERFUL,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
-        .cost = 20,
+        .cost = 30,
     },
     [SPECIES_EIKA] = 
     {
@@ -10071,7 +10149,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_SAP_SIPPER,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
-        .cost = 20,
+        .cost = 45,
     },
     [SPECIES_URUMI] = 
     {
@@ -10123,7 +10201,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_SPEED_BOOST,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
-        .cost = 20,
+        .cost = 45,
     },
     [SPECIES_KUTAKA] = 
     {
@@ -10175,7 +10253,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_GUARD_ARMOR,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
-        .cost = 40,
+        .cost = 60,
     },
     [SPECIES_YACHIE] = 
     {
@@ -10223,11 +10301,11 @@ const struct BaseStats gBaseStats[] =
         .growthRate = GROWTH_MEDIUM_FAST,
         .eggGroup1 = EGG_GROUP_HUMAN_LIKE,
         .eggGroup2 = EGG_GROUP_HUMAN_LIKE,
-        .abilities = { ABILITY_STURDY, ABILITY_STEADFAST },
+        .abilities = { ABILITY_STURDY, ABILITY_FIRM_DEFENSE },
         .hiddenAbility = ABILITY_GUARD_ARMOR,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
-        .cost = 40,
+        .cost = 60,
     },
     [SPECIES_MAYUMI] = 
     {
@@ -10249,7 +10327,7 @@ const struct BaseStats gBaseStats[] =
         .growthRate = GROWTH_MEDIUM_FAST,
         .eggGroup1 = EGG_GROUP_HUMAN_LIKE,
         .eggGroup2 = EGG_GROUP_HUMAN_LIKE,
-        .abilities = { ABILITY_STURDY, ABILITY_STEADFAST },
+        .abilities = { ABILITY_STURDY, ABILITY_FIRM_DEFENSE },
         .hiddenAbility = ABILITY_GUARD_ARMOR,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
@@ -10268,7 +10346,7 @@ const struct BaseStats gBaseStats[] =
         .type1 = TYPE_EARTH,
         .type2 = TYPE_EARTH,
         .item1 = ITEM_NONE,
-        .item2 = ITEM_NONE,
+        .item2 = ITEM_LIGHT_CLAY,
         .genderRatio = PERCENT_FEMALE(50),
         .eggCycles = 20,
         .friendship = 70,
@@ -10276,10 +10354,10 @@ const struct BaseStats gBaseStats[] =
         .eggGroup1 = EGG_GROUP_HUMAN_LIKE,
         .eggGroup2 = EGG_GROUP_HUMAN_LIKE,
         .abilities = { ABILITY_REACTIVE, ABILITY_STURDY },
-        .hiddenAbility = ABILITY_MAGIC_GUARD,
+        .hiddenAbility = ABILITY_FIRM_DEFENSE,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
-        .cost = 80,
+        .cost = 90,
     },
     [SPECIES_KEIKI] = 
     {
@@ -10294,7 +10372,7 @@ const struct BaseStats gBaseStats[] =
         .type1 = TYPE_EARTH,
         .type2 = TYPE_FAITH,
         .item1 = ITEM_NONE,
-        .item2 = ITEM_NONE,
+        .item2 = ITEM_LIGHT_CLAY,
         .genderRatio = PERCENT_FEMALE(50),
         .eggCycles = 20,
         .friendship = 70,
@@ -10302,7 +10380,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup1 = EGG_GROUP_HUMAN_LIKE,
         .eggGroup2 = EGG_GROUP_HUMAN_LIKE,
         .abilities = { ABILITY_REACTIVE, ABILITY_STURDY },
-        .hiddenAbility = ABILITY_MAGIC_GUARD,
+        .hiddenAbility = ABILITY_FIRM_DEFENSE,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
         .cost = 120,
@@ -10310,13 +10388,13 @@ const struct BaseStats gBaseStats[] =
     [SPECIES_CSAKI] = 
     {
         .baseHP = 75,
-        .baseAttack = 95,
+        .baseAttack = 85,
         .baseDefense = 60,
         .baseSpAttack = 60,
         .baseSpDefense = 35,
         .baseSpeed = 75,
-        .catchRate = 115,
-        .expYield = 80,
+        .catchRate = 135,
+        .expYield = 78,
         .type1 = TYPE_BEAST,
         .type2 = TYPE_WIND,
         .item1 = ITEM_NONE,
@@ -10331,18 +10409,18 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_SAND_STREAM,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
-        .cost = 80,
+        .cost = 75,
     },
     [SPECIES_SAKI] = 
     {
         .baseHP = 95,
-        .baseAttack = 130,
+        .baseAttack = 120,
         .baseDefense = 80,
         .baseSpAttack = 80,
         .baseSpDefense = 60,
         .baseSpeed = 105,
-        .catchRate = 35,
-        .expYield = 248,
+        .catchRate = 45,
+        .expYield = 243,
         .type1 = TYPE_BEAST,
         .type2 = TYPE_WIND,
         .item1 = ITEM_NONE,
@@ -10357,7 +10435,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_SAND_STREAM,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
-        .cost = 120,
+        .cost = 100,
     },
     [SPECIES_CYUUMA] = 
     {
@@ -10372,7 +10450,7 @@ const struct BaseStats gBaseStats[] =
         .type1 = TYPE_BEAST,
         .type2 = TYPE_DARK,
         .item1 = ITEM_NONE,
-        .item2 = ITEM_NONE,
+        .item2 = ITEM_LEFTOVERS,
         .genderRatio = PERCENT_FEMALE(50),
         .eggCycles = 20,
         .friendship = 70,
@@ -10383,7 +10461,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_MOXIE,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
-        .cost = 60,
+        .cost = 75,
     },
     [SPECIES_YUUMA] = 
     {
@@ -10398,7 +10476,7 @@ const struct BaseStats gBaseStats[] =
         .type1 = TYPE_BEAST,
         .type2 = TYPE_DARK,
         .item1 = ITEM_NONE,
-        .item2 = ITEM_NONE,
+        .item2 = ITEM_LEFTOVERS,
         .genderRatio = PERCENT_FEMALE(50),
         .eggCycles = 20,
         .friendship = 70,
@@ -10435,7 +10513,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_TECHNICIAN,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
-        .cost = 20,
+        .cost = 30,
     },
     [SPECIES_MIKE] = 
     {
@@ -10487,7 +10565,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_SAND_RUSH,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
-        .cost = 40,
+        .cost = 60,
     },
     [SPECIES_TAKANE] = 
     {
@@ -10517,17 +10595,17 @@ const struct BaseStats gBaseStats[] =
     },
     [SPECIES_CSANNYO] = 
     {
-        .baseHP = 40,
-        .baseAttack = 55,
-        .baseDefense = 30,
-        .baseSpAttack = 65,
-        .baseSpDefense = 115,
-        .baseSpeed = 45,
+        .baseHP = 50,
+        .baseAttack = 50,
+        .baseDefense = 65,
+        .baseSpAttack = 80,
+        .baseSpDefense = 55,
+        .baseSpeed = 50,
         .catchRate = 215,
         .expYield = 70,
         .type1 = TYPE_FIRE,
         .type2 = TYPE_MIASMA,
-        .item1 = ITEM_NONE,
+        .item1 = ITEM_WHITE_HERB,
         .item2 = ITEM_NONE,
         .genderRatio = PERCENT_FEMALE(50),
         .eggCycles = 20,
@@ -10535,25 +10613,25 @@ const struct BaseStats gBaseStats[] =
         .growthRate = GROWTH_MEDIUM_FAST,
         .eggGroup1 = EGG_GROUP_HUMAN_LIKE,
         .eggGroup2 = EGG_GROUP_HUMAN_LIKE,
-        .abilities = { ABILITY_UNNERVE, ABILITY_WONDER_SKIN },
-        .hiddenAbility = ABILITY_FLAWLESS,
+        .abilities = { ABILITY_FLAWLESS, ABILITY_WONDER_SKIN },
+        .hiddenAbility = ABILITY_UNAWARE,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
-        .cost = 20,
+        .cost = 45,
     },
     [SPECIES_SANNYO] = 
     {
-        .baseHP = 60,
-        .baseAttack = 90,
-        .baseDefense = 55,
-        .baseSpAttack = 90,
-        .baseSpDefense = 140,
-        .baseSpeed = 65,
+        .baseHP = 70,
+        .baseAttack = 60,
+        .baseDefense = 100,
+        .baseSpAttack = 115,
+        .baseSpDefense = 80,
+        .baseSpeed = 75,
         .catchRate = 85,
         .expYield = 225,
         .type1 = TYPE_FIRE,
         .type2 = TYPE_MIASMA,
-        .item1 = ITEM_NONE,
+        .item1 = ITEM_WHITE_HERB,
         .item2 = ITEM_NONE,
         .genderRatio = PERCENT_FEMALE(50),
         .eggCycles = 20,
@@ -10561,8 +10639,8 @@ const struct BaseStats gBaseStats[] =
         .growthRate = GROWTH_MEDIUM_FAST,
         .eggGroup1 = EGG_GROUP_HUMAN_LIKE,
         .eggGroup2 = EGG_GROUP_HUMAN_LIKE,
-        .abilities = { ABILITY_UNNERVE, ABILITY_WONDER_SKIN },
-        .hiddenAbility = ABILITY_FLAWLESS,
+        .abilities = { ABILITY_FLAWLESS, ABILITY_WONDER_SKIN },
+        .hiddenAbility = ABILITY_UNAWARE,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
         .cost = 60,
@@ -10580,7 +10658,7 @@ const struct BaseStats gBaseStats[] =
         .type1 = TYPE_EARTH,
         .type2 = TYPE_EARTH,
         .item1 = ITEM_NONE,
-        .item2 = ITEM_NONE,
+        .item2 = ITEM_LIGHT_CLAY,
         .genderRatio = PERCENT_FEMALE(50),
         .eggCycles = 20,
         .friendship = 70,
@@ -10591,7 +10669,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_WALL_MASTER,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
-        .cost = 40,
+        .cost = 60,
     },
     [SPECIES_MISUMARU] = 
     {
@@ -10606,7 +10684,7 @@ const struct BaseStats gBaseStats[] =
         .type1 = TYPE_EARTH,
         .type2 = TYPE_EARTH,
         .item1 = ITEM_NONE,
-        .item2 = ITEM_NONE,
+        .item2 = ITEM_LIGHT_CLAY,
         .genderRatio = PERCENT_FEMALE(50),
         .eggCycles = 20,
         .friendship = 70,
@@ -10643,7 +10721,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_INFILTRATOR,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
-        .cost = 20,
+        .cost = 45,
     },
     [SPECIES_TSUKASA] = 
     {
@@ -10695,7 +10773,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_CLOUD_NINE,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
-        .cost = 40,
+        .cost = 60,
     },
     [SPECIES_MEGUMU] = 
     {
@@ -10747,7 +10825,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_BLANK_CARD,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
-        .cost = 80,
+        .cost = 90,
     },
     [SPECIES_CHIMATA] = 
     {
@@ -10799,7 +10877,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_UNNERVE,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
-        .cost = 80,
+        .cost = 90,
     },
     [SPECIES_MOMOYO] = 
     {
@@ -10840,7 +10918,7 @@ const struct BaseStats gBaseStats[] =
         .type1 = TYPE_WATER,
         .type2 = TYPE_HEART,
         .item1 = ITEM_NONE,
-        .item2 = ITEM_NONE,
+        .item2 = ITEM_IBUKI_GOURD,
         .genderRatio = PERCENT_FEMALE(50),
         .eggCycles = 20,
         .friendship = 70,
@@ -10851,7 +10929,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_RATTLED,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
-        .cost = 20,
+        .cost = 30,
     },
     [SPECIES_MIYOI] = 
     {
@@ -10866,7 +10944,7 @@ const struct BaseStats gBaseStats[] =
         .type1 = TYPE_WATER,
         .type2 = TYPE_HEART,
         .item1 = ITEM_NONE,
-        .item2 = ITEM_NONE,
+        .item2 = ITEM_IBUKI_GOURD,
         .genderRatio = PERCENT_FEMALE(50),
         .eggCycles = 20,
         .friendship = 70,
@@ -10877,16 +10955,68 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_RATTLED,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
-        .cost = 20,
+        .cost = 40,
+    },
+    [SPECIES_CMIZUCHI] = 
+    {
+        .baseHP = 40,
+        .baseAttack = 50,
+        .baseDefense = 65,
+        .baseSpAttack = 50,
+        .baseSpDefense = 85,
+        .baseSpeed = 80,
+        .catchRate = 175,
+        .expYield = 74,
+        .type1 = TYPE_GHOST,
+        .type2 = TYPE_DARK,
+        .item1 = ITEM_NONE,
+        .item2 = ITEM_NONE,
+        .genderRatio = PERCENT_FEMALE(50),
+        .eggCycles = 20,
+        .friendship = 70,
+        .growthRate = GROWTH_MEDIUM_FAST,
+        .eggGroup1 = EGG_GROUP_HUMAN_LIKE,
+        .eggGroup2 = EGG_GROUP_HUMAN_LIKE,
+        .abilities = { ABILITY_INFILTRATOR, ABILITY_ANGER_POINT },
+        .hiddenAbility = ABILITY_BELLIGERENT,
+        .safariZoneFleeRate = 0,
+        .noFlip = TRUE,
+        .cost = 45,
+    },
+    [SPECIES_MIZUCHI] = 
+    {
+        .baseHP = 75,
+        .baseAttack = 60,
+        .baseDefense = 90,
+        .baseSpAttack = 60,
+        .baseSpDefense = 105,
+        .baseSpeed = 130,
+        .catchRate = 65,
+        .expYield = 234,
+        .type1 = TYPE_GHOST,
+        .type2 = TYPE_DARK,
+        .item1 = ITEM_NONE,
+        .item2 = ITEM_NONE,
+        .genderRatio = PERCENT_FEMALE(50),
+        .eggCycles = 20,
+        .friendship = 70,
+        .growthRate = GROWTH_MEDIUM_FAST,
+        .eggGroup1 = EGG_GROUP_HUMAN_LIKE,
+        .eggGroup2 = EGG_GROUP_HUMAN_LIKE,
+        .abilities = { ABILITY_INFILTRATOR, ABILITY_ANGER_POINT },
+        .hiddenAbility = ABILITY_BELLIGERENT,
+        .safariZoneFleeRate = 0,
+        .noFlip = TRUE,
+        .cost = 60,
     },
     [SPECIES_CBITEN] = 
     {
         .baseHP = 45,
         .baseAttack = 80,
-        .baseDefense = 70,
+        .baseDefense = 65,
         .baseSpAttack = 55,
         .baseSpDefense = 35,
-        .baseSpeed = 65,
+        .baseSpeed = 70,
         .catchRate = 215,
         .expYield = 70,
         .type1 = TYPE_NATURE,
@@ -10903,16 +11033,16 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_EARLY_BIRD,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
-        .cost = 20,
+        .cost = 45,
     },
     [SPECIES_BITEN] = 
     {
         .baseHP = 60,
         .baseAttack = 105,
-        .baseDefense = 105,
+        .baseDefense = 90,
         .baseSpAttack = 90,
         .baseSpDefense = 50,
-        .baseSpeed = 90,
+        .baseSpeed = 105,
         .catchRate = 85,
         .expYield = 225,
         .type1 = TYPE_NATURE,
@@ -10929,7 +11059,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_EARLY_BIRD,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
-        .cost = 20,
+        .cost = 60,
     },
     [SPECIES_CENOKO] = 
     {
@@ -10955,7 +11085,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_CURSED_BODY,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
-        .cost = 20,
+        .cost = 45,
     },
     [SPECIES_ENOKO] = 
     {
@@ -10981,7 +11111,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_CURSED_BODY,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
-        .cost = 20,
+        .cost = 60,
     },
     [SPECIES_CCHIYARI] = 
     {
@@ -10996,7 +11126,7 @@ const struct BaseStats gBaseStats[] =
         .type1 = TYPE_FIRE,
         .type2 = TYPE_DARK,
         .item1 = ITEM_NONE,
-        .item2 = ITEM_NONE,
+        .item2 = ITEM_FLAME_ORB,
         .genderRatio = PERCENT_FEMALE(50),
         .eggCycles = 20,
         .friendship = 70,
@@ -11007,7 +11137,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_STRANGE_MIST,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
-        .cost = 20,
+        .cost = 45,
     },
     [SPECIES_CHIYARI] = 
     {
@@ -11022,7 +11152,7 @@ const struct BaseStats gBaseStats[] =
         .type1 = TYPE_FIRE,
         .type2 = TYPE_DARK,
         .item1 = ITEM_NONE,
-        .item2 = ITEM_NONE,
+        .item2 = ITEM_FLAME_ORB,
         .genderRatio = PERCENT_FEMALE(50),
         .eggCycles = 20,
         .friendship = 70,
@@ -11033,7 +11163,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_STRANGE_MIST,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
-        .cost = 20,
+        .cost = 60,
     },
     [SPECIES_CHISAMI] = 
     {
@@ -11059,7 +11189,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_MERCILESS,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
-        .cost = 20,
+        .cost = 45,
     },
     [SPECIES_HISAMI] = 
     {
@@ -11085,18 +11215,18 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_MERCILESS,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
-        .cost = 20,
+        .cost = 60,
     },
     [SPECIES_CZANMU] = 
     {
         .baseHP = 85,
         .baseAttack = 75,
-        .baseDefense = 55,
-        .baseSpAttack = 75,
-        .baseSpDefense = 55,
+        .baseDefense = 65,
+        .baseSpAttack = 65,
+        .baseSpDefense = 65,
         .baseSpeed = 45,
-        .catchRate = 135,
-        .expYield = 78,
+        .catchRate = 115,
+        .expYield = 80,
         .type1 = TYPE_FIGHTING,
         .type2 = TYPE_FIGHTING,
         .item1 = ITEM_NONE,
@@ -11107,24 +11237,24 @@ const struct BaseStats gBaseStats[] =
         .growthRate = GROWTH_MEDIUM_FAST,
         .eggGroup1 = EGG_GROUP_HUMAN_LIKE,
         .eggGroup2 = EGG_GROUP_HUMAN_LIKE,
-        .abilities = { ABILITY_ADAPTABILITY, ABILITY_ADAPTABILITY },
-        .hiddenAbility = ABILITY_ADAPTABILITY,
+        .abilities = { ABILITY_LOGICIAN, ABILITY_HI_STRENGTH },
+        .hiddenAbility = ABILITY_FOCUS,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
-        .cost = 20,
+        .cost = 90,
     },
     [SPECIES_ZANMU] = 
     {
         .baseHP = 130,
         .baseAttack = 100,
-        .baseDefense = 80,
-        .baseSpAttack = 100,
-        .baseSpDefense = 80,
+        .baseDefense = 90,
+        .baseSpAttack = 90,
+        .baseSpDefense = 90,
         .baseSpeed = 50,
-        .catchRate = 45,
-        .expYield = 243,
-        .type1 = TYPE_ILLUSION,
-        .type2 = TYPE_ILLUSION,
+        .catchRate = 35,
+        .expYield = 248,
+        .type1 = TYPE_FIGHTING,
+        .type2 = TYPE_GHOST,
         .item1 = ITEM_NONE,
         .item2 = ITEM_KINGS_ROCK,
         .genderRatio = PERCENT_FEMALE(50),
@@ -11133,11 +11263,11 @@ const struct BaseStats gBaseStats[] =
         .growthRate = GROWTH_MEDIUM_FAST,
         .eggGroup1 = EGG_GROUP_HUMAN_LIKE,
         .eggGroup2 = EGG_GROUP_HUMAN_LIKE,
-        .abilities = { ABILITY_MASTERMIND, ABILITY_MASTERMIND },
-        .hiddenAbility = ABILITY_MASTERMIND,
+        .abilities = { ABILITY_LOGICIAN, ABILITY_HI_STRENGTH },
+        .hiddenAbility = ABILITY_FOCUS,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
-        .cost = 20,
+        .cost = 120,
     },
     [SPECIES_CHAKUREI] = 
     {
@@ -11163,7 +11293,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_STEADFAST,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
-        .cost = 20,
+        .cost = 90,
     },
     [SPECIES_HAKUREI] = 
     {
@@ -11189,7 +11319,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_STEADFAST,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
-        .cost = 20,
+        .cost = 120,
     },
     [SPECIES_CKIRISAME] = 
     {
@@ -11215,7 +11345,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_MOXIE,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
-        .cost = 60,
+        .cost = 75,
     },
     [SPECIES_KIRISAME] = 
     {
@@ -11267,7 +11397,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_YIN_AND_YANG,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
-        .cost = 60,
+        .cost = 75,
     },
     [SPECIES_SHINGYOKUF] = 
     {
@@ -11277,8 +11407,8 @@ const struct BaseStats gBaseStats[] =
         .baseSpAttack = 100,
         .baseSpDefense = 170,
         .baseSpeed = 45,
-        .catchRate = 5,
-        .expYield = 486,
+        .catchRate = 45,
+        .expYield = 243,
         .type1 = TYPE_FAITH,
         .type2 = TYPE_FIRE,
         .item1 = ITEM_NONE,
@@ -11303,8 +11433,8 @@ const struct BaseStats gBaseStats[] =
         .baseSpAttack = 100,
         .baseSpDefense = 100,
         .baseSpeed = 45,
-        .catchRate = 5,
-        .expYield = 486,
+        .catchRate = 45,
+        .expYield = 243,
         .type1 = TYPE_FAITH,
         .type2 = TYPE_ICE,
         .item1 = ITEM_NONE,
@@ -11329,8 +11459,8 @@ const struct BaseStats gBaseStats[] =
         .baseSpAttack = 110,
         .baseSpDefense = 70,
         .baseSpeed = 100,
-        .catchRate = 5,
-        .expYield = 486,
+        .catchRate = 45,
+        .expYield = 243,
         .type1 = TYPE_FAITH,
         .type2 = TYPE_FAITH,
         .item1 = ITEM_NONE,
@@ -11360,7 +11490,7 @@ const struct BaseStats gBaseStats[] =
         .type1 = TYPE_MIASMA,
         .type2 = TYPE_MIASMA,
         .item1 = ITEM_NONE,
-        .item2 = ITEM_DUBIOUS_TOME,
+        .item2 = ITEM_NONE,
         .genderRatio = PERCENT_FEMALE(50),
         .eggCycles = 20,
         .friendship = 70,
@@ -11371,7 +11501,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_LEVITATE,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
-        .cost = 80,
+        .cost = 90,
     },
     [SPECIES_MAGAN] = 
     {
@@ -11381,12 +11511,12 @@ const struct BaseStats gBaseStats[] =
         .baseSpAttack = 80,
         .baseSpDefense = 70,
         .baseSpeed = 70,
-        .catchRate = 5,
-        .expYield = 495,
+        .catchRate = 35,
+        .expYield = 248,
         .type1 = TYPE_MIASMA,
         .type2 = TYPE_MIASMA,
         .item1 = ITEM_NONE,
-        .item2 = ITEM_DUBIOUS_TOME,
+        .item2 = ITEM_NONE,
         .genderRatio = PERCENT_FEMALE(50),
         .eggCycles = 20,
         .friendship = 70,
@@ -11412,7 +11542,7 @@ const struct BaseStats gBaseStats[] =
         .type1 = TYPE_GHOST,
         .type2 = TYPE_DARK,
         .item1 = ITEM_NONE,
-        .item2 = ITEM_NONE,
+        .item2 = ITEM_DUBIOUS_TOME,
         .genderRatio = PERCENT_FEMALE(50),
         .eggCycles = 20,
         .friendship = 70,
@@ -11423,7 +11553,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_MOXIE,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
-        .cost = 80,
+        .cost = 90,
     },
     [SPECIES_MIMA] = 
     {
@@ -11433,12 +11563,12 @@ const struct BaseStats gBaseStats[] =
         .baseSpAttack = 145,
         .baseSpDefense = 90,
         .baseSpeed = 65,
-        .catchRate = 5,
-        .expYield = 504,
+        .catchRate = 25,
+        .expYield = 252,
         .type1 = TYPE_GHOST,
         .type2 = TYPE_DARK,
         .item1 = ITEM_NONE,
-        .item2 = ITEM_NONE,
+        .item2 = ITEM_DUBIOUS_TOME,
         .genderRatio = PERCENT_FEMALE(50),
         .eggCycles = 20,
         .friendship = 70,
@@ -11475,7 +11605,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_INFILTRATOR,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
-        .cost = 80,
+        .cost = 90,
     },
     [SPECIES_ELIS] = 
     {
@@ -11485,8 +11615,8 @@ const struct BaseStats gBaseStats[] =
         .baseSpAttack = 140,
         .baseSpDefense = 70,
         .baseSpeed = 100,
-        .catchRate = 5,
-        .expYield = 495,
+        .catchRate = 35,
+        .expYield = 248,
         .type1 = TYPE_ELECTRIC,
         .type2 = TYPE_DARK,
         .item1 = ITEM_NONE,
@@ -11527,7 +11657,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_IMMUNITY,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
-        .cost = 80,
+        .cost = 90,
     },
     [SPECIES_KIKURI] = 
     {
@@ -11537,8 +11667,8 @@ const struct BaseStats gBaseStats[] =
         .baseSpAttack = 85,
         .baseSpDefense = 85,
         .baseSpeed = 55,
-        .catchRate = 5,
-        .expYield = 495,
+        .catchRate = 35,
+        .expYield = 248,
         .type1 = TYPE_REASON,
         .type2 = TYPE_REASON,
         .item1 = ITEM_NONE,
@@ -11579,7 +11709,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_HI_STRENGTH,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
-        .cost = 80,
+        .cost = 90,
     },
     [SPECIES_KONNGARA] = 
     {
@@ -11589,8 +11719,8 @@ const struct BaseStats gBaseStats[] =
         .baseSpAttack = 70,
         .baseSpDefense = 135,
         .baseSpeed = 70,
-        .catchRate = 5,
-        .expYield = 495,
+        .catchRate = 35,
+        .expYield = 248,
         .type1 = TYPE_STEEL,
         .type2 = TYPE_STEEL,
         .item1 = ITEM_NONE,
@@ -11631,7 +11761,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_INNER_FOCUS,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
-        .cost = 80,
+        .cost = 90,
     },
     [SPECIES_SARIEL] = 
     {
@@ -11641,7 +11771,7 @@ const struct BaseStats gBaseStats[] =
         .baseSpAttack = 120,
         .baseSpDefense = 140,
         .baseSpeed = 80,
-        .catchRate = 5,
+        .catchRate = 25,
         .expYield = 252,
         .type1 = TYPE_FAITH,
         .type2 = TYPE_DARK,
@@ -11667,7 +11797,7 @@ const struct BaseStats gBaseStats[] =
         .baseSpAttack = 140,
         .baseSpDefense = 80,
         .baseSpeed = 120,
-        .catchRate = 5,
+        .catchRate = 25,
         .expYield = 252,
         .type1 = TYPE_WIND,
         .type2 = TYPE_DARK,
@@ -11735,7 +11865,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_ANALYTIC,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
-        .cost = 20,
+        .cost = 30,
     },
     [SPECIES_RIKA] = 
     {
@@ -11761,7 +11891,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_ANALYTIC,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
-        .cost = 80,
+        .cost = 40,
     },
     [SPECIES_TRIKA] = 
     {
@@ -11813,7 +11943,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_SNIPER,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
-        .cost = 20,
+        .cost = 45,
     },
     [SPECIES_MEIRA] = 
     {
@@ -11861,7 +11991,7 @@ const struct BaseStats gBaseStats[] =
         .growthRate = GROWTH_MEDIUM_FAST,
         .eggGroup1 = EGG_GROUP_HUMAN_LIKE,
         .eggGroup2 = EGG_GROUP_HUMAN_LIKE,
-        .abilities = { ABILITY_GATE_KEEPER, ABILITY_GATE_KEEPER },
+        .abilities = { ABILITY_FIRM_DEFENSE, ABILITY_GATE_KEEPER },
         .hiddenAbility = ABILITY_STURDY,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
@@ -11891,7 +12021,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_NATURAL_CURE,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
-        .cost = 20,
+        .cost = 30,
     },
     [SPECIES_ELLEN] = 
     {
@@ -11943,7 +12073,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_COLLECTOR,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
-        .cost = 20,
+        .cost = 30,
     },
     [SPECIES_KOTOHIME] = 
     {
@@ -11995,7 +12125,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_LOST_DREAM,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
-        .cost = 20,
+        .cost = 45,
     },
     [SPECIES_KANA] = 
     {
@@ -12047,7 +12177,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_KEEN_EYE,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
-        .cost = 20,
+        .cost = 45,
     },
     [SPECIES_RIKAKO] = 
     {
@@ -12099,7 +12229,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_QUICK_FEET,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
-        .cost = 40,
+        .cost = 60,
     },
     [SPECIES_CHIYURI] = 
     {
@@ -12140,7 +12270,7 @@ const struct BaseStats gBaseStats[] =
         .type1 = TYPE_ICE,
         .type2 = TYPE_REASON,
         .item1 = ITEM_NONE,
-        .item2 = ITEM_NONE,
+        .item2 = ITEM_OLD_TEXTBOOK,
         .genderRatio = PERCENT_FEMALE(50),
         .eggCycles = 20,
         .friendship = 70,
@@ -12151,7 +12281,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_MAGIC_BARRIER,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
-        .cost = 80,
+        .cost = 90,
     },
     [SPECIES_YUMEMI] = 
     {
@@ -12166,7 +12296,7 @@ const struct BaseStats gBaseStats[] =
         .type1 = TYPE_ICE,
         .type2 = TYPE_REASON,
         .item1 = ITEM_NONE,
-        .item2 = ITEM_NONE,
+        .item2 = ITEM_OLD_TEXTBOOK,
         .genderRatio = PERCENT_FEMALE(50),
         .eggCycles = 20,
         .friendship = 70,
@@ -12174,6 +12304,32 @@ const struct BaseStats gBaseStats[] =
         .eggGroup1 = EGG_GROUP_HUMAN_LIKE,
         .eggGroup2 = EGG_GROUP_HUMAN_LIKE,
         .abilities = { ABILITY_GRAND_THEORY, ABILITY_SOUNDPROOF },
+        .hiddenAbility = ABILITY_MAGIC_BARRIER,
+        .safariZoneFleeRate = 0,
+        .noFlip = TRUE,
+        .cost = 120,
+    },
+    [SPECIES_TYUMEMI] = 
+    {
+        .baseHP = 85,
+        .baseAttack = 80,
+        .baseDefense = 120,
+        .baseSpAttack = 115,
+        .baseSpDefense = 60,
+        .baseSpeed = 100,
+        .catchRate = 25,
+        .expYield = 252,
+        .type1 = TYPE_FIRE,
+        .type2 = TYPE_REASON,
+        .item1 = ITEM_NONE,
+        .item2 = ITEM_OLD_TEXTBOOK,
+        .genderRatio = PERCENT_FEMALE(50),
+        .eggCycles = 20,
+        .friendship = 70,
+        .growthRate = GROWTH_MEDIUM_FAST,
+        .eggGroup1 = EGG_GROUP_HUMAN_LIKE,
+        .eggGroup2 = EGG_GROUP_HUMAN_LIKE,
+        .abilities = { ABILITY_GRAND_THEORY, ABILITY_INTIMIDATE },
         .hiddenAbility = ABILITY_MAGIC_BARRIER,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
@@ -12255,7 +12411,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_REGENERATOR,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
-        .cost = 20,
+        .cost = 30,
     },
     [SPECIES_ORANGE] = 
     {
@@ -12307,7 +12463,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_POISON_HEAL,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
-        .cost = 20,
+        .cost = 30,
     },
     [SPECIES_KURUMI] = 
     {
@@ -12359,7 +12515,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_MERCILESS,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
-        .cost = 40,
+        .cost = 60,
     },
     [SPECIES_ELLY] = 
     {
@@ -12411,7 +12567,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_TRUANT,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
-        .cost = 60,
+        .cost = 75,
     },
     [SPECIES_KAZAMI] = 
     {
@@ -12478,18 +12634,18 @@ const struct BaseStats gBaseStats[] =
         .type1 = TYPE_DARK,
         .type2 = TYPE_HEART,
         .item1 = ITEM_NONE,
-        .item2 = ITEM_NONE,
+        .item2 = ITEM_STARDUST,
         .genderRatio = PERCENT_FEMALE(50),
         .eggCycles = 20,
         .friendship = 70,
         .growthRate = GROWTH_MEDIUM_FAST,
         .eggGroup1 = EGG_GROUP_HUMAN_LIKE,
         .eggGroup2 = EGG_GROUP_HUMAN_LIKE,
-        .abilities = { ABILITY_PRIDE, ABILITY_PRIDE },
+        .abilities = { ABILITY_ATHEISM, ABILITY_PRIDE },
         .hiddenAbility = ABILITY_PRESSURE,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
-        .cost = 80,
+        .cost = 90,
     },
     [SPECIES_MUGETSU] = 
     {
@@ -12504,14 +12660,14 @@ const struct BaseStats gBaseStats[] =
         .type1 = TYPE_DARK,
         .type2 = TYPE_HEART,
         .item1 = ITEM_NONE,
-        .item2 = ITEM_NONE,
+        .item2 = ITEM_STARDUST,
         .genderRatio = PERCENT_FEMALE(50),
         .eggCycles = 20,
         .friendship = 70,
         .growthRate = GROWTH_MEDIUM_FAST,
         .eggGroup1 = EGG_GROUP_HUMAN_LIKE,
         .eggGroup2 = EGG_GROUP_HUMAN_LIKE,
-        .abilities = { ABILITY_PRIDE, ABILITY_PRIDE },
+        .abilities = { ABILITY_ATHEISM, ABILITY_PRIDE },
         .hiddenAbility = ABILITY_PRESSURE,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
@@ -12530,7 +12686,7 @@ const struct BaseStats gBaseStats[] =
         .type1 = TYPE_DARK,
         .type2 = TYPE_WIND,
         .item1 = ITEM_NONE,
-        .item2 = ITEM_NONE,
+        .item2 = ITEM_STARDUST,
         .genderRatio = PERCENT_FEMALE(50),
         .eggCycles = 20,
         .friendship = 70,
@@ -12541,7 +12697,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_PRESSURE,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
-        .cost = 80,
+        .cost = 90,
     },
     [SPECIES_GENGETSU] = 
     {
@@ -12556,7 +12712,7 @@ const struct BaseStats gBaseStats[] =
         .type1 = TYPE_DARK,
         .type2 = TYPE_WIND,
         .item1 = ITEM_NONE,
-        .item2 = ITEM_NONE,
+        .item2 = ITEM_STARDUST,
         .genderRatio = PERCENT_FEMALE(50),
         .eggCycles = 20,
         .friendship = 70,
@@ -12593,7 +12749,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_KLUTZ,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
-        .cost = 20,
+        .cost = 45,
     },
     [SPECIES_SARA] = 
     {
@@ -12633,7 +12789,7 @@ const struct BaseStats gBaseStats[] =
         .expYield = 72,
         .type1 = TYPE_HEART,
         .type2 = TYPE_HEART,
-        .item1 = ITEM_NONE,
+        .item1 = ITEM_CHERI_BERRY,
         .item2 = ITEM_NONE,
         .genderRatio = PERCENT_FEMALE(50),
         .eggCycles = 20,
@@ -12645,7 +12801,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_MAGIC_GUARD,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
-        .cost = 20,
+        .cost = 45,
     },
     [SPECIES_LOUISE] = 
     {
@@ -12659,7 +12815,7 @@ const struct BaseStats gBaseStats[] =
         .expYield = 230,
         .type1 = TYPE_HEART,
         .type2 = TYPE_HEART,
-        .item1 = ITEM_NONE,
+        .item1 = ITEM_CHERI_BERRY,
         .item2 = ITEM_NONE,
         .genderRatio = PERCENT_FEMALE(50),
         .eggCycles = 20,
@@ -12697,7 +12853,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_DOLL_WALL,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
-        .cost = 40,
+        .cost = 60,
     },
     [SPECIES_ARISU] = 
     {
@@ -12749,7 +12905,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_LAST_WISH,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
-        .cost = 40,
+        .cost = 60,
     },
     [SPECIES_YUKI] = 
     {
@@ -12801,7 +12957,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_LAST_GRUDGE,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
-        .cost = 40,
+        .cost = 60,
     },
     [SPECIES_MAI] = 
     {
@@ -12853,7 +13009,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_PRESSURE,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
-        .cost = 60,
+        .cost = 75,
     },
     [SPECIES_YUMEKO] = 
     {
@@ -12905,7 +13061,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_FLAWLESS,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
-        .cost = 80,
+        .cost = 90,
     },
     [SPECIES_SHINKI] = 
     {
@@ -12918,6 +13074,32 @@ const struct BaseStats gBaseStats[] =
         .catchRate = 25,
         .expYield = 252,
         .type1 = TYPE_FAITH,
+        .type2 = TYPE_DARK,
+        .item1 = ITEM_NONE,
+        .item2 = ITEM_NONE,
+        .genderRatio = PERCENT_FEMALE(50),
+        .eggCycles = 20,
+        .friendship = 70,
+        .growthRate = GROWTH_MEDIUM_FAST,
+        .eggGroup1 = EGG_GROUP_HUMAN_LIKE,
+        .eggGroup2 = EGG_GROUP_HUMAN_LIKE,
+        .abilities = { ABILITY_PRESSURE, ABILITY_PRESSURE },
+        .hiddenAbility = ABILITY_FLAWLESS,
+        .safariZoneFleeRate = 0,
+        .noFlip = TRUE,
+        .cost = 120,
+    },
+    [SPECIES_ASHINKI] = 
+    {
+        .baseHP = 85,
+        .baseAttack = 115,
+        .baseDefense = 90,
+        .baseSpAttack = 120,
+        .baseSpDefense = 70,
+        .baseSpeed = 80,
+        .catchRate = 25,
+        .expYield = 252,
+        .type1 = TYPE_ILLUSION,
         .type2 = TYPE_DARK,
         .item1 = ITEM_NONE,
         .item2 = ITEM_NONE,
@@ -12957,7 +13139,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_INNER_FOCUS,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
-        .cost = 80,
+        .cost = 90,
     },
     [SPECIES_SENDAI] = 
     {
@@ -13009,7 +13191,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_ANTICIPATION,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
-        .cost = 80,
+        .cost = 90,
     },
     [SPECIES_TENMA] = 
     {
@@ -13061,7 +13243,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_HARMONIZE,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
-        .cost = 20,
+        .cost = 45,
     },
     [SPECIES_LAYLA] = 
     {
@@ -13139,7 +13321,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_PRESSURE,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
-        .cost = 100,
+        .cost = 75,
     },
     [SPECIES_YOUKI] = 
     {
@@ -13191,7 +13373,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_REGENERATOR,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
-        .cost = 20,
+        .cost = 30,
     },
     [SPECIES_2HU] = 
     {
@@ -13243,7 +13425,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_VITAL_SPIRIT,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
-        .cost = 20,
+        .cost = 30,
     },
     [SPECIES_TRRENKO] = 
     {
@@ -13295,7 +13477,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_FLAWLESS,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
-        .cost = 20,
+        .cost = 30,
     },
     [SPECIES_TRMARIBEL] = 
     {
@@ -13487,8 +13669,8 @@ const struct BaseStats gBaseStats[] =
         .baseSpAttack = 60,
         .baseSpDefense = 50,
         .baseSpeed = 130,
-        .catchRate = 35,
-        .expYield = 248,
+        .catchRate = 20,
+        .expYield = 743,
         .type1 = TYPE_WIND,
         .type2 = TYPE_STEEL,
         .item1 = ITEM_NONE,

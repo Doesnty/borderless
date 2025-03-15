@@ -35,7 +35,7 @@ Route11_EastEntrance_2F_Text_ExplainItemfinder:: @ 819EB59
 Route11_EastEntrance_2F_Text_BigMonAsleepOnRoad:: @ 819EC8A
     .string "Let's see what the binoculars have\n"
     .string "to show…\p"
-    .string "A weird blob is in the middle of a road!$"
+    .string "A weird blob is in the\nmiddle of a road!$"
 
 Route11_EastEntrance_2F_Text_WhatABreathtakingView:: @ 819ECD9
     .string "Let's see what the binoculars have\n"

@@ -575,7 +575,7 @@ FiveIsland_Meadow_EventScript_ItemPPUp:: @ 81BEC76
 	end
 
 FiveIsland_MemorialPillar_EventScript_ItemMetalCoat:: @ 81BEC83
-	finditem ITEM_MAID_UNIFORM
+	finditem ITEM_PP_MAX
 	end
 
 SixIsland_OutcastIsland_EventScript_ItemPPUp:: @ 81BEC90
@@ -647,7 +647,7 @@ FourIsland_IcefallCave_1F_EventScript_ItemUltraBall:: @ 81BED53
 	end
 
 FourIsland_IcefallCave_1F_EventScript_ItemHM07:: @ 81BED60
-	finditem ITEM_HM07
+	finditem ITEM_RARE_CANDY
 	end
 
 FourIsland_IcefallCave_B1F_EventScript_ItemFullRestore:: @ 81BED6D
@@ -663,7 +663,7 @@ FiveIsland_RocketWarehouse_EventScript_ItemBigPearl:: @ 81BED87
 	end
 
 FiveIsland_RocketWarehouse_EventScript_ItemTM36:: @ 81BED94
-	finditem ITEM_TM36
+	finditem ITEM_MASTER_BALL
 	end
 
 FiveIsland_RocketWarehouse_EventScript_ItemPearl:: @ 81BEDA1
@@ -679,11 +679,11 @@ FiveIsland_LostCave_Room10_EventScript_ItemSilkScarf:: @ 81BEDBB
 	end
 
 FiveIsland_LostCave_Room11_EventScript_ItemLaxIncense:: @ 81BEDC8
-	finditem ITEM_LAX_INCENSE
+	finditem ITEM_MAX_ELIXIR
 	end
 
 FiveIsland_LostCave_Room12_EventScript_ItemSeaIncense:: @ 81BEDD5
-	finditem ITEM_SEA_INCENSE
+	finditem ITEM_MAX_ELIXIR
 	end
 
 FiveIsland_LostCave_Room13_EventScript_ItemMaxRevive:: @ 81BEDE2
@@ -700,4 +700,8 @@ SevenIsland_SevaultCanyon_House_EventScript_ItemLuckyPunch:: @ 81BEDFC
 
 SilphCo_4F_EventScript_ItemTM41:: @ 81BEE09
 	finditem ITEM_TM41
+	end
+
+FiveIsland_ResortGorgeous_House_EventScript_ItemLuckyEgg::
+	finditem ITEM_LUCKY_EGG
 	end

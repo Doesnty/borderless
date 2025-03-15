@@ -38,7 +38,7 @@ PokemonLeague_LancesRoom_Text_Defeat:: @ 8178A15
 PokemonLeague_LancesRoom_Text_PostBattleMaribelChampion::
     .string "I still can't believe my dragons\n"
     .string "lost to you, {PLAYER}.\p"
-    .string "You are now the Puppet League\n"
+    .string "You are now the Puppetry League\n"
     .string "Champion!\p"
     .string "…Or, you would have been, but\n"
     .string "you have one more challenge left.\p"
@@ -47,13 +47,13 @@ PokemonLeague_LancesRoom_Text_PostBattleMaribelChampion::
     .string "Maribel!\p"
     .string "She beat the Elite Four before\n"
     .string "you.\p"
-    .string "She is the real Puppet League\n"
+    .string "She is the real Puppetry League\n"
     .string "Champion.$"
 
 PokemonLeague_LancesRoom_Text_PostBattleRenkoChampion::
     .string "I still can't believe my dragons\n"
     .string "lost to you, {PLAYER}.\p"
-    .string "You are now the Puppet League\n"
+    .string "You are now the Puppetry League\n"
     .string "Champion!\p"
     .string "…Or, you would have been, but\n"
     .string "you have one more challenge left.\p"
@@ -62,6 +62,6 @@ PokemonLeague_LancesRoom_Text_PostBattleRenkoChampion::
     .string "Renko!\p"
     .string "She beat the Elite Four before\n"
     .string "you.\p"
-    .string "She is the real Puppet League\n"
+    .string "She is the real Puppetry League\n"
     .string "Champion.$"
 

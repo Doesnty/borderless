@@ -23,7 +23,7 @@ SaffronCity_Dojo_Text_MasterKoichiDefeat::
 SaffronCity_Dojo_Text_ChoosePrizedFightingMon:: @ 819B1A7
 	.string "Well, I don't have any badges\n"
 	.string "for you, sorry.\p"
-	.string "For some reason, the Puppet League\n"
+	.string "For some reason, the Puppetry League\n"
 	.string "didn't like the Imakuni?Badge.\p"
 	.string "So uhh, take one of these weird\n"
 	.string "Pokémon sitting in the back there.$"

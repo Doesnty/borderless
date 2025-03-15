@@ -36,7 +36,6 @@ const u8 *const gMonIconTable[] = {
     [SPECIES_AMARISA] = gMonIcon_marisa_attack,
     [SPECIES_SMARISA] = gMonIcon_marisa_speed,
     [SPECIES_ADMARISA] = gMonIcon_marisa_advent,
-    [SPECIES_LMARISA] = gMonIcon_marisa_lost,
     [SPECIES_CRUMIA] = gMonIcon_rumia_chibi,
     [SPECIES_RUMIA] = gMonIcon_rumia_neutral,
     [SPECIES_ARUMIA] = gMonIcon_rumia_attack,
@@ -109,14 +108,13 @@ const u8 *const gMonIconTable[] = {
     [SPECIES_HLYRICA] = gMonIcon_lyrica_helper,
     [SPECIES_CYOUMU] = gMonIcon_youmu_chibi,
     [SPECIES_YOUMU] = gMonIcon_youmu_neutral,
+	[SPECIES_AYOUMU] = gMonIcon_youmu_attack,
     [SPECIES_DYOUMU] = gMonIcon_youmu_defense,
     [SPECIES_SYOUMU] = gMonIcon_youmu_speed,
-    [SPECIES_LYOUMU] = gMonIcon_youmu_lost,
     [SPECIES_CYUYUKO] = gMonIcon_yuyuko_chibi,
     [SPECIES_YUYUKO] = gMonIcon_yuyuko_neutral,
     [SPECIES_AYUYUKO] = gMonIcon_yuyuko_attack,
     [SPECIES_DYUYUKO] = gMonIcon_yuyuko_defense,
-    [SPECIES_LYUYUKO] = gMonIcon_yuyuko_lost,
     [SPECIES_CRAN] = gMonIcon_ran_chibi,
     [SPECIES_RAN] = gMonIcon_ran_neutral,
     [SPECIES_ARAN] = gMonIcon_ran_attack,
@@ -131,6 +129,7 @@ const u8 *const gMonIconTable[] = {
     [SPECIES_SUIKA] = gMonIcon_suika_neutral,
     [SPECIES_ASUIKA] = gMonIcon_suika_attack,
     [SPECIES_TSUIKA] = gMonIcon_suika_technical,
+	[SPECIES_MPSUIKA] = gMonIcon_suika_big,
     [SPECIES_CWRIGGLE] = gMonIcon_wriggle_chibi,
     [SPECIES_WRIGGLE] = gMonIcon_wriggle_neutral,
     [SPECIES_DWRIGGLE] = gMonIcon_wriggle_defense,
@@ -338,6 +337,7 @@ const u8 *const gMonIconTable[] = {
     [SPECIES_STOJIKO] = gMonIcon_tojiko_speed,
     [SPECIES_CFUTO] = gMonIcon_futo_chibi,
     [SPECIES_FUTO] = gMonIcon_futo_neutral,
+    [SPECIES_AFUTO] = gMonIcon_futo_attack,
     [SPECIES_TFUTO] = gMonIcon_futo_technical,
     [SPECIES_CMIKO] = gMonIcon_miko_chibi,
     [SPECIES_MIKO] = gMonIcon_miko_neutral,
@@ -380,6 +380,8 @@ const u8 *const gMonIconTable[] = {
     [SPECIES_HKASEN] = gMonIcon_kasen_helper,
     [SPECIES_CSUMIREKO] = gMonIcon_sumireko_chibi,
     [SPECIES_SUMIREKO] = gMonIcon_sumireko_neutral,
+    [SPECIES_SSUMIREKO] = gMonIcon_sumireko_speed,
+    [SPECIES_TSUMIREKO] = gMonIcon_sumireko_technical,
     [SPECIES_CSEIRAN] = gMonIcon_seiran_chibi,
     [SPECIES_SEIRAN] = gMonIcon_seiran_neutral,
     [SPECIES_CRINGO] = gMonIcon_ringo_chibi,
@@ -406,6 +408,7 @@ const u8 *const gMonIconTable[] = {
     [SPECIES_AUNN] = gMonIcon_aunn_neutral,
     [SPECIES_CNARUMI] = gMonIcon_narumi_chibi,
     [SPECIES_NARUMI] = gMonIcon_narumi_neutral,
+    [SPECIES_ANARUMI] = gMonIcon_narumi_attack,
     [SPECIES_CMAI_AND_SATONO] = gMonIcon_dancers_chibi,
     [SPECIES_MAI_AND_SATONO] = gMonIcon_dancers_neutral,
     [SPECIES_COKINA] = gMonIcon_okina_chibi,
@@ -444,6 +447,8 @@ const u8 *const gMonIconTable[] = {
     [SPECIES_MOMOYO] = gMonIcon_momoyo_neutral,
     [SPECIES_CMIYOI] = gMonIcon_miyoi_chibi,
     [SPECIES_MIYOI] = gMonIcon_miyoi_neutral,
+	[SPECIES_CMIZUCHI] = gMonIcon_mizuchi_chibi,
+	[SPECIES_MIZUCHI] = gMonIcon_mizuchi_neutral,
     [SPECIES_CBITEN] = gMonIcon_biten_chibi,
     [SPECIES_BITEN] = gMonIcon_biten_neutral,
     [SPECIES_CENOKO] = gMonIcon_enoko_chibi,
@@ -494,6 +499,7 @@ const u8 *const gMonIconTable[] = {
     [SPECIES_CHIYURI] = gMonIcon_chiyuri_neutral,
     [SPECIES_CYUMEMI] = gMonIcon_yumemi_chibi,
     [SPECIES_YUMEMI] = gMonIcon_yumemi_neutral,
+    [SPECIES_TYUMEMI] = gMonIcon_yumemi_technical,
     [SPECIES_RUUKOTO] = gMonIcon_ruukoto,
     [SPECIES_MIMI_CHAN] = gMonIcon_mimichan,
     [SPECIES_CORANGE] = gMonIcon_orange_chibi,
@@ -523,6 +529,7 @@ const u8 *const gMonIconTable[] = {
     [SPECIES_YUMEKO] = gMonIcon_yumeko_neutral,
     [SPECIES_CSHINKI] = gMonIcon_shinki_chibi,
     [SPECIES_SHINKI] = gMonIcon_shinki_neutral,
+    [SPECIES_ASHINKI] = gMonIcon_shinki_attack,
     [SPECIES_CSENDAI] = gMonIcon_sendai_chibi,
     [SPECIES_SENDAI] = gMonIcon_sendai_neutral,
     [SPECIES_CTENMA] = gMonIcon_tenma_chibi,
@@ -560,7 +567,6 @@ const u8 gMonIconPaletteIndices[] = {
     [SPECIES_AMARISA] = 1,
     [SPECIES_SMARISA] = 1,
     [SPECIES_ADMARISA] = 1,
-    [SPECIES_LMARISA] = 2,
     
     [SPECIES_CRUMIA] = 1,
     [SPECIES_RUMIA] = 1,
@@ -651,15 +657,14 @@ const u8 gMonIconPaletteIndices[] = {
     
     [SPECIES_CYOUMU] = 0,
     [SPECIES_YOUMU] = 0,
+	[SPECIES_AYOUMU] = 0,
     [SPECIES_DYOUMU] = 0,
     [SPECIES_SYOUMU] = 0,
-    [SPECIES_LYOUMU] = 1,
     
     [SPECIES_CYUYUKO] = 0,
     [SPECIES_YUYUKO] = 0,
     [SPECIES_AYUYUKO] = 0,
     [SPECIES_DYUYUKO] = 0,
-    [SPECIES_LYUYUKO] = 0,
     
     [SPECIES_CRAN] = 1,
     [SPECIES_RAN] = 1,
@@ -677,6 +682,7 @@ const u8 gMonIconPaletteIndices[] = {
     [SPECIES_SUIKA] = 1,
     [SPECIES_ASUIKA] = 1,
     [SPECIES_TSUIKA] = 1,
+    [SPECIES_MPSUIKA] = 1,
     
     [SPECIES_CWRIGGLE] = 0,
     [SPECIES_WRIGGLE] = 0,
@@ -939,6 +945,7 @@ const u8 gMonIconPaletteIndices[] = {
     
     [SPECIES_CFUTO] = 0,
     [SPECIES_FUTO] = 0,
+    [SPECIES_AFUTO] = 0,
     [SPECIES_TFUTO] = 0,
     
     [SPECIES_CMIKO] = 1,
@@ -996,6 +1003,8 @@ const u8 gMonIconPaletteIndices[] = {
     
     [SPECIES_CSUMIREKO] = 1,
     [SPECIES_SUMIREKO] = 1,
+    [SPECIES_SSUMIREKO] = 1,
+    [SPECIES_TSUMIREKO] = 1,
     
     [SPECIES_CSEIRAN] = 0,
     [SPECIES_SEIRAN] = 0,
@@ -1032,6 +1041,7 @@ const u8 gMonIconPaletteIndices[] = {
     
     [SPECIES_CNARUMI] = 2,
     [SPECIES_NARUMI] = 2,
+    [SPECIES_ANARUMI] = 2,
     
     [SPECIES_COKINA] = 2,
     [SPECIES_OKINA] = 2,
@@ -1080,6 +1090,9 @@ const u8 gMonIconPaletteIndices[] = {
     
     [SPECIES_CMIYOI] = 1,
     [SPECIES_MIYOI] = 1,
+	
+	[SPECIES_CMIZUCHI] = 0,
+	[SPECIES_MIZUCHI] = 0,
     
     [SPECIES_CBITEN] = 2,
     [SPECIES_BITEN] = 2,
@@ -1154,6 +1167,7 @@ const u8 gMonIconPaletteIndices[] = {
     
     [SPECIES_CYUMEMI] = 1,
     [SPECIES_YUMEMI] = 1,
+    [SPECIES_TYUMEMI] = 1,
     
     [SPECIES_RUUKOTO] = 0,
     
@@ -1198,6 +1212,7 @@ const u8 gMonIconPaletteIndices[] = {
     
     [SPECIES_CSHINKI] = 1,
     [SPECIES_SHINKI] = 1,
+    [SPECIES_ASHINKI] = 1,
     
     [SPECIES_CSENDAI] = 1,
     [SPECIES_SENDAI] = 1,

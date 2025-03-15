@@ -105,12 +105,12 @@ BirthIsland_Exterior_EventScript_Deoxys:: @ 81652C0
 
 BirthIsland_Exterior_EventScript_DefeatedDeoxys:: @ 816533A
 	setflag FLAG_DEOXYS_FLEW_AWAY
-	setvar VAR_0x8004, SPECIES_DEOXYS
+	setvar VAR_0x8004, SPECIES_2HU
 	goto EventScript_MonFlewAway
 	end
 
 BirthIsland_Exterior_EventScript_RanFromDeoxys:: @ 8165348
-	setvar VAR_0x8004, SPECIES_DEOXYS
+	setvar VAR_0x8004, SPECIES_2HU
 	goto EventScript_MonFlewAway
 	end
 

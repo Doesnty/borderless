@@ -62,7 +62,7 @@ VictoryRoad_3F_Text_ColbyDefeat:: @ 8174CA9
 
 VictoryRoad_3F_Text_ColbyPostBattle:: @ 8174CBD
     .string "All Trainers here are headed to\n"
-    .string "the Puppet League.\p"
+    .string "the Puppetry League.\p"
     .string "Don't let down your guard.$"
 
 VictoryRoad_3F_Text_RayIntro:: @ 8174D0C

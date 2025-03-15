@@ -9,24 +9,41 @@ VermilionCity_Gym_MapScripts:: @ 816B69E
 	.byte 0
 
 VermilionCity_Gym_OnLoad:: @ 816B6A9
-	call_if_set FOUND_FIRST_SWITCH, VermilionCity_Gym_EventScript_SetOneBeamOff
-	call_if_set FLAG_FOUND_BOTH_VERMILION_GYM_SWITCHES, VermilionCity_Gym_EventScript_SetBeamsOff
+	compare VAR_VERMILION_GYM_PROGRESS, 1
+	call_if_ge VermilionCity_Gym_EventScript_SetFirstBeamsOff
+	compare VAR_VERMILION_GYM_PROGRESS, 2
+	call_if_ge VermilionCity_Gym_EventScript_SetSecondBeamsOff
+	compare VAR_VERMILION_GYM_PROGRESS, 3
+	call_if_ge VermilionCity_Gym_EventScript_SetThirdBeamsOff
 	end
 
-VermilionCity_Gym_EventScript_SetOneBeamOff:: @ 816B6BC
-	setmetatile 3, 6, METATILE_VermilionGym_Beam_Node_TopLeft_HalfOn, 1
-	setmetatile 4, 6, METATILE_VermilionGym_Beam_Node_TopLeft_Edge_HalfOn, 1
-	setmetatile 5, 6, METATILE_VermilionGym_Beam_MidTop_HalfOn, 1
-	setmetatile 6, 6, METATILE_VermilionGym_Beam_Node_TopRight_Edge_HalfOn, 1
-	setmetatile 7, 6, METATILE_VermilionGym_Beam_Node_TopRight_HalfOn, 1
-	setmetatile 3, 7, METATILE_VermilionGym_Beam_Node_BottomLeft_HalfOn, 1
-	setmetatile 4, 7, METATILE_VermilionGym_Beam_Node_BottomLeft_Edge_HalfOn, 1
-	setmetatile 5, 7, METATILE_VermilionGym_Beam_MidBottom_HalfOn, 1
-	setmetatile 6, 7, METATILE_VermilionGym_Beam_Node_BottomRight_Edge_HalfOn, 1
-	setmetatile 7, 7, METATILE_VermilionGym_Beam_Node_BottomRight_HalfOn, 1
+VermilionCity_Gym_EventScript_SetFirstBeamsOff:: @ 816B717
+	setmetatile 3, 34, METATILE_VermilionGym_Beam_Node_TopLeft_Off, 1
+	setmetatile 4, 34, METATILE_VermilionGym_Beam_Node_TopLeft_Edge_Off, 0
+	setmetatile 5, 34, METATILE_VermilionGym_Floor, 0
+	setmetatile 6, 34, METATILE_VermilionGym_Beam_Node_TopRight_Edge_Off, 0
+	setmetatile 7, 34, METATILE_VermilionGym_Beam_Node_TopRight_Off, 1
+	setmetatile 3, 35, METATILE_VermilionGym_Beam_Node_BottomLeft_Off, 1
+	setmetatile 4, 35, METATILE_VermilionGym_Beam_Node_BottomLeft_Edge_Off, 0
+	setmetatile 5, 35, METATILE_VermilionGym_Floor, 0
+	setmetatile 6, 35, METATILE_VermilionGym_Beam_Node_BottomRight_Edge_Off, 0
+	setmetatile 7, 35, METATILE_VermilionGym_Beam_Node_BottomRight_Off, 1
 	return
 
-VermilionCity_Gym_EventScript_SetBeamsOff:: @ 816B717
+VermilionCity_Gym_EventScript_SetSecondBeamsOff:: @ 816B717
+	setmetatile 3, 21, METATILE_VermilionGym_Beam_Node_TopLeft_Off, 1
+	setmetatile 4, 21, METATILE_VermilionGym_Beam_Node_TopLeft_Edge_Off, 0
+	setmetatile 5, 21, METATILE_VermilionGym_Floor, 0
+	setmetatile 6, 21, METATILE_VermilionGym_Beam_Node_TopRight_Edge_Off, 0
+	setmetatile 7, 21, METATILE_VermilionGym_Beam_Node_TopRight_Off, 1
+	setmetatile 3, 22, METATILE_VermilionGym_Beam_Node_BottomLeft_Off, 1
+	setmetatile 4, 22, METATILE_VermilionGym_Beam_Node_BottomLeft_Edge_Off, 0
+	setmetatile 5, 22, METATILE_VermilionGym_Floor, 0
+	setmetatile 6, 22, METATILE_VermilionGym_Beam_Node_BottomRight_Edge_Off, 0
+	setmetatile 7, 22, METATILE_VermilionGym_Beam_Node_BottomRight_Off, 1
+	return
+
+VermilionCity_Gym_EventScript_SetThirdBeamsOff:: @ 816B717
 	setmetatile 3, 6, METATILE_VermilionGym_Beam_Node_TopLeft_Off, 1
 	setmetatile 4, 6, METATILE_VermilionGym_Beam_Node_TopLeft_Edge_Off, 0
 	setmetatile 5, 6, METATILE_VermilionGym_Floor, 0
@@ -40,170 +57,1372 @@ VermilionCity_Gym_EventScript_SetBeamsOff:: @ 816B717
 	return
 
 VermilionCity_Gym_OnTransition:: @ 816B772
-	call VermilionCity_Gym_EventScript_InitTrashCans
+	call VermilionCity_Gym_EventScript_ClearSwitchState
 	end
 
-VermilionCity_Gym_EventScript_InitTrashCans:: @ 816B778
-	goto_if_set FLAG_FOUND_BOTH_VERMILION_GYM_SWITCHES, EventScript_Return
-	special SetVermilionTrashCans
-	copyvar VAR_TEMP_0, SWITCH1_ID
-	copyvar VAR_TEMP_1, SWITCH2_ID
+VermilionCity_Gym_EventScript_ClearSwitchState::
+	clearflag FLAG_SURGE_PUZZLE_11
+	clearflag FLAG_SURGE_PUZZLE_12
+	clearflag FLAG_SURGE_PUZZLE_13
+	clearflag FLAG_SURGE_PUZZLE_14
+	clearflag FLAG_SURGE_PUZZLE_15
+	clearflag FLAG_SURGE_PUZZLE_21
+	clearflag FLAG_SURGE_PUZZLE_22
+	clearflag FLAG_SURGE_PUZZLE_23
+	clearflag FLAG_SURGE_PUZZLE_24
+	clearflag FLAG_SURGE_PUZZLE_25
+	clearflag FLAG_SURGE_PUZZLE_31
+	clearflag FLAG_SURGE_PUZZLE_32
+	clearflag FLAG_SURGE_PUZZLE_33
+	clearflag FLAG_SURGE_PUZZLE_34
+	clearflag FLAG_SURGE_PUZZLE_35
+	clearflag FLAG_SURGE_PUZZLE_41
+	clearflag FLAG_SURGE_PUZZLE_42
+	clearflag FLAG_SURGE_PUZZLE_43
+	clearflag FLAG_SURGE_PUZZLE_44
+	clearflag FLAG_SURGE_PUZZLE_45
+	clearflag FLAG_SURGE_PUZZLE_51
+	clearflag FLAG_SURGE_PUZZLE_52
+	clearflag FLAG_SURGE_PUZZLE_53
+	clearflag FLAG_SURGE_PUZZLE_54
+	clearflag FLAG_SURGE_PUZZLE_55
 	return
 
-VermilionCity_Gym_EventScript_TrashCan1:: @ 816B78F
-	lockall
-	setvar TRASH_CAN_ID, 1
-	goto VermilionCity_Gym_EventScript_TrashCan
-	end
+VermilionCityGym_EventScript_CheckIfSolvedCurrent::
+	switch VAR_VERMILION_GYM_PROGRESS
+	case 0, VermilionCityGym_EventScript_CheckIfSolvedFirst
+	case 1, VermilionCityGym_EventScript_CheckIfSolvedSecond
+	case 2, VermilionCityGym_EventScript_CheckIfSolvedThird
+	return
 
-VermilionCity_Gym_EventScript_TrashCan2:: @ 816B79B
-	lockall
-	setvar TRASH_CAN_ID, 2
-	goto VermilionCity_Gym_EventScript_TrashCan
-	end
-
-VermilionCity_Gym_EventScript_TrashCan3:: @ 816B7A7
-	lockall
-	setvar TRASH_CAN_ID, 3
-	goto VermilionCity_Gym_EventScript_TrashCan
-	end
-
-VermilionCity_Gym_EventScript_TrashCan4:: @ 816B7B3
-	lockall
-	setvar TRASH_CAN_ID, 4
-	goto VermilionCity_Gym_EventScript_TrashCan
-	end
-
-VermilionCity_Gym_EventScript_TrashCan5:: @ 816B7BF
-	lockall
-	setvar TRASH_CAN_ID, 5
-	goto VermilionCity_Gym_EventScript_TrashCan
-	end
-
-VermilionCity_Gym_EventScript_TrashCan6:: @ 816B7CB
-	lockall
-	setvar TRASH_CAN_ID, 6
-	goto VermilionCity_Gym_EventScript_TrashCan
-	end
-
-VermilionCity_Gym_EventScript_TrashCan7:: @ 816B7D7
-	lockall
-	setvar TRASH_CAN_ID, 7
-	goto VermilionCity_Gym_EventScript_TrashCan
-	end
-
-VermilionCity_Gym_EventScript_TrashCan8:: @ 816B7E3
-	lockall
-	setvar TRASH_CAN_ID, 8
-	goto VermilionCity_Gym_EventScript_TrashCan
-	end
-
-VermilionCity_Gym_EventScript_TrashCan9:: @ 816B7EF
-	lockall
-	setvar TRASH_CAN_ID, 9
-	goto VermilionCity_Gym_EventScript_TrashCan
-	end
-
-VermilionCity_Gym_EventScript_TrashCan10:: @ 816B7FB
-	lockall
-	setvar TRASH_CAN_ID, 10
-	goto VermilionCity_Gym_EventScript_TrashCan
-	end
-
-VermilionCity_Gym_EventScript_TrashCan11:: @ 816B807
-	lockall
-	setvar TRASH_CAN_ID, 11
-	goto VermilionCity_Gym_EventScript_TrashCan
-	end
-
-VermilionCity_Gym_EventScript_TrashCan12:: @ 816B813
-	lockall
-	setvar TRASH_CAN_ID, 12
-	goto VermilionCity_Gym_EventScript_TrashCan
-	end
-
-VermilionCity_Gym_EventScript_TrashCan13:: @ 816B81F
-	lockall
-	setvar TRASH_CAN_ID, 13
-	goto VermilionCity_Gym_EventScript_TrashCan
-	end
-
-VermilionCity_Gym_EventScript_TrashCan14:: @ 816B82B
-	lockall
-	setvar TRASH_CAN_ID, 14
-	goto VermilionCity_Gym_EventScript_TrashCan
-	end
-
-VermilionCity_Gym_EventScript_TrashCan15:: @ 816B837
-	lockall
-	setvar TRASH_CAN_ID, 15
-	goto VermilionCity_Gym_EventScript_TrashCan
-	end
-
-VermilionCity_Gym_EventScript_TrashCan:: @ 816B843
-	goto_if_questlog EventScript_ReleaseEnd
-	special QuestLog_CutRecording
-	copyvar SWITCH1_ID, VAR_TEMP_0
-	copyvar SWITCH2_ID, VAR_TEMP_1
-	goto_if_set FLAG_FOUND_BOTH_VERMILION_GYM_SWITCHES, VermilionCity_Gym_EventScript_LocksAlreadyOpen
-	goto_if_set FOUND_FIRST_SWITCH, VermilionCity_Gym_EventScript_TrySwitchTwo
-	compare SWITCH1_ID, TRASH_CAN_ID
-	goto_if_eq VermilionCity_Gym_EventScript_FoundSwitchOne
-	msgbox VermilionCity_Gym_Text_NopeOnlyTrashHere
-	releaseall
-	end
-
-VermilionCity_Gym_EventScript_FoundSwitchOne:: @ 816B885
-	msgbox VermilionCity_Gym_Text_SwitchUnderTrashFirstLockOpened
-	playse SE_PIN
-	waitse
-	call VermilionCity_Gym_EventScript_SetOneBeamOff
-	special DrawWholeMapView
-	setflag FOUND_FIRST_SWITCH
-	releaseall
-	end
-
-VermilionCity_Gym_EventScript_TrySwitchTwo:: @ 816B89E
-	compare SWITCH2_ID, TRASH_CAN_ID
-	goto_if_eq VermilionCity_Gym_EventScript_FoundSwitchTwo
-	msgbox VermilionCity_Gym_Text_OnlyTrashLocksWereReset
-	clearflag FOUND_FIRST_SWITCH
-	special SetVermilionTrashCans
-	copyvar VAR_TEMP_0, SWITCH1_ID
-	copyvar VAR_TEMP_1, SWITCH2_ID
-	call VermilionCity_Gym_EventScript_SetBeamsOn
-	special DrawWholeMapView
-	releaseall
-	end
-
-VermilionCity_Gym_EventScript_FoundSwitchTwo:: @ 816B8CB
-	msgbox VermilionCity_Gym_Text_SecondLockOpened
-	closemessage
-	call VermilionCity_Gym_EventScript_SetBeamsOff
-	special DrawWholeMapView
+VermilionCityGym_EventScript_CheckIfSolvedFirst::
+	goto_if_unset FLAG_SURGE_PUZZLE_11, VermilionCityGym_EventScript_CheckIfSolvedFailed
+	goto_if_unset FLAG_SURGE_PUZZLE_12, VermilionCityGym_EventScript_CheckIfSolvedFailed
+	goto_if_unset FLAG_SURGE_PUZZLE_13, VermilionCityGym_EventScript_CheckIfSolvedFailed
+	goto_if_unset FLAG_SURGE_PUZZLE_21, VermilionCityGym_EventScript_CheckIfSolvedFailed
+	goto_if_unset FLAG_SURGE_PUZZLE_22, VermilionCityGym_EventScript_CheckIfSolvedFailed
+	goto_if_unset FLAG_SURGE_PUZZLE_23, VermilionCityGym_EventScript_CheckIfSolvedFailed
+	goto_if_unset FLAG_SURGE_PUZZLE_31, VermilionCityGym_EventScript_CheckIfSolvedFailed
+	goto_if_unset FLAG_SURGE_PUZZLE_32, VermilionCityGym_EventScript_CheckIfSolvedFailed
+	goto_if_unset FLAG_SURGE_PUZZLE_33, VermilionCityGym_EventScript_CheckIfSolvedFailed
+	addvar VAR_VERMILION_GYM_PROGRESS, 1
+	call VermilionCity_Gym_EventScript_SetFirstBeamsOff
 	playse SE_UNLOCK
-	waitse
-	setflag FLAG_FOUND_BOTH_VERMILION_GYM_SWITCHES
-	releaseall
-	end
-
-VermilionCity_Gym_EventScript_LocksAlreadyOpen:: @ 816B8E5
-	msgbox VermilionCity_Gym_Text_NopeOnlyTrashHere
-	releaseall
-	end
-
-VermilionCity_Gym_EventScript_SetBeamsOn:: @ 816B8EF
-	setmetatile 3, 6, METATILE_VermilionGym_Beam_Node_TopLeft_On, 1
-	setmetatile 4, 6, METATILE_VermilionGym_Beam_Node_TopLeft_Edge_On, 1
-	setmetatile 5, 6, METATILE_VermilionGym_Beam_MidTop, 1
-	setmetatile 6, 6, METATILE_VermilionGym_Beam_Node_TopRight_Edge_On, 1
-	setmetatile 7, 6, METATILE_VermilionGym_Beam_Node_TopRight_On, 1
-	setmetatile 3, 7, METATILE_VermilionGym_Beam_Node_BottomLeft_On, 1
-	setmetatile 4, 7, METATILE_VermilionGym_Beam_Node_BottomLeft_Edge_On, 1
-	setmetatile 5, 7, METATILE_VermilionGym_Beam_MidBottom, 1
-	setmetatile 6, 7, METATILE_VermilionGym_Beam_Node_BottomRight_Edge_On, 1
-	setmetatile 7, 7, METATILE_VermilionGym_Beam_Node_BottomRight_On, 1
+	special DrawWholeMapView
+	call VermilionCity_Gym_EventScript_ClearSwitchState
 	return
+
+VermilionCityGym_EventScript_CheckIfSolvedSecond::
+	goto_if_unset FLAG_SURGE_PUZZLE_11, VermilionCityGym_EventScript_CheckIfSolvedFailed
+	goto_if_unset FLAG_SURGE_PUZZLE_12, VermilionCityGym_EventScript_CheckIfSolvedFailed
+	goto_if_unset FLAG_SURGE_PUZZLE_13, VermilionCityGym_EventScript_CheckIfSolvedFailed
+	goto_if_unset FLAG_SURGE_PUZZLE_14, VermilionCityGym_EventScript_CheckIfSolvedFailed
+	goto_if_unset FLAG_SURGE_PUZZLE_21, VermilionCityGym_EventScript_CheckIfSolvedFailed
+	goto_if_unset FLAG_SURGE_PUZZLE_22, VermilionCityGym_EventScript_CheckIfSolvedFailed
+	goto_if_unset FLAG_SURGE_PUZZLE_23, VermilionCityGym_EventScript_CheckIfSolvedFailed
+	goto_if_unset FLAG_SURGE_PUZZLE_24, VermilionCityGym_EventScript_CheckIfSolvedFailed
+	goto_if_unset FLAG_SURGE_PUZZLE_31, VermilionCityGym_EventScript_CheckIfSolvedFailed
+	goto_if_unset FLAG_SURGE_PUZZLE_32, VermilionCityGym_EventScript_CheckIfSolvedFailed
+	goto_if_unset FLAG_SURGE_PUZZLE_33, VermilionCityGym_EventScript_CheckIfSolvedFailed
+	goto_if_unset FLAG_SURGE_PUZZLE_34, VermilionCityGym_EventScript_CheckIfSolvedFailed
+	goto_if_unset FLAG_SURGE_PUZZLE_41, VermilionCityGym_EventScript_CheckIfSolvedFailed
+	goto_if_unset FLAG_SURGE_PUZZLE_42, VermilionCityGym_EventScript_CheckIfSolvedFailed
+	goto_if_unset FLAG_SURGE_PUZZLE_43, VermilionCityGym_EventScript_CheckIfSolvedFailed
+	goto_if_unset FLAG_SURGE_PUZZLE_44, VermilionCityGym_EventScript_CheckIfSolvedFailed
+	addvar VAR_VERMILION_GYM_PROGRESS, 1
+	call VermilionCity_Gym_EventScript_SetSecondBeamsOff
+	playse SE_UNLOCK
+	special DrawWholeMapView
+	call VermilionCity_Gym_EventScript_ClearSwitchState
+	return
+
+VermilionCityGym_EventScript_CheckIfSolvedThird::
+	goto_if_unset FLAG_SURGE_PUZZLE_11, VermilionCityGym_EventScript_CheckIfSolvedFailed
+	goto_if_unset FLAG_SURGE_PUZZLE_12, VermilionCityGym_EventScript_CheckIfSolvedFailed
+	goto_if_unset FLAG_SURGE_PUZZLE_13, VermilionCityGym_EventScript_CheckIfSolvedFailed
+	goto_if_unset FLAG_SURGE_PUZZLE_14, VermilionCityGym_EventScript_CheckIfSolvedFailed
+	goto_if_unset FLAG_SURGE_PUZZLE_15, VermilionCityGym_EventScript_CheckIfSolvedFailed
+	goto_if_unset FLAG_SURGE_PUZZLE_21, VermilionCityGym_EventScript_CheckIfSolvedFailed
+	goto_if_unset FLAG_SURGE_PUZZLE_22, VermilionCityGym_EventScript_CheckIfSolvedFailed
+	goto_if_unset FLAG_SURGE_PUZZLE_23, VermilionCityGym_EventScript_CheckIfSolvedFailed
+	goto_if_unset FLAG_SURGE_PUZZLE_24, VermilionCityGym_EventScript_CheckIfSolvedFailed
+	goto_if_unset FLAG_SURGE_PUZZLE_25, VermilionCityGym_EventScript_CheckIfSolvedFailed
+	goto_if_unset FLAG_SURGE_PUZZLE_31, VermilionCityGym_EventScript_CheckIfSolvedFailed
+	goto_if_unset FLAG_SURGE_PUZZLE_32, VermilionCityGym_EventScript_CheckIfSolvedFailed
+	goto_if_unset FLAG_SURGE_PUZZLE_33, VermilionCityGym_EventScript_CheckIfSolvedFailed
+	goto_if_unset FLAG_SURGE_PUZZLE_34, VermilionCityGym_EventScript_CheckIfSolvedFailed
+	goto_if_unset FLAG_SURGE_PUZZLE_35, VermilionCityGym_EventScript_CheckIfSolvedFailed
+	goto_if_unset FLAG_SURGE_PUZZLE_41, VermilionCityGym_EventScript_CheckIfSolvedFailed
+	goto_if_unset FLAG_SURGE_PUZZLE_42, VermilionCityGym_EventScript_CheckIfSolvedFailed
+	goto_if_unset FLAG_SURGE_PUZZLE_43, VermilionCityGym_EventScript_CheckIfSolvedFailed
+	goto_if_unset FLAG_SURGE_PUZZLE_44, VermilionCityGym_EventScript_CheckIfSolvedFailed
+	goto_if_unset FLAG_SURGE_PUZZLE_45, VermilionCityGym_EventScript_CheckIfSolvedFailed
+	goto_if_unset FLAG_SURGE_PUZZLE_51, VermilionCityGym_EventScript_CheckIfSolvedFailed
+	goto_if_unset FLAG_SURGE_PUZZLE_52, VermilionCityGym_EventScript_CheckIfSolvedFailed
+	goto_if_unset FLAG_SURGE_PUZZLE_53, VermilionCityGym_EventScript_CheckIfSolvedFailed
+	goto_if_unset FLAG_SURGE_PUZZLE_54, VermilionCityGym_EventScript_CheckIfSolvedFailed
+	goto_if_unset FLAG_SURGE_PUZZLE_55, VermilionCityGym_EventScript_CheckIfSolvedFailed
+	addvar VAR_VERMILION_GYM_PROGRESS, 1
+	call VermilionCity_Gym_EventScript_SetThirdBeamsOff
+	playse SE_UNLOCK
+	call VermilionCity_Gym_EventScript_ClearSwitchState
+	return
+
+VermilionCityGym_EventScript_CheckIfSolvedFailed::
+	return
+
+VermilionCityGym_EventScript_EndSwitch::
+	setvar VAR_VERMILION_GYM_MOVEMENT_STATE, 1
+	end
+
+VermilionCityGym_EventScript_ToggleState::
+	setvar VAR_VERMILION_GYM_MOVEMENT_STATE, 0
+	end
+
+
+
+
+
+
+
+
+
+VermilionCityGym_EventScript_ToggleFirstSwitch11::
+	goto_if_set FLAG_SURGE_PUZZLE_11, VermilionCityGym_EventScript_ToggleOffFirstSwitch11
+	setflag FLAG_SURGE_PUZZLE_11
+	setmetatile 3, 38, METATILE_Building_SwitchOn, 0
+	return
+
+VermilionCityGym_EventScript_ToggleOffFirstSwitch11::
+	clearflag FLAG_SURGE_PUZZLE_11
+	setmetatile 3, 38, METATILE_Building_SwitchOff, 0
+	return
+
+VermilionCityGym_EventScript_ToggleFirstSwitch12::
+	goto_if_set FLAG_SURGE_PUZZLE_12, VermilionCityGym_EventScript_ToggleOffFirstSwitch12
+	setflag FLAG_SURGE_PUZZLE_12
+	setmetatile 3, 40, METATILE_Building_SwitchOn, 0
+	return
+
+VermilionCityGym_EventScript_ToggleOffFirstSwitch12::
+	clearflag FLAG_SURGE_PUZZLE_12
+	setmetatile 3, 40, METATILE_Building_SwitchOff, 0
+	return
+
+VermilionCityGym_EventScript_ToggleFirstSwitch13::
+	goto_if_set FLAG_SURGE_PUZZLE_13, VermilionCityGym_EventScript_ToggleOffFirstSwitch13
+	setflag FLAG_SURGE_PUZZLE_13
+	setmetatile 3, 42, METATILE_Building_SwitchOn, 0
+	return
+
+VermilionCityGym_EventScript_ToggleOffFirstSwitch13::
+	clearflag FLAG_SURGE_PUZZLE_13
+	setmetatile 3, 42, METATILE_Building_SwitchOff, 0
+	return
+
+VermilionCityGym_EventScript_ToggleFirstSwitch21::
+	goto_if_set FLAG_SURGE_PUZZLE_21, VermilionCityGym_EventScript_ToggleOffFirstSwitch21
+	setflag FLAG_SURGE_PUZZLE_21
+	setmetatile 5, 38, METATILE_Building_SwitchOn, 0
+	return
+
+VermilionCityGym_EventScript_ToggleOffFirstSwitch21::
+	clearflag FLAG_SURGE_PUZZLE_21
+	setmetatile 5, 38, METATILE_Building_SwitchOff, 0
+	return
+
+VermilionCityGym_EventScript_ToggleFirstSwitch22::
+	goto_if_set FLAG_SURGE_PUZZLE_22, VermilionCityGym_EventScript_ToggleOffFirstSwitch22
+	setflag FLAG_SURGE_PUZZLE_22
+	setmetatile 5, 40, METATILE_Building_SwitchOn, 0
+	return
+
+VermilionCityGym_EventScript_ToggleOffFirstSwitch22::
+	clearflag FLAG_SURGE_PUZZLE_22
+	setmetatile 5, 40, METATILE_Building_SwitchOff, 0
+	return
+
+VermilionCityGym_EventScript_ToggleFirstSwitch23::
+	goto_if_set FLAG_SURGE_PUZZLE_23, VermilionCityGym_EventScript_ToggleOffFirstSwitch23
+	setflag FLAG_SURGE_PUZZLE_23
+	setmetatile 5, 42, METATILE_Building_SwitchOn, 0
+	return
+
+VermilionCityGym_EventScript_ToggleOffFirstSwitch23::
+	clearflag FLAG_SURGE_PUZZLE_23
+	setmetatile 5, 42, METATILE_Building_SwitchOff, 0
+	return
+
+VermilionCityGym_EventScript_ToggleFirstSwitch31::
+	goto_if_set FLAG_SURGE_PUZZLE_31, VermilionCityGym_EventScript_ToggleOffFirstSwitch31
+	setflag FLAG_SURGE_PUZZLE_31
+	setmetatile 7, 38, METATILE_Building_SwitchOn, 0
+	return
+
+VermilionCityGym_EventScript_ToggleOffFirstSwitch31::
+	clearflag FLAG_SURGE_PUZZLE_31
+	setmetatile 7, 38, METATILE_Building_SwitchOff, 0
+	return
+
+VermilionCityGym_EventScript_ToggleFirstSwitch32::
+	goto_if_set FLAG_SURGE_PUZZLE_32, VermilionCityGym_EventScript_ToggleOffFirstSwitch32
+	setflag FLAG_SURGE_PUZZLE_32
+	setmetatile 7, 40, METATILE_Building_SwitchOn, 0
+	return
+
+VermilionCityGym_EventScript_ToggleOffFirstSwitch32::
+	clearflag FLAG_SURGE_PUZZLE_32
+	setmetatile 7, 40, METATILE_Building_SwitchOff, 0
+	return
+
+VermilionCityGym_EventScript_ToggleFirstSwitch33::
+	goto_if_set FLAG_SURGE_PUZZLE_33, VermilionCityGym_EventScript_ToggleOffFirstSwitch33
+	setflag FLAG_SURGE_PUZZLE_33
+	setmetatile 7, 42, METATILE_Building_SwitchOn, 0
+	return
+
+VermilionCityGym_EventScript_ToggleOffFirstSwitch33::
+	clearflag FLAG_SURGE_PUZZLE_33
+	setmetatile 7, 42, METATILE_Building_SwitchOff, 0
+	return
+
+VermilionCityGym_EventScript_ToggleSecondSwitch11::
+	goto_if_set FLAG_SURGE_PUZZLE_11, VermilionCityGym_EventScript_ToggleOffSecondSwitch11
+	setflag FLAG_SURGE_PUZZLE_11
+	setmetatile 2, 25, METATILE_Building_SwitchOn, 0
+	return
+
+VermilionCityGym_EventScript_ToggleOffSecondSwitch11::
+	clearflag FLAG_SURGE_PUZZLE_11
+	setmetatile 2, 25, METATILE_Building_SwitchOff, 0
+	return
+
+VermilionCityGym_EventScript_ToggleSecondSwitch12::
+	goto_if_set FLAG_SURGE_PUZZLE_12, VermilionCityGym_EventScript_ToggleOffSecondSwitch12
+	setflag FLAG_SURGE_PUZZLE_12
+	setmetatile 2, 27, METATILE_Building_SwitchOn, 0
+	return
+
+VermilionCityGym_EventScript_ToggleOffSecondSwitch12::
+	clearflag FLAG_SURGE_PUZZLE_12
+	setmetatile 2, 27, METATILE_Building_SwitchOff, 0
+	return
+
+VermilionCityGym_EventScript_ToggleSecondSwitch13::
+	goto_if_set FLAG_SURGE_PUZZLE_13, VermilionCityGym_EventScript_ToggleOffSecondSwitch13
+	setflag FLAG_SURGE_PUZZLE_13
+	setmetatile 2, 29, METATILE_Building_SwitchOn, 0
+	return
+
+VermilionCityGym_EventScript_ToggleOffSecondSwitch13::
+	clearflag FLAG_SURGE_PUZZLE_13
+	setmetatile 2, 29, METATILE_Building_SwitchOff, 0
+	return
+
+VermilionCityGym_EventScript_ToggleSecondSwitch14::
+	goto_if_set FLAG_SURGE_PUZZLE_14, VermilionCityGym_EventScript_ToggleOffSecondSwitch14
+	setflag FLAG_SURGE_PUZZLE_14
+	setmetatile 2, 31, METATILE_Building_SwitchOn, 0
+	return
+
+VermilionCityGym_EventScript_ToggleOffSecondSwitch14::
+	clearflag FLAG_SURGE_PUZZLE_14
+	setmetatile 2, 31, METATILE_Building_SwitchOff, 0
+	return
+
+VermilionCityGym_EventScript_ToggleSecondSwitch21::
+	goto_if_set FLAG_SURGE_PUZZLE_21, VermilionCityGym_EventScript_ToggleOffSecondSwitch21
+	setflag FLAG_SURGE_PUZZLE_21
+	setmetatile 4, 25, METATILE_Building_SwitchOn, 0
+	return
+
+VermilionCityGym_EventScript_ToggleOffSecondSwitch21::
+	clearflag FLAG_SURGE_PUZZLE_21
+	setmetatile 4, 25, METATILE_Building_SwitchOff, 0
+	return
+
+VermilionCityGym_EventScript_ToggleSecondSwitch22::
+	goto_if_set FLAG_SURGE_PUZZLE_22, VermilionCityGym_EventScript_ToggleOffSecondSwitch22
+	setflag FLAG_SURGE_PUZZLE_22
+	setmetatile 4, 27, METATILE_Building_SwitchOn, 0
+	return
+
+VermilionCityGym_EventScript_ToggleOffSecondSwitch22::
+	clearflag FLAG_SURGE_PUZZLE_22
+	setmetatile 4, 27, METATILE_Building_SwitchOff, 0
+	return
+
+VermilionCityGym_EventScript_ToggleSecondSwitch23::
+	goto_if_set FLAG_SURGE_PUZZLE_23, VermilionCityGym_EventScript_ToggleOffSecondSwitch23
+	setflag FLAG_SURGE_PUZZLE_23
+	setmetatile 4, 29, METATILE_Building_SwitchOn, 0
+	return
+
+VermilionCityGym_EventScript_ToggleOffSecondSwitch23::
+	clearflag FLAG_SURGE_PUZZLE_23
+	setmetatile 4, 29, METATILE_Building_SwitchOff, 0
+	return
+
+VermilionCityGym_EventScript_ToggleSecondSwitch24::
+	goto_if_set FLAG_SURGE_PUZZLE_24, VermilionCityGym_EventScript_ToggleOffSecondSwitch24
+	setflag FLAG_SURGE_PUZZLE_24
+	setmetatile 4, 31, METATILE_Building_SwitchOn, 0
+	return
+
+VermilionCityGym_EventScript_ToggleOffSecondSwitch24::
+	clearflag FLAG_SURGE_PUZZLE_24
+	setmetatile 4, 31, METATILE_Building_SwitchOff, 0
+	return
+
+VermilionCityGym_EventScript_ToggleSecondSwitch31::
+	goto_if_set FLAG_SURGE_PUZZLE_31, VermilionCityGym_EventScript_ToggleOffSecondSwitch31
+	setflag FLAG_SURGE_PUZZLE_31
+	setmetatile 6, 25, METATILE_Building_SwitchOn, 0
+	return
+
+VermilionCityGym_EventScript_ToggleOffSecondSwitch31::
+	clearflag FLAG_SURGE_PUZZLE_31
+	setmetatile 6, 25, METATILE_Building_SwitchOff, 0
+	return
+
+VermilionCityGym_EventScript_ToggleSecondSwitch32::
+	goto_if_set FLAG_SURGE_PUZZLE_32, VermilionCityGym_EventScript_ToggleOffSecondSwitch32
+	setflag FLAG_SURGE_PUZZLE_32
+	setmetatile 6, 27, METATILE_Building_SwitchOn, 0
+	return
+
+VermilionCityGym_EventScript_ToggleOffSecondSwitch32::
+	clearflag FLAG_SURGE_PUZZLE_32
+	setmetatile 6, 27, METATILE_Building_SwitchOff, 0
+	return
+
+VermilionCityGym_EventScript_ToggleSecondSwitch33::
+	goto_if_set FLAG_SURGE_PUZZLE_33, VermilionCityGym_EventScript_ToggleOffSecondSwitch33
+	setflag FLAG_SURGE_PUZZLE_33
+	setmetatile 6, 29, METATILE_Building_SwitchOn, 0
+	return
+
+VermilionCityGym_EventScript_ToggleOffSecondSwitch33::
+	clearflag FLAG_SURGE_PUZZLE_33
+	setmetatile 6, 29, METATILE_Building_SwitchOff, 0
+	return
+
+VermilionCityGym_EventScript_ToggleSecondSwitch34::
+	goto_if_set FLAG_SURGE_PUZZLE_34, VermilionCityGym_EventScript_ToggleOffSecondSwitch34
+	setflag FLAG_SURGE_PUZZLE_34
+	setmetatile 6, 31, METATILE_Building_SwitchOn, 0
+	return
+
+VermilionCityGym_EventScript_ToggleOffSecondSwitch34::
+	clearflag FLAG_SURGE_PUZZLE_34
+	setmetatile 6, 31, METATILE_Building_SwitchOff, 0
+	return
+
+VermilionCityGym_EventScript_ToggleSecondSwitch41::
+	goto_if_set FLAG_SURGE_PUZZLE_41, VermilionCityGym_EventScript_ToggleOffSecondSwitch41
+	setflag FLAG_SURGE_PUZZLE_41
+	setmetatile 8, 25, METATILE_Building_SwitchOn, 0
+	return
+
+VermilionCityGym_EventScript_ToggleOffSecondSwitch41::
+	clearflag FLAG_SURGE_PUZZLE_41
+	setmetatile 8, 25, METATILE_Building_SwitchOff, 0
+	return
+
+VermilionCityGym_EventScript_ToggleSecondSwitch42::
+	goto_if_set FLAG_SURGE_PUZZLE_42, VermilionCityGym_EventScript_ToggleOffSecondSwitch42
+	setflag FLAG_SURGE_PUZZLE_42
+	setmetatile 8, 27, METATILE_Building_SwitchOnCovered, 1
+	return
+
+VermilionCityGym_EventScript_ToggleOffSecondSwitch42::
+	clearflag FLAG_SURGE_PUZZLE_42
+	setmetatile 8, 27, METATILE_Building_SwitchOffCovered, 1
+	return
+
+VermilionCityGym_EventScript_ToggleSecondSwitch43::
+	goto_if_set FLAG_SURGE_PUZZLE_43, VermilionCityGym_EventScript_ToggleOffSecondSwitch43
+	setflag FLAG_SURGE_PUZZLE_43
+	setmetatile 8, 29, METATILE_Building_SwitchOnCovered, 1
+	return
+
+VermilionCityGym_EventScript_ToggleOffSecondSwitch43::
+	clearflag FLAG_SURGE_PUZZLE_43
+	setmetatile 8, 29, METATILE_Building_SwitchOffCovered, 1
+	return
+
+VermilionCityGym_EventScript_ToggleSecondSwitch44::
+	goto_if_set FLAG_SURGE_PUZZLE_44, VermilionCityGym_EventScript_ToggleOffSecondSwitch44
+	setflag FLAG_SURGE_PUZZLE_44
+	setmetatile 8, 31, METATILE_Building_SwitchOn, 0
+	return
+
+VermilionCityGym_EventScript_ToggleOffSecondSwitch44::
+	clearflag FLAG_SURGE_PUZZLE_44
+	setmetatile 8, 31, METATILE_Building_SwitchOff, 0
+	return
+
+VermilionCityGym_EventScript_ToggleThirdSwitch11::
+	goto_if_set FLAG_SURGE_PUZZLE_11, VermilionCityGym_EventScript_ToggleOffThirdSwitch11
+	setflag FLAG_SURGE_PUZZLE_11
+	setmetatile 1, 10, METATILE_Building_SwitchOn, 0
+	return
+
+VermilionCityGym_EventScript_ToggleOffThirdSwitch11::
+	clearflag FLAG_SURGE_PUZZLE_11
+	setmetatile 1, 10, METATILE_Building_SwitchOff, 0
+	return
+
+VermilionCityGym_EventScript_ToggleThirdSwitch12::
+	goto_if_set FLAG_SURGE_PUZZLE_12, VermilionCityGym_EventScript_ToggleOffThirdSwitch12
+	setflag FLAG_SURGE_PUZZLE_12
+	setmetatile 1, 12, METATILE_Building_SwitchOn, 0
+	return
+
+VermilionCityGym_EventScript_ToggleOffThirdSwitch12::
+	clearflag FLAG_SURGE_PUZZLE_12
+	setmetatile 1, 12, METATILE_Building_SwitchOff, 0
+	return
+
+VermilionCityGym_EventScript_ToggleThirdSwitch13::
+	goto_if_set FLAG_SURGE_PUZZLE_13, VermilionCityGym_EventScript_ToggleOffThirdSwitch13
+	setflag FLAG_SURGE_PUZZLE_13
+	setmetatile 1, 14, METATILE_Building_SwitchOn, 0
+	return
+
+VermilionCityGym_EventScript_ToggleOffThirdSwitch13::
+	clearflag FLAG_SURGE_PUZZLE_13
+	setmetatile 1, 14, METATILE_Building_SwitchOff, 0
+	return
+
+VermilionCityGym_EventScript_ToggleThirdSwitch14::
+	goto_if_set FLAG_SURGE_PUZZLE_14, VermilionCityGym_EventScript_ToggleOffThirdSwitch14
+	setflag FLAG_SURGE_PUZZLE_14
+	setmetatile 1, 16, METATILE_Building_SwitchOn, 0
+	return
+
+VermilionCityGym_EventScript_ToggleOffThirdSwitch14::
+	clearflag FLAG_SURGE_PUZZLE_14
+	setmetatile 1, 16, METATILE_Building_SwitchOff, 0
+	return
+
+VermilionCityGym_EventScript_ToggleThirdSwitch15::
+	goto_if_set FLAG_SURGE_PUZZLE_15, VermilionCityGym_EventScript_ToggleOffThirdSwitch15
+	setflag FLAG_SURGE_PUZZLE_15
+	setmetatile 1, 18, METATILE_Building_SwitchOnCovered, 1
+	return
+
+VermilionCityGym_EventScript_ToggleOffThirdSwitch15::
+	clearflag FLAG_SURGE_PUZZLE_15
+	setmetatile 1, 18, METATILE_Building_SwitchOffCovered, 1
+	return
+
+VermilionCityGym_EventScript_ToggleThirdSwitch21::
+	goto_if_set FLAG_SURGE_PUZZLE_21, VermilionCityGym_EventScript_ToggleOffThirdSwitch21
+	setflag FLAG_SURGE_PUZZLE_21
+	setmetatile 3, 10, METATILE_Building_SwitchOn, 0
+	return
+
+VermilionCityGym_EventScript_ToggleOffThirdSwitch21::
+	clearflag FLAG_SURGE_PUZZLE_21
+	setmetatile 3, 10, METATILE_Building_SwitchOff, 0
+	return
+
+VermilionCityGym_EventScript_ToggleThirdSwitch22::
+	goto_if_set FLAG_SURGE_PUZZLE_22, VermilionCityGym_EventScript_ToggleOffThirdSwitch22
+	setflag FLAG_SURGE_PUZZLE_22
+	setmetatile 3, 12, METATILE_Building_SwitchOn, 0
+	return
+
+VermilionCityGym_EventScript_ToggleOffThirdSwitch22::
+	clearflag FLAG_SURGE_PUZZLE_22
+	setmetatile 3, 12, METATILE_Building_SwitchOff, 0
+	return
+
+VermilionCityGym_EventScript_ToggleThirdSwitch23::
+	goto_if_set FLAG_SURGE_PUZZLE_23, VermilionCityGym_EventScript_ToggleOffThirdSwitch23
+	setflag FLAG_SURGE_PUZZLE_23
+	setmetatile 3, 14, METATILE_Building_SwitchOn, 0
+	return
+
+VermilionCityGym_EventScript_ToggleOffThirdSwitch23::
+	clearflag FLAG_SURGE_PUZZLE_23
+	setmetatile 3, 14, METATILE_Building_SwitchOff, 0
+	return
+
+VermilionCityGym_EventScript_ToggleThirdSwitch24::
+	goto_if_set FLAG_SURGE_PUZZLE_24, VermilionCityGym_EventScript_ToggleOffThirdSwitch24
+	setflag FLAG_SURGE_PUZZLE_24
+	setmetatile 3, 16, METATILE_Building_SwitchOn, 0
+	return
+
+VermilionCityGym_EventScript_ToggleOffThirdSwitch24::
+	clearflag FLAG_SURGE_PUZZLE_24
+	setmetatile 3, 16, METATILE_Building_SwitchOff, 0
+	return
+
+VermilionCityGym_EventScript_ToggleThirdSwitch25::
+	goto_if_set FLAG_SURGE_PUZZLE_25, VermilionCityGym_EventScript_ToggleOffThirdSwitch25
+	setflag FLAG_SURGE_PUZZLE_25
+	setmetatile 3, 18, METATILE_Building_SwitchOnCovered, 1
+	return
+
+VermilionCityGym_EventScript_ToggleOffThirdSwitch25::
+	clearflag FLAG_SURGE_PUZZLE_25
+	setmetatile 3, 18, METATILE_Building_SwitchOffCovered, 1
+	return
+
+VermilionCityGym_EventScript_ToggleThirdSwitch31::
+	goto_if_set FLAG_SURGE_PUZZLE_31, VermilionCityGym_EventScript_ToggleOffThirdSwitch31
+	setflag FLAG_SURGE_PUZZLE_31
+	setmetatile 5, 10, METATILE_Building_SwitchOn, 0
+	return
+
+VermilionCityGym_EventScript_ToggleOffThirdSwitch31::
+	clearflag FLAG_SURGE_PUZZLE_31
+	setmetatile 5, 10, METATILE_Building_SwitchOff, 0
+	return
+
+VermilionCityGym_EventScript_ToggleThirdSwitch32::
+	goto_if_set FLAG_SURGE_PUZZLE_32, VermilionCityGym_EventScript_ToggleOffThirdSwitch32
+	setflag FLAG_SURGE_PUZZLE_32
+	setmetatile 5, 12, METATILE_Building_SwitchOn, 0
+	return
+
+VermilionCityGym_EventScript_ToggleOffThirdSwitch32::
+	clearflag FLAG_SURGE_PUZZLE_32
+	setmetatile 5, 12, METATILE_Building_SwitchOff, 0
+	return
+
+VermilionCityGym_EventScript_ToggleThirdSwitch33::
+	goto_if_set FLAG_SURGE_PUZZLE_33, VermilionCityGym_EventScript_ToggleOffThirdSwitch33
+	setflag FLAG_SURGE_PUZZLE_33
+	setmetatile 5, 14, METATILE_Building_SwitchOn, 0
+	return
+
+VermilionCityGym_EventScript_ToggleOffThirdSwitch33::
+	clearflag FLAG_SURGE_PUZZLE_33
+	setmetatile 5, 14, METATILE_Building_SwitchOff, 0
+	return
+
+VermilionCityGym_EventScript_ToggleThirdSwitch34::
+	goto_if_set FLAG_SURGE_PUZZLE_34, VermilionCityGym_EventScript_ToggleOffThirdSwitch34
+	setflag FLAG_SURGE_PUZZLE_34
+	setmetatile 5, 16, METATILE_Building_SwitchOnCovered, 1
+	return
+
+VermilionCityGym_EventScript_ToggleOffThirdSwitch34::
+	clearflag FLAG_SURGE_PUZZLE_34
+	setmetatile 5, 16, METATILE_Building_SwitchOffCovered, 1
+	return
+
+VermilionCityGym_EventScript_ToggleThirdSwitch35::
+	goto_if_set FLAG_SURGE_PUZZLE_35, VermilionCityGym_EventScript_ToggleOffThirdSwitch35
+	setflag FLAG_SURGE_PUZZLE_35
+	setmetatile 5, 18, METATILE_Building_SwitchOnCovered, 1
+	return
+
+VermilionCityGym_EventScript_ToggleOffThirdSwitch35::
+	clearflag FLAG_SURGE_PUZZLE_35
+	setmetatile 5, 18, METATILE_Building_SwitchOffCovered, 1
+	return
+
+VermilionCityGym_EventScript_ToggleThirdSwitch41::
+	goto_if_set FLAG_SURGE_PUZZLE_41, VermilionCityGym_EventScript_ToggleOffThirdSwitch41
+	setflag FLAG_SURGE_PUZZLE_41
+	setmetatile 7, 10, METATILE_Building_SwitchOn, 0
+	return
+
+VermilionCityGym_EventScript_ToggleOffThirdSwitch41::
+	clearflag FLAG_SURGE_PUZZLE_41
+	setmetatile 7, 10, METATILE_Building_SwitchOff, 0
+	return
+
+VermilionCityGym_EventScript_ToggleThirdSwitch42::
+	goto_if_set FLAG_SURGE_PUZZLE_42, VermilionCityGym_EventScript_ToggleOffThirdSwitch42
+	setflag FLAG_SURGE_PUZZLE_42
+	setmetatile 7, 12, METATILE_Building_SwitchOn, 0
+	return
+
+VermilionCityGym_EventScript_ToggleOffThirdSwitch42::
+	clearflag FLAG_SURGE_PUZZLE_42
+	setmetatile 7, 12, METATILE_Building_SwitchOff, 0
+	return
+
+VermilionCityGym_EventScript_ToggleThirdSwitch43::
+	goto_if_set FLAG_SURGE_PUZZLE_43, VermilionCityGym_EventScript_ToggleOffThirdSwitch43
+	setflag FLAG_SURGE_PUZZLE_43
+	setmetatile 7, 14, METATILE_Building_SwitchOnCovered, 1
+	return
+
+VermilionCityGym_EventScript_ToggleOffThirdSwitch43::
+	clearflag FLAG_SURGE_PUZZLE_43
+	setmetatile 7, 14, METATILE_Building_SwitchOffCovered, 1
+	return
+
+VermilionCityGym_EventScript_ToggleThirdSwitch44::
+	goto_if_set FLAG_SURGE_PUZZLE_44, VermilionCityGym_EventScript_ToggleOffThirdSwitch44
+	setflag FLAG_SURGE_PUZZLE_44
+	setmetatile 7, 16, METATILE_Building_SwitchOn, 0
+	return
+
+VermilionCityGym_EventScript_ToggleOffThirdSwitch44::
+	clearflag FLAG_SURGE_PUZZLE_44
+	setmetatile 7, 16, METATILE_Building_SwitchOff, 0
+	return
+
+VermilionCityGym_EventScript_ToggleThirdSwitch45::
+	goto_if_set FLAG_SURGE_PUZZLE_45, VermilionCityGym_EventScript_ToggleOffThirdSwitch45
+	setflag FLAG_SURGE_PUZZLE_45
+	setmetatile 7, 18, METATILE_Building_SwitchOn, 0
+	return
+
+VermilionCityGym_EventScript_ToggleOffThirdSwitch45::
+	clearflag FLAG_SURGE_PUZZLE_45
+	setmetatile 7, 18, METATILE_Building_SwitchOff, 0
+	return
+
+VermilionCityGym_EventScript_ToggleThirdSwitch51::
+	goto_if_set FLAG_SURGE_PUZZLE_51, VermilionCityGym_EventScript_ToggleOffThirdSwitch51
+	setflag FLAG_SURGE_PUZZLE_51
+	setmetatile 9, 10, METATILE_Building_SwitchOnCovered, 1
+	return
+
+VermilionCityGym_EventScript_ToggleOffThirdSwitch51::
+	clearflag FLAG_SURGE_PUZZLE_51
+	setmetatile 9, 10, METATILE_Building_SwitchOffCovered, 1
+	return
+
+VermilionCityGym_EventScript_ToggleThirdSwitch52::
+	goto_if_set FLAG_SURGE_PUZZLE_52, VermilionCityGym_EventScript_ToggleOffThirdSwitch52
+	setflag FLAG_SURGE_PUZZLE_52
+	setmetatile 9, 12, METATILE_Building_SwitchOnCovered, 1
+	return
+
+VermilionCityGym_EventScript_ToggleOffThirdSwitch52::
+	clearflag FLAG_SURGE_PUZZLE_52
+	setmetatile 9, 12, METATILE_Building_SwitchOffCovered, 1
+	return
+
+VermilionCityGym_EventScript_ToggleThirdSwitch53::
+	goto_if_set FLAG_SURGE_PUZZLE_53, VermilionCityGym_EventScript_ToggleOffThirdSwitch53
+	setflag FLAG_SURGE_PUZZLE_53
+	setmetatile 9, 14, METATILE_Building_SwitchOnCovered, 1
+	return
+
+VermilionCityGym_EventScript_ToggleOffThirdSwitch53::
+	clearflag FLAG_SURGE_PUZZLE_53
+	setmetatile 9, 14, METATILE_Building_SwitchOffCovered, 1
+	return
+
+VermilionCityGym_EventScript_ToggleThirdSwitch54::
+	goto_if_set FLAG_SURGE_PUZZLE_54, VermilionCityGym_EventScript_ToggleOffThirdSwitch54
+	setflag FLAG_SURGE_PUZZLE_54
+	setmetatile 9, 16, METATILE_Building_SwitchOn, 0
+	return
+
+VermilionCityGym_EventScript_ToggleOffThirdSwitch54::
+	clearflag FLAG_SURGE_PUZZLE_54
+	setmetatile 9, 16, METATILE_Building_SwitchOff, 0
+	return
+
+VermilionCityGym_EventScript_ToggleThirdSwitch55::
+	goto_if_set FLAG_SURGE_PUZZLE_55, VermilionCityGym_EventScript_ToggleOffThirdSwitch55
+	setflag FLAG_SURGE_PUZZLE_55
+	setmetatile 9, 18, METATILE_Building_SwitchOn, 0
+	return
+
+VermilionCityGym_EventScript_ToggleOffThirdSwitch55::
+	clearflag FLAG_SURGE_PUZZLE_55
+	setmetatile 9, 18, METATILE_Building_SwitchOff, 0
+	return
+
+VermilionCityGym_EventScript_FirstSwitch11::
+	compare VAR_VERMILION_GYM_PROGRESS, 0
+	goto_if_ne VermilionCityGym_EventScript_EndSwitch
+	call VermilionCityGym_EventScript_ToggleFirstSwitch21
+	call VermilionCityGym_EventScript_ToggleFirstSwitch12
+	call VermilionCityGym_EventScript_ToggleFirstSwitch11
+	playse SE_PIN
+	call VermilionCityGym_EventScript_CheckIfSolvedCurrent
+	special DrawWholeMapView
+	setvar VAR_VERMILION_GYM_MOVEMENT_STATE, 1
+	end
+
+VermilionCityGym_EventScript_FirstSwitch12::
+	compare VAR_VERMILION_GYM_PROGRESS, 0
+	goto_if_ne VermilionCityGym_EventScript_EndSwitch
+	call VermilionCityGym_EventScript_ToggleFirstSwitch22
+	call VermilionCityGym_EventScript_ToggleFirstSwitch11
+	call VermilionCityGym_EventScript_ToggleFirstSwitch13
+	call VermilionCityGym_EventScript_ToggleFirstSwitch12
+	playse SE_PIN
+	call VermilionCityGym_EventScript_CheckIfSolvedCurrent
+	special DrawWholeMapView
+	setvar VAR_VERMILION_GYM_MOVEMENT_STATE, 1
+	end
+
+VermilionCityGym_EventScript_FirstSwitch13::
+	compare VAR_VERMILION_GYM_PROGRESS, 0
+	goto_if_ne VermilionCityGym_EventScript_EndSwitch
+	call VermilionCityGym_EventScript_ToggleFirstSwitch23
+	call VermilionCityGym_EventScript_ToggleFirstSwitch12
+	call VermilionCityGym_EventScript_ToggleFirstSwitch13
+	playse SE_PIN
+	call VermilionCityGym_EventScript_CheckIfSolvedCurrent
+	special DrawWholeMapView
+	setvar VAR_VERMILION_GYM_MOVEMENT_STATE, 1
+	end
+
+VermilionCityGym_EventScript_FirstSwitch21::
+	compare VAR_VERMILION_GYM_PROGRESS, 0
+	goto_if_ne VermilionCityGym_EventScript_EndSwitch
+	call VermilionCityGym_EventScript_ToggleFirstSwitch11
+	call VermilionCityGym_EventScript_ToggleFirstSwitch31
+	call VermilionCityGym_EventScript_ToggleFirstSwitch22
+	call VermilionCityGym_EventScript_ToggleFirstSwitch21
+	playse SE_PIN
+	call VermilionCityGym_EventScript_CheckIfSolvedCurrent
+	special DrawWholeMapView
+	setvar VAR_VERMILION_GYM_MOVEMENT_STATE, 1
+	end
+
+VermilionCityGym_EventScript_FirstSwitch22::
+	compare VAR_VERMILION_GYM_PROGRESS, 0
+	goto_if_ne VermilionCityGym_EventScript_EndSwitch
+	call VermilionCityGym_EventScript_ToggleFirstSwitch12
+	call VermilionCityGym_EventScript_ToggleFirstSwitch32
+	call VermilionCityGym_EventScript_ToggleFirstSwitch21
+	call VermilionCityGym_EventScript_ToggleFirstSwitch23
+	call VermilionCityGym_EventScript_ToggleFirstSwitch22
+	playse SE_PIN
+	call VermilionCityGym_EventScript_CheckIfSolvedCurrent
+	special DrawWholeMapView
+	setvar VAR_VERMILION_GYM_MOVEMENT_STATE, 1
+	end
+
+VermilionCityGym_EventScript_FirstSwitch23::
+	compare VAR_VERMILION_GYM_PROGRESS, 0
+	goto_if_ne VermilionCityGym_EventScript_EndSwitch
+	call VermilionCityGym_EventScript_ToggleFirstSwitch13
+	call VermilionCityGym_EventScript_ToggleFirstSwitch33
+	call VermilionCityGym_EventScript_ToggleFirstSwitch22
+	call VermilionCityGym_EventScript_ToggleFirstSwitch23
+	playse SE_PIN
+	call VermilionCityGym_EventScript_CheckIfSolvedCurrent
+	special DrawWholeMapView
+	setvar VAR_VERMILION_GYM_MOVEMENT_STATE, 1
+	end
+
+VermilionCityGym_EventScript_FirstSwitch31::
+	compare VAR_VERMILION_GYM_PROGRESS, 0
+	goto_if_ne VermilionCityGym_EventScript_EndSwitch
+	call VermilionCityGym_EventScript_ToggleFirstSwitch21
+	call VermilionCityGym_EventScript_ToggleFirstSwitch32
+	call VermilionCityGym_EventScript_ToggleFirstSwitch31
+	playse SE_PIN
+	call VermilionCityGym_EventScript_CheckIfSolvedCurrent
+	special DrawWholeMapView
+	setvar VAR_VERMILION_GYM_MOVEMENT_STATE, 1
+	end
+
+VermilionCityGym_EventScript_FirstSwitch32::
+	compare VAR_VERMILION_GYM_PROGRESS, 0
+	goto_if_ne VermilionCityGym_EventScript_EndSwitch
+	call VermilionCityGym_EventScript_ToggleFirstSwitch22
+	call VermilionCityGym_EventScript_ToggleFirstSwitch31
+	call VermilionCityGym_EventScript_ToggleFirstSwitch33
+	call VermilionCityGym_EventScript_ToggleFirstSwitch32
+	playse SE_PIN
+	call VermilionCityGym_EventScript_CheckIfSolvedCurrent
+	special DrawWholeMapView
+	setvar VAR_VERMILION_GYM_MOVEMENT_STATE, 1
+	end
+
+VermilionCityGym_EventScript_FirstSwitch33::
+	compare VAR_VERMILION_GYM_PROGRESS, 0
+	goto_if_ne VermilionCityGym_EventScript_EndSwitch
+	call VermilionCityGym_EventScript_ToggleFirstSwitch23
+	call VermilionCityGym_EventScript_ToggleFirstSwitch32
+	call VermilionCityGym_EventScript_ToggleFirstSwitch33
+	playse SE_PIN
+	call VermilionCityGym_EventScript_CheckIfSolvedCurrent
+	special DrawWholeMapView
+	setvar VAR_VERMILION_GYM_MOVEMENT_STATE, 1
+	end
+
+VermilionCityGym_EventScript_SecondSwitch11::
+	compare VAR_VERMILION_GYM_PROGRESS, 1
+	goto_if_ne VermilionCityGym_EventScript_EndSwitch
+	call VermilionCityGym_EventScript_ToggleSecondSwitch21
+	call VermilionCityGym_EventScript_ToggleSecondSwitch12
+	call VermilionCityGym_EventScript_ToggleSecondSwitch11
+	playse SE_PIN
+	call VermilionCityGym_EventScript_CheckIfSolvedCurrent
+	special DrawWholeMapView
+	setvar VAR_VERMILION_GYM_MOVEMENT_STATE, 1
+	end
+
+VermilionCityGym_EventScript_SecondSwitch12::
+	compare VAR_VERMILION_GYM_PROGRESS, 1
+	goto_if_ne VermilionCityGym_EventScript_EndSwitch
+	call VermilionCityGym_EventScript_ToggleSecondSwitch22
+	call VermilionCityGym_EventScript_ToggleSecondSwitch11
+	call VermilionCityGym_EventScript_ToggleSecondSwitch13
+	call VermilionCityGym_EventScript_ToggleSecondSwitch12
+	playse SE_PIN
+	call VermilionCityGym_EventScript_CheckIfSolvedCurrent
+	special DrawWholeMapView
+	setvar VAR_VERMILION_GYM_MOVEMENT_STATE, 1
+	end
+
+VermilionCityGym_EventScript_SecondSwitch13::
+	compare VAR_VERMILION_GYM_PROGRESS, 1
+	goto_if_ne VermilionCityGym_EventScript_EndSwitch
+	call VermilionCityGym_EventScript_ToggleSecondSwitch23
+	call VermilionCityGym_EventScript_ToggleSecondSwitch12
+	call VermilionCityGym_EventScript_ToggleSecondSwitch14
+	call VermilionCityGym_EventScript_ToggleSecondSwitch13
+	playse SE_PIN
+	call VermilionCityGym_EventScript_CheckIfSolvedCurrent
+	special DrawWholeMapView
+	setvar VAR_VERMILION_GYM_MOVEMENT_STATE, 1
+	end
+
+VermilionCityGym_EventScript_SecondSwitch14::
+	compare VAR_VERMILION_GYM_PROGRESS, 1
+	goto_if_ne VermilionCityGym_EventScript_EndSwitch
+	call VermilionCityGym_EventScript_ToggleSecondSwitch24
+	call VermilionCityGym_EventScript_ToggleSecondSwitch13
+	call VermilionCityGym_EventScript_ToggleSecondSwitch14
+	playse SE_PIN
+	call VermilionCityGym_EventScript_CheckIfSolvedCurrent
+	special DrawWholeMapView
+	setvar VAR_VERMILION_GYM_MOVEMENT_STATE, 1
+	end
+
+VermilionCityGym_EventScript_SecondSwitch21::
+	compare VAR_VERMILION_GYM_PROGRESS, 1
+	goto_if_ne VermilionCityGym_EventScript_EndSwitch
+	call VermilionCityGym_EventScript_ToggleSecondSwitch11
+	call VermilionCityGym_EventScript_ToggleSecondSwitch31
+	call VermilionCityGym_EventScript_ToggleSecondSwitch22
+	call VermilionCityGym_EventScript_ToggleSecondSwitch21
+	playse SE_PIN
+	call VermilionCityGym_EventScript_CheckIfSolvedCurrent
+	special DrawWholeMapView
+	setvar VAR_VERMILION_GYM_MOVEMENT_STATE, 1
+	end
+
+VermilionCityGym_EventScript_SecondSwitch22::
+	compare VAR_VERMILION_GYM_PROGRESS, 1
+	goto_if_ne VermilionCityGym_EventScript_EndSwitch
+	call VermilionCityGym_EventScript_ToggleSecondSwitch12
+	call VermilionCityGym_EventScript_ToggleSecondSwitch32
+	call VermilionCityGym_EventScript_ToggleSecondSwitch21
+	call VermilionCityGym_EventScript_ToggleSecondSwitch23
+	call VermilionCityGym_EventScript_ToggleSecondSwitch22
+	playse SE_PIN
+	call VermilionCityGym_EventScript_CheckIfSolvedCurrent
+	special DrawWholeMapView
+	setvar VAR_VERMILION_GYM_MOVEMENT_STATE, 1
+	end
+
+VermilionCityGym_EventScript_SecondSwitch23::
+	compare VAR_VERMILION_GYM_PROGRESS, 1
+	goto_if_ne VermilionCityGym_EventScript_EndSwitch
+	call VermilionCityGym_EventScript_ToggleSecondSwitch13
+	call VermilionCityGym_EventScript_ToggleSecondSwitch33
+	call VermilionCityGym_EventScript_ToggleSecondSwitch22
+	call VermilionCityGym_EventScript_ToggleSecondSwitch24
+	call VermilionCityGym_EventScript_ToggleSecondSwitch23
+	playse SE_PIN
+	call VermilionCityGym_EventScript_CheckIfSolvedCurrent
+	special DrawWholeMapView
+	setvar VAR_VERMILION_GYM_MOVEMENT_STATE, 1
+	end
+
+VermilionCityGym_EventScript_SecondSwitch24::
+	compare VAR_VERMILION_GYM_PROGRESS, 1
+	goto_if_ne VermilionCityGym_EventScript_EndSwitch
+	call VermilionCityGym_EventScript_ToggleSecondSwitch14
+	call VermilionCityGym_EventScript_ToggleSecondSwitch34
+	call VermilionCityGym_EventScript_ToggleSecondSwitch23
+	call VermilionCityGym_EventScript_ToggleSecondSwitch24
+	playse SE_PIN
+	call VermilionCityGym_EventScript_CheckIfSolvedCurrent
+	special DrawWholeMapView
+	setvar VAR_VERMILION_GYM_MOVEMENT_STATE, 1
+	end
+
+VermilionCityGym_EventScript_SecondSwitch31::
+	compare VAR_VERMILION_GYM_PROGRESS, 1
+	goto_if_ne VermilionCityGym_EventScript_EndSwitch
+	call VermilionCityGym_EventScript_ToggleSecondSwitch21
+	call VermilionCityGym_EventScript_ToggleSecondSwitch41
+	call VermilionCityGym_EventScript_ToggleSecondSwitch32
+	call VermilionCityGym_EventScript_ToggleSecondSwitch31
+	playse SE_PIN
+	call VermilionCityGym_EventScript_CheckIfSolvedCurrent
+	special DrawWholeMapView
+	setvar VAR_VERMILION_GYM_MOVEMENT_STATE, 1
+	end
+
+VermilionCityGym_EventScript_SecondSwitch32::
+	compare VAR_VERMILION_GYM_PROGRESS, 1
+	goto_if_ne VermilionCityGym_EventScript_EndSwitch
+	call VermilionCityGym_EventScript_ToggleSecondSwitch22
+	call VermilionCityGym_EventScript_ToggleSecondSwitch42
+	call VermilionCityGym_EventScript_ToggleSecondSwitch31
+	call VermilionCityGym_EventScript_ToggleSecondSwitch33
+	call VermilionCityGym_EventScript_ToggleSecondSwitch32
+	playse SE_PIN
+	call VermilionCityGym_EventScript_CheckIfSolvedCurrent
+	special DrawWholeMapView
+	setvar VAR_VERMILION_GYM_MOVEMENT_STATE, 1
+	end
+
+VermilionCityGym_EventScript_SecondSwitch33::
+	compare VAR_VERMILION_GYM_PROGRESS, 1
+	goto_if_ne VermilionCityGym_EventScript_EndSwitch
+	call VermilionCityGym_EventScript_ToggleSecondSwitch23
+	call VermilionCityGym_EventScript_ToggleSecondSwitch43
+	call VermilionCityGym_EventScript_ToggleSecondSwitch32
+	call VermilionCityGym_EventScript_ToggleSecondSwitch34
+	call VermilionCityGym_EventScript_ToggleSecondSwitch33
+	playse SE_PIN
+	call VermilionCityGym_EventScript_CheckIfSolvedCurrent
+	special DrawWholeMapView
+	setvar VAR_VERMILION_GYM_MOVEMENT_STATE, 1
+	end
+
+VermilionCityGym_EventScript_SecondSwitch34::
+	compare VAR_VERMILION_GYM_PROGRESS, 1
+	goto_if_ne VermilionCityGym_EventScript_EndSwitch
+	call VermilionCityGym_EventScript_ToggleSecondSwitch24
+	call VermilionCityGym_EventScript_ToggleSecondSwitch44
+	call VermilionCityGym_EventScript_ToggleSecondSwitch33
+	call VermilionCityGym_EventScript_ToggleSecondSwitch34
+	playse SE_PIN
+	call VermilionCityGym_EventScript_CheckIfSolvedCurrent
+	special DrawWholeMapView
+	setvar VAR_VERMILION_GYM_MOVEMENT_STATE, 1
+	end
+
+VermilionCityGym_EventScript_SecondSwitch41::
+	compare VAR_VERMILION_GYM_PROGRESS, 1
+	goto_if_ne VermilionCityGym_EventScript_EndSwitch
+	call VermilionCityGym_EventScript_ToggleSecondSwitch31
+	call VermilionCityGym_EventScript_ToggleSecondSwitch42
+	call VermilionCityGym_EventScript_ToggleSecondSwitch41
+	playse SE_PIN
+	call VermilionCityGym_EventScript_CheckIfSolvedCurrent
+	special DrawWholeMapView
+	setvar VAR_VERMILION_GYM_MOVEMENT_STATE, 1
+	end
+
+VermilionCityGym_EventScript_SecondSwitch42::
+	compare VAR_VERMILION_GYM_PROGRESS, 1
+	goto_if_ne VermilionCityGym_EventScript_EndSwitch
+	call VermilionCityGym_EventScript_ToggleSecondSwitch32
+	call VermilionCityGym_EventScript_ToggleSecondSwitch41
+	call VermilionCityGym_EventScript_ToggleSecondSwitch43
+	call VermilionCityGym_EventScript_ToggleSecondSwitch42
+	playse SE_PIN
+	call VermilionCityGym_EventScript_CheckIfSolvedCurrent
+	special DrawWholeMapView
+	setvar VAR_VERMILION_GYM_MOVEMENT_STATE, 1
+	end
+
+VermilionCityGym_EventScript_SecondSwitch43::
+	compare VAR_VERMILION_GYM_PROGRESS, 1
+	goto_if_ne VermilionCityGym_EventScript_EndSwitch
+	call VermilionCityGym_EventScript_ToggleSecondSwitch33
+	call VermilionCityGym_EventScript_ToggleSecondSwitch42
+	call VermilionCityGym_EventScript_ToggleSecondSwitch44
+	call VermilionCityGym_EventScript_ToggleSecondSwitch43
+	playse SE_PIN
+	call VermilionCityGym_EventScript_CheckIfSolvedCurrent
+	special DrawWholeMapView
+	setvar VAR_VERMILION_GYM_MOVEMENT_STATE, 1
+	end
+
+VermilionCityGym_EventScript_SecondSwitch44::
+	compare VAR_VERMILION_GYM_PROGRESS, 1
+	goto_if_ne VermilionCityGym_EventScript_EndSwitch
+	call VermilionCityGym_EventScript_ToggleSecondSwitch34
+	call VermilionCityGym_EventScript_ToggleSecondSwitch43
+	call VermilionCityGym_EventScript_ToggleSecondSwitch44
+	playse SE_PIN
+	call VermilionCityGym_EventScript_CheckIfSolvedCurrent
+	special DrawWholeMapView
+	setvar VAR_VERMILION_GYM_MOVEMENT_STATE, 1
+	end
+
+VermilionCityGym_EventScript_ThirdSwitch11::
+	compare VAR_VERMILION_GYM_PROGRESS, 2
+	goto_if_ne VermilionCityGym_EventScript_EndSwitch
+	call VermilionCityGym_EventScript_ToggleThirdSwitch21
+	call VermilionCityGym_EventScript_ToggleThirdSwitch12
+	call VermilionCityGym_EventScript_ToggleThirdSwitch11
+	playse SE_PIN
+	call VermilionCityGym_EventScript_CheckIfSolvedCurrent
+	special DrawWholeMapView
+	setvar VAR_VERMILION_GYM_MOVEMENT_STATE, 1
+	end
+
+VermilionCityGym_EventScript_ThirdSwitch12::
+	compare VAR_VERMILION_GYM_PROGRESS, 2
+	goto_if_ne VermilionCityGym_EventScript_EndSwitch
+	call VermilionCityGym_EventScript_ToggleThirdSwitch22
+	call VermilionCityGym_EventScript_ToggleThirdSwitch11
+	call VermilionCityGym_EventScript_ToggleThirdSwitch13
+	call VermilionCityGym_EventScript_ToggleThirdSwitch12
+	playse SE_PIN
+	call VermilionCityGym_EventScript_CheckIfSolvedCurrent
+	special DrawWholeMapView
+	setvar VAR_VERMILION_GYM_MOVEMENT_STATE, 1
+	end
+
+VermilionCityGym_EventScript_ThirdSwitch13::
+	compare VAR_VERMILION_GYM_PROGRESS, 2
+	goto_if_ne VermilionCityGym_EventScript_EndSwitch
+	call VermilionCityGym_EventScript_ToggleThirdSwitch23
+	call VermilionCityGym_EventScript_ToggleThirdSwitch12
+	call VermilionCityGym_EventScript_ToggleThirdSwitch14
+	call VermilionCityGym_EventScript_ToggleThirdSwitch13
+	playse SE_PIN
+	call VermilionCityGym_EventScript_CheckIfSolvedCurrent
+	special DrawWholeMapView
+	setvar VAR_VERMILION_GYM_MOVEMENT_STATE, 1
+	end
+
+VermilionCityGym_EventScript_ThirdSwitch14::
+	compare VAR_VERMILION_GYM_PROGRESS, 2
+	goto_if_ne VermilionCityGym_EventScript_EndSwitch
+	call VermilionCityGym_EventScript_ToggleThirdSwitch24
+	call VermilionCityGym_EventScript_ToggleThirdSwitch13
+	call VermilionCityGym_EventScript_ToggleThirdSwitch15
+	call VermilionCityGym_EventScript_ToggleThirdSwitch14
+	playse SE_PIN
+	call VermilionCityGym_EventScript_CheckIfSolvedCurrent
+	special DrawWholeMapView
+	setvar VAR_VERMILION_GYM_MOVEMENT_STATE, 1
+	end
+
+VermilionCityGym_EventScript_ThirdSwitch15::
+	compare VAR_VERMILION_GYM_PROGRESS, 2
+	goto_if_ne VermilionCityGym_EventScript_EndSwitch
+	call VermilionCityGym_EventScript_ToggleThirdSwitch25
+	call VermilionCityGym_EventScript_ToggleThirdSwitch14
+	call VermilionCityGym_EventScript_ToggleThirdSwitch15
+	playse SE_PIN
+	call VermilionCityGym_EventScript_CheckIfSolvedCurrent
+	special DrawWholeMapView
+	setvar VAR_VERMILION_GYM_MOVEMENT_STATE, 1
+	end
+
+VermilionCityGym_EventScript_ThirdSwitch21::
+	compare VAR_VERMILION_GYM_PROGRESS, 2
+	goto_if_ne VermilionCityGym_EventScript_EndSwitch
+	call VermilionCityGym_EventScript_ToggleThirdSwitch11
+	call VermilionCityGym_EventScript_ToggleThirdSwitch31
+	call VermilionCityGym_EventScript_ToggleThirdSwitch22
+	call VermilionCityGym_EventScript_ToggleThirdSwitch21
+	playse SE_PIN
+	call VermilionCityGym_EventScript_CheckIfSolvedCurrent
+	special DrawWholeMapView
+	setvar VAR_VERMILION_GYM_MOVEMENT_STATE, 1
+	end
+
+VermilionCityGym_EventScript_ThirdSwitch22::
+	compare VAR_VERMILION_GYM_PROGRESS, 2
+	goto_if_ne VermilionCityGym_EventScript_EndSwitch
+	call VermilionCityGym_EventScript_ToggleThirdSwitch12
+	call VermilionCityGym_EventScript_ToggleThirdSwitch32
+	call VermilionCityGym_EventScript_ToggleThirdSwitch21
+	call VermilionCityGym_EventScript_ToggleThirdSwitch23
+	call VermilionCityGym_EventScript_ToggleThirdSwitch22
+	playse SE_PIN
+	call VermilionCityGym_EventScript_CheckIfSolvedCurrent
+	special DrawWholeMapView
+	setvar VAR_VERMILION_GYM_MOVEMENT_STATE, 1
+	end
+
+VermilionCityGym_EventScript_ThirdSwitch23::
+	compare VAR_VERMILION_GYM_PROGRESS, 2
+	goto_if_ne VermilionCityGym_EventScript_EndSwitch
+	call VermilionCityGym_EventScript_ToggleThirdSwitch13
+	call VermilionCityGym_EventScript_ToggleThirdSwitch33
+	call VermilionCityGym_EventScript_ToggleThirdSwitch22
+	call VermilionCityGym_EventScript_ToggleThirdSwitch24
+	call VermilionCityGym_EventScript_ToggleThirdSwitch23
+	playse SE_PIN
+	call VermilionCityGym_EventScript_CheckIfSolvedCurrent
+	special DrawWholeMapView
+	setvar VAR_VERMILION_GYM_MOVEMENT_STATE, 1
+	end
+
+VermilionCityGym_EventScript_ThirdSwitch24::
+	compare VAR_VERMILION_GYM_PROGRESS, 2
+	goto_if_ne VermilionCityGym_EventScript_EndSwitch
+	call VermilionCityGym_EventScript_ToggleThirdSwitch14
+	call VermilionCityGym_EventScript_ToggleThirdSwitch34
+	call VermilionCityGym_EventScript_ToggleThirdSwitch23
+	call VermilionCityGym_EventScript_ToggleThirdSwitch25
+	call VermilionCityGym_EventScript_ToggleThirdSwitch24
+	playse SE_PIN
+	call VermilionCityGym_EventScript_CheckIfSolvedCurrent
+	special DrawWholeMapView
+	setvar VAR_VERMILION_GYM_MOVEMENT_STATE, 1
+	end
+
+VermilionCityGym_EventScript_ThirdSwitch25::
+	compare VAR_VERMILION_GYM_PROGRESS, 2
+	goto_if_ne VermilionCityGym_EventScript_EndSwitch
+	call VermilionCityGym_EventScript_ToggleThirdSwitch15
+	call VermilionCityGym_EventScript_ToggleThirdSwitch35
+	call VermilionCityGym_EventScript_ToggleThirdSwitch24
+	call VermilionCityGym_EventScript_ToggleThirdSwitch25
+	playse SE_PIN
+	call VermilionCityGym_EventScript_CheckIfSolvedCurrent
+	special DrawWholeMapView
+	setvar VAR_VERMILION_GYM_MOVEMENT_STATE, 1
+	end
+
+VermilionCityGym_EventScript_ThirdSwitch31::
+	compare VAR_VERMILION_GYM_PROGRESS, 2
+	goto_if_ne VermilionCityGym_EventScript_EndSwitch
+	call VermilionCityGym_EventScript_ToggleThirdSwitch21
+	call VermilionCityGym_EventScript_ToggleThirdSwitch41
+	call VermilionCityGym_EventScript_ToggleThirdSwitch32
+	call VermilionCityGym_EventScript_ToggleThirdSwitch31
+	playse SE_PIN
+	call VermilionCityGym_EventScript_CheckIfSolvedCurrent
+	special DrawWholeMapView
+	setvar VAR_VERMILION_GYM_MOVEMENT_STATE, 1
+	end
+
+VermilionCityGym_EventScript_ThirdSwitch32::
+	compare VAR_VERMILION_GYM_PROGRESS, 2
+	goto_if_ne VermilionCityGym_EventScript_EndSwitch
+	call VermilionCityGym_EventScript_ToggleThirdSwitch22
+	call VermilionCityGym_EventScript_ToggleThirdSwitch42
+	call VermilionCityGym_EventScript_ToggleThirdSwitch31
+	call VermilionCityGym_EventScript_ToggleThirdSwitch33
+	call VermilionCityGym_EventScript_ToggleThirdSwitch32
+	playse SE_PIN
+	call VermilionCityGym_EventScript_CheckIfSolvedCurrent
+	special DrawWholeMapView
+	setvar VAR_VERMILION_GYM_MOVEMENT_STATE, 1
+	end
+
+VermilionCityGym_EventScript_ThirdSwitch33::
+	compare VAR_VERMILION_GYM_PROGRESS, 2
+	goto_if_ne VermilionCityGym_EventScript_EndSwitch
+	call VermilionCityGym_EventScript_ToggleThirdSwitch23
+	call VermilionCityGym_EventScript_ToggleThirdSwitch43
+	call VermilionCityGym_EventScript_ToggleThirdSwitch32
+	call VermilionCityGym_EventScript_ToggleThirdSwitch34
+	call VermilionCityGym_EventScript_ToggleThirdSwitch33
+	playse SE_PIN
+	call VermilionCityGym_EventScript_CheckIfSolvedCurrent
+	special DrawWholeMapView
+	setvar VAR_VERMILION_GYM_MOVEMENT_STATE, 1
+	end
+
+VermilionCityGym_EventScript_ThirdSwitch34::
+	compare VAR_VERMILION_GYM_PROGRESS, 2
+	goto_if_ne VermilionCityGym_EventScript_EndSwitch
+	call VermilionCityGym_EventScript_ToggleThirdSwitch24
+	call VermilionCityGym_EventScript_ToggleThirdSwitch44
+	call VermilionCityGym_EventScript_ToggleThirdSwitch33
+	call VermilionCityGym_EventScript_ToggleThirdSwitch35
+	call VermilionCityGym_EventScript_ToggleThirdSwitch34
+	playse SE_PIN
+	call VermilionCityGym_EventScript_CheckIfSolvedCurrent
+	special DrawWholeMapView
+	setvar VAR_VERMILION_GYM_MOVEMENT_STATE, 1
+	end
+
+VermilionCityGym_EventScript_ThirdSwitch35::
+	compare VAR_VERMILION_GYM_PROGRESS, 2
+	goto_if_ne VermilionCityGym_EventScript_EndSwitch
+	call VermilionCityGym_EventScript_ToggleThirdSwitch25
+	call VermilionCityGym_EventScript_ToggleThirdSwitch45
+	call VermilionCityGym_EventScript_ToggleThirdSwitch34
+	call VermilionCityGym_EventScript_ToggleThirdSwitch35
+	playse SE_PIN
+	call VermilionCityGym_EventScript_CheckIfSolvedCurrent
+	special DrawWholeMapView
+	setvar VAR_VERMILION_GYM_MOVEMENT_STATE, 1
+	end
+
+VermilionCityGym_EventScript_ThirdSwitch41::
+	compare VAR_VERMILION_GYM_PROGRESS, 2
+	goto_if_ne VermilionCityGym_EventScript_EndSwitch
+	call VermilionCityGym_EventScript_ToggleThirdSwitch31
+	call VermilionCityGym_EventScript_ToggleThirdSwitch51
+	call VermilionCityGym_EventScript_ToggleThirdSwitch42
+	call VermilionCityGym_EventScript_ToggleThirdSwitch41
+	playse SE_PIN
+	call VermilionCityGym_EventScript_CheckIfSolvedCurrent
+	special DrawWholeMapView
+	setvar VAR_VERMILION_GYM_MOVEMENT_STATE, 1
+	end
+
+VermilionCityGym_EventScript_ThirdSwitch42::
+	compare VAR_VERMILION_GYM_PROGRESS, 2
+	goto_if_ne VermilionCityGym_EventScript_EndSwitch
+	call VermilionCityGym_EventScript_ToggleThirdSwitch32
+	call VermilionCityGym_EventScript_ToggleThirdSwitch52
+	call VermilionCityGym_EventScript_ToggleThirdSwitch41
+	call VermilionCityGym_EventScript_ToggleThirdSwitch43
+	call VermilionCityGym_EventScript_ToggleThirdSwitch42
+	playse SE_PIN
+	call VermilionCityGym_EventScript_CheckIfSolvedCurrent
+	special DrawWholeMapView
+	setvar VAR_VERMILION_GYM_MOVEMENT_STATE, 1
+	end
+
+VermilionCityGym_EventScript_ThirdSwitch43::
+	compare VAR_VERMILION_GYM_PROGRESS, 2
+	goto_if_ne VermilionCityGym_EventScript_EndSwitch
+	call VermilionCityGym_EventScript_ToggleThirdSwitch33
+	call VermilionCityGym_EventScript_ToggleThirdSwitch53
+	call VermilionCityGym_EventScript_ToggleThirdSwitch42
+	call VermilionCityGym_EventScript_ToggleThirdSwitch44
+	call VermilionCityGym_EventScript_ToggleThirdSwitch43
+	playse SE_PIN
+	call VermilionCityGym_EventScript_CheckIfSolvedCurrent
+	special DrawWholeMapView
+	setvar VAR_VERMILION_GYM_MOVEMENT_STATE, 1
+	end
+
+VermilionCityGym_EventScript_ThirdSwitch44::
+	compare VAR_VERMILION_GYM_PROGRESS, 2
+	goto_if_ne VermilionCityGym_EventScript_EndSwitch
+	call VermilionCityGym_EventScript_ToggleThirdSwitch34
+	call VermilionCityGym_EventScript_ToggleThirdSwitch54
+	call VermilionCityGym_EventScript_ToggleThirdSwitch43
+	call VermilionCityGym_EventScript_ToggleThirdSwitch45
+	call VermilionCityGym_EventScript_ToggleThirdSwitch44
+	playse SE_PIN
+	call VermilionCityGym_EventScript_CheckIfSolvedCurrent
+	special DrawWholeMapView
+	setvar VAR_VERMILION_GYM_MOVEMENT_STATE, 1
+	end
+
+VermilionCityGym_EventScript_ThirdSwitch45::
+	compare VAR_VERMILION_GYM_PROGRESS, 2
+	goto_if_ne VermilionCityGym_EventScript_EndSwitch
+	call VermilionCityGym_EventScript_ToggleThirdSwitch35
+	call VermilionCityGym_EventScript_ToggleThirdSwitch55
+	call VermilionCityGym_EventScript_ToggleThirdSwitch44
+	call VermilionCityGym_EventScript_ToggleThirdSwitch45
+	playse SE_PIN
+	call VermilionCityGym_EventScript_CheckIfSolvedCurrent
+	special DrawWholeMapView
+	setvar VAR_VERMILION_GYM_MOVEMENT_STATE, 1
+	end
+
+VermilionCityGym_EventScript_ThirdSwitch51::
+	compare VAR_VERMILION_GYM_PROGRESS, 2
+	goto_if_ne VermilionCityGym_EventScript_EndSwitch
+	call VermilionCityGym_EventScript_ToggleThirdSwitch41
+	call VermilionCityGym_EventScript_ToggleThirdSwitch52
+	call VermilionCityGym_EventScript_ToggleThirdSwitch51
+	playse SE_PIN
+	call VermilionCityGym_EventScript_CheckIfSolvedCurrent
+	special DrawWholeMapView
+	setvar VAR_VERMILION_GYM_MOVEMENT_STATE, 1
+	end
+
+VermilionCityGym_EventScript_ThirdSwitch52::
+	compare VAR_VERMILION_GYM_PROGRESS, 2
+	goto_if_ne VermilionCityGym_EventScript_EndSwitch
+	call VermilionCityGym_EventScript_ToggleThirdSwitch42
+	call VermilionCityGym_EventScript_ToggleThirdSwitch51
+	call VermilionCityGym_EventScript_ToggleThirdSwitch53
+	call VermilionCityGym_EventScript_ToggleThirdSwitch52
+	playse SE_PIN
+	call VermilionCityGym_EventScript_CheckIfSolvedCurrent
+	special DrawWholeMapView
+	setvar VAR_VERMILION_GYM_MOVEMENT_STATE, 1
+	end
+
+VermilionCityGym_EventScript_ThirdSwitch53::
+	compare VAR_VERMILION_GYM_PROGRESS, 2
+	goto_if_ne VermilionCityGym_EventScript_EndSwitch
+	call VermilionCityGym_EventScript_ToggleThirdSwitch43
+	call VermilionCityGym_EventScript_ToggleThirdSwitch52
+	call VermilionCityGym_EventScript_ToggleThirdSwitch54
+	call VermilionCityGym_EventScript_ToggleThirdSwitch53
+	playse SE_PIN
+	call VermilionCityGym_EventScript_CheckIfSolvedCurrent
+	special DrawWholeMapView
+	setvar VAR_VERMILION_GYM_MOVEMENT_STATE, 1
+	end
+
+VermilionCityGym_EventScript_ThirdSwitch54::
+	compare VAR_VERMILION_GYM_PROGRESS, 2
+	goto_if_ne VermilionCityGym_EventScript_EndSwitch
+	call VermilionCityGym_EventScript_ToggleThirdSwitch44
+	call VermilionCityGym_EventScript_ToggleThirdSwitch53
+	call VermilionCityGym_EventScript_ToggleThirdSwitch55
+	call VermilionCityGym_EventScript_ToggleThirdSwitch54
+	playse SE_PIN
+	call VermilionCityGym_EventScript_CheckIfSolvedCurrent
+	special DrawWholeMapView
+	setvar VAR_VERMILION_GYM_MOVEMENT_STATE, 1
+	end
+
+VermilionCityGym_EventScript_ThirdSwitch55::
+	compare VAR_VERMILION_GYM_PROGRESS, 2
+	goto_if_ne VermilionCityGym_EventScript_EndSwitch
+	call VermilionCityGym_EventScript_ToggleThirdSwitch45
+	call VermilionCityGym_EventScript_ToggleThirdSwitch54
+	call VermilionCityGym_EventScript_ToggleThirdSwitch55
+	playse SE_PIN
+	call VermilionCityGym_EventScript_CheckIfSolvedCurrent
+	special DrawWholeMapView
+	setvar VAR_VERMILION_GYM_MOVEMENT_STATE, 1
+	end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 VermilionCity_Gym_EventScript_LtSurge:: @ 816B94A
 	famechecker FAMECHECKER_LTSURGE, FCPICKSTATE_COLORED, UpdatePickStateFromSpecialVar8005
@@ -276,6 +1495,12 @@ VermilionCity_Gym_EventScript_GymGuy:: @ 816BA6C
 VermilionCity_Gym_EventScript_GymGuyPostVictory:: @ 816BA81
 	msgbox VermilionCity_Gym_Text_GymGuyPostVictory
 	release
+	end
+
+VermilionCity_Gym_EventScript_Garbage::
+	lockall
+	msgbox VermilionCity_Gym_Text_NoNeed
+	releaseall
 	end
 
 VermilionCity_Gym_EventScript_GymStatue:: @ 816BA8B

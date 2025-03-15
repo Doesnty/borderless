@@ -1,39 +1,40 @@
-# Pokémon FireRed and LeafGreen
+# Touhoumon Borderless
 
-[![Build Status][travis-badge]][travis]
-
-[travis]: https://travis-ci.org/pret/pokefirered
-[travis-badge]: https://travis-ci.org/pret/pokefirered.svg?branch=master
-
-This is a disassembly of Pokémon FireRed and LeafGreen.
-
-It builds the following ROMs:
-
-* [**pokefirered.gba**](https://datomatic.no-intro.org/?page=show_record&s=23&n=1616) `sha1: 41cb23d8dccc8ebd7c649cd8fbb58eeace6e2fdc`
-* [**pokeleafgreen.gba**](https://datomatic.no-intro.org/?page=show_record&s=23&n=1617) `sha1: 574fa542ffebb14be69902d1d36f1ec0a4afd71e`
-* [**pokefirered_rev1.gba**](https://datomatic.no-intro.org/?page=show_record&s=23&n=1672) `sha1: dd5945db9b930750cb39d00c84da8571feebf417`
-* [**pokeleafgreen_rev1.gba**](https://datomatic.no-intro.org/index.php?page=show_record&s=23&n=1668) `sha1: 7862c67bdecbe21d1d69ce082ce34327e1c6ed5e`
-
-To set up the repository, see [INSTALL.md](INSTALL.md).
+This is an adaptation + upgrade of Touhoumon 1.8.
 
 
-## See also
-
-Other disassembly and/or decompilation projects:
-* [**Pokémon Red and Blue**](https://github.com/pret/pokered)
-* [**Pokémon Gold and Silver (Space World '97 demo)**](https://github.com/pret/pokegold-spaceworld)
-* [**Pokémon Yellow**](https://github.com/pret/pokeyellow)
-* [**Pokémon Trading Card Game**](https://github.com/pret/poketcg)
-* [**Pokémon Pinball**](https://github.com/pret/pokepinball)
-* [**Pokémon Stadium**](https://github.com/pret/pokestadium)
-* [**Pokémon Gold and Silver**](https://github.com/pret/pokegold)
-* [**Pokémon Crystal**](https://github.com/pret/pokecrystal)
-* [**Pokémon Ruby and Sapphire**](https://github.com/pret/pokeruby)
-* [**Pokémon Pinball: Ruby & Sapphire**](https://github.com/pret/pokepinballrs)
-* [**Pokémon Emerald**](https://github.com/pret/pokeemerald)
-* [**Pokémon Mystery Dungeon: Red Rescue Team**](https://github.com/pret/pmd-red)
+![s1](screenshots.png)
 
 
-## Contacts
+## How to install
 
-You can find us on [Discord](https://discord.gg/d5dubZ3) and [IRC](https://web.libera.chat/?#pret).
+Download the most recent patch in Releases on Github.
+
+Apply the patch file to FR 1.0 using NUPS.
+
+There are many tutorials on patching online if you don't know how.
+
+To identify which version of FR you have: if the intro says just "GAME FREAK" then you have 1.0, if it says "GAME FREAK Presents" then you have 1.1.
+
+
+## About the game
+
+This game uses a type chart unique to it. It is not the 1.8 type chart, though it is rather close to it.
+
+Puppets have multiple styles they can evolve into, similar to 1.8. However, shards are no longer evolutionary stones. Instead, the Puppet must hold the shard when it reaches its usual evolution level. Only chibi puppets can evolve; once a Puppet evolves once, it's done.
+
+Useful information can be found in the notes directory.
+
+
+## Credits
+
+Original game: Game Freak
+
+Disassembly: pret
+
+Hacking, much of concept: Doesnt
+
+Sprites: HemoglobinA1C, Scrimmy, Barudo, Reimufate, Blue
+
+Special Thanks: Kalt, Barudo, RedAlice, Darkge, Lotus, TheEeveeMan, LittleBigTrouble, nook
+

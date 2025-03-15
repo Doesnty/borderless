@@ -28,6 +28,7 @@ EventScript_GlobalMoveTutorNothingToForget::
 
 EventScript_GlobalMoveTutorRelearner::
 	msgbox GlobalMoveTutor_Text_RelearnWhich
+	setvar VAR_0x8005, 0
 	special SelectMoveTutorMon
 	waitstate
 	compare VAR_0x8004, PARTY_SIZE
@@ -47,6 +48,7 @@ EventScript_GlobalMoveTutorRelearner::
 
 EventScript_GlobalMoveTutorInheritor::
 	msgbox GlobalMoveTutor_Text_TutorWhich
+	setvar VAR_0x8005, 1
 	special SelectMoveTutorMon
 	waitstate
 	compare VAR_0x8004, PARTY_SIZE

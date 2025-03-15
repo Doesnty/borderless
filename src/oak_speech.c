@@ -925,7 +925,7 @@ static void Task_OakSpeech13(u8 taskId)
         if (gTasks[taskId].data[3] == 32)
         {
             OaksSpeechPrintMessage(gOakText_WorldInhabited2, sOakSpeechResources->textSpeed);
-            PlayCry1(SPECIES_NIDORAN_F, 0);
+            PlayCry1(SPECIES_CKOAKUMA, 0);
         }
     }
 }
@@ -1580,9 +1580,9 @@ static void CreateNidoranFSprite(u8 taskId)
 {
     u8 spriteId;
 
-    DecompressPicFromTable(&gMonFrontPicTable[SPECIES_NIDORAN_F], OakSpeechNidoranFGetBuffer(0), SPECIES_NIDORAN_F);
-    LoadCompressedSpritePaletteUsingHeap(&gMonPaletteTable[SPECIES_NIDORAN_F]);
-    SetMultiuseSpriteTemplateToPokemon(SPECIES_NIDORAN_F, 0);
+    DecompressPicFromTable(&gMonFrontPicTable[SPECIES_CKOAKUMA], OakSpeechNidoranFGetBuffer(0), SPECIES_CKOAKUMA);
+    LoadCompressedSpritePaletteUsingHeap(&gMonPaletteTable[SPECIES_CKOAKUMA]);
+    SetMultiuseSpriteTemplateToPokemon(SPECIES_CKOAKUMA, 0);
     spriteId = CreateSprite(&gMultiuseSpriteTemplate, 0x60, 0x60, 1);
     gSprites[spriteId].callback = SpriteCallbackDummy;
     gSprites[spriteId].oam.priority = 1;
@@ -1667,7 +1667,7 @@ static void LoadOaksSpeechTrainerPic(u16 whichPic, u16 tileOffset)
     switch (whichPic)
     {
     case MALE_PLAYER_PIC:
-        LoadPalette(sOakSpeechGfx_RedPal, 0x40, 0x40);
+        LoadPalette(sOakSpeechGfx_RedPal, 0x40, 0x20);
         LZ77UnCompVram(sOakSpeechGfx_RedPic, (void *)0x06000600 + tileOffset);
         break;
     case FEMALE_PLAYER_PIC:

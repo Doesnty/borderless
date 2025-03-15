@@ -5,7 +5,7 @@ DayCare_Text_ImDaycareManSpeakToMyWife:: @ 81BF555
 	.string "I help take care of the precious\n"
 	.string "Puppets of Trainers.\p"
 	.string "If you'd like me to raise your\n"
-	.string "POKéMON, have a word with my wife.$"
+	.string "Puppets, have a word with my wife.$"
 
 DayCare_Text_DoYouWantEgg:: @ 81BF5E3
 	.string "Ah, it's you!\p"

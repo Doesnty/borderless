@@ -808,7 +808,7 @@ gStdScriptsEnd::
 @ Unused
 Text_WouldYouLikeToMixRecords:: @ 81A5028
 	.string "Would you like to mix records with\n"
-	.string "other TRAINERS?$"
+	.string "other Trainers?$"
 
 @ Unused
 Text_WeHopeToSeeYouAgain2:: @ 81A505B
@@ -818,13 +818,13 @@ Text_WeHopeToSeeYouAgain2:: @ 81A505B
 
 @ Unused
 Text_WelcomeTradeCenter:: @ 81A5103
-	.string "Welcome to the POKéMON CABLE CLUB\n"
-	.string "TRADE CENTER.$"
+	.string "Welcome to the Puppet Cable Club\n"
+	.string "Trade Center.$"
 
 @ Unused
 Text_WelcomeColosseum:: @ 81A5133
-	.string "Welcome to the POKéMON CABLE CLUB\n"
-	.string "COLOSSEUM.$"
+	.string "Welcome to the Puppet Cable Club\n"
+	.string "Colosseum.$"
 
 @ Unused
 Text_WelcomeTimeCapsule:: @ 81A5160
@@ -853,8 +853,8 @@ Text_WantWhichFloor:: @ 81A535C
 	.string "Which floor do you want?$"
 
 Text_BagItemCanBeRegistered:: @ 81A5375
-	.string "An item in the BAG can be\n"
-	.string "registered to SELECT for easy use.$"
+	.string "An item in the Bag can be\n"
+	.string "registered to Select for easy use.$"
 
 @ Unused (email from R/S Rivals computer)
 Text_TrainerSchoolEmail:: @ 81A53B2
@@ -884,12 +884,12 @@ gText_PkmnFainted3:: @ 81A5476
 	.string "$"
 
 Text_WelcomeWantToHealPkmn:: @ 81A5483
-	.string "Welcome to our POKéMON CENTER!\p"
+	.string "Welcome to our Puppet Center!\p"
 	.string "Would you like me to heal your\n"
-	.string "POKéMON back to perfect health?$"
+	.string "Puppets back to perfect health?$"
 
 Text_TakeYourPkmnForFewSeconds:: @ 81A54E1
-	.string "Okay, I'll take your POKéMON for a\n"
+	.string "Okay, I'll take your Puppets for a\n"
 	.string "few seconds.$"
 
 Text_WeHopeToSeeYouAgain:: @ 81A5511
@@ -897,7 +897,7 @@ Text_WeHopeToSeeYouAgain:: @ 81A5511
 
 Text_RestoredPkmnToFullHealth:: @ 81A552B
 	.string "Thank you for waiting.\n"
-	.string "We've restored your POKéMON to\l"
+	.string "We've restored your Puppets to\l"
 	.string "full health.$"
 
 	.include "data/text/surf.inc"
@@ -914,7 +914,7 @@ Text_BigHoleInTheWall:: @ 81A5606
 
 Text_WirelessClubUndergoingAdjustments:: @ 81A561A
 	.string "I'm terribly sorry.\n"
-	.string "The POKéMON WIRELESS CLUB is\l"
+	.string "The Puppet Wireless Club is\l"
 	.string "undergoing adjustments now.$"
 
 Text_AppearsToBeUndergoingAdjustments:: @ 81A5667
@@ -936,23 +936,23 @@ Text_GiveNicknameToThisMon:: @ 81A56A7
 
 Text_CardKeyOpenedDoor:: @ 81A5B88
 	.string "Bingo!\n"
-	.string "The CARD KEY opened the door!$"
+	.string "The Card Key opened the door!$"
 
 Text_ItNeedsCardKey:: @ 81A5BAD
 	.string "No!\n"
-	.string "It needs a CARD KEY!$"
+	.string "It needs a Card Key!$"
 
 Text_AccessedProfOaksPC:: @ 81A5BC6
-	.string "Accessed PROF. OAK's PC…\p"
-	.string "Accessed the POKéDEX Rating\n"
+	.string "Accessed Prof. Oak's PC…\p"
+	.string "Accessed the Tohodex Rating\n"
 	.string "System…$"
 
 Text_HavePokedexRated:: @ 81A5C03
 	.string "Would you like to have your\n"
-	.string "POKéDEX rated?$"
+	.string "Tohodex rated?$"
 
 Text_ClosedLinkToProfOaksPC:: @ 81A5C2E
-	.string "Closed link to PROF. OAK's PC.$"
+	.string "Closed link to Prof. Oak's PC.$"
 
 Text_VoiceRangOutDontRunAway:: @ 81A5C4D
 	.string "Someone's voice rang out,\n"
@@ -988,7 +988,7 @@ Text_TheDoorIsOpen:: @ 81A5CDF
 	.include "data/text/poke_mart.inc"
 
 Text_MonFlewAway:: @ 81A63C4
-	.string "The {STR_VAR_1} flew away!$"
+	.string "{STR_VAR_1} disappeared!$"
 
 Text_TheresBedLetsRest:: @ 81A63D6
 	.string "ベッドが　ある‥‥\n"
@@ -1058,6 +1058,7 @@ EventScript_ResetAllMapFlags:: @ 81A6481
 	setflag FLAG_HIDE_FAME_CHECKER_KOGA_JOURNAL
 	setflag FLAG_HIDE_FAME_CHECKER_LT_SURGE_JOURNAL
 	setflag FLAG_HIDE_SAFFRON_CITY_POKECENTER_SABRINA_JOURNALS
+	setflag FLAG_HIDE_SELPHY_LUCKY_EGG
 	setvar VAR_MASSAGE_COOLDOWN_STEP_COUNTER, 500
 	end
 
@@ -1371,3 +1372,9 @@ Text_TestMsg:: @ 81ACD45
 
 	.include "data/maps/DiglettsCave_B2F/scripts.inc"
 	.include "data/maps/DiglettsCave_B2F/text.inc"
+
+	.include "data/maps/CeruleanCave_B2F/scripts.inc"
+	.include "data/maps/CeruleanCave_B2F/text.inc"
+
+	.include "data/maps/CeruleanCave_B2FReal/scripts.inc"
+	.include "data/maps/CeruleanCave_B2FReal/text.inc"

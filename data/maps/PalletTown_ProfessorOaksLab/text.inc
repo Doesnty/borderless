@@ -255,11 +255,11 @@ PalletTown_ProfessorOaksLab_Text_EmailMessage:: @ 818EAF4
     .string "…\p"
     .string "Finally!\n"
     .string "The ultimate Trainers of the\l"
-    .string "Puppet League are ready to\l"
+    .string "Puppetry League are ready to\l"
     .string "take on all comers!\p"
     .string "Bring your best Puppets and see\n"
     .string "how you rate as a Trainer!\p"
-    .string "PUPPET LEAGUE HQ\n"
+    .string "PUPPETRY LEAGUE HQ\n"
     .string "INDIGO PLATEAU\p"
     .string "Prof. Oak, please visit us!\n"
     .string "…$"
@@ -300,9 +300,11 @@ PalletTown_ProfessorOaksLab_Text_OakFavorToAskYouPlayer:: @ 818EDF5
 
 PalletTown_ProfessorOaksLab_Text_OakSightingsOfRareMons:: @ 818EE60
     .string "Recently, there have been sightings\n"
-    .string "of many rare POKéMON species.\p"
-    .string "I'm talking about POKéMON that\n"
-    .string "have never been seen in KANTO.\p"
+    .string "of many rare Puppet species.\p"
+    .string "I'm talking about Puppets that\n"
+    .string "have never been seen in Kanto.\p"
+	.string "Rumor is, you get them by using\n"
+	.string "shards on your Chibi Puppets.\p"
     .string "I would love to go see things for\n"
     .string "myself, but I'm much too old.\p"
     .string "Since I can't do it, {PLAYER}, I'd\n"
@@ -312,46 +314,51 @@ PalletTown_ProfessorOaksLab_Text_RivalJustLetMeHandleEverything:: @ 818EF59
     .string "{RIVAL}: Hey, I heard that!\p"
     .string "Gramps, what's with favoring\n"
     .string "{PLAYER} over me all the time?\p"
-    .string "I went and collected more POKéMON,\n"
+    .string "I went and collected more Puppets,\n"
     .string "and faster, too.\p"
-    .string "You should just let me handle\n"
-    .string "everything.$"
+	.string "Also, everyone knows about these\n"
+	.string "Shard-evolved Puppets already.\p"
+	.string "I've even gotten a bunch already\n"
+	.string "in my Tohodex, if you'd look at it,\l"
+	.string "and I'm sure {PLAYER} does too!$"
 
 PalletTown_ProfessorOaksLab_Text_OakNeedYourHelpTooNeedToSeePokedexes:: @ 818F004
     .string "OAK: I know, I know.\n"
     .string "Of course I need your help, too.\p"
     .string "Now, I need to see both your\n"
-    .string "POKéDEXES.$"
+    .string "Tohodexes.$"
 
 PalletTown_ProfessorOaksLab_Text_OakTookBothPokedexUnits:: @ 818F062
-    .string "PROF. OAK took both POKéDEX\n"
+    .string "Prof. Oak took both Tohodex\n"
     .string "units.$"
 
 PalletTown_ProfessorOaksLab_Text_OakNowTheseUnitsCanRecordMoreData:: @ 818F085
     .string "… … …  … … …\p"
     .string "… … …  … … …\p"
-    .string "…And that's done!\p"
-    .string "Now these units can record data on\n"
-    .string "a lot more POKéMON.$"
+    .string "…Huh!\p"
+	.string "Weird, it looks like didn't add\n"
+	.string "any new space to them.\p"
+	.string "But, the Tohodexes are now much\n"
+	.string "better than they were before!$"
 
 PalletTown_ProfessorOaksLab_Text_PlayersPokedexWasUpgraded:: @ 818F0E8
-    .string "{PLAYER}'s POKéDEX was upgraded!$"
+    .string "{PLAYER}'s Tohodex was upgraded?$"
 
 PalletTown_ProfessorOaksLab_Text_OakMustReallyWorkToFillPokedex:: @ 818F103
     .string "Now, {PLAYER} and {RIVAL}!\p"
     .string "This time, you really must work\n"
-    .string "towards filling your POKéDEXES.\p"
+    .string "towards filling your Tohodexes.\p"
     .string "I urge you to make them the best\n"
     .string "and the most complete of all time!\p"
     .string "Truly, this is a monumentally great\n"
-    .string "undertaking in POKéMON history!$"
+    .string "undertaking in Puppetry history!$"
 
 PalletTown_ProfessorOaksLab_Text_RivalIllCompleteThePokedex:: @ 818F1DB
     .string "{RIVAL}: Gramps, calm down.\n"
     .string "Don't get so excited.\p"
-    .string "I'll get the POKéDEX completed,\n"
+    .string "I'll get the Tohodex completed,\n"
     .string "don't you worry about a thing.\p"
     .string "I think I'll try looking around\n"
-    .string "ONE ISLAND first…\p"
+    .string "One Island first…\p"
     .string "Anyways, I'm outta here!$"
 

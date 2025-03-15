@@ -188,10 +188,9 @@
 #define VAR_MAP_SCENE_CINNABAR_ISLAND_2                                        0x408A
 #define VAR_MAP_SCENE_MT_MOON_B2F                                              0x408B
 #define VAR_ROCK_TUNNEL_IMAKUNI_STATE                                          0x408C
+#define VAR_VERMILION_GYM_PROGRESS                                             0x408D
+#define VAR_VERMILION_GYM_MOVEMENT_STATE                                       0x408E
 
-
-#define VAR_0x408D                 0x408D
-#define VAR_0x408E                 0x408E
 #define VAR_0x408F                 0x408F
 #define VAR_0x4090                 0x4090
 #define VAR_0x4091                 0x4091

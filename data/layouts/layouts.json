@@ -269,7 +269,7 @@
       "id": "LAYOUT_VERMILION_CITY_GYM",
       "name": "VermilionCity_Gym_Layout",
       "width": 11,
-      "height": 21,
+      "height": 49,
       "border_width": 2,
       "border_height": 2,
       "primary_tileset": "gTileset_Building",
@@ -4428,6 +4428,30 @@
       "secondary_tileset": "gTileset_DiglettsCave",
       "border_filepath": "data/layouts/DiglettsCave_B2F/border.bin",
       "blockdata_filepath": "data/layouts/DiglettsCave_B2F/map.bin"
+    },
+    {
+      "id": "LAYOUT_CERULEAN_CAVE_B2F",
+      "name": "CeruleanCave_B2F_Layout",
+      "width": 20,
+      "height": 20,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_CeruleanCave",
+      "border_filepath": "data/layouts/CeruleanCave_B2F/border.bin",
+      "blockdata_filepath": "data/layouts/CeruleanCave_B2F/map.bin"
+    },
+    {
+      "id": "LAYOUT_CERULEAN_CAVE_B2FREAL",
+      "name": "CeruleanCave_B2FReal_Layout",
+      "width": 20,
+      "height": 20,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_CeruleanCave",
+      "border_filepath": "data/layouts/CeruleanCave_B2FReal/border.bin",
+      "blockdata_filepath": "data/layouts/CeruleanCave_B2FReal/map.bin"
     }
   ]
 }

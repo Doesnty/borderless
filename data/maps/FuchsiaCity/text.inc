@@ -41,7 +41,7 @@ FuchsiaCity_Text_SafariZoneOfficeSign:: @ 8180727
     .string "SAFARI ZONE OFFICE$"
 
 FuchsiaCity_Text_GymSign:: @ 8180768
-    .string "FUCHSIA CITY POKéMON GYM\n"
+    .string "FUCHSIA CITY PUPPETRY GYM\n"
     .string "LEADER: KOGA\l"
     .string "The Poisonous Ninja Master$"
 

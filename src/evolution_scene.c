@@ -563,6 +563,13 @@ static void CreateShedinja(u16 preEvoSpecies, struct Pokemon* mon)
         SetMonData(&gPlayerParty[gPlayerPartyCount], MON_DATA_STATUS, (&data));
         data = 0xFF;
         SetMonData(&gPlayerParty[gPlayerPartyCount], MON_DATA_MAIL, (&data));
+		
+		data = 0;
+        SetMonData(&gPlayerParty[gPlayerPartyCount], MON_DATA_MOVE1, (&data));
+        SetMonData(&gPlayerParty[gPlayerPartyCount], MON_DATA_MOVE2, (&data));
+        SetMonData(&gPlayerParty[gPlayerPartyCount], MON_DATA_MOVE3, (&data));
+        SetMonData(&gPlayerParty[gPlayerPartyCount], MON_DATA_MOVE4, (&data));
+		GiveMonInitialMoveset(shedinja);
 
         CalculateMonStats(&gPlayerParty[gPlayerPartyCount]);
         CalculatePlayerPartyCount();

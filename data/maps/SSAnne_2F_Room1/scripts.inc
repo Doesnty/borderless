@@ -6,9 +6,9 @@ SSAnne_2F_Room1_EventScript_Gentleman:: @ 8160C97
 	faceplayer
 	message SSAnne_2F_Room1_Text_SleepingMonLookedLikeThis
 	waitmessage
-	setvar VAR_0x8004, SPECIES_SNORLAX
+	setvar VAR_0x8004, SPECIES_CDOREMY
 	special SetSeenMon
-	drawmonpic SPECIES_SNORLAX, 10, 3
+	drawmonpic SPECIES_CDOREMY, 10, 3
 	waitbuttonpress
 	erasemonpic
 	release

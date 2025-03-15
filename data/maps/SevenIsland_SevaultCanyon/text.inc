@@ -7,11 +7,11 @@ SevenIsland_SevaultCanyon_Text_CyndyDefeat:: @ 818C8A6
 
 SevenIsland_SevaultCanyon_Text_CyndyPostBattle:: @ 818C8C2
     .string "The way I am now, I may have to\n"
-    .string "hold off on TRAINER TOWER…$"
+    .string "hold off on Trainer Tower…$"
 
 SevenIsland_SevaultCanyon_Text_EvanIntro:: @ 818C8FD
     .string "It doesn't matter if you happen to\n"
-    .string "have the strongest POKéMON…\p"
+    .string "have the strongest Puppets…\p"
     .string "It doesn't mean a thing if you don't\n"
     .string "know how to use them properly!$"
 
@@ -20,9 +20,9 @@ SevenIsland_SevaultCanyon_Text_EvanDefeat:: @ 818C980
 
 SevenIsland_SevaultCanyon_Text_EvanPostBattle:: @ 818C999
     .string "You see them every so often,\n"
-    .string "TRAINERS with awesome POKéMON\l"
+    .string "Puppeteers with awesome Puppets\l"
     .string "who have no idea what to do.\p"
-    .string "Before training POKéMON, TRAINERS\n"
+    .string "Before training Puppets, Puppeteers\n"
     .string "themselves need to grow up.$"
 
 SevenIsland_SevaultCanyon_Text_JacksonIntro:: @ 818CA2F
@@ -49,7 +49,7 @@ SevenIsland_SevaultCanyon_Text_KatelynDefeat:: @ 818CB3E
 
 SevenIsland_SevaultCanyon_Text_KatelynPostBattle:: @ 818CB6C
     .string "Your mom bought those snazzy\n"
-    .string "RUNNING SHOES for you?\p"
+    .string "Running Shoes for you?\p"
     .string "She must adore you.$"
 
 SevenIsland_SevaultCanyon_Text_LeroyIntro:: @ 818CBB4
@@ -125,6 +125,6 @@ SevenIsland_SevaultCanyon_Text_BrunoTrainedWithBrawly:: @ 818CF4D
     .string "not a bad thing.\p"
     .string "But it's also not bad to aim for\n"
     .string "the top with a partner.\p"
-    .string "Even BRUNO…\n"
+    .string "Even Bruno…\n"
     .string "He trained with a fellow by the\l"
-    .string "name of BRAWLY before.$"
+    .string "name of Brawly before.$"

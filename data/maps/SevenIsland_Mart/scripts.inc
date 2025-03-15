@@ -5,27 +5,7 @@ SevenIsland_Mart_EventScript_Clerk:: @ 8170B31
 	goto_if_questlog EventScript_ReleaseEnd
 	lock
 	faceplayer
-	message Text_MayIHelpYou
-	waitmessage
-	pokemart SevenIsland_Mart_Items
-	msgbox Text_PleaseComeAgain
-	release
-	end
-
-	.align 2
-SevenIsland_Mart_Items:: @ 8170B58
-	.2byte ITEM_ULTRA_BALL
-	.2byte ITEM_GREAT_BALL
-	.2byte ITEM_FULL_RESTORE
-	.2byte ITEM_MAX_POTION
-	.2byte ITEM_HYPER_POTION
-	.2byte ITEM_REVIVE
-	.2byte ITEM_FULL_HEAL
-	.2byte ITEM_ESCAPE_ROPE
-	.2byte ITEM_MAX_REPEL
-	.2byte ITEM_NONE
-	release
-	end
+	goto EventScript_ScaledShop
 
 SevenIsland_Mart_EventScript_Lass:: @ 8170B6E
 	msgbox SevenIsland_Mart_Text_MonHavePersonalitiesOfTheirOwn, MSGBOX_NPC

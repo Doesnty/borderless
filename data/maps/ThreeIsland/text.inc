@@ -80,7 +80,7 @@ ThreeIsland_Text_Biker1PostBattle:: @ 81824CF
     .string "Don't you dare laugh!$"
 
 ThreeIsland_Text_Biker2Intro:: @ 81824EF
-    .string "Aren't you from KANTO?\n"
+    .string "Aren't you from Kanto?\n"
     .string "You should be on our side!$"
 
 ThreeIsland_Text_Biker2Defeat:: @ 8182521

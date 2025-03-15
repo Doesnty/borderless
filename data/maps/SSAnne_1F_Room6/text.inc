@@ -8,7 +8,7 @@ SSAnne_1F_Room6_Text_GladEveryoneIsRefreshed:: @ 8174490
 
 SSAnne_1F_Room6_Text_SorryYouLookLikeMyBrother:: @ 81744D0
     .string "Oh, I'm sorry for fussing over you.\n"
-    .string "You look like my little brother…$"
+    .string "You look like my little sister…$"
 
 SSAnne_1F_Room6_Text_SorryYouLookLikeMySister:: @ 8174515
     .string "Oh, I'm sorry for fussing over you.\n"

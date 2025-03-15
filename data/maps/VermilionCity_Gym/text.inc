@@ -89,33 +89,33 @@ VermilionCity_Gym_Text_GymGuyAdvice:: @ 81950B4
     .string "People refer to him as the\n"
     .string "Lightning American!\p"
     .string "He's an expert on electric\n"
-    .string "P.\p"
-    .string "BIRD/WATER-type POKéMON match\n"
-    .string "poorly against the ELECTRIC type.\p"
+    .string "Puppets.\p"
+    .string "Wind and Water Puppets match\n"
+    .string "poorly against the Electric type.\p"
     .string "Beware of paralysis, too.\p"
-    .string "LT. SURGE is very cautious.\p"
-    .string "He's locked himself in, so it won't\n"
-    .string "be easy getting to him.$"
+    .string "Lt. Surge is very cautious.\p"
+    .string "He's locked himself in deep, so it\n"
+    .string "won't be easy getting to him.$"
 
 VermilionCity_Gym_Text_GymGuyPostVictory:: @ 81951EC
     .string "Whew!\n"
     .string "That match was electric!$"
 
 VermilionCity_Gym_Text_GymStatue:: @ 819520B
-    .string "VERMILION POKéMON GYM\n"
+    .string "VERMILION PUPPETRY GYM\n"
     .string "LEADER: LT. SURGE\p"
     .string "WINNING TRAINERS:\n"
-    .string "{RIVAL}$"
+    .string "{OTHER_PC}, {RIVAL}$"
 
 VermilionCity_Gym_Text_GymStatuePlayerWon:: @ 8195248
-    .string "VERMILION POKéMON GYM\n"
+    .string "VERMILION PUPPETRY GYM\n"
     .string "LEADER: LT. SURGE\p"
     .string "WINNING TRAINERS:\n"
-    .string "{RIVAL}, {PLAYER}$"
+    .string "{OTHER_PC}, {RIVAL}, {PLAYER}$"
 
-VermilionCity_Gym_Text_NopeOnlyTrashHere:: @ 8195289
-    .string "Nope!\n"
-    .string "There's only trash here.$"
+VermilionCity_Gym_Text_NoNeed::
+    .string "There's no need to dig through\n"
+	.string "the garbage.$"
 
 VermilionCity_Gym_Text_SwitchUnderTrashFirstLockOpened:: @ 81952A8
     .string "Hey! There's a switch under the\n"

@@ -161,13 +161,13 @@ CeladonCity_GameCorner_EventScript_FisherAlreadyGotCoins:: @ 816C849
 CeladonCity_GameCorner_EventScript_GymGuy:: @ 816C857
 	lock
 	faceplayer
-	goto_if_set FLAG_DEFEATED_ERIKA, CeladonCity_GameCorner_EventScript_GymGuyPostVictory
-	msgbox CeladonCity_GameCorner_Text_GymGuyAdvice
+	goto_if_set FLAG_HIDE_HIDEOUT_GIOVANNI, CeladonCity_GameCorner_EventScript_GymGuyPostVictory
+	msgbox CeladonCity_GameCorner_Text_Mamizou
 	goto CeladonCity_GameCorner_EventScript_FaceSlotMachine
 	end
 
 CeladonCity_GameCorner_EventScript_GymGuyPostVictory:: @ 816C870
-	msgbox CeladonCity_GameCorner_Text_RareMonsForCoins
+	msgbox CeladonCity_GameCorner_Text_MamizouPostGiovanni
 	goto CeladonCity_GameCorner_EventScript_FaceSlotMachine
 	end
 

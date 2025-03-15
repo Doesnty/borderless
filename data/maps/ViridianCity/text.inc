@@ -120,7 +120,7 @@ ViridianCity_Text_MovesLimitedByPP:: @ 817E24D
     .string "Puppets at a Puppet Center.$"
 
 ViridianCity_Text_GymSign:: @ 817E2DB
-    .string "VIRIDIAN CITY PUPPET GYM$"
+    .string "VIRIDIAN CITY PUPPETRY GYM$"
 
 ViridianCity_Text_GymDoorsAreLocked:: @ 817E2F5
     .string "Viridian Gym's doors are locked…$"
