@@ -134,7 +134,7 @@ PalletTown_ProfessorOaksLab_Text_OakCanReachNextTownWithMon:: @ 818E330
 
 PalletTown_ProfessorOaksLab_Text_OakBattleMonForItToGrow:: @ 818E3AD
     .string "OAK: {PLAYER}, raise your young\n"
-    .string "POKéMON by making it battle.\p"
+    .string "Puppet by making it battle.\p"
     .string "It has to battle for it to grow.$"
 
 PalletTown_ProfessorOaksLab_Text_OakHaveSomethingForMe:: @ 818E405
