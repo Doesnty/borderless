@@ -13,7 +13,7 @@ CeladonCity_DepartmentStore_3F_Text_HaunterEvolvedOnTrade:: @ 81957B0
     .string "Come on, Kagerou!\p"
     .string "I love Kagerou!\n"
     .string "I collect them!\p"
-    .string "Huh?\p$"
+    .string "Huh?$"
 
 CeladonCity_DepartmentStore_3F_Text_CanIdentifyTradeMonsByID:: @ 8195823
     .string "You can identify Puppets you get\n"
