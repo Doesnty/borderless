@@ -143,7 +143,7 @@ PokemonLeague_LancesRoom_EventScript_PostBattle:: @ 8162AA1
 	compare VAR_RESULT, 0
 	goto_if_eq PokemonLeague_LancesRoom_EventScript_MaribelIsChampion
 	compare VAR_RESULT, 1
-	goto_if_eq PokemonLeague_ChampionsRoom_EventScript_CheckStopTriggerBulbasaur
+	goto_if_eq PokemonLeague_LancesRoom_EventScript_RenkoIsChampion
 	closemessage
 	release
 	end
