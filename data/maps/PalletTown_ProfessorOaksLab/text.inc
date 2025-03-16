@@ -1,33 +1,33 @@
 PalletTown_ProfessorOaksLab_Text_RivalGrampsIsntAround:: @ 818DC67
-    .string "{RIVAL}: What, it's only {PLAYER}?\n"
+    .string "{RIVAL_CAP}: What, it's only {PLAYER}?\n"
     .string "Gramps isn't around.$"
 
 PalletTown_ProfessorOaksLab_Text_RivalFedUpWithWaiting:: @ 818DC94
-    .string "{RIVAL}: Gramps!\n"
+    .string "{RIVAL_CAP}: Gramps!\n"
     .string "I'm fed up with waiting!$"
 
 PalletTown_ProfessorOaksLab_Text_RivalNoFairWhatAboutMe:: @ 818DCB9
-    .string "{RIVAL}: Hey! Gramps! No fair!\n"
+    .string "{RIVAL_CAP}: Hey! Gramps! No fair!\n"
     .string "What about me?$"
 
 PalletTown_ProfessorOaksLab_Text_RivalGoChoosePlayer:: @ 818DCE2
-    .string "{RIVAL}: Heh, I don't need to be\n"
+    .string "{RIVAL_CAP}: Heh, I don't need to be\n"
     .string "greedy like you. I'm mature!\p"
     .string "Go ahead and choose, {PLAYER}!$"
 
 PalletTown_ProfessorOaksLab_Text_RivalIllTakeThisOneThen:: @ 818DD34
-    .string "{RIVAL}: I'll take this one, then!$"
+    .string "{RIVAL_CAP}: I'll take this one, then!$"
 
 PalletTown_ProfessorOaksLab_Text_RivalReceivedMonFromOak:: @ 818DD52
-    .string "{RIVAL} received the {STR_VAR_1}\n"
+    .string "{RIVAL_CAP} received the {STR_VAR_1}\n"
     .string "from Prof. Oak!$"
 
 PalletTown_ProfessorOaksLab_Text_RivalMyMonLooksTougher:: @ 818DD75
-    .string "{RIVAL}: My Puppet looks a lot\n"
+    .string "{RIVAL_CAP}: My Puppet looks a lot\n"
     .string "tougher than yours.$"
 
 PalletTown_ProfessorOaksLab_Text_RivalLetsCheckOutMons:: @ 818DDA4
-    .string "{RIVAL}: Wait, {PLAYER}!\n"
+    .string "{RIVAL_CAP}: Wait, {PLAYER}!\n"
     .string "Let's check out our Puppets!\p"
     .string "Come on, I'll take you on!$"
 
@@ -38,24 +38,24 @@ PalletTown_ProfessorOaksLab_Text_RivalDefeat:: @ 818DDEA
 
 @ Also used for early Route 22 battle
 Text_RivalVictory:: @ 818DE1A
-    .string "{RIVAL}: Yeah!\n"
+    .string "{RIVAL_CAP}: Yeah!\n"
     .string "Am I great or what?$"
 
 PalletTown_ProfessorOaksLab_Text_RivalGoToughenMyMon:: @ 818DE38
-    .string "{RIVAL}: Okay! I'll make my\n"
+    .string "{RIVAL_CAP}: Okay! I'll make my\n"
     .string "Puppet battle to toughen it up!\p"
     .string "{PLAYER}! Gramps!\n"
     .string "Smell you later!$"
 
 PalletTown_ProfessorOaksLab_Text_RivalGramps:: @ 818DE8D
-    .string "{RIVAL}: Gramps!$"
+    .string "{RIVAL_CAP}: Gramps!$"
 
 PalletTown_ProfessorOaksLab_Text_RivalWhatDidYouCallMeFor:: @ 818DE99
-    .string "{RIVAL}: I almost forgot!\n"
+    .string "{RIVAL_CAP}: I almost forgot!\n"
     .string "What did you call me for?$"
 
 PalletTown_ProfessorOaksLab_Text_RivalLeaveItToMeGramps:: @ 818DEC8
-    .string "{RIVAL}: All right, Gramps!\n"
+    .string "{RIVAL_CAP}: All right, Gramps!\n"
     .string "Leave it all to me!$"
 
 PalletTown_ProfessorOaksLab_Text_RivalTellSisNotToGiveYouMap:: @ 818DEF3
@@ -311,7 +311,7 @@ PalletTown_ProfessorOaksLab_Text_OakSightingsOfRareMons:: @ 818EE60
     .string "like you to go in my place.$"
 
 PalletTown_ProfessorOaksLab_Text_RivalJustLetMeHandleEverything:: @ 818EF59
-    .string "{RIVAL}: Hey, I heard that!\p"
+    .string "{RIVAL_CAP}: Hey, I heard that!\p"
     .string "Gramps, what's with favoring\n"
     .string "{PLAYER} over me all the time?\p"
     .string "I went and collected more Puppets,\n"
@@ -354,7 +354,7 @@ PalletTown_ProfessorOaksLab_Text_OakMustReallyWorkToFillPokedex:: @ 818F103
     .string "undertaking in Puppetry history!$"
 
 PalletTown_ProfessorOaksLab_Text_RivalIllCompleteThePokedex:: @ 818F1DB
-    .string "{RIVAL}: Gramps, calm down.\n"
+    .string "{RIVAL_CAP}: Gramps, calm down.\n"
     .string "Don't get so excited.\p"
     .string "I'll get the Tohodex completed,\n"
     .string "don't you worry about a thing.\p"

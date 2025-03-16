@@ -42,7 +42,7 @@ IndigoPlateau_PokemonCenter_1F_Text_LancesCousinGymLeaderFarAway:: @ 819AB16
     .string "somewhere far away.$"
 
 IndigoPlateau_PokemonCenter_1F_Text_Blue::
-	.string "{RIVAL}: Hey, {PLAYER}!\p"
+	.string "{RIVAL_CAP}: Hey, {PLAYER}!\p"
 	.string "The Elite Four is crazy strong.\p"
 	.string "I just barely got through, but\n"
 	.string "the Champion was too much.\p"

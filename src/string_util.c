@@ -416,6 +416,29 @@ static u8 *ExpandPlaceholder_RivalName(void)
     }
 }
 
+static u8 *ExpandPlaceholder_RivalNameCaps(void)
+{
+    if (gSaveBlock1Ptr->rivalName[0] == EOS)
+    {
+        if (gSaveBlock2Ptr->playerGender == MALE)
+            return gExpandedPlaceholder_Green;
+        else
+            return gExpandedPlaceholder_Red;
+    }
+    else
+    {
+		u8 i;
+		for (i = 0; i < 8; i++)
+		{
+			if (gSaveBlock1Ptr->rivalName[i] > 0xD4 && gSaveBlock1Ptr->rivalName[i] < 0xEF)
+				gStringVar1[i] = gSaveBlock1Ptr->rivalName[i] - 26;
+			else
+				gStringVar1[i] = gSaveBlock1Ptr->rivalName[i];
+		}
+        return gStringVar1;
+    }
+}
+
 static u8 *ExpandPlaceholder_Version(void)
 {
 	if (gSaveBlock2Ptr->playerGender == MALE)
@@ -491,7 +514,7 @@ u8 *GetExpandedPlaceholder(u32 id)
         [PLACEHOLDER_ID_KUN]          = ExpandPlaceholder_KunChan,
         [PLACEHOLDER_ID_RIVAL]        = ExpandPlaceholder_RivalName,
         [PLACEHOLDER_ID_VERSION]      = ExpandPlaceholder_Version,
-        [PLACEHOLDER_ID_MAGMA]        = ExpandPlaceholder_Magma,
+        [PLACEHOLDER_ID_RIVAL_CAP]    = ExpandPlaceholder_RivalNameCaps,
         [PLACEHOLDER_ID_AQUA]         = ExpandPlaceholder_Aqua,
         [PLACEHOLDER_ID_MAXIE]        = ExpandPlaceholder_Maxie,
         [PLACEHOLDER_ID_ARCHIE]       = ExpandPlaceholder_Archie,

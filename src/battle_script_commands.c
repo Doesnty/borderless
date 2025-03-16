@@ -11129,6 +11129,7 @@ static void sp24_set_last_wish_attacker()
 	side = GetBattlerSide(gActiveBattler);
 	if (gBattleMons[gActiveBattler].ability == ABILITY_LAST_WISH)
 	{
+        gBattleScripting.battler = gActiveBattler;
 		gSideTimers[side].lastWish = 1;
 		gSideTimers[side].lastWishStrength = gBattleMons[gActiveBattler].maxHP / 2;
         BattleScriptPushCursor();
@@ -11165,6 +11166,7 @@ static void sp26_set_last_wish_target()
 	side = GetBattlerSide(gActiveBattler);
 	if (gBattleMons[gActiveBattler].ability == ABILITY_LAST_WISH)
 	{
+        gBattleScripting.battler = gActiveBattler;
 		gSideTimers[side].lastWish = 1;
 		gSideTimers[side].lastWishStrength = gBattleMons[gActiveBattler].maxHP / 2;
         BattleScriptPushCursor();

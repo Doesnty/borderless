@@ -1,5 +1,5 @@
 CeruleanCity_Text_RivalIntro:: @ 817EAD7
-    .string "{RIVAL}: Yo! {PLAYER}!\p"
+    .string "{RIVAL_CAP}: Yo! {PLAYER}!\p"
     .string "You're still struggling along back\n"
     .string "here?\p"
     .string "I'm doing great! I caught a bunch\n"
@@ -13,7 +13,7 @@ CeruleanCity_Text_RivalDefeat:: @ 817EB71
     .string "You won already!$"
 
 CeruleanCity_Text_RivalPostBattle:: @ 817EB95
-    .string "{RIVAL}: Hey, guess what?\p"
+    .string "{RIVAL_CAP}: Hey, guess what?\p"
     .string "I went to Bill's and got him to\n"
     .string "show me his rare Puppets.\p"
     .string "That added a lot of pages to my\n"

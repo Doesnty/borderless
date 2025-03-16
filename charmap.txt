@@ -340,8 +340,8 @@ STR_VAR_3      = FD 04
 KUN            = FD 05
 RIVAL          = FD 06
 OTHER_PC       = FD 07 @ "Maribel" / "Renko"
+RIVAL_CAP      = FD 08
 @ version-dependent strings
-EVIL_TEAM      = FD 08 @ "MAGMA"   / "AQUA"
 GOOD_TEAM      = FD 09 @ "AQUA"    / "MAGMA"
 EVIL_LEADER    = FD 0A @ "MAXIE"   / "ARCHIE"
 GOOD_LEADER    = FD 0B @ "ARCHIE"  / "MAXIE"

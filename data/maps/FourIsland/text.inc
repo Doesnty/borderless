@@ -17,7 +17,7 @@ FourIsland_Text_LoreleiMetLaprasAsChild:: @ 8182A75
     .string "her ever since.$"
 
 FourIsland_Text_RivalAlreadyGotEggBeSmellingYa:: @ 8182B37
-    .string "{RIVAL}: Hey!\n"
+    .string "{RIVAL_CAP}: Hey!\n"
     .string "{PLAYER}!\p"
     .string "What are you doing here in the\n"
     .string "Sevii Islands?\p"

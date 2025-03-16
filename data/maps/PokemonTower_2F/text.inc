@@ -1,5 +1,5 @@
 PokemonTower_2F_Text_RivalIntro:: @ 8179CFF
-    .string "{RIVAL}: Hey, {PLAYER}!\n"
+    .string "{RIVAL_CAP}: Hey, {PLAYER}!\n"
     .string "What brings you here?\l"
     .string "Is your Puppet dead?\p"
     .string "Hey! It's alive!\p"

@@ -14,7 +14,7 @@ SixIsland_PokemonCenter_1F_Text_SomeMonsEvolveByTradingWithHeldItem:: @ 81A3E87
     .string "trained while holding specific items.$"
 
 SixIsland_PokemonCenter_1F_Text_RivalImpossibleToGetAllMonsAroundHere:: @ 81A3F30
-    .string "{RIVAL}: Hey, {PLAYER}!\n"
+    .string "{RIVAL_CAP}: Hey, {PLAYER}!\n"
     .string "How's your Tohodex filling up?\p"
     .string "It looks like it's impossible to get\n"
     .string "all the Puppets by hanging around\l"

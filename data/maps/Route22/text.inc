@@ -1,5 +1,5 @@
 Route22_Text_EarlyRivalIntro:: @ 8188890
-	.string "{RIVAL}: Hey! {PLAYER}!\p"
+	.string "{RIVAL_CAP}: Hey! {PLAYER}!\p"
 	.string "You're off to the Puppetry League?\n"
 	.string "Forget about it!\p"
 	.string "You probably don't have any\n"
@@ -30,7 +30,7 @@ Route22_Text_RivalShouldCatchSomeMons:: @ 8188A07
 	.string "つかまえれば　いい　じゃん！$"
 
 Route22_Text_LateRivalIntro:: @ 8188A3C
-	.string "{RIVAL}: What? {PLAYER}!\n"
+	.string "{RIVAL_CAP}: What? {PLAYER}!\n"
 	.string "What a surprise to see you here!\p"
 	.string "So you're going to the Puppetry\n"
 	.string "League?\p"

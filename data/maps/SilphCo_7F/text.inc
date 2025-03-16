@@ -102,10 +102,10 @@ SilphCo_7F_Text_Grunt2PostBattle:: @ 81766E5
     .string "ticked off!$"
 
 SilphCo_7F_Text_RivalWhatKeptYou:: @ 8176710
-    .string "{RIVAL}: What kept you, {PLAYER}?$"
+    .string "{RIVAL_CAP}: What kept you, {PLAYER}?$"
 
 SilphCo_7F_Text_RivalIntro:: @ 8176727
-    .string "{RIVAL}: Hahaha! I thought you'd\n"
+    .string "{RIVAL_CAP}: Hahaha! I thought you'd\n"
     .string "turn up if I waited here!\p"
     .string "I guess Team Rocket slowed you\n"
     .string "down! Not that I care!\p"
