@@ -2495,6 +2495,26 @@ const struct MonCoords gMonBackPicCoords[] =
 		.size = 0x88,
 		.y_offset = 0,
 	},
+	[SPECIES_CMARIBEL] = 
+	{
+		.size = 0x88,
+		.y_offset = 8,
+	},
+	[SPECIES_TRMARIBEL] = 
+	{
+		.size = 0x88,
+		.y_offset = 8,
+	},
+	[SPECIES_CRENKO] = 
+	{
+		.size = 0x88,
+		.y_offset = 11,
+	},
+	[SPECIES_TRRENKO] = 
+	{
+		.size = 0x88,
+		.y_offset = 1,
+	},
     [SPECIES_EGG] =
     {
         .size = 0x36,
