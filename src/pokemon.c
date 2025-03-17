@@ -62,7 +62,6 @@ static EWRAM_DATA struct OakSpeechNidoranFStruct *sOakSpeechNidoranResources = N
 
 static union PokemonSubstruct *GetSubstruct(struct BoxPokemon *boxMon, u32 personality, u8 substructType);
 static bool8 IsShinyOtIdPersonality(u32 otId, u32 personality);
-static u8 GetNatureFromPersonality(u32 personality);
 static bool8 PartyMonHasStatus(struct Pokemon *mon, u32 unused, u32 healMask, u8 battleId);
 static bool8 HealStatusConditions(struct Pokemon *mon, u32 unused, u32 healMask, u8 battleId);
 static bool8 IsPokemonStorageFull(void);
@@ -4542,7 +4541,7 @@ u8 GetUnderlyingNature(struct Pokemon *mon)
     return GetMonData(mon, MON_DATA_PERSONALITY, NULL) % 25;
 }
 
-static u8 GetNatureFromPersonality(u32 personality)
+u8 GetNatureFromPersonality(u32 personality)
 {
     return personality % 25;
 }

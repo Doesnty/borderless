@@ -674,76 +674,59 @@ static u16 GetEggSpecies(u16 species)
 
     return species;
 }
-//
-//static s32 GetSlotToInheritNature(struct DayCare *daycare)
-//{
-//    u32 species[DAYCARE_MON_COUNT];
-//    s32 i;
-//    s32 dittoCount;
-//    s32 slot = -1;
-//
-//    // search for female gender
-//    for (i = 0; i < DAYCARE_MON_COUNT; i++)
-//    {
-//        if (GetBoxMonGender(&daycare->mons[i].mon) == MON_FEMALE)
-//            slot = i;
-//    }
-//
-//    // search for ditto
-//    for (dittoCount = 0, i = 0; i < DAYCARE_MON_COUNT; i++)
-//    {
-//        species[i] = GetBoxMonData(&daycare->mons[i].mon, MON_DATA_SPECIES);
-//        if (species[i] == SPECIES_DITTO)
-//            dittoCount++, slot = i;
-//    }
-//
-//    // coin flip on ...two Dittos
-//    if (dittoCount == 2)
-//    {
-//        if (Random() >= USHRT_MAX / 2)
-//            slot = 0;
-//        else
-//            slot = 1;
-//    }
-//
-//    // nature inheritance only if holds everstone
-//    if (GetBoxMonData(&daycare->mons[slot].mon, MON_DATA_HELD_ITEM) != ITEM_EVERSTONE
-//        || Random() >= USHRT_MAX / 2)
-//    {
-//        return -1;
-//    }
-//
-//    return slot;
-//}
+
+static s32 GetSlotToInheritNature(struct DayCare *daycare)
+{
+    u32 species[DAYCARE_MON_COUNT];
+    s32 i;
+    s32 dittoCount;
+    s32 slot = -1;
+
+    // search for female gender
+    for (i = 0; i < DAYCARE_MON_COUNT; i++)
+    {
+        if (GetBoxMonGender(&daycare->mons[i].mon) == MON_FEMALE)
+            slot = i;
+    }
+
+    // nature inheritance only if holds everstone
+    if (GetBoxMonData(&daycare->mons[slot].mon, MON_DATA_HELD_ITEM) != ITEM_EVERSTONE
+        || Random() >= USHRT_MAX / 2)
+    {
+        return -1;
+    }
+
+    return slot;
+}
 
 static void _TriggerPendingDaycareEgg(struct DayCare *daycare)
 {
-//    s32 natureSlot;
-//    s32 natureTries = 0;
-//
-//    SeedRng2(gMain.vblankCounter2);
-//    natureSlot = GetSlotToInheritNature(daycare);
-//
-//    if (natureSlot < 0)
-//    {
-//        daycare->offspringPersonality = (Random2() << 0x10) | ((Random() % 0xfffe) + 1);
-//    }
-//    else
-//    {
-//        u8 wantedNature = GetNatureFromPersonality(GetBoxMonData(&daycare->mons[natureSlot].mon, MON_DATA_PERSONALITY, NULL));
-//        u32 personality;
-//
-//        do
-//        {
-//            personality = (Random2() << 0x10) | (Random());
-//            if (wantedNature == GetNatureFromPersonality(personality) && personality != 0)
-//                break; // we found a personality with the same nature
-//
-//            natureTries++;
-//        } while (natureTries <= 2400);
-//
-//        daycare->offspringPersonality = personality;
-//    }
+    s32 natureSlot;
+    s32 natureTries = 0;
+
+    //SeedRng2(gMain.vblankCounter2);
+    natureSlot = GetSlotToInheritNature(daycare);
+
+    if (natureSlot < 0)
+    {
+        daycare->offspringPersonality = (Random() << 0x10) | ((Random() % 0xfffe) + 1);
+    }
+    else
+    {
+        u8 wantedNature = GetNatureFromPersonality(GetBoxMonData(&daycare->mons[natureSlot].mon, MON_DATA_PERSONALITY, NULL));
+        u32 personality;
+
+        do
+        {
+            personality = (Random() << 0x10) | (Random());
+            if (wantedNature == GetNatureFromPersonality(personality) && personality != 0)
+                break; // we found a personality with the same nature
+
+            natureTries++;
+        } while (natureTries <= 2400);
+
+        daycare->offspringPersonality = personality;
+    }
 
     daycare->offspringPersonality = ((Random()) % 0xFFFE) + 1;
     FlagSet(FLAG_PENDING_DAYCARE_EGG);
@@ -1012,12 +995,7 @@ static u16 DetermineEggSpeciesAndParentSlots(struct DayCare *daycare, u8 *parent
     for (i = 0; i < DAYCARE_MON_COUNT; i++)
     {
         species[i] = GetBoxMonData(&daycare->mons[i].mon, MON_DATA_SPECIES);
-        if (species[i] == SPECIES_DITTO)
-        {
-            parentSlots[0] = i ^ 1;
-            parentSlots[1] = i;
-        }
-        else if (GetBoxMonGender(&daycare->mons[i].mon) == MON_FEMALE)
+        if (GetBoxMonGender(&daycare->mons[i].mon) == MON_FEMALE)
         {
             parentSlots[0] = i;
             parentSlots[1] = i ^ 1;
@@ -1025,22 +1003,6 @@ static u16 DetermineEggSpeciesAndParentSlots(struct DayCare *daycare, u8 *parent
     }
 
     eggSpecies = GetEggSpecies(species[parentSlots[0]]);
-    if (eggSpecies == SPECIES_NIDORAN_F && daycare->offspringPersonality & EGG_GENDER_MALE)
-    {
-        eggSpecies = SPECIES_NIDORAN_M;
-    }
-    if (eggSpecies == SPECIES_ILLUMISE && daycare->offspringPersonality & EGG_GENDER_MALE)
-    {
-        eggSpecies = SPECIES_VOLBEAT;
-    }
-
-    // Make Ditto the "mother" slot if the other daycare mon is male.
-    if (species[parentSlots[1]] == SPECIES_DITTO && GetBoxMonGender(&daycare->mons[parentSlots[0]].mon) != MON_FEMALE)
-    {
-        u8 ditto = parentSlots[1];
-        parentSlots[1] = parentSlots[0];
-        parentSlots[0] = ditto;
-    }
 
     return eggSpecies;
 }
@@ -1276,43 +1238,29 @@ static u8 GetDaycareCompatibilityScore(struct DayCare *daycare)
     // check unbreedable egg group
     if (eggGroups[0][0] == EGG_GROUP_UNDISCOVERED || eggGroups[1][0] == EGG_GROUP_UNDISCOVERED)
         return PARENTS_INCOMPATIBLE;
-    // two Ditto can't breed
-    if (eggGroups[0][0] == EGG_GROUP_DITTO && eggGroups[1][0] == EGG_GROUP_DITTO)
-        return PARENTS_INCOMPATIBLE;
 
-    // one parent is Ditto
-    if (eggGroups[0][0] == EGG_GROUP_DITTO || eggGroups[1][0] == EGG_GROUP_DITTO)
-    {
-        if (trainerIds[0] == trainerIds[1])
-            return PARENTS_LOW_COMPATIBILITY;
-
-        return PARENTS_MED_COMPATIBILITY;
-    }
     // neither parent is Ditto
-    else
-    {
-        if (genders[0] == genders[1])
-            return PARENTS_INCOMPATIBLE;
-        if (genders[0] == MON_GENDERLESS || genders[1] == MON_GENDERLESS)
-            return PARENTS_INCOMPATIBLE;
-        if (!EggGroupsOverlap(eggGroups[0], eggGroups[1]))
-            return PARENTS_INCOMPATIBLE;
+	if (genders[0] == genders[1])
+		return PARENTS_INCOMPATIBLE;
+	if (genders[0] == MON_GENDERLESS || genders[1] == MON_GENDERLESS)
+		return PARENTS_INCOMPATIBLE;
+	if (!EggGroupsOverlap(eggGroups[0], eggGroups[1]))
+		return PARENTS_INCOMPATIBLE;
 
-        if (species[0] == species[1])
-        {
-            if (trainerIds[0] == trainerIds[1])
-                return PARENTS_MED_COMPATIBILITY; // same species, same trainer
+	if (species[0] == species[1])
+	{
+		if (trainerIds[0] == trainerIds[1])
+			return PARENTS_MED_COMPATIBILITY; // same species, same trainer
 
-            return PARENTS_MAX_COMPATIBILITY; // same species, different trainers
-        }
-        else
-        {
-            if (trainerIds[0] != trainerIds[1])
-                return PARENTS_MED_COMPATIBILITY; // different species, different trainers
+		return PARENTS_MAX_COMPATIBILITY; // same species, different trainers
+	}
+	else
+	{
+		if (trainerIds[0] != trainerIds[1])
+			return PARENTS_MED_COMPATIBILITY; // different species, different trainers
 
-            return PARENTS_LOW_COMPATIBILITY; // different species, same trainer
-        }
-    }
+		return PARENTS_LOW_COMPATIBILITY; // different species, same trainer
+	}
 }
 
 static u8 GetDaycareCompatibilityScoreFromSave(void)
