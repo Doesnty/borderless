@@ -6766,7 +6766,7 @@ static const struct TrainerMonFullControl sParty_RivalSsAnneSquirtle[] = {
         .gender = MON_MALE,
         .ability = 0, // Flash Fire
         .ball = ITEM_POKE_BALL,
-        .moves = {MOVE_FORCE_PALM, MOVE_WATER_PULSE, MOVE_WORK_UP, MOVE_ROCK_TOMB},
+        .moves = {MOVE_DECISION, MOVE_WATER_PULSE, MOVE_WORK_UP, MOVE_FLAME_WHEEL},
     },
 };
 
