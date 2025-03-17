@@ -4,7 +4,7 @@ const struct Evolution gEvolutionTable[NUM_SPECIES][EVOS_PER_MON] =
                              {EVO_LEVEL_HELD_ITEM, ITEM_POWER_SHARD, 39, SPECIES_AREIMU},
                              {EVO_LEVEL_HELD_ITEM, ITEM_GUARD_SHARD, 39, SPECIES_DREIMU}},
 
-    [SPECIES_CMARISA]    = {{EVO_LEVEL, 0, 35, SPECIES_CMARISA},
+    [SPECIES_CMARISA]    = {{EVO_LEVEL, 0, 35, SPECIES_MARISA},
                              {EVO_LEVEL_HELD_ITEM, ITEM_POWER_SHARD, 35, SPECIES_AMARISA},
                              {EVO_LEVEL_HELD_ITEM, ITEM_SWIFT_SHARD, 35, SPECIES_SMARISA},
                              {EVO_LEVEL_HELD_ITEM, ITEM_SOLAR_SHARD, 35, SPECIES_ADMARISA}},
@@ -34,7 +34,7 @@ const struct Evolution gEvolutionTable[NUM_SPECIES][EVOS_PER_MON] =
                              {EVO_LEVEL_HELD_ITEM, ITEM_POWER_SHARD, 33, SPECIES_APATCHOULI},
                              {EVO_LEVEL_HELD_ITEM, ITEM_GUARD_SHARD, 33, SPECIES_DPATCHOULI}},
 
-    [SPECIES_CSAKUYA]    = {{EVO_LEVEL, 0, 35, SPECIES_CSAKUYA},
+    [SPECIES_CSAKUYA]    = {{EVO_LEVEL, 0, 35, SPECIES_SAKUYA},
                              {EVO_LEVEL_HELD_ITEM, ITEM_TECH_SHARD, 35, SPECIES_TSAKUYA},
                              {EVO_LEVEL_HELD_ITEM, ITEM_ASSIST_SHARD, 35, SPECIES_HSAKUYA}},
 
