@@ -26,6 +26,20 @@ Puppets have multiple styles they can evolve into, similar to 1.8. However, shar
 Useful information can be found in the notes directory.
 
 
+## FAQ
+
+Q: Why is my Puppet picking up items?
+
+A: Every Puppet has intrinsic Pickup in this game. Puppets that are higher-level and better trained tend to pick up better things, but usually just berries.
+
+Certain species can also find different items. The Pickup ability gives the Puppet a chance to find man-made items in addition to regular ones.
+
+
+Q: Can I change EVs/IVs/Nature/Ability?
+
+A: Yes, but not from the start of the game.
+
+
 ## Credits
 
 Original game: Game Freak
