@@ -1,0 +1,42 @@
+v1.0.3
+
+New item: Hope Mask. It blocks flinching and item tampering.
+Corrected Helper Byakuren's icon.
+Toned down Futo's enthusiasm for finding plates.
+The rival no longer gets himself as a starter.
+Fixed a tile error in Icefall Cave.
+One of the rival fights no longer has Force Palm at an illegal level.
+Puppets with many egg moves can now actually get the last ones.
+Revoked MPSuika's pilot's license.
+Game Corner prize vendors no longer try to prevent buying duplicate non-TMs.
+
+v1.0.2
+
+Toxic never misses if the user is Miasma-type now.
+Rival's name is now all-caps when he speaks.
+Fixed Last Wish being attributed to the wrong mon sometimes.
+Fix Maribel/Renko puppet backsprite elevations.
+Trying to tutor Maribel/Renko won't crash the game.
+Confiscated Kogasa's supply of colored contacts.
+CKaguya now behaves normally in the daycare, instead of half like Ditto.
+The daycare no longer has rules for "Nidoran" and "Volbeat".
+CMarisa and CSakuya can now evolve into Marisa and Sakuya properly.
+
+v1.0.1
+
+Documentation now includes evolutions and encounter data.
+CNarumi and Narumi can now use the Blizzard TM.
+Fixed Youmu's evolutions.
+Removed a debug script that slipped in.
+Fixed TM52 Thunder Punch crashing the game.
+Fixed TM52 and TM53 having swapped palettes.
+Fixed a Department Store NPC's text.
+Fixed an instance of Oak referring to Pokemon.
+You no longer obtain twenty Toho OrbS.
+Corrected Route 2 having more Lily Black than Lily White.
+Fixed Lance's post-fight dialogue in certain circumstances.
+Renamed the no-ability Ability to "No Ability" to clean up a message.
+
+v1.0.0
+
+Initial release.

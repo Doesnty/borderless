@@ -2418,12 +2418,12 @@ const struct MonCoords gMonBackPicCoords[] =
 	[SPECIES_CSANNYO] = 
 	{
 		.size = 0x88,
-		.y_offset = 0,
+		.y_offset = 4,
 	},
 	[SPECIES_SANNYO] = 
 	{
 		.size = 0x88,
-		.y_offset = 0,
+		.y_offset = 1,
 	},
 	[SPECIES_CSHION] = 
 	{
