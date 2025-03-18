@@ -3825,12 +3825,12 @@
       "secondaryId": 0
     },
     {
-      "english": "????????",
-      "itemId": "ITEM_NONE",
-      "price": 0,
-      "holdEffect": "HOLD_EFFECT_NONE",
+      "english": "Hope Mask",
+      "itemId": "ITEM_HOPE_MASK",
+      "price": 2000,
+      "holdEffect": "HOLD_EFFECT_HOPE_MASK",
       "holdEffectParam": 0,
-      "description_english": "?????",
+      "description_english": "A mask that looks like Miko's face.\\nIt protects the holder from both\\nflinching and item tampering.",
       "importance": 0,
       "exitsBagOnUse": 0,
       "pocket": "POCKET_ITEMS",

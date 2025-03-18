@@ -2533,6 +2533,9 @@ void SetMoveEffect(bool8 primary, u8 certain)
     bool32 statusChanged = FALSE;
     u8 affectsUser = 0; // 0x40 otherwise
     bool32 noSunCanFreeze = TRUE;
+	u32 holdEffect;
+	
+	
 
     if (gBattleCommunication[MOVE_EFFECT_BYTE] & MOVE_EFFECT_AFFECTS_USER)
     {
@@ -2582,6 +2585,10 @@ void SetMoveEffect(bool8 primary, u8 certain)
         ++gBattlescriptCurrInstr;
         return;
     }
+	if (gBattleMons[gEffectBattler].ability != ABILITY_KLUTZ)
+	{
+		holdEffect = ItemId_GetHoldEffect(gBattleMons[gEffectBattler].item);
+	}
     if (gBattleCommunication[MOVE_EFFECT_BYTE] <= 6) // status change
     {
         switch (sStatusFlagsForMoveEffects[gBattleCommunication[MOVE_EFFECT_BYTE]])
@@ -2844,7 +2851,7 @@ void SetMoveEffect(bool8 primary, u8 certain)
                 }
                 else
                 {
-                    if (GetBattlerTurnOrderNum(gEffectBattler) > gCurrentTurnActionNumber)
+                    if (GetBattlerTurnOrderNum(gEffectBattler) > gCurrentTurnActionNumber && holdEffect != HOLD_EFFECT_HOPE_MASK)
                         gBattleMons[gEffectBattler].status2 |= sStatusFlagsForMoveEffects[gBattleCommunication[MOVE_EFFECT_BYTE]];
                     ++gBattlescriptCurrInstr;
                 }
@@ -3159,6 +3166,7 @@ void SetMoveEffect(bool8 primary, u8 certain)
                 }
 				// wilds can't knock the player since items aren't restored after wild battles
                 if (gBattleMons[gEffectBattler].item && 
+					holdEffect != HOLD_EFFECT_HOPE_MASK && 
 					!(GetBattlerSide(gEffectBattler) == 0 && !(gBattleTypeFlags & BATTLE_TYPE_TRAINER)))
                 {
                     side = GetBattlerSide(gEffectBattler);
@@ -9035,9 +9043,11 @@ static void atkD2_tryswapitems(void) // trick
 
 	// can't swap if two pokemon don't have an item
 	// or if either of them is an enigma berry or a mail
+	// or if *defender* has a hope mask, and no klutz
 	if ((gBattleMons[gBattlerAttacker].item == 0 && gBattleMons[gBattlerTarget].item == 0)
 		  || gBattleMons[gBattlerAttacker].item == ITEM_ENIGMA_BERRY
 		  || gBattleMons[gBattlerTarget].item == ITEM_ENIGMA_BERRY
+		  || (gBattleMons[gBattlerTarget].ability != ABILITY_KLUTZ && ItemId_GetHoldEffect(gBattleMons[gBattlerTarget].item) == HOLD_EFFECT_HOPE_MASK)
 		  || IS_ITEM_MAIL(gBattleMons[gBattlerAttacker].item)
 		  || IS_ITEM_MAIL(gBattleMons[gBattlerTarget].item))
 	{
@@ -9524,8 +9534,15 @@ static void atkE5_pickup(void)
 				// futo
 				if ((species >= SPECIES_CFUTO && species <= SPECIES_TFUTO))
 				{
-					if (Random() % 2)
+					if (Random() % 8)
 						newItem = ITEM_OLD_PLATE;
+				}
+				
+				// kokoro
+				if ((species >= SPECIES_CKOKORO && species <= SPECIES_TKOKORO))
+				{
+					if (Random() % 8)
+						newItem = ITEM_HOPE_MASK;
 				}
 				
 				// dumb unlucky idiot who can't find anything useful

@@ -83,5 +83,6 @@
 #define HOLD_EFFECT_LIGHT_CLAY     79
 #define HOLD_EFFECT_TOXIC_ORB      80
 #define HOLD_EFFECT_FLAME_ORB      81
+#define HOLD_EFFECT_HOPE_MASK      82
 
 #endif // GUARD_HOLD_EFFECTS_H

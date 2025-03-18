@@ -19,7 +19,7 @@ PalletTown_ProfessorOaksLab_Text_RivalIllTakeThisOneThen:: @ 818DD34
     .string "{RIVAL_CAP}: I'll take this one, then!$"
 
 PalletTown_ProfessorOaksLab_Text_RivalReceivedMonFromOak:: @ 818DD52
-    .string "{RIVAL_CAP} received the {STR_VAR_1}\n"
+    .string "{RIVAL} received the {STR_VAR_1}\n"
     .string "from Prof. Oak!$"
 
 PalletTown_ProfessorOaksLab_Text_RivalMyMonLooksTougher:: @ 818DD75

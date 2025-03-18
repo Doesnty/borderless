@@ -242,7 +242,7 @@
 #define ITEM_LIGHT_CLAY 236
 #define ITEM_TOXIC_ORB 237
 #define ITEM_FLAME_ORB 238
-#define ITEM_0EF 239
+#define ITEM_HOPE_MASK 239
 #define ITEM_0F0 240
 #define ITEM_0F1 241
 #define ITEM_0F2 242
