@@ -68,16 +68,16 @@ PewterCity_Museum_1F_Text_DontHaveSpaceForThis:: @ 81908AE
 
 PewterCity_Museum_1F_Text_WeHaveTwoFossilsOnExhibit:: @ 81908CD
     .string "We have two fossils of rare,\n"
-    .string "prehistoric POKéMON on exhibit.$"
+    .string "prehistoric Pokémon on exhibit.$"
 
 PewterCity_Museum_1F_Text_BeautifulPieceOfAmber:: @ 819090A
     .string "There is a TM on display.$"
 
 PewterCity_Museum_1F_Text_AerodactylFossil:: @ 8190945
-    .string "AERODACTYL Fossil\n"
-    .string "A primitive and rare POKéMON.$"
+    .string "Aerodactyl Fossil\n"
+    .string "A primitive and rare Pokémon.$"
 
 PewterCity_Museum_1F_Text_KabutopsFossil:: @ 8190975
-    .string "KABUTOPS Fossil\n"
-    .string "A primitive and rare POKéMON.$"
+    .string "Kabutops Fossil\n"
+    .string "A primitive and rare Pokémon.$"
 

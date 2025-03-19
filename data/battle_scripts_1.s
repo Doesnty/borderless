@@ -1970,13 +1970,40 @@ BattleScript_FlinchEffect::
 	goto BattleScript_EffectHit
 
 BattleScript_EffectEarthquake::
+	jumpifnostatus3 BS_TARGET, STATUS3_UNDERGROUND, BattleScript_EffectEarthquakeNoBonus
+	setbyte sDMG_MULTIPLIER, 2
+	
+BattleScript_EffectEarthquakeNoBonus:
+	attackcanceler
+	accuracycheck BattleScript_PrintMoveMissed, ACC_CURR_MOVE
+	attackstring
+	ppreduce
+	critcalc
+	damagecalc
+	typecalc
+	adjustnormaldamage
+	attackanimation
+	waitanimation
+	effectivenesssound
+	hitanimation BS_TARGET
+	waitstate
+	healthbarupdate BS_TARGET
+	datahpupdate BS_TARGET
+	critmessage
+	waitmessage 0x40
+	resultmessage
+	waitmessage 0x40
+	seteffectwithchance
+	tryfaintmon BS_TARGET, 0, NULL
+	moveendall
+	end
+	
 	attackcanceler
 	attackstring
 	ppreduce
 	selectfirstvalidtarget
 BattleScript_HitsAllWithUndergroundBonusLoop::
 	movevaluescleanup
-	jumpifnostatus3 BS_TARGET, STATUS3_UNDERGROUND, BattleScript_HitsAllNoUndergroundBonus
 	orword gHitMarker, HITMARKER_IGNORE_UNDERGROUND
 	setbyte sDMG_MULTIPLIER, 2
 	goto BattleScript_DoHitAllWithUndergroundBonus

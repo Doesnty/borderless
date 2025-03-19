@@ -35,6 +35,6 @@ LavenderTown_Text_VolunteerPokemonHouse:: @ 817F6D6
     .string "POKéMON HOUSE$"
 
 LavenderTown_Text_PokemonTowerSign:: @ 817F6F7
-    .string "POKéMON TOWER\n"
-    .string "Becalm the Spirits of Pokémon$"
+    .string "PRISM TOWER\n"
+    .string "Becalm the Spirits of All$"
 

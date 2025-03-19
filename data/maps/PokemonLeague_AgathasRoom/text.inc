@@ -24,9 +24,9 @@ PokemonLeague_AgathasRoom_Text_RematchIntro:: @ 817858D
     .string "Now he just wants to fiddle with\n"
     .string "his Tohodex.\p"
     .string "He's wrong.\n"
-    .string "POKéMON are for battling!\p"
+    .string "Puppets are for battling!\p"
     .string "{PLAYER}! I'll show you how a real\n"
-    .string "TRAINER battles!{PLAY_BGM}{MUS_ENCOUNTER_GYM_LEADER}$"
+    .string "Trainer battles!{PLAY_BGM}{MUS_ENCOUNTER_GYM_LEADER}$"
 
 PokemonLeague_AgathasRoom_Text_Defeat:: @ 81786D7
     .string "Oh, my!\n"
