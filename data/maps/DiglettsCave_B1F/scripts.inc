@@ -17,7 +17,6 @@ DiglettsCave_B1F_TryRemoveSnorlax::
 
 DiglettsCave_B1F_EventScript_Snorlax:: @ 8168014
 	lock
-	faceplayer
 	goto_if_unset FLAG_GOT_POKE_FLUTE, DiglettsCave_B1F_EventScript_SnorlaxNoPokeFlute
 	goto_if_questlog EventScript_ReleaseEnd
 	special QuestLog_CutRecording

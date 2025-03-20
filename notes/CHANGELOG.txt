@@ -1,3 +1,9 @@
+v1.0.4
+
+Twin Spark now works with Earthquake properly.
+Some sprite fixes.
+Some text fixes.
+
 v1.0.3
 
 New item: Hope Mask. It blocks flinching and item tampering.

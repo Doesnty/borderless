@@ -31,7 +31,6 @@ Route16_OnWarpCyclingRoad:: @ 816811D
 
 Route16_EventScript_Snorlax:: @ 8168121
 	lock
-	faceplayer
 	goto_if_unset FLAG_GOT_POKE_FLUTE, Route16_EventScript_SnorlaxNoPokeFlute
 	goto_if_questlog EventScript_ReleaseEnd
 	special QuestLog_CutRecording

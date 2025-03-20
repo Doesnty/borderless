@@ -336,7 +336,7 @@ PalletTown_ProfessorOaksLab_Text_OakNowTheseUnitsCanRecordMoreData:: @ 818F085
     .string "… … …  … … …\p"
     .string "… … …  … … …\p"
     .string "…Huh!\p"
-	.string "Weird, it looks like didn't add\n"
+	.string "Weird, it looks like it didn't add\n"
 	.string "any new space to them.\p"
 	.string "But, the Tohodexes are now much\n"
 	.string "better than they were before!$"

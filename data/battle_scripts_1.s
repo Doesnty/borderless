@@ -1813,11 +1813,41 @@ BattleScript_EffectThawHit::
 	goto BattleScript_EffectHit
 
 BattleScript_EffectMagnitude::
+	jumpifnostatus3 BS_TARGET, STATUS3_UNDERGROUND, BattleScript_EffectMagnitudeSkipBonusDmg
+	setbyte sDMG_MULTIPLIER, 2
+
+BattleScript_EffectMagnitudeSkipBonusDmg::
+	attackcanceler
+	accuracycheck BattleScript_PrintMoveMissed, ACC_CURR_MOVE
+	attackstring
+	ppreduce
+	magnitudedamagecalculation
+	critcalc
+	damagecalc
+	typecalc
+	adjustnormaldamage
+	attackanimation
+	waitanimation
+	effectivenesssound
+	hitanimation BS_TARGET
+	waitstate
+	healthbarupdate BS_TARGET
+	datahpupdate BS_TARGET
+	critmessage
+	waitmessage 0x40
+	resultmessage
+	waitmessage 0x40
+	seteffectwithchance
+	tryfaintmon BS_TARGET, 0, NULL
+	moveendall
+	end
+
+
+
 	attackcanceler
 	attackstring
 	ppreduce
 	selectfirstvalidtarget
-	magnitudedamagecalculation
 	pause 0x20
 	printstring STRINGID_MAGNITUDESTRENGTH
 	waitmessage 0x40
