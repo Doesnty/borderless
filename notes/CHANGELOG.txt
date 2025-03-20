@@ -1,6 +1,7 @@
 v1.0.4
 
-Twin Spark now works with Earthquake properly.
+New move: Anoxic Fumes, a Miasma-type overheat.
+Twin Spark now works with Earthquake and Magnitude properly.
 Some sprite fixes.
 Some text fixes.
 

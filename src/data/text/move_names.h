@@ -429,4 +429,5 @@ const u8 gMoveNames[][15] = {
 	_("Demon Book"),
 	_("Drill Peck"),
     _("Me First"),
+	_("Anoxic Fumes"),
 };

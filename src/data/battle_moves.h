@@ -6005,4 +6005,18 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .target = MOVE_TARGET_SELECTED,
         .flags = FLAG_PROTECT_AFFECTED,
     },
+
+    [MOVE_ANOXIC_FUMES] = 
+    {
+        .effect = EFFECT_OVERHEAT,
+        .power = 140,
+        .type = TYPE_MIASMA,
+        .moveClass = CLASS_SPECIAL,
+        .accuracy = 90,
+        .pp = 5,
+        .secondaryEffectChance = 100,
+        .priority = 0,
+        .target = MOVE_TARGET_SELECTED,
+        .flags = FLAG_PROTECT_AFFECTED,
+    },
 };

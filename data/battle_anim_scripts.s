@@ -476,7 +476,7 @@ gBattleAnims_Moves::
 	.4byte Move_POUND @ demon book
 	.4byte Move_DRILL_PECK
 	.4byte Move_POUND @ me first
-	.4byte Move_POUND
+	.4byte Move_ANOXIC_FUMES
 	.4byte Move_COUNT
 
 gBattleAnims_StatusConditions::
@@ -14849,4 +14849,16 @@ Move_EXTERMINATE::
 	delay 1
 	setarg 7, 4096
 	delay 1
+	end
+
+Move_ANOXIC_FUMES::
+	waitforvisualfinish
+	playsewithpan SE_M_HAZE, 0
+	createvisualtask AnimTask_Haze1, 5, 
+	delay 30
+	createvisualtask AnimTask_BlendSelected, 10, 0 | (0xF << 7), 2, 0, 16, RGB(10, 0, 0)
+	delay 20
+	createvisualtask AnimTask_ShakeMon2, 2, 1, 2, 0, 45, 1
+	delay 70
+	createvisualtask AnimTask_BlendSelected, 10, 0 | (0xF << 7), 1, 16, 0, RGB(10, 0, 0)
 	end
