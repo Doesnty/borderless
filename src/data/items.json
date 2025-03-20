@@ -3841,12 +3841,12 @@
       "secondaryId": 0
     },
     {
-      "english": "????????",
-      "itemId": "ITEM_NONE",
-      "price": 0,
-      "holdEffect": "HOLD_EFFECT_NONE",
+      "english": "Zener Cards",
+      "itemId": "ITEM_ZENER_CARDS",
+      "price": 2000,
+      "holdEffect": "HOLD_EFFECT_EXPERT_BELT",
       "holdEffectParam": 0,
-      "description_english": "?????",
+      "description_english": "Cards meant for measuring psychic\\nability. They power up the holder's\\nsuper-effective moves by 20%.",
       "importance": 0,
       "exitsBagOnUse": 0,
       "pocket": "POCKET_ITEMS",

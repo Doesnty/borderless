@@ -1,6 +1,9 @@
 v1.0.4
 
+New item: Zener Cards, an Expert Belt clone.
 New move: Anoxic Fumes, a Miasma-type overheat.
+ -It is learned naturally by TYukari, Medicine, TMedicine, Sannyo, and Momoyo.
+ -It can be tutored to all Nue forms.
 Twin Spark now works with Earthquake and Magnitude properly.
 Some sprite fixes.
 Some text fixes.

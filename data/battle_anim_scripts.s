@@ -313,7 +313,7 @@ gBattleAnims_Moves::
 	.4byte Move_FOCUS_PUNCH
 	.4byte Move_SMELLING_SALT
 	.4byte Move_FOLLOW_ME
-	.4byte Move_ANCIENT_POWER
+	.4byte Move_ROCK_BULLET
 	.4byte Move_CHARGE
 	.4byte Move_TAUNT
 	.4byte Move_HELPING_HAND
@@ -7074,7 +7074,8 @@ Move_RAZOR_LEAF:: @ 81D058C
 	blendoff
 	end
 
-Move_ANCIENT_POWER:: @ 81D0693
+Move_ROCK_BULLET::
+Move_ANCIENT_POWER::
 	loadspritegfx ANIM_TAG_ROCKS
 	loadspritegfx ANIM_TAG_IMPACT
 	monbg ANIM_DEF_PARTNER
@@ -14862,3 +14863,4 @@ Move_ANOXIC_FUMES::
 	delay 70
 	createvisualtask AnimTask_BlendSelected, 10, 0 | (0xF << 7), 1, 16, 0, RGB(10, 0, 0)
 	end
+

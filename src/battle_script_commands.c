@@ -1684,6 +1684,7 @@ static void ModulateDmgByType2(u8 multiplier, u16 move, u16 *flags);
 
 static void atk06_typecalc(void)
 {
+	u16 attackerItem;
     u8 defenderAbility;
     u16 defenderItem;
     s32 i = 0;
@@ -1696,6 +1697,10 @@ static void atk06_typecalc(void)
     defenderItem = gBattleMons[gBattlerTarget].item;
     if (defenderAbility == ABILITY_KLUTZ)
         defenderItem = 0;
+	
+	attackerItem = gBattleMons[gBattlerAttacker].item;
+	if (gBattleMons[gBattlerAttacker].ability == ABILITY_KLUTZ)
+		attackerItem = 0;
 
     if (gCurrentMove == MOVE_STRUGGLE)
     {
@@ -1751,6 +1756,12 @@ static void atk06_typecalc(void)
 	if (gMoveResultFlags & MOVE_RESULT_SUPER_EFFECTIVE && gBattleMoveDamage > 0 && gBattleMons[gBattlerAttacker].ability == ABILITY_NEUROFORCE)
 	{
 		gBattleMoveDamage *= 125;
+		gBattleMoveDamage /= 100;
+	}
+	
+	if (gMoveResultFlags & MOVE_RESULT_SUPER_EFFECTIVE && ItemId_GetHoldEffect(attackerItem) == HOLD_EFFECT_EXPERT_BELT)
+	{
+		gBattleMoveDamage *= 120;
 		gBattleMoveDamage /= 100;
 	}
 	
@@ -9543,6 +9554,13 @@ static void atkE5_pickup(void)
 				{
 					if (Random() % 8)
 						newItem = ITEM_HOPE_MASK;
+				}
+				
+				// sumireko
+				if ((species >= SPECIES_CSUMIREKO && species <= SPECIES_TSUMIREKO))
+				{
+					if (Random() % 8)
+						newItem = ITEM_ZENER_CARDS;
 				}
 				
 				// dumb unlucky idiot who can't find anything useful
