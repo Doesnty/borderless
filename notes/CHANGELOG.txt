@@ -6,7 +6,10 @@ New move: Anoxic Fumes, a Miasma-type overheat.
  -It can be tutored to all Nue forms.
 TM02 Frustration actually exists now, replacing the Mistress in Rocket Hideout.
  -It's on a new flag now, so old saves can go back and get it.
+AI is now aware of powder rules.
+AI now hopefully uses burn moves (somewhat) more intelligently.
 Speed Aya no longer learns Focus Blast.
+Minor tweak one of the champion fights.
 Twin Spark now works with Earthquake and Magnitude properly.
 The S.S. Anne no longer dumps radioactive waste into the harbor.
 Some sprite fixes.

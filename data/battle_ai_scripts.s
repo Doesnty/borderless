@@ -224,12 +224,24 @@ AI_CheckBadMove_CheckEffect:: @ 81D9D27
 	end
 
 AI_CBM_Sleep:: @ 81D9FB6
+	if_move MOVE_SLEEP_POWDER, AI_CBM_SleepPowder
+AI_CBM_SleepRejoin::
 	get_ability AI_TARGET
 	if_equal ABILITY_INSOMNIA, Score_Minus10
 	if_equal ABILITY_VITAL_SPIRIT, Score_Minus10
+	if_equal ABILITY_MAGIC_BOUNCE, Score_Minus10
 	if_status AI_TARGET, STATUS1_ANY, Score_Minus10
 	if_side_affecting AI_TARGET, SIDE_STATUS_SAFEGUARD, Score_Minus10  @ Improvement in Emerald
 	end
+
+AI_CBM_SleepPowder::
+	get_target_type1
+	if_equal TYPE_NATURE, Score_Minus10
+	get_target_type2
+	if_equal TYPE_NATURE, Score_Minus10
+	get_ability AI_TARGET
+	if_equal ABILITY_WIDE_HAT, Score_Minus10
+	goto AI_CBM_SleepRejoin
 
 AI_CBM_Explosion:: @ 81D9FCF
 	if_type_effectiveness AI_EFFECTIVENESS_x0, Score_Minus10
@@ -349,6 +361,8 @@ AI_CBM_Roar:: @ 81DA14A
 	end
 
 AI_CBM_Poison:: @ 81DA15B
+	if_move MOVE_POISON_POWDER, AI_CBM_PoisonPowder
+AI_CBM_PoisonRejoin::
 	get_target_type1
 	if_equal TYPE_STEEL, Score_Minus10
 	if_equal TYPE_POISON, Score_Minus10
@@ -357,9 +371,19 @@ AI_CBM_Poison:: @ 81DA15B
 	if_equal TYPE_POISON, Score_Minus10
 	get_ability AI_TARGET
 	if_equal ABILITY_IMMUNITY, Score_Minus10
+	if_equal ABILITY_MAGIC_BOUNCE, Score_Minus10
 	if_status AI_TARGET, STATUS1_ANY, Score_Minus10
 	if_side_affecting AI_TARGET, SIDE_STATUS_SAFEGUARD, Score_Minus10  @ Improvement in Emerald
 	end
+
+AI_CBM_PoisonPowder::
+	get_target_type1
+	if_equal TYPE_NATURE, Score_Minus10
+	get_target_type2
+	if_equal TYPE_NATURE, Score_Minus10
+	get_ability AI_TARGET
+	if_equal ABILITY_WIDE_HAT, Score_Minus10
+	goto AI_CBM_PoisonRejoin
 
 AI_CBM_LightScreen:: @ 81DA18A
 	if_side_affecting AI_USER, SIDE_STATUS_LIGHTSCREEN, Score_Minus8
@@ -406,6 +430,8 @@ AI_CBM_Reflect:: @ 81DA1F5
 	end
 
 AI_CBM_Paralyze:: @ 81DA200
+	if_move MOVE_STUN_SPORE, AI_CBM_StunSpore
+AI_CBM_ParalyzeRejoin::
 	get_target_type1
 	if_equal TYPE_ELECTRIC, Score_Minus10
 	get_target_type2
@@ -413,9 +439,19 @@ AI_CBM_Paralyze:: @ 81DA200
 	if_type_effectiveness AI_EFFECTIVENESS_x0, Score_Minus10
 	get_ability AI_TARGET
 	if_equal ABILITY_LIMBER, Score_Minus10
+	if_equal ABILITY_MAGIC_BOUNCE, Score_Minus10
 	if_status AI_TARGET, STATUS1_ANY, Score_Minus10
 	if_side_affecting AI_TARGET, SIDE_STATUS_SAFEGUARD, Score_Minus10  @ Improvement in Emerald
 	end
+
+AI_CBM_StunSpore::
+	get_target_type1
+	if_equal TYPE_NATURE, Score_Minus10
+	get_target_type2
+	if_equal TYPE_NATURE, Score_Minus10
+	get_ability AI_TARGET
+	if_equal ABILITY_WIDE_HAT, Score_Minus10
+	goto AI_CBM_ParalyzeRejoin
 
 AI_CBM_Substitute:: @ 81DA219
 	if_status2 AI_USER, STATUS2_SUBSTITUTE, Score_Minus8
@@ -544,14 +580,28 @@ AI_CBM_Torment:: @ 81DA34E
 	end
 
 AI_CBM_WillOWisp:: @ 81DA359
+	if_move MOVE_BURN_POWDER, AI_CBM_BurnPowder
+AI_CBM_WillOWispRejoin::
 	get_ability AI_TARGET
 	if_equal ABILITY_WATER_VEIL, Score_Minus10
+	if_equal ABILITY_MAGIC_BOUNCE, Score_Minus10
 	if_status AI_TARGET, STATUS1_ANY, Score_Minus10
-	if_type_effectiveness AI_EFFECTIVENESS_x0, Score_Minus10
-	if_type_effectiveness AI_EFFECTIVENESS_x0_5, Score_Minus10
-	if_type_effectiveness AI_EFFECTIVENESS_x0_25, Score_Minus10
+	get_target_type1
+	if_equal TYPE_FIRE, Score_Minus10
+	get_target_type2
+	if_equal TYPE_FIRE, Score_Minus10
 	if_side_affecting AI_TARGET, SIDE_STATUS_SAFEGUARD, Score_Minus10  @ Improvement in Emerald
 	end
+
+AI_CBM_BurnPowder::
+	get_target_type1
+	if_equal TYPE_NATURE, Score_Minus10
+	get_target_type2
+	if_equal TYPE_NATURE, Score_Minus10
+	get_ability AI_TARGET
+	if_equal ABILITY_WIDE_HAT, Score_Minus10
+	goto AI_CBM_WillOWispRejoin
+
 
 AI_CBM_HelpingHand:: @ 81DA37E
 	if_not_double_battle Score_Minus10

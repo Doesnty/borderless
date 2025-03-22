@@ -7715,7 +7715,7 @@ static const struct TrainerMonFullControl sParty_ChampionRenko[] = {
         .evs = {60, 0, 0, 0, 60, 0},
         .nature = NATURE_MODEST,
         .gender = MON_MALE,
-        .ability = 0, // Steadfast
+        .ability = 1, // Analytic
         .ball = ITEM_MASTER_BALL,
         .moves = {MOVE_DANMAKU, MOVE_AURA_SPHERE, MOVE_SHADOW_BALL, MOVE_MANA_BURST},
     },
