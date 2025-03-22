@@ -1,6 +1,6 @@
 Route1_Text_WorkAtPokeMartTakeSample:: @ 818329D
     .string "Hi!\n"
-    .string "I work at a Puppet Mart.\p"
+    .string "I work at a Supply Store.\p"
     .string "It's part of a convenient chain\n"
     .string "selling all sorts of items.\p"
     .string "Please, visit us in Viridian City.\p"

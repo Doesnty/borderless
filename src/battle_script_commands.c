@@ -9545,21 +9545,21 @@ static void atkE5_pickup(void)
 				// futo
 				if ((species >= SPECIES_CFUTO && species <= SPECIES_TFUTO))
 				{
-					if (Random() % 8)
+					if (!(Random() % 4))
 						newItem = ITEM_OLD_PLATE;
 				}
 				
 				// kokoro
 				if ((species >= SPECIES_CKOKORO && species <= SPECIES_TKOKORO))
 				{
-					if (Random() % 8)
+					if (!(Random() % 4))
 						newItem = ITEM_HOPE_MASK;
 				}
 				
 				// sumireko
 				if ((species >= SPECIES_CSUMIREKO && species <= SPECIES_TSUMIREKO))
 				{
-					if (Random() % 8)
+					if (!(Random() % 4))
 						newItem = ITEM_ZENER_CARDS;
 				}
 				

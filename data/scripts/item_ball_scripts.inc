@@ -518,8 +518,8 @@ CeladonCity_EventScript_ItemEther:: @ 81BEBC0
 	finditem ITEM_ETHER
 	end
 
-RocketHideout_B3F_EventScript_ItemBlackGlasses:: @ 81BEBCD
-	finditem ITEM_MISTRESS
+RocketHideout_B3F_EventScript_ItemTM02:: @ 81BEBCD
+	finditem ITEM_TM02
 	end
 
 SafariZone_North_EventScript_ItemQuickClaw:: @ 81BEBDA

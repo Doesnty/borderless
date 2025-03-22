@@ -14,7 +14,7 @@ Route25_SeaCottage_Text_ImBillHelpMeOutPal:: @ 819FDFA
 Route25_SeaCottage_Text_ImBillHelpMeOutLady:: @ 819FEE6
     .string "Hiya! I'm a Pokémon!\n"
     .string "…No I'm not!\p"
-    .string "Call me BILL!\n"
+    .string "Call me Bill!\n"
     .string "I'm a true-blue Tohomaniac!\p"
     .string "Hey!\n"
     .string "What's with that skeptical look?\p"
@@ -72,7 +72,7 @@ Route25_SeaCottage_Text_ThanksLadyTakeThis:: @ 81A01E4
 
 Route25_SeaCottage_Text_ReceivedSSTicketFromBill:: @ 81A028E
     .string "{PLAYER} received an S.S. Ticket\n"
-    .string "from BILL.$"
+    .string "from Bill.$"
 
 Route25_SeaCottage_Text_YouveGotTooMuchStuff:: @ 81A02B4
     .string "You've got too much stuff!$"
