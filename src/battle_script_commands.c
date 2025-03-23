@@ -11214,7 +11214,7 @@ static void sp26_set_last_wish_target()
 
 static void sp27_salvage_armor_bank0()
 {
-	if (gBattleMons[0].ability == ABILITY_SALVAGE_ARMOR &&
+	if (gBattleMons[0].ability == ABILITY_SALVAGE &&
 		gBattleMons[0].hp > 0 &&
 		gBattleMons[0].statStages[STAT_DEF] < 12)
 	{
@@ -11229,7 +11229,7 @@ static void sp27_salvage_armor_bank0()
 
 static void sp28_salvage_armor_bank1()
 {
-	if (gBattleMons[1].ability == ABILITY_SALVAGE_ARMOR &&
+	if (gBattleMons[1].ability == ABILITY_SALVAGE &&
 		gBattleMons[1].hp > 0 &&
 		gBattleMons[1].statStages[STAT_DEF] < 12)
 	{

@@ -1,3 +1,13 @@
+v1.0.5
+
+New ability: Sunbathing. It cures status at end of turn during sun.
+ - It replaces Guts for TCirno, replaces Chlorophyll for HShizuha and DMinoriko.
+ - It is a HA for CSunny and DSunny.
+Flower Gift and Winter Gift now only boost SAtk and SDef.
+Solar Power now boosts both Atk and SAtk.
+CDaiyousei, ADaiyousei and DDaiyousei now have HA Flower Gift instead of Solar Power.
+Documentation now matches the game's name for Salvage.
+
 v1.0.4
 
 New item: Zener Cards, a reflavored Expert Belt.

@@ -2078,20 +2078,19 @@ s32 CalculateBaseDamage(struct BattlePokemon *attacker, struct BattlePokemon *de
     if (weatherHasEffect)
     {
         if (attacker->ability == ABILITY_SOLAR_POWER && gBattleWeather & WEATHER_SUN_ANY)
-            spAttack = (spAttack * 150) / 100;
+        {
+			attack = (attack * 150) / 100;
+			spAttack = (spAttack * 150) / 100;
+		}
 		if (gBattleWeather & WEATHER_SUN_ANY)
 		{
             if (attacker->ability == ABILITY_FLOWER_GIFT)
             {
-                attack *= 3;
-                attack /= 2;
                 spAttack *= 3;
                 spAttack /= 2;
             }
             if (defenderAbility == ABILITY_FLOWER_GIFT)
             {
-                defense *= 3;
-				defense /= 2;
                 spDefense *= 3;
 				spDefense /= 2;
             }
@@ -2100,15 +2099,11 @@ s32 CalculateBaseDamage(struct BattlePokemon *attacker, struct BattlePokemon *de
         {
             if (attacker->ability == ABILITY_WINTER_GIFT)
             {
-                attack *= 3;
-                attack /= 2;
                 spAttack *= 3;
                 spAttack /= 2;
             }
             if (defenderAbility == ABILITY_WINTER_GIFT)
             {
-                defense *= 3;
-				defense /= 2;
                 spDefense *= 3;
 				spDefense /= 2;
             }
