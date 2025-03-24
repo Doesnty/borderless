@@ -34,10 +34,10 @@ Route15_WestEntrance_2F_EventScript_Aide:: @ 81700B9
 	compare VAR_0x8006, REQUIRED_CAUGHT_MONS
 	goto_if_lt Aide_EventScript_HaventCaughtEnough
 	msgbox Route15_WestEntrance_2F_Text_GreatHereYouGo
-	checkitemspace ITEM_EXP_SHARE, 1
+	checkitemspace ITEM_EVERSTONE, 1
 	compare VAR_RESULT, FALSE
 	goto_if_eq Aide_EventScript_NoRoomForItem
-	giveitem_msg Route15_WestEntrance_2F_Text_ReceivedItemFromAide, ITEM_EXP_SHARE
+	giveitem_msg Route15_WestEntrance_2F_Text_ReceivedItemFromAide, ITEM_EVERSTONE
 	setflag FLAG_GOT_EXP_SHARE_FROM_OAKS_AIDE
 	msgbox Route15_WestEntrance_2F_Text_ExplainExpShare
 	release
@@ -50,5 +50,5 @@ Route15_WestEntrance_2F_EventScript_AlreadyGotExpShare:: @ 817013B
 
 Route15_WestEntrance_2F_EventScript_GetAideRequestInfo:: @ 8170145
 	getnumberstring 0, REQUIRED_CAUGHT_MONS
-	getitemname 1, ITEM_EXP_SHARE
+	getitemname 1, ITEM_EVERSTONE
 	return

@@ -1514,6 +1514,9 @@ static void GiveBoxMonInitialMoveset(struct BoxPokemon *boxMon)
     u16 species = GetBoxMonData(boxMon, MON_DATA_SPECIES, NULL);
     s32 level = GetLevelFromBoxMonExp(boxMon);
     s32 i;
+	u16 moves[4] = {0, 0, 0, 0};
+	u32 lastmoveslot = 0;
+	u32 wrapped = FALSE;
 	
 	switch (species)
 	{
@@ -1559,12 +1562,33 @@ static void GiveBoxMonInitialMoveset(struct BoxPokemon *boxMon)
 
         if (moveLevel > (level << 9))
             break;
+		
+		moves[lastmoveslot] = move;
+		lastmoveslot++;
+		if (lastmoveslot == 4)
+		{
+			lastmoveslot = 0;
+			wrapped = TRUE;
+		}
+		
 
         move = (gLevelUpLearnsets[species][i] & 0x1FF);
-
-        if (GiveMoveToBoxMon(boxMon, move) == 0xFFFF)
-            DeleteFirstMoveAndGiveMoveToBoxMon(boxMon, move);
     }
+	
+	if (!wrapped)
+		lastmoveslot = 0;
+	for (i = 0; i < 4; i++)
+	{
+		u16 move = moves[lastmoveslot];
+		SetBoxMonData(boxMon, MON_DATA_MOVE1 + lastmoveslot, &move);
+		SetBoxMonData(boxMon, MON_DATA_PP1 + lastmoveslot, &gBattleMoves[move].pp);
+		
+		lastmoveslot++;
+		if (lastmoveslot == 4)
+			lastmoveslot = 0;
+	}
+	wrapped = 0;
+    SetBoxMonData(boxMon, MON_DATA_PP_BONUSES, &wrapped);
 }
 
 u16 MonTryLearningNewMove(struct Pokemon *mon, bool8 firstMove)

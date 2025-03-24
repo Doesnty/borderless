@@ -21,7 +21,7 @@ Route10_PokemonCenter_1F_Text_GiveEverstoneIfCaught20Mons:: @ 819E5FB
     .string "on twenty species, I'm supposed to\l"
     .string "give you a reward from Prof. Oak.\p"
     .string "He entrusted me with this\n"
-    .string "Everstone.\p"
+    .string "Exp. Share.\p"
     .string "So, {PLAYER}, let me ask you.\p"
     .string "Have you gathered data on at least\n"
     .string "twenty kinds of Puppets?$"
@@ -33,16 +33,13 @@ Route10_PokemonCenter_1F_Text_GreatHereYouGo:: @ 819E733
     .string "Here you go!$"
 
 Route10_PokemonCenter_1F_Text_ReceivedEverstoneFromAide:: @ 819E786
-    .string "{PLAYER} received the Everstone\n"
+    .string "{PLAYER} received the Exp. Share\n"
     .string "from the Aide.$"
 
 Route10_PokemonCenter_1F_Text_ExplainEverstone:: @ 819E7AF
-    .string "Making Puppets evolve certainly\n"
-    .string "can add to the Tohodex.\p"
-    .string "However, at times, you may not\n"
-    .string "want a certain Puppet to evolve.\p"
-    .string "In that case, give the Everstone\n"
-    .string "to that Puppet.\p"
-    .string "It will prevent evolution according\n"
-    .string "to the Professor.$"
+    .string "Exp. Share is an item to be held\n"
+    .string "by a Puppet.\p"
+    .string "The Puppet will receive a share\n"
+    .string "of the Exp. Points without having\l"
+    .string "to battle.$"
 

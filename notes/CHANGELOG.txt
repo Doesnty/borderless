@@ -7,6 +7,11 @@ Flower Gift and Winter Gift now only boost SAtk and SDef.
 Solar Power now boosts both Atk and SAtk.
 CDaiyousei, ADaiyousei and DDaiyousei now have HA Flower Gift instead of Solar Power.
 Documentation now matches the game's name for Salvage.
+Oak's aide on Route 10 now gives the Exp Share for 20 dex pages instead of the Everstone.
+Oak's aide on Route 15 now gives the Everstone for 50 dex pages instead of the Exp Share.
+Jinyou now gets Cut.
+The game will no longer visibly hang when wild encounters start.
+ - (this was due to vanilla code for moveset intialization being very bad with 20 level-up moves)
 
 v1.0.4
 

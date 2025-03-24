@@ -21,11 +21,14 @@ Route15_WestEntrance_2F_Text_ReceivedItemFromAide:: @ 819F6FD
     .string "from the Aide.$"
 
 Route15_WestEntrance_2F_Text_ExplainExpShare:: @ 819F71F
-    .string "Exp. Share is an item to be held\n"
-    .string "by a Puppet.\p"
-    .string "The Puppet will receive a share\n"
-    .string "of the Exp. Points without having\l"
-    .string "to battle.$"
+    .string "Making Puppets evolve certainly\n"
+    .string "can add to the Tohodex.\p"
+    .string "However, at times, you may not\n"
+    .string "want a certain Puppet to evolve.\p"
+    .string "In that case, give the Everstone\n"
+    .string "to that Puppet.\p"
+    .string "It will prevent evolution according\n"
+    .string "to the Professor.$"
 
 Route15_WestEntrance_2F_Text_LargeShiningBird:: @ 819F79C
     .string "Let's see what the binoculars have\n"

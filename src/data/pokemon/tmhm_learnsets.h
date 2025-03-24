@@ -13006,6 +13006,7 @@ static const u32 sTMHMLearnsets[][4] =
      | TMHMB(TM77_DANMAKU)
      | TMHMB(TM78_DOUBLE_EDGE)
      | TMHMB(TM80_MEGA_KICK)
+	 | TMHMB(HM01_CUT)
      | TMHMB(HM05_FLASH)
     ),
     [SPECIES_CKOKORO] = TMHM_LEARNSET(
