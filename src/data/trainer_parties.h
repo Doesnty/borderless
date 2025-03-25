@@ -1990,7 +1990,7 @@ static const struct TrainerMonNoItemCustomMoves sParty_BikerGerald[] = {
         .iv = 0,
         .lvl = 37,
         .species = SPECIES_TKYOUKO,
-        .moves = {MOVE_MAGIC_COAT, MOVE_REVENGE, MOVE_FORCE_PALM, MOVE_HEADBUTT},
+        .moves = {MOVE_BINDING_VOICE, MOVE_NATURE_SOUND, MOVE_SUTRA, MOVE_CHARGE_BEAM},
     },
 };
 

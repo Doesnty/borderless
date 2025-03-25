@@ -51,10 +51,10 @@ const struct Evolution gEvolutionTable[NUM_SPECIES][EVOS_PER_MON] =
                              {EVO_LEVEL_HELD_ITEM, ITEM_ASSIST_SHARD, 29, SPECIES_HLETTY},
                              {EVO_LEVEL_HELD_ITEM, ITEM_SOLAR_SHARD, 29, SPECIES_ADLETTY}},
 
-    [SPECIES_CCHEN]      = {{EVO_LEVEL, 27, SPECIES_CHEN},
-                             {EVO_LEVEL_HELD_ITEM, ITEM_POWER_SHARD, SPECIES_ACHEN},
-                             {EVO_LEVEL_HELD_ITEM, ITEM_TECH_SHARD, SPECIES_TCHEN},
-                             {EVO_LEVEL_HELD_ITEM, ITEM_SOLAR_SHARD, SPECIES_ADCHEN}},
+    [SPECIES_CCHEN]      = {{EVO_LEVEL, 0, 27, SPECIES_CHEN},
+                             {EVO_LEVEL_HELD_ITEM, ITEM_POWER_SHARD, 27, SPECIES_ACHEN},
+                             {EVO_LEVEL_HELD_ITEM, ITEM_TECH_SHARD, 27, SPECIES_TCHEN},
+                             {EVO_LEVEL_HELD_ITEM, ITEM_SOLAR_SHARD, 27, SPECIES_ADCHEN}},
 
     [SPECIES_CALICE]     = {{EVO_LEVEL, 0, 35, SPECIES_ALICE},
                              {EVO_LEVEL_HELD_ITEM, ITEM_POWER_SHARD, 35, SPECIES_AALICE},
