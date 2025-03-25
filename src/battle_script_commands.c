@@ -3763,6 +3763,8 @@ static void atk23_getexp(void)
 					// this also hopefully stops some overflows
 					if (gBattleMoveDamage > 30000)
 						gBattleMoveDamage = 30000;
+					if (gBattleMoveDamage == 0)
+						gBattleMoveDamage = 1;
                     
                     PREPARE_MON_NICK_WITH_PREFIX_BUFFER(gBattleTextBuff1, gBattleStruct->expGetterBattlerId, gBattleStruct->expGetterMonId);
                     // buffer 'gained' or 'gained a boosted'
