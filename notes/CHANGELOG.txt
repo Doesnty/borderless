@@ -1,3 +1,8 @@
+v1.0.6
+
+Overhaul TKyouko to be a special attacker.
+
+
 v1.0.5
 
 New ability: Sunbathing. It cures status at end of turn during sun.
