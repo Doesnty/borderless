@@ -39,7 +39,6 @@ CeladonCity_DepartmentStore_4F_Items:: @ 816BC30
 	.2byte ITEM_IBUKI_GOURD
 	.2byte ITEM_TOXIC_ORB
 	.2byte ITEM_FLAME_ORB
-	.2byte ITEM_ZENER_CARDS
 	.2byte ITEM_NONE
 	release
 	end

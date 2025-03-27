@@ -4405,6 +4405,7 @@ static const u32 sTMHMLearnsets[][4] =
      | TMHMB(TM77_DANMAKU)
      | TMHMB(TM78_DOUBLE_EDGE)
      | TMHMB(TM80_MEGA_KICK)
+	 | TMHMB(HM01_CUT)
      | TMHMB(HM02_FLY)
     ),
     [SPECIES_MYSTIA] = TMHM_LEARNSET(
@@ -4444,6 +4445,7 @@ static const u32 sTMHMLearnsets[][4] =
      | TMHMB(TM77_DANMAKU)
      | TMHMB(TM78_DOUBLE_EDGE)
      | TMHMB(TM80_MEGA_KICK)
+	 | TMHMB(HM01_CUT)
      | TMHMB(HM02_FLY)
     ),
     [SPECIES_AMYSTIA] = TMHM_LEARNSET(
@@ -4483,6 +4485,7 @@ static const u32 sTMHMLearnsets[][4] =
      | TMHMB(TM77_DANMAKU)
      | TMHMB(TM78_DOUBLE_EDGE)
      | TMHMB(TM80_MEGA_KICK)
+	 | TMHMB(HM01_CUT)
      | TMHMB(HM02_FLY)
     ),
     [SPECIES_HMYSTIA] = TMHM_LEARNSET(
@@ -4522,6 +4525,7 @@ static const u32 sTMHMLearnsets[][4] =
      | TMHMB(TM77_DANMAKU)
      | TMHMB(TM78_DOUBLE_EDGE)
      | TMHMB(TM80_MEGA_KICK)
+	 | TMHMB(HM01_CUT)
      | TMHMB(HM02_FLY)
     ),
     [SPECIES_ADMYSTIA] = TMHM_LEARNSET(
@@ -4562,6 +4566,7 @@ static const u32 sTMHMLearnsets[][4] =
      | TMHMB(TM77_DANMAKU)
      | TMHMB(TM78_DOUBLE_EDGE)
      | TMHMB(TM80_MEGA_KICK)
+	 | TMHMB(HM01_CUT)
      | TMHMB(HM02_FLY)
     ),
     [SPECIES_CKEINE] = TMHM_LEARNSET(
@@ -19230,6 +19235,7 @@ static const u32 sTMHMLearnsets[][4] =
      | TMHMA(TM58_HIDDEN_POWER)
      | TMHMA(TM60_ENDURE)
      | TMHMA(TM63_TRICK)
+     | TMHMA(TM64_ICY_WIND)
     ,
        TMHMB(TM67_TRICK_ROOM)
      | TMHMB(TM69_METRONOME)
@@ -19267,6 +19273,7 @@ static const u32 sTMHMLearnsets[][4] =
      | TMHMA(TM58_HIDDEN_POWER)
      | TMHMA(TM60_ENDURE)
      | TMHMA(TM63_TRICK)
+     | TMHMA(TM64_ICY_WIND)
     ,
        TMHMB(TM67_TRICK_ROOM)
      | TMHMB(TM69_METRONOME)
@@ -19306,6 +19313,7 @@ static const u32 sTMHMLearnsets[][4] =
      | TMHMA(TM58_HIDDEN_POWER)
      | TMHMA(TM60_ENDURE)
      | TMHMA(TM63_TRICK)
+     | TMHMA(TM64_ICY_WIND)
     ,
        TMHMB(TM67_TRICK_ROOM)
      | TMHMB(TM69_METRONOME)

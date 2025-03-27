@@ -1,5 +1,8 @@
 v1.0.7
 
+Fixed TYumemi's and Shion's backsprites.
+All Mystia forms now learn Cut.
+All Yumemi forms now learn Icy Wind.
 You now gain a minimum of 1 experience from very underleveled foes.
 
 v1.0.6

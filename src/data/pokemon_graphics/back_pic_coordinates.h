@@ -2433,7 +2433,7 @@ const struct MonCoords gMonBackPicCoords[] =
 	[SPECIES_SHION] = 
 	{
 		.size = 0x87,
-		.y_offset = 1,
+		.y_offset = 2,
 	},
 	[SPECIES_CTAKANE] = 
 	{
