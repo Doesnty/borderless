@@ -295,6 +295,7 @@ const u8 gText_MailSentToPC[] = _("The Mail was sent to your PC.{PAUSE_UNTIL_PRE
 const u8 gText_PCMailboxFull[] = _("Your PC's Mailbox is full.{PAUSE_UNTIL_PRESS}");
 const u8 gText_MailMessageWillBeLost[] = _("If the Mail is removed, the\nmessage will be lost. Okay?");
 const u8 gText_RemoveMailBeforeItem[] = _("Mail must be removed before\nholding an item.{PAUSE_UNTIL_PRESS}");
+const u8 gText_MonDoesntWantThat[] = _("{STR_VAR_1} refuses to\ntake the {STR_VAR_2}!{PAUSE_UNTIL_PRESS}");
 const u8 gText_PkmnWasGivenItem[] = _("{STR_VAR_1} was given the\n{STR_VAR_2} to hold.{PAUSE_UNTIL_PRESS}");
 const u8 gText_PkmnAlreadyHoldingItemSwitch[] = _("{STR_VAR_1} is already holding\none {STR_VAR_2}.\pWould you like to switch the\ntwo items?");
 const u8 gText_PkmnNotHolding[] = _("{STR_VAR_1} isn't holding\nanything.{PAUSE_UNTIL_PRESS}");

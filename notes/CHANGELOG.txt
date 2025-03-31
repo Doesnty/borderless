@@ -1,8 +1,28 @@
 v1.0.7
 
 Fixed TYumemi's and Shion's backsprites.
+Fixed many instances of mons learning moves by level but not by TM, or learning a move twice.
+AdCirno now learns Revenge.
+DRemilia now learns Defense Curl (wow!!!)
+AdAlice now learns Sweet Kiss.
 All Mystia forms now learn Cut.
-All Yumemi forms now learn Icy Wind.
+Non-chibi Eiki forms now learn Torment.
+Shizuha and SShizuha now learn Burn Powder.
+Sanae now learns Whirlwind.
+Murasa now learns Bulk Up.
+Seiran now learns Agility (replacing a redundant Taunt).
+Rotated some Alice moves around to prevent Dark Alice from having Substitute.
+SWriggle can now be TM'd Thunder Wave.
+Entire Momiji line can now be TM'd Spikes.
+Entire Kogasa line can now be TM'd Extrasensory.
+Entire Luna line can now be TM'd Mirror Coat.
+Entire Kokoro line can now be TM'd Counter.
+Entire Shinmyoumaru line can now be TM'd Psycho Cut.
+
+Hisami can now be tutored Leaf Storm.
+
+AI avoids using Thunder Wave on Earth-types.
+Puppets now refuse to hold evolution items that don't apply to them.
 You now gain a minimum of 1 experience from very underleveled foes.
 
 v1.0.6

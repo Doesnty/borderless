@@ -431,6 +431,7 @@ AI_CBM_Reflect:: @ 81DA1F5
 
 AI_CBM_Paralyze:: @ 81DA200
 	if_move MOVE_STUN_SPORE, AI_CBM_StunSpore
+	if_move MOVE_THUNDER_WAVE, AI_CBM_ThunderWave
 AI_CBM_ParalyzeRejoin::
 	get_target_type1
 	if_equal TYPE_ELECTRIC, Score_Minus10
@@ -451,6 +452,13 @@ AI_CBM_StunSpore::
 	if_equal TYPE_NATURE, Score_Minus10
 	get_ability AI_TARGET
 	if_equal ABILITY_WIDE_HAT, Score_Minus10
+	goto AI_CBM_ParalyzeRejoin
+	
+AI_CBM_ThunderWave::
+	get_target_type1
+	if_equal TYPE_EARTH, Score_Minus10
+	get_target_type2
+	if_equal TYPE_EARTH, Score_Minus10
 	goto AI_CBM_ParalyzeRejoin
 
 AI_CBM_Substitute:: @ 81DA219

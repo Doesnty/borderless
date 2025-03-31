@@ -60,6 +60,7 @@
 #include "constants/battle.h"
 #include "constants/easy_chat.h"
 #include "constants/field_effects.h"
+#include "constants/hold_effects.h"
 #include "constants/item_effects.h"
 #include "constants/items.h"
 #include "constants/maps.h"
@@ -270,6 +271,7 @@ static void SwitchPartyMon(void);
 static void Task_SlideSelectedSlotsOnscreen(u8 taskId);
 static void CB2_WriteMailToGiveMon(void);
 static void Task_SwitchHoldItemsPrompt(u8 taskId);
+static void Task_RefuseHoldItem(u8 taskId);
 static void Task_GiveHoldItem(u8 taskId);
 static void Task_UpdateHeldItemSprite(u8 taskId);
 static void Task_HandleSwitchItemsYesNoInput(u8 taskId);
@@ -335,6 +337,8 @@ static void CB2_ReturnToTMCaseMenu(void);
 static void GiveItemOrMailToSelectedMon(u8 taskId);
 static void RemoveItemToGiveFromBag(u16 item);
 static void DisplayItemMustBeRemovedFirstMessage(u8 taskId);
+static void DisplayMonDoesntWantThatMessage(u8 taskId);
+static void DisplayMonDoesntWantThatMessageAndQuit(u8 taskId);
 static void CB2_WriteMailToGiveMonFromBag(void);
 static void GiveItemToSelectedMon(u8 taskId);
 static void Task_UpdateHeldItemSpriteAndClosePartyMenu(u8 taskId);
@@ -3370,8 +3374,13 @@ void CB2_GiveHoldItem(void)
     else
     {
         sPartyMenuItemId = GetMonData(&gPlayerParty[gPartyMenu.slotId], MON_DATA_HELD_ITEM);
+		// Item is not allowed
+		if (ItemId_GetHoldEffect(gSpecialVar_ItemId) == HOLD_EFFECT_EVOLVE && !SpeciesCanEvolveWithHoldItem(&gPlayerParty[gPartyMenu.slotId], gSpecialVar_ItemId))
+		{
+            InitPartyMenu(gPartyMenu.menuType, KEEP_PARTY_LAYOUT, gPartyMenu.action, TRUE, PARTY_MSG_NONE, Task_RefuseHoldItem, gPartyMenu.exitCallback);
+		}
         // Already holding item
-        if (sPartyMenuItemId != ITEM_NONE)
+        else if (sPartyMenuItemId != ITEM_NONE)
         {
             InitPartyMenu(gPartyMenu.menuType, KEEP_PARTY_LAYOUT, gPartyMenu.action, TRUE, PARTY_MSG_NONE, Task_SwitchHoldItemsPrompt, gPartyMenu.exitCallback);
         }
@@ -3387,6 +3396,18 @@ void CB2_GiveHoldItem(void)
         {
             InitPartyMenu(gPartyMenu.menuType, KEEP_PARTY_LAYOUT, gPartyMenu.action, TRUE, PARTY_MSG_NONE, Task_GiveHoldItem, gPartyMenu.exitCallback);
         }
+    }
+}
+
+static void Task_RefuseHoldItem(u8 taskId)
+{
+    u16 item;
+
+    if (!gPaletteFade.active)
+    {
+        gPartyMenu.bagItem = gSpecialVar_ItemId;
+		DisplayMonDoesntWantThatMessage(taskId);
+        gTasks[taskId].func = Task_UpdateHeldItemSprite;
     }
 }
 
@@ -5538,8 +5559,13 @@ void CB2_ChooseMonToGiveItem(void)
 
 static void TryGiveItemOrMailToSelectedMon(u8 taskId)
 {
+    u16 item = gPartyMenu.bagItem;
     sPartyMenuItemId = GetMonData(&gPlayerParty[gPartyMenu.slotId], MON_DATA_HELD_ITEM);
-    if (sPartyMenuItemId == ITEM_NONE)
+	if (ItemId_GetHoldEffect(item) == HOLD_EFFECT_EVOLVE && !SpeciesCanEvolveWithHoldItem(&gPlayerParty[gPartyMenu.slotId], item))
+	{
+        DisplayMonDoesntWantThatMessageAndQuit(taskId);
+	}
+    else if (sPartyMenuItemId == ITEM_NONE)
     {
         GiveItemOrMailToSelectedMon(taskId);
     }
@@ -5684,6 +5710,25 @@ static void Task_HandleSwitchItemsFromBagYesNoInput(u8 taskId)
 static void DisplayItemMustBeRemovedFirstMessage(u8 taskId)
 {
     DisplayPartyMenuMessage(gText_RemoveMailBeforeItem, TRUE);
+    ScheduleBgCopyTilemapToVram(2);
+    gTasks[taskId].func = Task_UpdateHeldItemSpriteAndClosePartyMenu;
+}
+
+static void DisplayMonDoesntWantThatMessage(u8 taskId)
+{
+    GetMonNickname(&gPlayerParty[gPartyMenu.slotId], gStringVar1);
+    CopyItemName(gPartyMenu.bagItem, gStringVar2);
+    StringExpandPlaceholders(gStringVar4, gText_MonDoesntWantThat);
+    DisplayPartyMenuMessage(gStringVar4, TRUE);
+    ScheduleBgCopyTilemapToVram(2);
+}
+
+static void DisplayMonDoesntWantThatMessageAndQuit(u8 taskId)
+{
+    GetMonNickname(&gPlayerParty[gPartyMenu.slotId], gStringVar1);
+    CopyItemName(gPartyMenu.bagItem, gStringVar2);
+    StringExpandPlaceholders(gStringVar4, gText_MonDoesntWantThat);
+    DisplayPartyMenuMessage(gStringVar4, TRUE);
     ScheduleBgCopyTilemapToVram(2);
     gTasks[taskId].func = Task_UpdateHeldItemSpriteAndClosePartyMenu;
 }

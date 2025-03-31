@@ -4564,6 +4564,26 @@ u8 GetNatureFromPersonality(u32 personality)
     return personality % 25;
 }
 
+u8 SpeciesCanEvolveWithHoldItem(struct Pokemon *mon, u16 evolutionItem)
+{
+	u8 i;
+    u16 species = GetMonData(mon, MON_DATA_SPECIES, NULL);
+	
+	for (i = 0; i < EVOS_PER_MON; i++)
+	{
+		switch (gEvolutionTable[species][i].method)
+		{
+            case EVO_LEVEL_HELD_ITEM:
+                if (gEvolutionTable[species][i].param == evolutionItem)
+                {
+                    return TRUE;
+                }
+                break;
+		}
+	}
+	return FALSE;
+}
+
 u16 GetEvolutionTargetSpecies(struct Pokemon *mon, u8 type, u16 evolutionItem)
 {
     int i;
@@ -4590,7 +4610,7 @@ u16 GetEvolutionTargetSpecies(struct Pokemon *mon, u8 type, u16 evolutionItem)
         level = GetMonData(mon, MON_DATA_LEVEL, NULL);
         friendship = GetMonData(mon, MON_DATA_FRIENDSHIP, NULL);
 
-        for (i = 0; i < 5; i++)
+        for (i = 0; i < EVOS_PER_MON; i++)
         {
             switch (gEvolutionTable[species][i].method)
             {

@@ -341,6 +341,7 @@ extern const u8 gText_ThatIsntAnEgg[];
 extern const u8 gText_OtherTrainerCantAcceptPkmn[];
 extern const u8 gText_CantTradeWithTrainer[];
 extern const u8 gUnknown_84176CF[];
+extern const u8 gText_MonDoesntWantThat[];
 extern const u8 gText_PkmnWasGivenItem[];
 extern const u8 gText_ReceivedItemFromPkmn[];
 extern const u8 gText_PkmnAlreadyHoldingItemSwitch[];

@@ -709,60 +709,60 @@ static const u16 sAdChenEggMoveLearnset[] = {
 static const u16 sCAliceEggMoveLearnset[] = {
     MOVE_POWER_WHIP,
     MOVE_KNOCK_OFF,
-    MOVE_CONVERSION,
     MOVE_DOUBLE_KICK,
     MOVE_MAGICAL_LEAF,
     MOVE_FOCUS_ENERGY,
+    MOVE_AQUA_RING,
     0
 };
 
 static const u16 sAliceEggMoveLearnset[] = {
     MOVE_POWER_WHIP,
     MOVE_KNOCK_OFF,
-    MOVE_CONVERSION,
     MOVE_DOUBLE_KICK,
     MOVE_MAGICAL_LEAF,
     MOVE_FOCUS_ENERGY,
+    MOVE_AQUA_RING,
     0
 };
 
 static const u16 sAAliceEggMoveLearnset[] = {
     MOVE_POWER_WHIP,
     MOVE_KNOCK_OFF,
-    MOVE_CONVERSION,
     MOVE_DOUBLE_KICK,
     MOVE_MAGICAL_LEAF,
     MOVE_FOCUS_ENERGY,
+    MOVE_AQUA_RING,
     0
 };
 
 static const u16 sTAliceEggMoveLearnset[] = {
     MOVE_POWER_WHIP,
     MOVE_KNOCK_OFF,
-    MOVE_CONVERSION,
     MOVE_DOUBLE_KICK,
     MOVE_MAGICAL_LEAF,
     MOVE_FOCUS_ENERGY,
+    MOVE_AQUA_RING,
     0
 };
 
 static const u16 sAdAliceEggMoveLearnset[] = {
     MOVE_POWER_WHIP,
     MOVE_KNOCK_OFF,
-    MOVE_CONVERSION,
     MOVE_DOUBLE_KICK,
     MOVE_MAGICAL_LEAF,
     MOVE_FOCUS_ENERGY,
+    MOVE_AQUA_RING,
     0
 };
 
 static const u16 sDarkAliceEggMoveLearnset[] = {
     MOVE_POWER_WHIP,
     MOVE_KNOCK_OFF,
-    MOVE_CONVERSION,
     MOVE_DOUBLE_KICK,
     MOVE_MAGICAL_LEAF,
     MOVE_FOCUS_ENERGY,
+    MOVE_AQUA_RING,
     0
 };
 
@@ -1724,7 +1724,7 @@ static const u16 sCMedicineEggMoveLearnset[] = {
     MOVE_IMPRISON,
     MOVE_HEX,
     MOVE_CLEAR_SMOG,
-	MOVE_MEMENTO,
+    MOVE_MEMENTO,
     0
 };
 
@@ -1736,7 +1736,7 @@ static const u16 sMedicineEggMoveLearnset[] = {
     MOVE_IMPRISON,
     MOVE_HEX,
     MOVE_CLEAR_SMOG,
-	MOVE_MEMENTO,
+    MOVE_MEMENTO,
     0
 };
 
@@ -1748,7 +1748,7 @@ static const u16 sAMedicineEggMoveLearnset[] = {
     MOVE_IMPRISON,
     MOVE_HEX,
     MOVE_CLEAR_SMOG,
-	MOVE_MEMENTO,
+    MOVE_MEMENTO,
     0
 };
 
@@ -1760,7 +1760,7 @@ static const u16 sSMedicineEggMoveLearnset[] = {
     MOVE_IMPRISON,
     MOVE_HEX,
     MOVE_CLEAR_SMOG,
-	MOVE_MEMENTO,
+    MOVE_MEMENTO,
     0
 };
 
@@ -1772,7 +1772,7 @@ static const u16 sTMedicineEggMoveLearnset[] = {
     MOVE_IMPRISON,
     MOVE_HEX,
     MOVE_CLEAR_SMOG,
-	MOVE_MEMENTO,
+    MOVE_MEMENTO,
     0
 };
 
@@ -3185,7 +3185,7 @@ static const u16 sCNueEggMoveLearnset[] = {
     MOVE_SKILL_SWAP,
     MOVE_RAIN_DANCE,
     MOVE_TELEPORT,
-	MOVE_ANOXIC_FUMES,
+    MOVE_ANOXIC_FUMES,
     0
 };
 
@@ -3195,7 +3195,7 @@ static const u16 sNueEggMoveLearnset[] = {
     MOVE_SKILL_SWAP,
     MOVE_RAIN_DANCE,
     MOVE_TELEPORT,
-	MOVE_ANOXIC_FUMES,
+    MOVE_ANOXIC_FUMES,
     0
 };
 
@@ -3205,7 +3205,7 @@ static const u16 sANueEggMoveLearnset[] = {
     MOVE_SKILL_SWAP,
     MOVE_RAIN_DANCE,
     MOVE_TELEPORT,
-	MOVE_ANOXIC_FUMES,
+    MOVE_ANOXIC_FUMES,
     0
 };
 
@@ -3215,7 +3215,7 @@ static const u16 sTNueEggMoveLearnset[] = {
     MOVE_SKILL_SWAP,
     MOVE_RAIN_DANCE,
     MOVE_TELEPORT,
-	MOVE_ANOXIC_FUMES,
+    MOVE_ANOXIC_FUMES,
     0
 };
 
@@ -4721,7 +4721,7 @@ static const u16 sCSannyoEggMoveLearnset[] = {
     MOVE_OMINOUS_WIND,
     MOVE_FISSURE,
     MOVE_FLARE_BLITZ,
-	MOVE_LUCKY_CHANT,
+    MOVE_LUCKY_CHANT,
     0
 };
 
@@ -4733,7 +4733,7 @@ static const u16 sSannyoEggMoveLearnset[] = {
     MOVE_OMINOUS_WIND,
     MOVE_FISSURE,
     MOVE_FLARE_BLITZ,
-	MOVE_LUCKY_CHANT,
+    MOVE_LUCKY_CHANT,
     0
 };
 
@@ -4947,6 +4947,7 @@ static const u16 sCHisamiEggMoveLearnset[] = {
     MOVE_INGRAIN,
     MOVE_LUCKY_CHANT,
     MOVE_AROMATHERAPY,
+    MOVE_LEAF_STORM,
     0
 };
 
@@ -4956,6 +4957,7 @@ static const u16 sHisamiEggMoveLearnset[] = {
     MOVE_INGRAIN,
     MOVE_LUCKY_CHANT,
     MOVE_AROMATHERAPY,
+    MOVE_LEAF_STORM,
     0
 };
 
@@ -5266,7 +5268,7 @@ static const u16 sMeiraEggMoveLearnset[] = {
     0
 };
 
-static const u16 sMagiStonesEggMoveLearnset[] = {
+static const u16 sMagicStonesEggMoveLearnset[] = {
     MOVE_SKILL_SWAP,
     MOVE_ROCK_SLIDE,
     MOVE_ROCK_WRECKER,
