@@ -1,0 +1,151 @@
+These are entered at the questionnaire in the mart.
+Codes can be used more than once, but you must change something on the questionnaire.
+Submitting the same questionnaire consecutively will be treated as not answering it.
+Using these cheats is tracked on your Trainer Card.
+
+
+(GIVE ME) MORE
+MONEY PLEASE
+-Gives you 100 nuggets.
+
+BECOMES INVINCIBLE
+USING SWEETS
+-Gives you 250 Rare Candy.
+
+LET'S EVOLVE
+VERY FAST
+-Gives you 50 copies of every evolution item.
+-If your bag does not have space, the later items will not be given.
+
+GET RIPPED
+WITH TEACHER
+-Gives you every TM and HM.
+
+TEACH (A LOT)
+OF MOVE
+-Sets a flag that enables tutoring moves without a source puppet.
+-This flag is also set by entering the Hall of Fame.
+
+TRAIN HARD
+EARLIER NOW
+-Gives you the Effort Gauge.
+-You normally get this from the Rival in Cerulean City.
+
+WANDERING INSIDE
+FANTASTIC WORLD
+-Gives you CMaribel.
+-This puppet is normally exclusive to post-game, and is not balanced.
+
+STUDY THE
+SECRET TOGETHER
+-Gives you CRenko.
+-This puppet is normally exclusive to post-game, and is not balanced.
+
+
+A couple more codes are at the bottom of the file.
+If you haven't reached the Hall of Fame, seeing them may spoil some surprises.
+They do not give resources; rather, they start fights.
+Scroll down if you wish to see them.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+These cheats will not be marked on the Trainer Card.
+
+MYSTERY MAN
+WITH CARDS
+-Starts the final Imakuni? fight.
+-His team is level 57-60.
+
+FINAL FIGHT
+VERSUS MYSELF
+-Starts champion fight against the character being played as.
+-Her team is level 70-72.
+-This does not count as beating the Champion, or add you to the Hall of Fame.
+
+(IF I LOSE) (I AM)
+(TOO STRONG) SEE
+-Starts rematch champion fight against the character being played as.
+-Her team is level 86-88.
+-This does not count as beating the Champion, or add you to the Hall of Fame.

@@ -457,4 +457,5 @@ gSpecials:: @ 815FD60
 	def_special CountBadges
 	def_special CountBerries
 	def_special GetZunStarterEvolution
+	def_special GiveEveryTM
 gSpecialsEnd::

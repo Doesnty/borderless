@@ -74,6 +74,7 @@ PokemonLeague_ChampionsRoom_EventScript_EnterRoom:: @ 8162B76
 	clearflag FLAG_TEMP_5
 	setflag FLAG_DEFEATED_CHAMP
 	setflag FLAG_TEMP_4
+	setflag FLAG_SYS_UNRESTRICTED_TUTOR
 	
 	@ checkplayergender
 	@ compare VAR_RESULT, 0

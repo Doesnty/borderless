@@ -93,8 +93,6 @@ static bool8 IsECGroupUnlocked(u8 groupId)
     case EC_GROUP_MOVE_1:
     case EC_GROUP_MOVE_2:
         return FlagGet(FLAG_SYS_GAME_CLEAR);
-    case EC_GROUP_POKEMON:
-        return EC_IsNationalPokedexEnabled();
     default:
         return TRUE;
     }

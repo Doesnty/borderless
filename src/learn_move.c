@@ -785,9 +785,10 @@ static void MoveRelearnerMenuHandleInput(void)
         if (sMoveRelearner->selectedIndex != 0xFE)
         {
 			u8 canLearn = TRUE;
-			if (sMoveRelearner->eggMoveMode)
+			if (sMoveRelearner->eggMoveMode && !FlagGet(FLAG_SYS_UNRESTRICTED_TUTOR))
 			{
 				//must have puppet in party with move
+				//or have the override flag set
 				u16 move = sMoveRelearner->learnableMoves[sMoveRelearner->selectedIndex];
 				u8 i;
 				u8 j;

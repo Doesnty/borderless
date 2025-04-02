@@ -7,6 +7,7 @@
 #include "overworld.h"
 #include "party_menu.h"
 #include "pokedex.h"
+#include "item.h"
 #include "script_pokemon_util.h"
 #include "constants/items.h"
 #include "constants/pokemon.h"
@@ -212,4 +213,14 @@ void ReducePlayerPartyToThree(void)
 
     CalculatePlayerPartyCount();
     Free(party);
+}
+
+void GiveEveryTM(void)
+{
+	u32 itemId = ITEM_TM01;
+	while (itemId <= ITEM_HM07)
+	{
+		AddBagItem(itemId, 1);
+		itemId++;
+	}
 }

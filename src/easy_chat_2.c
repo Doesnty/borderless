@@ -301,9 +301,109 @@ static const u16 sECPhrase_LinkTogetherWithAll[] = {
     EC_WORD_ALL
 };
 
+static const u16 sECPhrase_GiveMeMoreMoneyPlease[] = {
+	EC_WORD_GIVE_ME,
+	EC_WORD_MORE,
+	EC_WORD_MONEY,
+	EC_WORD_PLEASE,
+};
+
+static const u16 sECPhrase_BecomesInvincibleUsingSweets[] = {
+	EC_WORD_BECOMES,
+	EC_WORD_INVINCIBLE,
+	EC_WORD_USING,
+	EC_WORD_SWEETS,
+};
+
+static const u16 sECPhrase_LetsEvolveVeryFast[] = {
+	EC_WORD_LET_S,
+	EC_WORD_EVOLVE,
+	EC_WORD_VERY,
+	EC_WORD_FAST,
+};
+
+static const u16 sECPhrase_GetRippedWithTeacher[] = {
+	EC_WORD_GET,
+	EC_WORD_RIPPED,
+	EC_WORD_WITH,
+	EC_WORD_TEACHER,
+};
+
+static const u16 sECPhrase_TeachALotOfMove[] = {
+	EC_WORD_TEACH,
+	EC_WORD_A_LOT,
+	EC_WORD_OF,
+	EC_WORD_MOVE,
+};
+
+static const u16 sECPhrase_TrainHardEarlierNow[] = {
+	EC_WORD_TRAIN,
+	EC_WORD_HARD,
+	EC_WORD_EARLIER,
+	EC_WORD_NOW,
+};
+
+static const u16 sECPhrase_WanderingInsideFantasticWorld[] = {
+	EC_WORD_WANDERING,
+	EC_WORD_INSIDE,
+	EC_WORD_FANTASTIC,
+	EC_WORD_WORLD,
+};
+
+static const u16 sECPhrase_StudyTheSecretTogether[] = {
+	EC_WORD_STUDY,
+	EC_WORD_THE,
+	EC_WORD_SECRET,
+	EC_WORD_TOGETHER,
+};
+
+static const u16 sECPhrase_MysteryManWithCards[] = {
+	EC_WORD_MYSTERY,
+	EC_WORD_MAN,
+	EC_WORD_WITH,
+	EC_WORD_CARDS,
+};
+
+static const u16 sECPhrase_FinalFightVersusMyself[] = {
+	EC_WORD_FINAL,
+	EC_WORD_FIGHT,
+	EC_WORD_VERSUS,
+	EC_WORD_MYSELF,
+};
+
+static const u16 sECPhrase_IfILoseIAmTooStrongSee[] = {
+	EC_WORD_IF_I_LOSE,
+	EC_WORD_I_AM,
+	EC_WORD_TOO_STRONG,
+	EC_WORD_SEE,
+};
+
+static const u16* const sECPhrase_CheatCodes[] = {
+	sECPhrase_GiveMeMoreMoneyPlease,
+	sECPhrase_BecomesInvincibleUsingSweets,
+	sECPhrase_LetsEvolveVeryFast,
+	sECPhrase_GetRippedWithTeacher,
+	sECPhrase_TeachALotOfMove,
+	sECPhrase_TrainHardEarlierNow,
+	sECPhrase_WanderingInsideFantasticWorld,
+	sECPhrase_StudyTheSecretTogether,
+	sECPhrase_MysteryManWithCards,
+	sECPhrase_FinalFightVersusMyself,
+	sECPhrase_IfILoseIAmTooStrongSee,
+};
+
 static void CompareQuestionnaireResponseWithPassphrase(void)
 {
-    gSpecialVar_0x8004 = IsPhraseDifferentThanPlayerInput(sECPhrase_LinkTogetherWithAll, NELEMS(sECPhrase_LinkTogetherWithAll));
+	u8 i;
+	
+	gSpecialVar_0x8004 = 0;
+	
+	for (i = 0; i < NELEMS(sECPhrase_CheatCodes); i++)
+		if (!IsPhraseDifferentThanPlayerInput(sECPhrase_CheatCodes[i], 4))
+		{
+			gSpecialVar_0x8004 = i + 1;
+			i = NELEMS(sECPhrase_CheatCodes);
+		}
 }
 
 static const struct EasyChatScreenTemplate sEasyChatScreenTemplates[] = {
