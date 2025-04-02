@@ -23,9 +23,9 @@ EventScript_Questionnaire:: @ 81A7702
 	case 7, EventScript_CheatMaribel
 	case 8, EventScript_CheatRenko
 	case 9, EventScript_CheatZun,
-	case 9, EventScript_CheatImakuni
-	case 10, EventScript_CheatChampion
-	case 11, EventScript_CheatChampionRematch
+	case 10, EventScript_CheatImakuni
+	case 11, EventScript_CheatChampion
+	case 12, EventScript_CheatChampionRematch
 	end
 
 EventScript_EnableMysteryGift:: @ 81A774D
