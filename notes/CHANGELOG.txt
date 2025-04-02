@@ -1,8 +1,10 @@
-v1.0.7
+v1.1.0
 
+The mart questionnaire now offers a bunch of cheat functions for those who know the secret words.
+Some Cut trees stay removed once cut down.
+ - The ones related to Erika are a deliberate exception to this.
 Entering the Hall of Fame now removes the restrictions on the Move Tutor.
  - This is not retroactive; old saves will need to beat the Champion again.
-The questionnaire now offers a bunch of cheat functions for those who know the secret words.
 Fixed TYumemi's and Shion's backsprites.
 Touched up AShinki's sprites a bit (thanks BluShell)
 Fixed many instances of mons learning moves by level but not by TM, or learning a move twice.
@@ -27,6 +29,8 @@ AI avoids using Thunder Wave on Earth-types.
 Puppets now refuse to hold evolution items that don't apply to them.
 Removed an item from the Department Store that wasn't meant to be there.
 You now gain a minimum of 1 experience from very underleveled foes.
+
+=======================================================
 
 v1.0.6
 
