@@ -295,7 +295,7 @@ ViridianCity_EventScript_ZunGetMonParty::
 
 ViridianCity_EventScript_ZunGetMonPC::
 	playfanfare MUS_LEVEL_UP
-	getspeciesname 0, SPECIES_EEVEE
+	getspeciesname 0, VAR_ZUN_STARTER_SPECIES
 	message ViridianCity_Text_ObtainedAnX
 	waitmessage
 	waitfanfare
@@ -312,7 +312,8 @@ ViridianCity_EventScript_ZunSentMonToPC::
 ViridianCity_EventScript_ZunDoneGetMon::
 	msgbox ViridianCity_Text_ThatWasEducationalTakeThis
 	setvar VAR_MAP_SCENE_VIRIDIAN_CITY_OLD_MAN, 2
-	return
+	releaseall
+	end
 
 ViridianCity_EventScript_ZunMenuReturn::
     switch VAR_TEMP_5

@@ -41,6 +41,10 @@ SECRET TOGETHER
 -Gives you CRenko.
 -This puppet is normally exclusive to post-game, and is not balanced.
 
+ANOTHER NO.1
+FRIEND FOREVER
+-Lets you choose a new favorite Touhou character, and adds them to the party.
+
 
 A couple more codes are at the bottom of the file.
 If you haven't reached the Hall of Fame, seeing them may spoil some surprises.

@@ -22,6 +22,7 @@ EventScript_Questionnaire:: @ 81A7702
 	case 6, EventScript_CheatEffortGauge
 	case 7, EventScript_CheatMaribel
 	case 8, EventScript_CheatRenko
+	case 9, EventScript_CheatZun,
 	case 9, EventScript_CheatImakuni
 	case 10, EventScript_CheatChampion
 	case 11, EventScript_CheatChampionRematch
@@ -330,3 +331,17 @@ EventScript_CheatChampionMaribelRematch::
 	trainerbattle_no_intro TRAINER_CHAMPION_REMATCH_MARIBEL, Text_CheatPostFightChampion
 	releaseall
 	end
+
+EventScript_CheatZun::  
+	applymovement VAR_0x8008, Movement_FaceDown
+	waitmovement 0
+	playse SE_PIN
+	applymovement VAR_0x8008, Movement_ExclamationMark
+	waitmovement 0
+	applymovement VAR_0x8008, Movement_Delay48
+	waitmovement 0
+	msgbox Text_YouKnowThoseWordsZun 
+	incrementgamestat GAME_STAT_CHEATS_USED 
+	setvar VAR_TEMP_5, 0
+    setvar VAR_TEMP_6, 0
+    goto ViridianCity_EventScript_ZunMenu1

@@ -59,6 +59,12 @@ Text_CheatPostFightImakuni::
 Text_CheatPostFightChampion::
 	.string "... ...\n"
 	.string "... ...$"
+
+Text_YouKnowThoseWordsZun::
+	.string "Oh, hello!\n"
+	.string "You know those words?\p"
+	.string "That means you must be looking\n"
+	.string "for a new favorite character.$"
 	
 
 Text_Got100Nuggets::

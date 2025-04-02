@@ -357,6 +357,13 @@ static const u16 sECPhrase_StudyTheSecretTogether[] = {
 	EC_WORD_TOGETHER,
 };
 
+static const u16 sECPhrase_AnotherNo1FriendForever[] = {
+	EC_WORD_ANOTHER,
+	EC_WORD_NO_1,
+	EC_WORD_FRIEND,
+	EC_WORD_FOREVER,
+};
+
 static const u16 sECPhrase_MysteryManWithCards[] = {
 	EC_WORD_MYSTERY,
 	EC_WORD_MAN,
@@ -387,6 +394,7 @@ static const u16* const sECPhrase_CheatCodes[] = {
 	sECPhrase_TrainHardEarlierNow,
 	sECPhrase_WanderingInsideFantasticWorld,
 	sECPhrase_StudyTheSecretTogether,
+	sECPhrase_AnotherNo1FriendForever,
 	sECPhrase_MysteryManWithCards,
 	sECPhrase_FinalFightVersusMyself,
 	sECPhrase_IfILoseIAmTooStrongSee,
