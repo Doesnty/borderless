@@ -2293,12 +2293,12 @@ const struct MonCoords gMonBackPicCoords[] =
 	[SPECIES_CJOON] = 
 	{
 		.size = 0x87,
-		.y_offset = 4,
+		.y_offset = 0,
 	},
 	[SPECIES_JOON] = 
 	{
 		.size = 0x87,
-		.y_offset = 4,
+		.y_offset = 1,
 	},
 	[SPECIES_CKEIKI] = 
 	{
@@ -2428,12 +2428,12 @@ const struct MonCoords gMonBackPicCoords[] =
 	[SPECIES_CSHION] = 
 	{
 		.size = 0x87,
-		.y_offset = 5,
+		.y_offset = 0,
 	},
 	[SPECIES_SHION] = 
 	{
 		.size = 0x87,
-		.y_offset = 2,
+		.y_offset = 1,
 	},
 	[SPECIES_CTAKANE] = 
 	{

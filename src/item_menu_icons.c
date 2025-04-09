@@ -507,8 +507,8 @@ static const void *const sItemIconGfxPtrs[][2] = {
     {gFile_graphics_items_icons_tm_sheet, gFile_graphics_items_icon_palettes_dark_tm_hm_palette}, // snatch
     {gFile_graphics_items_icons_tm_sheet, gFile_graphics_items_icon_palettes_heart_tm_hm_palette}, // mind bomb
     {gFile_graphics_items_icons_tm_sheet, gFile_graphics_items_icon_palettes_fire_tm_hm_palette}, // fire punch
-    {gFile_graphics_items_icons_tm_sheet, gFile_graphics_items_icon_palettes_electric_tm_hm_palette}, // thunder punch
     {gFile_graphics_items_icons_tm_sheet, gFile_graphics_items_icon_palettes_ice_tm_hm_palette}, // ice punch
+    {gFile_graphics_items_icons_tm_sheet, gFile_graphics_items_icon_palettes_electric_tm_hm_palette}, // thunder punch
     {gFile_graphics_items_icons_tm_sheet, gFile_graphics_items_icon_palettes_normal_tm_hm_palette}, // u-turn
     {gFile_graphics_items_icons_tm_sheet, gFile_graphics_items_icon_palettes_electric_tm_hm_palette}, // volt switch
     {gFile_graphics_items_icons_tm_sheet, gFile_graphics_items_icon_palettes_faith_tm_hm_palette}, // extrasensory

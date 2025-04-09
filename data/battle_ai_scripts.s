@@ -221,6 +221,7 @@ AI_CheckBadMove_CheckEffect:: @ 81D9D27
 	if_effect EFFECT_CALM_MIND, AI_CBM_CalmMind
 	if_effect EFFECT_DRAGON_DANCE, AI_CBM_DragonDance
 	if_effect EFFECT_WISH, AI_CBM_Wish
+	if_effect EFFECT_TAUNT, AI_CBM_Taunt
 	end
 
 AI_CBM_Sleep:: @ 81D9FB6
@@ -674,6 +675,13 @@ AI_CBM_Wish::
 	get_last_used_move AI_USER
 	get_move_effect_from_result
 	if_equal EFFECT_WISH, Score_Minus10
+	end
+
+AI_CBM_Taunt::
+	if_target_not_taunted AI_CBM_TauntEnd
+	goto Score_Minus10
+	
+AI_CBM_TauntEnd::
 	end
 
 Score_Minus1:: @ 81DA424

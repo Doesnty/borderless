@@ -179,6 +179,6 @@ const u8 gEnemyMonElevation[NUM_SPECIES] =
     
     [SPECIES_ZFAIRY] = 9,
 	
-	[SPECIES_CSHION] = 2,
-	[SPECIES_SHION] = 6,
+	[SPECIES_CSHION] = 0,
+	[SPECIES_SHION] = 4,
 };

@@ -3307,7 +3307,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
     [MOVE_HIDDEN_POWER] = 
     {
         .effect = EFFECT_HIT,
-        .power = 60,
+        .power = 70,
         .type = TYPE_ILLUSION,
         .moveClass = CLASS_SPECIAL,
         .accuracy = 100,
