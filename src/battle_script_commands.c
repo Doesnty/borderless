@@ -2188,6 +2188,7 @@ static void atk0B_healthbarupdate(void)
 static void atk0C_datahpupdate(void)
 {
     u32 moveType;
+	u8 hittingSubstitute = 0;
 
     if (!gBattleControllerExecFlags)
     {
@@ -2267,6 +2268,9 @@ static void atk0C_datahpupdate(void)
                     {
                         gProtectStructs[gActiveBattler].physicalDmg = gHpDealt;
                         gSpecialStatuses[gActiveBattler].physicalDmg = gHpDealt;
+                        gProtectStructs[gActiveBattler].anyDmg = 1;
+						gSpecialStatuses[gActiveBattler].anyDmg = 1;
+						
                         if (gBattlescriptCurrInstr[1] == BS_TARGET)
                         {
                             gProtectStructs[gActiveBattler].physicalBattlerId = gBattlerAttacker;
@@ -2282,6 +2286,8 @@ static void atk0C_datahpupdate(void)
                     {
                         gProtectStructs[gActiveBattler].specialDmg = gHpDealt;
                         gSpecialStatuses[gActiveBattler].specialDmg = gHpDealt;
+						gProtectStructs[gActiveBattler].anyDmg = 1;
+						gSpecialStatuses[gActiveBattler].anyDmg = 1;
                         if (gBattlescriptCurrInstr[1] == BS_TARGET)
                         {
                             gProtectStructs[gActiveBattler].specialBattlerId = gBattlerAttacker;
@@ -4599,7 +4605,7 @@ static void atk49_moveend(void)
             if (gBattleMons[gBattlerTarget].status1 & STATUS1_FREEZE
              && gBattleMons[gBattlerTarget].hp != 0
              && gBattlerAttacker != gBattlerTarget
-             && gSpecialStatuses[gBattlerTarget].specialDmg
+             && gSpecialStatuses[gBattlerTarget].anyDmg
              && !(gMoveResultFlags & MOVE_RESULT_NO_EFFECT)
              && moveType == TYPE_FIRE)
             {
@@ -9007,7 +9013,7 @@ static void atkCE_settorment(void)
 
 static void atkCF_jumpifnodamage(void)
 {
-    if (gProtectStructs[gBattlerAttacker].physicalDmg || gProtectStructs[gBattlerAttacker].specialDmg)
+    if (gProtectStructs[gBattlerAttacker].anyDmg)
         gBattlescriptCurrInstr += 5;
     else
         gBattlescriptCurrInstr = T1_READ_PTR(gBattlescriptCurrInstr + 1);
@@ -9169,10 +9175,9 @@ static void atkD5_trysetroots(void) // ingrain
 
 static void atkD6_doubledamagedealtifdamaged(void)
 {
-    if ((gProtectStructs[gBattlerAttacker].physicalDmg != 0
-        && gProtectStructs[gBattlerAttacker].physicalBattlerId == gBattlerTarget)
-     || (gProtectStructs[gBattlerAttacker].specialDmg != 0
-        && gProtectStructs[gBattlerAttacker].specialBattlerId == gBattlerTarget))
+    if (gProtectStructs[gBattlerAttacker].anyDmg != 0
+        && (gProtectStructs[gBattlerAttacker].physicalBattlerId == gBattlerTarget
+        || gProtectStructs[gBattlerAttacker].specialBattlerId == gBattlerTarget))
     {
         gBattleScripting.dmgMultiplier = 2;
     }

@@ -7,6 +7,13 @@ Hopefully actually fixed Ice Punch and ThunderPunch this time.
 Junko now gets Belligerent instead of Pure Furies.
 Pristine Shot and Exterminate now bypass the target's Ability if it would weaken or prevent the move.
 Play Ghost no longer claims credit for avoiding super-effective attacks that simply missed.
+Renamed Dam Breakage to Dam Breach (which it already was in the documentation).
+Moved TM44 Rest and TM60 Endure (to the clerk with the status tms one tile over).
+Fixed bug where physical fire moves wouldn't defrost the target.
+Fixed some gen 3 quirks when enduring a move while already at 1 HP:
+ -Contact/reaction abilities now actually trigger
+ -Focus Punch will now be interrupted
+ -Revenge's damage will now be doubled
 
 v1.1.1
 

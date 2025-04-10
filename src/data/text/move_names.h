@@ -307,7 +307,7 @@ const u8 gMoveNames[][15] = {
     _("Cross Poison"),
     _("Crush Claw"),
     _("Flare Blitz"),
-    _("Dam Breakage"),
+    _("Dam Breach"),
     _("Meteor Mash"),
     _("Astonish"),
     _("Weather Ball"),

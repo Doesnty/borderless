@@ -50,7 +50,6 @@ CeladonCity_DepartmentStore_2F_TMs:: @ 816BB74
 	.2byte ITEM_TM15
 	.2byte ITEM_TM27
 	.2byte ITEM_TM31
-	.2byte ITEM_TM44
 	.2byte ITEM_TM45
 	.2byte ITEM_TM57
 	.2byte ITEM_TM75
@@ -73,6 +72,7 @@ CeladonCity_DepartmentStore_2F_EventScript_ClerkMoreTMs:: @ 816BB4E
 
 	.align 2
 CeladonCity_DepartmentStore_2F_MoreTMs:: @ 816BB74
+	.2byte ITEM_TM44
 	.2byte ITEM_TM60
 	.2byte ITEM_TM61
 	.2byte ITEM_TM62
