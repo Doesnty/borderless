@@ -181,7 +181,7 @@
 #define HITMARKER_x800000               0x00800000
 #define HITMARKER_GRUDGE                0x01000000
 #define HITMARKER_OBEYS                 0x02000000
-#define HITMARKER_x4000000              0x04000000
+#define HITMARKER_MOLD_BREAKER          0x04000000
 #define HITMARKER_CHARGING              0x08000000
 #define HITMARKER_FAINTED(battler)      (gBitTable[battler] << 0x1C)
 #define HITMARKER_FAINTED2(battler)     (0x10000000 << battler)

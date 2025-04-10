@@ -1802,8 +1802,7 @@ s32 CalculateBaseDamage(struct BattlePokemon *attacker, struct BattlePokemon *de
     else if (move == MOVE_EARTH_PRESS)
         attack = attacker->defense;
     
-    if (attacker->ability == ABILITY_PURE_FURIES ||
-        attacker->ability == ABILITY_MOLD_BREAKER)
+    if (gHitMarker & HITMARKER_MOLD_BREAKER)
         defenderAbility = ABILITY_NONE;
     else
         defenderAbility = defender->ability;

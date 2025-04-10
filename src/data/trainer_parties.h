@@ -11985,7 +11985,7 @@ static const struct TrainerMonFullControl sParty_EliteFourLance2[] = {
         .evs = {60, 30, 30, 0, 0, 0},
         .nature = NATURE_BRAVE,
         .gender = MON_MALE,
-        .ability = 0, // Flawless
+        .ability = 2, // Belligerent
         .ball = ITEM_POKE_BALL,
         .moves = {MOVE_MEGA_PUNCH, MOVE_FIRE_BLAST, MOVE_OUTRAGE, MOVE_PRISTINE_SHOT},
     },

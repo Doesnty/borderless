@@ -1169,6 +1169,10 @@ static const u32 gUnknown_8250898 = 0xFF7EAE60;
 static void atk00_attackcanceler(void)
 {
     s32 i;
+	
+    if (gBattleMons[gBattlerAttacker].ability == ABILITY_MOLD_BREAKER ||
+		gCurrentMove == MOVE_PRISTINE_SHOT || gCurrentMove == MOVE_EXTERMINATE)
+		gHitMarker |= HITMARKER_MOLD_BREAKER;
 
     if (gBattleOutcome)
     {
@@ -1183,9 +1187,7 @@ static void atk00_attackcanceler(void)
     }
     if (AtkCanceller_UnableToUseMove())
         return;
-    if (gBattleMons[gBattlerAttacker].ability != ABILITY_MOLD_BREAKER
-        && gBattleMons[gBattlerAttacker].ability != ABILITY_PURE_FURIES
-        && AbilityBattleEffects(ABILITYEFFECT_MOVES_BLOCK, gBattlerTarget, 0, 0, 0))
+    if (!(gHitMarker & HITMARKER_MOLD_BREAKER) && AbilityBattleEffects(ABILITYEFFECT_MOVES_BLOCK, gBattlerTarget, 0, 0, 0))
         return;
     if (!gBattleMons[gBattlerAttacker].pp[gCurrMovePos] && gCurrentMove != MOVE_STRUGGLE && !(gHitMarker & (HITMARKER_x800000 | HITMARKER_NO_ATTACKSTRING))
      && !(gBattleMons[gBattlerAttacker].status2 & STATUS2_MULTIPLETURNS))
@@ -1218,8 +1220,7 @@ static void atk00_attackcanceler(void)
         }
     }
     gHitMarker |= HITMARKER_OBEYS;
-    if (gBattleMons[gBattlerAttacker].ability != ABILITY_MOLD_BREAKER
-        && gBattleMons[gBattlerAttacker].ability != ABILITY_PURE_FURIES
+    if (!(gHitMarker & HITMARKER_MOLD_BREAKER)
 		&& gBattleMons[gBattlerTarget].ability == ABILITY_MAGIC_BOUNCE && gBattleMoves[gCurrentMove].flags & FLAG_MAGICCOAT_AFFECTED
 		&& !(gHitMarker & HITMARKER_BOUNCED))
     {
@@ -1291,8 +1292,7 @@ static void JumpIfMoveFailed(u8 adder, u16 move)
     else
     {
         TrySetDestinyBondToHappen();
-        if (gBattleMons[gBattlerAttacker].ability != ABILITY_MOLD_BREAKER
-            && gBattleMons[gBattlerAttacker].ability != ABILITY_PURE_FURIES
+        if (!(gHitMarker & HITMARKER_MOLD_BREAKER)
             && AbilityBattleEffects(ABILITYEFFECT_ABSORBING, gBattlerTarget, 0, 0, move))
             return;
     }
@@ -1416,8 +1416,7 @@ static void atk01_accuracycheck(void)
         GET_MOVE_TYPE(move, type);
         if (JumpIfMoveAffectedByProtect(move) || AccuracyCalcHelper(move))
             return;
-        if (gBattleMons[gBattlerAttacker].ability == ABILITY_MOLD_BREAKER ||
-            gBattleMons[gBattlerAttacker].ability == ABILITY_PURE_FURIES)
+        if (gHitMarker & HITMARKER_MOLD_BREAKER)
             targetAbility = 0;
         else
             targetAbility = gBattleMons[gBattlerTarget].ability;
@@ -1581,8 +1580,7 @@ static void atk04_critcalc(void)
     u8 targetAbility = gBattleMons[gBattlerTarget].ability;
     u16 attackerSpecies = gBattleMons[gBattlerAttacker].species;
 
-    if (gBattleMons[gBattlerAttacker].ability == ABILITY_MOLD_BREAKER ||
-        gBattleMons[gBattlerAttacker].ability == ABILITY_PURE_FURIES)
+    if (gHitMarker & HITMARKER_MOLD_BREAKER)
         targetAbility = ABILITY_NONE;
     item = gBattleMons[gBattlerAttacker].item;
     if (gBattleMons[gBattlerAttacker].ability == ABILITY_KLUTZ)
@@ -1691,12 +1689,12 @@ static void atk06_typecalc(void)
     u8 moveType;
     
     defenderAbility = gBattleMons[gBattlerTarget].ability;
-    if (gBattleMons[gBattlerAttacker].ability == ABILITY_MOLD_BREAKER
-        || gBattleMons[gBattlerAttacker].ability == ABILITY_PURE_FURIES)
-        defenderAbility = ABILITY_NONE;
     defenderItem = gBattleMons[gBattlerTarget].item;
+	// order here is because we don't want klutz ignored by mold breaker to result in a resist berry use
     if (defenderAbility == ABILITY_KLUTZ)
         defenderItem = 0;
+    if (gHitMarker & HITMARKER_MOLD_BREAKER)
+        defenderAbility = ABILITY_NONE;
 	
 	attackerItem = gBattleMons[gBattlerAttacker].item;
 	if (gBattleMons[gBattlerAttacker].ability == ABILITY_KLUTZ)
@@ -1792,14 +1790,14 @@ static void atk06_typecalc(void)
 
 static void CheckWonderGuardAndLevitate(void)
 {
-    u8 flags = 0;
+    u16 flags = 0;
     s32 i = 0;
+	u8 matchup;
     u8 moveType;
 
     if (gCurrentMove == MOVE_STRUGGLE || !gBattleMoves[gCurrentMove].power)
         return;
-    if (gBattleMons[gBattlerAttacker].ability == ABILITY_MOLD_BREAKER ||
-        gBattleMons[gBattlerAttacker].ability == ABILITY_PURE_FURIES)
+    if (gHitMarker & HITMARKER_MOLD_BREAKER)
         return;
     GET_MOVE_TYPE(gCurrentMove, moveType);
     if (gBattleMons[gBattlerTarget].ability == ABILITY_LEVITATE && moveType == TYPE_GROUND)
@@ -1809,11 +1807,19 @@ static void CheckWonderGuardAndLevitate(void)
         RecordAbilityBattle(gBattlerTarget, ABILITY_LEVITATE);
         return;
     }
-    flags = TypeCalc(gCurrentMove, gBattlerAttacker, gBattlerTarget);
+    //flags = TypeCalc(gCurrentMove, gBattlerAttacker, gBattlerTarget);
+	
+	matchup = gTypeEffectiveness[moveType][gBattleMons[gBattlerTarget].type1];
+	ModulateDmgByType2(matchup, gCurrentMove, &flags);
+	if (gBattleMons[gBattlerTarget].type1 != gBattleMons[gBattlerTarget].type2)
+	{
+		matchup = gTypeEffectiveness[moveType][gBattleMons[gBattlerTarget].type2];
+		ModulateDmgByType2(matchup, gCurrentMove, &flags);
+	}
     
-    if (gBattleMons[gBattlerTarget].ability == ABILITY_PLAY_GHOST && AttacksThisTurn(gBattlerAttacker, gCurrentMove) == 2)
+    if (!(gHitMarker & HITMARKER_MOLD_BREAKER) && gBattleMons[gBattlerTarget].ability == ABILITY_PLAY_GHOST && AttacksThisTurn(gBattlerAttacker, gCurrentMove) == 2)
     {
-        if (((flags & 2) || !(flags & 1)) && gBattleMoves[gCurrentMove].power)
+        if (!(flags & MOVE_RESULT_SUPER_EFFECTIVE) && gBattleMoves[gCurrentMove].power)
         {
             gLastUsedAbility = ABILITY_PLAY_GHOST;
             gBattleCommunication[6] = 3;
@@ -1900,8 +1906,7 @@ u8 TypeCalc(u16 move, u8 attacker, u8 defender)
     }
     
     defenderAbility = gBattleMons[defender].ability;
-    if (gBattleMons[attacker].ability == ABILITY_MOLD_BREAKER ||
-        gBattleMons[attacker].ability == ABILITY_PURE_FURIES)
+    if (gHitMarker & HITMARKER_MOLD_BREAKER)
         defenderAbility = ABILITY_NONE;
 
     if (defenderAbility == ABILITY_LEVITATE && moveType == TYPE_GROUND)
@@ -1982,8 +1987,7 @@ static void atk07_adjustnormaldamage(void)
     u8 holdEffect, param;
     u8 defenderAbility = gBattleMons[gBattlerTarget].ability;
     
-    if (gBattleMons[gBattlerAttacker].ability == ABILITY_MOLD_BREAKER ||
-        gBattleMons[gBattlerAttacker].ability == ABILITY_PURE_FURIES)
+    if (gHitMarker & HITMARKER_MOLD_BREAKER)
         defenderAbility = ABILITY_NONE;
 
     ApplyRandomDmgMultiplier();
@@ -2131,8 +2135,7 @@ static void atk0B_healthbarupdate(void)
             gActiveBattler = GetBattlerForBattleScript(gBattlescriptCurrInstr[1]);
 			
 			defenderAbility = gBattleMons[gActiveBattler].ability;
-			if (gBattleMons[gBattlerAttacker].ability == ABILITY_MOLD_BREAKER ||
-				gBattleMons[gBattlerAttacker].ability == ABILITY_PURE_FURIES)
+			if (gHitMarker & HITMARKER_MOLD_BREAKER)
 				defenderAbility = 0;
 
             if (gBattleMons[gActiveBattler].status2 & STATUS2_SUBSTITUTE && gDisableStructs[gActiveBattler].substituteHP && !(gHitMarker & HITMARKER_IGNORE_SUBSTITUTE))
@@ -3417,8 +3420,7 @@ static void atk1E_jumpifability(void)
     u8 ability = gBattlescriptCurrInstr[2];
     const u8 *jumpPtr = T2_READ_PTR(gBattlescriptCurrInstr + 3);
     
-    if (gBattleMons[gBattlerAttacker].ability == ABILITY_MOLD_BREAKER ||
-        gBattleMons[gBattlerAttacker].ability == ABILITY_PURE_FURIES)
+    if (gHitMarker & HITMARKER_MOLD_BREAKER)
     {
         u8 i = 0;
 		while (sMoldBreakerAbilities[i])
@@ -6695,8 +6697,7 @@ static void atk78_faintifabilitynotdamp(void)
 {
     if (!gBattleControllerExecFlags)
     {
-        if (gBattleMons[gBattlerAttacker].ability == ABILITY_MOLD_BREAKER ||
-            gBattleMons[gBattlerAttacker].ability == ABILITY_PURE_FURIES)
+        if (gHitMarker & HITMARKER_MOLD_BREAKER)
             gBattlerTarget = gBattlersCount;
         else
             for (gBattlerTarget = 0; gBattlerTarget < gBattlersCount; ++gBattlerTarget)
