@@ -2373,12 +2373,12 @@ const struct MonCoords gMonBackPicCoords[] =
 	[SPECIES_CNARUMI] = 
 	{
 		.size = 0x55,
-		.y_offset = 11,
+		.y_offset = 0,
 	},
 	[SPECIES_NARUMI] = 
 	{
 		.size = 0x77,
-		.y_offset = 4,
+		.y_offset = 0,
 	},
 	[SPECIES_ANARUMI] = 
 	{
@@ -2418,12 +2418,12 @@ const struct MonCoords gMonBackPicCoords[] =
 	[SPECIES_CSANNYO] = 
 	{
 		.size = 0x88,
-		.y_offset = 4,
+		.y_offset = 0,
 	},
 	[SPECIES_SANNYO] = 
 	{
 		.size = 0x88,
-		.y_offset = 1,
+		.y_offset = 0,
 	},
 	[SPECIES_CSHION] = 
 	{
