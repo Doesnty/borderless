@@ -112,6 +112,7 @@ AI_CheckBadMove_CheckSoundproof:: @ 81D9CE0
 
 AI_CheckBadMove_CheckEffect:: @ 81D9D27
 	if_effect EFFECT_SLEEP, AI_CBM_Sleep
+	if_effect EFFECT_YAWN, AI_CBM_Sleep
 	if_effect EFFECT_EXPLOSION, AI_CBM_Explosion
 	if_effect EFFECT_DREAM_EATER, AI_CBM_DreamEater
 	if_effect EFFECT_ATTACK_UP, AI_CBM_AttackUp

@@ -382,7 +382,7 @@ static void Task_Hof_InitMonData(u8 taskId)
 {
     u16 i;
     u16 j;
-    u8 nick[11];
+    u8 nick[13];
 
     gTasks[taskId].data[2] = 0;
     for (i = 0; i < PARTY_SIZE; i++)
@@ -394,7 +394,7 @@ static void Task_Hof_InitMonData(u8 taskId)
             sHofMonPtr[0].mon[i].personality = GetMonData(&gPlayerParty[i], MON_DATA_PERSONALITY);
             sHofMonPtr[0].mon[i].lvl = GetMonData(&gPlayerParty[i], MON_DATA_LEVEL);
             GetMonData(&gPlayerParty[i], MON_DATA_NICKNAME, nick);
-            for (j = 0; j < 10; j++)
+            for (j = 0; j < 13; j++)
                 sHofMonPtr[0].mon[i].nick[j] = nick[j];
             gTasks[taskId].data[2]++;
         }
@@ -1027,7 +1027,7 @@ static void HallOfFame_PrintMonInfo(struct HallofFameMon* currMon, u8 unused1, u
     i = 0;
     if (currMon->nick[0] != EOS)
     {
-        for (i = 0; i < 10 && currMon->nick[i] != EOS; i++)
+        for (i = 0; i < 13 && currMon->nick[i] != EOS; i++)
         {
             text[i] = currMon->nick[i];
         }
