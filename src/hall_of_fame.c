@@ -1020,7 +1020,7 @@ static void HallOfFame_PrintMonInfo(struct HallofFameMon* currMon, u8 unused1, u
         }
         text[3] = EOS;
         StringAppend(text2, text);
-        AddTextPrinterParameterized3(0, 2, 0x10, 1, sTextColors[0], 0, text2);
+        AddTextPrinterParameterized3(0, 2, 0x0, 1, sTextColors[0], 0, text2);
     }
 
     // nick, species names, gender and lvl
