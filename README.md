@@ -48,7 +48,7 @@ Disassembly: pret
 
 Hacking, much of concept: Doesnt
 
-Sprites: HemoglobinA1C, Scrimmy, Barudo, Reimufate, Blue, BluShell
+Sprites: HemoglobinA1C, Scrimmy, Barudo, Reimufate, Blue, BluShell, seruphim, AutumnMood
 
 Special Thanks: Kalt, Barudo, RedAlice, Darkge, Lotus, TheEeveeMan, LittleBigTrouble, nook
 

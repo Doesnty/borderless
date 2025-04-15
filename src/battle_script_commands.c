@@ -1373,6 +1373,7 @@ static bool8 AccuracyCalcHelper(u16 move)
 static void atk01_accuracycheck(void)
 {
     u16 move = T2_READ_16(gBattlescriptCurrInstr + 5);
+	u8 autohit = FALSE;
 
     if ((gBattleTypeFlags & BATTLE_TYPE_FIRST_BATTLE
         && !BtlCtrl_OakOldMan_TestState2Flag(1)
@@ -1387,18 +1388,25 @@ static void atk01_accuracycheck(void)
         JumpIfMoveFailed(7, move);
         return;
     }
-    if (move == NO_ACC_CALC || move == NO_ACC_CALC_CHECK_LOCK_ON || gBattleMons[gBattlerAttacker].ability == ABILITY_NO_GUARD || gBattleMons[gBattlerTarget].ability == ABILITY_NO_GUARD ||
-		(gCurrentMove == MOVE_TOXIC && (gBattleMons[gBattlerAttacker].type1 == TYPE_MIASMA || gBattleMons[gBattlerAttacker].type2 == TYPE_MIASMA)))
+    if (move == NO_ACC_CALC || move == NO_ACC_CALC_CHECK_LOCK_ON)
     {
         if (gStatuses3[gBattlerTarget] & STATUS3_ALWAYS_HITS && move == NO_ACC_CALC_CHECK_LOCK_ON && gDisableStructs[gBattlerTarget].battlerWithSureHit == gBattlerAttacker)
-            gBattlescriptCurrInstr += 7;
-		else if (gCurrentMove == MOVE_TOXIC && (gBattleMons[gBattlerAttacker].type1 == TYPE_MIASMA || gBattleMons[gBattlerAttacker].type2 == TYPE_MIASMA))
             gBattlescriptCurrInstr += 7;
         else if (gStatuses3[gBattlerTarget] & (STATUS3_ON_AIR | STATUS3_UNDERGROUND | STATUS3_UNDERWATER))
             gBattlescriptCurrInstr = T1_READ_PTR(gBattlescriptCurrInstr + 1);
         else if (!JumpIfMoveAffectedByProtect(0))
-            gBattlescriptCurrInstr += 7;
+			gBattlescriptCurrInstr += 7;
     }
+	else if (gBattleMons[gBattlerAttacker].ability == ABILITY_NO_GUARD || gBattleMons[gBattlerTarget].ability == ABILITY_NO_GUARD)
+	{
+        if (!JumpIfMoveAffectedByProtect(0))
+			gBattlescriptCurrInstr += 7;
+	}
+	else if (gCurrentMove == MOVE_TOXIC && (gBattleMons[gBattlerAttacker].type1 == TYPE_MIASMA || gBattleMons[gBattlerAttacker].type2 == TYPE_MIASMA))
+    {
+        if (!JumpIfMoveAffectedByProtect(0))
+			gBattlescriptCurrInstr += 7;
+	}
     else
     {
         u8 type, moveAcc, holdEffect, atkHoldEffect, param, targetAbility;

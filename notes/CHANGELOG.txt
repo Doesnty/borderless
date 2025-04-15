@@ -3,6 +3,7 @@ v1.1.2
 CShion's stats changed:
  40/60/35/80/80/75 -> 50/70/45/90/90/25
 New sprites for Shion, Joon, Narumi, and Sannyo; a bunch of sprite tweaks as well (thanks BluShell).
+TensokuG now has a distinct backsprite (thanks AutumnMood).
 Hopefully actually fixed Ice Punch and ThunderPunch this time.
 Junko now gets Belligerent instead of Pure Furies.
 Pristine Shot and Exterminate now bypass the target's Ability if it would weaken or prevent the move.
@@ -10,6 +11,7 @@ Renamed Dam Breakage to Dam Breach (which it already was in the documentation).
 Moved TM44 Rest and TM60 Endure (to the clerk with the status tms one tile over).
 Addressed Ball Lightning's name being too long for the battle interface.
 Fixed bug where physical fire moves wouldn't defrost the target.
+Fixed No Guard interaction with semi-invulnerable moves.
 Play Ghost no longer claims credit for avoiding super-effective attacks that simply missed.
 Fixed some gen 3 quirks when enduring a move while already at 1 HP:
  -Contact/reaction abilities now actually trigger
