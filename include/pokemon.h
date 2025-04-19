@@ -228,6 +228,7 @@ struct BaseStats
             u8 noFlip : 1;
  /* 0x20 */ u16 expYield;
  /* 0x22 */ u8 cost;
+ /* 0x23 */ u8 touhou;
 };
 
 struct BattleMove

@@ -61,6 +61,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_ANGER_POINT,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_REIMU,
         .cost = 90,
     },
     [SPECIES_REIMU] = 
@@ -87,6 +88,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_CHEERFUL,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_REIMU,
         .cost = 120,
     },
     [SPECIES_AREIMU] = 
@@ -113,6 +115,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_ANGER_POINT,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_REIMU,
         .cost = 120,
     },
     [SPECIES_DREIMU] = 
@@ -139,6 +142,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_ANGER_POINT,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_REIMU,
         .cost = 120,
     },
     [SPECIES_CMARISA] = 
@@ -165,6 +169,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_POWER_LEAK,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_MARISA,
         .cost = 60,
     },
     [SPECIES_MARISA] = 
@@ -191,6 +196,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_POWER_LEAK,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_MARISA,
         .cost = 80,
     },
     [SPECIES_AMARISA] = 
@@ -217,6 +223,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_POWER_LEAK,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_MARISA,
         .cost = 80,
     },
     [SPECIES_SMARISA] = 
@@ -243,6 +250,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_POWER_LEAK,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_MARISA,
         .cost = 80,
     },
     [SPECIES_ADMARISA] = 
@@ -269,6 +277,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_POWER_LEAK,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_MARISA,
         .cost = 80,
     },
     [SPECIES_CRUMIA] = 
@@ -295,6 +304,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_HUSTLE,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_RUMIA,
         .cost = 45,
     },
     [SPECIES_RUMIA] = 
@@ -321,6 +331,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_HUSTLE,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_RUMIA,
         .cost = 60,
     },
     [SPECIES_ARUMIA] = 
@@ -347,6 +358,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_HUSTLE,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_RUMIA,
         .cost = 60,
     },
     [SPECIES_SRUMIA] = 
@@ -373,6 +385,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_HUSTLE,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_RUMIA,
         .cost = 60,
     },
     [SPECIES_CDAIYOUSEI] = 
@@ -399,6 +412,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_FLOWER_GIFT,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_DAIYOUSEI,
         .cost = 30,
     },
     [SPECIES_DAIYOUSEI] = 
@@ -425,6 +439,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_CHEERFUL,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_DAIYOUSEI,
         .cost = 40,
     },
     [SPECIES_ADAIYOUSEI] = 
@@ -451,6 +466,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_FLOWER_GIFT,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_DAIYOUSEI,
         .cost = 40,
     },
     [SPECIES_DDAIYOUSEI] = 
@@ -477,6 +493,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_FLOWER_GIFT,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_DAIYOUSEI,
         .cost = 40,
     },
     [SPECIES_CCIRNO] = 
@@ -503,6 +520,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_SLUSH_RUSH,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_CIRNO,
         .cost = 45,
     },
     [SPECIES_CIRNO] = 
@@ -529,6 +547,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_SLUSH_RUSH,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_CIRNO,
         .cost = 60,
     },
     [SPECIES_SCIRNO] = 
@@ -555,6 +574,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_SLUSH_RUSH,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_CIRNO,
         .cost = 60,
     },
     [SPECIES_TCIRNO] = 
@@ -581,6 +601,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_DROUGHT,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_CIRNO,
         .cost = 60,
     },
     [SPECIES_ADCIRNO] = 
@@ -607,6 +628,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_STEADFAST,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_CIRNO,
         .cost = 60,
     },
     [SPECIES_CMEILING] = 
@@ -633,6 +655,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_SCRAPPY,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_MEILING,
         .cost = 45,
     },
     [SPECIES_MEILING] = 
@@ -659,6 +682,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_SCRAPPY,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_MEILING,
         .cost = 60,
     },
     [SPECIES_DMEILING] = 
@@ -685,6 +709,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_SCRAPPY,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_MEILING,
         .cost = 60,
     },
     [SPECIES_SMEILING] = 
@@ -711,6 +736,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_SCRAPPY,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_MEILING,
         .cost = 60,
     },
     [SPECIES_ADMEILING] = 
@@ -737,6 +763,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_SCRAPPY,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_MEILING,
         .cost = 60,
     },
     [SPECIES_CKOAKUMA] = 
@@ -763,6 +790,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_MAGIC_BOUNCE,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_KOAKUMA,
         .cost = 30,
     },
     [SPECIES_KOAKUMA] = 
@@ -789,6 +817,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_MAGIC_BOUNCE,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_KOAKUMA,
         .cost = 40,
     },
     [SPECIES_HKOAKUMA] = 
@@ -815,6 +844,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_MAGIC_BOUNCE,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_KOAKUMA,
         .cost = 40,
     },
     [SPECIES_CPATCHOULI] = 
@@ -841,6 +871,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_PROTEAN,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_PATCHOULI,
         .cost = 60,
     },
     [SPECIES_PATCHOULI] = 
@@ -867,6 +898,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_PROTEAN,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_PATCHOULI,
         .cost = 80,
     },
     [SPECIES_APATCHOULI] = 
@@ -893,6 +925,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_PRESSURE,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_PATCHOULI,
         .cost = 80,
     },
     [SPECIES_DPATCHOULI] = 
@@ -919,6 +952,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_STURDY,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_PATCHOULI,
         .cost = 80,
     },
     [SPECIES_CSAKUYA] = 
@@ -945,6 +979,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_INNER_FOCUS,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_SAKUYA,
         .cost = 60,
     },
     [SPECIES_SAKUYA] = 
@@ -971,6 +1006,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_INNER_FOCUS,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_SAKUYA,
         .cost = 80,
     },
     [SPECIES_TSAKUYA] = 
@@ -997,6 +1033,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_PRESSURE,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_SAKUYA,
         .cost = 80,
     },
     [SPECIES_HSAKUYA] = 
@@ -1023,6 +1060,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_INNER_FOCUS,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_SAKUYA,
         .cost = 80,
     },
     [SPECIES_CREMILIA] = 
@@ -1049,6 +1087,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_SUPER_LUCK,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_REMILIA,
         .cost = 90,
     },
     [SPECIES_REMILIA] = 
@@ -1075,6 +1114,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_SUPER_LUCK,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_REMILIA,
         .cost = 120,
     },
     [SPECIES_AREMILIA] = 
@@ -1101,6 +1141,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_CHARISMATIC,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_REMILIA,
         .cost = 120,
     },
     [SPECIES_DREMILIA] = 
@@ -1127,6 +1168,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_SUPER_LUCK,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_REMILIA,
         .cost = 120,
     },
     [SPECIES_CFLANDRE] = 
@@ -1153,6 +1195,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_PRESSURE,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_FLANDRE,
         .cost = 90,
     },
     [SPECIES_FLANDRE] = 
@@ -1179,6 +1222,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_PRESSURE,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_FLANDRE,
         .cost = 120,
     },
     [SPECIES_AFLANDRE] = 
@@ -1205,6 +1249,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_HUSTLE,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_FLANDRE,
         .cost = 120,
     },
     [SPECIES_SFLANDRE] = 
@@ -1231,6 +1276,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_HUSTLE,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_FLANDRE,
         .cost = 120,
     },
     [SPECIES_CLETTY] = 
@@ -1257,6 +1303,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_FOCUS,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_LETTY,
         .cost = 45,
     },
     [SPECIES_LETTY] = 
@@ -1283,6 +1330,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_FOCUS,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_LETTY,
         .cost = 60,
     },
     [SPECIES_DLETTY] = 
@@ -1309,6 +1357,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_HIBERNATION,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_LETTY,
         .cost = 60,
     },
     [SPECIES_HLETTY] = 
@@ -1335,6 +1384,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_HIBERNATION,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_LETTY,
         .cost = 60,
     },
     [SPECIES_ADLETTY] = 
@@ -1361,6 +1411,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_VITAL_SPIRIT,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_LETTY,
         .cost = 60,
     },
     [SPECIES_CCHEN] = 
@@ -1387,6 +1438,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_QUICK_FEET,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_CHEN,
         .cost = 30,
     },
     [SPECIES_CHEN] = 
@@ -1413,6 +1465,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_QUICK_FEET,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_CHEN,
         .cost = 40,
     },
     [SPECIES_ACHEN] = 
@@ -1439,6 +1492,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_QUICK_FEET,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_CHEN,
         .cost = 40,
     },
     [SPECIES_TCHEN] = 
@@ -1465,6 +1519,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_TECHNICIAN,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_CHEN,
         .cost = 40,
     },
     [SPECIES_ADCHEN] = 
@@ -1491,6 +1546,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_FLAWLESS,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_CHEN,
         .cost = 40,
     },
     [SPECIES_CALICE] = 
@@ -1517,6 +1573,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_SKILL_LINK,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_ALICE,
         .cost = 60,
     },
     [SPECIES_ALICE] = 
@@ -1543,6 +1600,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_SKILL_LINK,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_ALICE,
         .cost = 80,
     },
     [SPECIES_AALICE] = 
@@ -1569,6 +1627,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_SKILL_LINK,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_ALICE,
         .cost = 80,
     },
     [SPECIES_TALICE] = 
@@ -1595,6 +1654,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_SKILL_LINK,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_ALICE,
         .cost = 80,
     },
     [SPECIES_ADALICE] = 
@@ -1621,6 +1681,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_FLAWLESS,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_ALICE,
         .cost = 80,
     },
     [SPECIES_DARK_ALICE] = 
@@ -1647,6 +1708,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_UNNERVE,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_ALICE,
         .cost = 120,
     },
     [SPECIES_CLILYWHITE] = 
@@ -1673,6 +1735,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_FIRE_VEIL,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_LILY_WHITE,
         .cost = 30,
     },
     [SPECIES_LILYWHITE] = 
@@ -1699,6 +1762,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_FIRE_VEIL,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_LILY_WHITE,
         .cost = 40,
     },
     [SPECIES_ALILYWHITE] = 
@@ -1725,6 +1789,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_FIRE_VEIL,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_LILY_WHITE,
         .cost = 40,
     },
     [SPECIES_HLILYWHITE] = 
@@ -1751,6 +1816,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_LAST_WISH,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_LILY_WHITE,
         .cost = 40,
     },
     [SPECIES_CLILYBLACK] = 
@@ -1777,6 +1843,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_WALL_OF_ICE,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_LILY_WHITE,
         .cost = 30,
     },
     [SPECIES_LILYBLACK] = 
@@ -1803,6 +1870,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_WALL_OF_ICE,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_LILY_WHITE,
         .cost = 40,
     },
     [SPECIES_ALILYBLACK] = 
@@ -1829,6 +1897,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_LAST_GRUDGE,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_LILY_WHITE,
         .cost = 40,
     },
     [SPECIES_SLILYBLACK] = 
@@ -1855,6 +1924,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_WALL_OF_ICE,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_LILY_WHITE,
         .cost = 40,
     },
     [SPECIES_CLUNASA] = 
@@ -1881,6 +1951,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_DOUR_ECHO,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_LUNASA,
         .cost = 45,
     },
     [SPECIES_LUNASA] = 
@@ -1907,6 +1978,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_DOUR_ECHO,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_LUNASA,
         .cost = 60,
     },
     [SPECIES_HLUNASA] = 
@@ -1933,6 +2005,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_DOUR_ECHO,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_LUNASA,
         .cost = 60,
     },
     [SPECIES_CMERLIN] = 
@@ -1959,6 +2032,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_MANIC_ECHO,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_MERLIN,
         .cost = 45,
     },
     [SPECIES_MERLIN] = 
@@ -1985,6 +2059,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_MANIC_ECHO,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_MERLIN,
         .cost = 60,
     },
     [SPECIES_HMERLIN] = 
@@ -2011,6 +2086,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_MANIC_ECHO,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_MERLIN,
         .cost = 60,
     },
     [SPECIES_CLYRICA] = 
@@ -2037,6 +2113,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_HARMONIZE,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_LYRICA,
         .cost = 45,
     },
     [SPECIES_LYRICA] = 
@@ -2063,6 +2140,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_HARMONIZE,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_LYRICA,
         .cost = 60,
     },
     [SPECIES_HLYRICA] = 
@@ -2089,6 +2167,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_HARMONIZE,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_LYRICA,
         .cost = 60,
     },
     [SPECIES_CYOUMU] = 
@@ -2115,6 +2194,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_UNAWARE,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_YOUMU,
         .cost = 60,
     },
     [SPECIES_YOUMU] = 
@@ -2141,6 +2221,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_UNAWARE,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_YOUMU,
         .cost = 80,
     },
     [SPECIES_AYOUMU] = 
@@ -2167,6 +2248,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_SWORDMASTER,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_YOUMU,
         .cost = 80,
     },
     [SPECIES_DYOUMU] = 
@@ -2193,6 +2275,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_UNAWARE,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_YOUMU,
         .cost = 80,
     },
     [SPECIES_SYOUMU] = 
@@ -2219,6 +2302,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_UNAWARE,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_YOUMU,
         .cost = 80,
     },
     [SPECIES_CYUYUKO] = 
@@ -2245,6 +2329,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_SAP_SIPPER,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_YUYUKO,
         .cost = 90,
     },
     [SPECIES_YUYUKO] = 
@@ -2271,6 +2356,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_SNOW_WARNING,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_YUYUKO,
         .cost = 120,
     },
     [SPECIES_AYUYUKO] = 
@@ -2297,6 +2383,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_SAP_SIPPER,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_YUYUKO,
         .cost = 120,
     },
     [SPECIES_DYUYUKO] = 
@@ -2323,6 +2410,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_SAP_SIPPER,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_YUYUKO,
         .cost = 120,
     },
     [SPECIES_CRAN] = 
@@ -2349,6 +2437,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_STEADFAST,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_RAN,
         .cost = 90,
     },
     [SPECIES_RAN] = 
@@ -2375,6 +2464,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_STEADFAST,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_RAN,
         .cost = 120,
     },
     [SPECIES_ARAN] = 
@@ -2401,6 +2491,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_STEADFAST,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_RAN,
         .cost = 120,
     },
     [SPECIES_HRAN] = 
@@ -2427,6 +2518,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_STEADFAST,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_RAN,
         .cost = 120,
     },
     [SPECIES_ADRAN] = 
@@ -2453,6 +2545,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_ANALYTIC,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_RAN,
         .cost = 120,
     },
     [SPECIES_CYUKARI] = 
@@ -2479,6 +2572,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_HIBERNATION,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_YUKARI,
         .cost = 90,
     },
     [SPECIES_YUKARI] = 
@@ -2505,6 +2599,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_HIBERNATION,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_YUKARI,
         .cost = 120,
     },
     [SPECIES_DYUKARI] = 
@@ -2531,6 +2626,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_HIBERNATION,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_YUKARI,
         .cost = 120,
     },
     [SPECIES_TYUKARI] = 
@@ -2557,6 +2653,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_STRANGE_MIST,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_YUKARI,
         .cost = 120,
     },
     [SPECIES_ADYUKARI] = 
@@ -2583,6 +2680,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_FLAWLESS,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_YUKARI,
         .cost = 120,
     },
     [SPECIES_CSUIKA] = 
@@ -2609,6 +2707,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_TANGLED_FEET,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_SUIKA,
         .cost = 75,
     },
     [SPECIES_SUIKA] = 
@@ -2635,6 +2734,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_TANGLED_FEET,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_SUIKA,
         .cost = 100,
     },
     [SPECIES_ASUIKA] = 
@@ -2661,6 +2761,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_TANGLED_FEET,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_SUIKA,
         .cost = 100,
     },
     [SPECIES_TSUIKA] = 
@@ -2687,6 +2788,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_TANGLED_FEET,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_SUIKA,
         .cost = 100,
     },
     [SPECIES_MPSUIKA] = 
@@ -2713,6 +2815,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_TRUANT,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_SUIKA,
         .cost = 120,
     },
     [SPECIES_CWRIGGLE] = 
@@ -2739,6 +2842,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_INFILTRATOR,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_WRIGGLE,
         .cost = 45,
     },
     [SPECIES_WRIGGLE] = 
@@ -2765,6 +2869,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_INFILTRATOR,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_WRIGGLE,
         .cost = 60,
     },
     [SPECIES_DWRIGGLE] = 
@@ -2791,6 +2896,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_INFILTRATOR,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_WRIGGLE,
         .cost = 60,
     },
     [SPECIES_SWRIGGLE] = 
@@ -2817,6 +2923,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_INFILTRATOR,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_WRIGGLE,
         .cost = 60,
     },
     [SPECIES_CMYSTIA] = 
@@ -2843,6 +2950,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_MANIC_ECHO,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_MYSTIA,
         .cost = 45,
     },
     [SPECIES_MYSTIA] = 
@@ -2869,6 +2977,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_MANIC_ECHO,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_MYSTIA,
         .cost = 60,
     },
     [SPECIES_AMYSTIA] = 
@@ -2895,6 +3004,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_MANIC_ECHO,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_MYSTIA,
         .cost = 60,
     },
     [SPECIES_HMYSTIA] = 
@@ -2921,6 +3031,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_MANIC_ECHO,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_MYSTIA,
         .cost = 60,
     },
     [SPECIES_ADMYSTIA] = 
@@ -2947,6 +3058,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_DOUR_ECHO,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_MYSTIA,
         .cost = 60,
     },
     [SPECIES_CKEINE] = 
@@ -2973,6 +3085,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_STEADFAST,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_KEINE,
         .cost = 45,
     },
     [SPECIES_KEINE] = 
@@ -2999,6 +3112,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_LECTURE,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_KEINE,
         .cost = 60,
     },
     [SPECIES_AKEINE] = 
@@ -3025,6 +3139,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_RECKLESS,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_KEINE,
         .cost = 80,
     },
     [SPECIES_DKEINE] = 
@@ -3051,6 +3166,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_RECKLESS,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_KEINE,
         .cost = 80,
     },
     [SPECIES_HKEINE] = 
@@ -3077,6 +3193,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_STEADFAST,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_KEINE,
         .cost = 60,
     },
     [SPECIES_CTEWI] = 
@@ -3103,6 +3220,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_NATURAL_CURE,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_TEWI,
         .cost = 30,
     },
     [SPECIES_TEWI] = 
@@ -3129,6 +3247,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_NATURAL_CURE,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_TEWI,
         .cost = 40,
     },
     [SPECIES_ATEWI] = 
@@ -3155,6 +3274,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_NATURAL_CURE,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_TEWI,
         .cost = 40,
     },
     [SPECIES_DTEWI] = 
@@ -3181,6 +3301,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_NATURAL_CURE,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_TEWI,
         .cost = 40,
     },
     [SPECIES_ADTEWI] = 
@@ -3207,6 +3328,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_NATURAL_CURE,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_TEWI,
         .cost = 40,
     },
     [SPECIES_CREISEN] = 
@@ -3233,6 +3355,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_RATTLED,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_REISEN,
         .cost = 60,
     },
     [SPECIES_REISEN] = 
@@ -3259,6 +3382,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_RATTLED,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_REISEN,
         .cost = 80,
     },
     [SPECIES_DREISEN] = 
@@ -3285,6 +3409,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_POISON_HEAL,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_REISEN,
         .cost = 80,
     },
     [SPECIES_TREISEN] = 
@@ -3311,6 +3436,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_UNNERVE,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_REISEN,
         .cost = 80,
     },
     [SPECIES_ADREISEN] = 
@@ -3337,6 +3463,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_RATTLED,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_REISEN,
         .cost = 80,
     },
     [SPECIES_CEIRIN] = 
@@ -3363,6 +3490,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_ANTICIPATION,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_EIRIN,
         .cost = 90,
     },
     [SPECIES_EIRIN] = 
@@ -3389,6 +3517,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_ANTICIPATION,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_EIRIN,
         .cost = 120,
     },
     [SPECIES_AEIRIN] = 
@@ -3415,6 +3544,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_TOXICOLOGIST,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_EIRIN,
         .cost = 120,
     },
     [SPECIES_HEIRIN] = 
@@ -3441,6 +3571,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_ANTICIPATION,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_EIRIN,
         .cost = 120,
     },
     [SPECIES_CKAGUYA] = 
@@ -3467,6 +3598,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_TRUANT,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_KAGUYA,
         .cost = 90,
     },
     [SPECIES_KAGUYA] = 
@@ -3493,6 +3625,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_TRUANT,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_KAGUYA,
         .cost = 120,
     },
     [SPECIES_AKAGUYA] = 
@@ -3519,6 +3652,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_TRUANT,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_KAGUYA,
         .cost = 120,
     },
     [SPECIES_DKAGUYA] = 
@@ -3545,6 +3679,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_TRUANT,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_KAGUYA,
         .cost = 120,
     },
     [SPECIES_CMOKOU] = 
@@ -3571,6 +3706,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_ANGER_POINT,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_MOKOU,
         .cost = 90,
     },
     [SPECIES_MOKOU] = 
@@ -3597,6 +3733,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_ANGER_POINT,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_MOKOU,
         .cost = 120,
     },
     [SPECIES_AMOKOU] = 
@@ -3623,6 +3760,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_BELLIGERENT,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_MOKOU,
         .cost = 120,
     },
     [SPECIES_DMOKOU] = 
@@ -3649,6 +3787,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_ANGER_POINT,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_MOKOU,
         .cost = 120,
     },
     [SPECIES_ADMOKOU] = 
@@ -3675,6 +3814,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_ANGER_POINT,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_MOKOU,
         .cost = 120,
     },
     [SPECIES_CAYA] = 
@@ -3701,6 +3841,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_FRISK,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_AYA,
         .cost = 60,
     },
     [SPECIES_AYA] = 
@@ -3727,6 +3868,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_FRISK,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_AYA,
         .cost = 80,
     },
     [SPECIES_SAYA] = 
@@ -3753,6 +3895,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_FRISK,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_AYA,
         .cost = 80,
     },
     [SPECIES_TAYA] = 
@@ -3779,6 +3922,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_FRISK,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_AYA,
         .cost = 80,
     },
     [SPECIES_CMEDICINE] = 
@@ -3805,6 +3949,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_DOLL_WALL,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_MEDICINE,
         .cost = 30,
     },
     [SPECIES_MEDICINE] = 
@@ -3831,6 +3976,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_DOLL_WALL,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_MEDICINE,
         .cost = 40,
     },
     [SPECIES_AMEDICINE] = 
@@ -3857,6 +4003,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_TOXICOLOGIST,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_MEDICINE,
         .cost = 40,
     },
     [SPECIES_SMEDICINE] = 
@@ -3883,6 +4030,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_DOLL_WALL,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_MEDICINE,
         .cost = 40,
     },
     [SPECIES_TMEDICINE] = 
@@ -3909,6 +4057,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_CATALYST,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_MEDICINE,
         .cost = 40,
     },
     [SPECIES_CYUUKA] = 
@@ -3935,6 +4084,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_PRESSURE,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_YUUKA,
         .cost = 75,
     },
     [SPECIES_YUUKA] = 
@@ -3961,6 +4111,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_PRESSURE,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_YUUKA,
         .cost = 100,
     },
     [SPECIES_AYUUKA] = 
@@ -3987,6 +4138,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_TWIN_SPARK,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_YUUKA,
         .cost = 100,
     },
     [SPECIES_TYUUKA] = 
@@ -4013,6 +4165,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_PRESSURE,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_YUUKA,
         .cost = 100,
     },
     [SPECIES_CKOMACHI] = 
@@ -4039,6 +4192,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_SLUSH_RUSH,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_KOMACHI,
         .cost = 60,
     },
     [SPECIES_KOMACHI] = 
@@ -4065,6 +4219,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_SLUSH_RUSH,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_KOMACHI,
         .cost = 80,
     },
     [SPECIES_AKOMACHI] = 
@@ -4091,6 +4246,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_SLUSH_RUSH,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_KOMACHI,
         .cost = 80,
     },
     [SPECIES_SKOMACHI] = 
@@ -4117,6 +4273,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_SLUSH_RUSH,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_KOMACHI,
         .cost = 80,
     },
     [SPECIES_CEIKI] = 
@@ -4143,6 +4300,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_PRESSURE,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_EIKI,
         .cost = 90,
     },
     [SPECIES_EIKI] = 
@@ -4169,6 +4327,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_PRESSURE,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_EIKI,
         .cost = 120,
     },
     [SPECIES_AEIKI] = 
@@ -4195,6 +4354,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_PRESSURE,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_EIKI,
         .cost = 120,
     },
     [SPECIES_DEIKI] = 
@@ -4221,6 +4381,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_PRESSURE,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_EIKI,
         .cost = 120,
     },
     [SPECIES_AKYUU] = 
@@ -4247,6 +4408,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_LECTURE,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_AKYUU,
         .cost = 40,
     },
     [SPECIES_CSHIZUHA] = 
@@ -4273,6 +4435,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_OWN_TEMPO,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_SHIZUHA,
         .cost = 30,
     },
     [SPECIES_SHIZUHA] = 
@@ -4299,6 +4462,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_OWN_TEMPO,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_SHIZUHA,
         .cost = 40,
     },
     [SPECIES_SSHIZUHA] = 
@@ -4325,6 +4489,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_OWN_TEMPO,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_SHIZUHA,
         .cost = 40,
     },
     [SPECIES_HSHIZUHA] = 
@@ -4351,6 +4516,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_OWN_TEMPO,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_SHIZUHA,
         .cost = 40,
     },
     [SPECIES_CMINORIKO] = 
@@ -4377,6 +4543,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_GOURMAND,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_MINORIKO,
         .cost = 30,
     },
     [SPECIES_MINORIKO] = 
@@ -4403,6 +4570,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_GOURMAND,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_MINORIKO,
         .cost = 40,
     },
     [SPECIES_AMINORIKO] = 
@@ -4429,6 +4597,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_UNNERVE,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_MINORIKO,
         .cost = 40,
     },
     [SPECIES_DMINORIKO] = 
@@ -4455,6 +4624,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_GOURMAND,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_MINORIKO,
         .cost = 40,
     },
     [SPECIES_AKI_SISTERS] = 
@@ -4481,6 +4651,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_SCRAPPY,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_AKI_SISTERS,
         .cost = 80,
     },
     [SPECIES_CHINA] = 
@@ -4507,6 +4678,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_STRANGE_MIST,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_HINA,
         .cost = 30,
     },
     [SPECIES_HINA] = 
@@ -4533,6 +4705,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_STRANGE_MIST,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_HINA,
         .cost = 40,
     },
     [SPECIES_AHINA] = 
@@ -4559,6 +4732,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_STRANGE_MIST,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_HINA,
         .cost = 40,
     },
     [SPECIES_DHINA] = 
@@ -4585,6 +4759,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_STRANGE_MIST,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_HINA,
         .cost = 40,
     },
     [SPECIES_CNITORI] = 
@@ -4611,6 +4786,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_SALVAGE,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_NITORI,
         .cost = 60,
     },
     [SPECIES_NITORI] = 
@@ -4637,6 +4813,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_SALVAGE,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_NITORI,
         .cost = 80,
     },
     [SPECIES_ANITORI] = 
@@ -4663,6 +4840,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_MOTOR_DRIVE,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_NITORI,
         .cost = 80,
     },
     [SPECIES_TNITORI] = 
@@ -4689,6 +4867,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_VOLT_ABSORB,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_NITORI,
         .cost = 80,
     },
     [SPECIES_CMOMIJI] = 
@@ -4715,6 +4894,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_UNNERVE,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_MOMIJI,
         .cost = 30,
     },
     [SPECIES_MOMIJI] = 
@@ -4741,6 +4921,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_UNNERVE,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_MOMIJI,
         .cost = 40,
     },
     [SPECIES_DMOMIJI] = 
@@ -4767,6 +4948,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_SALVAGE,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_MOMIJI,
         .cost = 40,
     },
     [SPECIES_CSANAE] = 
@@ -4793,6 +4975,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_SUPER_LUCK,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_SANAE,
         .cost = 60,
     },
     [SPECIES_SANAE] = 
@@ -4819,6 +5002,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_SUPER_LUCK,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_SANAE,
         .cost = 80,
     },
     [SPECIES_ASANAE] = 
@@ -4845,6 +5029,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_DAMP,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_SANAE,
         .cost = 80,
     },
     [SPECIES_TSANAE] = 
@@ -4871,6 +5056,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_PRESSURE,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_SANAE,
         .cost = 80,
     },
     [SPECIES_JKSANAE] = 
@@ -4897,6 +5083,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_DIVA,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_SANAE,
         .cost = 80,
     },
     [SPECIES_CKANAKO] = 
@@ -4923,6 +5110,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_FLAWLESS,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_KANAKO,
         .cost = 90,
     },
     [SPECIES_KANAKO] = 
@@ -4949,6 +5137,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_FLAWLESS,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_KANAKO,
         .cost = 120,
     },
     [SPECIES_AKANAKO] = 
@@ -4975,6 +5164,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_FLAWLESS,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_KANAKO,
         .cost = 120,
     },
     [SPECIES_DKANAKO] = 
@@ -5001,6 +5191,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_FLAWLESS,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_KANAKO,
         .cost = 120,
     },
     [SPECIES_CSUWAKO] = 
@@ -5027,6 +5218,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_CURSED_BODY,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_SUWAKO,
         .cost = 90,
     },
     [SPECIES_SUWAKO] = 
@@ -5053,6 +5245,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_CURSED_BODY,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_SUWAKO,
         .cost = 120,
     },
     [SPECIES_ASUWAKO] = 
@@ -5079,6 +5272,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_CURSED_BODY,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_SUWAKO,
         .cost = 120,
     },
     [SPECIES_DSUWAKO] = 
@@ -5105,6 +5299,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_CURSED_BODY,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_SUWAKO,
         .cost = 120,
     },
     [SPECIES_CREISEN_II] = 
@@ -5131,6 +5326,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_TECHNICIAN,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_REISEN_II,
         .cost = 30,
     },
     [SPECIES_REISEN_II] = 
@@ -5157,6 +5353,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_TECHNICIAN,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_REISEN_II,
         .cost = 40,
     },
     [SPECIES_CTOYOHIME] = 
@@ -5183,6 +5380,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_FLAWLESS,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_TOYOHIME,
         .cost = 90,
     },
     [SPECIES_TOYOHIME] = 
@@ -5209,6 +5407,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_FLAWLESS,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_TOYOHIME,
         .cost = 120,
     },
     [SPECIES_TTOYOHIME] = 
@@ -5235,6 +5434,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_FLAWLESS,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_TOYOHIME,
         .cost = 120,
     },
     [SPECIES_CYORIHIME] = 
@@ -5261,6 +5461,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_FLAWLESS,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_YORIHIME,
         .cost = 90,
     },
     [SPECIES_YORIHIME] = 
@@ -5287,6 +5488,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_FLAWLESS,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_YORIHIME,
         .cost = 120,
     },
     [SPECIES_SYORIHIME] = 
@@ -5313,6 +5515,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_FLAWLESS,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_YORIHIME,
         .cost = 120,
     },
     [SPECIES_CIKU] = 
@@ -5339,6 +5542,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_STORM_SHAWL,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_IKU,
         .cost = 60,
     },
     [SPECIES_IKU] = 
@@ -5365,6 +5569,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_STORM_SHAWL,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_IKU,
         .cost = 80,
     },
     [SPECIES_DIKU] = 
@@ -5391,6 +5596,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_STORM_SHAWL,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_IKU,
         .cost = 80,
     },
     [SPECIES_TIKU] = 
@@ -5417,6 +5623,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_STORM_SHAWL,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_IKU,
         .cost = 80,
     },
     [SPECIES_CTENSHI] = 
@@ -5443,6 +5650,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_STURDY,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_TENSHI,
         .cost = 75,
     },
     [SPECIES_TENSHI] = 
@@ -5469,6 +5677,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_STURDY,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_TENSHI,
         .cost = 100,
     },
     [SPECIES_ATENSHI] = 
@@ -5495,6 +5704,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_STURDY,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_TENSHI,
         .cost = 100,
     },
     [SPECIES_DTENSHI] = 
@@ -5521,6 +5731,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_LEVITATE,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_TENSHI,
         .cost = 100,
     },
     [SPECIES_CKISUME] = 
@@ -5547,6 +5758,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_STORM_DRAIN,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_KISUME,
         .cost = 30,
     },
     [SPECIES_KISUME] = 
@@ -5573,6 +5785,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_STORM_DRAIN,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_KISUME,
         .cost = 40,
     },
     [SPECIES_TKISUME] = 
@@ -5599,6 +5812,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_STORM_DRAIN,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_KISUME,
         .cost = 40,
     },
     [SPECIES_CYAMAME] = 
@@ -5625,6 +5839,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_UNNERVE,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_YAMAME,
         .cost = 30,
     },
     [SPECIES_YAMAME] = 
@@ -5651,6 +5866,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_UNNERVE,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_YAMAME,
         .cost = 40,
     },
     [SPECIES_SYAMAME] = 
@@ -5677,6 +5893,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_UNNERVE,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_YAMAME,
         .cost = 40,
     },
     [SPECIES_TYAMAME] = 
@@ -5703,6 +5920,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_UNNERVE,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_YAMAME,
         .cost = 40,
     },
     [SPECIES_CPARSEE] = 
@@ -5729,6 +5947,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_LAST_GRUDGE,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_PARSEE,
         .cost = 45,
     },
     [SPECIES_PARSEE] = 
@@ -5755,6 +5974,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_LAST_GRUDGE,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_PARSEE,
         .cost = 60,
     },
     [SPECIES_DPARSEE] = 
@@ -5781,6 +6001,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_LAST_GRUDGE,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_PARSEE,
         .cost = 60,
     },
     [SPECIES_TPARSEE] = 
@@ -5807,6 +6028,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_LAST_GRUDGE,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_PARSEE,
         .cost = 60,
     },
     [SPECIES_CYUUGI] = 
@@ -5833,6 +6055,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_JUSTIFIED,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_YUUGI,
         .cost = 75,
     },
     [SPECIES_YUUGI] = 
@@ -5859,6 +6082,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_JUSTIFIED,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_YUUGI,
         .cost = 100,
     },
     [SPECIES_AYUUGI] = 
@@ -5885,6 +6109,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_JUSTIFIED,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_YUUGI,
         .cost = 100,
     },
     [SPECIES_DYUUGI] = 
@@ -5911,6 +6136,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_JUSTIFIED,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_YUUGI,
         .cost = 100,
     },
     [SPECIES_CSATORI] = 
@@ -5937,6 +6163,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_FOREWARN,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_SATORI,
         .cost = 60,
     },
     [SPECIES_SATORI] = 
@@ -5963,6 +6190,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_FOREWARN,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_SATORI,
         .cost = 80,
     },
     [SPECIES_DSATORI] = 
@@ -5989,6 +6217,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_FOREWARN,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_SATORI,
         .cost = 80,
     },
     [SPECIES_TSATORI] = 
@@ -6015,6 +6244,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_FOREWARN,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_SATORI,
         .cost = 80,
     },
     [SPECIES_CRIN] = 
@@ -6041,6 +6271,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_MOXIE,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_RIN,
         .cost = 60,
     },
     [SPECIES_RIN] = 
@@ -6067,6 +6298,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_MOXIE,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_RIN,
         .cost = 80,
     },
     [SPECIES_ARIN] = 
@@ -6093,6 +6325,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_MOXIE,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_RIN,
         .cost = 80,
     },
     [SPECIES_SRIN] = 
@@ -6119,6 +6352,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_MOXIE,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_RIN,
         .cost = 80,
     },
     [SPECIES_ZFAIRY] = 
@@ -6145,6 +6379,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_LAST_WISH,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_ZFAIRY,
         .cost = 30,
     },
     [SPECIES_CUTSUHO] = 
@@ -6171,6 +6406,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_AFTERMATH,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_UTSUHO,
         .cost = 75,
     },
     [SPECIES_UTSUHO] = 
@@ -6197,6 +6433,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_AFTERMATH,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_UTSUHO,
         .cost = 100,
     },
     [SPECIES_AUTSUHO] = 
@@ -6223,6 +6460,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_AFTERMATH,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_UTSUHO,
         .cost = 100,
     },
     [SPECIES_SUTSUHO] = 
@@ -6249,6 +6487,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_AFTERMATH,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_UTSUHO,
         .cost = 100,
     },
     [SPECIES_CKOISHI] = 
@@ -6275,6 +6514,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_CLOUD_NINE,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_KOISHI,
         .cost = 90,
     },
     [SPECIES_KOISHI] = 
@@ -6301,6 +6541,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_CLOUD_NINE,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_KOISHI,
         .cost = 120,
     },
     [SPECIES_AKOISHI] = 
@@ -6327,6 +6568,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_CLOUD_NINE,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_KOISHI,
         .cost = 120,
     },
     [SPECIES_SKOISHI] = 
@@ -6353,6 +6595,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_CLOUD_NINE,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_KOISHI,
         .cost = 120,
     },
     [SPECIES_CNAZRIN] = 
@@ -6379,6 +6622,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_SAND_RUSH,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_NAZRIN,
         .cost = 45,
     },
     [SPECIES_NAZRIN] = 
@@ -6405,6 +6649,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_SAND_RUSH,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_NAZRIN,
         .cost = 60,
     },
     [SPECIES_TNAZRIN] = 
@@ -6431,6 +6676,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_SAND_RUSH,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_NAZRIN,
         .cost = 60,
     },
     [SPECIES_HNAZRIN] = 
@@ -6457,6 +6703,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_FILTER,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_NAZRIN,
         .cost = 60,
     },
     [SPECIES_CKOGASA] = 
@@ -6483,6 +6730,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_UNNERVE,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_KOGASA,
         .cost = 45,
     },
     [SPECIES_KOGASA] = 
@@ -6509,6 +6757,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_UNNERVE,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_KOGASA,
         .cost = 60,
     },
     [SPECIES_SKOGASA] = 
@@ -6535,6 +6784,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_UNNERVE,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_KOGASA,
         .cost = 60,
     },
     [SPECIES_TKOGASA] = 
@@ -6561,6 +6811,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_DRIZZLE,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_KOGASA,
         .cost = 60,
     },
     [SPECIES_CICHIRIN] = 
@@ -6587,6 +6838,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_CLOUD_NINE,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_ICHIRIN,
         .cost = 45,
     },
     [SPECIES_ICHIRIN] = 
@@ -6613,6 +6865,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_CLOUD_NINE,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_ICHIRIN,
         .cost = 60,
     },
     [SPECIES_DICHIRIN] = 
@@ -6639,6 +6892,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_CLOUD_NINE,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_ICHIRIN,
         .cost = 60,
     },
     [SPECIES_TICHIRIN] = 
@@ -6665,6 +6919,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_CLOUD_NINE,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_ICHIRIN,
         .cost = 60,
     },
     [SPECIES_CMURASA] = 
@@ -6691,6 +6946,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_STORM_DRAIN,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_MURASA,
         .cost = 60,
     },
     [SPECIES_MURASA] = 
@@ -6717,6 +6973,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_STORM_DRAIN,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_MURASA,
         .cost = 80,
     },
     [SPECIES_AMURASA] = 
@@ -6743,6 +7000,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_INNER_POWER,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_MURASA,
         .cost = 80,
     },
     [SPECIES_DMURASA] = 
@@ -6769,6 +7027,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_STORM_DRAIN,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_MURASA,
         .cost = 80,
     },
     [SPECIES_CSHOU] = 
@@ -6795,6 +7054,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_PRESSURE,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_SHOU,
         .cost = 75,
     },
     [SPECIES_SHOU] = 
@@ -6821,6 +7081,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_PRESSURE,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_SHOU,
         .cost = 100,
     },
     [SPECIES_ASHOU] = 
@@ -6847,6 +7108,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_PRESSURE,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_SHOU,
         .cost = 100,
     },
     [SPECIES_TSHOU] = 
@@ -6873,6 +7135,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_PRESSURE,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_SHOU,
         .cost = 100,
     },
     [SPECIES_CBYAKUREN] = 
@@ -6899,6 +7162,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_OBLIVIOUS,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_BYAKUREN,
         .cost = 90,
     },
     [SPECIES_BYAKUREN] = 
@@ -6925,6 +7189,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_OBLIVIOUS,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_BYAKUREN,
         .cost = 120,
     },
     [SPECIES_HBYAKUREN] = 
@@ -6951,6 +7216,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_OBLIVIOUS,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_BYAKUREN,
         .cost = 120,
     },
     [SPECIES_TBYAKUREN] = 
@@ -6977,6 +7243,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_OBLIVIOUS,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_BYAKUREN,
         .cost = 120,
     },
     [SPECIES_CNUE] = 
@@ -7003,6 +7270,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_MYSTERIOUS,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_NUE,
         .cost = 90,
     },
     [SPECIES_NUE] = 
@@ -7029,6 +7297,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_MYSTERIOUS,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_NUE,
         .cost = 120,
     },
     [SPECIES_ANUE] = 
@@ -7055,6 +7324,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_MYSTERIOUS,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_NUE,
         .cost = 120,
     },
     [SPECIES_TNUE] = 
@@ -7081,6 +7351,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_LEVITATE,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_NUE,
         .cost = 120,
     },
     [SPECIES_TENSOKU] = 
@@ -7107,6 +7378,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_FILTER,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_TENSOKU,
         .cost = 120,
     },
     [SPECIES_SHANGHAI] = 
@@ -7133,6 +7405,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_DOWNLOAD,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_DOLL,
         .cost = 30,
     },
     [SPECIES_HOURAI] = 
@@ -7159,6 +7432,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_DOWNLOAD,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_DOLL,
         .cost = 30,
     },
     [SPECIES_GOLIATH] = 
@@ -7185,6 +7459,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_DOWNLOAD,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_DOLL,
         .cost = 80,
     },
     [SPECIES_NAMAZU] = 
@@ -7211,6 +7486,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_ANTICIPATION,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_NAMAZU,
         .cost = 80,
     },
     [SPECIES_CHATATE] = 
@@ -7237,6 +7513,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_FOREWARN,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_HATATE,
         .cost = 60,
     },
     [SPECIES_HATATE] = 
@@ -7263,6 +7540,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_FOREWARN,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_HATATE,
         .cost = 80,
     },
     [SPECIES_DHATATE] = 
@@ -7289,6 +7567,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_FOREWARN,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_HATATE,
         .cost = 80,
     },
     [SPECIES_THATATE] = 
@@ -7315,6 +7594,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_FOREWARN,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_HATATE,
         .cost = 80,
     },
     [SPECIES_CSUNNY] = 
@@ -7341,6 +7621,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_SUNBATHING,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_SUNNY,
         .cost = 30,
     },
     [SPECIES_SUNNY] = 
@@ -7367,6 +7648,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_DROUGHT,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_SUNNY,
         .cost = 40,
     },
     [SPECIES_ASUNNY] = 
@@ -7393,6 +7675,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_SOLAR_POWER,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_SUNNY,
         .cost = 40,
     },
     [SPECIES_DSUNNY] = 
@@ -7419,6 +7702,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_SUNBATHING,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_SUNNY,
         .cost = 40,
     },
     [SPECIES_CLUNA] = 
@@ -7445,6 +7729,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_SOUNDPROOF,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_LUNA,
         .cost = 30,
     },
     [SPECIES_LUNA] = 
@@ -7471,6 +7756,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_SOUNDPROOF,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_LUNA,
         .cost = 40,
     },
     [SPECIES_ALUNA] = 
@@ -7497,6 +7783,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_SOUNDPROOF,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_LUNA,
         .cost = 40,
     },
     [SPECIES_TLUNA] = 
@@ -7523,6 +7810,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_UNAWARE,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_LUNA,
         .cost = 40,
     },
     [SPECIES_CSTAR] = 
@@ -7549,6 +7837,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_FRISK,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_STAR,
         .cost = 30,
     },
     [SPECIES_STAR] = 
@@ -7575,6 +7864,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_FRISK,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_STAR,
         .cost = 40,
     },
     [SPECIES_ASTAR] = 
@@ -7601,6 +7891,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_MERCILESS,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_STAR,
         .cost = 40,
     },
     [SPECIES_HSTAR] = 
@@ -7627,6 +7918,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_FRISK,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_STAR,
         .cost = 40,
     },
     [SPECIES_RINNOSUKE] = 
@@ -7653,6 +7945,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_ANALYTIC,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_RINNOSUKE,
         .cost = 40,
     },
     [SPECIES_CTOKIKO] = 
@@ -7679,6 +7972,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_REACTIVE,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_TOKIKO,
         .cost = 30,
     },
     [SPECIES_TOKIKO] = 
@@ -7705,6 +7999,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_REACTIVE,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_TOKIKO,
         .cost = 40,
     },
     [SPECIES_ATOKIKO] = 
@@ -7731,6 +8026,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_CONTRARY,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_TOKIKO,
         .cost = 40,
     },
     [SPECIES_CKYOUKO] = 
@@ -7757,6 +8053,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_SOUNDPROOF,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_KYOUKO,
         .cost = 30,
     },
     [SPECIES_KYOUKO] = 
@@ -7783,6 +8080,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_SOUNDPROOF,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_KYOUKO,
         .cost = 40,
     },
     [SPECIES_TKYOUKO] = 
@@ -7809,6 +8107,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_SOUNDPROOF,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_KYOUKO,
         .cost = 40,
     },
     [SPECIES_CYOSHIKA] = 
@@ -7835,6 +8134,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_AFTERMATH,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_YOSHIKA,
         .cost = 45,
     },
     [SPECIES_YOSHIKA] = 
@@ -7861,6 +8161,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_AFTERMATH,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_YOSHIKA,
         .cost = 60,
     },
     [SPECIES_HYOSHIKA] = 
@@ -7887,6 +8188,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_AFTERMATH,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_YOSHIKA,
         .cost = 60,
     },
     [SPECIES_CSEIGA] = 
@@ -7913,6 +8215,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_MERCILESS,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_SEIGA,
         .cost = 60,
     },
     [SPECIES_SEIGA] = 
@@ -7939,6 +8242,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_MERCILESS,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_SEIGA,
         .cost = 80,
     },
     [SPECIES_SSEIGA] = 
@@ -7965,6 +8269,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_MERCILESS,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_SEIGA,
         .cost = 80,
     },
     [SPECIES_CTOJIKO] = 
@@ -7991,6 +8296,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_CURSED_BODY,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_TOJIKO,
         .cost = 60,
     },
     [SPECIES_TOJIKO] = 
@@ -8017,6 +8323,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_CURSED_BODY,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_TOJIKO,
         .cost = 80,
     },
     [SPECIES_STOJIKO] = 
@@ -8043,6 +8350,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_POWER_LEAK,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_TOJIKO,
         .cost = 80,
     },
     [SPECIES_CFUTO] = 
@@ -8069,6 +8377,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_FOCUS,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_FUTO,
         .cost = 60,
     },
     [SPECIES_FUTO] = 
@@ -8095,6 +8404,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_FOCUS,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_FUTO,
         .cost = 80,
     },
     [SPECIES_AFUTO] = 
@@ -8121,6 +8431,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_FOCUS,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_FUTO,
         .cost = 80,
     },
     [SPECIES_TFUTO] = 
@@ -8147,6 +8458,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_FOCUS,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_FUTO,
         .cost = 80,
     },
     [SPECIES_CMIKO] = 
@@ -8173,6 +8485,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_LOGICIAN,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_MIKO,
         .cost = 90,
     },
     [SPECIES_MIKO] = 
@@ -8199,6 +8512,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_LOGICIAN,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_MIKO,
         .cost = 120,
     },
     [SPECIES_AMIKO] = 
@@ -8225,6 +8539,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_SAND_RUSH,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_MIKO,
         .cost = 120,
     },
     [SPECIES_DMIKO] = 
@@ -8251,6 +8566,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_FILTER,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_MIKO,
         .cost = 120,
     },
     [SPECIES_CMAMIZOU] = 
@@ -8277,6 +8593,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_LIMBER,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_MAMIZOU,
         .cost = 90,
     },
     [SPECIES_MAMIZOU] = 
@@ -8303,6 +8620,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_LIMBER,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_MAMIZOU,
         .cost = 120,
     },
     [SPECIES_DMAMIZOU] = 
@@ -8329,6 +8647,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_FOCUS,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_MAMIZOU,
         .cost = 120,
     },
     [SPECIES_CKOSUZU] = 
@@ -8355,6 +8674,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_RATTLED,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_KOSUZU,
         .cost = 30,
     },
     [SPECIES_KOSUZU] = 
@@ -8381,6 +8701,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_RATTLED,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_KOSUZU,
         .cost = 40,
     },
     [SPECIES_JINYOU] = 
@@ -8407,6 +8728,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_MAGIC_BARRIER,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_JINYOU,
         .cost = 60,
     },
     [SPECIES_CKOKORO] = 
@@ -8433,6 +8755,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_OBLIVIOUS,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_KOKORO,
         .cost = 60,
     },
     [SPECIES_KOKORO] = 
@@ -8459,6 +8782,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_OBLIVIOUS,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_KOKORO,
         .cost = 80,
     },
     [SPECIES_AKOKORO] = 
@@ -8485,6 +8809,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_OBLIVIOUS,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_KOKORO,
         .cost = 80,
     },
     [SPECIES_TKOKORO] = 
@@ -8511,6 +8836,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_BERSERK,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_KOKORO,
         .cost = 80,
     },
     [SPECIES_CWAKASAGIHIME] = 
@@ -8537,6 +8863,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_STORM_DRAIN,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_WAKASAGIHIME,
         .cost = 30,
     },
     [SPECIES_WAKASAGIHIME] = 
@@ -8563,6 +8890,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_STORM_DRAIN,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_WAKASAGIHIME,
         .cost = 40,
     },
     [SPECIES_DWAKASAGIHIME] = 
@@ -8589,6 +8917,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_STORM_DRAIN,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_WAKASAGIHIME,
         .cost = 40,
     },
     [SPECIES_CSEKIBANKI] = 
@@ -8615,6 +8944,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_SKILL_LINK,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_SEKIBANKI,
         .cost = 45,
     },
     [SPECIES_SEKIBANKI] = 
@@ -8641,6 +8971,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_SKILL_LINK,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_SEKIBANKI,
         .cost = 60,
     },
     [SPECIES_TSEKIBANKI] = 
@@ -8667,6 +8998,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_DISGUISE,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_SEKIBANKI,
         .cost = 60,
     },
     [SPECIES_CKAGEROU] = 
@@ -8693,6 +9025,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_NO_GUARD,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_KAGEROU,
         .cost = 45,
     },
     [SPECIES_KAGEROU] = 
@@ -8719,6 +9052,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_NO_GUARD,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_KAGEROU,
         .cost = 60,
     },
     [SPECIES_HKAGEROU] = 
@@ -8745,6 +9079,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_NO_GUARD,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_KAGEROU,
         .cost = 60,
     },
     [SPECIES_CBENBEN] = 
@@ -8771,6 +9106,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_ANALYTIC,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_BENBEN,
         .cost = 45,
     },
     [SPECIES_BENBEN] = 
@@ -8797,6 +9133,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_ANALYTIC,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_BENBEN,
         .cost = 60,
     },
     [SPECIES_CYATSUHASHI] = 
@@ -8823,6 +9160,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_CHEERFUL,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_YATSUHASHI,
         .cost = 45,
     },
     [SPECIES_YATSUHASHI] = 
@@ -8849,6 +9187,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_CHEERFUL,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_YATSUHASHI,
         .cost = 60,
     },
     [SPECIES_CSEIJA] = 
@@ -8875,6 +9214,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_PERVERSION,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_SEIJA,
         .cost = 60,
     },
     [SPECIES_SEIJA] = 
@@ -8901,6 +9241,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_PERVERSION,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_SEIJA,
         .cost = 80,
     },
     [SPECIES_DSEIJA] = 
@@ -8927,6 +9268,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_PERVERSION,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_SEIJA,
         .cost = 80,
     },
     [SPECIES_CSHINMYOUMARU] = 
@@ -8953,6 +9295,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_SCRAPPY,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_SHINMYOUMARU,
         .cost = 90,
     },
     [SPECIES_SHINMYOUMARU] = 
@@ -8979,6 +9322,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_SCRAPPY,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_SHINMYOUMARU,
         .cost = 120,
     },
     [SPECIES_ASHINMYOUMARU] = 
@@ -9005,6 +9349,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_SCRAPPY,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_SHINMYOUMARU,
         .cost = 120,
     },
     [SPECIES_CRAIKO] = 
@@ -9031,6 +9376,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_STATIC,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_RAIKO,
         .cost = 75,
     },
     [SPECIES_RAIKO] = 
@@ -9057,6 +9403,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_STATIC,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_RAIKO,
         .cost = 100,
     },
     [SPECIES_ARAIKO] = 
@@ -9083,6 +9430,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_STATIC,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_RAIKO,
         .cost = 100,
     },
     [SPECIES_CKASEN] = 
@@ -9109,6 +9457,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_PRESSURE,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_KASEN,
         .cost = 90,
     },
     [SPECIES_KASEN] = 
@@ -9135,6 +9484,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_PRESSURE,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_KASEN,
         .cost = 120,
     },
     [SPECIES_HKASEN] = 
@@ -9161,6 +9511,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_PRESSURE,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_KASEN,
         .cost = 120,
     },
     [SPECIES_CSUMIREKO] = 
@@ -9187,6 +9538,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_INSOMNIA,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_SUMIREKO,
         .cost = 60,
     },
     [SPECIES_SUMIREKO] = 
@@ -9213,6 +9565,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_INSOMNIA,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_SUMIREKO,
         .cost = 80,
     },
     [SPECIES_SSUMIREKO] = 
@@ -9239,6 +9592,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_INSOMNIA,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_SUMIREKO,
         .cost = 80,
     },
     [SPECIES_TSUMIREKO] = 
@@ -9265,6 +9619,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_TWIN_SPARK,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_SUMIREKO,
         .cost = 80,
     },
     [SPECIES_CSEIRAN] = 
@@ -9291,6 +9646,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_INFILTRATOR,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_SEIRAN,
         .cost = 30,
     },
     [SPECIES_SEIRAN] = 
@@ -9317,6 +9673,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_INFILTRATOR,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_SEIRAN,
         .cost = 40,
     },
     [SPECIES_CRINGO] = 
@@ -9343,6 +9700,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_OBLIVIOUS,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_RINGO,
         .cost = 30,
     },
     [SPECIES_RINGO] = 
@@ -9369,6 +9727,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_OBLIVIOUS,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_RINGO,
         .cost = 40,
     },
     [SPECIES_CDOREMY] = 
@@ -9395,6 +9754,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_INSOMNIA,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_DOREMY,
         .cost = 60,
     },
     [SPECIES_DOREMY] = 
@@ -9421,6 +9781,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_INSOMNIA,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_DOREMY,
         .cost = 80,
     },
     [SPECIES_CSAGUME] = 
@@ -9447,6 +9808,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_UNAWARE,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_SAGUME,
         .cost = 75,
     },
     [SPECIES_SAGUME] = 
@@ -9473,6 +9835,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_UNAWARE,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_SAGUME,
         .cost = 100,
     },
     [SPECIES_CCLOWNPIECE] = 
@@ -9499,6 +9862,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_LUNACY,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_CLOWNPIECE,
         .cost = 60,
     },
     [SPECIES_CLOWNPIECE] = 
@@ -9525,6 +9889,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_LUNACY,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_CLOWNPIECE,
         .cost = 80,
     },
     [SPECIES_CJUNKO] = 
@@ -9551,6 +9916,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_BELLIGERENT,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_JUNKO,
         .cost = 90,
     },
     [SPECIES_JUNKO] = 
@@ -9577,6 +9943,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_BELLIGERENT,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_JUNKO,
         .cost = 120,
     },
     [SPECIES_CHECATIA] = 
@@ -9603,6 +9970,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_MAGIC_BARRIER,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_HECATIA,
         .cost = 90,
     },
     [SPECIES_HECATIA] = 
@@ -9629,6 +9997,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_MAGIC_BARRIER,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_HECATIA,
         .cost = 120,
     },
     [SPECIES_CJOON] = 
@@ -9655,6 +10024,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_MOXIE,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_JOON,
         .cost = 60,
     },
     [SPECIES_JOON] = 
@@ -9681,16 +10051,17 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_MOXIE,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_JOON,
         .cost = 80,
     },
     [SPECIES_CSHION] = 
     {
-        .baseHP = 40,
-        .baseAttack = 60,
-        .baseDefense = 35,
-        .baseSpAttack = 80,
-        .baseSpDefense = 80,
-        .baseSpeed = 75,
+        .baseHP = 50,
+        .baseAttack = 70,
+        .baseDefense = 45,
+        .baseSpAttack = 90,
+        .baseSpDefense = 90,
+        .baseSpeed = 25,
         .catchRate = 175,
         .expYield = 74,
         .type1 = TYPE_MIASMA,
@@ -9707,6 +10078,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_RAIN_DISH,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_SHION,
         .cost = 60,
     },
     [SPECIES_SHION] = 
@@ -9733,6 +10105,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_DRIZZLE,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_SHION,
         .cost = 80,
     },
     [SPECIES_CETERNITY] = 
@@ -9759,6 +10132,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_FLOWER_GIFT,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_ETERNITY,
         .cost = 30,
     },
     [SPECIES_ETERNITY] = 
@@ -9785,6 +10159,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_FLOWER_GIFT,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_ETERNITY,
         .cost = 40,
     },
     [SPECIES_CNEMUNO] = 
@@ -9811,6 +10186,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_INTIMIDATE,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_NEMUNO,
         .cost = 45,
     },
     [SPECIES_NEMUNO] = 
@@ -9837,6 +10213,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_INTIMIDATE,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_NEMUNO,
         .cost = 60,
     },
     [SPECIES_CAUNN] = 
@@ -9863,6 +10240,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_INTIMIDATE,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_AUNN,
         .cost = 30,
     },
     [SPECIES_AUNN] = 
@@ -9889,6 +10267,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_INTIMIDATE,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_AUNN,
         .cost = 40,
     },
     [SPECIES_CNARUMI] = 
@@ -9915,6 +10294,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_STONEWORKER,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_NARUMI,
         .cost = 45,
     },
     [SPECIES_NARUMI] = 
@@ -9941,6 +10321,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_STONEWORKER,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_NARUMI,
         .cost = 60,
     },
     [SPECIES_ANARUMI] = 
@@ -9967,6 +10348,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_DROUGHT,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_NARUMI,
         .cost = 60,
     },
     [SPECIES_CMAI_AND_SATONO] = 
@@ -9993,6 +10375,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_CONTRARY,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_MAI_AND_SATONO,
         .cost = 45,
     },
     [SPECIES_MAI_AND_SATONO] = 
@@ -10019,6 +10402,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_CONTRARY,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_MAI_AND_SATONO,
         .cost = 60,
     },
     [SPECIES_COKINA] = 
@@ -10045,6 +10429,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_PURE_POWER,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_OKINA,
         .cost = 90,
     },
     [SPECIES_OKINA] = 
@@ -10071,6 +10456,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_PURE_ENIGMA,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_OKINA,
         .cost = 120,
     },
     [SPECIES_CEIKA] = 
@@ -10097,6 +10483,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_CHEERFUL,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_EIKA,
         .cost = 30,
     },
     [SPECIES_EIKA] = 
@@ -10123,6 +10510,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_CHEERFUL,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_EIKA,
         .cost = 40,
     },
     [SPECIES_CURUMI] = 
@@ -10149,6 +10537,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_SAP_SIPPER,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_URUMI,
         .cost = 45,
     },
     [SPECIES_URUMI] = 
@@ -10175,6 +10564,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_SAP_SIPPER,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_URUMI,
         .cost = 60,
     },
     [SPECIES_CKUTAKA] = 
@@ -10201,6 +10591,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_SPEED_BOOST,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_KUTAKA,
         .cost = 45,
     },
     [SPECIES_KUTAKA] = 
@@ -10227,6 +10618,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_SPEED_BOOST,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_KUTAKA,
         .cost = 60,
     },
     [SPECIES_CYACHIE] = 
@@ -10253,6 +10645,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_GUARD_ARMOR,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_YACHIE,
         .cost = 60,
     },
     [SPECIES_YACHIE] = 
@@ -10279,6 +10672,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_GUARD_ARMOR,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_YACHIE,
         .cost = 80,
     },
     [SPECIES_CMAYUMI] = 
@@ -10305,6 +10699,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_GUARD_ARMOR,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_MAYUMI,
         .cost = 60,
     },
     [SPECIES_MAYUMI] = 
@@ -10331,6 +10726,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_GUARD_ARMOR,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_MAYUMI,
         .cost = 80,
     },
     [SPECIES_CKEIKI] = 
@@ -10357,6 +10753,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_FIRM_DEFENSE,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_KEIKI,
         .cost = 90,
     },
     [SPECIES_KEIKI] = 
@@ -10383,6 +10780,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_FIRM_DEFENSE,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_KEIKI,
         .cost = 120,
     },
     [SPECIES_CSAKI] = 
@@ -10409,6 +10807,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_SAND_STREAM,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_SAKI,
         .cost = 75,
     },
     [SPECIES_SAKI] = 
@@ -10435,6 +10834,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_SAND_STREAM,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_SAKI,
         .cost = 100,
     },
     [SPECIES_CYUUMA] = 
@@ -10461,6 +10861,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_MOXIE,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_YUUMA,
         .cost = 75,
     },
     [SPECIES_YUUMA] = 
@@ -10487,6 +10888,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_MOXIE,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_YUUMA,
         .cost = 100,
     },
     [SPECIES_CMIKE] = 
@@ -10513,6 +10915,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_TECHNICIAN,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_MIKE,
         .cost = 30,
     },
     [SPECIES_MIKE] = 
@@ -10539,6 +10942,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_TECHNICIAN,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_MIKE,
         .cost = 40,
     },
     [SPECIES_CTAKANE] = 
@@ -10565,6 +10969,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_SAND_RUSH,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_TAKANE,
         .cost = 60,
     },
     [SPECIES_TAKANE] = 
@@ -10591,6 +10996,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_SAND_RUSH,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_TAKANE,
         .cost = 80,
     },
     [SPECIES_CSANNYO] = 
@@ -10617,6 +11023,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_UNAWARE,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_SANNYO,
         .cost = 45,
     },
     [SPECIES_SANNYO] = 
@@ -10643,6 +11050,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_UNAWARE,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_SANNYO,
         .cost = 60,
     },
     [SPECIES_CMISUMARU] = 
@@ -10669,6 +11077,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_WALL_MASTER,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_MISUMARU,
         .cost = 60,
     },
     [SPECIES_MISUMARU] = 
@@ -10695,6 +11104,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_WALL_MASTER,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_MISUMARU,
         .cost = 80,
     },
     [SPECIES_CTSUKASA] = 
@@ -10721,6 +11131,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_INFILTRATOR,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_TSUKASA,
         .cost = 45,
     },
     [SPECIES_TSUKASA] = 
@@ -10747,6 +11158,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_INFILTRATOR,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_TSUKASA,
         .cost = 60,
     },
     [SPECIES_CMEGUMU] = 
@@ -10773,6 +11185,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_CLOUD_NINE,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_MEGUMU,
         .cost = 60,
     },
     [SPECIES_MEGUMU] = 
@@ -10799,6 +11212,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_CLOUD_NINE,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_MEGUMU,
         .cost = 80,
     },
     [SPECIES_CCHIMATA] = 
@@ -10825,6 +11239,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_BLANK_CARD,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_CHIMATA,
         .cost = 90,
     },
     [SPECIES_CHIMATA] = 
@@ -10851,6 +11266,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_BLANK_CARD,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_CHIMATA,
         .cost = 120,
     },
     [SPECIES_CMOMOYO] = 
@@ -10877,6 +11293,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_UNNERVE,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_MOMOYO,
         .cost = 90,
     },
     [SPECIES_MOMOYO] = 
@@ -10903,6 +11320,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_UNNERVE,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_MOMOYO,
         .cost = 120,
     },
     [SPECIES_CMIYOI] = 
@@ -10929,6 +11347,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_RATTLED,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_MIYOI,
         .cost = 30,
     },
     [SPECIES_MIYOI] = 
@@ -10955,6 +11374,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_RATTLED,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_MIYOI,
         .cost = 40,
     },
     [SPECIES_CMIZUCHI] = 
@@ -10981,6 +11401,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_BELLIGERENT,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_MIZUCHI,
         .cost = 45,
     },
     [SPECIES_MIZUCHI] = 
@@ -11007,6 +11428,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_BELLIGERENT,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_MIZUCHI,
         .cost = 60,
     },
     [SPECIES_CBITEN] = 
@@ -11033,6 +11455,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_EARLY_BIRD,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_BITEN,
         .cost = 45,
     },
     [SPECIES_BITEN] = 
@@ -11059,6 +11482,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_EARLY_BIRD,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_BITEN,
         .cost = 60,
     },
     [SPECIES_CENOKO] = 
@@ -11085,6 +11509,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_CURSED_BODY,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_ENOKO,
         .cost = 45,
     },
     [SPECIES_ENOKO] = 
@@ -11111,6 +11536,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_CURSED_BODY,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_ENOKO,
         .cost = 60,
     },
     [SPECIES_CCHIYARI] = 
@@ -11137,6 +11563,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_STRANGE_MIST,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_CHIYARI,
         .cost = 45,
     },
     [SPECIES_CHIYARI] = 
@@ -11163,6 +11590,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_STRANGE_MIST,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_CHIYARI,
         .cost = 60,
     },
     [SPECIES_CHISAMI] = 
@@ -11189,6 +11617,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_MERCILESS,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_HISAMI,
         .cost = 45,
     },
     [SPECIES_HISAMI] = 
@@ -11215,6 +11644,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_MERCILESS,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_HISAMI,
         .cost = 60,
     },
     [SPECIES_CZANMU] = 
@@ -11241,6 +11671,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_FOCUS,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_ZANMU,
         .cost = 90,
     },
     [SPECIES_ZANMU] = 
@@ -11267,6 +11698,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_FOCUS,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_ZANMU,
         .cost = 120,
     },
     [SPECIES_CHAKUREI] = 
@@ -11293,6 +11725,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_STEADFAST,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_REIMU,
         .cost = 90,
     },
     [SPECIES_HAKUREI] = 
@@ -11319,6 +11752,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_STEADFAST,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_REIMU,
         .cost = 120,
     },
     [SPECIES_CKIRISAME] = 
@@ -11345,6 +11779,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_MOXIE,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_MARISA,
         .cost = 75,
     },
     [SPECIES_KIRISAME] = 
@@ -11371,6 +11806,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_MOXIE,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_MARISA,
         .cost = 100,
     },
     [SPECIES_CSHINGYOKU] = 
@@ -11397,6 +11833,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_YIN_AND_YANG,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_SHINGYOKU,
         .cost = 75,
     },
     [SPECIES_SHINGYOKUF] = 
@@ -11423,6 +11860,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_IMMUNITY,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_SHINGYOKU,
         .cost = 100,
     },
     [SPECIES_SHINGYOKUM] = 
@@ -11449,6 +11887,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_IMMUNITY,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_SHINGYOKU,
         .cost = 100,
     },
     [SPECIES_SHINGYOKUO] = 
@@ -11475,6 +11914,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_YIN_AND_YANG,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_SHINGYOKU,
         .cost = 100,
     },
     [SPECIES_CMAGAN] = 
@@ -11501,6 +11941,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_LEVITATE,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_YUUGENMAGAN,
         .cost = 90,
     },
     [SPECIES_MAGAN] = 
@@ -11527,6 +11968,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_LEVITATE,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_YUUGENMAGAN,
         .cost = 120,
     },
     [SPECIES_CMIMA] = 
@@ -11553,6 +11995,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_MOXIE,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_MIMA,
         .cost = 90,
     },
     [SPECIES_MIMA] = 
@@ -11579,6 +12022,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_MOXIE,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_MIMA,
         .cost = 120,
     },
     [SPECIES_CELIS] = 
@@ -11605,6 +12049,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_INFILTRATOR,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_ELIS,
         .cost = 90,
     },
     [SPECIES_ELIS] = 
@@ -11631,6 +12076,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_INFILTRATOR,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_ELIS,
         .cost = 120,
     },
     [SPECIES_CKIKURI] = 
@@ -11657,6 +12103,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_IMMUNITY,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_KIKURI,
         .cost = 90,
     },
     [SPECIES_KIKURI] = 
@@ -11683,6 +12130,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_IMMUNITY,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_KIKURI,
         .cost = 120,
     },
     [SPECIES_CKONNGARA] = 
@@ -11709,6 +12157,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_HI_STRENGTH,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_KONNGARA,
         .cost = 90,
     },
     [SPECIES_KONNGARA] = 
@@ -11735,6 +12184,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_HI_STRENGTH,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_KONNGARA,
         .cost = 120,
     },
     [SPECIES_CSARIEL] = 
@@ -11761,6 +12211,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_INNER_FOCUS,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_SARIEL,
         .cost = 90,
     },
     [SPECIES_SARIEL] = 
@@ -11787,6 +12238,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_INNER_FOCUS,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_SARIEL,
         .cost = 120,
     },
     [SPECIES_SSARIEL] = 
@@ -11813,6 +12265,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_INNER_FOCUS,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_SARIEL,
         .cost = 120,
     },
     [SPECIES_GENJI] = 
@@ -11839,6 +12292,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_RAIN_DISH,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_GENJI,
         .cost = 40,
     },
     [SPECIES_CRIKA] = 
@@ -11865,6 +12319,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_ANALYTIC,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_RIKA,
         .cost = 30,
     },
     [SPECIES_RIKA] = 
@@ -11891,6 +12346,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_ANALYTIC,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_RIKA,
         .cost = 40,
     },
     [SPECIES_TRIKA] = 
@@ -11917,6 +12373,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_ANALYTIC,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_RIKA,
         .cost = 80,
     },
     [SPECIES_CMEIRA] = 
@@ -11943,6 +12400,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_SNIPER,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_MEIRA,
         .cost = 45,
     },
     [SPECIES_MEIRA] = 
@@ -11969,6 +12427,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_SNIPER,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_MEIRA,
         .cost = 60,
     },
     [SPECIES_MAGIC_STONES] = 
@@ -11995,6 +12454,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_STURDY,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_MAGIC_STONES,
         .cost = 60,
     },
     [SPECIES_CELLEN] = 
@@ -12021,6 +12481,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_NATURAL_CURE,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_ELLEN,
         .cost = 30,
     },
     [SPECIES_ELLEN] = 
@@ -12047,6 +12508,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_NATURAL_CURE,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_ELLEN,
         .cost = 40,
     },
     [SPECIES_CKOTOHIME] = 
@@ -12073,6 +12535,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_COLLECTOR,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_KOTOHIME,
         .cost = 30,
     },
     [SPECIES_KOTOHIME] = 
@@ -12099,6 +12562,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_COLLECTOR,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_KOTOHIME,
         .cost = 40,
     },
     [SPECIES_CKANA] = 
@@ -12125,6 +12589,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_LOST_DREAM,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_KANA,
         .cost = 45,
     },
     [SPECIES_KANA] = 
@@ -12151,6 +12616,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_LOST_DREAM,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_KANA,
         .cost = 60,
     },
     [SPECIES_CRIKAKO] = 
@@ -12177,6 +12643,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_KEEN_EYE,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_RIKAKO,
         .cost = 45,
     },
     [SPECIES_RIKAKO] = 
@@ -12203,6 +12670,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_KEEN_EYE,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_RIKAKO,
         .cost = 60,
     },
     [SPECIES_CCHIYURI] = 
@@ -12229,6 +12697,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_QUICK_FEET,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_CHIYURI,
         .cost = 60,
     },
     [SPECIES_CHIYURI] = 
@@ -12255,6 +12724,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_QUICK_FEET,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_CHIYURI,
         .cost = 80,
     },
     [SPECIES_CYUMEMI] = 
@@ -12281,6 +12751,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_MAGIC_BARRIER,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_YUMEMI,
         .cost = 90,
     },
     [SPECIES_YUMEMI] = 
@@ -12307,6 +12778,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_MAGIC_BARRIER,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_YUMEMI,
         .cost = 120,
     },
     [SPECIES_TYUMEMI] = 
@@ -12333,6 +12805,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_MAGIC_BARRIER,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_YUMEMI,
         .cost = 120,
     },
     [SPECIES_RUUKOTO] = 
@@ -12359,6 +12832,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_KLUTZ,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_RUUKOTO,
         .cost = 40,
     },
     [SPECIES_MIMI_CHAN] = 
@@ -12385,6 +12859,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_AFTERMATH,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_MIMICHAN,
         .cost = 120,
     },
     [SPECIES_CORANGE] = 
@@ -12411,6 +12886,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_REGENERATOR,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_ORANGE,
         .cost = 30,
     },
     [SPECIES_ORANGE] = 
@@ -12437,6 +12913,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_REGENERATOR,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_ORANGE,
         .cost = 40,
     },
     [SPECIES_CKURUMI] = 
@@ -12463,6 +12940,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_POISON_HEAL,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_KURUMI,
         .cost = 30,
     },
     [SPECIES_KURUMI] = 
@@ -12489,6 +12967,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_POISON_HEAL,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_KURUMI,
         .cost = 40,
     },
     [SPECIES_CELLY] = 
@@ -12515,6 +12994,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_MERCILESS,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_ELLY,
         .cost = 60,
     },
     [SPECIES_ELLY] = 
@@ -12541,6 +13021,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_MERCILESS,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_ELLY,
         .cost = 80,
     },
     [SPECIES_CKAZAMI] = 
@@ -12567,6 +13048,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_TRUANT,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_YUUKA,
         .cost = 75,
     },
     [SPECIES_KAZAMI] = 
@@ -12593,6 +13075,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_TRUANT,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_YUUKA,
         .cost = 100,
     },
     [SPECIES_AKAZAMI] = 
@@ -12619,6 +13102,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_INNER_POWER,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_YUUKA,
         .cost = 100,
     },
     [SPECIES_CMUGETSU] = 
@@ -12645,6 +13129,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_PRESSURE,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_MUGETSU,
         .cost = 90,
     },
     [SPECIES_MUGETSU] = 
@@ -12671,6 +13156,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_PRESSURE,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_MUGETSU,
         .cost = 120,
     },
     [SPECIES_CGENGETSU] = 
@@ -12697,6 +13183,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_PRESSURE,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_GENGETSU,
         .cost = 90,
     },
     [SPECIES_GENGETSU] = 
@@ -12723,6 +13210,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_PRESSURE,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_GENGETSU,
         .cost = 120,
     },
     [SPECIES_CSARA] = 
@@ -12749,6 +13237,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_KLUTZ,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_SARA,
         .cost = 45,
     },
     [SPECIES_SARA] = 
@@ -12775,6 +13264,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_KLUTZ,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_SARA,
         .cost = 60,
     },
     [SPECIES_CLOUISE] = 
@@ -12801,6 +13291,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_MAGIC_GUARD,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_LOUISE,
         .cost = 45,
     },
     [SPECIES_LOUISE] = 
@@ -12827,6 +13318,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_MAGIC_GUARD,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_LOUISE,
         .cost = 60,
     },
     [SPECIES_CARISU] = 
@@ -12853,6 +13345,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_DOLL_WALL,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_ALICE,
         .cost = 60,
     },
     [SPECIES_ARISU] = 
@@ -12879,6 +13372,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_DOLL_SKEWER,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_ALICE,
         .cost = 80,
     },
     [SPECIES_CYUKI] = 
@@ -12905,6 +13399,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_LAST_WISH,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_YUKI,
         .cost = 60,
     },
     [SPECIES_YUKI] = 
@@ -12931,6 +13426,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_LAST_WISH,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_YUKI,
         .cost = 80,
     },
     [SPECIES_CMAI] = 
@@ -12957,6 +13453,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_LAST_GRUDGE,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_MAI,
         .cost = 60,
     },
     [SPECIES_MAI] = 
@@ -12983,6 +13480,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_LAST_GRUDGE,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_MAI,
         .cost = 80,
     },
     [SPECIES_CYUMEKO] = 
@@ -13009,6 +13507,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_PRESSURE,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_YUMEKO,
         .cost = 75,
     },
     [SPECIES_YUMEKO] = 
@@ -13035,6 +13534,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_PRESSURE,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_YUMEKO,
         .cost = 100,
     },
     [SPECIES_CSHINKI] = 
@@ -13061,6 +13561,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_FLAWLESS,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_SHINKI,
         .cost = 90,
     },
     [SPECIES_SHINKI] = 
@@ -13087,6 +13588,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_FLAWLESS,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_SHINKI,
         .cost = 120,
     },
     [SPECIES_ASHINKI] = 
@@ -13113,6 +13615,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_FLAWLESS,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_SHINKI,
         .cost = 120,
     },
     [SPECIES_CSENDAI] = 
@@ -13139,6 +13642,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_INNER_FOCUS,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_SENDAI,
         .cost = 90,
     },
     [SPECIES_SENDAI] = 
@@ -13165,6 +13669,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_INNER_FOCUS,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_SENDAI,
         .cost = 120,
     },
     [SPECIES_CTENMA] = 
@@ -13191,6 +13696,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_ANTICIPATION,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_TENMA,
         .cost = 90,
     },
     [SPECIES_TENMA] = 
@@ -13217,6 +13723,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_ANTICIPATION,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_TENMA,
         .cost = 120,
     },
     [SPECIES_CLAYLA] = 
@@ -13243,6 +13750,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_HARMONIZE,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_LAYLA,
         .cost = 45,
     },
     [SPECIES_LAYLA] = 
@@ -13269,6 +13777,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_HARMONIZE,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_LAYLA,
         .cost = 60,
     },
     [SPECIES_DLAYLA] = 
@@ -13295,6 +13804,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_HARMONIZE,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_LAYLA,
         .cost = 60,
     },
     [SPECIES_CYOUKI] = 
@@ -13321,6 +13831,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_PRESSURE,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_YOUKI,
         .cost = 75,
     },
     [SPECIES_YOUKI] = 
@@ -13347,6 +13858,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_PRESSURE,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_YOUKI,
         .cost = 100,
     },
     [SPECIES_TORI] = 
@@ -13373,6 +13885,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_REGENERATOR,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_BIRDS,
         .cost = 30,
     },
     [SPECIES_2HU] = 
@@ -13399,6 +13912,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_UNNERVE,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_2HU,
         .cost = 100,
     },
     [SPECIES_CRENKO] = 
@@ -13425,6 +13939,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_VITAL_SPIRIT,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_RENKO,
         .cost = 30,
     },
     [SPECIES_TRRENKO] = 
@@ -13451,6 +13966,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_TIME_CONTROL,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_RENKO,
         .cost = 120,
     },
     [SPECIES_CMARIBEL] = 
@@ -13477,6 +13993,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_FLAWLESS,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_MARIBEL,
         .cost = 30,
     },
     [SPECIES_TRMARIBEL] = 
@@ -13503,6 +14020,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_MY_REALM,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_MARIBEL,
         .cost = 120,
     },
     [SPECIES_XSUWAKO] = 
@@ -13529,6 +14047,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_SWIFT_SWIM,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_SUWAKO,
         .cost = 120,
     },
     [SPECIES_XUTSUHO] = 
@@ -13555,6 +14074,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_SOLAR_POWER,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_UTSUHO,
         .cost = 120,
     },
     [SPECIES_XTENSHI] = 
@@ -13581,6 +14101,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_HISOUTEN,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_TENSHI,
         .cost = 120,
     },
     [SPECIES_XTENMA] = 
@@ -13607,6 +14128,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_SPEED_BOOST,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_TENMA,
         .cost = 120,
     },
     [SPECIES_XSENDAI] = 
@@ -13633,6 +14155,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_FLAWLESS,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_SENDAI,
         .cost = 120,
     },
     [SPECIES_SEKI_HEAD] = 
@@ -13659,6 +14182,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_DISGUISE,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_SEKIBANKI,
         .cost = 60,
     },
     [SPECIES_TENSOKUG] = 
@@ -13685,6 +14209,7 @@ const struct BaseStats gBaseStats[] =
         .hiddenAbility = ABILITY_FILTER,
         .safariZoneFleeRate = 0,
         .noFlip = TRUE,
+        .touhou = TOUHOU_TENSOKU,
         .cost = 120,
     },
 };

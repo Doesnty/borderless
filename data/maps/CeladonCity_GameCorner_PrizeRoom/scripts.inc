@@ -219,14 +219,14 @@ CeladonCity_GameCorner_PrizeRoom_EventScript_TM51:: @ 816CEA5
 CeladonCity_GameCorner_PrizeRoom_EventScript_TM52:: @ 816CEB9
 	setvar VAR_TEMP_1, ITEM_TM52
 	setvar VAR_TEMP_2, 2000
-	getmovename 1, MOVE_THUNDER_PUNCH
+	getmovename 1, MOVE_ICE_PUNCH
 	goto CeladonCity_GameCorner_PrizeRoom_EventScript_ConfirmPrizeTM
 	end
 
 CeladonCity_GameCorner_PrizeRoom_EventScript_TM53:: @ 816CECD
 	setvar VAR_TEMP_1, ITEM_TM53
 	setvar VAR_TEMP_2, 2000
-	getmovename 1, MOVE_ICE_PUNCH
+	getmovename 1, MOVE_THUNDER_PUNCH
 	goto CeladonCity_GameCorner_PrizeRoom_EventScript_ConfirmPrizeTM
 	end
 

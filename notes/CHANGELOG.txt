@@ -1,3 +1,16 @@
+v1.1.4
+
+CHisami now appears on Route 11, replacing some CSekibanki.
+The mysterious creature is a bit less rude.
+Party menu when using a TM with mons that have status is more aesthetically pleasing, maybe.
+Using Third Eye no longer retains the PP bonus of your first move.
+Actually implement CShion's base stat changes.
+Fixed a backsprite.
+
+v1.1.3
+
+Fix transparency on Chiyari's frontsprite.
+
 v1.1.2
 
 CShion's stats changed:
@@ -17,6 +30,7 @@ Fixed some gen 3 quirks when enduring a move while already at 1 HP:
  -Contact/reaction abilities now actually trigger
  -Focus Punch will now be interrupted
  -Revenge's damage will now be doubled
+(noted post-release: Victory Road is tweaked here, adding optional Rock Smash paths)
 
 v1.1.1
 
