@@ -2,6 +2,7 @@ v1.1.4
 
 CHisami now appears on Route 11, replacing some CSekibanki.
 The mysterious creature is a bit less rude.
+Route 2 now properly has all of its trees be Cut permanently, instead of just three of them.
 Party menu when using a TM with mons that have status is more aesthetically pleasing, maybe.
 Using Third Eye no longer retains the PP bonus of your first move.
 Actually implement CShion's base stat changes.

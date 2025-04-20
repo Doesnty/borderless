@@ -709,7 +709,7 @@
 #define FLAG_ROUTE_8_CUT_TREE_1                          0x2B4
 #define FLAG_ROUTE_8_CUT_TREE_2                          0x2B5
 #define FLAG_ROUTE_16_CUT_TREE                           0x2B6
-#define FLAG_0x2B7                                       0x2B7
+#define FLAG_ROUTE_2_MIDDLE_CUT_TREE_2                   0x2B7
 #define FLAG_0x2B8                                       0x2B8
 #define FLAG_0x2B9                                       0x2B9
 #define FLAG_0x2BA                                       0x2BA
