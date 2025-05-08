@@ -1,3 +1,10 @@
+v1.1.5
+
+Actually put CHisami where she's meant to be.
+AdMarisa loses Agility for Swords Dance.
+Magic Guard now properly blocks Doll Wall, Doll Skewer, and Aftermath.
+Twin Spark no longer triple-triggers reaction abilities.
+
 v1.1.4
 
 CHisami now appears on Route 11, replacing some CSekibanki.

@@ -4882,6 +4882,7 @@ static void atk49_moveend(void)
 				gHitMarker &= ~(HITMARKER_ATTACKSTRING_PRINTED);
 				BattleScriptPush(gBattleScriptsForMoveEffects[gBattleMoves[gCurrentMove].effect]);
 				gBattlescriptCurrInstr = BattleScript_TwinSparkActivates;
+				effect = TRUE;
 				i = 4;
 				gBattleStruct->twinSparkTracker = 1;
 			}

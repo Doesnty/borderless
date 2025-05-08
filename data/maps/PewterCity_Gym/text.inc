@@ -47,7 +47,7 @@ PewterCity_Gym_Text_ExplainTM39:: @ 8190FF8
     .string "technique for Puppets.\p"
     .string "Using a TM teaches the move it\n"
     .string "contains to a Puppet.\p"
-    .string "A TM is good for unlimited.\p"
+    .string "A TM is good for unlimited uses.\p"
     .string "So, feel free to experiment with\n"
     .string "different strategies using them.\p"
     .string "Anyways…\n"
