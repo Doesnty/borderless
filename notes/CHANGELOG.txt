@@ -1,9 +1,13 @@
 v1.1.5
 
+All Medicine forms now get Merciless as a secondary ability.
 Actually put CHisami where she's meant to be.
+Shell Bell now heals 1/5th the damage dealt.
+Replaced an item in Seafoam Islands with a Shell Bell.
 AdMarisa loses Agility for Swords Dance.
 Magic Guard now properly blocks Doll Wall, Doll Skewer, and Aftermath.
 Twin Spark no longer triple-triggers reaction abilities.
+Corrected a text mistake with Snow Warning.
 
 v1.1.4
 

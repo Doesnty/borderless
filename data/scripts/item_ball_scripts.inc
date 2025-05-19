@@ -535,7 +535,7 @@ SeafoamIslands_B1F_EventScript_ItemWaterStone:: @ 81BEBF4
 	end
 
 SeafoamIslands_B1F_EventScript_ItemRevive:: @ 81BEC01
-	finditem ITEM_REVIVE
+	finditem ITEM_SHELL_BELL
 	end
 
 SeafoamIslands_B2F_EventScript_ItemBigPearl:: @ 81BEC0E
