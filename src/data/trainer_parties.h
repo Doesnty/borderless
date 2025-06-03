@@ -5106,7 +5106,7 @@ static const struct TrainerMonFullControl sParty_TeamRocketGrunt40[] = {
 		.gender = MON_FEMALE,
 		.ability = 2, // Cheerful
 		.ball = ITEM_POKE_BALL,
-		.moves = {MOVE_BODY_SLAM, MOVE_DISCHARGE, MOVE_SONICBOOM, MOVE_TRI_ATTACK},
+		.moves = {MOVE_BODY_SLAM, MOVE_OVERDRIVE, MOVE_SONICBOOM, MOVE_TRI_ATTACK},
     },
     {
         .iv = 0,
@@ -5169,7 +5169,7 @@ static const struct TrainerMonFullControl sParty_TeamRocketGrunt41[] = {
 		.gender = MON_MALE,
 		.ability = 1, // Levitate
 		.ball = ITEM_POKE_BALL,
-		.moves = {MOVE_ICE_BEAM, MOVE_DISCHARGE, MOVE_SONICBOOM, MOVE_CALM_MIND},
+		.moves = {MOVE_ICE_BEAM, MOVE_OVERDRIVE, MOVE_SONICBOOM, MOVE_CALM_MIND},
     },
     {
         .iv = 0,
@@ -5604,7 +5604,7 @@ static const struct TrainerMonFullControl sParty_CooltrainerYuji[] = {
         .gender = MON_MALE,
         .ability = 1, // Levitate
         .ball = ITEM_POKE_BALL,
-        .moves = {MOVE_ICE_BEAM, MOVE_DISCHARGE, MOVE_VOLT_SWITCH, MOVE_PERISH_SONG},
+        .moves = {MOVE_ICE_BEAM, MOVE_OVERDRIVE, MOVE_VOLT_SWITCH, MOVE_PERISH_SONG},
     },
     {
         .iv = 15,

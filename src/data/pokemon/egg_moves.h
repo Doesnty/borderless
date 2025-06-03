@@ -951,6 +951,7 @@ static const u16 sCLyricaEggMoveLearnset[] = {
     MOVE_EXTREME_SPEED,
     MOVE_RECYCLE,
     MOVE_MIRROR_COAT,
+    MOVE_OVERDRIVE,
     0
 };
 
@@ -963,6 +964,7 @@ static const u16 sLyricaEggMoveLearnset[] = {
     MOVE_EXTREME_SPEED,
     MOVE_RECYCLE,
     MOVE_MIRROR_COAT,
+    MOVE_OVERDRIVE,
     0
 };
 
@@ -975,6 +977,7 @@ static const u16 sHLyricaEggMoveLearnset[] = {
     MOVE_EXTREME_SPEED,
     MOVE_RECYCLE,
     MOVE_MIRROR_COAT,
+    MOVE_OVERDRIVE,
     0
 };
 
@@ -1047,6 +1050,7 @@ static const u16 sCYuyukoEggMoveLearnset[] = {
     MOVE_CRUNCH,
     MOVE_PERISH_SONG,
     MOVE_BLOSSOMING,
+    MOVE_FOUL_PLAY,
     0
 };
 
@@ -1059,6 +1063,7 @@ static const u16 sYuyukoEggMoveLearnset[] = {
     MOVE_CRUNCH,
     MOVE_PERISH_SONG,
     MOVE_BLOSSOMING,
+    MOVE_FOUL_PLAY,
     0
 };
 
@@ -1071,6 +1076,7 @@ static const u16 sAYuyukoEggMoveLearnset[] = {
     MOVE_CRUNCH,
     MOVE_PERISH_SONG,
     MOVE_BLOSSOMING,
+    MOVE_FOUL_PLAY,
     0
 };
 
@@ -1083,6 +1089,7 @@ static const u16 sDYuyukoEggMoveLearnset[] = {
     MOVE_CRUNCH,
     MOVE_PERISH_SONG,
     MOVE_BLOSSOMING,
+    MOVE_FOUL_PLAY,
     0
 };
 
@@ -3520,6 +3527,7 @@ static const u16 sCKyoukoEggMoveLearnset[] = {
     MOVE_CHARGE_BEAM,
     MOVE_SNORE,
     MOVE_HOWL,
+    MOVE_OVERDRIVE,
     0
 };
 
@@ -3534,6 +3542,7 @@ static const u16 sKyoukoEggMoveLearnset[] = {
     MOVE_CHARGE_BEAM,
     MOVE_SNORE,
     MOVE_HOWL,
+    MOVE_OVERDRIVE,
     0
 };
 
@@ -3548,6 +3557,7 @@ static const u16 sTKyoukoEggMoveLearnset[] = {
     MOVE_CHARGE_BEAM,
     MOVE_SNORE,
     MOVE_HOWL,
+    MOVE_OVERDRIVE,
     0
 };
 
@@ -3992,6 +4002,7 @@ static const u16 sCBenbenEggMoveLearnset[] = {
     MOVE_HEAL_BELL,
     MOVE_ICE_SHARD,
     MOVE_WOOD_HAMMER,
+    MOVE_DISCHARGE,
     0
 };
 
@@ -4001,6 +4012,7 @@ static const u16 sBenbenEggMoveLearnset[] = {
     MOVE_HEAL_BELL,
     MOVE_ICE_SHARD,
     MOVE_WOOD_HAMMER,
+    MOVE_DISCHARGE,
     0
 };
 
@@ -4011,6 +4023,7 @@ static const u16 sCYatsuhashiEggMoveLearnset[] = {
     MOVE_FAKE_TEARS,
     MOVE_HOWL,
     MOVE_WOOD_HAMMER,
+    MOVE_DISCHARGE,
     0
 };
 
@@ -4021,6 +4034,7 @@ static const u16 sYatsuhashiEggMoveLearnset[] = {
     MOVE_FAKE_TEARS,
     MOVE_HOWL,
     MOVE_WOOD_HAMMER,
+    MOVE_DISCHARGE,
     0
 };
 
@@ -4089,6 +4103,7 @@ static const u16 sCRaikoEggMoveLearnset[] = {
     MOVE_TRI_ATTACK,
     MOVE_VOLT_TACKLE,
     MOVE_SNORE,
+    MOVE_DISCHARGE,
     0
 };
 
@@ -4100,6 +4115,7 @@ static const u16 sRaikoEggMoveLearnset[] = {
     MOVE_TRI_ATTACK,
     MOVE_VOLT_TACKLE,
     MOVE_SNORE,
+    MOVE_DISCHARGE,
     0
 };
 
@@ -4111,6 +4127,7 @@ static const u16 sARaikoEggMoveLearnset[] = {
     MOVE_TRI_ATTACK,
     MOVE_VOLT_TACKLE,
     MOVE_SNORE,
+    MOVE_DISCHARGE,
     0
 };
 

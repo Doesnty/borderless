@@ -1,3 +1,10 @@
+v1.1.6
+
+New move: Overdrive, a special Electric Fiery Dance clone. It is a sound move.
+ - It is learned naturally by Benben, Yatsuhashi, and Raiko, replacing Discharge for all three.
+ - It can be tutored by Lyrica and Kyouko.
+All Yuyuko forms now get Foul Play by tutor.
+
 v1.1.5
 
 All Medicine forms now get Merciless as a secondary ability.

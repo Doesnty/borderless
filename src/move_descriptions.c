@@ -430,6 +430,7 @@ const u8 gMoveDescription_DemonBook[] = _("User uses a 70-80\npower physical mov
 const u8 gMoveDescription_DrillPeck[] = _("HOLY SHIT\nITS DRILL PECK");
 const u8 gMoveDescription_MeFirst[] = _("Uses the move the\nfoe is about to\nuse, and with 50%\nmore power.");
 const u8 gMoveDescription_AnoxicFumes[] = _("-2 Own Sp. Atk.");
+const u8 gMoveDescription_Overdrive[] = _("50%: +1 Sp. Atk.");
 const u8 gMoveDescription_Dummy[] = _("lol");
 
 const u8 *const gMoveDescriptionPointers[MOVES_COUNT - 1] = {
@@ -863,4 +864,5 @@ const u8 *const gMoveDescriptionPointers[MOVES_COUNT - 1] = {
 	[MOVE_DRILL_PECK    - 1] = gMoveDescription_DrillPeck,
     [MOVE_ME_FIRST      - 1] = gMoveDescription_MeFirst,
 	[MOVE_ANOXIC_FUMES  - 1] = gMoveDescription_AnoxicFumes,
+	[MOVE_OVERDRIVE     - 1] = gMoveDescription_Overdrive,
 };

@@ -477,6 +477,7 @@ gBattleAnims_Moves::
 	.4byte Move_DRILL_PECK
 	.4byte Move_POUND @ me first
 	.4byte Move_ANOXIC_FUMES
+	.4byte Move_OVERDRIVE
 	.4byte Move_COUNT
 
 gBattleAnims_StatusConditions::
@@ -14864,3 +14865,38 @@ Move_ANOXIC_FUMES::
 	createvisualtask AnimTask_BlendSelected, 10, 0 | (0xF << 7), 1, 16, 0, RGB(10, 0, 0)
 	end
 
+Move_OVERDRIVE::
+	loadspritegfx ANIM_TAG_THIN_RING
+	loadspritegfx 10001
+	loadspritegfx 10011
+	loadspritegfx 10211
+	loadspritegfx 10212
+	loadspritegfx 10213
+	monbg ANIM_ATTACKER
+	setalpha 12, 8
+	
+	createvisualtask AnimTask_ElectricChargingParticles, 2, 0, 20, 0, 2
+	playsewithpan SE_M_CHARGE, 192
+	delay 12
+	createsprite gGrowingShockWaveOrbSpriteTemplate, ANIM_ATTACKER, 2
+	delay 4
+	
+	createsprite gSimplePaletteBlendSpriteTemplate, ANIM_ATTACKER, 2, 1, 1, 0, 15, 0x2FFF
+	delay 8
+	
+	createvisualtask sub_80DD334, 5
+	createsprite gSimplePaletteBlendSpriteTemplate, ANIM_ATTACKER, 2, 31, 3, 8, 0, 1023
+	createvisualtask AnimTask_ScaleMonAndRestore, 5, -5, -5, 5, 0, 0
+	createsprite gHyperVoiceRingSpriteTemplate, ANIM_ATTACKER, 0, 45, 0, 0, 0, 0, 0, 1
+	createvisualtask AnimTask_ShakeMon2, 2, 1, 1, 0, 6, 1
+	createvisualtask AnimTask_ShakeMon2, 2, 3, 1, 0, 6, 1
+	createvisualtask AnimTask_ShakeBattleTerrain, 2, 1, 0, 6, 1
+	createvisualtask SoundTask_WaitForCry, 5, 
+	
+	waitforvisualfinish
+	createsprite gSimplePaletteBlendSpriteTemplate, ANIM_ATTACKER, 2, 1, 1, 15, 0, 0x2FFF
+	waitforvisualfinish
+	clearmonbg ANIM_ATTACKER
+	blendoff
+	delay 2
+	end

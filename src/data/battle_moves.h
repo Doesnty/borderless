@@ -6019,4 +6019,18 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .target = MOVE_TARGET_SELECTED,
         .flags = FLAG_PROTECT_AFFECTED,
     },
+	
+	[MOVE_OVERDRIVE] = 
+	{
+		.effect = EFFECT_SPATK_UP_HIT,
+		.power = 80,
+		.type = TYPE_ELECTRIC,
+		.moveClass = CLASS_SPECIAL,
+		.accuracy = 100,
+		.pp = 10,
+		.secondaryEffectChance = 50,
+		.priority = 0,
+		.target = MOVE_TARGET_SELECTED,
+		.flags = FLAG_PROTECT_AFFECTED | FLAG_SOUND_MOVE,
+	},
 };

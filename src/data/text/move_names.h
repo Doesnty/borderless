@@ -430,6 +430,7 @@ const u8 gMoveNames[][15] = {
 	_("Drill Peck"),
     _("Me First"),
 	_("Anoxic Fumes"),
+	_("Overdrive"),
 };
 
 const u8 gMoveNamesAbridged[][15] = {
@@ -864,5 +865,6 @@ const u8 gMoveNamesAbridged[][15] = {
 	_("Drill Peck"),
     _("Me First"),
 	_("Anoxic Fumes"),
+	_("Overdrive"),
 };
 
