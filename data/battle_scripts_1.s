@@ -273,6 +273,8 @@ gBattleScriptsForMoveEffects::
 	.4byte BattleScript_EffectBlossoming
 	.4byte BattleScript_EffectDemonBook
 	.4byte BattleScript_EffectHoldHands
+	.4byte BattleScript_Invocation
+	.4byte BattleScript_FocusStance
 
 BattleScript_EffectHit::
 BattleScript_HitFromAtkCanceler::
@@ -1614,35 +1616,6 @@ BattleScript_EffectMinimize::
 	goto BattleScript_EffectStatUpAfterAtkCanceler
 
 BattleScript_EffectCurse::
-	jumpiftype2 BS_ATTACKER, TYPE_GHOST, BattleScript_GhostCurse
-	attackcanceler
-	attackstring
-	ppreduce
-	jumpifstat BS_ATTACKER, CMP_GREATER_THAN, STAT_SPEED, 0, BattleScript_CurseTrySpeed
-	jumpifstat BS_ATTACKER, CMP_NOT_EQUAL, STAT_ATK, 12, BattleScript_CurseTrySpeed
-	jumpifstat BS_ATTACKER, CMP_EQUAL, STAT_DEF, 12, BattleScript_ButItFailed
-BattleScript_CurseTrySpeed::
-	copybyte gBattlerTarget, gBattlerAttacker
-	setbyte sB_ANIM_TURN, 1
-	attackanimation
-	waitanimation
-	setstatchanger STAT_SPEED, 1, TRUE
-	statbuffchange STAT_CHANGE_BS_PTR | MOVE_EFFECT_AFFECTS_USER, BattleScript_CurseTryAttack
-	printfromtable gStatDownStringIds
-	waitmessage 0x40
-BattleScript_CurseTryAttack::
-	setstatchanger STAT_ATK, 1, FALSE
-	statbuffchange STAT_CHANGE_BS_PTR | MOVE_EFFECT_AFFECTS_USER, BattleScript_CurseTryDefence
-	printfromtable gStatUpStringIds
-	waitmessage 0x40
-BattleScript_CurseTryDefence::
-	setstatchanger STAT_DEF, 1, FALSE
-	statbuffchange STAT_CHANGE_BS_PTR | MOVE_EFFECT_AFFECTS_USER, BattleScript_CurseEnd
-	printfromtable gStatUpStringIds
-	waitmessage 0x40
-BattleScript_CurseEnd::
-	goto BattleScript_MoveEnd
-
 BattleScript_GhostCurse::
 	jumpifbytenotequal gBattlerAttacker, gBattlerTarget, BattleScript_DoGhostCurse
 	getmovetarget BS_ATTACKER
@@ -6394,3 +6367,82 @@ BattleScript_ItemFlameOrb::
 	waitmessage 0x40
 	updatestatusicon BS_ATTACKER
 	end2
+
+BattleScript_Invocation::
+	attackcanceler
+	attackstring
+	ppreduce
+	cursetarget BattleScript_ButItFailed
+	jumpifstat BS_ATTACKER, CMP_LESS_THAN, STAT_SPATK, 12, BattleScript_InvocationDoMoveAnim
+	jumpifstat BS_ATTACKER, CMP_LESS_THAN, STAT_SPDEF, 12, BattleScript_InvocationDoMoveAnim
+	jumpifstat BS_ATTACKER, CMP_EQUAL, STAT_SPEED, 12, BattleScript_InvocationCantRaiseMultipleStats
+	
+BattleScript_InvocationDoMoveAnim:
+	attackanimation
+	waitanimation
+	printstring STRINGID_CURSEDITSELF
+	waitmessage 0x40
+	setbyte sSTAT_ANIM_PLAYED, 0
+	playstatchangeanimation BS_ATTACKER, 0x38, 2
+	
+	setstatchanger STAT_SPATK, 2, FALSE
+	statbuffchange MOVE_EFFECT_AFFECTS_USER | 0x1, BattleScript_InvocationTrySpDef
+	jumpifbyte CMP_EQUAL, cMULTISTRING_CHOOSER, 2, BattleScript_InvocationTrySpDef
+	printfromtable gStatUpStringIds
+	waitmessage 64
+
+BattleScript_InvocationTrySpDef:
+	setstatchanger STAT_SPDEF, 2, FALSE
+	statbuffchange MOVE_EFFECT_AFFECTS_USER | 0x1, BattleScript_InvocationTrySpeed
+	jumpifbyte CMP_EQUAL, cMULTISTRING_CHOOSER, 2, BattleScript_InvocationTrySpeed
+	printfromtable gStatUpStringIds
+	waitmessage 64
+	
+BattleScript_InvocationTrySpeed:
+	setstatchanger STAT_SPEED, 2, FALSE
+	statbuffchange MOVE_EFFECT_AFFECTS_USER | 0x1, BattleScript_InvocationEnd
+	jumpifbyte CMP_EQUAL, cMULTISTRING_CHOOSER, 2, BattleScript_InvocationEnd
+	printfromtable gStatUpStringIds
+	waitmessage 64
+
+BattleScript_InvocationEnd:
+	goto BattleScript_MoveEnd
+
+BattleScript_InvocationCantRaiseMultipleStats::
+	attackanimation
+	waitanimation
+	printstring STRINGID_CURSEDITSELF
+	waitmessage 0x40
+	orbyte gMoveResultFlags, MOVE_RESULT_FAILED
+	printstring STRINGID_STATSWONTINCREASE2
+	waitmessage 0x40
+	goto BattleScript_MoveEnd
+
+BattleScript_FocusStance::
+	attackcanceler
+	attackstring
+	ppreduce
+	jumpifstat BS_ATTACKER, CMP_GREATER_THAN, STAT_SPEED, 0, BattleScript_FocusStanceTrySpeed
+	jumpifstat BS_ATTACKER, CMP_NOT_EQUAL, STAT_ATK, 12, BattleScript_FocusStanceTrySpeed
+	jumpifstat BS_ATTACKER, CMP_EQUAL, STAT_DEF, 12, BattleScript_ButItFailed
+BattleScript_FocusStanceTrySpeed::
+	copybyte gBattlerTarget, gBattlerAttacker
+	setbyte sB_ANIM_TURN, 1
+	attackanimation
+	waitanimation
+	setstatchanger STAT_SPEED, 1, TRUE
+	statbuffchange STAT_CHANGE_BS_PTR | MOVE_EFFECT_AFFECTS_USER, BattleScript_FocusStanceTryAttack
+	printfromtable gStatDownStringIds
+	waitmessage 0x40
+BattleScript_FocusStanceTryAttack::
+	setstatchanger STAT_ATK, 1, FALSE
+	statbuffchange STAT_CHANGE_BS_PTR | MOVE_EFFECT_AFFECTS_USER, BattleScript_FocusStanceTryDefence
+	printfromtable gStatUpStringIds
+	waitmessage 0x40
+BattleScript_FocusStanceTryDefence::
+	setstatchanger STAT_DEF, 1, FALSE
+	statbuffchange STAT_CHANGE_BS_PTR | MOVE_EFFECT_AFFECTS_USER, BattleScript_FocusStanceEnd
+	printfromtable gStatUpStringIds
+	waitmessage 0x40
+BattleScript_FocusStanceEnd::
+	goto BattleScript_MoveEnd

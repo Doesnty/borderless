@@ -601,6 +601,7 @@ const u8 sText_TauntWearsOff[] = _("{B_EFF_NAME_WITH_PREFIX}\nregained its cool!
 const u8 sText_NoTarget[] = _("But there was no target...");
 const u8 sText_ToxicOrbActivates[] = _("{B_ATK_NAME_WITH_PREFIX} was badly poisoned\nby its Toxic Orb!");
 const u8 sText_FlameOrbActivates[] = _("{B_ATK_NAME_WITH_PREFIX} was burned\nby its Flame Orb!");
+const u8 sText_CursedItself[] = _("{B_ATK_NAME_WITH_PREFIX} laid a\nCurse on itself!");
 
 
 const u8 *const gBattleStringsTable[] = {
@@ -1067,6 +1068,7 @@ const u8 *const gBattleStringsTable[] = {
 	[STRINGID_NOTARGET - 12]                      = sText_NoTarget,
 	[STRINGID_TOXICORBACTIVATES - 12]             = sText_ToxicOrbActivates,
 	[STRINGID_FLAMEORBACTIVATES - 12]             = sText_FlameOrbActivates,
+	[STRINGID_CURSEDITSELF - 12]                  = sText_CursedItself,
 };
 
 const u16 gMissStringIds[] = {
@@ -1416,6 +1418,11 @@ const u8 gText_BattleMenu[] = _("{PALETTE 5}{COLOR_HIGHLIGHT_SHADOW 13 14 15}Fig
 const u8 gUnknown_83FE747[] = _("{PALETTE 5}{COLOR_HIGHLIGHT_SHADOW 13 14 15}Ball{CLEAR_TO 56}Bait\nRock{CLEAR_TO 56}Run");
 const u8 gText_MoveInterfacePP[] = _("PP ");
 const u8 gText_MoveInterfaceType[] = _("TYPE/");
+const u8 gText_MoveSuperEffective[] = _("{UP_ARROW_2}{CLEAR_TO 10}");
+const u8 gText_MoveResisted[] = _("{DOWN_ARROW_2}{CLEAR_TO 10}");
+const u8 gText_MoveIneffective[] = _("{BIG_MULT_X}{CLEAR_TO 10}");
+const u8 gText_MoveNeutral[] = _("-{CLEAR_TO 10}");
+const u8 gText_MoveUnknown[] = _("?{CLEAR_TO 10}");
 const u8 gUnknown_83FE770[] = _("{PALETTE 5}{COLOR_HIGHLIGHT_SHADOW 13 14 15}");
 const u8 gUnknown_83FE779[] = _("{PALETTE 5}{COLOR_HIGHLIGHT_SHADOW 13 14 15}どの わざを\nわすれさせたい?");
 const u8 gText_BattleYesNoChoice[] = _("{PALETTE 5}{COLOR_HIGHLIGHT_SHADOW 13 14 15}Yes\nNo");

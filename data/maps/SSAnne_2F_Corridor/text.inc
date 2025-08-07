@@ -10,7 +10,7 @@ SSAnne_2F_Corridor_Text_RivalIntro:: @ 8173035
     .string "Imagine seeing you here!\n"
     .string "{PLAYER}, were you really invited?\p"
     .string "So how's your Tohodex coming?\p"
-    .string "I already caught 50 kinds, pal.\n"
+    .string "I already caught 60 kinds, pal.\n"
     .string "Different kinds are everywhere.\p"
     .string "Crawl around in grassy areas, and\n"
     .string "look hard for them.$"

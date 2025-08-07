@@ -2167,7 +2167,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .secondaryEffectChance = 0,
         .priority = 1,
         .target = MOVE_TARGET_SELECTED,
-        .flags = FLAG_MAKES_CONTACT | FLAG_PROTECT_AFFECTED,
+        .flags = FLAG_MAKES_CONTACT | FLAG_PROTECT_AFFECTED | FLAG_PUNCHING,
     },
 
     [MOVE_REST] = 
@@ -6033,4 +6033,46 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
 		.target = MOVE_TARGET_SELECTED,
 		.flags = FLAG_PROTECT_AFFECTED | FLAG_SOUND_MOVE,
 	},
+	
+	[MOVE_INVOCATION] = 
+	{
+		.effect = EFFECT_INVOCATION,
+		.power = 0,
+		.type = TYPE_GHOST,
+		.moveClass = CLASS_STATUS,
+		.accuracy = 0,
+		.pp = 5,
+		.secondaryEffectChance = 0,
+		.priority = 0,
+		.target = MOVE_TARGET_USER,
+		.flags = FLAG_SNATCH_AFFECTED,
+	},
+	
+	[MOVE_NIGHT_DAZE] = 
+    {
+        .effect = EFFECT_ACCURACY_DOWN_HIT,
+        .power = 90,
+        .type = TYPE_DARK,
+        .moveClass = CLASS_SPECIAL,
+        .accuracy = 100,
+        .pp = 10,
+        .secondaryEffectChance = 10,
+        .priority = 0,
+        .target = MOVE_TARGET_SELECTED,
+        .flags = FLAG_PROTECT_AFFECTED,
+    },
+	
+	[MOVE_FOCUS_STANCE] = 
+    {
+        .effect = EFFECT_FOCUS_STANCE,
+        .power = 0,
+        .type = TYPE_NORMAL,
+        .moveClass = CLASS_STATUS,
+        .accuracy = 0,
+        .pp = 10,
+        .secondaryEffectChance = 0,
+        .priority = 0,
+        .target = MOVE_TARGET_USER,
+        .flags = FLAG_SNATCH_AFFECTED,
+    },
 };

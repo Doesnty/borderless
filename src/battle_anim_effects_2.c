@@ -811,6 +811,17 @@ const struct SpriteTemplate gUproarRingSpriteTemplate =
     .callback = AnimUproarRing,
 };
 
+const struct SpriteTemplate gNightDazeVioletRingsTemplate =    
+{
+    .tileTag = ANIM_TAG_THIN_RING,
+    .paletteTag = ANIM_TAG_PURPLE_FLAME,
+    .oam = &gOamData_AffineDouble_ObjBlend_64x64,
+    .anims = gDummySpriteAnimTable,
+    .images = NULL,
+    .affineAnims = sThinRingExpandingAffineAnimTable,
+    .callback = AnimUproarRing,
+};
+
 static const union AffineAnimCmd sStretchAttackerAffineAnimCmds[] =
 {
     AFFINEANIMCMD_FRAME(96, -13, 0, 8),
@@ -981,6 +992,17 @@ const struct SpriteTemplate gHiddenPowerOrbScatterSpriteTemplate =
 {
     .tileTag = ANIM_TAG_RED_ORB,
     .paletteTag = ANIM_TAG_RED_ORB,
+    .oam = &gOamData_AffineDouble_ObjNormal_16x16,
+    .anims = gDummySpriteAnimTable,
+    .images = NULL,
+    .affineAnims = sHiddenPowerOrbAffineAnimTable,
+    .callback = AnimOrbitScatter,
+};
+
+const struct SpriteTemplate gNightDazeVioletCirclesTemplate =
+{
+    .tileTag = ANIM_TAG_RED_ORB,
+    .paletteTag = ANIM_TAG_PURPLE_FLAME,
     .oam = &gOamData_AffineDouble_ObjNormal_16x16,
     .anims = gDummySpriteAnimTable,
     .images = NULL,

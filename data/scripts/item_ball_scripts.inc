@@ -51,7 +51,7 @@ MtMoon_1F_EventScript_ItemMoonStone:: @ 81BE610
 	end
 
 MtMoon_B2F_EventScript_ItemStarPiece:: @ 81BE61D
-	finditem ITEM_STAR_PIECE
+	finditem ITEM_ABILI_CAPSULE
 	end
 
 MtMoon_B2F_EventScript_ItemTM46:: @ 81BE62A
@@ -87,7 +87,7 @@ SSAnne_1F_Room2_EventScript_ItemTM31:: @ 81BE65E
 	end
 
 SSAnne_2F_Room2_EventScript_ItemStardust:: @ 81BE66B
-	finditem ITEM_STARDUST
+	finditem ITEM_STAR_PIECE
 	end
 
 SSAnne_2F_Room4_EventScript_ItemXAttack:: @ 81BE678

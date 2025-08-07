@@ -171,7 +171,7 @@ AI_CheckBadMove_CheckEffect:: @ 81D9D27
 	if_effect EFFECT_FLAIL, AI_CBM_HighRiskForDamage
 	if_effect EFFECT_MEAN_LOOK, AI_CBM_CantEscape
 	if_effect EFFECT_MINIMIZE, AI_CBM_EvasionUp
-	if_effect EFFECT_CURSE, AI_CBM_Curse
+	if_effect EFFECT_FOCUS_STANCE, AI_CBM_FocusStance
 	if_effect EFFECT_SPIKES, AI_CBM_Spikes
 	if_effect EFFECT_FORESIGHT, AI_CBM_Foresight
 	if_effect EFFECT_PERISH_SONG, AI_CBM_PerishSong
@@ -492,7 +492,7 @@ AI_CBM_CantEscape:: @ 81DA261
 	if_status2 AI_TARGET, STATUS2_ESCAPE_PREVENTION, Score_Minus10
 	end
 
-AI_CBM_Curse:: @ 81DA26C
+AI_CBM_FocusStance:: @ 81DA26C
 	if_stat_level_equal AI_USER, STAT_ATK, 12, Score_Minus10
 	if_stat_level_equal AI_USER, STAT_DEF, 12, Score_Minus8
 	end
@@ -807,6 +807,7 @@ AI_CheckViability:: @ 81DA445
 	if_effect EFFECT_MEAN_LOOK, AI_CV_Trap
 	if_effect EFFECT_MINIMIZE, AI_CV_EvasionUp
 	if_effect EFFECT_CURSE, AI_CV_Curse
+	if_effect EFFECT_FOCUS_STANCE, AI_CV_FocusStance
 	if_effect EFFECT_PROTECT, AI_CV_Protect
 	if_effect EFFECT_FORESIGHT, AI_CV_Foresight
 	if_effect EFFECT_ENDURE, AI_CV_Endure
@@ -2025,26 +2026,23 @@ AI_CV_Thief_EncourageItemsToSteal:: @ 81DB28B
 	.byte HOLD_EFFECT_THICK_CLUB
 	.byte -1
 
-AI_CV_Curse:: @ 81DB293
-	get_user_type1
-	if_equal TYPE_GHOST, AI_CV_Curse4
-	get_user_type2
-	if_equal TYPE_GHOST, AI_CV_Curse4
+AI_CV_FocusStance:: @ 81DB293
 	if_stat_level_more_than AI_USER, STAT_DEF, 9, AI_CV_Curse_End
-	if_random_less_than 128, AI_CV_Curse2
+	if_random_less_than 128, AI_CV_FocusStance2
 	score +1
 
-AI_CV_Curse2:: @ 81DB2B3
+AI_CV_FocusStance2:: @ 81DB2B3
 	if_stat_level_more_than AI_USER, STAT_DEF, 7, AI_CV_Curse_End
-	if_random_less_than 128, AI_CV_Curse3
+	if_random_less_than 128, AI_CV_FocusStance3
 	score +1
 
-AI_CV_Curse3:: @ 81DB2C3
+AI_CV_FocusStance3:: @ 81DB2C3
 	if_stat_level_more_than AI_USER, STAT_DEF, 6, AI_CV_Curse_End
 	if_random_less_than 128, AI_CV_Curse_End
 	score +1
 	goto AI_CV_Curse_End
 
+AI_CV_Curse::
 AI_CV_Curse4:: @ 81DB2D8
 	if_hp_more_than AI_USER, 80, AI_CV_Curse_End
 	score -1
@@ -2880,7 +2878,7 @@ AI_SetupFirstTurn_SetupEffectsToEncourage:: @ 81DBAA7
 	.byte EFFECT_SUBSTITUTE
 	.byte EFFECT_LEECH_SEED
 	.byte EFFECT_MINIMIZE
-	.byte EFFECT_CURSE
+	.byte EFFECT_FOCUS_STANCE
 	.byte EFFECT_SWAGGER
 	.byte EFFECT_CAMOUFLAGE
 	.byte EFFECT_YAWN

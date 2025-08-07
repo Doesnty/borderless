@@ -1576,7 +1576,7 @@ static const struct TrainerMonFullControl sParty_SuperNerdDerek[] = {
         .gender = MON_MALE,
         .ability = 0,
         .ball = ITEM_POKE_BALL,
-        .moves = {MOVE_FIRE_BLAST, MOVE_DARK_PULSE, MOVE_SOLAR_BEAM, MOVE_SHADOW_BALL},
+        .moves = {MOVE_FIRE_BLAST, MOVE_NIGHT_DAZE, MOVE_SOLAR_BEAM, MOVE_SHADOW_BALL},
     },
 };
 
@@ -3095,7 +3095,7 @@ static const struct TrainerMonFullControl sParty_JugglerNelson[] = {
         .gender = MON_MALE,
         .ability = 2, // Infiltrator
         .ball = ITEM_POKE_BALL,
-        .moves = {MOVE_THUNDERBOLT, MOVE_DARK_PULSE, MOVE_THRASH, MOVE_BOLT_STRIKE},
+        .moves = {MOVE_THUNDERBOLT, MOVE_NIGHT_DAZE, MOVE_THRASH, MOVE_BOLT_STRIKE},
     },
 };
 
@@ -3188,7 +3188,7 @@ static const struct TrainerMonNoItemCustomMoves sParty_JugglerEdward[] = {
         .iv = 0,
         .lvl = 73,
         .species = SPECIES_AMYSTIA,
-        .moves = {MOVE_DARK_PULSE, MOVE_AIR_SLASH, MOVE_HYPER_VOICE, MOVE_ICE_BEAM},
+        .moves = {MOVE_NIGHT_DAZE, MOVE_AIR_SLASH, MOVE_HYPER_VOICE, MOVE_ICE_BEAM},
     },
     {
         .iv = 0,
@@ -3636,7 +3636,7 @@ static const struct TrainerMonFullControl sParty_BlackBeltKoichi[] = { // imakun
         .evs = {0, 0, 0, 0, 0, 0},
         .nature = NATURE_MODEST,
         .gender = MON_FEMALE,
-        .ability = 2, // Cursed Body
+        .ability = 0, // Water Veil
         .ball = ITEM_POKE_BALL,
         .moves = {MOVE_POISON_BOMB, MOVE_DECISION, MOVE_MUDDY_WATER, MOVE_TOXIC},
     },
@@ -4325,7 +4325,7 @@ static const struct TrainerMonFullControl sParty_BossGiovanni2[] = {
 		.gender = MON_MALE,
 		.ability = 0, // Intimidate
 		.ball = ITEM_GREAT_BALL,
-		.moves = {MOVE_SCALD, MOVE_DARK_PULSE, MOVE_LAVA_PLUME, MOVE_CRUNCH},
+		.moves = {MOVE_SCALD, MOVE_NIGHT_DAZE, MOVE_LAVA_PLUME, MOVE_CRUNCH},
     },
     {
         .iv = 8,
@@ -4376,7 +4376,7 @@ static const struct TrainerMonFullControl sParty_LeaderGiovanni[] = {
 		.gender = MON_MALE,
 		.ability = 0, // Intimidate
 		.ball = ITEM_POKE_BALL,
-		.moves = {MOVE_SCALD, MOVE_LAVA_PLUME, MOVE_DARK_PULSE, MOVE_CRUNCH},
+		.moves = {MOVE_SCALD, MOVE_LAVA_PLUME, MOVE_NIGHT_DAZE, MOVE_CRUNCH},
     },
     {
         .iv = 15,
@@ -5358,7 +5358,7 @@ static const struct TrainerMonFullControl sParty_CooltrainerColby[] = {
 		.gender = MON_MALE,
 		.ability = 2, // Manic Echo
 		.ball = ITEM_POKE_BALL,
-		.moves = {MOVE_DARK_PULSE, MOVE_AIR_SLASH, MOVE_HYPER_VOICE, MOVE_ICE_BEAM},
+		.moves = {MOVE_NIGHT_DAZE, MOVE_AIR_SLASH, MOVE_HYPER_VOICE, MOVE_ICE_BEAM},
     },
     {
         .iv = 10,
@@ -5643,7 +5643,7 @@ static const struct TrainerMonFullControl sParty_CooltrainerWarren[] = {
         .gender = MON_FEMALE,
         .ability = 0, // Disguise
         .ball = ITEM_POKE_BALL,
-        .moves = {MOVE_DARK_PULSE, MOVE_SUCKER_PUNCH, MOVE_HEAD_SMASH, MOVE_ZEN_HEADBUTT},
+        .moves = {MOVE_NIGHT_DAZE, MOVE_SUCKER_PUNCH, MOVE_HEAD_SMASH, MOVE_ZEN_HEADBUTT},
     },
     {
         .iv = 15,
@@ -6318,7 +6318,7 @@ static const struct TrainerMonFullControl sParty_LeaderBrock[] = {
         .gender = MON_MALE,
         .ability = 2, // Wall Master
         .ball = ITEM_POKE_BALL,
-        .moves = {MOVE_ROCK_TOMB, MOVE_NIGHT_SHADE, MOVE_REFLECT, MOVE_LIGHT_SCREEN},
+        .moves = {MOVE_ROCK_TOMB, MOVE_PSYWAVE, MOVE_REFLECT, MOVE_LIGHT_SCREEN},
     },
     {
         .iv = 0,
@@ -6330,7 +6330,7 @@ static const struct TrainerMonFullControl sParty_LeaderBrock[] = {
         .gender = MON_MALE,
         .ability = 0, // Reactive
         .ball = ITEM_PREMIER_BALL,
-        .moves = {MOVE_POUND, MOVE_SAND_TOMB, MOVE_ROCK_TOMB, MOVE_WORK_UP},
+        .moves = {MOVE_EMBER, MOVE_SAND_TOMB, MOVE_ROCK_TOMB, MOVE_WORK_UP},
     },
 };
 
@@ -7630,7 +7630,7 @@ static const struct TrainerMonFullControl sParty_ChampionMaribel[] = {
         .gender = MON_MALE,
         .ability = 0, // Hakurei Miko
         .ball = ITEM_PREMIER_BALL,
-        .moves = {MOVE_EARTHQUAKE, MOVE_SACRED_FIRE, MOVE_ZEN_HEADBUTT, MOVE_CURSE},
+        .moves = {MOVE_EARTHQUAKE, MOVE_SACRED_FIRE, MOVE_ZEN_HEADBUTT, MOVE_FOCUS_STANCE},
     },
     {
         .iv = 30,
@@ -7642,7 +7642,7 @@ static const struct TrainerMonFullControl sParty_ChampionMaribel[] = {
         .gender = MON_MALE,
         .ability = 1, // Barrier
         .ball = ITEM_MASTER_BALL,
-        .moves = {MOVE_MANA_BURST, MOVE_SPATIAL_REND, MOVE_DARK_PULSE, MOVE_FOCUS_BLAST},
+        .moves = {MOVE_MANA_BURST, MOVE_SPATIAL_REND, MOVE_NIGHT_DAZE, MOVE_FOCUS_BLAST},
     },
 };
 
@@ -11822,7 +11822,7 @@ static const struct TrainerMonFullControl sParty_EliteFourLorelei2[] = {
         .gender = MON_MALE,
         .ability = 1, // Wall of Ice
         .ball = ITEM_POKE_BALL,
-        .moves = {MOVE_ICE_BALL, MOVE_EARTHQUAKE, MOVE_CURSE, MOVE_REST},
+        .moves = {MOVE_ICE_BALL, MOVE_EARTHQUAKE, MOVE_FOCUS_STANCE, MOVE_REST},
     },
     {
         .iv = 30,
@@ -12110,7 +12110,7 @@ static const struct TrainerMonFullControl sParty_ChampionRematchMaribel[] = {
         .gender = MON_MALE,
         .ability = 0, // Hakurei Miko
         .ball = ITEM_PREMIER_BALL,
-        .moves = {MOVE_EARTHQUAKE, MOVE_SACRED_FIRE, MOVE_ZEN_HEADBUTT, MOVE_CURSE},
+        .moves = {MOVE_EARTHQUAKE, MOVE_SACRED_FIRE, MOVE_ZEN_HEADBUTT, MOVE_FOCUS_STANCE},
     },
     {
         .iv = 30,
@@ -12122,7 +12122,7 @@ static const struct TrainerMonFullControl sParty_ChampionRematchMaribel[] = {
         .gender = MON_MALE,
         .ability = 2, // My Realm
         .ball = ITEM_MASTER_BALL,
-        .moves = {MOVE_MANA_BURST, MOVE_SPATIAL_REND, MOVE_DARK_PULSE, MOVE_FOCUS_BLAST},
+        .moves = {MOVE_MANA_BURST, MOVE_SPATIAL_REND, MOVE_NIGHT_DAZE, MOVE_FOCUS_BLAST},
     },
 };
 
@@ -12294,9 +12294,9 @@ static const struct TrainerMonFullControl sParty_Imakuni4[] = {
         .evs = {32, 0, 0, 0, 0, 32},
         .nature = NATURE_RELAXED,
         .gender = MON_FEMALE,
-        .ability = 2, // Cursed Body
+        .ability = 0, // Water Veil
         .ball = ITEM_POKE_BALL,
-        .moves = {MOVE_POISON_BOMB, MOVE_FORCE_PALM, MOVE_SHADOW_FORCE, MOVE_TOXIC},
+        .moves = {MOVE_POISON_BOMB, MOVE_FORCE_PALM, MOVE_RECOVER, MOVE_TOXIC},
     },
     {
         .iv = 10,

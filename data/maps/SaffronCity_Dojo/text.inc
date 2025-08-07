@@ -51,8 +51,8 @@ SaffronCity_Dojo_Text_MikePostBattle:: @ 819B29D
     .string "I'm a small fry compared to him!$"
 
 SaffronCity_Dojo_Text_HidekiIntro:: @ 819B2E0
-    .string "I hear you're good!\n"
-    .string "Show me!$"
+    .string "One fight or a hundred!\n"
+    .string "We're always ready!$"
 
 SaffronCity_Dojo_Text_HidekiDefeat:: @ 819B2FD
     .string "Judge!\n"

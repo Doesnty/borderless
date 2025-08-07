@@ -234,7 +234,7 @@ const u8 gSpeciesNames[][POKEMON_NAME_LENGTH+1] = {
 	_("Rin"),
 	_("ARin"),
 	_("SRin"),
-	_("ZFairy"),
+	_("Zombie Fairy"),
 	_("CUtsuho"),
 	_("Utsuho"),
 	_("AUtsuho"),

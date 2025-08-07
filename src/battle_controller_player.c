@@ -22,6 +22,7 @@
 #include "constants/items.h"
 #include "constants/moves.h"
 #include "constants/songs.h"
+#include "constants/battle_move_effects.h"
 
 static void PlayerHandleGetMonData(void);
 static void PlayerHandleSetMonData(void);
@@ -443,17 +444,7 @@ void HandleInputChooseMove(void)
         u8 moveTarget;
 
         PlaySE(SE_SELECT);
-        if (moveInfo->moves[gMoveSelectionCursor[gActiveBattler]] == MOVE_CURSE)
-        {
-            if (moveInfo->monType1 != TYPE_GHOST && moveInfo->monType2 != TYPE_GHOST)
-                moveTarget = MOVE_TARGET_USER;
-            else
-                moveTarget = MOVE_TARGET_SELECTED;
-        }
-        else
-        {
-            moveTarget = gBattleMoves[moveInfo->moves[gMoveSelectionCursor[gActiveBattler]]].target;
-        }
+        moveTarget = gBattleMoves[moveInfo->moves[gMoveSelectionCursor[gActiveBattler]]].target;
 
         if (moveTarget & MOVE_TARGET_USER)
             gMultiUsePlayerCursor = gActiveBattler;
@@ -1401,13 +1392,64 @@ static void MoveSelectionDisplayMoveType(void)
 {
     u8 *txtPtr;
     struct ChooseMoveStruct *moveInfo = (struct ChooseMoveStruct *)(&gBattleBufferA[gActiveBattler][4]);
+	u16 move = moveInfo->moves[gMoveSelectionCursor[gActiveBattler]];
+	u8 moveType = gBattleMoves[move].type;
+	
+	gBattlerAttacker = 0;
+	gBattlerTarget = 1;
 
-    txtPtr = StringCopy(gDisplayedStringBattle, gText_MoveInterfaceType);
-    *txtPtr++ = EXT_CTRL_CODE_BEGIN;
-    *txtPtr++ = 6;
-    *txtPtr++ = 1;
-    txtPtr = StringCopy(txtPtr, gUnknown_83FE770);
-    StringCopy(txtPtr, gTypeNames[gBattleMoves[moveInfo->moves[gMoveSelectionCursor[gActiveBattler]]].type]);
+	
+
+	if (gBattleMoves[move].moveClass == 2) // status move
+	{
+		/*txtPtr = StringCopy(gDisplayedStringBattle, gText_MoveInterfaceType);
+		*txtPtr++ = EXT_CTRL_CODE_BEGIN;
+		*txtPtr++ = 6;
+		*txtPtr++ = 1;
+		txtPtr = StringCopy(txtPtr, gUnknown_83FE770); */
+		u8 type1 = gBattleMons[1].type1;
+		u8 type2 = gBattleMons[1].type2;
+		if (move == MOVE_THUNDER_WAVE && (type1 == TYPE_EARTH || type2 == TYPE_EARTH))
+			txtPtr = StringCopy(gDisplayedStringBattle, gText_MoveIneffective);
+		else if (gBattleMoves[move].effect == EFFECT_PARALYZE && (type1 == TYPE_ELECTRIC || type2 == TYPE_ELECTRIC))
+			txtPtr = StringCopy(gDisplayedStringBattle, gText_MoveIneffective);
+		else if (gBattleMoves[move].effect == EFFECT_WILL_O_WISP && (type1 == TYPE_FIRE || type2 == TYPE_FIRE))
+			txtPtr = StringCopy(gDisplayedStringBattle, gText_MoveIneffective);
+		else if ((gBattleMoves[move].effect == EFFECT_POISON || gBattleMoves[move].effect == EFFECT_TOXIC) && 
+			(type1 == TYPE_MIASMA || type2 == TYPE_MIASMA || type1 == TYPE_STEEL || type2 == TYPE_STEEL))
+			txtPtr = StringCopy(gDisplayedStringBattle, gText_MoveIneffective);
+		else if ((move == MOVE_STUN_SPORE || move == MOVE_POISON_POWDER || move == MOVE_SLEEP_POWDER || move == MOVE_BURN_POWDER || move == MOVE_LEECH_SEED) && 
+			(type1 == TYPE_NATURE || type2 == TYPE_NATURE))
+			txtPtr = StringCopy(gDisplayedStringBattle, gText_MoveIneffective);
+		else if (move == MOVE_PURIFY && (type1 == TYPE_NORMAL || type2 == TYPE_NORMAL))
+			txtPtr = StringCopy(gDisplayedStringBattle, gText_MoveIneffective);
+		else if (move == MOVE_METRONOME || move == MOVE_ME_FIRST || move == MOVE_COPYCAT || move == MOVE_ASSIST)
+			txtPtr = StringCopy(gDisplayedStringBattle, gText_MoveUnknown);
+		else if (move == MOVE_DEMON_BOOK)
+			txtPtr = StringCopy(gDisplayedStringBattle, gText_MoveSuperEffective);
+			
+		else
+			txtPtr = StringCopy(gDisplayedStringBattle, gText_MoveNeutral);
+		
+		StringCopy(txtPtr, gTypeNames[moveType]);
+	}
+	else
+	{
+		u8 moveFlags = AI_TypeCalc(move, gBattleMons[1].type1, gBattleMons[1].type2, 0);
+		
+		
+		if (moveFlags & MOVE_RESULT_SUPER_EFFECTIVE)
+			txtPtr = StringCopy(gDisplayedStringBattle, gText_MoveSuperEffective);
+		else if (moveFlags & MOVE_RESULT_NOT_VERY_EFFECTIVE)
+			txtPtr = StringCopy(gDisplayedStringBattle, gText_MoveResisted);
+		else if (moveFlags & MOVE_RESULT_DOESNT_AFFECT_FOE)
+			txtPtr = StringCopy(gDisplayedStringBattle, gText_MoveIneffective);
+		else
+			txtPtr = StringCopy(gDisplayedStringBattle, gText_MoveNeutral);
+		
+		StringCopy(txtPtr, gTypeNames[moveType]);
+	}
+
     BattlePutTextOnWindow(gDisplayedStringBattle, 8);
 }
 
@@ -2890,17 +2932,7 @@ static void PreviewDeterminativeMoveTargets(void)
         struct ChooseMoveStruct *moveInfo = (struct ChooseMoveStruct *)(&gBattleBufferA[gActiveBattler][4]);
         u16 move = moveInfo->moves[gMoveSelectionCursor[gActiveBattler]];
 
-        if (move == MOVE_CURSE)
-        {
-            if (moveInfo->monType1 != TYPE_GHOST && moveInfo->monType2 != TYPE_GHOST)
-                moveTarget = MOVE_TARGET_USER;
-            else
-                moveTarget = MOVE_TARGET_SELECTED;
-        }
-        else
-        {
-            moveTarget = gBattleMoves[moveInfo->moves[gMoveSelectionCursor[gActiveBattler]]].target;
-        }
+        moveTarget = gBattleMoves[moveInfo->moves[gMoveSelectionCursor[gActiveBattler]]].target;
         switch (moveTarget)
         {
         case MOVE_TARGET_SELECTED:

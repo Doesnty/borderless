@@ -431,6 +431,9 @@ const u8 gMoveNames[][15] = {
     _("Me First"),
 	_("Anoxic Fumes"),
 	_("Overdrive"),
+	_("Invocation"),
+	_("Night Daze"),
+	_("Focus Stance"),
 };
 
 const u8 gMoveNamesAbridged[][15] = {
@@ -866,5 +869,8 @@ const u8 gMoveNamesAbridged[][15] = {
     _("Me First"),
 	_("Anoxic Fumes"),
 	_("Overdrive"),
+	_("Invocation"),
+	_("Night Daze"),
+	_("Focus Stance"),
 };
 

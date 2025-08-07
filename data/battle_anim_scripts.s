@@ -478,6 +478,9 @@ gBattleAnims_Moves::
 	.4byte Move_POUND @ me first
 	.4byte Move_ANOXIC_FUMES
 	.4byte Move_OVERDRIVE
+	.4byte Move_INVOCATION
+	.4byte Move_NIGHT_DAZE
+	.4byte Move_FOCUS_STANCE
 	.4byte Move_COUNT
 
 gBattleAnims_StatusConditions::
@@ -7847,9 +7850,7 @@ Move_CONSTRICT:: @ 81D17C1
 	waitforvisualfinish
 	end
 
-Move_CURSE:: @ 81D1829
-	choosetwoturnanim CurseGhost, CurseStats
-
+Move_CURSE::
 CurseGhost:: @ 81D1832
 	loadspritegfx ANIM_TAG_NAIL
 	loadspritegfx ANIM_TAG_GHOSTLY_SPIRIT
@@ -7882,6 +7883,7 @@ CurseGhostShakeFromNail:: @ 81D1899
 	playsewithpan SE_M_BIND, 192
 	return
 
+Move_FOCUS_STANCE::
 CurseStats:: @ 81D18AF
 	createvisualtask AnimTask_SwayMon, 5, 0, 10, 1536, 3, 0
 	waitforvisualfinish
@@ -14900,3 +14902,89 @@ Move_OVERDRIVE::
 	blendoff
 	delay 2
 	end
+
+Move_INVOCATION::
+	loadspritegfx ANIM_TAG_GHOSTLY_SPIRIT
+	loadspritegfx ANIM_TAG_BELL
+	loadspritegfx ANIM_TAG_MUSIC_NOTES_2
+	loadspritegfx ANIM_TAG_THIN_RING
+	fadetobg 2
+	playsewithpan SE_M_PSYBEAM, 192
+	waitbgfadein
+	createvisualtask AnimTask_LoadMusicNotesPals, 5
+	createsprite gBellSpriteTemplate, ANIM_ATTACKER, 2, 0, -24, 0, 1
+	delay 12
+	createsprite gHealBellMusicNoteSpriteTemplate, ANIM_ATTACKER, 40, 0, -24, 48, -18, 35, 0, 0
+	createsprite gHealBellMusicNoteSpriteTemplate, ANIM_ATTACKER, 40, 0, -24, -48, 20, 30, 1, 1
+	createsprite gHealBellMusicNoteSpriteTemplate, ANIM_ATTACKER, 40, 0, -24, -38, -29, 30, 2, 2
+	createsprite gHealBellMusicNoteSpriteTemplate, ANIM_ATTACKER, 40, 0, -24, 36, 18, 30, 3, 3
+	createsprite gThinRingExpandingSpriteTemplate, ANIM_ATTACKER, 40, 0, -24, 0, 1
+	playsewithpan SE_M_PSYBEAM, 192
+	delay 33
+	createsprite gHealBellMusicNoteSpriteTemplate, ANIM_ATTACKER, 40, 0, -24, 19, 26, 35, 4, 4
+	createsprite gHealBellMusicNoteSpriteTemplate, ANIM_ATTACKER, 40, 0, -24, -34, -12, 30, 5, 5
+	createsprite gHealBellMusicNoteSpriteTemplate, ANIM_ATTACKER, 40, 0, -24, 41, -20, 34, 6, 2
+	createsprite gHealBellMusicNoteSpriteTemplate, ANIM_ATTACKER, 40, 0, -24, -15, 26, 32, 7, 0
+	createsprite gThinRingExpandingSpriteTemplate, ANIM_ATTACKER, 40, 0, -24, 0, 1
+	playsewithpan SE_M_PSYBEAM, 192
+	delay 33
+	createsprite gHealBellMusicNoteSpriteTemplate, ANIM_ATTACKER, 40, 0, -24, -48, 18, 31, 0, 2
+	createsprite gHealBellMusicNoteSpriteTemplate, ANIM_ATTACKER, 40, 0, -24, 48, -20, 30, 2, 5
+	createsprite gHealBellMusicNoteSpriteTemplate, ANIM_ATTACKER, 40, 0, -24, 38, 29, 33, 4, 3
+	createsprite gHealBellMusicNoteSpriteTemplate, ANIM_ATTACKER, 40, 0, -24, -36, -18, 30, 6, 1
+	createsprite gThinRingExpandingSpriteTemplate, ANIM_ATTACKER, 40, 0, -24, 0, 1
+	playsewithpan SE_M_PSYBEAM, 192
+	waitforvisualfinish
+	createvisualtask AnimTask_FreeMusicNotesPals, 5
+	waitforvisualfinish
+
+	playsewithpan SE_M_NIGHTMARE, 63
+	createsprite gCurseGhostSpriteTemplate, ANIM_TARGET, 2
+	createvisualtask AnimTask_ShakeMon2, 2, 1, 2, 0, 14, 1
+	waitforvisualfinish
+	
+	restorebg
+	waitbgfadein
+	clearmonbg 1
+	end
+
+@ borrowed from expansion and modified
+Move_NIGHT_DAZE::
+	loadspritegfx ANIM_TAG_THIN_RING @uproar
+	loadspritegfx ANIM_TAG_PURPLE_FLAME @dark violet color
+	loadspritegfx ANIM_TAG_RED_ORB @circles
+	createvisualtask AnimTask_BlendSelected, 0xa, 1, 0x1, 0x0, 0xC, 0x0
+	waitforvisualfinish
+	loopsewithpan SE_M_CONFUSE_RAY, 192, 7, 3
+	createsprite gNightDazeVioletRingsTemplate, ANIM_ATTACKER, 3, 0x0, 0x0, 0x0, 0x0, 0x1F, 0x8
+	createsprite gNightDazeVioletCirclesTemplate, ANIM_TARGET, 2, 0x0
+	createsprite gNightDazeVioletCirclesTemplate, ANIM_TARGET, 2, 0x20
+	createsprite gNightDazeVioletCirclesTemplate, ANIM_TARGET, 2, 0x40
+	createsprite gNightDazeVioletCirclesTemplate, ANIM_TARGET, 2, 0x60
+	createsprite gNightDazeVioletCirclesTemplate, ANIM_TARGET, 2, 0x80
+	createsprite gNightDazeVioletCirclesTemplate, ANIM_TARGET, 2, 0xa0
+	createsprite gNightDazeVioletCirclesTemplate, ANIM_TARGET, 2, 0x0
+	createsprite gNightDazeVioletCirclesTemplate, ANIM_TARGET, 2, 0xe0
+	delay 0x1
+	createsprite gNightDazeVioletRingsTemplate, ANIM_ATTACKER, 3, 0x0, 0x0, 0x0, 0x0, 0x1F, 0x8
+	delay 0x1
+	createsprite gNightDazeVioletRingsTemplate, ANIM_ATTACKER, 3, 0x0, 0x0, 0x0, 0x0, 0x1F, 0x8
+	delay 0xC
+	loopsewithpan SE_M_CONFUSE_RAY, 192, 7, 3
+	createvisualtask AnimTask_ShakeMon, 2, ANIM_TARGET, 3, 0, 31, 1
+	createvisualtask AnimTask_BlendSelected, 0xA, 4, 0x2, 0x0, 0x9, 0x2002
+	delay 0x1
+	createsprite gNightDazeVioletRingsTemplate, ANIM_ATTACKER, 3, 0x0, 0x0, 0x0, 0x0, 0x1F, 0x8
+	delay 0x1
+	createsprite gNightDazeVioletRingsTemplate, ANIM_ATTACKER, 3, 0x0, 0x0, 0x0, 0x0, 0x1F, 0x8
+	delay 0x1
+	createsprite gNightDazeVioletRingsTemplate, ANIM_ATTACKER, 3, 0x0, 0x0, 0x0, 0x0, 0x1F, 0x8
+	delay 0x6
+	playsewithpan SE_M_SUPERSONIC, SOUND_PAN_ATTACKER
+	waitforvisualfinish
+	createvisualtask AnimTask_BlendSelected, 0xA, 4, 0x2, 0x9, 0x0, 0x2002
+	waitforvisualfinish
+	createvisualtask AnimTask_BlendSelected, 0xa, 1, 0x1, 0xC, 0x0, 0x0
+	waitforvisualfinish
+	end
+

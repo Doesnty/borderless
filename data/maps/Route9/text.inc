@@ -104,3 +104,33 @@ Route9_Text_RouteSign:: @ 8184B66
     .string "ROUTE 9\n"
     .string "CERULEAN CITY - ROCK TUNNEL$"
 
+Route9_Text_MamizouNoBadgeNoBike::
+	.string "Hoo...\n"
+	.string "Quite unprepared, aren't we?\p"
+	.string "You don't have a bike, or the\n"
+	.string "Vermillion City Gym Badge.\p"
+	.string "I won't stop you from going ahead,\n"
+	.string "but things might be a bit\l"
+	.string "inconvenient without those.$"
+
+Route9_Text_MamizouNoBadgeYesBike::
+	.string "Hohoho.\n"
+	.string "A bit unprepared, aren't we?\p"
+	.string "I won't stop you, but it might be a\n"
+	.string "bit inconvenient going ahead without\l"
+	.string "the Vermillion City Gym badge.$"
+
+Route9_Text_MamizouYesBadgeNoBike::
+	.string "Hohoho.\n"
+	.string "A bit unprepared, aren't we?\p"
+	.string "I won't stop you, but it might\n"
+	.string "be a bit inconvenient going\l"
+	.string "ahead without a Bicycle.$"
+
+Route9_Text_MamizouYesBadgeYesBike::
+	.string "Hohoho.\n"
+	.string "Nice weather, isn't it?$"
+
+Route9_Text_MamizouBadgering::
+	.string "What?\n"
+	.string "Is something the matter?\n"

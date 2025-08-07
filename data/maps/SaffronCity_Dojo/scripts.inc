@@ -1,7 +1,15 @@
 .equ LOCALID_KARATE_MASTER, 5
 
 SaffronCity_Dojo_MapScripts:: @ 816EBDB
+	map_script MAP_SCRIPT_ON_TRANSITION, SaffronCity_Dojo_OnTransition
 	.byte 0
+
+SaffronCity_Dojo_OnTransition::
+	cleartrainerflag TRAINER_BLACK_BELT_HITOSHI
+	cleartrainerflag TRAINER_BLACK_BELT_HIDEKI
+	cleartrainerflag TRAINER_BLACK_BELT_AARON
+	cleartrainerflag TRAINER_BLACK_BELT_MIKE
+	end
 
 SaffronCity_Dojo_EventScript_TriggerMasterBattleLeft:: @ 816EBDC
 	lockall

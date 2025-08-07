@@ -47,6 +47,8 @@ const u8 gEnemyMonElevation[NUM_SPECIES] =
     [SPECIES_CICHIRIN] = 8,
     
     [SPECIES_DIKU] = 3,
+	
+	[SPECIES_DTENSHI] = 4,
     
     [SPECIES_KAGEROU] = 5,
     

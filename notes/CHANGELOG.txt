@@ -1,11 +1,53 @@
 v1.1.6
 
-Fixed Crunch not actually being able to proc defense drops.
-Fixed the vanilla gen 3 bug where all proc rates are 1% higher.
+Some weird new puppets have snuck into the docs. They aren't in the game yet, but in the future...
+Moves now preview their type effectiveness in battle.
+The Blackbelts in the Fighting Dojo become aggressive when you re-enter it.
+ - This is intended to provide an easy grinding spot for players struggling with Silph.
+ - Also changed their positions so it's less annoying to this discover for the first time.
+Fixed Crunch's proc rate incorrectly being 0.
+Fixed the vanilla gen 3 bug where all proc rates are 1% higher (and its weird consequences).
+Fixed Steel Fist not being flagged as a punch move.
+Sucker Punch is now flagged as a punch move. (This matters for Joon)
+Move descriptions now clarify sound moves and non-obvious punching moves.
+Renamed ZFairy to Zombie Fairy.
 New move: Overdrive, a special Electric Fiery Dance clone. It is a sound move.
  - It is learned naturally by Benben, Yatsuhashi, and Raiko, replacing Discharge for all three.
  - It can be tutored by Lyrica and Kyouko.
+New move: Invocation, a status move that curses the user to give +2 SAtk/SDef/Speed.
+ - It is learned naturally by Mima and Hecatia, replacing Shadow Force for both.
+ - It can be tutored by Mugetsu and Zanmu.
+New move: Night Daze, a special Dark 90/100 attack with a 10% chance to lower accuracy.
+ - It is learned naturally by all Mystias, non-advent Yukaris, Tewi, ATewi, all Nues, Jinyou,
+   TSekibanki, HKagerou, Seija, Yachie, Hisami, Mima, Elis, Kurumi, Mugetsu, and Gengetsu.
+ - Many moves were displaced to accomodate this.
+ - It can be tutored by Rumia, Koakuma, Remilia, and Kana families.
+Split Curse into two moves: Focus Stance and Curse.
+ - Focus Stance gives +Atk/+Def/-Speed, regardless of the user's typing.
+ - Curse uses half the user's HP to apply curse status, regardless of the user's typing.
+ - TM08 is now Focus Stance.
+ - All ghosts who formerly got the TM now get Curse either in moveset or tutor pool.
+ - CSuwako, DSuwako, Parsee, Sagume, Joon, Tsukasa, Miyoi, Biten, Chiyari, Hisami lose the TM.
+ - Lunasa, Murasa, Zanmu, and Mizuchi gain or keep the TM; ghosts not mentioned lose the TM.
+ - All Suwako forms, all Parsee forms, Chiyari, Hisami, and Mai "gain" access to Curse.
+New ability: Last Prank; halves attacker's HP when the mon faints. 
+ - Zombie Fairy only, replaces its Last Wish.
+Renamed the ability Perversion to Aberrant.
+Swapped HLyrica's Attack and Special Attack stats.
+Lunasa, Merlin, and Lyrica now get Shadow Hit by tutor.
 All Yuyuko forms now get Foul Play by tutor.
+All Rumia forms now get Leech Life by tutor.
+Keiki now gets Ember by tutor.
+Misumaru now gets Psywave and Psybeam by tutor.
+DSuwako now learns Recover by level in place of Shadow Force.
+Changed DSuwako's Hidden Ability: Cursed Body -> Rain Dish.
+Changed SRumia's Hidden Ability: Hustle -> Devourer.
+Made Brock a little less easy to cheese.
+Puppets obtained from Oak and ZUN are now banned from having a Hidden Ability.
+Replaced the Star Piece in Mt. Moon with an Ability Capsule.
+Replaced the Stardust on the S.S. Anne with a Star Piece.
+Added an NPC who warns you if you forgot the Bike or Surge's badge.
+Banished Mille to Four Island.
 
 v1.1.5
 

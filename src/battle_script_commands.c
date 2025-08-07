@@ -1171,7 +1171,6 @@ static void atk00_attackcanceler(void)
         RecordAbilityBattle(gBattlerTarget, gLastUsedAbility);
     }
     else if (DEFENDER_IS_PROTECTED
-          && (gCurrentMove != MOVE_CURSE || IS_BATTLER_OF_TYPE(gBattlerAttacker, TYPE_GHOST))
           && ((!IsTwoTurnsMove(gCurrentMove) || (gBattleMons[gBattlerAttacker].status2 & STATUS2_MULTIPLETURNS))))
     {
         CancelMultiTurnMoves(gBattlerAttacker);
@@ -1848,11 +1847,11 @@ u8 TypeCalc(u16 move, u8 attacker, u8 defender)
     return flags;
 }
 
-u8 AI_TypeCalc(u16 move, u16 targetSpecies, u8 targetAbility)
+u8 AI_TypeCalc(u16 move, u8 type1, u8 type2, u8 targetAbility)
 {
     s32 i = 0;
     u16 flags = 0;
-    u8 type1 = gBaseStats[targetSpecies].type1, type2 = gBaseStats[targetSpecies].type2;
+    //u8 type1 = gBaseStats[targetSpecies].type1, type2 = gBaseStats[targetSpecies].type2;
     u8 moveType;
 
     if (move == MOVE_STRUGGLE)
@@ -4376,6 +4375,10 @@ static void atk48_playstatchangeanimation(void)
     s32 changeableStatsCount = 0;
     u8 statsToCheck = 0;
 	u8 arg3;
+	 // 0x1 = positive/negative
+	 // 0x2 = is +2/-2
+	 // 0x4 = only if multiple stats are changed
+	 // 0x8 = ignore immunity to stat drops
 
     gActiveBattler = GetBattlerForBattleScript(gBattlescriptCurrInstr[1]);
     statsToCheck = gBattlescriptCurrInstr[2];
@@ -7027,7 +7030,7 @@ static u8 ChangeStatBuffs(s8 statValue, u8 statId, u8 flags, const u8 *BS_ptr)
     if ((statValue <= -1 && !contrary) || (statValue >= 0 && contrary)) // Stat decrease.
     {
         if (gSideTimers[GET_BATTLER_SIDE(gActiveBattler)].mistTimer
-            && !certain && gCurrentMove != MOVE_CURSE)
+            && !certain && gCurrentMove != MOVE_FOCUS_STANCE)
         {
             if (flags == STAT_CHANGE_BS_PTR)
             {
@@ -7045,7 +7048,7 @@ static u8 ChangeStatBuffs(s8 statValue, u8 statId, u8 flags, const u8 *BS_ptr)
             }
             return STAT_CHANGE_DIDNT_WORK;
         }
-        else if (gCurrentMove != MOVE_CURSE
+        else if (gCurrentMove != MOVE_FOCUS_STANCE
               && notProtectAffected != TRUE
               && JumpIfMoveAffectedByProtect(0))
         {
@@ -7055,7 +7058,7 @@ static u8 ChangeStatBuffs(s8 statValue, u8 statId, u8 flags, const u8 *BS_ptr)
         else if ((gBattleMons[gActiveBattler].ability == ABILITY_HAKUREI_MIKO
                   || gBattleMons[gActiveBattler].ability == ABILITY_MAGIC_BARRIER)
               && !certain
-              && gCurrentMove != MOVE_CURSE)
+              && gCurrentMove != MOVE_FOCUS_STANCE)
         {
             if (flags == STAT_CHANGE_BS_PTR)
             {
@@ -10926,7 +10929,7 @@ static void sp21_demon_book()
 	{
 		gCurrentMove = demonbookmoves[i];
 		gBattleMoveDamage = CalculateBaseDamage(&gBattleMons[gBattlerAttacker], &gBattleMons[gBattlerTarget], gCurrentMove, sideStatus, 0, 0, gBattlerAttacker, gBattlerTarget);
-		AI_TypeCalc(gCurrentMove, gBattleMons[gBattlerTarget].species, gBattleMons[gBattlerTarget].ability);
+		AI_TypeCalc(gCurrentMove, gBattleMons[gBattlerTarget].type1, gBattleMons[gBattlerTarget].type2, gBattleMons[gBattlerTarget].ability);
 		baseDamage[i] = gBattleMoveDamage;
 	}
 	

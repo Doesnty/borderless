@@ -1785,15 +1785,15 @@ s32 CalculateBaseDamage(struct BattlePokemon *attacker, struct BattlePokemon *de
     defense = defender->defense;
     spAttack = attacker->spAttack;
     spDefense = defender->spDefense;
-    if (move == MOVE_FOUL_PLAY && attacker->ability == ABILITY_PERVERSION)
+    if (move == MOVE_FOUL_PLAY && attacker->ability == ABILITY_ABERRANT)
         attack = defender->spAttack;
-	else if (move == MOVE_TAKE_OVER && attacker->ability == ABILITY_PERVERSION)
+	else if (move == MOVE_TAKE_OVER && attacker->ability == ABILITY_ABERRANT)
 		spAttack = defender->attack;
     else if (move == MOVE_FOUL_PLAY)
         attack = defender->attack;
 	else if (move == MOVE_TAKE_OVER)
 		spAttack = defender->spAttack;
-    else if (attacker->ability == ABILITY_PERVERSION)
+    else if (attacker->ability == ABILITY_ABERRANT)
     {
         u16 buffer = spAttack;
         spAttack = buffer;
@@ -2142,11 +2142,11 @@ s32 CalculateBaseDamage(struct BattlePokemon *attacker, struct BattlePokemon *de
     {
         atkStatMod = attacker->statStages[STAT_ATK];
         defStatMod = defender->statStages[STAT_DEF];
-        if (move == MOVE_FOUL_PLAY && attacker->ability == ABILITY_PERVERSION)
+        if (move == MOVE_FOUL_PLAY && attacker->ability == ABILITY_ABERRANT)
             atkStatMod = defender->statStages[STAT_SPATK];
         else if (move == MOVE_FOUL_PLAY)
             atkStatMod = defender->statStages[STAT_ATK];
-        else if (attacker->ability == ABILITY_PERVERSION)
+        else if (attacker->ability == ABILITY_ABERRANT)
             atkStatMod = attacker->statStages[STAT_SPATK];
         else if (move == MOVE_EARTH_PRESS)
             atkStatMod = attacker->statStages[STAT_DEF];
@@ -2177,11 +2177,11 @@ s32 CalculateBaseDamage(struct BattlePokemon *attacker, struct BattlePokemon *de
     {
         u8 atkStatMod = attacker->statStages[STAT_SPATK];
         u8 defStatMod = defender->statStages[STAT_SPDEF];
-		if (move == MOVE_TAKE_OVER && attacker->ability == ABILITY_PERVERSION)
+		if (move == MOVE_TAKE_OVER && attacker->ability == ABILITY_ABERRANT)
 			atkStatMod = defender->statStages[STAT_ATK];
 		else if (move == MOVE_TAKE_OVER)
 			atkStatMod = defender->statStages[STAT_SPATK];
-        else if (attacker->ability == ABILITY_PERVERSION)
+        else if (attacker->ability == ABILITY_ABERRANT)
             atkStatMod = attacker->statStages[STAT_ATK];
         if (move == MOVE_MANASHOCK)
         {
