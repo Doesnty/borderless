@@ -4728,6 +4728,7 @@ static const u16 sCYuumaEggMoveLearnset[] = {
     MOVE_SPLASHBACK,
     MOVE_TORMENT,
     MOVE_BOUNCE,
+	MOVE_SLACK_OFF,
     0
 };
 
@@ -4739,6 +4740,7 @@ static const u16 sYuumaEggMoveLearnset[] = {
     MOVE_SPLASHBACK,
     MOVE_TORMENT,
     MOVE_BOUNCE,
+	MOVE_SLACK_OFF,
     0
 };
 

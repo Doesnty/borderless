@@ -4752,7 +4752,7 @@ static void atk49_moveend(void)
 				effect = TRUE;
 			}
 			else if (!(gMoveResultFlags & MOVE_RESULT_NO_EFFECT)
-				&& gBattleMons[gBattlerAttacker].ability == ABILITY_DEVOURER
+				&& gBattleMons[gBattlerAttacker].ability == ABILITY_DEVOUR
 				&& gBattleMons[gBattlerAttacker].hp > 0
 				&& gBattleMons[gBattlerAttacker].hp < gBattleMons[gBattlerAttacker].maxHP
 				&& gBattleMons[gBattlerTarget].hp == 0

@@ -1,13 +1,16 @@
-v1.1.6
+v1.2.0
 
-Some weird new puppets have snuck into the docs. They aren't in the game yet, but in the future...
-Moves now preview their type effectiveness in battle.
+Some Fossilized Wonders puppet data has snuck into the docs.
+ - They aren't in the game yet, but they are planned for a future update.
+When selecting a move in battle, you can now see if it will be super-effective, resisted, or ineffective.
 The Blackbelts in the Fighting Dojo become aggressive when you re-enter it.
  - This is intended to provide an easy grinding spot for players struggling with Silph.
  - Also changed their positions so it's less annoying to this discover for the first time.
 Fixed Crunch's proc rate incorrectly being 0.
+Freeze-Dry no longer has a chance to inflict freeze status.
 Fixed the vanilla gen 3 bug where all proc rates are 1% higher (and its weird consequences).
 Fixed Steel Fist not being flagged as a punch move.
+Fixed Charismatic's description crashing the game.
 Sucker Punch is now flagged as a punch move. (This matters for Joon)
 Move descriptions now clarify sound moves and non-obvious punching moves.
 Renamed ZFairy to Zombie Fairy.
@@ -32,6 +35,7 @@ Split Curse into two moves: Focus Stance and Curse.
  - All Suwako forms, all Parsee forms, Chiyari, Hisami, and Mai "gain" access to Curse.
 New ability: Last Prank; halves attacker's HP when the mon faints. 
  - Zombie Fairy only, replaces its Last Wish.
+The Ability Devour is now named consistently in documentation.
 Renamed the ability Perversion to Aberrant.
 Swapped HLyrica's Attack and Special Attack stats.
 Lunasa, Merlin, and Lyrica now get Shadow Hit by tutor.
@@ -40,13 +44,15 @@ All Rumia forms now get Leech Life by tutor.
 Keiki now gets Ember by tutor.
 Misumaru now gets Psywave and Psybeam by tutor.
 DSuwako now learns Recover by level in place of Shadow Force.
+Yuuma now gets Slack Off by tutor.
 Changed DSuwako's Hidden Ability: Cursed Body -> Rain Dish.
-Changed SRumia's Hidden Ability: Hustle -> Devourer.
+Changed SRumia's Hidden Ability: Hustle -> Devour.
 Made Brock a little less easy to cheese.
 Puppets obtained from Oak and ZUN are now banned from having a Hidden Ability.
 Replaced the Star Piece in Mt. Moon with an Ability Capsule.
 Replaced the Stardust on the S.S. Anne with a Star Piece.
 Added an NPC who warns you if you forgot the Bike or Surge's badge.
+Fixed Three Island's Mart having its vanilla item list.
 Banished Mille to Four Island.
 
 v1.1.5

@@ -5070,13 +5070,13 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
 
     [MOVE_FREEZE_DRY] = 
     {
-        .effect = EFFECT_FREEZE_HIT,
+        .effect = EFFECT_HIT,
         .power = 70,
         .type = TYPE_ICE,
         .moveClass = CLASS_SPECIAL,
         .accuracy = 100,
         .pp = 20,
-        .secondaryEffectChance = 10,
+        .secondaryEffectChance = 0,
         .priority = 0,
         .target = MOVE_TARGET_SELECTED,
         .flags = FLAG_PROTECT_AFFECTED,
