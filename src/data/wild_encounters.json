@@ -7435,6 +7435,10 @@
         {
           "map": "MAP_ROUTE23",
           "base_label": "sRoute23_FireRed",
+          "altX" : 8,
+          "altY" : 7,
+          "altX2" : 15,
+          "altY2" : 13,
           "land_mons": {
             "encounter_rate": 21,
             "mons": [
@@ -7497,6 +7501,71 @@
                 "min_level": 45,
                 "max_level": 49,
                 "species": "SPECIES_ELLY"
+              }
+            ]
+          },
+		  "alt_land_mons": {
+            "encounter_rate": 21,
+            "mons": [
+              {
+                "min_level": 60,
+                "max_level": 61,
+                "species": "SPECIES_AYA"
+              },
+              {
+                "min_level": 60,
+                "max_level": 61,
+                "species": "SPECIES_KANAKO"
+              },
+              {
+                "min_level": 60,
+                "max_level": 61,
+                "species": "SPECIES_MIKO"
+              },
+              {
+                "min_level": 60,
+                "max_level": 61,
+                "species": "SPECIES_RAN"
+              },
+              {
+                "min_level": 60,
+                "max_level": 61,
+                "species": "SPECIES_TENSHI"
+              },
+              {
+                "min_level": 60,
+                "max_level": 61,
+                "species": "SPECIES_CHIMATA"
+              },
+              {
+                "min_level": 60,
+                "max_level": 61,
+                "species": "SPECIES_NUE"
+              },
+              {
+                "min_level": 60,
+                "max_level": 61,
+                "species": "SPECIES_NUE"
+              },
+              {
+                "min_level": 60,
+                "max_level": 61,
+                "species": "SPECIES_TOYOHIME"
+              },
+              {
+                "min_level": 60,
+                "max_level": 61,
+                "species": "SPECIES_SARIEL"
+              },
+              {
+                "min_level": 60,
+                "max_level": 61,
+                "species": "SPECIES_TOYOHIME"
+              },
+              {
+                "min_level": 60,
+                "max_level": 61,
+                "species": "SPECIES_SARIEL"
               }
             ]
           }

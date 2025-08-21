@@ -6355,14 +6355,14 @@ BattleScript_TauntWearsOff::
 	end2
 
 BattleScript_ItemToxicOrb::
-	playanimation BS_EFFECT_BATTLER, B_ANIM_ITEM_EFFECT, NULL
+	playanimation BS_SCRIPTING, B_ANIM_ITEM_EFFECT, NULL
 	printstring STRINGID_TOXICORBACTIVATES
 	waitmessage 0x40
 	updatestatusicon BS_ATTACKER
 	end2
 
 BattleScript_ItemFlameOrb::
-	playanimation BS_EFFECT_BATTLER, B_ANIM_ITEM_EFFECT, NULL
+	playanimation BS_SCRIPTING, B_ANIM_ITEM_EFFECT, NULL
 	printstring STRINGID_FLAMEORBACTIVATES
 	waitmessage 0x40
 	updatestatusicon BS_ATTACKER

@@ -1,3 +1,13 @@
+v.new
+
+Made small stat adjustments to several trainers.
+AI now accounts for multi-hit moves and is aware of its own Skill Link.
+AI now tries to avoid using status moves on Substitutes.
+Aya forms now learn Jump Kick instead of Hi Jump Kick, and no longer get either as a tutor move.
+Aya forms now learn Comet Punch by tutor.
+Switched ALilyBlack's Rage and Outrage.
+
+
 v1.2.0
 
 Some Fossilized Wonders puppet data has snuck into the docs.

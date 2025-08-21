@@ -226,6 +226,7 @@ AI_CheckBadMove_CheckEffect:: @ 81D9D27
 	end
 
 AI_CBM_Sleep:: @ 81D9FB6
+	if_status2 AI_TARGET, STATUS2_SUBSTITUTE, Score_Minus10
 	if_move MOVE_SLEEP_POWDER, AI_CBM_SleepPowder
 AI_CBM_SleepRejoin::
 	get_ability AI_TARGET
@@ -295,38 +296,45 @@ AI_CBM_EvasionUp:: @ 81DA056
 	end
 
 AI_CBM_AttackDown:: @ 81DA05F
+	if_status2 AI_TARGET, STATUS2_SUBSTITUTE, Score_Minus10
 	if_stat_level_equal AI_TARGET, STAT_ATK, 0, Score_Minus10
 	get_ability AI_TARGET
 	if_equal ABILITY_HI_STRENGTH, Score_Minus10
 	goto CheckIfAbilityBlocksStatChange
 
 AI_CBM_DefenseDown:: @ 81DA074
+	if_status2 AI_TARGET, STATUS2_SUBSTITUTE, Score_Minus10
 	if_stat_level_equal AI_TARGET, STAT_DEF, 0, Score_Minus10
 	get_ability AI_TARGET
 	if_equal ABILITY_FIRM_DEFENSE, Score_Minus10
 	goto CheckIfAbilityBlocksStatChange
 
 AI_CBM_SpeedDown:: @ 81DA081
+	if_status2 AI_TARGET, STATUS2_SUBSTITUTE, Score_Minus10
 	if_stat_level_equal AI_TARGET, STAT_SPEED, 0, Score_Minus10
 	get_ability AI_TARGET  @ Improvement in Emerald
 	if_equal ABILITY_SPEED_BOOST, Score_Minus10
 	goto CheckIfAbilityBlocksStatChange
 
 AI_CBM_SpAtkDown:: @ 81DA08E
+	if_status2 AI_TARGET, STATUS2_SUBSTITUTE, Score_Minus10
 	if_stat_level_equal AI_TARGET, STAT_SPATK, 0, Score_Minus10
 	goto CheckIfAbilityBlocksStatChange
 
 AI_CBM_SpDefDown:: @ 81DA09B
+	if_status2 AI_TARGET, STATUS2_SUBSTITUTE, Score_Minus10
 	if_stat_level_equal AI_TARGET, STAT_SPDEF, 0, Score_Minus10
 	goto CheckIfAbilityBlocksStatChange
 
 AI_CBM_AccDown:: @ 81DA0A8
+	if_status2 AI_TARGET, STATUS2_SUBSTITUTE, Score_Minus10
 	if_stat_level_equal AI_TARGET, STAT_ACC, 0, Score_Minus10
 	get_ability AI_TARGET
 	if_equal ABILITY_KEEN_EYE, Score_Minus10
 	goto CheckIfAbilityBlocksStatChange
 
 AI_CBM_EvasionDown:: @ 81DA0BD
+	if_status2 AI_TARGET, STATUS2_SUBSTITUTE, Score_Minus10
 	if_stat_level_equal AI_TARGET, STAT_EVASION, 0, Score_Minus10
 
 CheckIfAbilityBlocksStatChange:: @ 81DA0C5
@@ -363,6 +371,7 @@ AI_CBM_Roar:: @ 81DA14A
 	end
 
 AI_CBM_Poison:: @ 81DA15B
+	if_status2 AI_TARGET, STATUS2_SUBSTITUTE, Score_Minus10
 	if_move MOVE_POISON_POWDER, AI_CBM_PoisonPowder
 AI_CBM_PoisonRejoin::
 	get_target_type1
@@ -421,6 +430,7 @@ AI_CBM_FocusEnergy:: @ 81DA1D7
 	end
 
 AI_CBM_Confuse:: @ 81DA1E2
+	if_status2 AI_TARGET, STATUS2_SUBSTITUTE, Score_Minus10
 	if_status2 AI_TARGET, STATUS2_CONFUSION, Score_Minus5
 	get_ability AI_TARGET
 	if_equal ABILITY_OWN_TEMPO, Score_Minus10
@@ -435,6 +445,7 @@ AI_CBM_Paralyze:: @ 81DA200
 	if_move MOVE_STUN_SPORE, AI_CBM_StunSpore
 	if_move MOVE_THUNDER_WAVE, AI_CBM_ThunderWave
 AI_CBM_ParalyzeRejoin::
+	if_status2 AI_TARGET, STATUS2_SUBSTITUTE, Score_Minus10
 	get_target_type1
 	if_equal TYPE_ELECTRIC, Score_Minus10
 	get_target_type2
@@ -469,6 +480,7 @@ AI_CBM_Substitute:: @ 81DA219
 	end
 
 AI_CBM_LeechSeed:: @ 81DA22B
+	if_status2 AI_TARGET, STATUS2_SUBSTITUTE, Score_Minus10
 	if_status3 AI_TARGET, STATUS3_LEECHSEED, Score_Minus10
 	get_target_type1
 	if_equal TYPE_GRASS, Score_Minus10
@@ -489,6 +501,7 @@ AI_CBM_DamageDuringSleep:: @ 81DA256
 	end
 
 AI_CBM_CantEscape:: @ 81DA261
+	if_status2 AI_TARGET, STATUS2_SUBSTITUTE, Score_Minus10
 	if_status2 AI_TARGET, STATUS2_ESCAPE_PREVENTION, Score_Minus10
 	end
 
@@ -541,6 +554,7 @@ AI_CBM_Safeguard:: @ 81DA2E6
 	end
 
 AI_CBM_Memento:: @ 81DA2F1
+	if_status2 AI_TARGET, STATUS2_SUBSTITUTE, Score_Minus10
 	if_stat_level_equal AI_TARGET, STAT_ATK, 0, Score_Minus10
 	if_stat_level_equal AI_TARGET, STAT_SPATK, 0, Score_Minus8
 
@@ -596,6 +610,7 @@ AI_CBM_WillOWispRejoin::
 	if_equal ABILITY_WATER_VEIL, Score_Minus10
 	if_equal ABILITY_MAGIC_BOUNCE, Score_Minus10
 	if_status AI_TARGET, STATUS1_ANY, Score_Minus10
+	if_status2 AI_TARGET, STATUS2_SUBSTITUTE, Score_Minus10
 	get_target_type1
 	if_equal TYPE_FIRE, Score_Minus10
 	get_target_type2
@@ -644,6 +659,7 @@ AI_CBM_MudSport:: @ 81DA3B9
 	end
 
 AI_CBM_Tickle:: @ 81DA3C4
+	if_status2 AI_TARGET, STATUS2_SUBSTITUTE, Score_Minus10
 	if_stat_level_equal AI_TARGET, STAT_ATK, 0, Score_Minus10
 	if_stat_level_equal AI_TARGET, STAT_DEF, 0, Score_Minus8
 	end
@@ -2818,6 +2834,7 @@ AI_TryToFaint:: @ 81DBA6F
 
 AI_TryToFaint_TryToEncourageQuickAttack:: @ 81DBA7C
 	if_effect EFFECT_EXPLOSION, AI_TryToFaint_End
+	if_effect EFFECT_CORPSE_BLAZE, AI_TryToFaint_ScoreUp6
 	if_not_effect EFFECT_QUICK_ATTACK, AI_TryToFaint_ScoreUp4
 	score +2
 
@@ -2826,6 +2843,10 @@ AI_TryToFaint_ScoreUp4:: @ 81DBA8A
 
 AI_TryToFaint_End:: @ 81DBA8C
 	end
+
+AI_TryToFaint_ScoreUp6::
+	score +6
+	goto AI_TryToFaint_End
 
 AI_SetupFirstTurn:: @ 81DBA8D
 	get_turn_count

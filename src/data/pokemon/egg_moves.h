@@ -1713,40 +1713,40 @@ static const u16 sAdMokouEggMoveLearnset[] = {
 static const u16 sCAyaEggMoveLearnset[] = {
     MOVE_NIGHT_SLASH,
     MOVE_RAZOR_LEAF,
-    MOVE_HI_JUMP_KICK,
     MOVE_MUD_SHOT,
     MOVE_SILVER_WIND,
     MOVE_TORMENT,
+	MOVE_COMET_PUNCH,
     0
 };
 
 static const u16 sAyaEggMoveLearnset[] = {
     MOVE_NIGHT_SLASH,
     MOVE_RAZOR_LEAF,
-    MOVE_HI_JUMP_KICK,
     MOVE_MUD_SHOT,
     MOVE_SILVER_WIND,
     MOVE_TORMENT,
+	MOVE_COMET_PUNCH,
     0
 };
 
 static const u16 sSAyaEggMoveLearnset[] = {
     MOVE_NIGHT_SLASH,
     MOVE_RAZOR_LEAF,
-    MOVE_HI_JUMP_KICK,
     MOVE_MUD_SHOT,
     MOVE_SILVER_WIND,
     MOVE_TORMENT,
+	MOVE_COMET_PUNCH,
     0
 };
 
 static const u16 sTAyaEggMoveLearnset[] = {
     MOVE_NIGHT_SLASH,
     MOVE_RAZOR_LEAF,
-    MOVE_HI_JUMP_KICK,
     MOVE_MUD_SHOT,
     MOVE_SILVER_WIND,
     MOVE_TORMENT,
+	MOVE_COMET_PUNCH,
     0
 };
 

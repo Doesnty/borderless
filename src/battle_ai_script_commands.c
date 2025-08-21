@@ -639,8 +639,10 @@ static void Cmd_if_status2(void)
         battlerId = gBattlerTarget;
 
     status = T1_READ_32(sAIScriptPtr + 2);
-
-    if ((gBattleMons[battlerId].status2 & status))
+	
+	if (status == STATUS2_SUBSTITUTE && sAIScriptPtr[1] == AI_TARGET)
+        sAIScriptPtr += 10;
+    else if ((gBattleMons[battlerId].status2 & status))
         sAIScriptPtr = T1_READ_PTR(sAIScriptPtr + 6);
     else
         sAIScriptPtr += 10;

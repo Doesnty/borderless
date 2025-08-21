@@ -1590,6 +1590,20 @@ void AI_CalcDmg(u8 attacker, u8 defender)
         gBattleMoveDamage *= 2;
     if (gProtectStructs[attacker].helpingHand)
         gBattleMoveDamage = gBattleMoveDamage * 15 / 10;
+	if (gBattleMoves[gCurrentMove].effect == EFFECT_DOUBLE_HIT)
+		gBattleMoveDamage = gBattleMoveDamage * 2;
+	if (gBattleMoves[gCurrentMove].effect == EFFECT_TRIPLE_HIT)
+		gBattleMoveDamage = gBattleMoveDamage * 3;
+	if (gBattleMoves[gCurrentMove].effect == EFFECT_MULTI_HIT)
+	{
+		if (gBattleMons[attacker].ability == ABILITY_SKILL_LINK)
+			gBattleMoveDamage = gBattleMoveDamage * 5;
+		else
+			gBattleMoveDamage = gBattleMoveDamage * 2;
+	}
+	if (gBattleMons[attacker].ability == ABILITY_TWIN_SPARK && 
+		gCurrentMove != MOVE_VOLT_SWITCH && gCurrentMove != MOVE_U_TURN)
+		gBattleMoveDamage = gBattleMoveDamage * 2;
 }
 
 
@@ -2059,7 +2073,8 @@ static void atk0B_healthbarupdate(void)
             }			
 			else if (defenderAbility == ABILITY_DISGUISE && gBattleMons[gActiveBattler].species == SPECIES_TSEKIBANKI
 					&& !(gBattleMons[gActiveBattler].status2 & STATUS2_TRANSFORMED)
-					&& !(gHitMarker & HITMARKER_PASSIVE_DAMAGE))
+					&& !(gHitMarker & HITMARKER_PASSIVE_DAMAGE)
+					&& gCurrentMove != MOVE_SUBSTITUTE)
 			{
 				u16 species = SPECIES_SEKI_HEAD;
 				struct Pokemon *mon;
