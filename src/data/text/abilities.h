@@ -182,6 +182,10 @@ static const u8 sAtheismDescription[] = _("Quarters damage from Faith.");
 static const u8 sFirmDefenseDescription[] = _("Prevents Defense reduction.");
 static const u8 sSunbathingDescription[] = _("Recovers from status in sun.");
 static const u8 sLastPrankDescription[] = _("When KO'd by move, halves foe's HP.");
+static const u8 sDiamondDustDescription[] = _("Bad weather hurts foes more.");
+static const u8 sBuzzerDescription[] = _("On resisting a move, lowers foe's stats.");
+static const u8 sSandCastleDescription[] = _("Doubles Defense in sandstorm.");
+static const u8 sStasisGazeDescription[] = _("Foe's stats cannot rise.");
 static const u8 sObsoleteDescription[] = _("Obsolete.");
 static const u8 sUnimplementedDescription[] = _("Unimplemented.");
 
@@ -371,6 +375,10 @@ const u8 *const gAbilityDescriptionPointers[ABILITIES_COUNT] =
 	[ABILITY_FIRM_DEFENSE] = sFirmDefenseDescription,
 	[ABILITY_SUNBATHING] = sSunbathingDescription,
 	[ABILITY_LAST_PRANK] = sLastPrankDescription,
+	[ABILITY_DIAMOND_DUST] = sObsoleteDescription,
+	[ABILITY_BUZZER] = sBuzzerDescription,
+	[ABILITY_SAND_CASTLE] = sSandCastleDescription,
+	[ABILITY_STASIS_GAZE] = sStasisGazeDescription,
 };
 
 const u8 gAbilityNames[ABILITIES_COUNT][ABILITY_NAME_LENGTH + 1] =
@@ -559,4 +567,8 @@ const u8 gAbilityNames[ABILITIES_COUNT][ABILITY_NAME_LENGTH + 1] =
 	[ABILITY_FIRM_DEFENSE] = _("Firm Defense"),
 	[ABILITY_SUNBATHING] = _("Sunbathing"),
 	[ABILITY_LAST_PRANK] = _("Last Prank"),
+	[ABILITY_DIAMOND_DUST] = _("Diamond Dust"),
+	[ABILITY_BUZZER] = _("Buzzer"),
+	[ABILITY_SAND_CASTLE] = _("Sand Castle"),
+	[ABILITY_STASIS_GAZE] = _("Stasis Gaze"),
 };

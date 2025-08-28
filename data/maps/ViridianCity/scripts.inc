@@ -338,6 +338,7 @@ ViridianCity_EventScript_ZunMenuReturn::
     case 18, ViridianCity_EventScript_ZunMenu19
     case 19, ViridianCity_EventScript_ZunMenu20
     case 20, ViridianCity_EventScript_ZunMenu21
+    case 21, ViridianCity_EventScript_ZunMenu22
 
 ViridianCity_EventScript_ZunMenuBus::
     switch VAR_TEMP_6
@@ -374,11 +375,12 @@ ViridianCity_EventScript_ZunMenuNext::
     case 17, ViridianCity_EventScript_ZunMenu19
     case 18, ViridianCity_EventScript_ZunMenu20
     case 19, ViridianCity_EventScript_ZunMenu21
-    case 20, ViridianCity_EventScript_ZunMenu1
+    case 20, ViridianCity_EventScript_ZunMenu22
+    case 21, ViridianCity_EventScript_ZunMenu1
 
 ViridianCity_EventScript_ZunMenuPrevious::
     switch VAR_TEMP_5
-    case 0, ViridianCity_EventScript_ZunMenu21
+    case 0, ViridianCity_EventScript_ZunMenu22
     case 1, ViridianCity_EventScript_ZunMenu1
     case 2, ViridianCity_EventScript_ZunMenu2
     case 3, ViridianCity_EventScript_ZunMenu3
@@ -399,6 +401,7 @@ ViridianCity_EventScript_ZunMenuPrevious::
     case 18, ViridianCity_EventScript_ZunMenu18
     case 19, ViridianCity_EventScript_ZunMenu19
     case 20, ViridianCity_EventScript_ZunMenu20
+    case 21, ViridianCity_EventScript_ZunMenu21
 
 ViridianCity_EventScript_ZunMenu1::
     setvar VAR_TEMP_5, 0
@@ -524,6 +527,12 @@ ViridianCity_EventScript_ZunMenu21::
     setvar VAR_TEMP_5, 20
     multichoice 8, 0, MULTICHOICE_ZUN21, TRUE
     copyvar VAR_TEMP_6, VAR_RESULT
+    goto ViridianCity_EventScript_ZunMenuBus
+
+ViridianCity_EventScript_ZunMenu22::
+    setvar VAR_TEMP_5, 21
+    multichoice 8, 0, MULTICHOICE_ZUN22, TRUE
+    copyvar VAR_TEMP_6, VAR_RESULT
     switch VAR_TEMP_6
     case 0, ViridianCity_EventScript_ZunMenu1
     case 1, ViridianCity_EventScript_ZunCheckMon
@@ -532,9 +541,7 @@ ViridianCity_EventScript_ZunMenu21::
     case 4, ViridianCity_EventScript_ZunCheckMon
     case 5, ViridianCity_EventScript_ZunCheckMon
     case 6, ViridianCity_EventScript_ZunCheckMon
-    case 7, ViridianCity_EventScript_ZunCheckMon
-    case 8, ViridianCity_EventScript_ZunCheckMon
-    case 9, ViridianCity_EventScript_ZunMenu20
+    case 7, ViridianCity_EventScript_ZunMenu21
 
 
 

@@ -549,6 +549,7 @@ BattleScript_EffectStatUp::
 BattleScript_EffectStatUpAfterAtkCanceler::
 	attackstring
 	ppreduce
+	special 0x2b
 	statbuffchange STAT_CHANGE_BS_PTR | MOVE_EFFECT_AFFECTS_USER, BattleScript_StatUpEnd
 	jumpifbyte CMP_NOT_EQUAL, cMULTISTRING_CHOOSER, 2, BattleScript_StatUpAttackAnim
 	pause 0x20
@@ -4722,11 +4723,12 @@ BattleScript_EffectGrowth:: @ Growth and Work Up
 	jumpifabilitypresent ABILITY_CLOUD_NINE, BattleScript_Growth1
 	jumpifabilitypresent ABILITY_HISOUTEN, BattleScript_Growth1
 	jumpifhalfword CMP_COMMON_BITS, gBattleWeather, 96, BattleScript_Growth2
-	
+
 BattleScript_Growth1:
 	attackcanceler
 	attackstring
 	ppreduce
+	special 0x2b
 	jumpifstat BS_ATTACKER, CMP_LESS_THAN, STAT_ATK, 12, BattleScript_Growth1DoMoveAnim
 	jumpifstat BS_ATTACKER, CMP_EQUAL, STAT_SPATK, 12, BattleScript_CantRaiseMultipleStats
 
@@ -4755,6 +4757,7 @@ BattleScript_Growth2:
 	attackcanceler
 	attackstring
 	ppreduce
+	special 0x2b
 	jumpifstat BS_ATTACKER, CMP_LESS_THAN, STAT_ATK, 12, BattleScript_Growth2DoMoveAnim
 	jumpifstat BS_ATTACKER, CMP_EQUAL, STAT_SPATK, 12, BattleScript_CantRaiseMultipleStats
 
@@ -4925,6 +4928,7 @@ BattleScript_HoneClaws:
 	attackcanceler
 	attackstring
 	ppreduce
+	special 0x2b
 	jumpifstat BS_ATTACKER, CMP_LESS_THAN, STAT_ATK, 12, BattleScript_HoneClawsDoMoveAnim
 	jumpifstat BS_ATTACKER, CMP_EQUAL, STAT_ACC, 12, BattleScript_CantRaiseMultipleStats
 
@@ -4954,6 +4958,7 @@ BattleScript_EffectQuiverDance:
 	attackcanceler
 	attackstring
 	ppreduce
+	special 0x2b
 	jumpifstat BS_ATTACKER, CMP_LESS_THAN, STAT_SPATK, 12, BattleScript_QuiverDanceDoMoveAnim
 	jumpifstat BS_ATTACKER, CMP_LESS_THAN, STAT_SPDEF, 12, BattleScript_QuiverDanceDoMoveAnim
 	jumpifstat BS_ATTACKER, CMP_EQUAL, STAT_SPEED, 12, BattleScript_CantRaiseMultipleStats
@@ -4992,6 +4997,7 @@ BattleScript_EffectShellSmash::
 	attackcanceler
 	attackstring
 	ppreduce
+	special 0x2b
 	jumpifstat BS_ATTACKER, CMP_LESS_THAN, STAT_ATK, 12, BattleScript_ShellSmashDoMoveAnim
 	jumpifstat BS_ATTACKER, CMP_LESS_THAN, STAT_SPATK, 12, BattleScript_ShellSmashDoMoveAnim
 	jumpifstat BS_ATTACKER, CMP_EQUAL, STAT_SPEED, 12, BattleScript_CantRaiseMultipleStats
@@ -5266,6 +5272,7 @@ BattleScript_EffectAegisMerge::
 	attackcanceler
 	attackstring
 	ppreduce
+	special 0x2b
 	trysetroots BattleScript_ButItFailed
 	attackanimation
 	waitanimation
@@ -5686,6 +5693,20 @@ BattleScript_LectureContrary::
 
 BattleScript_LectureBlockedByAbility::
 	printstring STRINGID_LECTUREBLOCKED
+	waitmessage 0x40
+	return
+
+BattleScript_Buzzer::
+	playanimation BS_ATTACKER, B_ANIM_BUZZER, sB_ANIM_ARG1
+	playanimation BS_ATTACKER, B_ANIM_STATS_CHANGE, sB_ANIM_ARG1
+	printstring STRINGID_BUZZERLOWERSSTAT
+	waitmessage 0x40
+	return
+
+BattleScript_BuzzerContrary::
+	playanimation BS_ATTACKER, B_ANIM_BUZZER, sB_ANIM_ARG1
+	playanimation BS_ATTACKER, B_ANIM_STATS_CHANGE, sB_ANIM_ARG1
+	printstring STRINGID_BUZZERRAISESSTAT
 	waitmessage 0x40
 	return
 
@@ -6372,6 +6393,7 @@ BattleScript_Invocation::
 	attackcanceler
 	attackstring
 	ppreduce
+	special 0x2b
 	cursetarget BattleScript_ButItFailed
 	jumpifstat BS_ATTACKER, CMP_LESS_THAN, STAT_SPATK, 12, BattleScript_InvocationDoMoveAnim
 	jumpifstat BS_ATTACKER, CMP_LESS_THAN, STAT_SPDEF, 12, BattleScript_InvocationDoMoveAnim
@@ -6422,6 +6444,7 @@ BattleScript_FocusStance::
 	attackcanceler
 	attackstring
 	ppreduce
+	special 0x2b
 	jumpifstat BS_ATTACKER, CMP_GREATER_THAN, STAT_SPEED, 0, BattleScript_FocusStanceTrySpeed
 	jumpifstat BS_ATTACKER, CMP_NOT_EQUAL, STAT_ATK, 12, BattleScript_FocusStanceTrySpeed
 	jumpifstat BS_ATTACKER, CMP_EQUAL, STAT_DEF, 12, BattleScript_ButItFailed
@@ -6446,3 +6469,16 @@ BattleScript_FocusStanceTryDefence::
 	waitmessage 0x40
 BattleScript_FocusStanceEnd::
 	goto BattleScript_MoveEnd
+
+BattleScript_StasisGazeActivates::
+	pause 0x20
+	printstring STRINGID_STASISGAZEACTIVATES
+	waitmessage 0x40
+	moveendall
+	end
+
+BattleScript_StasisGazePreventsAbility::
+	printstring STRINGID_ABILITYFAILEDDUETOSTASISGAZE
+	waitmessage 0x40
+	end3
+

@@ -694,6 +694,33 @@ static const u16 sDexCategory_UDOALG_Page4[] = {
 	SPECIES_ZANMU,
 };
 
+static const u16 sDexCategory_FW_Page1[] = {
+	SPECIES_CUBAME,
+	SPECIES_UBAME,
+};
+
+static const u16 sDexCategory_FW_Page2[] = {
+	SPECIES_CCHIMI,
+	SPECIES_CHIMI,
+};
+
+static const u16 sDexCategory_FW_Page3[] = {
+	SPECIES_CNAREKO,
+	SPECIES_NAREKO,
+};
+
+static const u16 sDexCategory_FW_Page4[] = {
+	SPECIES_CYUIMAN,
+	SPECIES_YUIMAN,
+	SPECIES_CARIYA,
+	SPECIES_ARIYA,
+};
+
+static const u16 sDexCategory_FW_Page5[] = {
+	SPECIES_CNINA,
+	SPECIES_NINA,
+};
+
 static const u16 sDexCategory_Fighters_Page1[] = {
 	SPECIES_CSUIKA,
 	SPECIES_SUIKA,
@@ -1198,6 +1225,14 @@ static const struct PokedexCategoryPage sDexCategory_UDOALGPkmn[] = {
 	DEX_CATEGORY(UDOALG_Page4),
 };
 
+static const struct PokedexCategoryPage sDexCategory_FWPkmn[] = {
+	DEX_CATEGORY(FW_Page1),
+	DEX_CATEGORY(FW_Page2),
+	DEX_CATEGORY(FW_Page3),
+	DEX_CATEGORY(FW_Page4),
+	DEX_CATEGORY(FW_Page5),
+};
+
 static const struct PokedexCategoryPage sDexCategory_FightersPkmn[] = {
 	DEX_CATEGORY(Fighters_Page1),
 	DEX_CATEGORY(Fighters_Page2),
@@ -1302,6 +1337,7 @@ struct {
     DEX_CATEGORY(WBAWCPkmn),
     DEX_CATEGORY(UMPkmn),
     DEX_CATEGORY(UDOALGPkmn),
+	DEX_CATEGORY(FWPkmn),
     DEX_CATEGORY(FightersPkmn),
 	DEX_CATEGORY(WrittenWorksPkmn),
 	DEX_CATEGORY(HRTPPkmn),

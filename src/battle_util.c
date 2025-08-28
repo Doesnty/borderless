@@ -2128,23 +2128,41 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u8 ability, u8 special, u16 moveA
                 case ABILITY_SPEED_BOOST:
                     if (gBattleMons[battler].statStages[STAT_SPEED] < 0xC && gDisableStructs[battler].isFirstTurn != 2)
                     {
-                        ++gBattleMons[battler].statStages[STAT_SPEED];
-                        gBattleScripting.animArg1 = 0x11;
-                        gBattleScripting.animArg2 = 0;
-                        BattleScriptPushCursorAndCallback(BattleScript_SpeedBoostActivates);
-                        gBattleScripting.battler = battler;
-                        ++effect;
+						if (gBattleMons[battler ^ 0x1].ability == ABILITY_STASIS_GAZE && gBattleMons[battler ^ 0x1].hp > 0)
+						{
+							BattleScriptPushCursorAndCallback(BattleScript_StasisGazePreventsAbility);
+							gBattleScripting.battler = battler;
+							++effect;
+						}
+						else
+						{
+							++gBattleMons[battler].statStages[STAT_SPEED];
+							gBattleScripting.animArg1 = 0x11;
+							gBattleScripting.animArg2 = 0;
+							BattleScriptPushCursorAndCallback(BattleScript_SpeedBoostActivates);
+							gBattleScripting.battler = battler;
+							++effect;
+						}
                     }
                     break;
                 case ABILITY_POWER_LEAK:
                     if (gBattleMons[battler].statStages[STAT_SPATK] > 0 && gDisableStructs[battler].isFirstTurn != 2)
                     {
-                        gBattleMons[battler].statStages[STAT_SPATK]--;
-                        gBattleScripting.animArg1 = STAT_ANIM_MINUS1 + STAT_SPATK - 1;
-                        gBattleScripting.animArg2 = 0;
-                        BattleScriptPushCursorAndCallback(BattleScript_PowerLeakPenalty);
-                        gBattleScripting.battler = battler;
-                        ++effect;
+						if (gBattleMons[battler ^ 0x1].ability == ABILITY_STASIS_GAZE && gBattleMons[battler ^ 0x1].hp > 0)
+						{
+							BattleScriptPushCursorAndCallback(BattleScript_StasisGazePreventsAbility);
+							gBattleScripting.battler = battler;
+							++effect;
+						}
+						else
+						{
+							gBattleMons[battler].statStages[STAT_SPATK]--;
+							gBattleScripting.animArg1 = STAT_ANIM_MINUS1 + STAT_SPATK - 1;
+							gBattleScripting.animArg2 = 0;
+							BattleScriptPushCursorAndCallback(BattleScript_PowerLeakPenalty);
+							gBattleScripting.battler = battler;
+							++effect;
+						}
                     }
                     break;
 				case ABILITY_HARVEST:
@@ -2206,7 +2224,7 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u8 ability, u8 special, u16 moveA
                     if (moveType == TYPE_WATER && gBattlerAttacker != gBattlerTarget && gBattleMons[battler].hp > 0)
                     {
                         gBattleScripting.battler = gBattlerTarget;
-                        if (gBattleMons[gBattlerTarget].statStages[STAT_SPATK] == 12)
+                        if (gBattleMons[gBattlerTarget].statStages[STAT_SPATK] == 12 || gBattleMons[gBattlerAttacker].ability == ABILITY_STASIS_GAZE)
                         {
                             if ((gProtectStructs[gBattlerAttacker].notFirstStrike))
 								gBattlescriptCurrInstr = BattleScript_MonMadeMoveUseless;
@@ -2254,7 +2272,7 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u8 ability, u8 special, u16 moveA
                     if (moveType == TYPE_ELECTRIC && gBattleMons[battler].hp > 0)
                     {
                         gBattleScripting.battler = gBattlerTarget;
-                        if (gBattleMons[gBattlerTarget].statStages[STAT_SPATK] == 12)
+                        if (gBattleMons[gBattlerTarget].statStages[STAT_SPATK] == 12 || gBattleMons[gBattlerAttacker].ability == ABILITY_STASIS_GAZE)
                         {
                             if ((gProtectStructs[gBattlerAttacker].notFirstStrike))
 								gBattlescriptCurrInstr = BattleScript_MonMadeMoveUseless;
@@ -2278,7 +2296,7 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u8 ability, u8 special, u16 moveA
                     if (moveType == TYPE_ELECTRIC && gBattleMons[battler].hp > 0)
                     {
                         gBattleScripting.battler = gBattlerTarget;
-                        if (gBattleMons[gBattlerTarget].statStages[STAT_SPEED] == 12)
+                        if (gBattleMons[gBattlerTarget].statStages[STAT_SPEED] == 12 || gBattleMons[gBattlerAttacker].ability == ABILITY_STASIS_GAZE)
                         {
                             if ((gProtectStructs[gBattlerAttacker].notFirstStrike))
 								gBattlescriptCurrInstr = BattleScript_MonMadeMoveUseless;
@@ -2302,7 +2320,7 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u8 ability, u8 special, u16 moveA
                     if (moveType == TYPE_NATURE && gBattleMons[battler].hp > 0)
                     {
                         gBattleScripting.battler = gBattlerTarget;
-                        if (gBattleMons[gBattlerTarget].statStages[STAT_ATK] == 12)
+                        if (gBattleMons[gBattlerTarget].statStages[STAT_ATK] == 12 || gBattleMons[gBattlerAttacker].ability == ABILITY_STASIS_GAZE)
                         {
                             if ((gProtectStructs[gBattlerAttacker].notFirstStrike))
 								gBattlescriptCurrInstr = BattleScript_MonMadeMoveUseless;
@@ -2608,6 +2626,86 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u8 ability, u8 special, u16 moveA
                     }
                 }
                 break;
+			case ABILITY_BUZZER:
+                if (gBattleMons[gBattlerAttacker].hp != 0
+                 && gBattleMons[gBattlerTarget].hp != 0
+				 && ((gMoveResultFlags & MOVE_RESULT_NOT_VERY_EFFECTIVE) || (gMoveResultFlags & MOVE_RESULT_DOESNT_AFFECT_FOE))
+                 && !gProtectStructs[gBattlerAttacker].confusionSelfDmg
+                 && !gSideTimers[GET_BATTLER_SIDE(gBattlerAttacker)].mistTimer)
+				 {
+					 if (gBattleMoves[gCurrentMove].moveClass == CLASS_PHYSICAL && gBattleMons[gBattlerAttacker].statStages[STAT_ATK] > 0)
+					 {
+						if (gBattleMons[gBattlerAttacker].ability == ABILITY_CONTRARY &&
+							gBattleMons[gBattlerAttacker].statStages[STAT_ATK] < 12)
+						{
+							PREPARE_STAT_BUFFER(gBattleTextBuff1, STAT_ATK);
+							gBattleMons[gBattlerAttacker].statStages[STAT_ATK]++;
+							gBattleScripting.animArg1 = GET_STAT_BUFF_ID(STAT_ATK) + STAT_ANIM_MINUS1 - 1;
+							gBattleScripting.animArg2 = 0;
+							BattleScriptPushCursor();
+							gBattlescriptCurrInstr = BattleScript_BuzzerContrary;
+							gEffectBattler = gBattlerTarget;
+							++effect;
+						}
+						else if (gBattleMons[gBattlerAttacker].ability == ABILITY_HAKUREI_MIKO ||
+								 gBattleMons[gBattlerAttacker].ability == ABILITY_MAGIC_BARRIER ||
+								 gBattleMons[gBattlerAttacker].ability == ABILITY_HI_STRENGTH ||
+								 gBattleMons[gBattlerAttacker].ability == ABILITY_SOUNDPROOF)
+						{
+							BattleScriptPushCursor();
+							gBattlescriptCurrInstr = BattleScript_LectureBlockedByAbility;
+							gEffectBattler = gBattlerTarget;
+							++effect;
+						}
+						else
+						{
+							PREPARE_STAT_BUFFER(gBattleTextBuff1, STAT_ATK);
+							gBattleMons[gBattlerAttacker].statStages[STAT_ATK]--;
+							gBattleScripting.animArg1 = GET_STAT_BUFF_ID(STAT_ATK) + STAT_ANIM_MINUS1 - 1;
+							gBattleScripting.animArg2 = 0;
+							BattleScriptPushCursor();
+							gBattlescriptCurrInstr = BattleScript_Buzzer;
+							gEffectBattler = gBattlerTarget;
+							++effect;
+						}
+					 }
+					 else if (gBattleMoves[gCurrentMove].moveClass == CLASS_SPECIAL && gBattleMons[gBattlerAttacker].statStages[STAT_SPATK] > 0)
+					 {
+						if (gBattleMons[gBattlerAttacker].ability == ABILITY_CONTRARY &&
+							gBattleMons[gBattlerAttacker].statStages[STAT_SPATK] < 12)
+						{
+							PREPARE_STAT_BUFFER(gBattleTextBuff1, STAT_SPATK);
+							gBattleMons[gBattlerAttacker].statStages[STAT_SPATK]++;
+							gBattleScripting.animArg1 = GET_STAT_BUFF_ID(STAT_SPATK) + STAT_ANIM_MINUS1 - 1;
+							gBattleScripting.animArg2 = 0;
+							BattleScriptPushCursor();
+							gBattlescriptCurrInstr = BattleScript_BuzzerContrary;
+							gEffectBattler = gBattlerTarget;
+							++effect;
+						}
+						else if (gBattleMons[gBattlerAttacker].ability == ABILITY_HAKUREI_MIKO ||
+								 gBattleMons[gBattlerAttacker].ability == ABILITY_MAGIC_BARRIER ||
+								 gBattleMons[gBattlerAttacker].ability == ABILITY_SOUNDPROOF)
+						{
+							BattleScriptPushCursor();
+							gBattlescriptCurrInstr = BattleScript_LectureBlockedByAbility;
+							gEffectBattler = gBattlerTarget;
+							++effect;
+						}
+						else
+						{
+							PREPARE_STAT_BUFFER(gBattleTextBuff1, STAT_SPATK);
+							gBattleMons[gBattlerAttacker].statStages[STAT_SPATK]--;
+							gBattleScripting.animArg1 = GET_STAT_BUFF_ID(STAT_SPATK) + STAT_ANIM_MINUS1 - 1;
+							gBattleScripting.animArg2 = 0;
+							BattleScriptPushCursor();
+							gBattlescriptCurrInstr = BattleScript_Buzzer;
+							gEffectBattler = gBattlerTarget;
+							++effect;
+						}
+					 }
+				 }
+				 break;
             case ABILITY_RATTLED:
                 if (!(gMoveResultFlags & MOVE_RESULT_NO_EFFECT)
                  && gBattleMons[gBattlerTarget].hp != 0
@@ -2616,13 +2714,22 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u8 ability, u8 special, u16 moveA
                  && (moveType == TYPE_DARK || moveType == TYPE_GHOST || moveType == TYPE_BEAST)
                  && TARGET_TURN_DAMAGED)
                 {
-                    gBattleMons[gBattlerTarget].statStages[STAT_SPEED]++;
-                    gBattleScripting.animArg1 = GET_STAT_BUFF_ID(STAT_SPEED) + STAT_ANIM_PLUS1 - 1;
-                    gBattleScripting.animArg2 = 0;
-                    BattleScriptPushCursor();
-                    gBattlescriptCurrInstr = BattleScript_Rattled;
-                    gBattleScripting.battler = gBattlerTarget;
-                    ++effect;
+					if (gBattleMons[gBattlerAttacker].ability == ABILITY_STASIS_GAZE && gBattleMons[gBattlerAttacker].hp > 0)
+					{
+						BattleScriptPushCursorAndCallback(BattleScript_StasisGazePreventsAbility);
+						gBattleScripting.battler = battler;
+						++effect;
+					}
+					else
+					{
+						gBattleMons[gBattlerTarget].statStages[STAT_SPEED]++;
+						gBattleScripting.animArg1 = GET_STAT_BUFF_ID(STAT_SPEED) + STAT_ANIM_PLUS1 - 1;
+						gBattleScripting.animArg2 = 0;
+						BattleScriptPushCursor();
+						gBattlescriptCurrInstr = BattleScript_Rattled;
+						gBattleScripting.battler = gBattlerTarget;
+						++effect;
+					}
                 }
                 break;
             case ABILITY_ANGER_POINT:
@@ -2633,11 +2740,20 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u8 ability, u8 special, u16 moveA
                  && gCritMultiplier > 1
                  && TARGET_TURN_DAMAGED)
                 {
-                    gBattleMons[gBattlerTarget].statStages[STAT_ATK] = 12;
-                    BattleScriptPushCursor();
-                    gBattlescriptCurrInstr = BattleScript_AngerPoint;
-                    gBattleScripting.battler = gBattlerTarget;
-                    ++effect;
+					if (gBattleMons[gBattlerAttacker].ability == ABILITY_STASIS_GAZE && gBattleMons[gBattlerAttacker].hp > 0)
+					{
+						BattleScriptPushCursorAndCallback(BattleScript_StasisGazePreventsAbility);
+						gBattleScripting.battler = battler;
+						++effect;
+					}
+					else
+					{
+						gBattleMons[gBattlerTarget].statStages[STAT_ATK] = 12;
+						BattleScriptPushCursor();
+						gBattlescriptCurrInstr = BattleScript_AngerPoint;
+						gBattleScripting.battler = gBattlerTarget;
+						++effect;
+					}
                 }
                 break;
             case ABILITY_REACTIVE:
@@ -2646,7 +2762,13 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u8 ability, u8 special, u16 moveA
                  && !gProtectStructs[gBattlerAttacker].confusionSelfDmg
                  && TARGET_TURN_DAMAGED)
                 {
-                    if (gBattleMoves[gCurrentMove].moveClass == CLASS_PHYSICAL
+					if (gBattleMons[gBattlerAttacker].ability == ABILITY_STASIS_GAZE && gBattleMons[gBattlerAttacker].hp > 0)
+					{
+						BattleScriptPushCursorAndCallback(BattleScript_StasisGazePreventsAbility);
+						gBattleScripting.battler = battler;
+						++effect;
+					}
+                    else if (gBattleMoves[gCurrentMove].moveClass == CLASS_PHYSICAL
                         && gBattleMons[gBattlerTarget].statStages[STAT_DEF] < 12)
                     {
                         gBattleMons[gBattlerTarget].statStages[STAT_DEF]++;
@@ -2703,13 +2825,22 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u8 ability, u8 special, u16 moveA
 				 && gBattleMons[gBattlerTarget].statStages[STAT_ATK] < 12
 				 && TARGET_TURN_DAMAGED)
 				{
-					gBattleMons[gBattlerTarget].statStages[STAT_ATK]++;
-					gBattleScripting.animArg1 = 0xE + STAT_ATK;
-					gBattleScripting.animArg2 = 0;
-					
-					BattleScriptPushCursor();
-					gBattlescriptCurrInstr = BattleScript_Justified;
-					++effect;
+					if (gBattleMons[gBattlerAttacker].ability == ABILITY_STASIS_GAZE && gBattleMons[gBattlerAttacker].hp > 0)
+					{
+						BattleScriptPushCursorAndCallback(BattleScript_StasisGazePreventsAbility);
+						gBattleScripting.battler = battler;
+						++effect;
+					}
+					else
+					{
+						gBattleMons[gBattlerTarget].statStages[STAT_ATK]++;
+						gBattleScripting.animArg1 = 0xE + STAT_ATK;
+						gBattleScripting.animArg2 = 0;
+						
+						BattleScriptPushCursor();
+						gBattlescriptCurrInstr = BattleScript_Justified;
+						++effect;
+					}
 				}
 				break;
 			case ABILITY_BERSERK:
@@ -2720,13 +2851,22 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u8 ability, u8 special, u16 moveA
 				 && gBattleMons[gBattlerTarget].statStages[STAT_SPATK] < 12
 				 && TARGET_TURN_DAMAGED)
 				{
-					gBattleMons[gBattlerTarget].statStages[STAT_SPATK]++;
-					gBattleScripting.animArg1 = 0xE + STAT_SPATK;
-					gBattleScripting.animArg2 = 0;
-					
-					BattleScriptPushCursor();
-					gBattlescriptCurrInstr = BattleScript_Berserk;
-					++effect;
+					if (gBattleMons[gBattlerAttacker].ability == ABILITY_STASIS_GAZE && gBattleMons[gBattlerAttacker].hp > 0)
+					{
+						BattleScriptPushCursorAndCallback(BattleScript_StasisGazePreventsAbility);
+						gBattleScripting.battler = battler;
+						++effect;
+					}
+					else
+					{
+						gBattleMons[gBattlerTarget].statStages[STAT_SPATK]++;
+						gBattleScripting.animArg1 = 0xE + STAT_SPATK;
+						gBattleScripting.animArg2 = 0;
+						
+						BattleScriptPushCursor();
+						gBattlescriptCurrInstr = BattleScript_Berserk;
+						++effect;
+					}
 				}
 				break;
             }
@@ -3029,21 +3169,39 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u8 ability, u8 special, u16 moveA
 					
 					if (def < spdef && gBattleMons[i].statStages[STAT_ATK] < 12)
 					{
-                        gBattleMons[i].statStages[STAT_ATK]++;
-						gBattleScripting.animArg1 = GET_STAT_BUFF_ID(STAT_ATK) + STAT_ANIM_PLUS1 - 1;
-						gBattleScripting.animArg2 = 0;
-						BattleScriptPushCursorAndCallback(BattleScript_DownloadAtk);
-						gBattleScripting.battler = i;
-						effect++;
+						if (gBattleMons[i ^ 0x1].ability == ABILITY_STASIS_GAZE)
+						{
+							BattleScriptPushCursorAndCallback(BattleScript_StasisGazePreventsAbility);
+							gBattleScripting.battler = battler;
+							++effect;
+						}
+						else
+						{
+							gBattleMons[i].statStages[STAT_ATK]++;
+							gBattleScripting.animArg1 = GET_STAT_BUFF_ID(STAT_ATK) + STAT_ANIM_PLUS1 - 1;
+							gBattleScripting.animArg2 = 0;
+							BattleScriptPushCursorAndCallback(BattleScript_DownloadAtk);
+							gBattleScripting.battler = i;
+							effect++;
+						}
 					}
 					else if (def >= spdef && gBattleMons[i].statStages[STAT_SPATK] < 12)
 					{
-                        gBattleMons[i].statStages[STAT_SPATK]++;
-						gBattleScripting.animArg1 = GET_STAT_BUFF_ID(STAT_SPATK) + STAT_ANIM_PLUS1 - 1;
-						gBattleScripting.animArg2 = 0;
-						BattleScriptPushCursorAndCallback(BattleScript_DownloadSpAtk);
-						gBattleScripting.battler = i;
-						effect++;
+						if (gBattleMons[i ^ 0x1].ability == ABILITY_STASIS_GAZE)
+						{
+							BattleScriptPushCursorAndCallback(BattleScript_StasisGazePreventsAbility);
+							gBattleScripting.battler = battler;
+							++effect;
+						}
+						else
+						{
+							gBattleMons[i].statStages[STAT_SPATK]++;
+							gBattleScripting.animArg1 = GET_STAT_BUFF_ID(STAT_SPATK) + STAT_ANIM_PLUS1 - 1;
+							gBattleScripting.animArg2 = 0;
+							BattleScriptPushCursorAndCallback(BattleScript_DownloadSpAtk);
+							gBattleScripting.battler = i;
+							effect++;
+						}
 					}
 					gStatuses3[i] &= ~(STATUS3_TRACE);
 					break;
@@ -3326,21 +3484,30 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u8 ability, u8 special, u16 moveA
                 case ABILITY_MANIC_ECHO: // raise own attacking stat
                 {
                     u8 stat = STAT_ATK;
-                    if (gBattleMons[battler].attack < gBattleMons[battler].spAttack)
-                        stat = STAT_SPATK;
-                    if (gBattleMons[battler].statStages[stat] < 12 &&
-                        gBattleMoves[gCurrentMove].flags & FLAG_SOUND_MOVE 
-                        && !(gHitMarker & HITMARKER_UNABLE_TO_USE_MOVE))
-                    {
-                        gBattleMons[battler].statStages[stat]++;
-                        gBattleScripting.animArg1 = 0x0E + stat;
-                        gBattleScripting.animArg2 = 0;
-                        
-                        PREPARE_STAT_BUFFER(gBattleTextBuff1, stat)
-                        BattleScriptPushCursorAndCallback(BattleScript_ManicEchoBoost);
-                        gBattleScripting.battler = battler;
-                        effect++;
-                    }
+					if (gBattleMons[battler ^ 0x1].ability == ABILITY_STASIS_GAZE && gBattleMons[battler ^ 0x1].hp > 0)
+					{
+						BattleScriptPushCursorAndCallback(BattleScript_StasisGazePreventsAbility);
+						gBattleScripting.battler = battler;
+						++effect;
+					}
+					else
+					{
+						if (gBattleMons[battler].attack < gBattleMons[battler].spAttack)
+							stat = STAT_SPATK;
+						if (gBattleMons[battler].statStages[stat] < 12 &&
+							gBattleMoves[gCurrentMove].flags & FLAG_SOUND_MOVE 
+							&& !(gHitMarker & HITMARKER_UNABLE_TO_USE_MOVE))
+						{
+							gBattleMons[battler].statStages[stat]++;
+							gBattleScripting.animArg1 = 0x0E + stat;
+							gBattleScripting.animArg2 = 0;
+							
+							PREPARE_STAT_BUFFER(gBattleTextBuff1, stat)
+							BattleScriptPushCursorAndCallback(BattleScript_ManicEchoBoost);
+							gBattleScripting.battler = battler;
+							effect++;
+						}
+					}
                 }
                     break;
                 case ABILITY_DOUR_ECHO:
@@ -3404,14 +3571,23 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u8 ability, u8 special, u16 moveA
                      && GetBattlerSide(battler) != GetBattlerSide(gBattlerAttacker)
                      && gBattleMons[battler].statStages[STAT_SPATK] < 12)
                     {
-                        gBattleMons[battler].statStages[STAT_SPATK]++;
-                        gBattleScripting.animArg1 = GET_STAT_BUFF_ID(STAT_SPATK) + STAT_ANIM_PLUS1 - 1;
-                        gBattleScripting.animArg2 = 0;
-                        
-                        PREPARE_STAT_BUFFER(gBattleTextBuff1, STAT_SPATK);
-                        BattleScriptPushCursorAndCallback(BattleScript_PrideBoost);
-                        gBattleScripting.battler = battler;
-                        ++effect;
+						if (gBattleMons[battler ^ 0x1].ability == ABILITY_STASIS_GAZE && gBattleMons[battler ^ 0x1].hp > 0)
+						{
+							BattleScriptPushCursorAndCallback(BattleScript_StasisGazePreventsAbility);
+							gBattleScripting.battler = battler;
+							++effect;
+						}
+						else
+						{
+							gBattleMons[battler].statStages[STAT_SPATK]++;
+							gBattleScripting.animArg1 = GET_STAT_BUFF_ID(STAT_SPATK) + STAT_ANIM_PLUS1 - 1;
+							gBattleScripting.animArg2 = 0;
+							
+							PREPARE_STAT_BUFFER(gBattleTextBuff1, STAT_SPATK);
+							BattleScriptPushCursorAndCallback(BattleScript_PrideBoost);
+							gBattleScripting.battler = battler;
+							++effect;
+						}
                     }
                 }
                     break;
@@ -3426,14 +3602,23 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u8 ability, u8 special, u16 moveA
 						 gBattleMons[battler].moves[2] == gCurrentMove ||
 						 gBattleMons[battler].moves[3] == gCurrentMove))
 					{
-                        gBattleMons[battler].statStages[STAT_SPATK]++;
-                        gBattleScripting.animArg1 = GET_STAT_BUFF_ID(STAT_SPATK) + STAT_ANIM_PLUS1 - 1;
-                        gBattleScripting.animArg2 = 0;
-                        
-                        PREPARE_STAT_BUFFER(gBattleTextBuff1, STAT_SPATK);
-                        BattleScriptPushCursorAndCallback(BattleScript_PrideBoost);
-                        gBattleScripting.battler = battler;
-                        ++effect;
+						if (gBattleMons[battler ^ 0x1].ability == ABILITY_STASIS_GAZE && gBattleMons[battler ^ 0x1].hp > 0)
+						{
+							BattleScriptPushCursorAndCallback(BattleScript_StasisGazePreventsAbility);
+							gBattleScripting.battler = battler;
+							++effect;
+						}
+						else
+						{
+							gBattleMons[battler].statStages[STAT_SPATK]++;
+							gBattleScripting.animArg1 = GET_STAT_BUFF_ID(STAT_SPATK) + STAT_ANIM_PLUS1 - 1;
+							gBattleScripting.animArg2 = 0;
+							
+							PREPARE_STAT_BUFFER(gBattleTextBuff1, STAT_SPATK);
+							BattleScriptPushCursorAndCallback(BattleScript_PrideBoost);
+							gBattleScripting.battler = battler;
+							++effect;
+						}
 					}
 				}
 					break;
@@ -3482,6 +3667,7 @@ u8 ItemBattleEffects(u8 caseID, u8 battlerId, bool8 moveTurn)
     u16 atkItem, defItem;
     u8 gluttonyMult = 1;
 	u8 gluttonyFigyMult = 1;
+	u8 stasisGaze = 0;
 
     gLastUsedItem = gBattleMons[battlerId].item;
     if (gLastUsedItem == ITEM_ENIGMA_BERRY)
@@ -3535,6 +3721,8 @@ u8 ItemBattleEffects(u8 caseID, u8 battlerId, bool8 moveTurn)
 	{
 		return 0;
 	}
+	
+	stasisGaze = (gBattleMons[gBattlerTarget ^ 0x1].ability == ABILITY_STASIS_GAZE && gBattleMons[gBattlerTarget ^ 0x1].hp > 0);
     
     switch (caseID)
     {
@@ -3746,7 +3934,7 @@ u8 ItemBattleEffects(u8 caseID, u8 battlerId, bool8 moveTurn)
                 }
                 break;
             case HOLD_EFFECT_ATTACK_UP:
-                if (gBattleMons[battlerId].hp <= gluttonyMult * gBattleMons[battlerId].maxHP / battlerHoldEffectParam && !moveTurn && gBattleMons[battlerId].statStages[STAT_ATK] < 0xC)
+                if (!stasisGaze && gBattleMons[battlerId].hp <= gluttonyMult * gBattleMons[battlerId].maxHP / battlerHoldEffectParam && !moveTurn && gBattleMons[battlerId].statStages[STAT_ATK] < 0xC)
                 {
                     PREPARE_STAT_BUFFER(gBattleTextBuff1, STAT_ATK);
                     PREPARE_STRING_BUFFER(gBattleTextBuff2, STRINGID_STATROSE);
@@ -3759,7 +3947,7 @@ u8 ItemBattleEffects(u8 caseID, u8 battlerId, bool8 moveTurn)
                 }
                 break;
             case HOLD_EFFECT_DEFENSE_UP:
-                if (gBattleMons[battlerId].hp <= gluttonyMult * gBattleMons[battlerId].maxHP / battlerHoldEffectParam && !moveTurn && gBattleMons[battlerId].statStages[STAT_DEF] < 0xC)
+                if (!stasisGaze && gBattleMons[battlerId].hp <= gluttonyMult * gBattleMons[battlerId].maxHP / battlerHoldEffectParam && !moveTurn && gBattleMons[battlerId].statStages[STAT_DEF] < 0xC)
                 {
                     PREPARE_STAT_BUFFER(gBattleTextBuff1, STAT_DEF);
                     gEffectBattler = battlerId;
@@ -3771,7 +3959,7 @@ u8 ItemBattleEffects(u8 caseID, u8 battlerId, bool8 moveTurn)
                 }
                 break;
             case HOLD_EFFECT_SPEED_UP:
-                if (gBattleMons[battlerId].hp <= gluttonyMult * gBattleMons[battlerId].maxHP / battlerHoldEffectParam && !moveTurn && gBattleMons[battlerId].statStages[STAT_SPEED] < 0xC)
+                if (!stasisGaze && gBattleMons[battlerId].hp <= gluttonyMult * gBattleMons[battlerId].maxHP / battlerHoldEffectParam && !moveTurn && gBattleMons[battlerId].statStages[STAT_SPEED] < 0xC)
                 {
                     PREPARE_STAT_BUFFER(gBattleTextBuff1, STAT_SPEED);
                     gEffectBattler = battlerId;
@@ -3783,7 +3971,7 @@ u8 ItemBattleEffects(u8 caseID, u8 battlerId, bool8 moveTurn)
                 }
                 break;
             case HOLD_EFFECT_SP_ATTACK_UP:
-                if (gBattleMons[battlerId].hp <= gluttonyMult * gBattleMons[battlerId].maxHP / battlerHoldEffectParam && !moveTurn && gBattleMons[battlerId].statStages[STAT_SPATK] < 0xC)
+                if (!stasisGaze && gBattleMons[battlerId].hp <= gluttonyMult * gBattleMons[battlerId].maxHP / battlerHoldEffectParam && !moveTurn && gBattleMons[battlerId].statStages[STAT_SPATK] < 0xC)
                 {
                     PREPARE_STAT_BUFFER(gBattleTextBuff1, STAT_SPATK);
                     gEffectBattler = battlerId;
@@ -3795,7 +3983,7 @@ u8 ItemBattleEffects(u8 caseID, u8 battlerId, bool8 moveTurn)
                 }
                 break;
             case HOLD_EFFECT_SP_DEFENSE_UP:
-                if (gBattleMons[battlerId].hp <= gluttonyMult * gBattleMons[battlerId].maxHP / battlerHoldEffectParam && !moveTurn && gBattleMons[battlerId].statStages[STAT_SPDEF] < 0xC)
+                if (!stasisGaze && gBattleMons[battlerId].hp <= gluttonyMult * gBattleMons[battlerId].maxHP / battlerHoldEffectParam && !moveTurn && gBattleMons[battlerId].statStages[STAT_SPDEF] < 0xC)
                 {
                     PREPARE_STAT_BUFFER(gBattleTextBuff1, STAT_SPDEF);
                     gEffectBattler = battlerId;
@@ -3815,7 +4003,7 @@ u8 ItemBattleEffects(u8 caseID, u8 battlerId, bool8 moveTurn)
                 }
                 break;
             case HOLD_EFFECT_RANDOM_STAT_UP:
-                if (!moveTurn && gBattleMons[battlerId].hp <= gluttonyMult * gBattleMons[battlerId].maxHP / battlerHoldEffectParam)
+                if (!stasisGaze && !moveTurn && gBattleMons[battlerId].hp <= gluttonyMult * gBattleMons[battlerId].maxHP / battlerHoldEffectParam)
                 {
                     for (i = 0; i < 5 && gBattleMons[battlerId].statStages[STAT_ATK + i] >= 0xC; ++i);
                     if (i != 5)

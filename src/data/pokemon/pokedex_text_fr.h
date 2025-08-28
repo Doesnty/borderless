@@ -2194,6 +2194,66 @@ const u8 gzanmuPokedexText[] = _(
     "problems with schemes, diplomacy,\n"
     "and careful manipulation.");
 
+const u8 gcubamePokedexText[] = _(
+    "placeholder\n"
+    "\n"
+    ".");
+
+const u8 gubamePokedexText[] = _(
+    "placeholder\n"
+    "\n"
+    ".");
+
+const u8 gcchimiPokedexText[] = _(
+    "placeholder\n"
+    "\n"
+    ".");
+
+const u8 gchimiPokedexText[] = _(
+    "placeholder\n"
+    "\n"
+    ".");
+
+const u8 gcnarekoPokedexText[] = _(
+    "placeholder\n"
+    "\n"
+    ".");
+
+const u8 gnarekoPokedexText[] = _(
+    "placeholder\n"
+    "\n"
+    ".");
+
+const u8 gcyuimanPokedexText[] = _(
+    "placeholder\n"
+    "\n"
+    ".");
+
+const u8 gyuimanPokedexText[] = _(
+    "placeholder\n"
+    "\n"
+    ".");
+
+const u8 gcariyaPokedexText[] = _(
+    "placeholder\n"
+    "\n"
+    ".");
+
+const u8 gariyaPokedexText[] = _(
+    "placeholder\n"
+    "\n"
+    ".");
+
+const u8 gcninaPokedexText[] = _(
+    "placeholder\n"
+    "\n"
+    ".");
+
+const u8 gninaPokedexText[] = _(
+    "placeholder\n"
+    "\n"
+    ".");
+
 const u8 gchakureiPokedexText[] = _(
     "A fledgling shrine maiden that\n"
     "hasn't realized her potential.\n"

@@ -330,6 +330,7 @@ static const struct ListMenuItem sListMenuItems_KantoDexModeSelect[] = {
     {gText_DexCategory_WBAWCPkmn,        DEX_CATEGORY_WBAWC},
 	{gText_DexCategory_UMPkmn,           DEX_CATEGORY_UM},
 	{gText_DexCategory_UDOALGPkmn,       DEX_CATEGORY_UDOALG},
+	{gText_DexCategory_FWPkmn,           DEX_CATEGORY_FW},
 	{gText_DexCategory_FightersPkmn,     DEX_CATEGORY_FIGHTERS},
 	{gText_DexCategory_WrittenWorksPkmn, DEX_CATEGORY_WRITTEN_WORKS},
 	{gText_DexCategory_HRTPPkmn,         DEX_CATEGORY_HRTP},
@@ -386,6 +387,7 @@ static const struct ListMenuItem sListMenuItems_NatDexModeSelect[] = {
     {gText_DexCategory_WBAWCPkmn,        DEX_CATEGORY_WBAWC},
 	{gText_DexCategory_UMPkmn,           DEX_CATEGORY_UM},
 	{gText_DexCategory_UDOALGPkmn,       DEX_CATEGORY_UDOALG},
+	{gText_DexCategory_FWPkmn,           DEX_CATEGORY_FW},
 	{gText_DexCategory_FightersPkmn,     DEX_CATEGORY_FIGHTERS},
 	{gText_DexCategory_WrittenWorksPkmn, DEX_CATEGORY_WRITTEN_WORKS},
 	{gText_DexCategory_HRTPPkmn,         DEX_CATEGORY_HRTP},
@@ -508,6 +510,10 @@ static const struct PokedexScreenWindowGfx sTopMenuSelectionIconGfxPtrs[] = {
     [DEX_CATEGORY_UDOALG] = {
         .tiles = sTopMenuIconTiles_Grassland,
         .pal   = sTopMenuIconPals_Grassland
+    },
+    [DEX_CATEGORY_FW] = {
+        .tiles = sTopMenuIconTiles_Cave,
+        .pal   = sTopMenuIconPals_Cave
     },
     [DEX_CATEGORY_FIGHTERS] = {
         .tiles = sTopMenuIconTiles_Urban,
@@ -890,6 +896,7 @@ static const u8 * const sDexCategoryNamePtrs[] = {
 	gText_DexCategory_WBAWCPkmn,
 	gText_DexCategory_UMPkmn,
 	gText_DexCategory_UDOALGPkmn,
+	gText_DexCategory_FWPkmn,
 	gText_DexCategory_FightersPkmn,
 	gText_DexCategory_WrittenWorksPkmn,
 	gText_DexCategory_HRTPPkmn,
@@ -1148,6 +1155,7 @@ static void Task_PokedexScreen(u8 taskId)
             case DEX_CATEGORY_WBAWC:
             case DEX_CATEGORY_UM:
             case DEX_CATEGORY_UDOALG:
+            case DEX_CATEGORY_FW:
 			case DEX_CATEGORY_FIGHTERS:
 			case DEX_CATEGORY_WRITTEN_WORKS:
 			case DEX_CATEGORY_HRTP:

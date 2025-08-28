@@ -2539,6 +2539,17 @@ void SetMoveEffect(bool8 primary, u8 certain)
 	{
 		holdEffect = ItemId_GetHoldEffect(gBattleMons[gEffectBattler].item);
 	}
+	if (gBattleMons[gEffectBattler ^ 1].ability == ABILITY_STASIS_GAZE &&
+		gBattleMons[gEffectBattler ^ 1].hp > 0 &&
+		!(gHitMarker & HITMARKER_MOLD_BREAKER) &&
+		( (gBattleCommunication[MOVE_EFFECT_BYTE] >= MOVE_EFFECT_ATK_PLUS_1 && 
+		   gBattleCommunication[MOVE_EFFECT_BYTE] <= MOVE_EFFECT_EVS_PLUS_1) ||
+		  (gBattleCommunication[MOVE_EFFECT_BYTE] >= MOVE_EFFECT_ATK_PLUS_2 &&
+		   gBattleCommunication[MOVE_EFFECT_BYTE] <= MOVE_EFFECT_EVS_PLUS_2)))
+    {
+		++gBattlescriptCurrInstr;
+		return;
+    }
     if (gBattleCommunication[MOVE_EFFECT_BYTE] <= 6) // status change
     {
         switch (sStatusFlagsForMoveEffects[gBattleCommunication[MOVE_EFFECT_BYTE]])
@@ -10187,6 +10198,7 @@ static void sp27_salvage_armor_bank0(void);
 static void sp28_salvage_armor_bank1(void);
 static void sp29_check_explosion_viability(void);
 static void sp2a_set_jump_kick_recoil(void);
+static void sp2b_abort_if_stasis_gaze(void);
 
 void (* const gBattleScriptingSpecialsTable[])(void) =
 {
@@ -10233,6 +10245,7 @@ void (* const gBattleScriptingSpecialsTable[])(void) =
 	sp28_salvage_armor_bank1,
 	sp29_check_explosion_viability,
 	sp2a_set_jump_kick_recoil,
+	sp2b_abort_if_stasis_gaze,
 };
 
 static void atkF8_special(void)
@@ -11096,4 +11109,18 @@ static void sp2a_set_jump_kick_recoil()
 	gBattleMoveDamage = gBattleMons[gBattlerAttacker].maxHP / 2;
 	if (gBattleMoveDamage == 0)
 		gBattleMoveDamage = 0;
+}
+
+static void sp2b_abort_if_stasis_gaze()
+{
+	u32 opposingbank = gBattlerAttacker ^ 1;
+	if (gHitMarker & HITMARKER_MOLD_BREAKER)
+		return;
+	
+	if (gBattleMons[opposingbank].ability == ABILITY_STASIS_GAZE && gBattleMons[opposingbank].hp > 0)
+	{
+        RecordAbilityBattle(opposingbank, gBattleMons[opposingbank].ability);
+		gBattlescriptCurrInstr = BattleScript_StasisGazeActivates;
+		gBattleScripting.battler = opposingbank;
+	}
 }

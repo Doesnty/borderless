@@ -39,14 +39,14 @@ CeladonCity_GameCorner_PrizeRoom_EventScript_EndPrizeExchange:: @ 816CC10
 	end
 
 CeladonCity_GameCorner_PrizeRoom_EventScript_Abra:: @ 816CC15
-	setvar VAR_TEMP_1, SPECIES_CMIKE
-	setvar VAR_TEMP_2, 80
+	setvar VAR_TEMP_1, SPECIES_CMIYOI
+	setvar VAR_TEMP_2, 500
 	goto CeladonCity_GameCorner_PrizeRoom_EventScript_ConfirmPrizeMon
 	end
 
 CeladonCity_GameCorner_PrizeRoom_EventScript_Clefairy:: @ 816CC25
-	setvar VAR_TEMP_1, SPECIES_CMIYOI
-	setvar VAR_TEMP_2, 500
+	setvar VAR_TEMP_1, SPECIES_CYUIMAN
+	setvar VAR_TEMP_2, 511
 	goto CeladonCity_GameCorner_PrizeRoom_EventScript_ConfirmPrizeMon
 	end
 
@@ -78,8 +78,8 @@ CeladonCity_GameCorner_PrizeRoom_EventScript_ConfirmPrizeMon:: @ 816CC65
 	goto_if_lt CeladonCity_GameCorner_PrizeRoom_EventScript_NotEnoughCoins
 	textcolor 3
 	switch VAR_TEMP_1
-	case SPECIES_CMIKE,     CeladonCity_GameCorner_PrizeRoom_EventScript_GiveAbra
-	case SPECIES_CMIYOI, CeladonCity_GameCorner_PrizeRoom_EventScript_GiveClefairy
+	case SPECIES_CMIYOI,     CeladonCity_GameCorner_PrizeRoom_EventScript_GiveAbra
+	case SPECIES_CYUIMAN, CeladonCity_GameCorner_PrizeRoom_EventScript_GiveClefairy
 	case SPECIES_CSANNYO,  CeladonCity_GameCorner_PrizeRoom_EventScript_GiveDratini
 	case SPECIES_CMAMIZOU,  CeladonCity_GameCorner_PrizeRoom_EventScript_GiveScyther
 	case SPECIES_CJOON,  CeladonCity_GameCorner_PrizeRoom_EventScript_GivePorygon
@@ -87,7 +87,7 @@ CeladonCity_GameCorner_PrizeRoom_EventScript_ConfirmPrizeMon:: @ 816CC65
 	end
 
 CeladonCity_GameCorner_PrizeRoom_EventScript_GiveAbra:: @ 816CCD4
-	givemon VAR_TEMP_1, 12, ITEM_NONE
+	givemon VAR_TEMP_1, 23, ITEM_NONE
 	goto CeladonCity_GameCorner_PrizeRoom_EventScript_CheckReceivedMon
 	end
 

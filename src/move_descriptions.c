@@ -434,6 +434,8 @@ const u8 gMoveDescription_Overdrive[] = _("50%: +1 Sp. Atk.\nSound-based.");
 const u8 gMoveDescription_Invocation[] = _("Lose 25% HP/turn.\n+2 Sp. Atk.\n+2 Sp. Def.\n+2 Speed.");
 const u8 gMoveDescription_NightDaze[] = _("10%: -1 Accuracy.");
 const u8 gMoveDescription_FocusStance[] = _("-1 Speed.\n+1 Attack.\n+1 Defense.");
+const u8 gMoveDescription_AuraBreak[] = _("Shatters the foe's\nReflect and Light\nScreen, if they\nare in effect.");
+const u8 gMoveDescription_VacuumWave[] = _("+1 Priority.");
 const u8 gMoveDescription_Dummy[] = _("lol");
 
 const u8 *const gMoveDescriptionPointers[MOVES_COUNT - 1] = {
@@ -871,4 +873,6 @@ const u8 *const gMoveDescriptionPointers[MOVES_COUNT - 1] = {
 	[MOVE_INVOCATION    - 1] = gMoveDescription_Invocation,
 	[MOVE_NIGHT_DAZE    - 1] = gMoveDescription_NightDaze,
 	[MOVE_FOCUS_STANCE  - 1] = gMoveDescription_FocusStance,
+	[MOVE_AURA_BREAK    - 1] = gMoveDescription_AuraBreak,
+	[MOVE_VACUUM_WAVE   - 1] = gMoveDescription_VacuumWave,
 };

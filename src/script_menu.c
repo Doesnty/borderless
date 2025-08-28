@@ -706,56 +706,68 @@ static const struct MenuAction sScriptMultiChoiceMenu_Zun17[] = {
     { gText_ZunChiyari },
     { gText_ZunHisami },
     { gText_ZunZanmu },
-    { gText_ZunHakurei },
-    { gText_ZunKirisame },
-    { gText_ZunShingyoku },
-    { gText_ZunMagan },
+	{ gText_ZunUbame },
+	{ gText_ZunChimi },
+	{ gText_ZunNareko },
+	{ gText_ZunYuiman },
     { gText_ZunPreviousPage },
 };
 
 static const struct MenuAction sScriptMultiChoiceMenu_Zun18[] = {
     { gText_ZunNextPage },
+	{ gText_ZunAriya },
+	{ gText_ZunNina },
+    { gText_ZunHakurei },
+    { gText_ZunKirisame },
+    { gText_ZunShingyoku },
+    { gText_ZunMagan },
     { gText_ZunMima },
     { gText_ZunElis },
+    { gText_ZunPreviousPage },
+};
+
+static const struct MenuAction sScriptMultiChoiceMenu_Zun19[] = {
+    { gText_ZunNextPage },
     { gText_ZunKikuri },
     { gText_ZunKonngara },
     { gText_ZunSariel },
     { gText_ZunRika },
     { gText_ZunMeira },
     { gText_ZunEllen },
+    { gText_ZunKotohime },
+    { gText_ZunKana },
     { gText_ZunPreviousPage },
 };
 
-static const struct MenuAction sScriptMultiChoiceMenu_Zun19[] = {
+static const struct MenuAction sScriptMultiChoiceMenu_Zun20[] = {
     { gText_ZunNextPage },
-    { gText_ZunKotohime },
-    { gText_ZunKana },
     { gText_ZunRikako },
     { gText_ZunChiyuri },
     { gText_ZunYumemi },
     { gText_ZunRuukoto },
     { gText_ZunOrange },
     { gText_ZunKurumi },
+    { gText_ZunElly },
+    { gText_ZunKazami },
     { gText_ZunPreviousPage },
 };
 
-static const struct MenuAction sScriptMultiChoiceMenu_Zun20[] = {
+static const struct MenuAction sScriptMultiChoiceMenu_Zun21[] = {
     { gText_ZunNextPage },
-    { gText_ZunElly },
-    { gText_ZunKazami },
     { gText_ZunMugetsu },
     { gText_ZunGengetsu },
     { gText_ZunSara },
     { gText_ZunLouise },
     { gText_ZunArisu },
     { gText_ZunYuki },
-    { gText_ZunPreviousPage },
-};
-
-static const struct MenuAction sScriptMultiChoiceMenu_Zun21[] = {
-    { gText_ZunNextPage },
     { gText_ZunMaiPC98 },
     { gText_ZunYumeko },
+    { gText_ZunPreviousPage },
+	
+};
+
+static const struct MenuAction sScriptMultiChoiceMenu_Zun22[] = {
+    { gText_ZunNextPage },
     { gText_ZunShinki },
     { gText_ZunSendai },
     { gText_ZunTenma },
@@ -918,6 +930,7 @@ const struct MultichoiceListStruct gScriptMultiChoiceMenus[] = {
     { sScriptMultiChoiceMenu_Zun19, NELEMS(sScriptMultiChoiceMenu_Zun19) },
     { sScriptMultiChoiceMenu_Zun20, NELEMS(sScriptMultiChoiceMenu_Zun20) },
     { sScriptMultiChoiceMenu_Zun21, NELEMS(sScriptMultiChoiceMenu_Zun21) },
+    { sScriptMultiChoiceMenu_Zun22, NELEMS(sScriptMultiChoiceMenu_Zun22) },
 	{ sScriptMultiChoiceMenu_NatureChanger1, NELEMS(sScriptMultiChoiceMenu_NatureChanger1) },
 	{ sScriptMultiChoiceMenu_NatureChanger2, NELEMS(sScriptMultiChoiceMenu_NatureChanger2) },
 	{ sScriptMultiChoiceMenu_NatureChanger3, NELEMS(sScriptMultiChoiceMenu_NatureChanger3) },

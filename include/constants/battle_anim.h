@@ -396,6 +396,7 @@
 #define B_ANIM_KNOCKED_AWAY             0x1D
 #define B_ANIM_TRANSFORM_ATTACKER       0x1E
 #define B_ANIM_TRANSFORM_DEFENDER       0x1F
+#define B_ANIM_BUZZER                   0x20
 
 // special animations table
 #define B_ANIM_LVL_UP                   0x0

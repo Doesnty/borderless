@@ -264,6 +264,9 @@ extern const u8 BattleScript_ContagionSpreads[];
 extern const u8 BattleScript_Lecture[];
 extern const u8 BattleScript_LectureContrary[];
 extern const u8 BattleScript_LectureBlockedByAbility[];
+extern const u8 BattleScript_Buzzer[];
+extern const u8 BattleScript_BuzzerContrary[];
+extern const u8 BattleScript_BuzzerBlockedByAbility[];
 extern const u8 BattleScript_Rattled[];
 extern const u8 BattleScript_AngerPoint[];
 extern const u8 BattleScript_ManicEchoBoost[];
@@ -304,6 +307,8 @@ extern const u8 BattleScript_NoTarget[];
 extern const u8 BattleScriptExplosionEndLoop[];
 extern const u8 BattleScript_ItemToxicOrb[];
 extern const u8 BattleScript_ItemFlameOrb[];
+extern const u8 BattleScript_StasisGazeActivates[];
+extern const u8 BattleScript_StasisGazePreventsAbility[];
 
 extern const u8 *const gBattleScriptsForMoveEffects[];
 extern const u8 *const gBattlescriptsForBallThrow[];

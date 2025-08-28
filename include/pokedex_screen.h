@@ -15,16 +15,17 @@
 #define DEX_CATEGORY_WBAWC          11
 #define DEX_CATEGORY_UM             12
 #define DEX_CATEGORY_UDOALG         13
-#define DEX_CATEGORY_FIGHTERS       14
-#define DEX_CATEGORY_WRITTEN_WORKS  15
-#define DEX_CATEGORY_HRTP           16
-#define DEX_CATEGORY_SOEW           17
-#define DEX_CATEGORY_PODD           18
-#define DEX_CATEGORY_LLS            19
-#define DEX_CATEGORY_MS             20
-#define DEX_CATEGORY_FANON          21
-#define DEX_CATEGORY_SPECIAL        22
-#define DEX_CATEGORY_COUNT          23
+#define DEX_CATEGORY_FW             14
+#define DEX_CATEGORY_FIGHTERS       15
+#define DEX_CATEGORY_WRITTEN_WORKS  16
+#define DEX_CATEGORY_HRTP           17
+#define DEX_CATEGORY_SOEW           18
+#define DEX_CATEGORY_PODD           19
+#define DEX_CATEGORY_LLS            20
+#define DEX_CATEGORY_MS             21
+#define DEX_CATEGORY_FANON          22
+#define DEX_CATEGORY_SPECIAL        23
+#define DEX_CATEGORY_COUNT          24
 
 #define DEX_ORDER_NUMERICAL_KANTO    0
 #define DEX_ORDER_ATOZ               1

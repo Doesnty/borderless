@@ -6075,4 +6075,32 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .target = MOVE_TARGET_USER,
         .flags = FLAG_SNATCH_AFFECTED,
     },
+	
+	[MOVE_AURA_BREAK] = 
+    {
+        .effect = EFFECT_BRICK_BREAK,
+        .power = 75,
+        .type = TYPE_FIGHTING,
+        .moveClass = CLASS_SPECIAL,
+        .accuracy = 100,
+        .pp = 15,
+        .secondaryEffectChance = 0,
+        .priority = 0,
+        .target = MOVE_TARGET_SELECTED,
+        .flags = FLAG_PROTECT_AFFECTED,
+    },
+	
+	[MOVE_VACUUM_WAVE] = 
+    {
+        .effect = EFFECT_QUICK_ATTACK,
+        .power = 40,
+        .type = TYPE_FIGHTING,
+        .moveClass = CLASS_SPECIAL,
+        .accuracy = 100,
+        .pp = 30,
+        .secondaryEffectChance = 0,
+        .priority = 1,
+        .target = MOVE_TARGET_SELECTED,
+        .flags = FLAG_PROTECT_AFFECTED,
+    },
 };

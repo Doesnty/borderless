@@ -6,13 +6,13 @@ const struct WildPokemon sFreshWaterFishingEncounters[] =
 	
     { 21, 24, SPECIES_CNITORI },
     { 21, 24, SPECIES_CEIKA },
-    { 21, 24, SPECIES_CURUMI },
+    { 21, 24, SPECIES_CYACHIE },
     { 21, 24, SPECIES_CKOMACHI },
     { 21, 24, SPECIES_CKOMACHI },
 	
     { 31, 34, SPECIES_NITORI },
     { 31, 34, SPECIES_EIKA },
-    { 31, 34, SPECIES_URUMI },
+    { 31, 34, SPECIES_YACHIE },
     { 31, 34, SPECIES_CKOMACHI },
     { 31, 34, SPECIES_CSUWAKO },
     { 31, 34, SPECIES_CSHINMYOUMARU },
@@ -38,7 +38,7 @@ const struct WildPokemon sSaltWaterFishingEncounters[] =
     { 31, 34, SPECIES_MURASA },
     { 31, 34, SPECIES_CHIYURI },
     { 31, 34, SPECIES_CIKU },
-    { 31, 34, SPECIES_CYACHIE },
+    { 31, 34, SPECIES_CNINA },
 };
 
 const struct WildPokemonInfo sSaltWaterFishingEncountersInfo = { 7, sSaltWaterFishingEncounters };

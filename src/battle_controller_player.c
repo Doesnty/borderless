@@ -1409,7 +1409,9 @@ static void MoveSelectionDisplayMoveType(void)
 		txtPtr = StringCopy(txtPtr, gUnknown_83FE770); */
 		u8 type1 = gBattleMons[1].type1;
 		u8 type2 = gBattleMons[1].type2;
-		if (move == MOVE_THUNDER_WAVE && (type1 == TYPE_EARTH || type2 == TYPE_EARTH))
+		if (IS_BATTLE_TYPE_GHOST_WITHOUT_SCOPE(gBattleTypeFlags))
+			txtPtr = StringCopy(gDisplayedStringBattle, gText_MoveUnknown);
+		else if (move == MOVE_THUNDER_WAVE && (type1 == TYPE_EARTH || type2 == TYPE_EARTH))
 			txtPtr = StringCopy(gDisplayedStringBattle, gText_MoveIneffective);
 		else if (gBattleMoves[move].effect == EFFECT_PARALYZE && (type1 == TYPE_ELECTRIC || type2 == TYPE_ELECTRIC))
 			txtPtr = StringCopy(gDisplayedStringBattle, gText_MoveIneffective);
@@ -1437,8 +1439,10 @@ static void MoveSelectionDisplayMoveType(void)
 	{
 		u8 moveFlags = AI_TypeCalc(move, gBattleMons[1].type1, gBattleMons[1].type2, 0);
 		
-		
-		if (moveFlags & MOVE_RESULT_SUPER_EFFECTIVE)
+
+		if (IS_BATTLE_TYPE_GHOST_WITHOUT_SCOPE(gBattleTypeFlags))
+			txtPtr = StringCopy(gDisplayedStringBattle, gText_MoveUnknown);
+		else if (moveFlags & MOVE_RESULT_SUPER_EFFECTIVE)
 			txtPtr = StringCopy(gDisplayedStringBattle, gText_MoveSuperEffective);
 		else if (moveFlags & MOVE_RESULT_NOT_VERY_EFFECTIVE)
 			txtPtr = StringCopy(gDisplayedStringBattle, gText_MoveResisted);

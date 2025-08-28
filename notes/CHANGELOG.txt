@@ -1,11 +1,17 @@
 v.new
 
+12 new puppets across 6 lines, based on the Fossilized Wonders cast.
+Three new abiities and two new moves added for them.
+
 Made small stat adjustments to several trainers.
+Sandstorm now properly raises the SDef of Beast-types.
+Saki now has Quick Feet instead of Sand Stream.
 AI now accounts for multi-hit moves and is aware of its own Skill Link.
 AI now tries to avoid using status moves on Substitutes.
 Aya forms now learn Jump Kick instead of Hi Jump Kick, and no longer get either as a tutor move.
 Aya forms now learn Comet Punch by tutor.
 Switched ALilyBlack's Rage and Outrage.
+Type match-up forecast is now disabled when encountering the ghost.
 
 
 v1.2.0

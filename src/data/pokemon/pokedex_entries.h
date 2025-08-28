@@ -2604,6 +2604,78 @@ const struct PokedexEntry gPokedexEntries[] =
         .categoryName = _("Oni King"),
         .description = gzanmuPokedexText,
     },
+	
+	[NATIONAL_DEX_CUBAME] = 
+	{
+		.categoryName = _("Yamanba"),
+		.description = gcubamePokedexText,
+	},
+	
+	[NATIONAL_DEX_UBAME] = 
+	{
+		.categoryName = _("Yamanba"),
+		.description = gubamePokedexText,
+	},
+	
+	[NATIONAL_DEX_CCHIMI] = 
+	{
+		.categoryName = _("Nature Spirit"),
+		.description = gcchimiPokedexText,
+	},
+	
+	[NATIONAL_DEX_CHIMI] = 
+	{
+		.categoryName = _("Nature Spirit"),
+		.description = gchimiPokedexText,
+	},
+	
+	[NATIONAL_DEX_CNAREKO] = 
+	{
+		.categoryName = _("Guardian"),
+		.description = gcnarekoPokedexText,
+	},
+	
+	[NATIONAL_DEX_NAREKO] = 
+	{
+		.categoryName = _("Guardian"),
+		.description = gcnarekoPokedexText,
+	},
+	
+	[NATIONAL_DEX_CYUIMAN] = 
+	{
+		.categoryName = _("Ancient"),
+		.description = gcyuimanPokedexText,
+	},
+	
+	[NATIONAL_DEX_YUIMAN] = 
+	{
+		.categoryName = _("Ancient"),
+		.description = gyuimanPokedexText,
+	},
+	
+	[NATIONAL_DEX_CARIYA] = 
+	{
+		.categoryName = _("Stone Goddess"),
+		.description = gcariyaPokedexText,
+	},
+	
+	[NATIONAL_DEX_ARIYA] = 
+	{
+		.categoryName = _("Stone Goddess"),
+		.description = gariyaPokedexText,
+	},
+	
+	[NATIONAL_DEX_CNINA] = 
+	{
+		.categoryName = _("Mirage Clam"),
+		.description = gcninaPokedexText,
+	},
+	
+	[NATIONAL_DEX_NINA] = 
+	{
+		.categoryName = _("Mirage Clam"),
+		.description = gninaPokedexText,
+	},
 
     [NATIONAL_DEX_CHAKUREI] = 
     {

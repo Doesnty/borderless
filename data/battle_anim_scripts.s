@@ -481,6 +481,8 @@ gBattleAnims_Moves::
 	.4byte Move_INVOCATION
 	.4byte Move_NIGHT_DAZE
 	.4byte Move_FOCUS_STANCE
+	.4byte Move_AURA_BREAK
+	.4byte Move_VACUUM_WAVE
 	.4byte Move_COUNT
 
 gBattleAnims_StatusConditions::
@@ -527,6 +529,7 @@ gBattleAnims_General::
     .4byte General_KnockedAway
 	.4byte Special_AttackerChangeForm
 	.4byte Special_DefenderChangeForm
+	.4byte General_Buzzer
 
 gBattleAnims_Special::
 	.4byte Special_LevelUp
@@ -14988,3 +14991,27 @@ Move_NIGHT_DAZE::
 	waitforvisualfinish
 	end
 
+Move_AURA_BREAK::
+
+Move_VACUUM_WAVE::
+	loadspritegfx ANIM_TAG_THIN_RING
+	loadspritegfx ANIM_TAG_IMPACT
+	loadspritegfx ANIM_TAG_HANDS_AND_FEET
+	monbg ANIM_TARGET
+	setalpha 12, 8
+	createsprite gBasicHitSplatSpriteTemplate, ANIM_TARGET, 3, 0, 0, 1, 1
+	createsprite gFistFootSpriteTemplate, ANIM_TARGET, 4, 0, 0, 8, 1, 0
+	createsprite gUproarRingSpriteTemplate, ANIM_TARGET, 3, 0, 0, 1, 0, 0x7FFF, 3
+	createvisualtask AnimTask_ShakeMon, 2, ANIM_TARGET, 3, 0, 6, 1
+	playsewithpan SE_M_COMET_PUNCH, 63
+	waitforvisualfinish
+	clearmonbg ANIM_TARGET
+	blendoff
+	end
+
+General_Buzzer::
+	loadspritegfx ANIM_TAG_X_SIGN
+	playsewithpan SE_FAILURE, 63
+	createsprite gRedXSpriteTemplate, ANIM_ATTACKER, 5, 1, 50
+	waitforvisualfinish
+	end

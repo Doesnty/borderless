@@ -788,12 +788,12 @@
               {
                 "min_level": 9,
                 "max_level": 11,
-                "species": "SPECIES_CYAMAME"
+                "species": "SPECIES_CNAREKO"
               },
               {
                 "min_level": 9,
                 "max_level": 11,
-                "species": "SPECIES_CYAMAME"
+                "species": "SPECIES_CNAREKO"
               },
               {
                 "min_level": 9,
@@ -2182,7 +2182,7 @@
               {
                 "min_level": 21,
                 "max_level": 22,
-                "species": "SPECIES_CNEMUNO"
+                "species": "SPECIES_CUBAME"
               },
               {
                 "min_level": 21,
@@ -2202,7 +2202,7 @@
               {
                 "min_level": 21,
                 "max_level": 22,
-                "species": "SPECIES_CYUMEKO"
+                "species": "SPECIES_CARIYA"
               },
               {
                 "min_level": 21,
@@ -2251,7 +2251,7 @@
               {
                 "min_level": 21,
                 "max_level": 22,
-                "species": "SPECIES_CNEMUNO"
+                "species": "SPECIES_CUBAME"
               },
               {
                 "min_level": 21,
@@ -2271,7 +2271,7 @@
               {
                 "min_level": 21,
                 "max_level": 22,
-                "species": "SPECIES_CYUMEKO"
+                "species": "SPECIES_CARIYA"
               },
               {
                 "min_level": 21,
@@ -5507,7 +5507,7 @@
               {
                 "min_level": 63,
                 "max_level": 67,
-                "species": "SPECIES_JINYOU"
+                "species": "SPECIES_YUIMAN"
               },
               {
                 "min_level": 63,
@@ -6681,7 +6681,7 @@
               {
                 "min_level": 16,
                 "max_level": 17,
-                "species": "SPECIES_CKOGASA"
+                "species": "SPECIES_CCHIMI"
               },
               {
                 "min_level": 16,
@@ -6711,7 +6711,7 @@
               {
                 "min_level": 16,
                 "max_level": 17,
-                "species": "SPECIES_CSANAE"
+                "species": "SPECIES_CKOGASA"
               },
               {
                 "min_level": 16,
