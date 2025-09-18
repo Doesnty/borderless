@@ -51,7 +51,6 @@ CeladonCity_DepartmentStore_2F_TMs:: @ 816BB74
 	.2byte ITEM_TM27
 	.2byte ITEM_TM31
 	.2byte ITEM_TM45
-	.2byte ITEM_TM57
 	.2byte ITEM_TM75
 	.2byte ITEM_TM77
 	.2byte ITEM_TM79

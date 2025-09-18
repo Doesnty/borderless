@@ -22,6 +22,8 @@ const u8 gEnemyMonElevation[NUM_SPECIES] =
     [SPECIES_TCIRNO] = 4,
     
     [SPECIES_CDAIYOUSEI] = 4,
+	
+	[SPECIES_ENOKO] = 1,
     
     [SPECIES_HOURAI] = 8,
     

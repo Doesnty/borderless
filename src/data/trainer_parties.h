@@ -4248,7 +4248,7 @@ static const struct TrainerMonFullControl sParty_BossGiovanni[] = {
         .evs = {0, 0, 0, 0, 0, 0},
         .nature = NATURE_JOLLY,
         .gender = MON_MALE,
-        .ability = 2, // Sand Stream
+        .ability = 2, // Quick Feet
         .ball = ITEM_POKE_BALL,
         .moves = {MOVE_STOMP, MOVE_WING_ATTACK, MOVE_QUICK_ATTACK, MOVE_ROCK_TOMB},
     },
@@ -4347,7 +4347,7 @@ static const struct TrainerMonFullControl sParty_BossGiovanni2[] = {
 		.evs = {30, 30, 0, 30, 0, 0},
 		.nature = NATURE_JOLLY,
 		.gender = MON_MALE,
-		.ability = 2, // Sand Stream
+		.ability = 2, // Quick Feet
 		.ball = ITEM_POKE_BALL,
 		.moves = {MOVE_HORSEPOWER, MOVE_SOAR, MOVE_EXTREME_SPEED, MOVE_BULK_UP},
     },
@@ -4410,7 +4410,7 @@ static const struct TrainerMonFullControl sParty_LeaderGiovanni[] = {
 		.evs = {30, 30, 0, 30, 0, 30},
 		.nature = NATURE_ADAMANT,
 		.gender = MON_MALE,
-		.ability = 2, // Sand Stream
+		.ability = 2, // Quick Feet
 		.ball = ITEM_POKE_BALL,
 		.moves = {MOVE_HORSEPOWER, MOVE_SOAR, MOVE_BULK_UP, MOVE_EXTREME_SPEED},
     },
@@ -5712,13 +5712,13 @@ static const struct TrainerMonNoItemCustomMoves sParty_CooltrainerMary[] = {
         .iv = 100,
         .lvl = 28,
         .species = SPECIES_ASUNNY,
-        .moves = {MOVE_ENERGY_LIGHT, MOVE_FLAME_WHEEL, MOVE_RAPID_FIRE, MOVE_GROUP_PRANK},
+        .moves = {MOVE_MAGICAL_LEAF, MOVE_FLAME_WHEEL, MOVE_RAPID_FIRE, MOVE_GROUP_PRANK},
     },
     {
         .iv = 100,
         .lvl = 28,
         .species = SPECIES_ALUNA,
-        .moves = {MOVE_SHOCK_WAVE, MOVE_ENERGY_LIGHT, MOVE_SONICBOOM, MOVE_GROUP_PRANK},
+        .moves = {MOVE_SHOCK_WAVE, MOVE_MAGICAL_LEAF, MOVE_SONICBOOM, MOVE_GROUP_PRANK},
     },
     {
         .iv = 100,
@@ -11837,6 +11837,18 @@ static const struct TrainerMonFullControl sParty_EliteFourLorelei2[] = {
         .moves = {MOVE_DAM_BREACH, MOVE_GIGA_DRAIN, MOVE_RECOVER, MOVE_TOXIC},
     },
     {
+        .iv = 30,
+        .lvl = 82,
+        .species = SPECIES_AFUTO,
+        .heldItem = ITEM_MIKO_UNIFORM,
+        .evs = {0, 0, 0, 60, 60, 0},
+        .nature = NATURE_MODEST,
+        .gender = MON_MALE,
+        .ability = 2, // Focus
+        .ball = ITEM_POKE_BALL,
+        .moves = {MOVE_SILVER_WIND, MOVE_AEROBLAST, MOVE_THUNDER, MOVE_ANCIENT_POWER},
+    },
+    {
         .iv = 31,
         .lvl = 84,
         .species = SPECIES_YUMEMI,
@@ -11854,12 +11866,24 @@ static const struct TrainerMonFullControl sParty_EliteFourBruno2[] = {
     {
         .iv = 30,
         .lvl = 82,
+        .species = SPECIES_TSUIKA,
+        .heldItem = ITEM_SHUCA_BERRY,
+        .evs = {0, 30, 0, 60, 30, 0},
+        .nature = NATURE_HASTY,
+        .gender = MON_MALE,
+        .ability = 0, // Sand Stream
+        .ball = ITEM_POKE_BALL,
+        .moves = {MOVE_ROCK_WRECKER, MOVE_FIRE_BLAST, MOVE_SPIKES, MOVE_WILL_O_WISP},
+    },
+    {
+        .iv = 30,
+        .lvl = 82,
         .species = SPECIES_SAKI,
         .heldItem = ITEM_BUNNY_SUIT,
         .evs = {30, 60, 0, 30, 0, 0},
         .nature = NATURE_ADAMANT,
         .gender = MON_MALE,
-        .ability = 2, // Sand Stream
+        .ability = 1, // Sand Rush
         .ball = ITEM_POKE_BALL,
         .moves = {MOVE_HORSEPOWER, MOVE_SOAR, MOVE_EXTREME_SPEED, MOVE_BULK_UP},
     },
@@ -11961,6 +11985,18 @@ static const struct TrainerMonFullControl sParty_EliteFourAgatha2[] = {
         .ability = 1, // Sturdy
         .ball = ITEM_POKE_BALL,
         .moves = {MOVE_SCULPTURE, MOVE_OUTRAGE, MOVE_POISON_JAB, MOVE_BLADE_FLASH},
+    },
+    {
+        .iv = 30,
+        .lvl = 83,
+        .species = SPECIES_YOSHIKA,
+        .heldItem = ITEM_LEFTOVERS,
+        .evs = {60, 0, 30, 0, 0, 30},
+        .nature = NATURE_CAREFUL,
+        .gender = MON_MALE,
+        .ability = 1, // Pressure
+        .ball = ITEM_POKE_BALL,
+        .moves = {MOVE_RECOVER, MOVE_WILL_O_WISP, MOVE_NIGHT_SHADE, MOVE_CROSS_POISON},
     },
     {
         .iv = 31,

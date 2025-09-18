@@ -193,6 +193,10 @@ Route12_EventScript_ItemTM48:: @ 81BE7B0
 Route12_EventScript_ItemIron:: @ 81BE7BD
 	finditem ITEM_IRON
 	end
+	
+Route13_EventScript_ItemTM57::
+	finditem ITEM_TM57_ENERGY_LIGHT
+	end
 
 Route15_EventScript_ItemTM18:: @ 81BE7CA
 	finditem ITEM_TM18

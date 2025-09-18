@@ -1808,7 +1808,7 @@ s32 CalculateBaseDamage(struct BattlePokemon *attacker, struct BattlePokemon *de
     else if (attacker->ability == ABILITY_ABERRANT)
     {
         u16 buffer = spAttack;
-        spAttack = buffer;
+        spAttack = attack;
         attack = buffer;
     }
     else if (move == MOVE_EARTH_PRESS)
@@ -1941,6 +1941,8 @@ s32 CalculateBaseDamage(struct BattlePokemon *attacker, struct BattlePokemon *de
         attack = (150 * attack) / 100;
     if (defenderAbility == ABILITY_SPRING_CHARM && defender->status1)
         defense = (150 * defense) / 100;
+	if (defenderAbility == ABILITY_PURE_SCALES)
+		spDefense *= 2;
     if (gBattleStruct->meFirstTracker)
     {
         gBattleMovePower *= 15;
@@ -2169,6 +2171,8 @@ s32 CalculateBaseDamage(struct BattlePokemon *attacker, struct BattlePokemon *de
             atkStatMod = attacker->statStages[STAT_SPATK];
         else if (move == MOVE_EARTH_PRESS)
             atkStatMod = attacker->statStages[STAT_DEF];
+		else if (attacker->ability == ABILITY_ABERRANT)
+			atkStatMod = attacker->statStages[STAT_SPATK];
         
         if (defenderAbility == ABILITY_UNAWARE)
             atkStatMod = 6;
@@ -2202,6 +2206,8 @@ s32 CalculateBaseDamage(struct BattlePokemon *attacker, struct BattlePokemon *de
 			atkStatMod = defender->statStages[STAT_SPATK];
         else if (attacker->ability == ABILITY_ABERRANT)
             atkStatMod = attacker->statStages[STAT_ATK];
+		else if (attacker->ability == ABILITY_ABERRANT)
+			atkStatMod = attacker->statStages[STAT_ATK];
         if (move == MOVE_MANASHOCK)
         {
             defStatMod = defender->statStages[STAT_DEF];

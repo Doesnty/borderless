@@ -2195,64 +2195,64 @@ const u8 gzanmuPokedexText[] = _(
     "and careful manipulation.");
 
 const u8 gcubamePokedexText[] = _(
-    "placeholder\n"
-    "\n"
-    ".");
+    "The king of the yamanba.\n"
+    "Likes throwing fairies around.\n"
+    "");
 
 const u8 gubamePokedexText[] = _(
-    "placeholder\n"
-    "\n"
-    ".");
+    "The yamanba hate interference, so she\n"
+    "doesn't really do anything besides\n"
+    "keep out intruders.");
 
 const u8 gcchimiPokedexText[] = _(
-    "placeholder\n"
-    "\n"
-    ".");
+    "A nature spirit from a time before\n"
+    "youkai existed, and a magnet for\n"
+    "strange events.");
 
 const u8 gchimiPokedexText[] = _(
-    "placeholder\n"
-    "\n"
-    ".");
+    "She'll only appear in nature-filled\n"
+    "places where there aren't many people\n"
+    "or youkai. Hates industrialization.");
 
 const u8 gcnarekoPokedexText[] = _(
-    "placeholder\n"
-    "\n"
-    ".");
+    "The spirit guardian of a pyramid.\n"
+    "Aspires to be like the sphinx of legend."
+    "");
 
 const u8 gnarekoPokedexText[] = _(
-    "placeholder\n"
-    "\n"
-    ".");
+    "She's fascinated by riddles and\n"
+    "challenges visitors, but will cheat\n"
+    "if someone gives the right answer.");
 
 const u8 gcyuimanPokedexText[] = _(
-    "placeholder\n"
-    "\n"
-    ".");
+    "An ancient god-human.\n"
+    "Loves hunting deer.\n"
+    "");
 
 const u8 gyuimanPokedexText[] = _(
-    "placeholder\n"
-    "\n"
-    ".");
+    "Anything eaten by her ouroboros-like\n"
+    "snake is reborn anew, free of impurity.\n"
+    "The Lunarians covet this ability.");
 
 const u8 gcariyaPokedexText[] = _(
-    "placeholder\n"
-    "\n"
-    ".");
+    "The ancient goddess of the mountain\n"
+    "range Youkai Mountain is a part of.\n"
+    "Hates change.");
 
 const u8 gariyaPokedexText[] = _(
-    "placeholder\n"
-    "\n"
-    ".");
+    "She embraces her power of perpetuity,\n"
+    "the ability to reject all change.\n"
+    "She is always alone in the end.");
 
 const u8 gcninaPokedexText[] = _(
-    "placeholder\n"
-    "\n"
-    ".");
+    "A young mirage-creating shellfish.\n"
+    "Very gullible."
+    "");
 
 const u8 gninaPokedexText[] = _(
-    "placeholder\n"
-    "\n"
-    ".");
+    "A fossil until recently, revived by a\n"
+    "stream of misinformation that she\n"
+    "believes to be the world's secret truths.");
 
 const u8 gchakureiPokedexText[] = _(
     "A fledgling shrine maiden that\n"

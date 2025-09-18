@@ -63,7 +63,7 @@ VermilionCity_Text_DoYouHaveATicket:: @ 817FA3C
 VermilionCity_Text_FlashedSSTicket:: @ 817FA77
     .string "{SIZE}Á{PLAYER} flashed the S.S. Ticket!\p"
     .string "{SIZE}ÇGreat!\n"
-    .string "Welcome to the S.S. ANNE!$"
+    .string "Welcome to the S.S. Anne!$"
 
 VermilionCity_Text_DontHaveNeededSSTicket:: @ 817FABA
     .string "{SIZE}Á{PLAYER} doesn't have the needed\n"

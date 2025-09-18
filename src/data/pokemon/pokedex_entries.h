@@ -2619,37 +2619,37 @@ const struct PokedexEntry gPokedexEntries[] =
 	
 	[NATIONAL_DEX_CCHIMI] = 
 	{
-		.categoryName = _("Nature Spirit"),
+		.categoryName = _("Chimi"),
 		.description = gcchimiPokedexText,
 	},
 	
 	[NATIONAL_DEX_CHIMI] = 
 	{
-		.categoryName = _("Nature Spirit"),
+		.categoryName = _("Chimi"),
 		.description = gchimiPokedexText,
 	},
 	
 	[NATIONAL_DEX_CNAREKO] = 
 	{
-		.categoryName = _("Guardian"),
+		.categoryName = _("Dousojin"),
 		.description = gcnarekoPokedexText,
 	},
 	
 	[NATIONAL_DEX_NAREKO] = 
 	{
-		.categoryName = _("Guardian"),
-		.description = gcnarekoPokedexText,
+		.categoryName = _("Dousojin"),
+		.description = gnarekoPokedexText,
 	},
 	
 	[NATIONAL_DEX_CYUIMAN] = 
 	{
-		.categoryName = _("Ancient"),
+		.categoryName = _("Rebirth"),
 		.description = gcyuimanPokedexText,
 	},
 	
 	[NATIONAL_DEX_YUIMAN] = 
 	{
-		.categoryName = _("Ancient"),
+		.categoryName = _("Rebirth"),
 		.description = gyuimanPokedexText,
 	},
 	
@@ -2667,13 +2667,13 @@ const struct PokedexEntry gPokedexEntries[] =
 	
 	[NATIONAL_DEX_CNINA] = 
 	{
-		.categoryName = _("Mirage Clam"),
+		.categoryName = _("Shen"),
 		.description = gcninaPokedexText,
 	},
 	
 	[NATIONAL_DEX_NINA] = 
 	{
-		.categoryName = _("Mirage Clam"),
+		.categoryName = _("Shen"),
 		.description = gninaPokedexText,
 	},
 

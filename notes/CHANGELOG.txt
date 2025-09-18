@@ -1,17 +1,31 @@
-v.new
+v.1.3.0
+
+Saves from older version are not compatible!
 
 12 new puppets across 6 lines, based on the Fossilized Wonders cast.
-Three new abiities and two new moves added for them.
+Three new abiities for them: Buzzer, Sand Castle, and Stasis Gaze.
+Two new moves for them: Aura Break and Vacuum Wave.
+A few old puppets gain access to these moves.
 
 Made small stat adjustments to several trainers.
-Sandstorm now properly raises the SDef of Beast-types.
-Saki now has Quick Feet instead of Sand Stream.
 AI now accounts for multi-hit moves and is aware of its own Skill Link.
 AI now tries to avoid using status moves on Substitutes.
+Changed Zen Headbutt's animation.
+Sandstorm now properly raises the SDef of Beast-types.
+Destiny Bond is now tied to the Detect+Endure counter, and may fail if used consecutively.
+Saki now has Quick Feet instead of Sand Stream.
+Shinmyoumaru's HA is now Lightning Rod instead of Scrappy.
+AShinmyoumaru's Ability Inner Power is now Guard Armor.
+AShinmyoumaru's HA is now Rattled instead of Scrappy.
 Aya forms now learn Jump Kick instead of Hi Jump Kick, and no longer get either as a tutor move.
 Aya forms now learn Comet Punch by tutor.
 Switched ALilyBlack's Rage and Outrage.
-Type match-up forecast is now disabled when encountering the ghost.
+Adjusted Shinmyoumaru's level-up movepool, moved Aura Sphere to tutor moves.
+Yuugi now learns Surf in all forms.
+Type match-up forecast can no longer identify the ghost.
+Cleanse Tag's encounter rate multiplier is now much more significant.
+Moved TM57 (Energy Light) from the Department Store to Route 13.
+Ace Trainer Mary's puppets now use Magical Leaf instead of Energy Light.
 
 
 v1.2.0

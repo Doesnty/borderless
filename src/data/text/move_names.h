@@ -434,6 +434,8 @@ const u8 gMoveNames[][15] = {
 	_("Invocation"),
 	_("Night Daze"),
 	_("Focus Stance"),
+	_("Aura Break"),
+	_("Vacuum Wave"),
 };
 
 const u8 gMoveNamesAbridged[][15] = {
@@ -872,5 +874,7 @@ const u8 gMoveNamesAbridged[][15] = {
 	_("Invocation"),
 	_("Night Daze"),
 	_("Focus Stance"),
+	_("Aura Break"),
+	_("Vacuum Wave"),
 };
 

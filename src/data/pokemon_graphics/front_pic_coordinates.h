@@ -2485,6 +2485,66 @@ const struct MonCoords gMonFrontPicCoords[] =
 		.size = 0x88,
 		.y_offset = 1,
 	},
+	[SPECIES_CUBAME] = 
+	{
+		.size = 0x77,
+		.y_offset = 0,
+	},
+	[SPECIES_UBAME] = 
+	{
+		.size = 0x77,
+		.y_offset = 0,
+	},
+	[SPECIES_CCHIMI] = 
+	{
+		.size = 0x77,
+		.y_offset = 0,
+	},
+	[SPECIES_CHIMI] = 
+	{
+		.size = 0x77,
+		.y_offset = 0,
+	},
+	[SPECIES_CNAREKO] = 
+	{
+		.size = 0x77,
+		.y_offset = 0,
+	},
+	[SPECIES_NAREKO] = 
+	{
+		.size = 0x77,
+		.y_offset = 0,
+	},
+	[SPECIES_CYUIMAN] = 
+	{
+		.size = 0x77,
+		.y_offset = 0,
+	},
+	[SPECIES_YUIMAN] = 
+	{
+		.size = 0x77,
+		.y_offset = 0,
+	},
+	[SPECIES_CARIYA] = 
+	{
+		.size = 0x77,
+		.y_offset = 0,
+	},
+	[SPECIES_ARIYA] = 
+	{
+		.size = 0x77,
+		.y_offset = 0,
+	},
+	[SPECIES_CNINA] = 
+	{
+		.size = 0x77,
+		.y_offset = 0,
+	},
+	[SPECIES_NINA] = 
+	{
+		.size = 0x77,
+		.y_offset = 0,
+	},
     [SPECIES_EGG] =
     {
         .size = 0x33,

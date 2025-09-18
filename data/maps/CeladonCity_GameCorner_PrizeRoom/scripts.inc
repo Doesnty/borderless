@@ -24,18 +24,25 @@ CeladonCity_GameCorner_PrizeRoom_EventScript_ChoosePrizeMon:: @ 816CBB2
 	waitmessage
 	multichoice 11, 0, MULTICHOICE_GAME_CORNER_POKEMON_PRIZES, FALSE
 	switch VAR_RESULT
-	case 0, CeladonCity_GameCorner_PrizeRoom_EventScript_Abra
-	case 1, CeladonCity_GameCorner_PrizeRoom_EventScript_Clefairy
-	case 2, CeladonCity_GameCorner_PrizeRoom_EventScript_DratiniPinsir
-	case 3, CeladonCity_GameCorner_PrizeRoom_EventScript_ScytherDratini
-	case 4, CeladonCity_GameCorner_PrizeRoom_EventScript_Porygon
-	case 5, CeladonCity_GameCorner_PrizeRoom_EventScript_EndPrizeExchange
+	case 0, CeladonCity_GameCorner_PrizeRoom_EventScript_Mike
+	case 1, CeladonCity_GameCorner_PrizeRoom_EventScript_Abra
+	case 2, CeladonCity_GameCorner_PrizeRoom_EventScript_Clefairy
+	case 3, CeladonCity_GameCorner_PrizeRoom_EventScript_DratiniPinsir
+	case 4, CeladonCity_GameCorner_PrizeRoom_EventScript_ScytherDratini
+	case 5, CeladonCity_GameCorner_PrizeRoom_EventScript_Porygon
+	case 6, CeladonCity_GameCorner_PrizeRoom_EventScript_EndPrizeExchange
 	case 127, CeladonCity_GameCorner_PrizeRoom_EventScript_EndPrizeExchange
 	end
 
 CeladonCity_GameCorner_PrizeRoom_EventScript_EndPrizeExchange:: @ 816CC10
 	hidecoinsbox 0, 0
 	release
+	end
+
+CeladonCity_GameCorner_PrizeRoom_EventScript_Mike::
+	setvar VAR_TEMP_1, SPECIES_CMIKE
+	setvar VAR_TEMP_2, 80
+	goto CeladonCity_GameCorner_PrizeRoom_EventScript_ConfirmPrizeMon
 	end
 
 CeladonCity_GameCorner_PrizeRoom_EventScript_Abra:: @ 816CC15
@@ -78,12 +85,18 @@ CeladonCity_GameCorner_PrizeRoom_EventScript_ConfirmPrizeMon:: @ 816CC65
 	goto_if_lt CeladonCity_GameCorner_PrizeRoom_EventScript_NotEnoughCoins
 	textcolor 3
 	switch VAR_TEMP_1
+	case SPECIES_CMIKE, CeladonCity_GameCorner_PrizeRoom_EventScript_GiveMike
 	case SPECIES_CMIYOI,     CeladonCity_GameCorner_PrizeRoom_EventScript_GiveAbra
 	case SPECIES_CYUIMAN, CeladonCity_GameCorner_PrizeRoom_EventScript_GiveClefairy
 	case SPECIES_CSANNYO,  CeladonCity_GameCorner_PrizeRoom_EventScript_GiveDratini
 	case SPECIES_CMAMIZOU,  CeladonCity_GameCorner_PrizeRoom_EventScript_GiveScyther
 	case SPECIES_CJOON,  CeladonCity_GameCorner_PrizeRoom_EventScript_GivePorygon
 	case SPECIES_XTENMA,   CeladonCity_GameCorner_PrizeRoom_EventScript_GivePinsir
+	end
+
+CeladonCity_GameCorner_PrizeRoom_EventScript_GiveMike::
+	givemon VAR_TEMP_1, 12, ITEM_NONE
+	goto CeladonCity_GameCorner_PrizeRoom_EventScript_CheckReceivedMon
 	end
 
 CeladonCity_GameCorner_PrizeRoom_EventScript_GiveAbra:: @ 816CCD4

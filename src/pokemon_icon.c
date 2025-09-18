@@ -1120,6 +1120,24 @@ const u8 gMonIconPaletteIndices[] = {
     
     [SPECIES_CZANMU] = 0,
     [SPECIES_ZANMU] = 0,
+	
+	[SPECIES_CUBAME] = 1,
+	[SPECIES_UBAME] = 1,
+	
+	[SPECIES_CCHIMI] = 0,
+	[SPECIES_CHIMI] = 0,
+	
+	[SPECIES_CNAREKO] = 1,
+	[SPECIES_NAREKO] = 1,
+	
+	[SPECIES_CYUIMAN] = 1,
+	[SPECIES_YUIMAN] = 1,
+	
+	[SPECIES_CARIYA] = 2,
+	[SPECIES_ARIYA] = 2,
+	
+	[SPECIES_CNINA] = 1,
+	[SPECIES_NINA] = 1,
     
     [SPECIES_CHAKUREI] = 1,
     [SPECIES_HAKUREI] = 1,

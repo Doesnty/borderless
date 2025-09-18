@@ -530,7 +530,7 @@
 #define FLAG_HIDE_MT_EMBER_EXTERIOR_TM04                        0x204
 #define FLAG_HIDE_SELPHY_LUCKY_EGG                              0x205
 #define FLAG_HIDE_ROCKET_HIDEOUT_B3F_TM02                       0x206
-#define FLAG_0x207               0x207
+#define FLAG_HIDE_ROUTE_13_TM57                                 0x207
 #define FLAG_0x208               0x208
 #define FLAG_0x209               0x209
 #define FLAG_0x20A               0x20A

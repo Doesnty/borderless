@@ -6618,7 +6618,7 @@ static void atk77_setprotectlike(void)
     bool8 notLastTurn = TRUE;
     u16 lastMove = gLastResultingMoves[gBattlerAttacker];
 
-    if (lastMove != MOVE_DETECT && lastMove != MOVE_ENDURE)
+    if (lastMove != MOVE_DETECT && lastMove != MOVE_ENDURE && lastMove != MOVE_DESTINY_BOND)
         gDisableStructs[gBattlerAttacker].protectUses = 0;
     if (gCurrentTurnActionNumber == (gBattlersCount - 1))
         notLastTurn = FALSE;
@@ -8202,8 +8202,22 @@ static void atkA9_trychoosesleeptalkmove(void)
 
 static void atkAA_setdestinybond(void)
 {
-    gBattleMons[gBattlerAttacker].status2 |= STATUS2_DESTINY_BOND;
-    ++gBattlescriptCurrInstr;
+    u16 lastMove = gLastResultingMoves[gBattlerAttacker];
+    if (lastMove != MOVE_DETECT && lastMove != MOVE_ENDURE && lastMove != MOVE_DESTINY_BOND)
+        gDisableStructs[gBattlerAttacker].protectUses = 0;
+    if (sProtectSuccessRates[gDisableStructs[gBattlerAttacker].protectUses] >= Random())
+	{
+		gBattleMons[gBattlerAttacker].status2 |= STATUS2_DESTINY_BOND;
+        gDisableStructs[gBattlerAttacker].protectUses++;
+		++gBattlescriptCurrInstr;
+	}
+    else
+    {
+        gDisableStructs[gBattlerAttacker].protectUses = 0;
+        gBattleCommunication[MULTISTRING_CHOOSER] = 2;
+        gMoveResultFlags |= MOVE_RESULT_MISSED;
+		gBattlescriptCurrInstr = BattleScript_ButItFailed;
+    }
 }
 
 static void TrySetDestinyBondToHappen(void)

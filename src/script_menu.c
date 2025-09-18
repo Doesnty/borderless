@@ -312,6 +312,7 @@ static const struct MenuAction sScriptMultiChoiceMenu_BikeShop[] = {
 
 static const struct MenuAction sScriptMultiChoiceMenu_GameCornerPokemonPrizes[] = {
 #if defined(FIRERED)
+	{ gText_Abra_120Coins },
     { gText_Abra_180Coins },
     { gText_Clefairy_500Coins },
     { gText_Dratini_2800Coins },
