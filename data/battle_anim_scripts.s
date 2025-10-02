@@ -483,6 +483,7 @@ gBattleAnims_Moves::
 	.4byte Move_FOCUS_STANCE
 	.4byte Move_AURA_BREAK
 	.4byte Move_VACUUM_WAVE
+	.4byte Move_FALL_KICK
 	.4byte Move_COUNT
 
 gBattleAnims_StatusConditions::
@@ -15118,5 +15119,39 @@ Move_ZEN_HEADBUTT::
 	playsewithpan SE_M_VITAL_THROW2, 63
 	waitforvisualfinish
 	call UnsetPsychicBg
+	end
+
+Move_FALL_KICK::
+	loadspritegfx ANIM_TAG_HANDS_AND_FEET
+	loadspritegfx ANIM_TAG_IMPACT
+	loadspritegfx ANIM_TAG_BURN_POWDER
+	loadspritegfx ANIM_TAG_LEAF
+	monbg ANIM_DEF_PARTNER
+	setalpha 12, 8
+	playsewithpan SE_M_COMET_PUNCH, SOUND_PAN_TARGET
+	createsprite gBasicHitSplatSpriteTemplate, ANIM_ATTACKER, 2, 0, 0, 1, 0
+	createsprite gFistFootSpriteTemplate, ANIM_ATTACKER, 3, 0, 0, 8, 1, 1
+	delay 2
+	createvisualtask AnimTask_ShakeMon, 5, 1, 0, 5, 5, 1
+	delay 4
+	createsprite gBasicHitSplatSpriteTemplate, ANIM_TARGET, 2, 0, 0, 1, 0
+	createsprite gFallKickLeafSpriteTemplate, ANIM_TARGET, 2, 1, 1, 0, 36, 10
+	createsprite gFallKickLeafSpriteTemplate, ANIM_TARGET, 2, 1, 1, 24, 12, 10
+	createsprite gFallKickLeafSpriteTemplate, ANIM_TARGET, 2, 1, 1, 24, 12, 10
+	createsprite gFallKickLeafSpriteTemplate, ANIM_TARGET, 2, 1, 1, 0, 36, 10
+	createsprite gFallKickLeafSpriteTemplate, ANIM_TARGET, 2, 1, 1, -24, 12, 10
+	createsprite gFallKickLeafSpriteTemplate, ANIM_TARGET, 2, 1, 1, -24, 12, 10
+	playsewithpan SE_M_POISON_POWDER, 63
+	delay 2
+	createsprite gFallKickLeafSpriteTemplate, ANIM_TARGET, 2, 1, 1, 36, 0, 10
+	createsprite gFallKickLeafSpriteTemplate, ANIM_TARGET, 2, 1, 1, 12, 24, 10
+	createsprite gFallKickLeafSpriteTemplate, ANIM_TARGET, 2, 1, 1, 12, 24, 10
+	createsprite gFallKickLeafSpriteTemplate, ANIM_TARGET, 2, 1, 1, -36, 0, 10
+	createsprite gFallKickLeafSpriteTemplate, ANIM_TARGET, 2, 1, 1, -12, 24, 10
+	createsprite gFallKickLeafSpriteTemplate, ANIM_TARGET, 2, 1, 1, -12, 24, 10
+	playsewithpan SE_M_POISON_POWDER, 63
+	waitforvisualfinish
+	clearmonbg ANIM_DEF_PARTNER
+	blendoff
 	end
 

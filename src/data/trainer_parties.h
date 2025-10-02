@@ -1269,9 +1269,9 @@ static const struct TrainerMonFullControl sParty_PokemaniacDawson[] = {
         .evs = {0, 0, 0, 30, 30, 0},
         .nature = NATURE_TIMID,
         .gender = MON_MALE,
-        .ability = 0, // Serene Grace
+        .ability = 2, // Spirit Power
         .ball = ITEM_POKE_BALL,
-        .moves = {MOVE_SIGNAL_BEAM, MOVE_HYPER_BEAM, MOVE_DESTINY_BOND, MOVE_FLAMETHROWER},
+        .moves = {MOVE_THUNDERBOLT, MOVE_HYPER_BEAM, MOVE_DESTINY_BOND, MOVE_FLAMETHROWER},
     },
     {
         .iv = 31,
@@ -1281,7 +1281,7 @@ static const struct TrainerMonFullControl sParty_PokemaniacDawson[] = {
         .evs = {0, 0, 0, 60, 0, 60},
         .nature = NATURE_BOLD,
         .gender = MON_MALE,
-        .ability = 2, // Doll Wall
+        .ability = 2, // Spirit Power
         .ball = ITEM_POKE_BALL,
         .moves = {MOVE_SIGNAL_BEAM, MOVE_ICE_BEAM, MOVE_THUNDERBOLT, MOVE_FLAMETHROWER},
     },
@@ -4422,7 +4422,7 @@ static const struct TrainerMonFullControl sParty_LeaderGiovanni[] = {
 		.evs = {30, 30, 0, 30, 0, 30},
 		.nature = NATURE_ADAMANT,
 		.gender = MON_MALE,
-		.ability = 2, // Sand Rush
+		.ability = 1, // Intimidate
 		.ball = ITEM_POKE_BALL,
 		.moves = {MOVE_BRAVER, MOVE_SACRED_FIRE, MOVE_PSYCHO_CUT, MOVE_SWORDS_DANCE},
     },
@@ -6265,7 +6265,7 @@ static const struct TrainerMonFullControl sParty_EliteFourLance[] = {
         .evs = {0, 0, 0, 60, 60, 0},
         .nature = NATURE_TIMID,
         .gender = MON_MALE,
-        .ability = 0, // Flawless
+        .ability = 0, // Pressure
         .ball = ITEM_POKE_BALL,
         .moves = {MOVE_HYPER_BEAM, MOVE_AIR_SLASH, MOVE_MANA_BURST, MOVE_DESTINY_BOND},
     },
@@ -6369,7 +6369,7 @@ static const struct TrainerMonFullControl sParty_LeaderMisty[] = {
         .gender = MON_FEMALE,
         .ability = 1, // Hydration
         .ball = ITEM_PREMIER_BALL,
-        .moves = {MOVE_WATER_PULSE, MOVE_AURORA_BEAM, MOVE_RAIN_DANCE, MOVE_WRAP},
+        .moves = {MOVE_WATER_PULSE, MOVE_AURORA_BEAM, MOVE_RAIN_DANCE, MOVE_COVET},
     },
 };
 
@@ -12033,7 +12033,7 @@ static const struct TrainerMonFullControl sParty_EliteFourLance2[] = {
         .evs = {0, 0, 0, 60, 60, 0},
         .nature = NATURE_TIMID,
         .gender = MON_MALE,
-        .ability = 0, // Flawless
+        .ability = 2, // Inner Focus
         .ball = ITEM_POKE_BALL,
         .moves = {MOVE_HYPER_BEAM, MOVE_AIR_SLASH, MOVE_MANA_BURST, MOVE_DESTINY_BOND},
     },

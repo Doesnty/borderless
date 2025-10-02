@@ -1068,6 +1068,17 @@ const struct SpriteTemplate gLeafStormLeafSpriteTemplate =
     .callback = AnimNeedleArmSpike,
 };
 
+const struct SpriteTemplate gFallKickLeafSpriteTemplate =    
+{
+    .tileTag = ANIM_TAG_LEAF,
+    .paletteTag = ANIM_TAG_BURN_POWDER,
+    .oam = &gOamData_AffineDouble_ObjNormal_16x16,
+    .anims = sRazorLeafParticleAnimTable,
+    .images = NULL,
+    .affineAnims = gDummySpriteAffineAnimTable,
+    .callback = AnimNeedleArmSpike,
+};
+
 const struct SpriteTemplate gApollon1SpriteTemplate =    
 {
     .tileTag = ANIM_TAG_APOLLON,

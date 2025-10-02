@@ -1,19 +1,49 @@
-v.1.3.0
+v1.3.1
 
-Saves from older version are not compatible!
+New move: Fall Kick; 70/100 Nature Physical with 100% chance to lower Atk.
+ - For Shizuha by level, Minoriko and Mai+Satono by tutor.
+New ability: Spirit Power; counts as every type for STAB purposes.
+ - For Hakurei and Arisu.
+
+Overhauled regular Shizuha:
+ - Swapped her Atk (now 110) and SAtk (now 50) (same with chibi)
+ - Replaced Ability Cheerful with Last Wish.
+ - Overhauled level-up movepool of both regular and chibi Shizuha:
+ - Cut Absorb, Magical Leaf for Pound and Fall Kick on chibi
+ - Cut Giga Drain, Nature Sound, Extrasensory, Leaf Storm, Fake Tears
+ - Added Jump Kick, Blaze Kick, Hi Jump Kick, Swords Dance, Power Whip
+ - Added Rapid Spin to relearner pool (replacing Nature Power)
+ - Now gets Focus Punch and Brick Break by TM.
+
+Fixed outline of Speed Shizuha's front sprite and Chiyuri's back sprite.
+FW characters have proper shiny palettes now.
+Made adjustments to AYoumu's move order to bring her in line with other Youmus.
+ - Notably, Volt Tackle->Block and Sacred Fire->Hi Jump Kick.
+DRemilia's HA changed from Super Luck to Regenerator.
+DRemilia can now TM U-Turn.
+DMomiji's HA changed from Salvage to Sand Castle.
+Chimi now learns Fire Fang by tutor instead of Overheat.
+Chimi can now use the Flamethrower and Fire Blast TMs.
+Changed a quirk of AI switch-in order that might make them perform better.
+Smart AI should handle Solarbeam more coherently.
+Smart AI should avoid setting Spikes if you have only one Puppet.
+The two fall-off points in Ruined Mansion now both lead to progress.
+
+
+v1.3.0
+
+Saves from previous versions are not compatible!
+ (Arguably, this should be 2.0.0, but I don't feel the changes here merit that jump.)
 
 12 new puppets across 6 lines, based on the Fossilized Wonders cast.
 Three new abiities for them: Buzzer, Sand Castle, and Stasis Gaze.
 Two new moves for them: Aura Break and Vacuum Wave.
 A few old puppets gain access to these moves.
 
-Made small stat adjustments to several trainers.
-AI now accounts for multi-hit moves and is aware of its own Skill Link.
-AI now tries to avoid using status moves on Substitutes.
-Changed Zen Headbutt's animation.
 Sandstorm now properly raises the SDef of Beast-types.
 Destiny Bond is now tied to the Detect+Endure counter, and may fail if used consecutively.
 Saki now has Quick Feet instead of Sand Stream.
+Joon gets -10 SAtk, +10 Speed to help her stand apart from Ubame.
 Shinmyoumaru's HA is now Lightning Rod instead of Scrappy.
 AShinmyoumaru's Ability Inner Power is now Guard Armor.
 AShinmyoumaru's HA is now Rattled instead of Scrappy.
@@ -26,6 +56,10 @@ Type match-up forecast can no longer identify the ghost.
 Cleanse Tag's encounter rate multiplier is now much more significant.
 Moved TM57 (Energy Light) from the Department Store to Route 13.
 Ace Trainer Mary's puppets now use Magical Leaf instead of Energy Light.
+Changed Zen Headbutt's animation.
+Made small stat adjustments to several trainers.
+AI now accounts for multi-hit moves and is aware of its own Skill Link.
+AI now tries to avoid using status moves on Substitutes.
 
 
 v1.2.0

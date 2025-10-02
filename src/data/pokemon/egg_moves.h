@@ -5091,7 +5091,6 @@ static const u16 sUbameEggMoveLearnset[] = {
 };
 
 static const u16 sCChimiEggMoveLearnset[] = {
-    MOVE_OVERHEAT,
     MOVE_LEAF_STORM,
     MOVE_THRASH,
     MOVE_FURY_SWIPES,
@@ -5100,11 +5099,11 @@ static const u16 sCChimiEggMoveLearnset[] = {
     MOVE_AQUA_JET,
     MOVE_SCARY_FACE,
     MOVE_SUCKER_PUNCH,
+	MOVE_FIRE_FANG,
     0
 };
 
 static const u16 sChimiEggMoveLearnset[] = {
-    MOVE_OVERHEAT,
     MOVE_LEAF_STORM,
     MOVE_THRASH,
     MOVE_FURY_SWIPES,
@@ -5113,6 +5112,7 @@ static const u16 sChimiEggMoveLearnset[] = {
     MOVE_AQUA_JET,
     MOVE_SCARY_FACE,
     MOVE_SUCKER_PUNCH,
+	MOVE_FIRE_FANG,
     0
 };
 

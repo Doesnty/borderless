@@ -436,6 +436,7 @@ const u8 gMoveDescription_NightDaze[] = _("10%: -1 Accuracy.");
 const u8 gMoveDescription_FocusStance[] = _("-1 Speed.\n+1 Attack.\n+1 Defense.");
 const u8 gMoveDescription_AuraBreak[] = _("Shatters the foe's\nReflect and Light\nScreen, if they\nare in effect.");
 const u8 gMoveDescription_VacuumWave[] = _("+1 Priority.");
+const u8 gMoveDescription_FallKick[] = _("100%: -1 Attack.");
 const u8 gMoveDescription_Dummy[] = _("lol");
 
 const u8 *const gMoveDescriptionPointers[MOVES_COUNT - 1] = {
@@ -875,4 +876,5 @@ const u8 *const gMoveDescriptionPointers[MOVES_COUNT - 1] = {
 	[MOVE_FOCUS_STANCE  - 1] = gMoveDescription_FocusStance,
 	[MOVE_AURA_BREAK    - 1] = gMoveDescription_AuraBreak,
 	[MOVE_VACUUM_WAVE   - 1] = gMoveDescription_VacuumWave,
+	[MOVE_FALL_KICK     - 1] = gMoveDescription_FallKick,
 };

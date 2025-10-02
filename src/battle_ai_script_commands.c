@@ -250,7 +250,6 @@ static const u16 sDiscouragedPowerfulMoveEffects[] =
     EFFECT_SKY_ATTACK,
     EFFECT_RECHARGE,
     EFFECT_SKULL_BASH,
-    EFFECT_SOLARBEAM,
     EFFECT_SPIT_UP,
     EFFECT_FOCUS_PUNCH,
     EFFECT_SUPERPOWER,

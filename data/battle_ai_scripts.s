@@ -511,6 +511,8 @@ AI_CBM_FocusStance:: @ 81DA26C
 	end
 
 AI_CBM_Spikes:: @ 81DA27D
+	count_alive_pokemon AI_TARGET
+	if_equal 0, Score_Minus10
 	if_side_affecting AI_TARGET, SIDE_STATUS_SPIKES, Score_Minus10
 	end
 
@@ -838,7 +840,7 @@ AI_CheckViability:: @ 81DA445
 	if_effect EFFECT_PSYCH_UP, AI_CV_PsychUp
 	if_effect EFFECT_MIRROR_COAT, AI_CV_MirrorCoat
 	if_effect EFFECT_SKULL_BASH, AI_CV_ChargeUpMove
-	if_effect EFFECT_SOLARBEAM, AI_CV_ChargeUpMove
+	if_effect EFFECT_SOLARBEAM, AI_CV_Solarbeam
 	if_effect EFFECT_SEMI_INVULNERABLE, AI_CV_SemiInvulnerable
 	if_effect EFFECT_SOFTBOILED, AI_CV_Heal
 	if_effect EFFECT_FAKE_OUT, AI_CV_FakeOut
@@ -2361,6 +2363,11 @@ AI_CV_MirrorCoat_SpecialTypeList:: @ 81DB63C
 	.byte TYPE_DRAGON
 	.byte TYPE_DARK
 	.byte -1
+
+AI_CV_Solarbeam::
+	get_weather
+	if_not_equal AI_WEATHER_SUN, Score_Minus8
+	end
 
 AI_CV_ChargeUpMove:: @ 81DB645
 	if_type_effectiveness AI_EFFECTIVENESS_x0_25, AI_CV_ChargeUpMove_ScoreDown2

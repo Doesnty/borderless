@@ -57,11 +57,20 @@ u8 ScriptGiveMon(u16 species, u8 level, u16 item, u32 unused1, u32 unused2, u8 u
     heldItem[0] = item;
     heldItem[1] = item >> 8;
     SetMonData(mon, MON_DATA_HELD_ITEM, heldItem);
-	// dirty hack to keep HAs off starters
+	// dirty hack to spot starters; strip HAs
 	if (level == 5 && item == ITEM_ORAN_BERRY)
 	{
 		u8 value = 0;
 		SetMonData(mon, MON_DATA_HIDDEN_ABILITY, &value);
+		
+		/*
+		u8 i = 0;
+		for (i = 0; i < 6; i++)
+		{
+			u8 value = GetMonData(mon, MON_DATA_HP_IV + i);
+			value = 16 + (value/2);
+			SetMonData(mon, MON_DATA_HP_IV + i, &value);
+		} */
 	}
     sentToPc = GiveMonToPlayer(mon);
     nationalDexNum = SpeciesToNationalPokedexNum(species);

@@ -40,6 +40,12 @@ Q: Can I change EVs/IVs/Nature/Ability?
 A: Yes, but not from the start of the game.
 
 
+Q: I found a reference to Pokemon in the game.
+
+A: Yes, that's intentional. The setting is still Kanto Pokemon, there are Pokemon running around; it's too much of a hassle and often kind of weird/creepy to convert every Pokemon reference to Puppets.
+
+If you're wondering why they aren't in gameplay, just think of it as the player character not being interested in that side of Kanto. You don't see Pokemon Gyms in-game for the same reason you don't see bedrooms or toilets in houses, they aren't important. Red is off doing his own thing somewhere in the Pokemon League, but it's not of interest. Puppets and Pokemon get along in the wild, and trainers don't make them fight against each other since that would be barbaric. Wild Pokemon don't bother you because Pokemon-brand Repel is cheap enough to have on at all times, without player input.
+
 ## Credits
 
 Original game: Game Freak
@@ -48,7 +54,7 @@ Disassembly: pret
 
 Hacking, much of concept: Doesnt
 
-Sprites: HemoglobinA1C, Scrimmy, Barudo, Reimufate, Blue, BluShell, seruphim, AutumnMood
+Sprites: HemoglobinA1C, Scrimmy, Barudo, Reimufate, Blue, BluShell, seruphim, AutumnMood, BonFlanCake
 
 Special Thanks: Kalt, Barudo, RedAlice, Darkge, Lotus, TheEeveeMan, LittleBigTrouble, nook
 
