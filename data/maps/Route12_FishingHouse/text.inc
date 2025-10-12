@@ -39,6 +39,14 @@ Route12_FishingHouse_Text_TryFishingBringMeMagikarp:: @ 819F217
     .string "Oh, and don't forget to bring me\n"
     .string "gigantic CShinmyoumaru.$"
 
+Route12_FishingHouse_Text_TryFishing::
+    .string "Hello there, {PLAYER}!\n"
+    .string "Have you been fishing?\p"
+    .string "Try fishing with the Super Rod in\n"
+    .string "any body of water.\p"
+    .string "You'll find different Puppets in\n"
+    .string "different places.$"
+
 Route12_FishingHouse_Text_OhMagikarpAllowMeToSee:: @ 819F2DB
     .string "Oh? {PLAYER}?\n"
     .string "Why, if it isn't a CShinmyoumaru!\p"
@@ -46,15 +54,18 @@ Route12_FishingHouse_Text_OhMagikarpAllowMeToSee:: @ 819F2DB
 
 Route12_FishingHouse_Text_WhoaXInchesTakeThis:: @ 819F31B
     .string "… … …Whoa!\n"
-    .string "{STR_VAR_2} inches!\p"
+    .string "2 inches!\p"
     .string "You have a rare appreciation for\n"
     .string "the fine, poetic aspects of fishing!\p"
     .string "You must take this.\n"
     .string "I insist!$"
+	
+Route12_FishingHouse_Text_GotTenNetBalls::
+    .string "{PLAYER} received ten Net Orbs.$"
 
 Route12_FishingHouse_Text_LookForwardToGreaterRecords:: @ 819F395
-    .string "I'll look forward to seeing greater\n"
-    .string "records from you!$"
+    .string "This is truly incredible. Can any\n"
+    .string "other Puppet even compare?$"
 
 Route12_FishingHouse_Text_HuhXInchesSameSizeAsLast:: @ 819F3CB
     .string "Huh?\n"

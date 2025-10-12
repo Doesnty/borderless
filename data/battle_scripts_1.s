@@ -1797,6 +1797,9 @@ BattleScript_EffectMagnitudeSkipBonusDmg::
 	attackstring
 	ppreduce
 	magnitudedamagecalculation
+	pause 0x20
+	printstring STRINGID_MAGNITUDESTRENGTH
+	waitmessage 0x40
 	critcalc
 	damagecalc
 	typecalc

@@ -2,8 +2,8 @@ v1.3.1
 
 New move: Fall Kick; 70/100 Nature Physical with 100% chance to lower Atk.
  - For Shizuha by level, Minoriko and Mai+Satono by tutor.
-New ability: Spirit Power; counts as every type for STAB purposes.
- - For Hakurei and Arisu.
+New ability: Versatile; counts as every type for STAB purposes.
+ - For AAlice and Arisu.
 
 Overhauled regular Shizuha:
  - Swapped her Atk (now 110) and SAtk (now 50) (same with chibi)
@@ -19,15 +19,23 @@ Fixed outline of Speed Shizuha's front sprite and Chiyuri's back sprite.
 FW characters have proper shiny palettes now.
 Made adjustments to AYoumu's move order to bring her in line with other Youmus.
  - Notably, Volt Tackle->Block and Sacred Fire->Hi Jump Kick.
+All Patchouli forms no longer learn Thunderbolt, Thunder, or Shock Wave.
 DRemilia's HA changed from Super Luck to Regenerator.
 DRemilia can now TM U-Turn.
+Alice's HA is now Aftermath instead of Skill Link.
 DMomiji's HA changed from Salvage to Sand Castle.
 Chimi now learns Fire Fang by tutor instead of Overheat.
 Chimi can now use the Flamethrower and Fire Blast TMs.
+Hakurei's HA is now Reckless.
+Hakurei now learns Giga Impact by tutor.
+Tori now gets Draco Meteor by level (and had other moves shifted around).
 Changed a quirk of AI switch-in order that might make them perform better.
 Smart AI should handle Solarbeam more coherently.
 Smart AI should avoid setting Spikes if you have only one Puppet.
+Added another Cut tree to Cerulean City.
 The two fall-off points in Ruined Mansion now both lead to progress.
+Measuring Shinmyoumaru is now 10 times as rewarding, but can only be done once.
+Fixed Magnitude lacking its message (no functional change).
 
 
 v1.3.0

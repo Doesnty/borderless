@@ -98,7 +98,7 @@ PewterCity_Gym_Text_TryDifferentPartyOrders:: @ 819135C
     .string "Brock uses Earth-type Puppets\n"
     .string "and Earth-type attacks.\p"
     .string "Wind-type Puppets are immune to\n"
-    .string "Earth moves, even the ones that.\l"
+    .string "Earth moves, even the ones that\l"
 	.string "are rocks falling and such\p"
     .string "If you've got a Nature or Wind\n"
     .string "Puppet, this shouldn't be hard.\p"

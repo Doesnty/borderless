@@ -522,6 +522,11 @@ AI_CBM_Foresight:: @ 81DA288
 
 AI_CBM_PerishSong:: @ 81DA293
 	if_status3 AI_TARGET, STATUS3_PERISH_SONG, Score_Minus10
+	count_alive_pokemon AI_USER
+	if_not_equal 0, AI_CBM_PerishSong_End
+	count_alive_pokemon AI_TARGET
+	if_not_equal 0, Score_Minus10
+AI_CBM_PerishSong_End::
 	end
 
 AI_CBM_Sandstorm:: @ 81DA29E
@@ -2842,6 +2847,8 @@ AI_TryToFaint:: @ 81DBA6F
 AI_TryToFaint_TryToEncourageQuickAttack:: @ 81DBA7C
 	if_effect EFFECT_EXPLOSION, AI_TryToFaint_End
 	if_effect EFFECT_CORPSE_BLAZE, AI_TryToFaint_ScoreUp6
+	get_ability AI_USER
+	if_equal ABILITY_GALE_WINGS, AI_TryToFaint_ConsiderGaleWings
 	if_not_effect EFFECT_QUICK_ATTACK, AI_TryToFaint_ScoreUp4
 	score +2
 
@@ -2850,6 +2857,11 @@ AI_TryToFaint_ScoreUp4:: @ 81DBA8A
 
 AI_TryToFaint_End:: @ 81DBA8C
 	end
+
+AI_TryToFaint_ConsiderGaleWings::
+	get_curr_move_type
+	if_equal_ TYPE_WIND, AI_TryToFaint_ScoreUp6
+	goto AI_TryToFaint_ScoreUp4
 
 AI_TryToFaint_ScoreUp6::
 	score +6

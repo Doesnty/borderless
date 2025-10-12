@@ -1257,7 +1257,7 @@ static const struct TrainerMonFullControl sParty_PokemaniacDawson[] = {
         .evs = {0, 0, 0, 30, 30, 0},
         .nature = NATURE_MODEST,
         .gender = MON_MALE,
-        .ability = 0, // Doll Skewer
+        .ability = 2, // Versatile
         .ball = ITEM_POKE_BALL,
         .moves = {MOVE_LUSTER_PURGE, MOVE_ICE_BEAM, MOVE_TRI_ATTACK, MOVE_MANA_CHARGE},
     },
@@ -1269,7 +1269,7 @@ static const struct TrainerMonFullControl sParty_PokemaniacDawson[] = {
         .evs = {0, 0, 0, 30, 30, 0},
         .nature = NATURE_TIMID,
         .gender = MON_MALE,
-        .ability = 2, // Spirit Power
+        .ability = 2, // Versatile
         .ball = ITEM_POKE_BALL,
         .moves = {MOVE_THUNDERBOLT, MOVE_HYPER_BEAM, MOVE_DESTINY_BOND, MOVE_FLAMETHROWER},
     },
@@ -1281,7 +1281,7 @@ static const struct TrainerMonFullControl sParty_PokemaniacDawson[] = {
         .evs = {0, 0, 0, 60, 0, 60},
         .nature = NATURE_BOLD,
         .gender = MON_MALE,
-        .ability = 2, // Spirit Power
+        .ability = 2, // Versatile
         .ball = ITEM_POKE_BALL,
         .moves = {MOVE_SIGNAL_BEAM, MOVE_ICE_BEAM, MOVE_THUNDERBOLT, MOVE_FLAMETHROWER},
     },
@@ -6955,7 +6955,7 @@ static const struct TrainerMonFullControl sParty_RivalPokenonTowerSquirtle[] = {
         .gender = MON_FEMALE,
         .ability = 0, // Trace
         .ball = ITEM_POKE_BALL,
-        .moves = {MOVE_PSYBEAM, MOVE_TRI_ATTACK, MOVE_BUBBLEBEAM, MOVE_SHOCK_WAVE},
+        .moves = {MOVE_PSYBEAM, MOVE_TRI_ATTACK, MOVE_BUBBLEBEAM, MOVE_MAGICAL_LEAF},
     },
     {
         .iv = 18,
@@ -7405,7 +7405,7 @@ static const struct TrainerMonFullControl sParty_RivalRoute22LateSquirtle[] = {
         .gender = MON_FEMALE,
         .ability = 2, // Protean
         .ball = ITEM_POKE_BALL,
-        .moves = {MOVE_PSYCHO_BOOST, MOVE_FIRE_BLAST, MOVE_THUNDERBOLT, MOVE_EARTH_POWER},
+        .moves = {MOVE_PSYCHO_BOOST, MOVE_FIRE_BLAST, MOVE_ENERGY_LIGHT, MOVE_EARTH_POWER},
     },
     {
         .iv = 24,
@@ -7468,7 +7468,7 @@ static const struct TrainerMonFullControl sParty_RivalRoute22LateBulbasaur[] = {
         .gender = MON_FEMALE,
         .ability = 0, // Serene Grace
         .ball = ITEM_POKE_BALL,
-        .moves = {MOVE_EXTRASENSORY, MOVE_AEROBLAST, MOVE_THUNDER_WAVE, MOVE_CALM_MIND},
+        .moves = {MOVE_EXTRASENSORY, MOVE_AIR_SLASH, MOVE_THUNDER_WAVE, MOVE_CALM_MIND},
     },
     {
         .iv = 24,
@@ -7478,7 +7478,7 @@ static const struct TrainerMonFullControl sParty_RivalRoute22LateBulbasaur[] = {
         .evs = {0, 0, 0, 60, 60, 0},
         .nature = NATURE_MODEST,
         .gender = MON_FEMALE,
-        .ability = 2, // Doll Skewer
+        .ability = 2, // Versatile
         .ball = ITEM_POKE_BALL,
         .moves = {MOVE_SIGNAL_BEAM, MOVE_FLAMETHROWER, MOVE_ICE_BEAM, MOVE_THUNDERBOLT},
     },

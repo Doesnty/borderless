@@ -32,31 +32,31 @@ Route12_FishingHouse_EventScript_NoRoomForSuperRod:: @ 816FF75
 Route12_FishingHouse_EventScript_CheckMagikarpRecord:: @ 816FF7F
 	goto_if_questlog EventScript_ReleaseEnd
 	special QuestLog_CutRecording
+	goto_if_set FLAG_GOT_RECORD_SETTING_MAGIKARP, Route12_FishingHouse_EventScript_AlreadyBroughtCShinmyoumaru
+	
+	
 	setvar VAR_0x8004, SPECIES_CSHINMYOUMARU
 	specialvar VAR_RESULT, DoesPlayerPartyContainSpecies
 	compare VAR_RESULT, FALSE
 	goto_if_eq Route12_FishingHouse_EventScript_NoMagikarpInParty
-	special GetMagikarpSizeRecordInfo
+	
 	msgbox Route12_FishingHouse_Text_OhMagikarpAllowMeToSee
-	special ChoosePartyMon
-	waitstate
-	copyvar VAR_RESULT, VAR_0x8004
-	compare VAR_RESULT, PARTY_SIZE
-	goto_if_ge Route12_FishingHouse_EventScript_CancelShowMon
-	special CompareMagikarpSize
-	compare VAR_RESULT, 1
-	goto_if_eq Route12_FishingHouse_EventScript_NotMagikarp
-	compare VAR_RESULT, 2
-	goto_if_eq Route12_FishingHouse_EventScript_NotRecordMagikarp
-	compare VAR_RESULT, 3
-	goto_if_eq Route12_FishingHouse_EventScript_NewRecordMagikarp
-	compare VAR_RESULT, 4
-	goto_if_eq Route12_FishingHouse_EventScript_TieRecordMagikarp
+	msgbox Route12_FishingHouse_Text_WhoaXInchesTakeThis
+	giveitem_msg Route12_FishingHouse_Text_GotTenNetBalls, ITEM_NET_BALL, 10
+	compare VAR_RESULT, FALSE
+	goto_if_eq Route12_FishingHouse_EventScript_NoRoomForNetBall
+	setflag FLAG_GOT_RECORD_SETTING_MAGIKARP
+	msgbox Route12_FishingHouse_Text_LookForwardToGreaterRecords
 	release
 	end
 
 Route12_FishingHouse_EventScript_NoMagikarpInParty:: @ 816FFF5
 	msgbox Route12_FishingHouse_Text_TryFishingBringMeMagikarp
+	release
+	end
+
+Route12_FishingHouse_EventScript_AlreadyBroughtCShinmyoumaru::
+	msgbox Route12_FishingHouse_Text_TryFishing
 	release
 	end
 

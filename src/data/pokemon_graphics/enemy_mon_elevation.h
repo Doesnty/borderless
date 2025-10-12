@@ -4,6 +4,9 @@ const u8 gEnemyMonElevation[NUM_SPECIES] =
 {
 	[SPECIES_ADMARISA] = 2,
 	
+	[SPECIES_CARIYA] = 2,
+	[SPECIES_ARIYA] = 1,
+	
 	[SPECIES_AUNN] = 4,
 	
     [SPECIES_DARK_ALICE] = 6,

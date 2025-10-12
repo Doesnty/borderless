@@ -591,7 +591,7 @@ SixIsland_WaterPath_EventScript_ItemElixir:: @ 81BEC9D
 	end
 
 SixIsland_WaterPath_EventScript_ItemDragonScale:: @ 81BECAA
-	finditem ITEM_DRAGON_SCALE
+	finditem ITEM_PP_MAX
 	end
 
 SixIsland_RuinValley_EventScript_ItemFullRestore:: @ 81BECB7
