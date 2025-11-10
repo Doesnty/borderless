@@ -1465,7 +1465,8 @@ static void atk02_attackstring(void)
                 break;
             }
         }
-        if (!(gHitMarker & (HITMARKER_NO_PPDEDUCT | HITMARKER_NO_ATTACKSTRING)) && gBattleMons[gBattlerAttacker].pp[gCurrMovePos] && (!gBattleStruct->twinSparkTracker))
+        if (!(gHitMarker & (HITMARKER_NO_PPDEDUCT | HITMARKER_NO_ATTACKSTRING)) && gBattleMons[gBattlerAttacker].pp[gCurrMovePos] 
+		&& (!gBattleStruct->twinSparkTracker) && (!gBattleStruct->wallMasterTracker))
         {
             gProtectStructs[gBattlerAttacker].notFirstStrike = 1;
 
@@ -7619,6 +7620,7 @@ static void atk96_weatherdamage(void)
              && gBattleMons[gBattlerAttacker].ability != ABILITY_SAND_STREAM
              && gBattleMons[gBattlerAttacker].ability != ABILITY_SAND_RUSH
              && gBattleMons[gBattlerAttacker].ability != ABILITY_SAND_VEIL
+			 && gBattleMons[gBattlerAttacker].ability != ABILITY_SAND_CASTLE
              && gBattleMons[gBattlerAttacker].ability != ABILITY_STORM_SHAWL
              && gBattleMons[gBattlerAttacker].ability != ABILITY_WIDE_HAT
 			 && gBattleMons[gBattlerAttacker].ability != ABILITY_MAGIC_GUARD
@@ -7639,6 +7641,8 @@ static void atk96_weatherdamage(void)
             if (!IS_BATTLER_OF_TYPE(gBattlerAttacker, TYPE_ICE)
              && gBattleMons[gBattlerAttacker].ability != ABILITY_SNOW_WARNING
              && gBattleMons[gBattlerAttacker].ability != ABILITY_SLUSH_RUSH
+			 && gBattleMons[gBattlerAttacker].ability != ABILITY_SNOW_CLOAK
+			 && gBattleMons[gBattlerAttacker].ability != ABILITY_WINTER_GIFT
              && gBattleMons[gBattlerAttacker].ability != ABILITY_STORM_SHAWL
              && gBattleMons[gBattlerAttacker].ability != ABILITY_WIDE_HAT
 			 && gBattleMons[gBattlerAttacker].ability != ABILITY_MAGIC_GUARD

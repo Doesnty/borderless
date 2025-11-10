@@ -1,3 +1,8 @@
+v1.3.2
+Wild Nareko and Yukari puppets now carry the correct berry.
+AI should be less spammy with Detect.
+AI no longer hallucinates clear weather as arbitrary values.
+
 v1.3.1
 
 New move: Fall Kick; 70/100 Nature Physical with 100% chance to lower Atk.

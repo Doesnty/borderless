@@ -2607,10 +2607,10 @@ static u32 TestWhetherSelectedMonCanBeTraded(struct Pokemon * party, int partyCo
 
     if (!IsNationalPokedexEnabled())
     {
-        if (species2[cursorPos] > SPECIES_MEW)
+        /*if (species2[cursorPos] > SPECIES_MEW)
         {
             return 2;
-        }
+        } */
         if (species2[cursorPos] == SPECIES_NONE)
         {
             return 3;
@@ -2628,10 +2628,10 @@ static u32 TestWhetherSelectedMonCanBeTraded(struct Pokemon * party, int partyCo
                 return 5;
             }
 
-            if (species2[cursorPos] > SPECIES_MEW)
+            /*if (species2[cursorPos] > SPECIES_MEW)
             {
                 return 4;
-            }
+            } */
         }
     }
 
@@ -2766,7 +2766,7 @@ int GetUnionRoomTradeMessageId(struct GFtgtGnameSub playerSub, struct GFtgtGname
             return 6;
         }
 
-        if (species1 > SPECIES_MEW)
+        /* if (species1 > SPECIES_MEW)
         {
             return 4;
         }
@@ -2774,13 +2774,14 @@ int GetUnionRoomTradeMessageId(struct GFtgtGnameSub playerSub, struct GFtgtGname
         if (species2 > SPECIES_MEW)
         {
             return 5;
-        }
+        } */
     }
 
+	/*
     if (!partnerHasNationalDex && species1 > SPECIES_MEW)
     {
         return 7;
-    }
+    } */
 
     return 0;
 }
@@ -2799,10 +2800,11 @@ int CanRegisterMonForTradingBoard(struct GFtgtGnameSub playerSub, u16 species2, 
         return 2;
     }
 
+	/*
     if (species2 > SPECIES_MEW && species2 != SPECIES_EGG)
     {
         return 1;
-    }
+    } */
 
     return 0;
 }

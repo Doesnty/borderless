@@ -2076,23 +2076,20 @@ AI_CV_Curse_End:: @ 81DB2E1
 AI_CV_Protect:: @ 81DB2E2
 	get_protect_count AI_USER
 	if_more_than 1, AI_CV_Protect_ScoreDown2
-	if_status AI_USER, STATUS1_TOXIC_POISON, AI_CV_Protect3
-	if_status2 AI_USER, STATUS2_CURSED, AI_CV_Protect3
-	if_status3 AI_USER, STATUS3_PERISH_SONG, AI_CV_Protect3
-	if_status2 AI_USER, STATUS2_INFATUATION, AI_CV_Protect3
-	if_status3 AI_USER, STATUS3_LEECHSEED, AI_CV_Protect3
-	if_status3 AI_USER, STATUS3_YAWN, AI_CV_Protect3
-	if_has_move_with_effect AI_TARGET, EFFECT_RESTORE_HP, AI_CV_Protect3
-	if_has_move_with_effect AI_TARGET, EFFECT_DEFENSE_CURL, AI_CV_Protect3
+	if_status AI_USER, STATUS1_TOXIC_POISON, AI_CV_Protect_ScoreDown2
+	if_status2 AI_USER, STATUS2_CURSED, AI_CV_Protect_ScoreDown2
+	if_status3 AI_USER, STATUS3_PERISH_SONG, AI_CV_Protect_ScoreDown2
+	if_status2 AI_USER, STATUS2_INFATUATION, AI_CV_Protect_ScoreDown2
+	if_status3 AI_USER, STATUS3_LEECHSEED, AI_CV_Protect_ScoreDown2
+	if_status3 AI_USER, STATUS3_YAWN, AI_CV_Protect_ScoreDown2
+	if_has_move_with_effect AI_TARGET, EFFECT_RESTORE_HP, AI_CV_Protect_ScoreDown2
+	if_has_move_with_effect AI_TARGET, EFFECT_DEFENSE_CURL, AI_CV_Protect_ScoreDown2
 	if_status AI_TARGET, STATUS1_TOXIC_POISON, AI_CV_Protect_ScoreUp2
 	if_status2 AI_TARGET, STATUS2_CURSED, AI_CV_Protect_ScoreUp2
 	if_status3 AI_TARGET, STATUS3_PERISH_SONG, AI_CV_Protect_ScoreUp2
 	if_status2 AI_TARGET, STATUS2_INFATUATION, AI_CV_Protect_ScoreUp2
 	if_status3 AI_TARGET, STATUS3_LEECHSEED, AI_CV_Protect_ScoreUp2
 	if_status3 AI_TARGET, STATUS3_YAWN, AI_CV_Protect_ScoreUp2
-	get_last_used_move AI_TARGET
-	get_move_effect_from_result
-	if_not_equal EFFECT_LOCK_ON, AI_CV_Protect_ScoreUp2
 	goto AI_CV_Protect2
 
 AI_CV_Protect_ScoreUp2:: @ 81DB37E
@@ -2109,11 +2106,6 @@ AI_CV_Protect4::
 	if_random_less_than 128, AI_CV_Protect_End
 	score -1
 	goto AI_CV_Protect_End
-
-AI_CV_Protect3:: @ 81DB397
-	get_last_used_move AI_TARGET
-	get_move_effect_from_result
-	if_not_equal EFFECT_LOCK_ON, AI_CV_Protect_End
 
 AI_CV_Protect_ScoreDown2:: @ 81DB3A0
 	score -2

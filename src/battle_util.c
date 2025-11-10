@@ -2657,7 +2657,8 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u8 ability, u8 special, u16 moveA
 							gEffectBattler = gBattlerTarget;
 							++effect;
 						}
-						else
+						else if (gBattleMons[gBattlerAttacker].ability != ABILITY_CONTRARY &&
+							gBattleMons[gBattlerAttacker].statStages[STAT_ATK] > 0)
 						{
 							PREPARE_STAT_BUFFER(gBattleTextBuff1, STAT_ATK);
 							gBattleMons[gBattlerAttacker].statStages[STAT_ATK]--;
@@ -2672,7 +2673,7 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u8 ability, u8 special, u16 moveA
 					 else if (gBattleMoves[gCurrentMove].moveClass == CLASS_SPECIAL && gBattleMons[gBattlerAttacker].statStages[STAT_SPATK] > 0)
 					 {
 						if (gBattleMons[gBattlerAttacker].ability == ABILITY_CONTRARY &&
-							gBattleMons[gBattlerAttacker].statStages[STAT_SPATK] < 12)
+							gBattleMons[gBattlerAttacker].statStages[STAT_SPATK] < 12 )
 						{
 							PREPARE_STAT_BUFFER(gBattleTextBuff1, STAT_SPATK);
 							gBattleMons[gBattlerAttacker].statStages[STAT_SPATK]++;
@@ -2692,7 +2693,8 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u8 ability, u8 special, u16 moveA
 							gEffectBattler = gBattlerTarget;
 							++effect;
 						}
-						else
+						else if (gBattleMons[gBattlerAttacker].ability != ABILITY_CONTRARY &&
+							gBattleMons[gBattlerAttacker].statStages[STAT_SPATK] > 0)
 						{
 							PREPARE_STAT_BUFFER(gBattleTextBuff1, STAT_SPATK);
 							gBattleMons[gBattlerAttacker].statStages[STAT_SPATK]--;
@@ -3844,7 +3846,7 @@ u8 ItemBattleEffects(u8 caseID, u8 battlerId, bool8 moveTurn)
                 }
                 break;
             case HOLD_EFFECT_CONFUSE_SPICY:
-                if (gluttonyFigyMult * gBattleMons[battlerId].hp <= gBattleMons[battlerId].maxHP / 4 && !moveTurn)
+                if (gBattleMons[battlerId].hp <= gluttonyFigyMult * gBattleMons[battlerId].maxHP / 4 && !moveTurn)
                 {
                     PREPARE_FLAVOR_BUFFER(gBattleTextBuff1, FLAVOR_SPICY);
                     gBattleMoveDamage = gBattleMons[battlerId].maxHP / battlerHoldEffectParam;
@@ -3862,7 +3864,7 @@ u8 ItemBattleEffects(u8 caseID, u8 battlerId, bool8 moveTurn)
                 }
                 break;
             case HOLD_EFFECT_CONFUSE_DRY:
-                if (gluttonyFigyMult * gBattleMons[battlerId].hp <= gBattleMons[battlerId].maxHP / 4 && !moveTurn)
+                if (gBattleMons[battlerId].hp <= gluttonyFigyMult * gBattleMons[battlerId].maxHP / 4 && !moveTurn)
                 {
                     PREPARE_FLAVOR_BUFFER(gBattleTextBuff1, FLAVOR_DRY);
                     gBattleMoveDamage = gBattleMons[battlerId].maxHP / battlerHoldEffectParam;
@@ -3880,7 +3882,7 @@ u8 ItemBattleEffects(u8 caseID, u8 battlerId, bool8 moveTurn)
                 }
                 break;
             case HOLD_EFFECT_CONFUSE_SWEET:
-                if (gluttonyFigyMult * gBattleMons[battlerId].hp <= gBattleMons[battlerId].maxHP / 4 && !moveTurn)
+                if (gBattleMons[battlerId].hp <= gluttonyFigyMult * gBattleMons[battlerId].maxHP / 4 && !moveTurn)
                 {
                     PREPARE_FLAVOR_BUFFER(gBattleTextBuff1, FLAVOR_SWEET);
                     gBattleMoveDamage = gBattleMons[battlerId].maxHP / battlerHoldEffectParam;
@@ -3898,7 +3900,7 @@ u8 ItemBattleEffects(u8 caseID, u8 battlerId, bool8 moveTurn)
                 }
                 break;
             case HOLD_EFFECT_CONFUSE_BITTER:
-                if (gluttonyFigyMult * gBattleMons[battlerId].hp <= gBattleMons[battlerId].maxHP / 4 && !moveTurn)
+                if (gBattleMons[battlerId].hp <= gluttonyFigyMult * gBattleMons[battlerId].maxHP / 4 && !moveTurn)
                 {
                     PREPARE_FLAVOR_BUFFER(gBattleTextBuff1, FLAVOR_BITTER);
                     gBattleMoveDamage = gBattleMons[battlerId].maxHP / battlerHoldEffectParam;
@@ -3916,7 +3918,7 @@ u8 ItemBattleEffects(u8 caseID, u8 battlerId, bool8 moveTurn)
                 }
                 break;
             case HOLD_EFFECT_CONFUSE_SOUR:
-                if (gluttonyFigyMult * gBattleMons[battlerId].hp <= gBattleMons[battlerId].maxHP / 4 && !moveTurn)
+                if (gBattleMons[battlerId].hp <= gluttonyFigyMult * gBattleMons[battlerId].maxHP / 4 && !moveTurn)
                 {
                     PREPARE_FLAVOR_BUFFER(gBattleTextBuff1, FLAVOR_SOUR);
                     gBattleMoveDamage = gBattleMons[battlerId].maxHP / battlerHoldEffectParam;
