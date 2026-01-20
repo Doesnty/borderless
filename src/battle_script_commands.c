@@ -1304,7 +1304,7 @@ static void atk01_accuracycheck(void)
         else if (!JumpIfMoveAffectedByProtect(0))
 			gBattlescriptCurrInstr += 7;
     }
-	else if (gBattleMons[gBattlerAttacker].ability == ABILITY_NO_GUARD || gBattleMons[gBattlerTarget].ability == ABILITY_NO_GUARD)
+	else if (gBattleMons[gBattlerAttacker].ability == ABILITY_NO_GUARD || gBattleMons[gBattlerTarget].ability == ABILITY_NO_GUARD || gProtectStructs[gBattlerTarget].endured)
 	{
         if (!JumpIfMoveAffectedByProtect(0))
 			gBattlescriptCurrInstr += 7;

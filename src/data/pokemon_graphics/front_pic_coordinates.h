@@ -2388,7 +2388,7 @@ const struct MonCoords gMonFrontPicCoords[] =
 	[SPECIES_COKINA] = 
 	{
 		.size = 0x67,
-		.y_offset = 1,
+		.y_offset = 14,
 	},
 	[SPECIES_OKINA] = 
 	{
@@ -2498,7 +2498,7 @@ const struct MonCoords gMonFrontPicCoords[] =
 	[SPECIES_CCHIMI] = 
 	{
 		.size = 0x77,
-		.y_offset = 0,
+		.y_offset = 4,
 	},
 	[SPECIES_CHIMI] = 
 	{

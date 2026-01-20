@@ -1,5 +1,25 @@
 v1.3.2
 Wild Nareko and Yukari puppets now carry the correct berry.
+Sand Castle, Snow Cloak, and Winter Gift protect against their respective weathers.
+Attacks now always hit a target that is using Endure.
+Wall Master should no longer dock excess PP.
+Gourmand should work as intended with Figy-type berries.
+New sprites for both Okina forms, thank Scrimmy and BluShell.
+
+HLilyWhite is now Heart/Nature type (rather than pure Heart).
+HLilyWhite gets Blossoming by level; all Lily White forms get Charge Beam by tutor.
+LilyBlack gets Air Slash by relearner, replacing Feint; all Lily Blacks now get Feint by tutor.
+ALilyBlack gets Wild Hunt by level instead of U-Turn, no longer gets Wild Hunt by tutor.
+Daiyousei forms can now relearn Weather Ball (instead of redundant Mirror Coat).
+DRemilia can now learn Substitute by TM.
+SWriggle can now learn Thunderbolt by TM.
+ANitori now gets Volt Tackle instead of Superpower (oops).
+CKanako now gets Shock Wave at 13 instead of Sand Tomb (which is a tutor move).
+(The trade CKanako still comes with Sand Tomb.)
+Kanako (regular only) now learns Calm Mind by TM.
+All Suwako forms now get Curse by tutor.
+Momoyo now gets Earth Power by tutor.
+Trading is no longer unrestricted by national dex, probably (I can't confirm this).
 AI should be less spammy with Detect.
 AI no longer hallucinates clear weather as arbitrary values.
 

@@ -2398,12 +2398,12 @@ const struct MonCoords gMonBackPicCoords[] =
 	[SPECIES_COKINA] = 
 	{
 		.size = 0x56,
-		.y_offset = 5,
+		.y_offset = 0,
 	},
 	[SPECIES_OKINA] = 
 	{
 		.size = 0x87,
-		.y_offset = 4,
+		.y_offset = 0,
 	},
 	[SPECIES_CSAKI] = 
 	{

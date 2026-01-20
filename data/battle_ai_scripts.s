@@ -223,6 +223,7 @@ AI_CheckBadMove_CheckEffect:: @ 81D9D27
 	if_effect EFFECT_DRAGON_DANCE, AI_CBM_DragonDance
 	if_effect EFFECT_WISH, AI_CBM_Wish
 	if_effect EFFECT_TAUNT, AI_CBM_Taunt
+	if_effect EFFECT_AEGIS_MERGE, AI_CBM_Ingrain
 	end
 
 AI_CBM_Sleep:: @ 81D9FB6
@@ -881,6 +882,7 @@ AI_CheckViability:: @ 81DA445
 	if_effect EFFECT_WATER_SPORT, AI_CV_WaterSport
 	if_effect EFFECT_CALM_MIND, AI_CV_SpDefUp
 	if_effect EFFECT_DRAGON_DANCE, AI_CV_DragonDance
+	if_effect EFFECT_MISHAGUJI, AI_CV_Mishaguji
 	end
 
 AI_CV_Sleep:: @ 81DA71C
@@ -2393,8 +2395,8 @@ AI_CV_SemiInvulnerable2:: @ 81DB677
 	if_status2 AI_TARGET, STATUS2_CURSED, AI_CV_SemiInvulnerable_TryEncourage
 	if_status3 AI_TARGET, STATUS3_LEECHSEED, AI_CV_SemiInvulnerable_TryEncourage
 	get_weather
-	if_equal AI_WEATHER_HAIL, AI_CV_SemiInvulnerable_CheckSandstormTypes
-	if_equal AI_WEATHER_SANDSTORM, AI_CV_SemiInvulnerable_CheckIceType
+	if_equal AI_WEATHER_HAIL, AI_CV_SemiInvulnerable_CheckIceType
+	if_equal AI_WEATHER_SANDSTORM, AI_CV_SemiInvulnerable_CheckSandstormTypes
 	goto AI_CV_SemiInvulnerable5
 
 AI_CV_SemiInvulnerable_CheckSandstormTypes:: @ 81DB6A7
@@ -2821,6 +2823,17 @@ AI_CV_DragonDance2:: @ 81DBA66
 	score +1
 
 AI_CV_DragonDance_End:: @ 81DBA6E
+	end
+
+AI_CV_Mishaguji::
+	if_status2 AI_TARGET, STATUS2_CURSED, AI_CV_MishagujiScoreDown
+	if_random_less_than 200, AI_CV_MishagujiEnd
+	score +1
+	end
+	
+AI_CV_MishagujiScoreDown::
+	score -1
+AI_CV_MishagujiEnd::
 	end
 
 AI_TryToFaint:: @ 81DBA6F
