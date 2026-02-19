@@ -2,19 +2,20 @@ FiveIsland_WaterLabyrinth_MapScripts:: @ 816884D
 	.byte 0
 
 FiveIsland_WaterLabyrinth_EventScript_EggGentleman:: @ 816884E
-	goto_if_questlog EventScript_ReleaseEnd
-	special QuestLog_CutRecording
 	lock
 	faceplayer
+	msgbox FiveIsland_WaterLabyrinth_Text_LetMeTakeLookAtMons
+	release
+	end
+	
+	goto_if_questlog EventScript_ReleaseEnd
+	special QuestLog_CutRecording
 	goto_if_set FLAG_GOT_TOGEPI_EGG, FiveIsland_WaterLabyrinth_EventScript_PostEggComment
 	goto_if_set FLAG_NO_ROOM_FOR_TOGEPI_EGG, FiveIsland_WaterLabyrinth_EventScript_ReturnForEgg
-	msgbox FiveIsland_WaterLabyrinth_Text_LetMeTakeLookAtMons
 	specialvar VAR_RESULT, GetLeadMonFriendship
 	compare VAR_RESULT, 6  @ Max friendship
 	goto_if_eq FiveIsland_WaterLabyrinth_EventScript_LeadMonMaxFriendship
 	msgbox FiveIsland_WaterLabyrinth_Text_HmmISeeIsee
-	release
-	end
 
 FiveIsland_WaterLabyrinth_EventScript_MonDaisyComment:: @ 8168895
 	famechecker FAMECHECKER_DAISY, 2

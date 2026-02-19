@@ -188,6 +188,7 @@ static const u8 sSandCastleDescription[] = _("Doubles Defense in sandstorm.");
 static const u8 sStasisGazeDescription[] = _("Foe's stats cannot rise.");
 static const u8 sPureScalesDescription[] = _("Doubles Sp. Def.");
 static const u8 sVersatileDescription[] = _("Always get same-type attack bonus.");
+static const u8 sAmbushDescription[] = _("+50% Speed on the first turn.");
 static const u8 sObsoleteDescription[] = _("Obsolete.");
 static const u8 sUnimplementedDescription[] = _("Unimplemented.");
 
@@ -383,6 +384,7 @@ const u8 *const gAbilityDescriptionPointers[ABILITIES_COUNT] =
 	[ABILITY_STASIS_GAZE] = sStasisGazeDescription,
 	[ABILITY_PURE_SCALES] = sPureScalesDescription,
 	[ABILITY_VERSATILE] = sVersatileDescription,
+	[ABILITY_AMBUSH] = sAmbushDescription,
 };
 
 const u8 gAbilityNames[ABILITIES_COUNT][ABILITY_NAME_LENGTH + 1] =
@@ -577,4 +579,5 @@ const u8 gAbilityNames[ABILITIES_COUNT][ABILITY_NAME_LENGTH + 1] =
 	[ABILITY_STASIS_GAZE] = _("Stasis Gaze"),
 	[ABILITY_PURE_SCALES] = _("Pure Scales"),
 	[ABILITY_VERSATILE] = _("Versatile"),
+	[ABILITY_AMBUSH] = _("Ambush"),
 };

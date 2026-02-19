@@ -50,6 +50,17 @@ static const struct WindowTemplate sWindowTemplates[] = {
     }, DUMMY_WIN_TEMPLATE
 };
 
+static const struct WindowTemplate sTowerResultsWindowTemplate =
+{
+    .bg = 0,
+    .tilemapLeft = 1,
+    .tilemapTop = 1,
+    .width = 28,
+    .height = 18,
+    .paletteNum = 15,
+    .baseBlock = 1
+};
+
 static const u8 sTextColor[3] = {
     0, 2, 3
 };
@@ -566,3 +577,37 @@ static void LoadFrameGfxOnBg(u8 bg)
     CopyToBgTilemapBufferRect(bg, sTilemap, 0, 0, 32, 32);
     LoadPalette(sPalette, 0, 0x20);
 }
+
+/*
+static void TowerPrintStreak(const u8 *str, u16 num, u8 x1, u8 x2, u8 y)
+{
+    AddTextPrinterParameterized(gRecordsWindowId, FONT_NORMAL, str, x1, y, TEXT_SKIP_DRAW, NULL);
+    if (num > MAX_STREAK)
+        num = MAX_STREAK;
+    ConvertIntToDecimalStringN(gStringVar1, num, STR_CONV_MODE_RIGHT_ALIGN, 4);
+    StringExpandPlaceholders(gStringVar4, gText_WinStreak);
+    AddTextPrinterParameterized(gRecordsWindowId, FONT_NORMAL, gStringVar4, x2, y, TEXT_SKIP_DRAW, NULL);
+}
+
+void ShowTowerResultsWindow(u8 battleMode)
+{
+	u16 winStreak = 0;
+    gRecordsWindowId = AddWindow(&sTowerResultsWindowTemplate);
+    DrawStdWindowFrame(gRecordsWindowId, FALSE);
+    FillWindowPixelBuffer(gRecordsWindowId, PIXEL_FILL(1));
+    StringExpandPlaceholders(gStringVar4, gText_NewGame);
+
+    PrintAligned(gStringVar4, 2);
+    AddTextPrinterParameterized(gRecordsWindowId, FONT_NORMAL, gText_Standard, 16, 49, TEXT_SKIP_DRAW, NULL);
+    AddTextPrinterParameterized(gRecordsWindowId, FONT_NORMAL, gText_Factory, 16, 97, TEXT_SKIP_DRAW, NULL);
+    PrintHyphens(10);
+	
+	
+	
+    TowerPrintPrevOrCurrentStreak(battleMode, FRONTIER_LVL_50, 72, 132, 49);
+    TowerPrintRecordStreak(battleMode, FRONTIER_LVL_50, 72, 132, 65);
+    TowerPrintPrevOrCurrentStreak(battleMode, FRONTIER_LVL_OPEN, 72, 132, 97);
+    TowerPrintRecordStreak(battleMode, FRONTIER_LVL_OPEN, 72, 132, 113);
+    PutWindowTilemap(gRecordsWindowId);
+    CopyWindowToVram(gRecordsWindowId, COPYWIN_FULL);
+} */

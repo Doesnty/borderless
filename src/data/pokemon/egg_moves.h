@@ -4763,6 +4763,7 @@ static const u16 sCYuumaEggMoveLearnset[] = {
     MOVE_TORMENT,
     MOVE_BOUNCE,
     MOVE_SLACK_OFF,
+	MOVE_WILD_HUNT,
     0
 };
 
@@ -4775,6 +4776,7 @@ static const u16 sYuumaEggMoveLearnset[] = {
     MOVE_TORMENT,
     MOVE_BOUNCE,
     MOVE_SLACK_OFF,
+	MOVE_WILD_HUNT,
     0
 };
 
@@ -4805,7 +4807,6 @@ static const u16 sCTakaneEggMoveLearnset[] = {
     MOVE_MAGIC_COAT,
     MOVE_SPLASHBACK,
     MOVE_FISSURE,
-    MOVE_INGRAIN,
     0
 };
 
@@ -4816,7 +4817,6 @@ static const u16 sTakaneEggMoveLearnset[] = {
     MOVE_MAGIC_COAT,
     MOVE_SPLASHBACK,
     MOVE_FISSURE,
-    MOVE_INGRAIN,
     0
 };
 
@@ -4929,6 +4929,7 @@ static const u16 sCMomoyoEggMoveLearnset[] = {
     MOVE_DRAIN_PUNCH,
     MOVE_AGILITY,
 	MOVE_EARTH_POWER,
+	MOVE_SUPERPOWER,
     0
 };
 
@@ -4943,6 +4944,7 @@ static const u16 sMomoyoEggMoveLearnset[] = {
     MOVE_DRAIN_PUNCH,
     MOVE_AGILITY,
 	MOVE_EARTH_POWER,
+	MOVE_SUPERPOWER,
     0
 };
 
@@ -5488,6 +5490,7 @@ static const u16 sCRikaEggMoveLearnset[] = {
     MOVE_IRON_DEFENSE,
     MOVE_BOLT_STRIKE,
     MOVE_RECYCLE,
+	MOVE_SCREECH,
     0
 };
 
@@ -5497,6 +5500,7 @@ static const u16 sRikaEggMoveLearnset[] = {
     MOVE_IRON_DEFENSE,
     MOVE_BOLT_STRIKE,
     MOVE_RECYCLE,
+	MOVE_SCREECH,
     0
 };
 
@@ -5506,6 +5510,7 @@ static const u16 sTRikaEggMoveLearnset[] = {
     MOVE_IRON_DEFENSE,
     MOVE_BOLT_STRIKE,
     MOVE_RECYCLE,
+	MOVE_SCREECH,
     0
 };
 
@@ -5626,6 +5631,7 @@ static const u16 sCChiyuriEggMoveLearnset[] = {
     MOVE_RECYCLE,
     MOVE_SWIFT,
     MOVE_SCALD,
+	MOVE_LOCK_ON,
     0
 };
 
@@ -5639,6 +5645,7 @@ static const u16 sChiyuriEggMoveLearnset[] = {
     MOVE_RECYCLE,
     MOVE_SWIFT,
     MOVE_SCALD,
+	MOVE_LOCK_ON,
     0
 };
 
@@ -5680,6 +5687,7 @@ static const u16 sRuukotoEggMoveLearnset[] = {
     MOVE_SCULPTURE,
     MOVE_DEBT_SPIRAL,
     MOVE_OVERHEAT,
+	MOVE_DOUBLE_TEAM,
     0
 };
 

@@ -790,7 +790,7 @@
 #define FLAG_FOUGHT_XSENDAI                              0x303
 #define FLAG_HIDE_XSENDAI                                0x304
 #define FLAG_XSENDAI_FLEW_AWAY                           0x305
-#define FLAG_0x306               0x306
+#define FLAG_HIDE_BATTLE_TOWER_OPPONENT                  0x306
 #define FLAG_0x307               0x307
 #define FLAG_0x308               0x308
 #define FLAG_0x309               0x309

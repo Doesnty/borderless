@@ -271,7 +271,7 @@ const u8 gSpeciesNames[][POKEMON_NAME_LENGTH+1] = {
 	_("Nue"),
 	_("ANue"),
 	_("TNue"),
-	_("Tensoku"),
+	_("Hisoutensoku"),
 	_("Shanghai"),
 	_("Hourai"),
 	_("Goliath"),
@@ -536,5 +536,5 @@ const u8 gSpeciesNames[][POKEMON_NAME_LENGTH+1] = {
 	_("XTenma"),
 	_("XSendai"),
 	_("TSekibanki"),
-	_("Tensoku"),
+	_("Hisoutensoku"),
 };

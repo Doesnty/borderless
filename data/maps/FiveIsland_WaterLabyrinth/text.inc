@@ -1,10 +1,8 @@
 FiveIsland_WaterLabyrinth_Text_LetMeTakeLookAtMons:: @ 818A80D
-    .string "You travel all over the place,\n"
-    .string "don't you?\p"
-    .string "You're not driving your POKéMON\n"
-    .string "too harshly, are you?\p"
-    .string "Let me take a look.\n"
-    .string "… … …   … … …$"
+    .string "The Lady who lives in Resort\n"
+    .string "Gourgeous treats Puppets with care.\p"
+    .string "I gave her a valuable Egg, since\n"
+    .string "it'll do more in her hands than mine.$"
 
 FiveIsland_WaterLabyrinth_Text_HmmISeeIsee:: @ 818A88F
     .string "Ah, hmm…\n"

@@ -1785,6 +1785,8 @@ extern const u8 gText_ZunNextPage[];
 extern const u8 gText_ZunPreviousPage[];
 extern const u8 gText_Renko[];
 extern const u8 gText_Maribel[];
+extern const u8 gText_Standard[];
+extern const u8 gText_Factory[];
 
 extern const u8 gText_ImakuniRockTunnelDefeat[];
 

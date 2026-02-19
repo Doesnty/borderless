@@ -3280,6 +3280,8 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u8 ability, u8 special, u16 moveA
                     
                     // We know how many moves tie for highest power.
 					// Pick one randomly.
+					if (numBestMoves == 0) // avoids divide-by-zero if mons with no moves exist for some reason
+						numBestMoves = 1;
                     bestMove = bestMoves[Random() % numBestMoves];
                     
                     // Okay, we've picked a move.
@@ -3497,7 +3499,8 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u8 ability, u8 special, u16 moveA
 						if (gBattleMons[battler].attack < gBattleMons[battler].spAttack)
 							stat = STAT_SPATK;
 						if (gBattleMons[battler].statStages[stat] < 12 &&
-							gBattleMoves[gCurrentMove].flags & FLAG_SOUND_MOVE 
+							((gBattleMoves[gCurrentMove].flags & FLAG_SOUND_MOVE)
+							 || gCurrentMove == MOVE_PERISH_SONG || gCurrentMove == MOVE_HEAL_BELL)
 							&& !(gHitMarker & HITMARKER_UNABLE_TO_USE_MOVE))
 						{
 							gBattleMons[battler].statStages[stat]++;
@@ -3519,7 +3522,8 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u8 ability, u8 special, u16 moveA
                     if (gBattleMons[gBattlerTarget].attack < gBattleMons[gBattlerTarget].spAttack)
                         stat = STAT_SPATK;
                     
-                    if (gBattleMoves[gCurrentMove].flags & FLAG_SOUND_MOVE 
+                    if (((gBattleMoves[gCurrentMove].flags & FLAG_SOUND_MOVE)
+							 || gCurrentMove == MOVE_PERISH_SONG || gCurrentMove == MOVE_HEAL_BELL)
                         && !(gHitMarker & HITMARKER_UNABLE_TO_USE_MOVE)
                         && gBattleMons[gBattlerTarget].statStages[stat] > 0
                         && gBattleMons[battler].hp != 0

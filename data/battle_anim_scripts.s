@@ -484,6 +484,7 @@ gBattleAnims_Moves::
 	.4byte Move_AURA_BREAK
 	.4byte Move_VACUUM_WAVE
 	.4byte Move_FALL_KICK
+	.4byte Move_LOCK_ON
 	.4byte Move_COUNT
 
 gBattleAnims_StatusConditions::

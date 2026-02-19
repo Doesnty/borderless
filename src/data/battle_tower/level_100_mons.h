@@ -10,7 +10,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel100Mons[] =
 			MOVE_EXPLOSION,
 			MOVE_EXPLOSION
 		},
-		.evSpread = F_EV_SPREAD_SPEED,
+		.evSpread = {0, 0, 0, 0, 0, 0},
 		.nature = NATURE_SERIOUS,
 	},
 };

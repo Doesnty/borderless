@@ -252,9 +252,6 @@ static const u16 sDiscouragedPowerfulMoveEffects[] =
     EFFECT_SKULL_BASH,
     EFFECT_SPIT_UP,
     EFFECT_FOCUS_PUNCH,
-    EFFECT_SUPERPOWER,
-    EFFECT_ERUPTION,
-    EFFECT_OVERHEAT,
     0xFFFF
 };
 

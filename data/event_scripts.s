@@ -1378,3 +1378,15 @@ Text_TestMsg:: @ 81ACD45
 
 	.include "data/maps/CeruleanCave_B2FReal/scripts.inc"
 	.include "data/maps/CeruleanCave_B2FReal/text.inc"
+
+	.include "data/maps/BattleTower_BattleRoom/scripts.inc"
+	.include "data/maps/BattleTower_BattleRoom/text.inc"
+
+	.include "data/maps/BattleTower_Corridor/scripts.inc"
+	.include "data/maps/BattleTower_Corridor/text.inc"
+
+	.include "data/maps/BattleTower_Elevator/scripts.inc"
+	.include "data/maps/BattleTower_Elevator/text.inc"
+
+	.include "data/maps/BattleTower_Lobby/scripts.inc"
+	.include "data/maps/BattleTower_Lobby/text.inc"

@@ -2092,6 +2092,9 @@ AI_CV_Protect:: @ 81DB2E2
 	if_status2 AI_TARGET, STATUS2_INFATUATION, AI_CV_Protect_ScoreUp2
 	if_status3 AI_TARGET, STATUS3_LEECHSEED, AI_CV_Protect_ScoreUp2
 	if_status3 AI_TARGET, STATUS3_YAWN, AI_CV_Protect_ScoreUp2
+	get_last_used_move AI_TARGET
+	get_move_effect_from_result
+	if_equal EFFECT_LOCK_ON, AI_CV_Protect_ScoreUp2
 	goto AI_CV_Protect2
 
 AI_CV_Protect_ScoreUp2:: @ 81DB37E

@@ -7023,28 +7023,28 @@ const struct Trainer gTrainers[] = {
         .party = {.NoItemDefaultMoves = sParty_PokemaniacHector}
     },
     [TRAINER_PSYCHIC_DARIO] = {
-        .partyFlags = F_TRAINER_PARTY_CUSTOM_MOVESET,
-        .trainerClass = TRAINER_CLASS_PSYCHIC,
+        .partyFlags = F_TRAINER_PARTY_FULL_CONTROL,
+        .trainerClass = TRAINER_CLASS_COOLTRAINER,
         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_INTENSE,
-        .trainerPic = TRAINER_PIC_PSYCHIC_M,
+        .trainerPic = TRAINER_PIC_COOLTRAINER_M,
         .trainerName = _("Dario"),
         .items = {}, //{},
         .doubleBattle = FALSE,
-        .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE,
+        .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_TRY_TO_FAINT | AI_SCRIPT_CHECK_VIABILITY,
         .partySize = NELEMS(sParty_PsychicDario),
-        .party = {.NoItemCustomMoves = sParty_PsychicDario}
+        .party = {.FullControl = sParty_PsychicDario}
     },
     [TRAINER_PSYCHIC_RODETTE] = {
-        .partyFlags = F_TRAINER_PARTY_CUSTOM_MOVESET,
-        .trainerClass = TRAINER_CLASS_PSYCHIC,
+        .partyFlags = F_TRAINER_PARTY_FULL_CONTROL,
+        .trainerClass = TRAINER_CLASS_COOLTRAINER,
         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_INTENSE | F_TRAINER_FEMALE,
-        .trainerPic = TRAINER_PIC_PSYCHIC_F,
+        .trainerPic = TRAINER_PIC_COOLTRAINER_F,
         .trainerName = _("Rodette"),
         .items = {}, //{},
         .doubleBattle = FALSE,
-        .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE,
+        .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_TRY_TO_FAINT | AI_SCRIPT_CHECK_VIABILITY,
         .partySize = NELEMS(sParty_PsychicRodette),
-        .party = {.NoItemCustomMoves = sParty_PsychicRodette}
+        .party = {.FullControl = sParty_PsychicRodette}
     },
     [TRAINER_AROMA_LADY_MIAH] = {
         .partyFlags = 0,

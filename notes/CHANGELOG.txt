@@ -1,27 +1,83 @@
 v1.3.2
+New Ability: Ambush; gives +50% Speed during the first turn the Puppet is on the field.
+ - For Chen, TYamame, and TShou.
+Reverted Lock-On to its Pokemon effect; it guarantees next turn's attack hits the target.
+New Move: Recalibrate; gives +1 SAtk/+1 Accuracy.
+ - Replaces Lock-On for Shou, ANarumi, and Nareko.
+ - Rika and Chiyuri get both Lock-On and Recalibrate.
+
 Wild Nareko and Yukari puppets now carry the correct berry.
 Sand Castle, Snow Cloak, and Winter Gift protect against their respective weathers.
 Attacks now always hit a target that is using Endure.
 Wall Master should no longer dock excess PP.
 Gourmand should work as intended with Figy-type berries.
-New sprites for both Okina forms, thank Scrimmy and BluShell.
+Trading is no longer restricted by national dex, probably (I can't confirm this).
+Manic Echo and Dour Echo now activate properly on Perish Song, Heal Bell, and Roar.
+Signposted Trainer Tower. It's not open yet, but it will be in a future update.
 
-HLilyWhite is now Heart/Nature type (rather than pure Heart).
-HLilyWhite gets Blossoming by level; all Lily White forms get Charge Beam by tutor.
+New sprites for both Okina forms, thank Scrimmy and BluShell.
+Gave the Cut section of Route 12 has a more appropriate encounter table.
+Swapped out Agatha's Lyrica to for something more in-character that no trainer was using.
+(Rematch Agatha already dropped her and is unchanged.)
+Psychics Dario and Rodette have been promoted to Ace Trainers and given proper teams.
+Added proper move descriptions to the documentation.
+OHKO moves no longer automatically fail vs higher level targets.
+(But, accuracy is lowered by the level difference.)
+Debt Spiral is now properly flagged as a punch move.
+When puppets find type resist berries, they now have a 1/3 chance to be for a random type.
+Puppets find resist berries somewhat more often.
+
+Dramatically overhauled chibi and regular Flandre:
+ - Chibi base stats changed: 25/100/55/105/60/65 -> 50/85/60/65/95/55
+ - Regular base stats changed: 50/120/75/140/85/90 -> 90/100/85/75/125/85
+ - Abilities changed: Hustle -> Mold Breaker; chibi's HA Hustle -> Pressure
+ - Flandre's type changed: Dark/Fire -> Dark/Wind
+ - Cut Lv13 Scary Face on Chibi for Whirlwind
+ - Cut Killing Bite, Hone Claws, Nasty Plot, Overheat on regular Flandre
+ - Added Soar, Heart Break, Superpower, Fissure to regular Flandre's level-ups
+ - Added Lock-On, Roost to regular Flandre's relearner movepool
+ - Speed Flandre and Attack Flandre unchanged (besides Scary Face/Whirlwind switching places)
+ - Fixed her backsprite elevation (has anyone ever used her in this game?)
+Adjusted Helper Lily White:
+ - Base stats changed: +10 Speed, -10 Attack (to 80/45/85/85/95/110).
+ - Type changed to Heart/Nature type (rather than pure Heart).
+ - HLilyWhite gets Blossoming by level; all Lily White forms get Charge Beam by tutor.
 LilyBlack gets Air Slash by relearner, replacing Feint; all Lily Blacks now get Feint by tutor.
 ALilyBlack gets Wild Hunt by level instead of U-Turn, no longer gets Wild Hunt by tutor.
 Daiyousei forms can now relearn Weather Ball (instead of redundant Mirror Coat).
 DRemilia can now learn Substitute by TM.
+Lunasa family no longer learns Energy Light.
+Lyrica family no longer learns Energy Light.
 SWriggle can now learn Thunderbolt by TM.
+Mystia family no longer learns Focus Blast.
+AKeine now learns Frustration by level instead of Heart Break.
 ANitori now gets Volt Tackle instead of Superpower (oops).
 CKanako now gets Shock Wave at 13 instead of Sand Tomb (which is a tutor move).
 (The trade CKanako still comes with Sand Tomb.)
 Kanako (regular only) now learns Calm Mind by TM.
 All Suwako forms now get Curse by tutor.
-Momoyo now gets Earth Power by tutor.
-Trading is no longer unrestricted by national dex, probably (I can't confirm this).
+Kisume family no longer learns Mega Kick.
+Byakuren family no longer learns Shadow Force.
+Tojiko family no longer learns Heat Claw.
+Eternity family now learns Energy Light by TM.
+Yachie family no longer learns Signal Beam.
+Yuuma now gets Wild Hunt by tutor (as she was meant to all this time).
+Takane no longer gets Ingrain by tutor (because it was redundant).
+Momoyo no longer learns Psycho Cut.
+Momoyo now gets Earth Power and Superpower by tutor.
+Zanmu no longer learns Solarbeam.
+Kirisame now learns Solarbeam by TM.
+Sariel family no longer learns Fire Punch, Ice Punch, or Thunder Punch.
+Meira now gets Swords Dance by level.
+Ruukoto now gets Double Team by tutor.
+COrange gets +25 Atk, -25 SAtk (to 200/45/45/5/5/30).
+Orange gets +45 Atk, -45 SAtk (to 245/75/80/10/10/60).
+Orange family's Ability Pure Power changed to Cheerful (and switched slots with Immunity).
+Yumeko family no longer learns Thunder Wave.
+
 AI should be less spammy with Detect.
 AI no longer hallucinates clear weather as arbitrary values.
+AI now handles Night Shade, Flail, and similar moves more intelligently.
 
 v1.3.1
 

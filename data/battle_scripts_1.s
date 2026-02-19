@@ -3158,6 +3158,7 @@ BattleScript_PayDayMoneyAndPickUpItems::
 
 BattleScript_LocalBattleLost::
 	jumpifbattletype BATTLE_TYPE_TRAINER_TOWER, BattleScript_BattleTowerLost
+	jumpifbattletype BATTLE_TYPE_BATTLE_TOWER, BattleScript_BattleTowerLost
 	jumpifbattletype BATTLE_TYPE_EREADER_TRAINER, BattleScript_EReaderOrSecretBaseTrainerEnd
 	jumpifhalfword CMP_EQUAL, gTrainerBattleOpponent_A, TRAINER_SECRET_BASE, BattleScript_EReaderOrSecretBaseTrainerEnd
 	jumpifbyte CMP_NOT_EQUAL, cMULTISTRING_CHOOSER, 0, BattleScript_RivalBattleLost
@@ -3227,7 +3228,7 @@ BattleScript_BattleTowerTrainerBattleWon::
 	printstring STRINGID_PLAYERDEFEATEDTRAINER1
 	trainerslidein BS_ATTACKER
 	waitstate
-	jumpifnotbattletype BATTLE_TYPE_TRAINER_TOWER, BattleScript_BattleTowerEtcTrainerBattleWonSkipText
+	jumpifnotbattletype BATTLE_TYPE_BATTLE_TOWER, BattleScript_BattleTowerEtcTrainerBattleWonSkipText
 	printstring STRINGID_TRAINER1LOSETEXT
 	jumpifnotbattletype BATTLE_TYPE_DOUBLE, BattleScript_BattleTowerEtcTrainerBattleWonSkipText
 	printstring STRINGID_TRAINER2CLASS
@@ -4724,6 +4725,7 @@ BattleScript_FlushMessageBox::
 
 BattleScript_EffectGrowth:: @ Growth and Work Up
 	jumpifmove MOVE_WORK_UP, BattleScript_Growth1
+	jumpifmove MOVE_RECALIBRATE, BattleScript_Recalibrate
 	jumpifabilitypresent ABILITY_CLOUD_NINE, BattleScript_Growth1
 	jumpifabilitypresent ABILITY_HISOUTEN, BattleScript_Growth1
 	jumpifhalfword CMP_COMMON_BITS, gBattleWeather, 96, BattleScript_Growth2
@@ -4784,6 +4786,35 @@ BattleScript_Growth2TrySpAtk:
 	waitmessage 64
 
 BattleScript_Growth2End:
+	goto BattleScript_MoveEnd
+
+BattleScript_Recalibrate::
+	attackcanceler
+	attackstring
+	ppreduce
+	special 0x2b
+	jumpifstat BS_ATTACKER, CMP_LESS_THAN, STAT_SPATK, 12, BattleScript_RecalibrateDoMoveAnim
+	jumpifstat BS_ATTACKER, CMP_EQUAL, STAT_ACC, 12, BattleScript_CantRaiseMultipleStats
+
+BattleScript_RecalibrateDoMoveAnim:
+	attackanimation
+	waitanimation
+	setbyte sSTAT_ANIM_PLAYED, 0
+	playstatchangeanimation BS_ATTACKER, 80, 0
+	setstatchanger STAT_SPATK, 1, FALSE
+	statbuffchange MOVE_EFFECT_AFFECTS_USER | 0x1, BattleScript_RecalibrateTryAccuracy
+	jumpifbyte CMP_EQUAL, cMULTISTRING_CHOOSER, 2, BattleScript_RecalibrateTryAccuracy
+	printfromtable gStatUpStringIds
+	waitmessage 64
+
+BattleScript_RecalibrateTryAccuracy:
+	setstatchanger STAT_ACC, 1, FALSE
+	statbuffchange MOVE_EFFECT_AFFECTS_USER | 0x1, BattleScript_RecalibrateEnd
+	jumpifbyte CMP_EQUAL, cMULTISTRING_CHOOSER, 2, BattleScript_RecalibrateEnd
+	printfromtable gStatUpStringIds
+	waitmessage 64
+
+BattleScript_RecalibrateEnd:
 	goto BattleScript_MoveEnd
 
 BattleScript_EffectTopsyTurvy::

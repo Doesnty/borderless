@@ -541,3 +541,11 @@ gMetatiles_HallOfFame:: @ 82D415C
 	.align 1
 gMetatileAttributes_HallOfFame:: @ 82D48BC
 	.incbin "data/tilesets/secondary/hall_of_fame/metatile_attributes.bin"
+
+	.align 1
+gMetatiles_BattleTower:: @ 82D415C
+	.incbin "data/tilesets/secondary/battle_tower/metatiles.bin"
+
+	.align 1
+gMetatileAttributes_BattleTower:: @ 82D48BC
+	.incbin "data/tilesets/secondary/battle_tower/metatile_attributes.bin"

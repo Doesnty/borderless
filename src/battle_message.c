@@ -2093,6 +2093,7 @@ u32 BattleStringExpandPlaceholders(const u8 *src, u8 *dst)
                 else if (gBattleTypeFlags & BATTLE_TYPE_BATTLE_TOWER)
                 {
                     GetBattleTowerTrainerName(text);
+					toCpy = text;
                 }
                 else if (gBattleTypeFlags & BATTLE_TYPE_TRAINER_TOWER)
                 {
@@ -2138,6 +2139,11 @@ u32 BattleStringExpandPlaceholders(const u8 *src, u8 *dst)
                     GetTrainerTowerOpponentLoseText(gStringVar4, 0);
                     toCpy = gStringVar4;
                 }
+				else if (gBattleTypeFlags & BATTLE_TYPE_BATTLE_TOWER)
+				{
+					GetBattleTowerOpponentLoseText(gStringVar4);
+					toCpy = gStringVar4;
+				}
                 else
                 {
                     toCpy = GetTrainerALoseText();
@@ -2149,6 +2155,11 @@ u32 BattleStringExpandPlaceholders(const u8 *src, u8 *dst)
                     GetTrainerTowerOpponentWinText(gStringVar4, 0);
                     toCpy = gStringVar4;
                 }
+				else if (gBattleTypeFlags & BATTLE_TYPE_BATTLE_TOWER)
+				{
+					GetBattleTowerOpponentWinText(gStringVar4);
+					toCpy = gStringVar4;
+				}
                 else
                 {
                     toCpy = GetTrainerWonSpeech();

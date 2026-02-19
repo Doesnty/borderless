@@ -4361,7 +4361,7 @@ static const struct TrainerMonFullControl sParty_BossGiovanni2[] = {
 		.gender = MON_MALE,
 		.ability = 0, // Intimidate
 		.ball = ITEM_POKE_BALL,
-		.moves = {MOVE_EARTHQUAKE, MOVE_CRUSH_CLAW, MOVE_HEART_BREAK, MOVE_STEEL_FIST},
+		.moves = {MOVE_EARTHQUAKE, MOVE_CRUSH_CLAW, MOVE_FRUSTRATION, MOVE_STEEL_FIST},
     },
 };
 
@@ -4386,7 +4386,7 @@ static const struct TrainerMonFullControl sParty_LeaderGiovanni[] = {
 		.evs = {30, 30, 30, 0, 0, 30},
 		.nature = NATURE_ADAMANT,
 		.gender = MON_MALE,
-		.ability = 0, // Intimidate
+		.ability = 0, // Unnerve
 		.ball = ITEM_POKE_BALL,
 		.moves = {MOVE_BUTCHERY, MOVE_CLOSE_COMBAT, MOVE_SLASH, MOVE_EARTHQUAKE},
     },
@@ -5143,9 +5143,9 @@ static const struct TrainerMonFullControl sParty_TeamRocketGrunt41[] = {
 		.evs = {0, 0, 0, 0, 0, 0},
 		.nature = NATURE_JOLLY,
 		.gender = MON_MALE,
-		.ability = 1, // Pride
+		.ability = 0, // Mold Breaker
 		.ball = ITEM_POKE_BALL,
-		.moves = {MOVE_THRASH, MOVE_KILLING_BITE, MOVE_HEAT_WAVE, MOVE_DARK_PULSE},
+		.moves = {MOVE_SOAR, MOVE_HEART_BREAK, MOVE_ROOST, MOVE_WILL_O_WISP},
     },
     {
         .iv = 0,
@@ -5574,13 +5574,13 @@ static const struct TrainerMonFullControl sParty_CooltrainerYuji[] = {
         .iv = 15,
         .lvl = 58,
         .species = SPECIES_FLANDRE,
-        .heldItem = ITEM_MISTRESS,
+        .heldItem = ITEM_SITRUS_BERRY,
         .evs = {0, 30, 0, 30, 0, 0},
         .nature = NATURE_NAIVE,
         .gender = MON_MALE,
-        .ability = 0, // Hustle
+        .ability = 0, // Pressure
         .ball = ITEM_POKE_BALL,
-        .moves = {MOVE_OVERHEAT, MOVE_THRASH, MOVE_HONE_CLAWS, MOVE_SUPERPOWER},
+        .moves = {MOVE_HEART_BREAK, MOVE_ROOST, MOVE_LOCK_ON, MOVE_LURE_OF_DEATH},
     },
     {
         .iv = 15,
@@ -6192,7 +6192,7 @@ static const struct TrainerMonFullControl sParty_EliteFourAgatha[] = {
         .gender = MON_MALE,
         .ability = 0, // Insomnia
         .ball = ITEM_POKE_BALL,
-        .moves = {MOVE_PETAL_STORM, MOVE_SHADOW_HIT, MOVE_BRICK_BREAK, MOVE_SHADOW_BALL},
+        .moves = {MOVE_PETAL_STORM, MOVE_SHADOW_HIT, MOVE_BRICK_BREAK, MOVE_BLADE_FLASH},
     },
     {
         .iv = 20,
@@ -6204,7 +6204,7 @@ static const struct TrainerMonFullControl sParty_EliteFourAgatha[] = {
         .gender = MON_MALE,
         .ability = 0, // Charismatic
         .ball = ITEM_POKE_BALL,
-        .moves = {MOVE_THRASH, MOVE_SOAR, MOVE_QUICK_ATTACK, MOVE_SHADOW_BALL},
+        .moves = {MOVE_THRASH, MOVE_SOAR, MOVE_QUICK_ATTACK, MOVE_SUPERPOWER},
     },
     {
         .iv = 20,
@@ -6221,14 +6221,14 @@ static const struct TrainerMonFullControl sParty_EliteFourAgatha[] = {
     {
         .iv = 20,
         .lvl = 67,
-        .species = SPECIES_LYRICA,
-        .heldItem = ITEM_KIMONO,
-        .evs = {0, 0, 0, 60, 60, 0},
-        .nature = NATURE_MODEST,
+        .species = SPECIES_DPARSEE,
+        .heldItem = ITEM_LEFTOVERS,
+        .evs = {60, 0, 30, 0, 0, 30},
+        .nature = NATURE_BOLD,
         .gender = MON_MALE,
-        .ability = 2, // Harmonize
+        .ability = 2, // Last Grudge
         .ball = ITEM_POKE_BALL,
-        .moves = {MOVE_SHADOW_BALL, MOVE_HYPER_VOICE, MOVE_FOUL_PLAY, MOVE_THUNDERBOLT},
+        .moves = {MOVE_TAKE_OVER, MOVE_FOUL_PLAY, MOVE_NIGHT_SHADE, MOVE_CONFUSE_RAY},
     },
     {
         .iv = 31,
@@ -8701,7 +8701,7 @@ static const struct TrainerMonNoItemCustomMoves sParty_PainterDaisy[] = {
         .iv = 50,
         .lvl = 72,
         .species = SPECIES_SHIZUHA,
-        .moves = {MOVE_GIGA_DRAIN, MOVE_EXTRASENSORY, MOVE_SLEEP_POWDER, MOVE_SYNTHESIS},
+        .moves = {MOVE_FALL_KICK, MOVE_BLAZE_KICK, MOVE_SLEEP_POWDER, MOVE_HI_JUMP_KICK},
     },
 };
 
@@ -9487,21 +9487,129 @@ static const struct TrainerMonNoItemDefaultMoves sParty_PokemaniacHector[] = {
     },
 };
 
-static const struct TrainerMonNoItemCustomMoves sParty_PsychicDario[] = {
+static const struct TrainerMonFullControl sParty_PsychicDario[] = {
     {
-        .iv = 100,
-        .lvl = 76,
-        .species = SPECIES_SATORI,
-        .moves = {MOVE_SIGNAL_BEAM, MOVE_MANA_BURST, MOVE_SHADOW_BALL, MOVE_CALM_MIND},
+        .iv = 20,
+        .lvl = 75,
+        .species = SPECIES_KONNGARA,
+        .heldItem = ITEM_CHOPLE_BERRY,
+        .evs = {60, 0, 30, 0, 0, 30},
+        .nature = NATURE_CAREFUL,
+        .gender = MON_MALE,
+        .ability = 0, // Pressure
+        .ball = ITEM_POKE_BALL,
+        .moves = {MOVE_DRAWN_LINE, MOVE_STRENGTH, MOVE_RECOVER, MOVE_TOXIC},
+    },
+    {
+        .iv = 20,
+        .lvl = 75,
+        .species = SPECIES_SARA,
+        .heldItem = ITEM_QUICK_CLAW,
+        .evs = {0, 60, 60, 0, 0, 0},
+        .nature = NATURE_ADAMANT,
+        .gender = MON_MALE,
+        .ability = 1, // Guts
+        .ball = ITEM_POKE_BALL,
+        .moves = {MOVE_CIRCLE_THROW, MOVE_MACH_PUNCH, MOVE_BULK_UP, MOVE_STEEL_FIST},
+    },
+    {
+        .iv = 20,
+        .lvl = 75,
+        .species = SPECIES_HLILYWHITE,
+        .heldItem = ITEM_LUM_BERRY,
+        .evs = {60, 0, 0, 30, 30, 0},
+        .nature = NATURE_TIMID,
+        .gender = MON_MALE,
+        .ability = 0, // Cheerful
+        .ball = ITEM_POKE_BALL,
+        .moves = {MOVE_MANA_CHARGE, MOVE_BLOSSOMING, MOVE_TRI_ATTACK, MOVE_FLAMETHROWER},
+    },
+    {
+        .iv = 20,
+        .lvl = 75,
+        .species = SPECIES_DLETTY,
+        .heldItem = ITEM_PASSHO_BERRY,
+        .evs = {60, 0, 30, 0, 0, 30},
+        .nature = NATURE_SASSY,
+        .gender = MON_MALE,
+        .ability = 1, // Wall of Ice
+        .ball = ITEM_POKE_BALL,
+        .moves = {MOVE_EARTHQUAKE, MOVE_FREEZE_DRY, MOVE_REST, MOVE_SLEEP_TALK},
+    },
+    {
+        .iv = 20,
+        .lvl = 75,
+        .species = SPECIES_NINA,
+        .heldItem = ITEM_LEFTOVERS,
+        .evs = {60, 0, 30, 0, 0, 30},
+        .nature = NATURE_BOLD,
+        .gender = MON_MALE,
+        .ability = 1, // Water Veil
+        .ball = ITEM_POKE_BALL,
+        .moves = {MOVE_WHIRLPOOL, MOVE_SIGNAL_BEAM, MOVE_RECOVER, MOVE_DOUBLE_TEAM},
     },
 };
 
-static const struct TrainerMonNoItemCustomMoves sParty_PsychicRodette[] = {
+static const struct TrainerMonFullControl sParty_PsychicRodette[] = {
     {
-        .iv = 100,
-        .lvl = 76,
-        .species = SPECIES_DOREMY,
-        .moves = {MOVE_DARK_VOID, MOVE_SIGNAL_BEAM, MOVE_MANA_BURST, MOVE_REST},
+        .iv = 20,
+        .lvl = 75,
+        .species = SPECIES_LAYLA,
+        .heldItem = ITEM_KIMONO,
+        .evs = {30, 0, 0, 30, 60, 0},
+        .nature = NATURE_MODEST,
+        .gender = MON_MALE,
+        .ability = 2, // Harmonize
+        .ball = ITEM_POKE_BALL,
+        .moves = {MOVE_PERFORMANCE, MOVE_HYPER_VOICE, MOVE_MANA_BURST, MOVE_THUNDERBOLT},
+    },
+    {
+        .iv = 20,
+        .lvl = 75,
+        .species = SPECIES_LUNASA,
+        .heldItem = ITEM_KIMONO,
+        .evs = {60, 0, 30, 0, 0, 30},
+        .nature = NATURE_MODEST,
+        .gender = MON_MALE,
+        .ability = 2, // Dour Echo
+        .ball = ITEM_POKE_BALL,
+        .moves = {MOVE_PERFORMANCE, MOVE_HYPER_VOICE, MOVE_POISON_BOMB, MOVE_WILL_O_WISP},
+    },
+    {
+        .iv = 20,
+        .lvl = 75,
+        .species = SPECIES_MERLIN,
+        .heldItem = ITEM_KIMONO,
+        .evs = {0, 0, 0, 60, 60, 0},
+        .nature = NATURE_MODEST,
+        .gender = MON_MALE,
+        .ability = 2, // Manic Echo
+        .ball = ITEM_POKE_BALL,
+        .moves = {MOVE_PERFORMANCE, MOVE_HYPER_VOICE, MOVE_SIGNAL_BEAM, MOVE_FLAMETHROWER},
+    },
+    {
+        .iv = 20,
+        .lvl = 75,
+        .species = SPECIES_RAIKO,
+        .heldItem = ITEM_NINJA_SUIT,
+        .evs = {30, 30, 0, 0, 60, 0},
+        .nature = NATURE_QUIET,
+        .gender = MON_MALE,
+        .ability = 1, // Levitate
+        .ball = ITEM_POKE_BALL,
+        .moves = {MOVE_PERFORMANCE, MOVE_HYPER_VOICE, MOVE_THUNDERBOLT, MOVE_EXPLOSION},
+    },
+    {
+        .iv = 20,
+        .lvl = 75,
+        .species = SPECIES_LYRICA,
+        .heldItem = ITEM_KIMONO,
+        .evs = {0, 0, 0, 60, 60, 0},
+        .nature = NATURE_TIMID,
+        .gender = MON_MALE,
+        .ability = 2, // Harmonize
+        .ball = ITEM_POKE_BALL,
+        .moves = {MOVE_PERFORMANCE, MOVE_HYPER_VOICE, MOVE_SONICBOOM, MOVE_THUNDERBOLT},
     },
 };
 

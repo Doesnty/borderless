@@ -1566,3 +1566,5 @@ const u8 gText_ZunRandom[] = _("I don't know!");
 const u8 gText_ImakuniRockTunnelDefeat[] = _("Oh, wow!\nYou're already so strong!\pI saw you using Repel, so\nI assumed you'd want to fight Trainers.\pAfter all, if you don't\nfight anyone, your level won't go up!\nSo, I snuck on over to give\nyou some experience.\pNow, I'll disappear before the\nscreen unfades back. Watch!$");
 const u8 gText_Renko[] = _("Renko");
 const u8 gText_Maribel[] = _("Maribel");
+const u8 gText_Standard[] = _("Standard");
+const u8 gText_Factory[] = _("Factory");

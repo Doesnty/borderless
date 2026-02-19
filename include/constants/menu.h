@@ -100,6 +100,8 @@
 #define MULTICHOICE_CINNABAR_QUIZ1                             93
 #define MULTICHOICE_CINNABAR_QUIZ2                             94
 #define MULTICHOICE_MOVE_TUTOR                                 95
+#define MULTICHOICE_BATTLE_TOWER_ROOM_CHOICE                   96
+
 
 #define LISTMENU_BADGES                    0
 #define LISTMENU_SILPHCO_FLOORS            1

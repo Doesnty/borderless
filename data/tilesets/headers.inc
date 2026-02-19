@@ -747,3 +747,14 @@ gTileset_HallOfFame::
 	.4byte 0x0
 	.4byte gMetatileAttributes_HallOfFame
 
+	.align 2
+gTileset_BattleTower::
+	.byte TRUE @ is compressed
+	.byte TRUE @ is secondary
+	.2byte 0 @ padding
+	.4byte gTilesetTiles_BattleTower
+	.4byte gTilesetPalettes_BattleTower
+	.4byte gMetatiles_BattleTower
+	.4byte 0x0
+	.4byte gMetatileAttributes_BattleTower
+

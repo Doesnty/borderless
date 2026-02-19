@@ -1197,33 +1197,19 @@ static void CreateMonWithIVsOTID(struct Pokemon *mon, u16 species, u8 level, u8 
     CalculateMonStats(mon);
 }
 
-void CreateMonWithEVSpread(struct Pokemon *mon, u16 species, u8 level, u8 fixedIV, u8 evSpread)
+void CreateMonWithEVSpread(struct Pokemon *mon, u16 species, u8 level, u8 fixedIV, u8 *evSpread)
 {
     s32 i;
     s32 statCount = 0;
     u16 evAmount;
-    u8 evsBits;
 
     CreateMon(mon, species, level, fixedIV, 0, 0, 0, 0);
 
-    evsBits = evSpread;
-
     for (i = 0; i < NUM_STATS; i++)
     {
-        if (evsBits & 1)
-            statCount++;
-        evsBits >>= 1;
-    }
-
-    evAmount = MAX_TOTAL_EVS / statCount;
-
-    evsBits = 1;
-
-    for (i = 0; i < NUM_STATS; i++)
-    {
-        if (evSpread & evsBits)
-            SetMonData(mon, MON_DATA_HP_EV + i, &evAmount);
-        evsBits <<= 1;
+		evAmount = evSpread[i];
+        if (evAmount)
+			SetMonData(mon, MON_DATA_HP_EV + i, &evAmount);
     }
 
     CalculateMonStats(mon);

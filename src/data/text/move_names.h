@@ -878,5 +878,6 @@ const u8 gMoveNamesAbridged[][15] = {
 	_("Aura Break"),
 	_("Vacuum Wave"),
 	_("Fall Kick"),
+	_("Recalibrate"),
 };
 

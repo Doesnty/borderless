@@ -242,7 +242,11 @@
     "OneIsland_KindleRoad_EmberSpa",
     "BirthIsland_Harbor",
     "NavelRock_Harbor",
-    "CeruleanCave_B2FReal"
+    "CeruleanCave_B2FReal",
+    "BattleTower_BattleRoom",
+    "BattleTower_Corridor",
+    "BattleTower_Elevator",
+    "BattleTower_Lobby"
   ],
   "gMapGroup_TownsAndRoutes": [
     "PalletTown",

@@ -1602,6 +1602,8 @@ void AI_CalcDmg(u8 attacker, u8 defender)
 		else
 			gBattleMoveDamage = gBattleMoveDamage * 2;
 	}
+	if (gBattleMoves[gCurrentMove].effect == EFFECT_LEVEL_DAMAGE)
+		gBattleMoveDamage = gBattleMons[attacker].level;
 	if (gBattleMons[attacker].ability == ABILITY_TWIN_SPARK && 
 		gCurrentMove != MOVE_VOLT_SWITCH && gCurrentMove != MOVE_U_TURN)
 		gBattleMoveDamage = gBattleMoveDamage * 2;
@@ -7499,7 +7501,7 @@ static void atk93_tryKO(void)
     }
     else
     {
-        u16 chance;
+        s32 chance;
 		
 		noguard = gBattleMons[gBattlerAttacker].ability == ABILITY_NO_GUARD || gBattleMons[gBattlerTarget].ability == ABILITY_NO_GUARD;
 
@@ -7508,13 +7510,12 @@ static void atk93_tryKO(void)
             chance = gBattleMoves[gCurrentMove].accuracy + (gBattleMons[gBattlerAttacker].level - gBattleMons[gBattlerTarget].level);
 			if (noguard)
 				chance = 100;
-            if (Random() % 100 + 1 < chance && gBattleMons[gBattlerAttacker].level >= gBattleMons[gBattlerTarget].level)
+            if (Random() % 100 + 1 < chance)
                 chance = TRUE;
             else
                 chance = FALSE;
         }
-        else if (gDisableStructs[gBattlerTarget].battlerWithSureHit == gBattlerAttacker
-                 && gBattleMons[gBattlerAttacker].level >= gBattleMons[gBattlerTarget].level)
+        else if (gDisableStructs[gBattlerTarget].battlerWithSureHit == gBattlerAttacker)
         {
             chance = TRUE;
         }
@@ -7523,7 +7524,7 @@ static void atk93_tryKO(void)
             chance = gBattleMoves[gCurrentMove].accuracy + (gBattleMons[gBattlerAttacker].level - gBattleMons[gBattlerTarget].level);
 			if (noguard)
 				chance = 100;
-            if (Random() % 100 + 1 < chance && gBattleMons[gBattlerAttacker].level >= gBattleMons[gBattlerTarget].level)
+            if (Random() % 100 + 1 < chance)
                 chance = TRUE;
             else
                 chance = FALSE;
@@ -7551,10 +7552,10 @@ static void atk93_tryKO(void)
         else
         {
             gMoveResultFlags |= MOVE_RESULT_MISSED;
-            if (gBattleMons[gBattlerAttacker].level >= gBattleMons[gBattlerTarget].level)
-                gBattleCommunication[MULTISTRING_CHOOSER] = 0;
-            else
-                gBattleCommunication[MULTISTRING_CHOOSER] = 1;
+			if ((gBattleMoves[gCurrentMove].accuracy + gBattleMons[gBattlerAttacker].level) <= gBattleMons[gBattlerTarget].level)
+				gBattleCommunication[MULTISTRING_CHOOSER] = 1;
+			else
+				gBattleCommunication[MULTISTRING_CHOOSER] = 0;
             gBattlescriptCurrInstr = T1_READ_PTR(gBattlescriptCurrInstr + 1);
         }
     }
@@ -9519,6 +9520,8 @@ static void atkE5_pickup(void)
 				if (newItem == ITEM_OCCA_BERRY)
 				{
 					u8 type = (Random() % 2) ? gBaseStats[species].type1 : gBaseStats[species].type2;
+					if (!(Random() % 3))
+						type = Random() % 18;
 					switch(type)
 					{
 						case TYPE_NORMAL: newItem = ITEM_CHILAN_BERRY; break;
@@ -11025,6 +11028,7 @@ static void sp22_hold_hands()
 		gBattleMons[gBattlerTarget].species == SPECIES_MAGAN ||
 		gBattleMons[gBattlerTarget].species == SPECIES_NAMAZU ||
 		gBattleMons[gBattlerTarget].species == SPECIES_TORI ||
+		gBattleMons[gBattlerTarget].species == SPECIES_MAGIC_STONES ||
 		gBattleMons[gBattlerTarget].species == SPECIES_SEKI_HEAD)
 		gBattlescriptCurrInstr = BattleScript_ButItFailed;
 }

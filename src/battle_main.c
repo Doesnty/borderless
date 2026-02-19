@@ -2408,7 +2408,7 @@ void SwitchInClearSetData(void)
     *((u8 *)(&gBattleStruct->choicedMove[gActiveBattler]) + 0) = MOVE_NONE;
     *((u8 *)(&gBattleStruct->choicedMove[gActiveBattler]) + 1) = MOVE_NONE;
     gBattleResources->flags->flags[gActiveBattler] = 0;
-    gCurrentMove = MOVE_NONE;
+    //gCurrentMove = MOVE_NONE;
 }
 
 void FaintClearSetData(void)
@@ -3397,6 +3397,11 @@ u32 GetBattlerSpeed(u8 battler)
         else
             speed = (speed * 15) / 10;
     }
+	
+	if (gBattleMons[battler].ability == ABILITY_AMBUSH && gDisableStructs[battler].isFirstTurn)
+	{
+		speed = (speed * 15) / 10;
+	}
     
     if (holdEffect == HOLD_EFFECT_HANIWA_STEED && (species == SPECIES_CMAYUMI || species == SPECIES_MAYUMI))
         speed = (speed * 15) / 10;
@@ -4160,6 +4165,7 @@ static void HandleAction_UseMove(void)
 static void HandleAction_Switch(void)
 {
     gBattlerAttacker = gBattlerByTurnOrder[gCurrentTurnActionNumber];
+	gCurrentMove = 0;
     gBattle_BG0_X = 0;
     gBattle_BG0_Y = 0;
     gActionSelectionCursor[gBattlerAttacker] = 0;

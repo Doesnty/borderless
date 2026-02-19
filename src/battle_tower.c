@@ -49,10 +49,7 @@ const u8 unref_83FFAAC[] = {
 
 const u8 unref_83FFABF[] = _("100");
 
-static const struct BattleTowerTrainer sBattleTowerTrainers[] =
-{
-
-};
+#include "data/battle_tower/trainers.h"
 
 static const u16 sBattleTowerHeldItems[] = {
     ITEM_NONE,
@@ -125,25 +122,103 @@ static const u16 sBattleTowerHeldItems[] = {
 
 static const u8 sMaleTrainerClasses[] =
 {
-
+	FACILITY_CLASS_YOUNGSTER,
+	FACILITY_CLASS_BUG_CATCHER,
+	FACILITY_CLASS_SAILOR,
+	FACILITY_CLASS_CAMPER,
+	FACILITY_CLASS_POKEMANIAC,
+	FACILITY_CLASS_SUPER_NERD,
+	FACILITY_CLASS_HIKER,
+	FACILITY_CLASS_BIKER,
+	FACILITY_CLASS_BURGLAR,
+	FACILITY_CLASS_ENGINEER,
+	FACILITY_CLASS_FISHERMAN,
+	FACILITY_CLASS_SWIMMER_M,
+	FACILITY_CLASS_CUE_BALL,
+	FACILITY_CLASS_GAMER,
+	FACILITY_CLASS_PSYCHIC_M,
+	FACILITY_CLASS_ROCKER,
+	FACILITY_CLASS_JUGGLER,
+	FACILITY_CLASS_TAMER,
+	FACILITY_CLASS_BIRD_KEEPER,
+	FACILITY_CLASS_BLACK_BELT,
+	FACILITY_CLASS_SCIENTIST,
+	FACILITY_CLASS_COOLTRAINER_M,
+	FACILITY_CLASS_GENTLEMAN,
+	FACILITY_CLASS_PKMN_RANGER_M,
+	FACILITY_CLASS_RUIN_MANIAC,
+	FACILITY_CLASS_BUG_MANIAC,
 };
 
 static const u8 sFemaleTrainerClasses[] =
 {
-
+	FACILITY_CLASS_LASS,
+	FACILITY_CLASS_PICNICKER,
+	FACILITY_CLASS_BEAUTY,
+	FACILITY_CLASS_SWIMMER_F,
+	FACILITY_CLASS_COOLTRAINER_F,
+	FACILITY_CLASS_CHANNELER,
+	FACILITY_CLASS_PSYCHIC_F,
+	FACILITY_CLASS_TUBER,
+	FACILITY_CLASS_PKMN_BREEDER,
+	FACILITY_CLASS_PKMN_RANGER_F,
+	FACILITY_CLASS_AROMA_LADY,
+	FACILITY_CLASS_LADY,
+	FACILITY_CLASS_PAINTER,
 };
 
 static const u8 sMaleTrainerGfx[] =
 {
-
+	OBJ_EVENT_GFX_YOUNGSTER,
+	OBJ_EVENT_GFX_BUG_CATCHER,
+	OBJ_EVENT_GFX_SAILOR,
+	OBJ_EVENT_GFX_CAMPER,
+	OBJ_EVENT_GFX_SUPER_NERD,
+	OBJ_EVENT_GFX_SUPER_NERD,
+	OBJ_EVENT_GFX_HIKER,
+	OBJ_EVENT_GFX_BIKER,
+	OBJ_EVENT_GFX_SUPER_NERD,
+	OBJ_EVENT_GFX_BALDING_MAN,
+	OBJ_EVENT_GFX_FISHER,
+	OBJ_EVENT_GFX_SWIMMER_M_LAND,
+	OBJ_EVENT_GFX_BIKER,
+	OBJ_EVENT_GFX_OLD_MAN_1,
+	OBJ_EVENT_GFX_COOLTRAINER_M,
+	OBJ_EVENT_GFX_ROCKER,
+	OBJ_EVENT_GFX_ROCKER,
+	OBJ_EVENT_GFX_MAN,
+	OBJ_EVENT_GFX_ROCKER,
+	OBJ_EVENT_GFX_BLACKBELT,
+	OBJ_EVENT_GFX_SCIENTIST,
+	OBJ_EVENT_GFX_COOLTRAINER_M,
+	OBJ_EVENT_GFX_GENTLEMAN,
+	OBJ_EVENT_GFX_CAMPER,
+	OBJ_EVENT_GFX_HIKER,
+	OBJ_EVENT_GFX_SUPER_NERD
 };
 
 static const u8 sFemaleTrainerGfx[] =
 {
-
+	OBJ_EVENT_GFX_LASS,
+	OBJ_EVENT_GFX_PICNICKER,
+	OBJ_EVENT_GFX_BEAUTY,
+	OBJ_EVENT_GFX_SWIMMER_F_LAND,
+	OBJ_EVENT_GFX_COOLTRAINER_F,
+	OBJ_EVENT_GFX_CHANNELER,
+	OBJ_EVENT_GFX_WOMAN_1,
+	OBJ_EVENT_GFX_TUBER_F,
+	OBJ_EVENT_GFX_WOMAN_2,
+	OBJ_EVENT_GFX_PICNICKER,
+	OBJ_EVENT_GFX_WOMAN_2,
+	OBJ_EVENT_GFX_WOMAN_2,
+	OBJ_EVENT_GFX_LASS,
 };
 
 const u16 gBattleTowerBannedSpecies[] = {
+	SPECIES_CRENKO,
+	SPECIES_TRRENKO,
+	SPECIES_CMARIBEL,
+	SPECIES_TRMARIBEL,
     SPECIES_XSUWAKO,
     SPECIES_XUTSUHO,
     SPECIES_XTENSHI,
@@ -513,21 +588,8 @@ u8 GetBattleTowerTrainerClassNameId(void)
 void GetBattleTowerTrainerName(u8 *dest)
 {
     s32 i;
-    if (gSaveBlock2Ptr->battleTower.battleTowerTrainerId == BATTLE_TOWER_EREADER_TRAINER_ID)
-    {
-        for (i = 0; i < 7; i++)
-            dest[i] = gSaveBlock2Ptr->battleTower.ereaderTrainer.name[i];
-    }
-    else if (gSaveBlock2Ptr->battleTower.battleTowerTrainerId < BATTLE_TOWER_RECORD_MIXING_TRAINER_BASE_ID)
-    {
-        for (i = 0; i < 3; i++)
-            dest[i] = sBattleTowerTrainers[gSaveBlock2Ptr->battleTower.battleTowerTrainerId].name[i];
-    }
-    else
-    {
-        for (i = 0; i < 7; i++)
-            dest[i] = gSaveBlock2Ptr->battleTower.records[gSaveBlock2Ptr->battleTower.battleTowerTrainerId - BATTLE_TOWER_RECORD_MIXING_TRAINER_BASE_ID].name[i];
-    }
+    for (i = 0; i < 7; i++)
+        dest[i] = sBattleTowerTrainers[gSaveBlock2Ptr->battleTower.battleTowerTrainerId].name[i];
     dest[i] = EOS;
 }
 
@@ -536,16 +598,16 @@ static void FillBattleTowerTrainerParty(void)
     s32 partyIndex;
     s32 i;
     u16 chosenMonIndices[3];
+	u8 evSpread[6];
     u8 friendship;
     u8 level;
-    u8 fixedIV;
-    u8 battleMonsOffset;
-    u8 monPoolSize;
+    u32 fixedIV;
+    u32 monPoolSize;
     u8 teamFlags;
+	u8 ability;
     const struct BattleTowerPokemonTemplate *battleTowerMons;
 
-    battleMonsOffset = 0;
-    monPoolSize = 60;
+    monPoolSize = NELEMS(gBattleTowerLevel50Mons);
     friendship = 255;
 
     ZeroEnemyPartyMons();
@@ -553,80 +615,14 @@ static void FillBattleTowerTrainerParty(void)
     // Different trainers have access to different sets of pokemon to use in battle.
     // The pokemon later in gBattleTowerLevel100Mons or gBattleTowerLevel50Mons are
     // stronger. Additionally, the later trainers' pokemon are granted higher IVs.
-    if (gSaveBlock2Ptr->battleTower.battleTowerTrainerId < 20)
-    {
-        fixedIV = 6;
-    }
-    else if (gSaveBlock2Ptr->battleTower.battleTowerTrainerId < 30)
-    {
-        fixedIV = 9;
-        battleMonsOffset = 30;
-    }
-    else if (gSaveBlock2Ptr->battleTower.battleTowerTrainerId < 40)
-    {
-        fixedIV = 12;
-        battleMonsOffset = 60;
-    }
-    else if (gSaveBlock2Ptr->battleTower.battleTowerTrainerId < 50)
-    {
-        fixedIV = 15;
-        battleMonsOffset = 90;
-    }
-    else if (gSaveBlock2Ptr->battleTower.battleTowerTrainerId < 60)
-    {
-        fixedIV = 18;
-        battleMonsOffset = 120;
-    }
-    else if (gSaveBlock2Ptr->battleTower.battleTowerTrainerId < 70)
-    {
-        fixedIV = 21;
-        battleMonsOffset = 150;
-    }
-    else if (gSaveBlock2Ptr->battleTower.battleTowerTrainerId < 80)
-    {
-        fixedIV = 31;
-        battleMonsOffset = 180;
-    }
-    else if (gSaveBlock2Ptr->battleTower.battleTowerTrainerId < BATTLE_TOWER_RECORD_MIXING_TRAINER_BASE_ID)
-    {
-        fixedIV = 31;
-        battleMonsOffset = 200;
-        monPoolSize = 100;
-    }
-    else if (gSaveBlock2Ptr->battleTower.battleTowerTrainerId == BATTLE_TOWER_EREADER_TRAINER_ID)
-    {
-        // Load E-Reader trainer's party.
-        do
-        {
-            for (partyIndex = 0; partyIndex < 3; partyIndex++)
-                CreateBattleTowerMon(&gEnemyParty[partyIndex], &gSaveBlock2Ptr->battleTower.ereaderTrainer.party[partyIndex]);
-            return;
-        } while (0);
-    }
-    else
-    {
-        // Load a battle tower record's party. (From record mixing)
-        for (partyIndex = 0; partyIndex < 3; partyIndex++)
-        {
-            CreateBattleTowerMon(
-                &gEnemyParty[partyIndex],
-                &gSaveBlock2Ptr->battleTower.records[gSaveBlock2Ptr->battleTower.battleTowerTrainerId - BATTLE_TOWER_RECORD_MIXING_TRAINER_BASE_ID].party[partyIndex]);
-        }
-        return;
-    }
+	fixedIV = gSaveBlock2Ptr->battleTower.curChallengeBattleNum[gSaveBlock2Ptr->battleTower.battleTowerLevelType] 
+	   + (7 * gSaveBlock2Ptr->battleTower.curStreakChallengesNum[gSaveBlock2Ptr->battleTower.battleTowerLevelType]);
+	fixedIV /= 2;
+	if (fixedIV > 31)
+		fixedIV = 31;
 
-    // Use the appropriate list of pokemon and level depending on the
-    // current challenge type. (level 50 or level 100 challenge)
-    if (gSaveBlock2Ptr->battleTower.battleTowerLevelType != 0)
-    {
-        battleTowerMons = gBattleTowerLevel100Mons;
-        level = 100;
-    }
-    else
-    {
-        battleTowerMons = gBattleTowerLevel50Mons;
-        level = 50;
-    }
+    battleTowerMons = gBattleTowerLevel50Mons;
+    level = 50;
 
     teamFlags = sBattleTowerTrainers[gSaveBlock2Ptr->battleTower.battleTowerTrainerId].teamFlags;
 
@@ -640,7 +636,7 @@ static void FillBattleTowerTrainerParty(void)
     {
         // Pick a random pokemon index based on the number of pokemon available to choose from
         // and the starting offset in the battle tower pokemon array.
-        s32 battleMonIndex = ((Random() & 0xFF) * monPoolSize) / 256 + battleMonsOffset;
+        s32 battleMonIndex = Random() % monPoolSize;
 
         // Ensure the chosen pokemon has compatible team flags with the trainer.
         if (teamFlags == 0 || (battleTowerMons[battleMonIndex].teamFlags & teamFlags) == teamFlags)
@@ -659,7 +655,7 @@ static void FillBattleTowerTrainerParty(void)
             for (i = 0; i < partyIndex; i++)
             {
                 if (GetMonData(&gEnemyParty[i], MON_DATA_HELD_ITEM, NULL) != ITEM_NONE
-                    && GetMonData(&gEnemyParty[i], MON_DATA_HELD_ITEM, NULL) == sBattleTowerHeldItems[battleTowerMons[battleMonIndex].heldItem])
+                    && GetMonData(&gEnemyParty[i], MON_DATA_HELD_ITEM, NULL) == battleTowerMons[battleMonIndex].heldItem)
                     break;
             }
 
@@ -680,6 +676,9 @@ static void FillBattleTowerTrainerParty(void)
                 continue;
 
             chosenMonIndices[partyIndex] = battleMonIndex;
+			
+			for (i = 0; i < 6; i++)
+				evSpread[i] = battleTowerMons[battleMonIndex].evSpread[i];
 
             // Place the chosen pokemon into the trainer's party.
             CreateMonWithEVSpread(
@@ -687,7 +686,7 @@ static void FillBattleTowerTrainerParty(void)
                 battleTowerMons[battleMonIndex].species,
                 level,
                 fixedIV,
-                battleTowerMons[battleMonIndex].evSpread);
+                evSpread);
 
             // Give the chosen pokemon its specified moves.
             for (i = 0; i < 4; i++)
@@ -696,9 +695,64 @@ static void FillBattleTowerTrainerParty(void)
                 if (battleTowerMons[battleMonIndex].moves[i] == MOVE_FRUSTRATION)
                     friendship = 0;  // MOVE_FRUSTRATION is more powerful the lower the pokemon's friendship is.
             }
+			
+			ability = 0;
+			// Figure out ability
+			switch (battleTowerMons[battleMonIndex].abilityFlags)
+			{
+				default:
+				case 0: // impossible
+					while (1);
+					break;
+				
+				case 1:
+					ability = 0;
+					break;
+				
+				case 2:
+					ability = 1;
+					break;
+				
+				case 4:
+					ability = 2;
+					break;
+				
+				case 3: // random basic
+					ability = Random() % 2 ? 0 : 1;
+					break;
+				
+				case 5: // 1st or HA
+					ability = Random() % 2 ? 0 : 2;
+					break;
+				
+				case 6: // 2nd or HA
+					ability = Random() % 2 ? 0 : 2;
+					break;
+				
+				case 7:
+					ability = Random() % 100;
+					if (ability < 35)
+						ability = 0;
+					else if (ability < 70)
+						ability = 1;
+					else
+						ability = 2;
+					break;
+			}
+			if (ability == 2)
+			{
+				ability = 1;
+				SetMonData(&gEnemyParty[partyIndex], MON_DATA_HIDDEN_ABILITY, &ability);
+			}
+			else
+			{
+				SetMonData(&gEnemyParty[partyIndex], MON_DATA_ABILITY_NUM, &ability);
+				ability = 0;
+				SetMonData(&gEnemyParty[partyIndex], MON_DATA_HIDDEN_ABILITY, &ability);
+			}
 
             SetMonData(&gEnemyParty[partyIndex], MON_DATA_FRIENDSHIP, &friendship);
-            SetMonData(&gEnemyParty[partyIndex], MON_DATA_HELD_ITEM, &sBattleTowerHeldItems[battleTowerMons[battleMonIndex].heldItem]);
+            SetMonData(&gEnemyParty[partyIndex], MON_DATA_HELD_ITEM, &battleTowerMons[battleMonIndex].heldItem);
 
             // The pokemon was successfully added to the trainer's party, so it's safe to move on to
             // the next party slot.
@@ -755,8 +809,8 @@ static void CheckMonBattleTowerBanlist(u16 species, u16 heldItem, u16 hp, u8 bat
     if (gBattleTowerBannedSpecies[counter] != 0xFFFF)
         return;
 
-    if (battleTowerLevelType == 0 && monLevel > 50)
-        return;
+    //if (battleTowerLevelType == 0 && monLevel > 50)
+    //     return;
 
     for (i = 0; i < *numValid && validPartySpecies[i] != species ; i++);
     if (i != *numValid)
@@ -821,33 +875,16 @@ void CheckPartyBattleTowerBanlist(void)
     }
 }
 
-static void BufferBattleTowerTrainerMessage(const u16 *greeting)
-{
-    s32 i;
-    if (EC_DoesEasyChatStringFitOnLine(greeting, 3, 2, 18))
-    {
-        ConvertEasyChatWordsToString(gStringVar4, greeting, 2, 3);
-        i = 0;
-        while (gStringVar4[i++] != CHAR_NEWLINE)
-            ;
-        while (gStringVar4[i] != CHAR_NEWLINE)
-            i++;
-        gStringVar4[i] = CHAR_PROMPT_SCROLL;
-    }
-    else
-    {
-        ConvertEasyChatWordsToString(gStringVar4, greeting, 3, 2);
-    }
-}
-
 void PrintBattleTowerTrainerGreeting(void)
 {
+	StringCopy(gStringVar4, sBattleTowerTrainers[gSaveBlock2Ptr->battleTower.battleTowerTrainerId].greeting);
+	/*
     if (gSaveBlock2Ptr->battleTower.battleTowerTrainerId == BATTLE_TOWER_EREADER_TRAINER_ID)
         BufferBattleTowerTrainerMessage(gSaveBlock2Ptr->battleTower.ereaderTrainer.greeting);
     else if (gSaveBlock2Ptr->battleTower.battleTowerTrainerId < BATTLE_TOWER_RECORD_MIXING_TRAINER_BASE_ID)
         BufferBattleTowerTrainerMessage(sBattleTowerTrainers[gSaveBlock2Ptr->battleTower.battleTowerTrainerId].greeting);
     else
-        BufferBattleTowerTrainerMessage(gSaveBlock2Ptr->battleTower.records[gSaveBlock2Ptr->battleTower.battleTowerTrainerId - BATTLE_TOWER_RECORD_MIXING_TRAINER_BASE_ID].greeting);
+        BufferBattleTowerTrainerMessage(gSaveBlock2Ptr->battleTower.records[gSaveBlock2Ptr->battleTower.battleTowerTrainerId - BATTLE_TOWER_RECORD_MIXING_TRAINER_BASE_ID].greeting); */
 }
 
 static void CB2_FinishEReaderBattle(void)
@@ -1060,6 +1097,20 @@ void SetBattleTowerParty(void)
         gSelectedOrderFromParty[i] = gSaveBlock2Ptr->battleTower.selectedPartyMons[i];
 
     ReducePlayerPartyToThree();
+	
+	for (i = 0; i < 3; i++)
+	{
+		u32 buffer;
+		u8 level = GetMonData(&gPlayerParty[i], MON_DATA_LEVEL);
+		if (level > 50)
+		{
+			buffer = 50;
+			SetMonData(&gPlayerParty[i], MON_DATA_LEVEL, &buffer);
+			buffer = 125000;
+			SetMonData(&gPlayerParty[i], MON_DATA_EXP, &buffer);
+			CalculateMonStats(&gPlayerParty[i]);
+		}
+	}
 }
 
 static void SaveCurrentWinStreak(void)
@@ -1392,19 +1443,21 @@ void ClearEReaderTrainer(struct BattleTowerEReaderTrainer *ereaderTrainer)
         ((u32 *)ereaderTrainer)[i] = 0;
 }
 
-void BufferEReaderTrainerGreeting(void)
-{
-    BufferBattleTowerTrainerMessage(gSaveBlock2Ptr->battleTower.ereaderTrainer.greeting);
-}
-
 static void PrintEReaderTrainerFarewellMessage(void)
 {
+	/*
     if (gBattleOutcome == B_OUTCOME_DREW)
         gStringVar4[0] = EOS;
     else if (gBattleOutcome == B_OUTCOME_WON)
         BufferBattleTowerTrainerMessage(gSaveBlock2Ptr->battleTower.ereaderTrainer.farewellPlayerWon);
     else
         BufferBattleTowerTrainerMessage(gSaveBlock2Ptr->battleTower.ereaderTrainer.farewellPlayerLost);
+	*/
+}
+
+void BufferEReaderTrainerGreeting(void)
+{
+    //BufferBattleTowerTrainerMessage(gSaveBlock2Ptr->battleTower.ereaderTrainer.greeting);
 }
 
 void Dummy_TryEnableBravoTrainerBattleTower(void)
@@ -1416,4 +1469,17 @@ void Dummy_TryEnableBravoTrainerBattleTower(void)
         if (gSaveBlock2Ptr->battleTower.var_4AE[i] == 1)
             TakeBravoTrainerBattleTowerOffTheAir();
     }
+}
+
+void GetBattleTowerOpponentWinText(u8 *dest)
+{
+//    VarSet(VAR_TEMP_3, opponentIdx);
+//    TrainerTowerGetOpponentTextColor(sTrainerTowerOpponent->battleType, sTrainerTowerOpponent->facilityClass);
+	
+	StringCopy(dest, sBattleTowerTrainers[gSaveBlock2Ptr->battleTower.battleTowerTrainerId].victoryText);
+}
+
+void GetBattleTowerOpponentLoseText(u8 *dest)
+{
+	StringCopy(dest, sBattleTowerTrainers[gSaveBlock2Ptr->battleTower.battleTowerTrainerId].defeatText);
 }

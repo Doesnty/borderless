@@ -4452,6 +4452,54 @@
       "secondary_tileset": "gTileset_CeruleanCave",
       "border_filepath": "data/layouts/CeruleanCave_B2FReal/border.bin",
       "blockdata_filepath": "data/layouts/CeruleanCave_B2FReal/map.bin"
+    },
+    {
+      "id": "LAYOUT_BATTLE_TOWER_BATTLE_ROOM",
+      "name": "BattleTower_BattleRoom_Layout",
+      "width": 10,
+      "height": 9,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_BattleTower",
+      "border_filepath": "data/layouts/BattleTower_BattleRoom/border.bin",
+      "blockdata_filepath": "data/layouts/BattleTower_BattleRoom/map.bin"
+    },
+    {
+      "id": "LAYOUT_BATTLE_TOWER_CORRIDOR",
+      "name": "BattleTower_Corridor_Layout",
+      "width": 17,
+      "height": 6,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_BattleTower",
+      "border_filepath": "data/layouts/BattleTower_Corridor/border.bin",
+      "blockdata_filepath": "data/layouts/BattleTower_Corridor/map.bin"
+    },
+    {
+      "id": "LAYOUT_BATTLE_TOWER_ELEVATOR",
+      "name": "BattleTower_Elevator_Layout",
+      "width": 5,
+      "height": 7,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_SilphCo",
+      "border_filepath": "data/layouts/BattleTower_Elevator/border.bin",
+      "blockdata_filepath": "data/layouts/BattleTower_Elevator/map.bin"
+    },
+    {
+      "id": "LAYOUT_BATTLE_TOWER_LOBBY",
+      "name": "BattleTower_Lobby_Layout",
+      "width": 14,
+      "height": 9,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_BattleTower",
+      "border_filepath": "data/layouts/BattleTower_Lobby/border.bin",
+      "blockdata_filepath": "data/layouts/BattleTower_Lobby/map.bin"
     }
   ]
 }

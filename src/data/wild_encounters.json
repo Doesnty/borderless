@@ -6739,6 +6739,10 @@
         {
           "map": "MAP_ROUTE12",
           "base_label": "sRoute12_FireRed",
+          "altX" : 8,
+          "altY" : 112,
+          "altX2" : 11,
+          "altY2" : 118,
           "land_mons": {
             "encounter_rate": 21,
             "mons": [
@@ -6803,7 +6807,72 @@
                 "species": "SPECIES_CSHINKI"
               }
             ]
-          }
+          },
+		  "alt_land_mons": {
+            "encounter_rate": 21,
+            "mons": [
+              {
+                "min_level": 33,
+                "max_level": 34,
+                "species": "SPECIES_MAI"
+              },
+              {
+                "min_level": 33,
+                "max_level": 34,
+                "species": "SPECIES_CYUKI"
+              },
+              {
+                "min_level": 33,
+                "max_level": 34,
+                "species": "SPECIES_CARISU"
+              },
+              {
+                "min_level": 33,
+                "max_level": 34,
+                "species": "SPECIES_CBYAKUREN"
+              },
+              {
+                "min_level": 33,
+                "max_level": 34,
+                "species": "SPECIES_LOUISE"
+              },
+              {
+                "min_level": 33,
+                "max_level": 34,
+                "species": "SPECIES_SARA"
+              },
+              {
+                "min_level": 33,
+                "max_level": 34,
+                "species": "SPECIES_CARISU"
+              },
+              {
+                "min_level": 33,
+                "max_level": 34,
+                "species": "SPECIES_CBYAKUREN"
+              },
+              {
+                "min_level": 33,
+                "max_level": 34,
+                "species": "SPECIES_CYUMEKO"
+              },
+              {
+                "min_level": 33,
+                "max_level": 34,
+                "species": "SPECIES_CSHINKI"
+              },
+              {
+                "min_level": 33,
+                "max_level": 34,
+                "species": "SPECIES_CYUMEKO"
+              },
+              {
+                "min_level": 33,
+                "max_level": 34,
+                "species": "SPECIES_CSHINKI"
+              }
+            ]
+		  }
         },
         {
           "map": "MAP_ROUTE13",

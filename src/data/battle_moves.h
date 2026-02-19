@@ -955,7 +955,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
     [MOVE_SEISMIC_TOSS] = 
     {
         .effect = EFFECT_LEVEL_DAMAGE,
-        .power = 1,
+        .power = 2,
         .type = TYPE_FIGHTING,
         .moveClass = CLASS_PHYSICAL,
         .accuracy = 100,
@@ -1403,7 +1403,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
     [MOVE_NIGHT_SHADE] = 
     {
         .effect = EFFECT_LEVEL_DAMAGE,
-        .power = 1,
+        .power = 2,
         .type = TYPE_GHOST,
         .moveClass = CLASS_SPECIAL,
         .accuracy = 100,
@@ -1663,7 +1663,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .secondaryEffectChance = 100,
         .priority = 0,
         .target = MOVE_TARGET_SELECTED,
-        .flags = FLAG_MAKES_CONTACT | FLAG_PROTECT_AFFECTED,
+        .flags = FLAG_MAKES_CONTACT | FLAG_PROTECT_AFFECTED | FLAG_PUNCHING,
     },
 
     [MOVE_SELF_DESTRUCT] = 
@@ -2075,7 +2075,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
     [MOVE_PSYWAVE] = 
     {
         .effect = EFFECT_LEVEL_DAMAGE,
-        .power = 1,
+        .power = 2,
         .type = TYPE_REASON,
         .moveClass = CLASS_SPECIAL,
         .accuracy = 100,
@@ -2439,7 +2439,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
     [MOVE_FLAIL] = 
     {
         .effect = EFFECT_HIT,
-        .power = 1,
+        .power = 2,
         .type = TYPE_NORMAL,
         .moveClass = CLASS_PHYSICAL,
         .accuracy = 100,
@@ -2495,7 +2495,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
     [MOVE_REVERSAL] = 
     {
         .effect = EFFECT_HIT,
-        .power = 1,
+        .power = 2,
         .type = TYPE_FIGHTING,
         .moveClass = CLASS_PHYSICAL,
         .accuracy = 100,
@@ -2774,7 +2774,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
 
     [MOVE_LOCK_ON] = 
     {
-        .effect = EFFECT_ACCURACY_UP_2,
+        .effect = EFFECT_LOCK_ON,
         .power = 0,
         .type = TYPE_REASON,
         .moveClass = CLASS_STATUS,
@@ -2783,7 +2783,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .secondaryEffectChance = 0,
         .priority = 0,
         .target = MOVE_TARGET_SELECTED,
-        .flags = FLAG_SNATCH_AFFECTED,
+        .flags = FLAG_MAGICCOAT_AFFECTED,
     },
 
     [MOVE_OUTRAGE] = 
@@ -3209,7 +3209,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
     [MOVE_NATURE_POWER] = 
     {
         .effect = EFFECT_HIT,
-        .power = 1,
+        .power = 2,
         .type = TYPE_NATURE,
         .moveClass = CLASS_SPECIAL,
         .accuracy = 100,
@@ -4707,7 +4707,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
     [MOVE_HEAT_CLAW] = 
     {
         .effect = EFFECT_HIT,
-        .power = 1,
+        .power = 2,
         .type = TYPE_BEAST,
         .moveClass = CLASS_PHYSICAL,
         .accuracy = 100,
@@ -6116,5 +6116,19 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .priority = 0,
         .target = MOVE_TARGET_SELECTED,
         .flags = FLAG_MAKES_CONTACT | FLAG_PROTECT_AFFECTED,
+    },
+	
+	[MOVE_RECALIBRATE] = 
+    {
+        .effect = EFFECT_GROWTH,
+        .power = 0,
+        .type = TYPE_STEEL,
+        .moveClass = CLASS_STATUS,
+        .accuracy = 0,
+        .pp = 20,
+        .secondaryEffectChance = 0,
+        .priority = 0,
+        .target = MOVE_TARGET_USER,
+        .flags = FLAG_SNATCH_AFFECTED,
     },
 };

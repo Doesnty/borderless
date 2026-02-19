@@ -49,7 +49,7 @@ static const struct PickupItem sPickupBerriesNovice[] =
 
 static const struct PickupItem sPickupBerriesVeteran[] =
 {
-    { ITEM_SITRUS_BERRY, 20 },
+    { ITEM_SITRUS_BERRY, 18 },
 	{ ITEM_OCCA_BERRY, 25 },
     { ITEM_CHERI_BERRY, 30 },
     { ITEM_PECHA_BERRY, 35 },
@@ -75,7 +75,7 @@ static const struct PickupItem sPickupBerriesVeteran[] =
 
 static const struct PickupItem sPickupBerriesElite[] =
 {
-    { ITEM_SITRUS_BERRY, 25 },
+    { ITEM_SITRUS_BERRY, 21 },
     { ITEM_OCCA_BERRY, 35 },
     { ITEM_CHESTO_BERRY, 40 },
     { ITEM_LUM_BERRY, 60 },

@@ -24,6 +24,10 @@ SevenIsland_TrainerTower_Text_RodettePostBattle:: @ 818C2D5
     .string "for you?$"
 
 SevenIsland_TrainerTower_Text_TrainerTowerSign:: @ 818C338
+	.string "The Battle Tower Project Has Started!\p"
+	.string "...Sorry, it's still WIP.\n"
+	.string "Please be patient!$"
+
     .string "TRAINER TOWER ENTRANCE\n"
     .string "Rise to the Challenge, Trainers!$"
 
