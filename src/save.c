@@ -666,13 +666,10 @@ u8 HandleSavingData(u8 saveType)
         save_write_to_flash(0xFFFF, gRamSaveSectionLocations);
         break;
     case SAVE_LINK: // _081532C4
+    case SAVE_EREADER: 
         SaveSerializedGame();
         for(i = 0; i < 5; i++)
             save_write_to_flash(i, gRamSaveSectionLocations);
-        break;
-    case SAVE_EREADER:
-        SaveSerializedGame();
-        save_write_to_flash(0, gRamSaveSectionLocations);
         break;
     case SAVE_OVERWRITE_DIFFERENT_FILE:
         for (i = (0xE * 2 + 0); i < 32; i++)

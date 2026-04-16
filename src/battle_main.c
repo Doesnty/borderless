@@ -3402,6 +3402,10 @@ u32 GetBattlerSpeed(u8 battler)
 	{
 		speed = (speed * 15) / 10;
 	}
+	if (gBattleMons[battler].ability == ABILITY_DESPERATION && gBattleMons[battler].hp <= (gBattleMons[battler].maxHP / 3))
+	{
+		speed = (speed * 15) / 10;
+	}
     
     if (holdEffect == HOLD_EFFECT_HANIWA_STEED && (species == SPECIES_CMAYUMI || species == SPECIES_MAYUMI))
         speed = (speed * 15) / 10;

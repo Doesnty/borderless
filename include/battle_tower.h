@@ -15,6 +15,7 @@ struct BattleTowerTrainer
     u8 greeting[120];
 	u8 victoryText[120];
 	u8 defeatText[120];
+	const u16* monRoster;
 };
 
 struct BattleTowerPokemonTemplate
@@ -26,7 +27,6 @@ struct BattleTowerPokemonTemplate
     u8 evSpread[6];
     u8 nature;
 	u8 abilityFlags;
-	
 	u8 tier;
 };
 

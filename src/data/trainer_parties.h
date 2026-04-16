@@ -1713,7 +1713,7 @@ static const struct TrainerMonNoItemCustomMoves sParty_HikerDudley[] = {
         .iv = 0,
         .lvl = 25,
         .species = SPECIES_AYUUGI,
-        .moves = {MOVE_IMPRISON, MOVE_FOCUS_ENERGY, MOVE_FOCUS_BLAST, MOVE_ACUPRESSURE},
+        .moves = {MOVE_IMPRISON, MOVE_FOCUS_ENERGY, MOVE_FOCUS_PUNCH, MOVE_ACUPRESSURE},
     },
 };
 
@@ -1776,7 +1776,7 @@ static const struct TrainerMonNoItemCustomMoves sParty_HikerLucas[] = {
         .iv = 0,
         .lvl = 23,
         .species = SPECIES_CFLANDRE,
-        .moves = {MOVE_FLAME_WHEEL, MOVE_DAUNT, MOVE_SCARY_FACE, MOVE_DAUNT},
+        .moves = {MOVE_FLAME_WHEEL, MOVE_KNOCK_OFF, MOVE_SCARY_FACE, MOVE_DAUNT},
     },
     {
         .iv = 0,

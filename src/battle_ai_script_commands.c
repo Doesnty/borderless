@@ -1145,6 +1145,15 @@ static void Cmd_get_ability(void)
     if (GetBattlerSide(battlerId) == AI_TARGET)
     {
         u16 side = GET_BATTLER_SIDE(battlerId);
+		
+		// if we have mold breaker, pretend the foe's ability is 0.
+		// this technically messes up some weird cases, but it saves a bajillion script cases
+		if (gBattleMons[gBattlerAttacker].ability == ABILITY_MOLD_BREAKER)
+		{
+			AI_THINKING_STRUCT->funcResult = 0;
+			sAIScriptPtr += 2;
+			return;
+		}
 
         if (BATTLE_HISTORY->abilities[side] != 0)
         {

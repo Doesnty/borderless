@@ -63,7 +63,7 @@ static const u8 sShedSkinDescription[] = _("May recover from status at end of tu
 static const u8 sGutsDescription[] = _("Status problems boost Attack.");
 static const u8 sMarvelScaleDescription[] = _("Status problems boost Defense.");
 static const u8 sLiquidOozeDescription[] = _("Draining causes injury.");
-static const u8 sOvergrowDescription[] = _("Ups same-type moves in a pinch.");
+static const u8 sOvergrowDescription[] = _("Ups same-type moves when below 1/3 HP.");
 static const u8 sBlazeDescription[] = _("Unused.");
 static const u8 sTorrentDescription[] = _("Unused.");
 static const u8 sSwarmDescription[] = _("Unused.");
@@ -158,7 +158,7 @@ static const u8 sBlankCardDescription[] = _("Copies Ability of last party member
 static const u8 sReactiveDescription[] = _("Shifts Defense stats when attacked.");
 static const u8 sDevourDescription[] = _("Absorbs foe's HP on KO.");
 static const u8 sLostDreamDescription[] = _("Bypasses immunities of the Normal type.");
-static const u8 sLastWishDescription[] = _("On fainting, next mon recovers HP.");
+static const u8 sLastWishDescription[] = _("On fainting, next Puppet recovers HP.");
 static const u8 sLastGrudgeDescription[] = _("When KO'd by move, lower its PP to 1.");
 static const u8 sSalvageArmorDescription[] = _("Boosts Defense when puppets faint.");
 static const u8 sTangledFeetDescription[] = _("+50% Evasion when confused.");
@@ -189,6 +189,7 @@ static const u8 sStasisGazeDescription[] = _("Foe's stats cannot rise.");
 static const u8 sPureScalesDescription[] = _("Doubles Sp. Def.");
 static const u8 sVersatileDescription[] = _("Always get same-type attack bonus.");
 static const u8 sAmbushDescription[] = _("+50% Speed on the first turn.");
+static const u8 sDesperationDescription[] = _("+50% Speed when below 1/3 HP.");
 static const u8 sObsoleteDescription[] = _("Obsolete.");
 static const u8 sUnimplementedDescription[] = _("Unimplemented.");
 
@@ -385,6 +386,7 @@ const u8 *const gAbilityDescriptionPointers[ABILITIES_COUNT] =
 	[ABILITY_PURE_SCALES] = sPureScalesDescription,
 	[ABILITY_VERSATILE] = sVersatileDescription,
 	[ABILITY_AMBUSH] = sAmbushDescription,
+	[ABILITY_DESPERATION] = sDesperationDescription,
 };
 
 const u8 gAbilityNames[ABILITIES_COUNT][ABILITY_NAME_LENGTH + 1] =
@@ -580,4 +582,5 @@ const u8 gAbilityNames[ABILITIES_COUNT][ABILITY_NAME_LENGTH + 1] =
 	[ABILITY_PURE_SCALES] = _("Pure Scales"),
 	[ABILITY_VERSATILE] = _("Versatile"),
 	[ABILITY_AMBUSH] = _("Ambush"),
+	[ABILITY_DESPERATION] = _("Desperation"),
 };

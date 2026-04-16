@@ -2421,6 +2421,7 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u8 ability, u8 special, u16 moveA
                  && TARGET_TURN_DAMAGED
                  && gBattleMons[gBattlerAttacker].ability != ABILITY_LONG_REACH
                  && gBattleMons[gBattlerAttacker].ability != ABILITY_MAGIC_GUARD
+                 && gBattleMons[gBattlerAttacker].ability != ABILITY_DAMP
                  && (gBattleMoves[moveArg].flags & FLAG_MAKES_CONTACT))
                 {
                     gBattleMoveDamage = gBattleMons[gBattlerAttacker].maxHP / 4;

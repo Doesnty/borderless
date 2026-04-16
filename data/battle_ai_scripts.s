@@ -405,7 +405,6 @@ AI_CBM_OneHitKO:: @ 81DA195
 	if_type_effectiveness AI_EFFECTIVENESS_x0, Score_Minus10
 	get_ability AI_TARGET
 	if_equal ABILITY_STURDY, Score_Minus10
-	if_level_cond 1, Score_Minus10
 	end
 
 AI_CBM_Magnitude:: @ 81DA1AA
@@ -2021,8 +2020,8 @@ AI_CV_Flail_End:: @ 81DB258
 	end
 
 AI_CV_HealBell:: @ 81DB259
-	if_status AI_TARGET, STATUS1_ANY, AI_CV_HealBell_End
-	if_status_in_party AI_TARGET, STATUS1_ANY, AI_CV_HealBell_End
+	if_status AI_USER, STATUS1_ANY, AI_CV_HealBell_End
+	if_status_in_party AI_USER, STATUS1_ANY, AI_CV_HealBell_End
 	score -5
 
 AI_CV_HealBell_End:: @ 81DB26F

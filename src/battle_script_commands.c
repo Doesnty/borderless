@@ -1317,6 +1317,7 @@ static void atk01_accuracycheck(void)
     else
     {
         u8 type, moveAcc, holdEffect, atkHoldEffect, param, targetAbility;
+		u8 acc, eva;
         s8 buff;
         u16 calc;
 		
@@ -1335,19 +1336,23 @@ static void atk01_accuracycheck(void)
             targetAbility = 0;
         else
             targetAbility = gBattleMons[gBattlerTarget].ability;
+		
+		acc = gBattleMons[gBattlerAttacker].statStages[STAT_ACC];
+		eva = gBattleMons[gBattlerTarget].statStages[STAT_EVASION];
         
-        if (gBattleMons[gBattlerTarget].status2 & STATUS2_FORESIGHT)
+        if (eva > 6 && (gBattleMons[gBattlerTarget].status2 & STATUS2_FORESIGHT || gBattleMons[gBattlerAttacker].ability == ABILITY_KEEN_EYE))
         {
-            u8 acc = gBattleMons[gBattlerAttacker].statStages[STAT_ACC];
-
-            buff = acc;
+			eva = 6;
         }
-        else
-        {
-            u8 acc = gBattleMons[gBattlerAttacker].statStages[STAT_ACC];
-
-            buff = acc + 6 - gBattleMons[gBattlerTarget].statStages[STAT_EVASION];
-        }
+		if (gBattleMons[gBattlerAttacker].ability == ABILITY_UNAWARE)
+		{
+			eva = 6;
+		}
+		if (targetAbility == ABILITY_UNAWARE)
+		{
+			acc = 6;
+		}
+        buff = acc + 6 - eva;
         if (buff < 0)
             buff = 0;
         if (buff > 0xC)

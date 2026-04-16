@@ -2545,6 +2545,16 @@ const struct MonCoords gMonFrontPicCoords[] =
 		.size = 0x77,
 		.y_offset = 0,
 	},
+	[SPECIES_CMIYOI] = 
+	{
+		.size = 0x68,
+		.y_offset = 0,
+	},
+	[SPECIES_MIYOI] = 
+	{
+		.size = 0x68,
+		.y_offset = 0,
+	},
     [SPECIES_EGG] =
     {
         .size = 0x33,

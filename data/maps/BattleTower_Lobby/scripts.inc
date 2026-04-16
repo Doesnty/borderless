@@ -36,7 +36,7 @@ BattleTowerLobby_EventScript_QuitWithoutSaving::
 	faceplayer
 	msgbox BattleTowerLobby_Text_DidntSaveBeforeQuitting, MSGBOX_DEFAULT
 	closemessage
-	setvar VAR_TEMP_0, 5
+	setvar VAR_TEMP_0, BTSPECIAL_RESULT_INACTIVE
 	release
 	end
 
@@ -45,6 +45,8 @@ BattleTowerLobby_EventScript_WonChallenge::
 	faceplayer
 	message BattleTowerLobby_Text_Congratulations
 	waitmessage
+	
+	@ skip the ribbons
 	
 	setvar VAR_0x8004, 8
 	special BattleTowerUtil
@@ -60,13 +62,16 @@ BattleTowerLobby_EventScript_WonChallenge::
 	waitse
 
 BattleTower_Lobby_EventScript_GiveItem::
+	setvar VAR_0x8004, 0
+	setvar VAR_0x8005, 3
+	special SetBattleTowerProperty
 	message BattleTowerLobby_Text_GainPrize
 	waitmessage
 	playfanfare MUS_OBTAIN_ITEM
 	waitfanfare
 	msgbox BattleTowerLobby_Text_LookingForward, 4
 	closemessage
-	setvar VAR_TEMP_0, 5
+	setvar VAR_TEMP_0, BTSPECIAL_RESULT_INACTIVE
 	release
 	end
 
@@ -85,7 +90,7 @@ BattleTowerLobby_EventScript_LostChallenge::
 	waitse
 	msgbox BattleTowerLobby_Text_LookingForward, 4
 	closemessage
-	setvar VAR_TEMP_0, 5
+	setvar VAR_TEMP_0, BTSPECIAL_RESULT_INACTIVE
 	release
 	end
 	
@@ -103,7 +108,7 @@ BattleTowerLobby_EventScript_ResumeChallenge::
 	setvar VAR_0x8004, 8
 	setvar VAR_0x8005, 0
 	special SetBattleTowerProperty
-	setvar VAR_TEMP_0, 5
+	setvar VAR_TEMP_0, BTSPECIAL_RESULT_INACTIVE
 	special SavePlayerParty
 	special SetBattleTowerParty
 	msgbox BattleTowerLobby_Text_IllDirectYou, 4

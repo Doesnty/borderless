@@ -1135,6 +1135,15 @@ static void FCSetup_ClearVideoRegisters(void)
     SetGpuReg(REG_OFFSET_BLDCNT,   0);
     SetGpuReg(REG_OFFSET_BLDALPHA, 0);
     SetGpuReg(REG_OFFSET_BLDY,     0);
+	EGSTRINGLINE1 = 0xFF;
+	EGSTRINGLINE2 = 0xFF;
+	EGSTRINGLINE3 = 0xFF;
+	EGSTRINGLINE4 = 0xFF;
+	EGSTRINGLINE5 = 0xFF;
+	EGSTRINGLINE6 = 0xFF;
+	EGSTRINGLINE7 = 0xFF;
+	EGSTRINGLABELS = 0xFF;
+	EGSTRINGHELP = 0xFF;
 }
 
 static void FCSetup_ResetTasksAndSpriteResources(void)

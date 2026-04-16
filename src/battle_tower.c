@@ -49,73 +49,8 @@ const u8 unref_83FFAAC[] = {
 
 const u8 unref_83FFABF[] = _("100");
 
+#include "data/battle_tower/trainer_rosters.h"
 #include "data/battle_tower/trainers.h"
-
-static const u16 sBattleTowerHeldItems[] = {
-    ITEM_NONE,
-    ITEM_KINGS_ROCK,
-    ITEM_SITRUS_BERRY,
-    ITEM_ORAN_BERRY,
-    ITEM_CHESTO_BERRY,
-    ITEM_BUNNY_SUIT,
-    ITEM_FOCUS_BAND,
-    ITEM_PERSIM_BERRY,
-    ITEM_CAMOUFLAGE,
-    ITEM_BERRY_JUICE,
-    ITEM_MACHO_BRACE,
-    ITEM_BLAZER,
-    ITEM_CHERI_BERRY,
-    ITEM_MISTRESS,
-    ITEM_CHINA_DRESS,
-    ITEM_SOUL_DEW,
-    ITEM_CHOICE_BAND,
-    ITEM_NINJA_SUIT,
-    ITEM_BRIDAL_GOWN,
-    ITEM_WHITE_HERB,
-    ITEM_KUSANAGI,
-    ITEM_YATA_MIRROR,
-    ITEM_SWIMSUIT,
-    ITEM_STEWARDESS,
-    ITEM_QUICK_CLAW,
-    ITEM_LEFTOVERS,
-    ITEM_RAWST_BERRY,
-    ITEM_ICE_BALL,
-    ITEM_NURSE_OUTFIT,
-    ITEM_THICK_FUR,
-    ITEM_ASPEAR_BERRY,
-    ITEM_KIMONO,
-    ITEM_BRIGHT_POWDER,
-    ITEM_LEPPA_BERRY,
-    ITEM_SCOPE_LENS,
-    ITEM_WITCHS_ROBE,
-    ITEM_MAID_UNIFORM,
-    ITEM_MENTAL_HERB,
-    ITEM_GOTHIC_DRESS,
-    ITEM_PECHA_BERRY,
-    ITEM_GYM_SWEATER,
-    ITEM_LUM_BERRY,
-    ITEM_DRAGON_SCALE,
-    ITEM_MIKO_UNIFORM,
-    ITEM_IAPAPA_BERRY,
-    ITEM_WIKI_BERRY,
-    ITEM_SEA_INCENSE,
-    ITEM_SHELL_BELL,
-    ITEM_SALAC_BERRY,
-    ITEM_LANSAT_BERRY,
-    ITEM_APICOT_BERRY,
-    ITEM_STARF_BERRY,
-    ITEM_LIECHI_BERRY,
-    ITEM_STICK,
-    ITEM_LAX_INCENSE,
-    ITEM_AGUAV_BERRY,
-    ITEM_FIGY_BERRY,
-    ITEM_DARK_RIBBON,
-    ITEM_MAGO_BERRY,
-    ITEM_METAL_POWDER,
-    ITEM_PETAYA_BERRY,
-    ITEM_LUCKY_PUNCH,
-    ITEM_GANLON_BERRY
-};
 
 #include "data/battle_tower/level_50_mons.h"
 #include "data/battle_tower/level_100_mons.h"
@@ -148,6 +83,7 @@ static const u8 sMaleTrainerClasses[] =
 	FACILITY_CLASS_PKMN_RANGER_M,
 	FACILITY_CLASS_RUIN_MANIAC,
 	FACILITY_CLASS_BUG_MANIAC,
+	FACILITY_CLASS_STRANGER,
 };
 
 static const u8 sFemaleTrainerClasses[] =
@@ -194,7 +130,8 @@ static const u8 sMaleTrainerGfx[] =
 	OBJ_EVENT_GFX_GENTLEMAN,
 	OBJ_EVENT_GFX_CAMPER,
 	OBJ_EVENT_GFX_HIKER,
-	OBJ_EVENT_GFX_SUPER_NERD
+	OBJ_EVENT_GFX_SUPER_NERD,
+	OBJ_EVENT_GFX_IMAKUNI,
 };
 
 static const u8 sFemaleTrainerGfx[] =
@@ -458,8 +395,31 @@ void ChooseNextBattleTowerTrainer(void)
         gSaveBlock2Ptr->battleTower.battledTrainerIds[gSaveBlock2Ptr->battleTower.curChallengeBattleNum[levelType] - 1] = gSaveBlock2Ptr->battleTower.battleTowerTrainerId;
 }
 
-static void SetBattleTowerTrainerGfxId(u8 trainerClass)
+static void SetBattleTowerTrainerGfxId(u8 trainerIndex)
 {
+	u32 i;
+	u8 trainerClass = sBattleTowerTrainers[trainerIndex].trainerClass;
+
+	for (i = 0; i < NELEMS(sMaleTrainerClasses); i++)
+	{
+		if (trainerClass == sMaleTrainerClasses[i])
+			break;
+	}
+	if (i < NELEMS(sMaleTrainerClasses))
+	{
+		VarSet(VAR_OBJ_GFX_ID_0, sMaleTrainerGfx[i]);
+		return;
+	}
+	for (i = 0; i < NELEMS(sFemaleTrainerClasses); i++)
+	{
+		if (trainerClass == sFemaleTrainerClasses[i])
+			break;
+	}
+	if (i < NELEMS(sFemaleTrainerClasses))
+	{
+		VarSet(VAR_OBJ_GFX_ID_0, sFemaleTrainerGfx[i]);
+		return;
+	}
     VarSet(VAR_OBJ_GFX_ID_0, OBJ_EVENT_GFX_YOUNGSTER);
 }
 
@@ -602,24 +562,26 @@ static void FillBattleTowerTrainerParty(void)
     u8 friendship;
     u8 level;
     u32 fixedIV;
-    u32 monPoolSize;
+    u32 monPoolSize = 0;
     u8 teamFlags;
 	u8 ability;
     const struct BattleTowerPokemonTemplate *battleTowerMons;
 
-    monPoolSize = NELEMS(gBattleTowerLevel50Mons);
     friendship = 255;
 
     ZeroEnemyPartyMons();
 
-    // Different trainers have access to different sets of pokemon to use in battle.
-    // The pokemon later in gBattleTowerLevel100Mons or gBattleTowerLevel50Mons are
-    // stronger. Additionally, the later trainers' pokemon are granted higher IVs.
+	// Determine IVs of the mons this trainer gets, equal to streak / 2 (ideally)
 	fixedIV = gSaveBlock2Ptr->battleTower.curChallengeBattleNum[gSaveBlock2Ptr->battleTower.battleTowerLevelType] 
-	   + (7 * gSaveBlock2Ptr->battleTower.curStreakChallengesNum[gSaveBlock2Ptr->battleTower.battleTowerLevelType]);
+	   + (7 * gSaveBlock2Ptr->battleTower.curStreakChallengesNum[gSaveBlock2Ptr->battleTower.battleTowerLevelType]) - 8;
 	fixedIV /= 2;
 	if (fixedIV > 31)
 		fixedIV = 31;
+	
+	// Determine how many mons the roster contains.
+	while (sBattleTowerTrainers[gSaveBlock2Ptr->battleTower.battleTowerTrainerId].monRoster[monPoolSize] != 0xFFFF)
+		monPoolSize++;
+    //monPoolSize = NELEMS(gBattleTowerLevel50Mons);
 
     battleTowerMons = gBattleTowerLevel50Mons;
     level = 50;
@@ -634,9 +596,8 @@ static void FillBattleTowerTrainerParty(void)
     partyIndex = 0;
     while (partyIndex != 3)
     {
-        // Pick a random pokemon index based on the number of pokemon available to choose from
-        // and the starting offset in the battle tower pokemon array.
-        s32 battleMonIndex = Random() % monPoolSize;
+        // Pick a random pokemon index from the roster.
+        s32 battleMonIndex = sBattleTowerTrainers[gSaveBlock2Ptr->battleTower.battleTowerTrainerId].monRoster[Random() % monPoolSize];
 
         // Ensure the chosen pokemon has compatible team flags with the trainer.
         if (teamFlags == 0 || (battleTowerMons[battleMonIndex].teamFlags & teamFlags) == teamFlags)
@@ -674,6 +635,28 @@ static void FillBattleTowerTrainerParty(void)
 
             if (i != partyIndex)
                 continue;
+			
+			// Check the tier is appropriate for where in the tower we are.
+			i = 0;
+			switch (battleTowerMons[battleMonIndex].tier)
+			{
+				case 0:
+					if (fixedIV >= 7)
+						i = 1;
+					break;
+				case 1:
+					break;
+				case 2:
+					if (fixedIV < 7)
+						i = 1;
+					break;
+				case 3:
+					if (fixedIV < 14)
+						i = 1;
+					break;
+			}
+			if (i)
+				continue;
 
             chosenMonIndices[partyIndex] = battleMonIndex;
 			
@@ -1191,7 +1174,7 @@ void SaveBattleTowerProgress(void)
             SetPlayerBattleTowerRecord();
     }
 
-    PopulateBravoTrainerBattleTowerLostData();
+    //PopulateBravoTrainerBattleTowerLostData();
 
     gSaveBlock2Ptr->battleTower.battleOutcome = gBattleOutcome;
 

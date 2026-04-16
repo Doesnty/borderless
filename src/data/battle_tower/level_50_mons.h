@@ -12,6 +12,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 63, 0, 1, 0, 0},
         .nature = NATURE_HARDY,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 0,
     },
     {
         .species = SPECIES_REIMU,
@@ -25,6 +26,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 32, 0, 0, 32, 0},
         .nature = NATURE_RASH,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 1,
     },
     {
         .species = SPECIES_REIMU,
@@ -38,6 +40,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 32, 0, 0, 32},
         .nature = NATURE_CAREFUL,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_REIMU,
@@ -51,6 +54,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {32, 32, 0, 63, 0, 0},
         .nature = NATURE_ADAMANT,
         .abilityFlags = 0 + (0 << 1) + (1 << 2),
+        .tier = 3,
     },
     {
         .species = SPECIES_AREIMU,
@@ -64,6 +68,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {32, 63, 0, 32, 0, 0},
         .nature = NATURE_ADAMANT,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_AREIMU,
@@ -77,6 +82,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {1, 63, 0, 63, 0, 0},
         .nature = NATURE_ADAMANT,
         .abilityFlags = 1 + (1 << 1) + (0 << 2),
+        .tier = 3,
     },
     {
         .species = SPECIES_DREIMU,
@@ -90,6 +96,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 32, 0, 0, 32},
         .nature = NATURE_SASSY,
         .abilityFlags = 1 + (0 << 1) + (1 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_DREIMU,
@@ -103,6 +110,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 1, 63, 0, 0},
         .nature = NATURE_JOLLY,
         .abilityFlags = 0 + (1 << 1) + (0 << 2),
+        .tier = 3,
     },
     {
         .species = SPECIES_CMARISA,
@@ -116,6 +124,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {1, 0, 0, 63, 63, 0},
         .nature = NATURE_HARDY,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 0,
     },
     {
         .species = SPECIES_MARISA,
@@ -129,6 +138,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {1, 0, 0, 63, 63, 0},
         .nature = NATURE_TIMID,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_MARISA,
@@ -142,6 +152,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {0, 1, 0, 63, 63, 0},
         .nature = NATURE_NAIVE,
         .abilityFlags = 0 + (0 << 1) + (1 << 2),
+        .tier = 3,
     },
     {
         .species = SPECIES_AMARISA,
@@ -155,6 +166,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {32, 0, 0, 63, 32, 0},
         .nature = NATURE_TIMID,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 1,
     },
     {
         .species = SPECIES_AMARISA,
@@ -168,6 +180,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {1, 0, 0, 63, 63, 0},
         .nature = NATURE_TIMID,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_AMARISA,
@@ -181,6 +194,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {1, 0, 0, 63, 63, 0},
         .nature = NATURE_MODEST,
         .abilityFlags = 0 + (0 << 1) + (1 << 2),
+        .tier = 3,
     },
     {
         .species = SPECIES_SMARISA,
@@ -194,6 +208,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {0, 32, 0, 63, 32, 0},
         .nature = NATURE_HASTY,
         .abilityFlags = 0 + (1 << 1) + (0 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_SMARISA,
@@ -207,6 +222,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {1, 0, 0, 63, 63, 0},
         .nature = NATURE_MODEST,
         .abilityFlags = 0 + (0 << 1) + (1 << 2),
+        .tier = 3,
     },
     {
         .species = SPECIES_ADMARISA,
@@ -220,6 +236,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {0, 32, 0, 63, 32, 0},
         .nature = NATURE_HASTY,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 1,
     },
     {
         .species = SPECIES_ADMARISA,
@@ -233,6 +250,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {1, 63, 0, 63, 0, 0},
         .nature = NATURE_JOLLY,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_ADMARISA,
@@ -246,6 +264,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {1, 63, 0, 63, 0, 0},
         .nature = NATURE_ADAMANT,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 3,
     },
     {
         .species = SPECIES_CRUMIA,
@@ -259,6 +278,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 32, 0, 0, 32},
         .nature = NATURE_RELAXED,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 0,
     },
     {
         .species = SPECIES_RUMIA,
@@ -272,6 +292,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 32, 0, 0, 32},
         .nature = NATURE_BOLD,
         .abilityFlags = 1 + (1 << 1) + (0 << 2),
+        .tier = 1,
     },
     {
         .species = SPECIES_RUMIA,
@@ -285,6 +306,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 63, 1, 0, 0, 0},
         .nature = NATURE_ADAMANT,
         .abilityFlags = 0 + (0 << 1) + (1 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_RUMIA,
@@ -298,6 +320,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 32, 0, 0, 32},
         .nature = NATURE_CAREFUL,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_ARUMIA,
@@ -311,6 +334,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {1, 63, 0, 63, 0, 0},
         .nature = NATURE_JOLLY,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_ARUMIA,
@@ -324,6 +348,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {32, 63, 0, 32, 0, 0},
         .nature = NATURE_ADAMANT,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 3,
     },
     {
         .species = SPECIES_SRUMIA,
@@ -337,6 +362,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {32, 0, 0, 32, 63, 0},
         .nature = NATURE_MODEST,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_SRUMIA,
@@ -350,6 +376,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {32, 0, 0, 32, 63, 0},
         .nature = NATURE_TIMID,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 3,
     },
     {
         .species = SPECIES_CDAIYOUSEI,
@@ -363,6 +390,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {32, 0, 0, 63, 32, 0},
         .nature = NATURE_HARDY,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 0,
     },
     {
         .species = SPECIES_DAIYOUSEI,
@@ -376,6 +404,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {1, 0, 0, 63, 63, 0},
         .nature = NATURE_MODEST,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 1,
     },
     {
         .species = SPECIES_DAIYOUSEI,
@@ -389,6 +418,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 0, 63, 1, 0},
         .nature = NATURE_TIMID,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_ADAIYOUSEI,
@@ -402,6 +432,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {1, 0, 0, 63, 63, 0},
         .nature = NATURE_MODEST,
         .abilityFlags = 0 + (0 << 1) + (1 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_ADAIYOUSEI,
@@ -415,6 +446,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {32, 0, 0, 32, 63, 0},
         .nature = NATURE_MODEST,
         .abilityFlags = 1 + (1 << 1) + (0 << 2),
+        .tier = 3,
     },
     {
         .species = SPECIES_DDAIYOUSEI,
@@ -428,6 +460,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 0, 0, 63, 1},
         .nature = NATURE_MODEST,
         .abilityFlags = 1 + (1 << 1) + (0 << 2),
+        .tier = 1,
     },
     {
         .species = SPECIES_DDAIYOUSEI,
@@ -441,6 +474,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 63, 0, 0, 1},
         .nature = NATURE_CALM,
         .abilityFlags = 1 + (1 << 1) + (0 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_CCIRNO,
@@ -454,6 +488,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {0, 63, 0, 32, 32, 0},
         .nature = NATURE_LONELY,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 0,
     },
     {
         .species = SPECIES_CCIRNO,
@@ -467,6 +502,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {0, 1, 0, 63, 63, 0},
         .nature = NATURE_RASH,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 1,
     },
     {
         .species = SPECIES_CIRNO,
@@ -480,6 +516,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {0, 32, 0, 32, 63, 0},
         .nature = NATURE_RASH,
         .abilityFlags = 1 + (1 << 1) + (0 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_CIRNO,
@@ -493,6 +530,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {1, 0, 0, 63, 63, 0},
         .nature = NATURE_MODEST,
         .abilityFlags = 1 + (0 << 1) + (0 << 2),
+        .tier = 3,
     },
     {
         .species = SPECIES_SCIRNO,
@@ -506,6 +544,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {1, 63, 0, 63, 0, 0},
         .nature = NATURE_ADAMANT,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 1,
     },
     {
         .species = SPECIES_SCIRNO,
@@ -519,6 +558,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {1, 0, 0, 63, 63, 0},
         .nature = NATURE_TIMID,
         .abilityFlags = 0 + (0 << 1) + (1 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_TCIRNO,
@@ -532,6 +572,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {0, 32, 0, 63, 32, 0},
         .nature = NATURE_RASH,
         .abilityFlags = 1 + (1 << 1) + (0 << 2),
+        .tier = 1,
     },
     {
         .species = SPECIES_TCIRNO,
@@ -545,6 +586,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {1, 0, 0, 63, 63, 0},
         .nature = NATURE_MODEST,
         .abilityFlags = 0 + (0 << 1) + (1 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_TCIRNO,
@@ -558,6 +600,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {1, 0, 0, 63, 63, 0},
         .nature = NATURE_TIMID,
         .abilityFlags = 0 + (0 << 1) + (1 << 2),
+        .tier = 3,
     },
     {
         .species = SPECIES_ADCIRNO,
@@ -571,6 +614,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {1, 63, 0, 63, 0, 0},
         .nature = NATURE_ADAMANT,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_ADCIRNO,
@@ -584,6 +628,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {32, 63, 0, 32, 0, 0},
         .nature = NATURE_ADAMANT,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 3,
     },
     {
         .species = SPECIES_CMEILING,
@@ -597,6 +642,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {32, 63, 0, 32, 0, 0},
         .nature = NATURE_ADAMANT,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 0,
     },
     {
         .species = SPECIES_MEILING,
@@ -610,6 +656,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 0, 1, 63, 0},
         .nature = NATURE_MODEST,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 1,
     },
     {
         .species = SPECIES_MEILING,
@@ -623,6 +670,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {1, 63, 0, 63, 0, 0},
         .nature = NATURE_ADAMANT,
         .abilityFlags = 0 + (1 << 1) + (0 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_MEILING,
@@ -636,6 +684,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {32, 63, 0, 32, 0, 0},
         .nature = NATURE_ADAMANT,
         .abilityFlags = 0 + (1 << 1) + (1 << 2),
+        .tier = 3,
     },
     {
         .species = SPECIES_DMEILING,
@@ -649,6 +698,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 63, 0, 0, 0, 1},
         .nature = NATURE_ADAMANT,
         .abilityFlags = 1 + (0 << 1) + (1 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_DMEILING,
@@ -662,6 +712,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {32, 32, 0, 0, 0, 63},
         .nature = NATURE_CAREFUL,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 3,
     },
     {
         .species = SPECIES_SMEILING,
@@ -675,6 +726,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {1, 63, 0, 63, 0, 0},
         .nature = NATURE_JOLLY,
         .abilityFlags = 0 + (1 << 1) + (0 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_SMEILING,
@@ -688,6 +740,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {1, 63, 0, 63, 0, 0},
         .nature = NATURE_JOLLY,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 3,
     },
     {
         .species = SPECIES_ADMEILING,
@@ -701,6 +754,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 1, 0, 0, 63},
         .nature = NATURE_CAREFUL,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 1,
     },
     {
         .species = SPECIES_ADMEILING,
@@ -714,6 +768,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {1, 63, 0, 63, 0, 0},
         .nature = NATURE_ADAMANT,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_ADMEILING,
@@ -727,6 +782,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {32, 0, 32, 0, 0, 63},
         .nature = NATURE_CAREFUL,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 3,
     },
     {
         .species = SPECIES_CKOAKUMA,
@@ -740,6 +796,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {32, 0, 0, 32, 63, 0},
         .nature = NATURE_MODEST,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 0,
     },
     {
         .species = SPECIES_KOAKUMA,
@@ -753,6 +810,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {0, 32, 0, 32, 63, 0},
         .nature = NATURE_RASH,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 1,
     },
     {
         .species = SPECIES_KOAKUMA,
@@ -766,6 +824,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {1, 0, 0, 63, 63, 0},
         .nature = NATURE_TIMID,
         .abilityFlags = 0 + (0 << 1) + (1 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_HKOAKUMA,
@@ -779,6 +838,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 32, 0, 0, 32},
         .nature = NATURE_BOLD,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 1,
     },
     {
         .species = SPECIES_HKOAKUMA,
@@ -792,6 +852,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 0, 0, 32, 32},
         .nature = NATURE_SASSY,
         .abilityFlags = 0 + (0 << 1) + (1 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_CPATCHOULI,
@@ -805,6 +866,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 0, 0, 63, 1},
         .nature = NATURE_MODEST,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 0,
     },
     {
         .species = SPECIES_PATCHOULI,
@@ -818,6 +880,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {32, 63, 0, 32, 0, 0},
         .nature = NATURE_ADAMANT,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 1,
     },
     {
         .species = SPECIES_PATCHOULI,
@@ -831,6 +894,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 32, 0, 0, 32},
         .nature = NATURE_BOLD,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_PATCHOULI,
@@ -844,6 +908,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {1, 0, 0, 63, 63, 0},
         .nature = NATURE_MODEST,
         .abilityFlags = 0 + (0 << 1) + (1 << 2),
+        .tier = 3,
     },
     {
         .species = SPECIES_APATCHOULI,
@@ -857,6 +922,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 32, 0, 0, 32},
         .nature = NATURE_CALM,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_APATCHOULI,
@@ -870,6 +936,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {32, 0, 0, 32, 63, 0},
         .nature = NATURE_MODEST,
         .abilityFlags = 1 + (1 << 1) + (0 << 2),
+        .tier = 3,
     },
     {
         .species = SPECIES_DPATCHOULI,
@@ -883,6 +950,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 32, 0, 0, 32},
         .nature = NATURE_RELAXED,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 1,
     },
     {
         .species = SPECIES_DPATCHOULI,
@@ -896,6 +964,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 1, 0, 63, 0},
         .nature = NATURE_QUIET,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_CSAKUYA,
@@ -909,6 +978,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 32, 32, 0, 0, 0},
         .nature = NATURE_ADAMANT,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 0,
     },
     {
         .species = SPECIES_SAKUYA,
@@ -922,6 +992,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {32, 32, 0, 63, 0, 0},
         .nature = NATURE_JOLLY,
         .abilityFlags = 1 + (0 << 1) + (0 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_SAKUYA,
@@ -935,6 +1006,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {1, 63, 0, 63, 0, 0},
         .nature = NATURE_JOLLY,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 3,
     },
     {
         .species = SPECIES_TSAKUYA,
@@ -948,6 +1020,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 32, 0, 0, 32, 0},
         .nature = NATURE_QUIET,
         .abilityFlags = 1 + (0 << 1) + (0 << 2),
+        .tier = 1,
     },
     {
         .species = SPECIES_TSAKUYA,
@@ -961,6 +1034,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 32, 0, 0, 32, 0},
         .nature = NATURE_BRAVE,
         .abilityFlags = 1 + (0 << 1) + (0 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_HSAKUYA,
@@ -974,6 +1048,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 32, 0, 0, 32},
         .nature = NATURE_RELAXED,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 1,
     },
     {
         .species = SPECIES_HSAKUYA,
@@ -987,6 +1062,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 32, 32, 0, 0, 0},
         .nature = NATURE_IMPISH,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_CREMILIA,
@@ -1000,6 +1076,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {0, 32, 0, 63, 32, 0},
         .nature = NATURE_HARDY,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 0,
     },
     {
         .species = SPECIES_REMILIA,
@@ -1013,6 +1090,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {1, 0, 0, 63, 63, 0},
         .nature = NATURE_TIMID,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_REMILIA,
@@ -1026,6 +1104,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {1, 63, 0, 63, 0, 0},
         .nature = NATURE_JOLLY,
         .abilityFlags = 0 + (0 << 1) + (1 << 2),
+        .tier = 3,
     },
     {
         .species = SPECIES_AREMILIA,
@@ -1039,6 +1118,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {1, 63, 0, 63, 0, 0},
         .nature = NATURE_JOLLY,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_AREMILIA,
@@ -1052,6 +1132,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {1, 63, 0, 63, 0, 0},
         .nature = NATURE_JOLLY,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 3,
     },
     {
         .species = SPECIES_DREMILIA,
@@ -1065,6 +1146,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 1, 63, 0, 0},
         .nature = NATURE_JOLLY,
         .abilityFlags = 1 + (0 << 1) + (0 << 2),
+        .tier = 1,
     },
     {
         .species = SPECIES_DREMILIA,
@@ -1078,6 +1160,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 32, 0, 0, 32},
         .nature = NATURE_IMPISH,
         .abilityFlags = 1 + (0 << 1) + (0 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_CFLANDRE,
@@ -1091,6 +1174,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {0, 63, 0, 1, 63, 0},
         .nature = NATURE_HARDY,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 0,
     },
     {
         .species = SPECIES_FLANDRE,
@@ -1104,6 +1188,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 32, 0, 32, 0, 0},
         .nature = NATURE_JOLLY,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 1,
     },
     {
         .species = SPECIES_FLANDRE,
@@ -1117,6 +1202,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 32, 0, 0, 0, 32},
         .nature = NATURE_CAREFUL,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_AFLANDRE,
@@ -1130,6 +1216,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {1, 63, 0, 63, 0, 0},
         .nature = NATURE_ADAMANT,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_AFLANDRE,
@@ -1143,6 +1230,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {1, 63, 0, 63, 0, 0},
         .nature = NATURE_ADAMANT,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 3,
     },
     {
         .species = SPECIES_SFLANDRE,
@@ -1156,6 +1244,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {0, 32, 0, 63, 32, 0},
         .nature = NATURE_HASTY,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_SFLANDRE,
@@ -1169,6 +1258,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {0, 32, 0, 63, 32, 0},
         .nature = NATURE_NAIVE,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 3,
     },
     {
         .species = SPECIES_CLETTY,
@@ -1182,6 +1272,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 32, 0, 0, 32, 0},
         .nature = NATURE_QUIET,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 0,
     },
     {
         .species = SPECIES_LETTY,
@@ -1195,6 +1286,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {0, 32, 0, 63, 32, 0},
         .nature = NATURE_NAIVE,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_LETTY,
@@ -1208,6 +1300,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {32, 0, 0, 32, 63, 0},
         .nature = NATURE_MODEST,
         .abilityFlags = 1 + (0 << 1) + (1 << 2),
+        .tier = 3,
     },
     {
         .species = SPECIES_DLETTY,
@@ -1221,6 +1314,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 32, 0, 0, 0, 32},
         .nature = NATURE_CAREFUL,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_DLETTY,
@@ -1234,6 +1328,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 32, 0, 0, 32},
         .nature = NATURE_BOLD,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 3,
     },
     {
         .species = SPECIES_HLETTY,
@@ -1247,6 +1342,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 0, 63, 1, 0},
         .nature = NATURE_TIMID,
         .abilityFlags = 1 + (1 << 1) + (0 << 2),
+        .tier = 1,
     },
     {
         .species = SPECIES_HLETTY,
@@ -1260,6 +1356,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {1, 0, 0, 63, 63, 0},
         .nature = NATURE_TIMID,
         .abilityFlags = 1 + (1 << 1) + (0 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_ADLETTY,
@@ -1273,6 +1370,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {32, 63, 0, 32, 0, 0},
         .nature = NATURE_ADAMANT,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_ADLETTY,
@@ -1286,6 +1384,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 63, 1, 0, 0, 0},
         .nature = NATURE_ADAMANT,
         .abilityFlags = 1 + (0 << 1) + (1 << 2),
+        .tier = 3,
     },
     {
         .species = SPECIES_CCHEN,
@@ -1299,6 +1398,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {1, 63, 0, 63, 0, 0},
         .nature = NATURE_JOLLY,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 0,
     },
     {
         .species = SPECIES_CHEN,
@@ -1312,6 +1412,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {1, 63, 0, 63, 0, 0},
         .nature = NATURE_JOLLY,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_CHEN,
@@ -1325,6 +1426,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {1, 63, 0, 63, 0, 0},
         .nature = NATURE_ADAMANT,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 3,
     },
     {
         .species = SPECIES_ACHEN,
@@ -1338,6 +1440,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {1, 63, 0, 63, 0, 0},
         .nature = NATURE_ADAMANT,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_ACHEN,
@@ -1351,6 +1454,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {32, 63, 0, 32, 0, 0},
         .nature = NATURE_ADAMANT,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 3,
     },
     {
         .species = SPECIES_TCHEN,
@@ -1364,6 +1468,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {0, 32, 0, 63, 32, 0},
         .nature = NATURE_NAIVE,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 1,
     },
     {
         .species = SPECIES_TCHEN,
@@ -1377,6 +1482,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {1, 63, 0, 63, 0, 0},
         .nature = NATURE_ADAMANT,
         .abilityFlags = 0 + (0 << 1) + (1 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_TCHEN,
@@ -1390,6 +1496,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {1, 63, 0, 63, 0, 0},
         .nature = NATURE_ADAMANT,
         .abilityFlags = 0 + (0 << 1) + (1 << 2),
+        .tier = 3,
     },
     {
         .species = SPECIES_ADCHEN,
@@ -1403,6 +1510,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {1, 63, 0, 63, 0, 0},
         .nature = NATURE_JOLLY,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 1,
     },
     {
         .species = SPECIES_ADCHEN,
@@ -1416,6 +1524,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {1, 63, 0, 63, 0, 0},
         .nature = NATURE_JOLLY,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_CALICE,
@@ -1429,6 +1538,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 32, 0, 32, 0},
         .nature = NATURE_BOLD,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 0,
     },
     {
         .species = SPECIES_ALICE,
@@ -1442,6 +1552,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 1, 0, 63, 0},
         .nature = NATURE_QUIET,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 1,
     },
     {
         .species = SPECIES_ALICE,
@@ -1455,6 +1566,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 32, 0, 32, 0},
         .nature = NATURE_BOLD,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_AALICE,
@@ -1468,6 +1580,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {1, 0, 0, 63, 63, 0},
         .nature = NATURE_MODEST,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_AALICE,
@@ -1481,6 +1594,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {0, 32, 0, 63, 32, 0},
         .nature = NATURE_NAIVE,
         .abilityFlags = 0 + (0 << 1) + (1 << 2),
+        .tier = 3,
     },
     {
         .species = SPECIES_TALICE,
@@ -1494,6 +1608,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {1, 63, 0, 63, 0, 0},
         .nature = NATURE_ADAMANT,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 1,
     },
     {
         .species = SPECIES_TALICE,
@@ -1507,6 +1622,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {1, 63, 0, 63, 0, 0},
         .nature = NATURE_JOLLY,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_TALICE,
@@ -1520,6 +1636,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {1, 63, 0, 63, 0, 0},
         .nature = NATURE_JOLLY,
         .abilityFlags = 0 + (0 << 1) + (1 << 2),
+        .tier = 3,
     },
     {
         .species = SPECIES_ADALICE,
@@ -1533,6 +1650,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 63, 0, 0, 1},
         .nature = NATURE_BOLD,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 1,
     },
     {
         .species = SPECIES_ADALICE,
@@ -1546,6 +1664,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 32, 0, 0, 32},
         .nature = NATURE_CALM,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_DARK_ALICE,
@@ -1559,6 +1678,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {32, 0, 0, 32, 63, 0},
         .nature = NATURE_MODEST,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 1,
     },
     {
         .species = SPECIES_DARK_ALICE,
@@ -1572,6 +1692,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 0, 32, 32, 0},
         .nature = NATURE_TIMID,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_DARK_ALICE,
@@ -1585,6 +1706,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {32, 0, 0, 32, 63, 0},
         .nature = NATURE_MODEST,
         .abilityFlags = 0 + (1 << 1) + (0 << 2),
+        .tier = 3,
     },
     {
         .species = SPECIES_CLILYWHITE,
@@ -1598,6 +1720,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 0, 0, 32, 32},
         .nature = NATURE_MODEST,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 0,
     },
     {
         .species = SPECIES_LILYWHITE,
@@ -1611,6 +1734,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {32, 32, 0, 0, 63, 0},
         .nature = NATURE_QUIET,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 1,
     },
     {
         .species = SPECIES_LILYWHITE,
@@ -1624,6 +1748,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 32, 0, 0, 32},
         .nature = NATURE_SASSY,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_ALILYWHITE,
@@ -1637,6 +1762,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {32, 63, 0, 0, 0, 32},
         .nature = NATURE_ADAMANT,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 1,
     },
     {
         .species = SPECIES_ALILYWHITE,
@@ -1650,6 +1776,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 32, 0, 0, 0, 32},
         .nature = NATURE_CAREFUL,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_HLILYWHITE,
@@ -1663,6 +1790,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {32, 32, 0, 0, 63, 0},
         .nature = NATURE_RASH,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 1,
     },
     {
         .species = SPECIES_HLILYWHITE,
@@ -1676,6 +1804,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 32, 32, 0, 0},
         .nature = NATURE_BOLD,
         .abilityFlags = 1 + (1 << 1) + (0 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_CLILYBLACK,
@@ -1689,6 +1818,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {0, 63, 0, 1, 63, 0},
         .nature = NATURE_NAUGHTY,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 0,
     },
     {
         .species = SPECIES_LILYBLACK,
@@ -1702,6 +1832,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {0, 63, 0, 32, 32, 0},
         .nature = NATURE_NAUGHTY,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 1,
     },
     {
         .species = SPECIES_LILYBLACK,
@@ -1715,6 +1846,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 32, 32, 0, 0, 0},
         .nature = NATURE_IMPISH,
         .abilityFlags = 1 + (1 << 1) + (0 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_LILYBLACK,
@@ -1728,6 +1860,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 0, 0, 32, 32},
         .nature = NATURE_CALM,
         .abilityFlags = 1 + (1 << 1) + (0 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_ALILYBLACK,
@@ -1741,6 +1874,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {1, 63, 0, 63, 0, 0},
         .nature = NATURE_JOLLY,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_ALILYBLACK,
@@ -1754,6 +1888,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {1, 63, 0, 63, 0, 0},
         .nature = NATURE_ADAMANT,
         .abilityFlags = 1 + (1 << 1) + (0 << 2),
+        .tier = 3,
     },
     {
         .species = SPECIES_SLILYBLACK,
@@ -1767,6 +1902,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {32, 0, 0, 32, 63, 0},
         .nature = NATURE_MODEST,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 1,
     },
     {
         .species = SPECIES_SLILYBLACK,
@@ -1780,6 +1916,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {32, 0, 0, 32, 63, 0},
         .nature = NATURE_MODEST,
         .abilityFlags = 1 + (1 << 1) + (0 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_CLUNASA,
@@ -1793,6 +1930,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 32, 0, 0, 32},
         .nature = NATURE_IMPISH,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 0,
     },
     {
         .species = SPECIES_LUNASA,
@@ -1806,6 +1944,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 32, 0, 0, 32},
         .nature = NATURE_BOLD,
         .abilityFlags = 1 + (1 << 1) + (0 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_LUNASA,
@@ -1819,6 +1958,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 32, 0, 0, 32},
         .nature = NATURE_BOLD,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_HLUNASA,
@@ -1832,6 +1972,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 63, 0, 0, 0, 1},
         .nature = NATURE_ADAMANT,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 1,
     },
     {
         .species = SPECIES_HLUNASA,
@@ -1845,6 +1986,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 32, 0, 0, 32},
         .nature = NATURE_CAREFUL,
         .abilityFlags = 1 + (1 << 1) + (0 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_CMERLIN,
@@ -1858,6 +2000,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {32, 0, 0, 32, 63, 0},
         .nature = NATURE_MODEST,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 0,
     },
     {
         .species = SPECIES_MERLIN,
@@ -1871,6 +2014,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 0, 32, 32, 0},
         .nature = NATURE_TIMID,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 1,
     },
     {
         .species = SPECIES_MERLIN,
@@ -1884,6 +2028,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {32, 0, 0, 32, 63, 0},
         .nature = NATURE_MODEST,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_HMERLIN,
@@ -1897,6 +2042,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 0, 0, 32, 32},
         .nature = NATURE_CALM,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 1,
     },
     {
         .species = SPECIES_HMERLIN,
@@ -1910,6 +2056,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 32, 0, 32, 0},
         .nature = NATURE_BOLD,
         .abilityFlags = 0 + (0 << 1) + (1 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_CLYRICA,
@@ -1923,6 +2070,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {32, 0, 0, 63, 32, 0},
         .nature = NATURE_TIMID,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 0,
     },
     {
         .species = SPECIES_LYRICA,
@@ -1936,6 +2084,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {1, 0, 0, 63, 63, 0},
         .nature = NATURE_MODEST,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 1,
     },
     {
         .species = SPECIES_LYRICA,
@@ -1949,6 +2098,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {32, 0, 0, 63, 32, 0},
         .nature = NATURE_TIMID,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_HLYRICA,
@@ -1962,6 +2112,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {32, 63, 0, 32, 0, 0},
         .nature = NATURE_ADAMANT,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 1,
     },
     {
         .species = SPECIES_HLYRICA,
@@ -1975,6 +2126,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {1, 63, 0, 63, 0, 0},
         .nature = NATURE_ADAMANT,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_CYOUMU,
@@ -1988,6 +2140,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {1, 63, 63, 0, 0, 0},
         .nature = NATURE_ADAMANT,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 0,
     },
     {
         .species = SPECIES_YOUMU,
@@ -2001,6 +2154,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {32, 63, 0, 0, 0, 32},
         .nature = NATURE_ADAMANT,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 1,
     },
     {
         .species = SPECIES_YOUMU,
@@ -2014,6 +2168,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {32, 63, 0, 32, 0, 0},
         .nature = NATURE_ADAMANT,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_AYOUMU,
@@ -2027,6 +2182,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {1, 63, 0, 63, 0, 0},
         .nature = NATURE_ADAMANT,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_AYOUMU,
@@ -2040,6 +2196,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {0, 63, 0, 32, 32, 0},
         .nature = NATURE_LONELY,
         .abilityFlags = 0 + (0 << 1) + (1 << 2),
+        .tier = 3,
     },
     {
         .species = SPECIES_AYOUMU,
@@ -2053,6 +2210,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {0, 32, 0, 63, 32, 0},
         .nature = NATURE_NAIVE,
         .abilityFlags = 0 + (0 << 1) + (1 << 2),
+        .tier = 3,
     },
     {
         .species = SPECIES_DYOUMU,
@@ -2066,6 +2224,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 32, 32, 0, 0, 0},
         .nature = NATURE_IMPISH,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 1,
     },
     {
         .species = SPECIES_DYOUMU,
@@ -2079,6 +2238,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 0, 0, 32, 32},
         .nature = NATURE_CALM,
         .abilityFlags = 0 + (0 << 1) + (1 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_SYOUMU,
@@ -2092,6 +2252,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {32, 63, 0, 32, 0, 0},
         .nature = NATURE_ADAMANT,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_SYOUMU,
@@ -2105,6 +2266,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {1, 63, 0, 63, 0, 0},
         .nature = NATURE_JOLLY,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 3,
     },
     {
         .species = SPECIES_CYUYUKO,
@@ -2118,6 +2280,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {32, 0, 0, 32, 63, 0},
         .nature = NATURE_MODEST,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 0,
     },
     {
         .species = SPECIES_YUYUKO,
@@ -2131,6 +2294,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 32, 0, 32, 0},
         .nature = NATURE_BOLD,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_YUYUKO,
@@ -2144,6 +2308,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {32, 0, 0, 32, 63, 0},
         .nature = NATURE_MODEST,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 3,
     },
     {
         .species = SPECIES_AYUYUKO,
@@ -2157,6 +2322,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {0, 32, 0, 63, 32, 0},
         .nature = NATURE_HASTY,
         .abilityFlags = 0 + (1 << 1) + (0 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_AYUYUKO,
@@ -2170,6 +2336,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 1, 0, 63, 0},
         .nature = NATURE_MODEST,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 3,
     },
     {
         .species = SPECIES_DYUYUKO,
@@ -2183,6 +2350,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 32, 0, 0, 0, 32},
         .nature = NATURE_IMPISH,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_DYUYUKO,
@@ -2196,6 +2364,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 32, 0, 0, 32},
         .nature = NATURE_RELAXED,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 3,
     },
     {
         .species = SPECIES_CRAN,
@@ -2209,6 +2378,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {1, 63, 0, 63, 0, 0},
         .nature = NATURE_ADAMANT,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 0,
     },
     {
         .species = SPECIES_RAN,
@@ -2222,6 +2392,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {1, 63, 0, 63, 0, 0},
         .nature = NATURE_ADAMANT,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_RAN,
@@ -2235,6 +2406,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {0, 32, 0, 63, 32, 0},
         .nature = NATURE_NAIVE,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 3,
     },
     {
         .species = SPECIES_ARAN,
@@ -2248,6 +2420,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 0, 0, 32, 32},
         .nature = NATURE_CAREFUL,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 1,
     },
     {
         .species = SPECIES_ARAN,
@@ -2261,6 +2434,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 1, 0, 63, 0},
         .nature = NATURE_MODEST,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_ARAN,
@@ -2274,6 +2448,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {32, 0, 0, 32, 63, 0},
         .nature = NATURE_MODEST,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 3,
     },
     {
         .species = SPECIES_HRAN,
@@ -2287,6 +2462,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {32, 63, 0, 0, 32, 0},
         .nature = NATURE_LONELY,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 1,
     },
     {
         .species = SPECIES_HRAN,
@@ -2300,6 +2476,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 63, 0, 0, 1},
         .nature = NATURE_BOLD,
         .abilityFlags = 1 + (0 << 1) + (0 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_ADRAN,
@@ -2313,6 +2490,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {1, 63, 0, 63, 0, 0},
         .nature = NATURE_JOLLY,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 1,
     },
     {
         .species = SPECIES_ADRAN,
@@ -2326,6 +2504,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 63, 0, 0, 0, 1},
         .nature = NATURE_ADAMANT,
         .abilityFlags = 0 + (0 << 1) + (1 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_CYUKARI,
@@ -2339,6 +2518,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 32, 0, 0, 32},
         .nature = NATURE_BOLD,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 0,
     },
     {
         .species = SPECIES_YUKARI,
@@ -2352,6 +2532,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 1, 0, 63, 0},
         .nature = NATURE_MODEST,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 1,
     },
     {
         .species = SPECIES_YUKARI,
@@ -2365,6 +2546,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 63, 0, 0, 1},
         .nature = NATURE_BOLD,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_DYUKARI,
@@ -2378,6 +2560,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {0, 32, 0, 32, 63, 0},
         .nature = NATURE_RASH,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 1,
     },
     {
         .species = SPECIES_DYUKARI,
@@ -2391,6 +2574,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 0, 0, 32, 32},
         .nature = NATURE_MODEST,
         .abilityFlags = 1 + (1 << 1) + (0 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_TYUKARI,
@@ -2404,6 +2588,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {0, 32, 0, 32, 63, 0},
         .nature = NATURE_RASH,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 1,
     },
     {
         .species = SPECIES_TYUKARI,
@@ -2417,6 +2602,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {0, 63, 0, 32, 32, 0},
         .nature = NATURE_MILD,
         .abilityFlags = 0 + (1 << 1) + (0 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_ADYUKARI,
@@ -2430,6 +2616,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 32, 0, 0, 32},
         .nature = NATURE_SASSY,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_ADYUKARI,
@@ -2443,6 +2630,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 0, 1, 63, 0},
         .nature = NATURE_MODEST,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 3,
     },
     {
         .species = SPECIES_CSUIKA,
@@ -2456,6 +2644,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {1, 63, 63, 0, 0, 0},
         .nature = NATURE_HARDY,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 0,
     },
     {
         .species = SPECIES_SUIKA,
@@ -2469,6 +2658,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {32, 32, 0, 0, 0, 63},
         .nature = NATURE_CAREFUL,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 1,
     },
     {
         .species = SPECIES_SUIKA,
@@ -2482,6 +2672,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {32, 63, 32, 0, 0, 0},
         .nature = NATURE_ADAMANT,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_SUIKA,
@@ -2495,6 +2686,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {1, 63, 63, 0, 0, 0},
         .nature = NATURE_ADAMANT,
         .abilityFlags = 1 + (1 << 1) + (0 << 2),
+        .tier = 3,
     },
     {
         .species = SPECIES_ASUIKA,
@@ -2508,6 +2700,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {0, 32, 0, 63, 32, 0},
         .nature = NATURE_NAIVE,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_ASUIKA,
@@ -2521,6 +2714,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {1, 63, 0, 63, 0, 0},
         .nature = NATURE_ADAMANT,
         .abilityFlags = 1 + (1 << 1) + (0 << 2),
+        .tier = 3,
     },
     {
         .species = SPECIES_TSUIKA,
@@ -2534,6 +2728,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {0, 32, 0, 63, 32, 0},
         .nature = NATURE_HASTY,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_TSUIKA,
@@ -2547,6 +2742,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {0, 32, 0, 63, 32, 0},
         .nature = NATURE_NAIVE,
         .abilityFlags = 1 + (1 << 1) + (0 << 2),
+        .tier = 3,
     },
     {
         .species = SPECIES_MPSUIKA,
@@ -2560,6 +2756,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 32, 0, 0, 0, 32},
         .nature = NATURE_CAREFUL,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 1,
     },
     {
         .species = SPECIES_MPSUIKA,
@@ -2573,6 +2770,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {32, 63, 0, 32, 0, 0},
         .nature = NATURE_ADAMANT,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_CWRIGGLE,
@@ -2586,6 +2784,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {32, 63, 0, 32, 0, 0},
         .nature = NATURE_HARDY,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 0,
     },
     {
         .species = SPECIES_WRIGGLE,
@@ -2599,6 +2798,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {0, 32, 0, 32, 63, 0},
         .nature = NATURE_RASH,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 1,
     },
     {
         .species = SPECIES_WRIGGLE,
@@ -2612,6 +2812,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {1, 63, 0, 63, 0, 0},
         .nature = NATURE_JOLLY,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_WRIGGLE,
@@ -2625,6 +2826,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {1, 63, 0, 63, 0, 0},
         .nature = NATURE_ADAMANT,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 3,
     },
     {
         .species = SPECIES_DWRIGGLE,
@@ -2638,6 +2840,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 63, 1, 0, 0, 0},
         .nature = NATURE_ADAMANT,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 1,
     },
     {
         .species = SPECIES_DWRIGGLE,
@@ -2651,6 +2854,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 32, 32, 0, 0, 0},
         .nature = NATURE_IMPISH,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_SWRIGGLE,
@@ -2664,6 +2868,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 32, 0, 32, 0},
         .nature = NATURE_BOLD,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_SWRIGGLE,
@@ -2677,6 +2882,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {1, 0, 0, 63, 63, 0},
         .nature = NATURE_TIMID,
         .abilityFlags = 1 + (0 << 1) + (0 << 2),
+        .tier = 3,
     },
     {
         .species = SPECIES_CMYSTIA,
@@ -2690,6 +2896,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {0, 32, 0, 63, 32, 0},
         .nature = NATURE_NAIVE,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 0,
     },
     {
         .species = SPECIES_MYSTIA,
@@ -2703,6 +2910,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {1, 63, 0, 63, 0, 0},
         .nature = NATURE_ADAMANT,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 1,
     },
     {
         .species = SPECIES_MYSTIA,
@@ -2716,6 +2924,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {1, 63, 0, 63, 0, 0},
         .nature = NATURE_JOLLY,
         .abilityFlags = 0 + (0 << 1) + (1 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_AMYSTIA,
@@ -2729,6 +2938,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {1, 0, 0, 63, 63, 0},
         .nature = NATURE_MODEST,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_AMYSTIA,
@@ -2742,6 +2952,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {1, 0, 0, 63, 63, 0},
         .nature = NATURE_TIMID,
         .abilityFlags = 0 + (0 << 1) + (1 << 2),
+        .tier = 3,
     },
     {
         .species = SPECIES_HMYSTIA,
@@ -2755,6 +2966,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 1, 0, 0, 63},
         .nature = NATURE_CALM,
         .abilityFlags = 1 + (1 << 1) + (0 << 2),
+        .tier = 1,
     },
     {
         .species = SPECIES_HMYSTIA,
@@ -2768,6 +2980,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 32, 0, 0, 32},
         .nature = NATURE_CALM,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_HMYSTIA,
@@ -2781,6 +2994,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 32, 0, 32, 0},
         .nature = NATURE_BOLD,
         .abilityFlags = 0 + (0 << 1) + (1 << 2),
+        .tier = 3,
     },
     {
         .species = SPECIES_ADMYSTIA,
@@ -2794,6 +3008,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 1, 63, 0, 0},
         .nature = NATURE_TIMID,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 1,
     },
     {
         .species = SPECIES_ADMYSTIA,
@@ -2807,6 +3022,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 1, 63, 0, 0},
         .nature = NATURE_TIMID,
         .abilityFlags = 0 + (0 << 1) + (1 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_CKEINE,
@@ -2820,6 +3036,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 32, 0, 0, 32, 0},
         .nature = NATURE_BRAVE,
         .abilityFlags = 0 + (0 << 1) + (0 << 2),
+        .tier = 0,
     },
     {
         .species = SPECIES_KEINE,
@@ -2833,6 +3050,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {32, 0, 0, 32, 63, 0},
         .nature = NATURE_MODEST,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 1,
     },
     {
         .species = SPECIES_KEINE,
@@ -2846,6 +3064,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {1, 0, 0, 63, 63, 0},
         .nature = NATURE_MODEST,
         .abilityFlags = 0 + (0 << 1) + (1 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_AKEINE,
@@ -2859,6 +3078,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {32, 63, 0, 32, 0, 0},
         .nature = NATURE_ADAMANT,
         .abilityFlags = 1 + (0 << 1) + (0 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_AKEINE,
@@ -2872,6 +3092,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {1, 63, 0, 63, 0, 0},
         .nature = NATURE_JOLLY,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 3,
     },
     {
         .species = SPECIES_DKEINE,
@@ -2885,6 +3106,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 32, 0, 0, 32},
         .nature = NATURE_IMPISH,
         .abilityFlags = 1 + (0 << 1) + (0 << 2),
+        .tier = 1,
     },
     {
         .species = SPECIES_DKEINE,
@@ -2898,6 +3120,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 63, 1, 0, 0, 0},
         .nature = NATURE_ADAMANT,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_HKEINE,
@@ -2911,6 +3134,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 63, 0, 0, 1},
         .nature = NATURE_BOLD,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_HKEINE,
@@ -2924,6 +3148,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 32, 0, 32, 0},
         .nature = NATURE_BOLD,
         .abilityFlags = 0 + (1 << 1) + (0 << 2),
+        .tier = 3,
     },
     {
         .species = SPECIES_CTEWI,
@@ -2937,6 +3162,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {1, 63, 0, 63, 0, 0},
         .nature = NATURE_HARDY,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 0,
     },
     {
         .species = SPECIES_TEWI,
@@ -2950,6 +3176,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {1, 0, 0, 63, 63, 0},
         .nature = NATURE_TIMID,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 1,
     },
     {
         .species = SPECIES_TEWI,
@@ -2963,6 +3190,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {32, 63, 0, 32, 0, 0},
         .nature = NATURE_ADAMANT,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_ATEWI,
@@ -2976,6 +3204,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {32, 0, 0, 63, 32, 0},
         .nature = NATURE_TIMID,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_ATEWI,
@@ -2989,6 +3218,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {32, 0, 0, 63, 32, 0},
         .nature = NATURE_TIMID,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 3,
     },
     {
         .species = SPECIES_DTEWI,
@@ -3002,6 +3232,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 32, 0, 0, 32},
         .nature = NATURE_IMPISH,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 1,
     },
     {
         .species = SPECIES_DTEWI,
@@ -3015,6 +3246,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 32, 0, 0, 32},
         .nature = NATURE_CALM,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_ADTEWI,
@@ -3028,6 +3260,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {1, 0, 0, 63, 63, 0},
         .nature = NATURE_TIMID,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 1,
     },
     {
         .species = SPECIES_ADTEWI,
@@ -3041,6 +3274,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 63, 0, 0, 1},
         .nature = NATURE_BOLD,
         .abilityFlags = 0 + (1 << 1) + (0 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_CREISEN,
@@ -3054,6 +3288,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {1, 0, 0, 63, 63, 0},
         .nature = NATURE_TIMID,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 0,
     },
     {
         .species = SPECIES_REISEN,
@@ -3067,6 +3302,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {1, 0, 0, 63, 63, 0},
         .nature = NATURE_MODEST,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_REISEN,
@@ -3080,6 +3316,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {1, 0, 0, 63, 63, 0},
         .nature = NATURE_TIMID,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 3,
     },
     {
         .species = SPECIES_DREISEN,
@@ -3093,6 +3330,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 32, 0, 32, 0},
         .nature = NATURE_BOLD,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 1,
     },
     {
         .species = SPECIES_DREISEN,
@@ -3106,6 +3344,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 32, 0, 0, 32},
         .nature = NATURE_CALM,
         .abilityFlags = 0 + (0 << 1) + (1 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_DREISEN,
@@ -3119,6 +3358,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 32, 0, 0, 32},
         .nature = NATURE_CALM,
         .abilityFlags = 0 + (0 << 1) + (1 << 2),
+        .tier = 3,
     },
     {
         .species = SPECIES_TREISEN,
@@ -3132,6 +3372,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 0, 32, 32, 0},
         .nature = NATURE_TIMID,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 1,
     },
     {
         .species = SPECIES_TREISEN,
@@ -3145,6 +3386,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {32, 0, 0, 32, 63, 0},
         .nature = NATURE_MODEST,
         .abilityFlags = 1 + (0 << 1) + (0 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_ADREISEN,
@@ -3158,6 +3400,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {1, 0, 0, 63, 63, 0},
         .nature = NATURE_MODEST,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_ADREISEN,
@@ -3171,6 +3414,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {1, 0, 0, 63, 63, 0},
         .nature = NATURE_TIMID,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 3,
     },
     {
         .species = SPECIES_CEIRIN,
@@ -3184,6 +3428,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 1, 0, 0, 63},
         .nature = NATURE_CALM,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 0,
     },
     {
         .species = SPECIES_EIRIN,
@@ -3197,6 +3442,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 0, 0, 63, 1},
         .nature = NATURE_MODEST,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 1,
     },
     {
         .species = SPECIES_EIRIN,
@@ -3210,6 +3456,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 32, 0, 0, 32},
         .nature = NATURE_CALM,
         .abilityFlags = 1 + (0 << 1) + (1 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_AEIRIN,
@@ -3223,6 +3470,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {32, 32, 0, 0, 0, 63},
         .nature = NATURE_CAREFUL,
         .abilityFlags = 1 + (1 << 1) + (0 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_AEIRIN,
@@ -3236,6 +3484,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {32, 63, 0, 32, 0, 0},
         .nature = NATURE_ADAMANT,
         .abilityFlags = 0 + (0 << 1) + (1 << 2),
+        .tier = 3,
     },
     {
         .species = SPECIES_HEIRIN,
@@ -3249,6 +3498,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {32, 0, 63, 0, 32, 0},
         .nature = NATURE_BOLD,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_HEIRIN,
@@ -3262,6 +3512,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {0, 0, 0, 32, 63, 32},
         .nature = NATURE_TIMID,
         .abilityFlags = 1 + (1 << 1) + (0 << 2),
+        .tier = 3,
     },
     {
         .species = SPECIES_CKAGUYA,
@@ -3275,6 +3526,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {0, 0, 63, 0, 1, 63},
         .nature = NATURE_BOLD,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 0,
     },
     {
         .species = SPECIES_KAGUYA,
@@ -3288,6 +3540,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 1, 0, 63, 0},
         .nature = NATURE_MODEST,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 1,
     },
     {
         .species = SPECIES_KAGUYA,
@@ -3301,6 +3554,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 63, 0, 0, 1},
         .nature = NATURE_SASSY,
         .abilityFlags = 1 + (1 << 1) + (0 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_KAGUYA,
@@ -3314,6 +3568,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {0, 0, 63, 0, 1, 63},
         .nature = NATURE_BOLD,
         .abilityFlags = 1 + (1 << 1) + (0 << 2),
+        .tier = 3,
     },
     {
         .species = SPECIES_AKAGUYA,
@@ -3327,6 +3582,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {0, 32, 0, 63, 32, 0},
         .nature = NATURE_NAIVE,
         .abilityFlags = 1 + (1 << 1) + (0 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_AKAGUYA,
@@ -3340,6 +3596,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {0, 32, 0, 63, 32, 0},
         .nature = NATURE_HASTY,
         .abilityFlags = 1 + (1 << 1) + (0 << 2),
+        .tier = 3,
     },
     {
         .species = SPECIES_DKAGUYA,
@@ -3353,6 +3610,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 1, 0, 0, 63},
         .nature = NATURE_CALM,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_DKAGUYA,
@@ -3366,6 +3624,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {0, 0, 63, 0, 32, 32},
         .nature = NATURE_BOLD,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 3,
     },
     {
         .species = SPECIES_CMOKOU,
@@ -3379,6 +3638,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 63, 1, 0, 0, 0},
         .nature = NATURE_ADAMANT,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 0,
     },
     {
         .species = SPECIES_MOKOU,
@@ -3392,6 +3652,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {1, 63, 0, 63, 0, 0},
         .nature = NATURE_ADAMANT,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_MOKOU,
@@ -3405,6 +3666,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {32, 32, 0, 0, 0, 63},
         .nature = NATURE_CAREFUL,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 3,
     },
     {
         .species = SPECIES_AMOKOU,
@@ -3418,6 +3680,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {0, 32, 0, 32, 63, 0},
         .nature = NATURE_RASH,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 1,
     },
     {
         .species = SPECIES_AMOKOU,
@@ -3431,6 +3694,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {0, 32, 0, 32, 63, 0},
         .nature = NATURE_MILD,
         .abilityFlags = 0 + (0 << 1) + (1 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_DMOKOU,
@@ -3444,6 +3708,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 32, 0, 0, 32},
         .nature = NATURE_BOLD,
         .abilityFlags = 1 + (1 << 1) + (0 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_DMOKOU,
@@ -3457,6 +3722,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 1, 0, 0, 63},
         .nature = NATURE_CAREFUL,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 3,
     },
     {
         .species = SPECIES_ADMOKOU,
@@ -3470,6 +3736,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {0, 32, 0, 32, 0, 63},
         .nature = NATURE_CAREFUL,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 1,
     },
     {
         .species = SPECIES_ADMOKOU,
@@ -3483,6 +3750,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {1, 63, 0, 63, 0, 0},
         .nature = NATURE_ADAMANT,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_ADMOKOU,
@@ -3496,6 +3764,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {1, 63, 0, 63, 0, 0},
         .nature = NATURE_JOLLY,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 3,
     },
     {
         .species = SPECIES_CAYA,
@@ -3509,6 +3778,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {32, 32, 0, 63, 0, 0},
         .nature = NATURE_JOLLY,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 0,
     },
     {
         .species = SPECIES_AYA,
@@ -3522,6 +3792,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 1, 0, 0, 63},
         .nature = NATURE_CAREFUL,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 1,
     },
     {
         .species = SPECIES_AYA,
@@ -3535,6 +3806,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 63, 0, 1, 0, 0},
         .nature = NATURE_ADAMANT,
         .abilityFlags = 1 + (1 << 1) + (0 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_SAYA,
@@ -3548,6 +3820,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {32, 63, 0, 0, 32, 0},
         .nature = NATURE_NAUGHTY,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_SAYA,
@@ -3561,6 +3834,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {32, 63, 32, 0, 0, 0},
         .nature = NATURE_ADAMANT,
         .abilityFlags = 1 + (1 << 1) + (0 << 2),
+        .tier = 3,
     },
     {
         .species = SPECIES_TAYA,
@@ -3574,6 +3848,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {32, 0, 0, 32, 63, 0},
         .nature = NATURE_MODEST,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_TAYA,
@@ -3587,6 +3862,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {32, 63, 0, 32, 0, 0},
         .nature = NATURE_ADAMANT,
         .abilityFlags = 1 + (1 << 1) + (0 << 2),
+        .tier = 3,
     },
     {
         .species = SPECIES_CMEDICINE,
@@ -3600,6 +3876,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 1, 0, 0, 63},
         .nature = NATURE_CALM,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 0,
     },
     {
         .species = SPECIES_MEDICINE,
@@ -3613,6 +3890,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 32, 0, 32, 0},
         .nature = NATURE_MODEST,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 1,
     },
     {
         .species = SPECIES_MEDICINE,
@@ -3626,6 +3904,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 32, 0, 0, 32},
         .nature = NATURE_BOLD,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_AMEDICINE,
@@ -3639,6 +3918,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {32, 0, 0, 63, 32, 0},
         .nature = NATURE_TIMID,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_AMEDICINE,
@@ -3652,6 +3932,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {1, 0, 0, 63, 63, 0},
         .nature = NATURE_MODEST,
         .abilityFlags = 0 + (0 << 1) + (1 << 2),
+        .tier = 3,
     },
     {
         .species = SPECIES_SMEDICINE,
@@ -3665,6 +3946,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {1, 0, 0, 63, 63, 0},
         .nature = NATURE_TIMID,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_SMEDICINE,
@@ -3678,6 +3960,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 0, 63, 1, 0},
         .nature = NATURE_TIMID,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 3,
     },
     {
         .species = SPECIES_TMEDICINE,
@@ -3691,6 +3974,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {1, 0, 0, 63, 63, 0},
         .nature = NATURE_MODEST,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_TMEDICINE,
@@ -3704,6 +3988,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 32, 0, 0, 32},
         .nature = NATURE_CALM,
         .abilityFlags = 0 + (0 << 1) + (1 << 2),
+        .tier = 3,
     },
     {
         .species = SPECIES_CYUUKA,
@@ -3717,6 +4002,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 32, 0, 0, 32},
         .nature = NATURE_IMPISH,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 0,
     },
     {
         .species = SPECIES_YUUKA,
@@ -3730,6 +4016,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 63, 1, 0, 0, 0},
         .nature = NATURE_ADAMANT,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_YUUKA,
@@ -3743,6 +4030,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 32, 0, 0, 0, 32},
         .nature = NATURE_CAREFUL,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 3,
     },
     {
         .species = SPECIES_AYUUKA,
@@ -3756,6 +4044,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {0, 63, 0, 1, 63, 0},
         .nature = NATURE_MILD,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 1,
     },
     {
         .species = SPECIES_AYUUKA,
@@ -3769,6 +4058,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {0, 32, 0, 32, 63, 0},
         .nature = NATURE_NAIVE,
         .abilityFlags = 0 + (0 << 1) + (1 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_TYUUKA,
@@ -3782,6 +4072,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {32, 0, 0, 32, 63, 0},
         .nature = NATURE_MODEST,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 1,
     },
     {
         .species = SPECIES_TYUUKA,
@@ -3795,6 +4086,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {1, 0, 0, 63, 63, 0},
         .nature = NATURE_TIMID,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_CKOMACHI,
@@ -3808,6 +4100,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 1, 0, 0, 63},
         .nature = NATURE_HARDY,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 0,
     },
     {
         .species = SPECIES_KOMACHI,
@@ -3821,6 +4114,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {1, 0, 0, 0, 63, 63},
         .nature = NATURE_CAREFUL,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 1,
     },
     {
         .species = SPECIES_KOMACHI,
@@ -3834,6 +4128,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 32, 0, 32, 0},
         .nature = NATURE_BOLD,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_AKOMACHI,
@@ -3847,6 +4142,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {32, 63, 0, 32, 0, 0},
         .nature = NATURE_ADAMANT,
         .abilityFlags = 0 + (1 << 1) + (0 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_AKOMACHI,
@@ -3860,6 +4156,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {32, 63, 0, 32, 0, 0},
         .nature = NATURE_ADAMANT,
         .abilityFlags = 0 + (0 << 1) + (1 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_AKOMACHI,
@@ -3873,6 +4170,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {32, 63, 0, 0, 0, 32},
         .nature = NATURE_ADAMANT,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 3,
     },
     {
         .species = SPECIES_SKOMACHI,
@@ -3886,6 +4184,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 1, 0, 63, 0, 0},
         .nature = NATURE_JOLLY,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_SKOMACHI,
@@ -3899,6 +4198,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {1, 63, 0, 63, 0, 0},
         .nature = NATURE_JOLLY,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 3,
     },
     {
         .species = SPECIES_CEIKI,
@@ -3912,6 +4212,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 0, 0, 63, 1},
         .nature = NATURE_MODEST,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 0,
     },
     {
         .species = SPECIES_EIKI,
@@ -3925,6 +4226,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 32, 32, 0, 0},
         .nature = NATURE_BOLD,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_EIKI,
@@ -3938,6 +4240,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {1, 0, 0, 63, 63, 0},
         .nature = NATURE_TIMID,
         .abilityFlags = 1 + (1 << 1) + (0 << 2),
+        .tier = 3,
     },
     {
         .species = SPECIES_AEIKI,
@@ -3951,6 +4254,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 0, 32, 32, 0},
         .nature = NATURE_TIMID,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_AEIKI,
@@ -3964,6 +4268,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {1, 0, 0, 63, 63, 0},
         .nature = NATURE_MODEST,
         .abilityFlags = 1 + (1 << 1) + (0 << 2),
+        .tier = 3,
     },
     {
         .species = SPECIES_DEIKI,
@@ -3977,6 +4282,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 0, 0, 63, 1},
         .nature = NATURE_MODEST,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 1,
     },
     {
         .species = SPECIES_DEIKI,
@@ -3990,6 +4296,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 32, 0, 0, 32},
         .nature = NATURE_BOLD,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_DEIKI,
@@ -4003,6 +4310,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 32, 0, 0, 32},
         .nature = NATURE_CALM,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 3,
     },
     {
         .species = SPECIES_AKYUU,
@@ -4016,6 +4324,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {0, 63, 0, 1, 63, 0},
         .nature = NATURE_HASTY,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 0,
     },
     {
         .species = SPECIES_AKYUU,
@@ -4029,6 +4338,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 0, 63, 0, 1},
         .nature = NATURE_TIMID,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 1,
     },
     {
         .species = SPECIES_AKYUU,
@@ -4042,6 +4352,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 0, 63, 0, 1},
         .nature = NATURE_TIMID,
         .abilityFlags = 0 + (1 << 1) + (0 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_AKYUU,
@@ -4055,6 +4366,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 0, 63, 0, 1},
         .nature = NATURE_TIMID,
         .abilityFlags = 1 + (1 << 1) + (0 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_CSHIZUHA,
@@ -4068,6 +4380,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {32, 63, 0, 32, 0, 0},
         .nature = NATURE_ADAMANT,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 0,
     },
     {
         .species = SPECIES_SHIZUHA,
@@ -4081,6 +4394,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {32, 63, 0, 32, 0, 0},
         .nature = NATURE_JOLLY,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 1,
     },
     {
         .species = SPECIES_SHIZUHA,
@@ -4094,6 +4408,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {32, 63, 0, 32, 0, 0},
         .nature = NATURE_JOLLY,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_SSHIZUHA,
@@ -4107,6 +4422,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 0, 63, 1, 0},
         .nature = NATURE_TIMID,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 1,
     },
     {
         .species = SPECIES_SSHIZUHA,
@@ -4120,6 +4436,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {1, 0, 0, 63, 63, 0},
         .nature = NATURE_TIMID,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_HSHIZUHA,
@@ -4133,6 +4450,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 32, 0, 0, 32},
         .nature = NATURE_BOLD,
         .abilityFlags = 1 + (0 << 1) + (0 << 2),
+        .tier = 1,
     },
     {
         .species = SPECIES_HSHIZUHA,
@@ -4146,6 +4464,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 32, 0, 0, 32},
         .nature = NATURE_IMPISH,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_CMINORIKO,
@@ -4159,6 +4478,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {32, 0, 0, 32, 63, 0},
         .nature = NATURE_MODEST,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 0,
     },
     {
         .species = SPECIES_MINORIKO,
@@ -4172,6 +4492,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 32, 0, 0, 32},
         .nature = NATURE_BOLD,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 1,
     },
     {
         .species = SPECIES_MINORIKO,
@@ -4185,6 +4506,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {32, 0, 0, 32, 63, 0},
         .nature = NATURE_MODEST,
         .abilityFlags = 1 + (0 << 1) + (0 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_MINORIKO,
@@ -4198,6 +4520,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {1, 0, 0, 63, 63, 0},
         .nature = NATURE_MODEST,
         .abilityFlags = 0 + (0 << 1) + (1 << 2),
+        .tier = 3,
     },
     {
         .species = SPECIES_AMINORIKO,
@@ -4211,6 +4534,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 0, 0, 32, 32},
         .nature = NATURE_CALM,
         .abilityFlags = 0 + (1 << 1) + (0 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_AMINORIKO,
@@ -4224,6 +4548,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {1, 0, 0, 63, 63, 0},
         .nature = NATURE_MODEST,
         .abilityFlags = 1 + (0 << 1) + (0 << 2),
+        .tier = 3,
     },
     {
         .species = SPECIES_DMINORIKO,
@@ -4237,6 +4562,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 32, 0, 0, 32},
         .nature = NATURE_CALM,
         .abilityFlags = 0 + (1 << 1) + (0 << 2),
+        .tier = 1,
     },
     {
         .species = SPECIES_DMINORIKO,
@@ -4250,6 +4576,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 63, 0, 1, 0},
         .nature = NATURE_BOLD,
         .abilityFlags = 0 + (0 << 1) + (1 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_AKI_SISTERS,
@@ -4263,6 +4590,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {1, 63, 0, 63, 0, 0},
         .nature = NATURE_JOLLY,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 1,
     },
     {
         .species = SPECIES_AKI_SISTERS,
@@ -4276,6 +4604,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {32, 63, 0, 32, 0, 0},
         .nature = NATURE_ADAMANT,
         .abilityFlags = 1 + (0 << 1) + (0 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_AKI_SISTERS,
@@ -4289,6 +4618,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 32, 32, 0, 0, 0},
         .nature = NATURE_IMPISH,
         .abilityFlags = 0 + (1 << 1) + (0 << 2),
+        .tier = 3,
     },
     {
         .species = SPECIES_CHINA,
@@ -4302,6 +4632,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 32, 0, 0, 32},
         .nature = NATURE_SASSY,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 0,
     },
     {
         .species = SPECIES_HINA,
@@ -4315,6 +4646,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 0, 0, 32, 32},
         .nature = NATURE_SASSY,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 1,
     },
     {
         .species = SPECIES_HINA,
@@ -4328,6 +4660,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 1, 0, 63, 0},
         .nature = NATURE_MODEST,
         .abilityFlags = 1 + (1 << 1) + (0 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_HINA,
@@ -4341,6 +4674,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 63, 1, 0, 0, 0},
         .nature = NATURE_ADAMANT,
         .abilityFlags = 1 + (1 << 1) + (0 << 2),
+        .tier = 3,
     },
     {
         .species = SPECIES_AHINA,
@@ -4354,6 +4688,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 32, 0, 32, 0},
         .nature = NATURE_MODEST,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 1,
     },
     {
         .species = SPECIES_AHINA,
@@ -4367,6 +4702,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 1, 0, 63, 0},
         .nature = NATURE_MODEST,
         .abilityFlags = 1 + (1 << 1) + (0 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_DHINA,
@@ -4380,6 +4716,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 32, 0, 0, 32},
         .nature = NATURE_RELAXED,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_DHINA,
@@ -4393,6 +4730,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 63, 0, 0, 1},
         .nature = NATURE_SASSY,
         .abilityFlags = 1 + (1 << 1) + (0 << 2),
+        .tier = 3,
     },
     {
         .species = SPECIES_CNITORI,
@@ -4406,6 +4744,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {1, 0, 0, 63, 63, 0},
         .nature = NATURE_MODEST,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 0,
     },
     {
         .species = SPECIES_NITORI,
@@ -4419,6 +4758,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {1, 0, 0, 63, 63, 0},
         .nature = NATURE_TIMID,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_NITORI,
@@ -4432,6 +4772,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {32, 0, 0, 32, 63, 0},
         .nature = NATURE_MODEST,
         .abilityFlags = 1 + (0 << 1) + (0 << 2),
+        .tier = 3,
     },
     {
         .species = SPECIES_ANITORI,
@@ -4445,6 +4786,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 32, 0, 0, 0, 32},
         .nature = NATURE_CAREFUL,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 1,
     },
     {
         .species = SPECIES_ANITORI,
@@ -4458,6 +4800,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {32, 63, 0, 32, 0, 0},
         .nature = NATURE_ADAMANT,
         .abilityFlags = 1 + (0 << 1) + (0 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_TNITORI,
@@ -4471,6 +4814,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 63, 0, 0, 0, 1},
         .nature = NATURE_BRAVE,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 1,
     },
     {
         .species = SPECIES_TNITORI,
@@ -4484,6 +4828,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 32, 0, 0, 32},
         .nature = NATURE_CAREFUL,
         .abilityFlags = 0 + (1 << 1) + (0 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_TNITORI,
@@ -4497,6 +4842,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {32, 63, 0, 0, 0, 32},
         .nature = NATURE_ADAMANT,
         .abilityFlags = 0 + (0 << 1) + (1 << 2),
+        .tier = 3,
     },
     {
         .species = SPECIES_CMOMIJI,
@@ -4510,6 +4856,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {32, 63, 0, 32, 0, 0},
         .nature = NATURE_ADAMANT,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 0,
     },
     {
         .species = SPECIES_MOMIJI,
@@ -4523,6 +4870,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {32, 63, 0, 32, 0, 0},
         .nature = NATURE_ADAMANT,
         .abilityFlags = 1 + (1 << 1) + (0 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_MOMIJI,
@@ -4536,6 +4884,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {1, 63, 0, 63, 0, 0},
         .nature = NATURE_ADAMANT,
         .abilityFlags = 1 + (0 << 1) + (0 << 2),
+        .tier = 3,
     },
     {
         .species = SPECIES_MOMIJI,
@@ -4549,6 +4898,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {1, 63, 0, 63, 0, 0},
         .nature = NATURE_ADAMANT,
         .abilityFlags = 0 + (1 << 1) + (0 << 2),
+        .tier = 3,
     },
     {
         .species = SPECIES_DMOMIJI,
@@ -4562,6 +4912,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 32, 32, 0, 0, 0},
         .nature = NATURE_IMPISH,
         .abilityFlags = 0 + (0 << 1) + (1 << 2),
+        .tier = 1,
     },
     {
         .species = SPECIES_DMOMIJI,
@@ -4575,6 +4926,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 32, 0, 0, 32},
         .nature = NATURE_IMPISH,
         .abilityFlags = 0 + (1 << 1) + (0 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_DMOMIJI,
@@ -4588,6 +4940,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {32, 63, 0, 32, 0, 0},
         .nature = NATURE_ADAMANT,
         .abilityFlags = 1 + (0 << 1) + (0 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_CSANAE,
@@ -4601,6 +4954,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 32, 0, 32, 0},
         .nature = NATURE_BOLD,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 0,
     },
     {
         .species = SPECIES_SANAE,
@@ -4614,6 +4968,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {32, 0, 0, 32, 63, 0},
         .nature = NATURE_MODEST,
         .abilityFlags = 0 + (0 << 1) + (1 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_SANAE,
@@ -4627,6 +4982,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 32, 0, 32, 0},
         .nature = NATURE_BOLD,
         .abilityFlags = 1 + (1 << 1) + (0 << 2),
+        .tier = 3,
     },
     {
         .species = SPECIES_ASANAE,
@@ -4640,6 +4996,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 0, 32, 32, 0},
         .nature = NATURE_MODEST,
         .abilityFlags = 1 + (1 << 1) + (0 << 2),
+        .tier = 1,
     },
     {
         .species = SPECIES_ASANAE,
@@ -4653,6 +5010,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {32, 0, 0, 32, 63, 0},
         .nature = NATURE_MODEST,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_ASANAE,
@@ -4666,6 +5024,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {1, 0, 0, 63, 63, 0},
         .nature = NATURE_TIMID,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 3,
     },
     {
         .species = SPECIES_TSANAE,
@@ -4679,6 +5038,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {1, 0, 0, 63, 63, 0},
         .nature = NATURE_TIMID,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_TSANAE,
@@ -4692,6 +5052,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {32, 0, 0, 63, 32, 0},
         .nature = NATURE_TIMID,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 3,
     },
     {
         .species = SPECIES_JKSANAE,
@@ -4705,6 +5066,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {0, 63, 1, 63, 0, 0},
         .nature = NATURE_ADAMANT,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 1,
     },
     {
         .species = SPECIES_JKSANAE,
@@ -4718,6 +5080,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 32, 0, 32, 0},
         .nature = NATURE_BOLD,
         .abilityFlags = 1 + (1 << 1) + (0 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_JKSANAE,
@@ -4731,6 +5094,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {1, 0, 0, 63, 63, 0},
         .nature = NATURE_TIMID,
         .abilityFlags = 1 + (1 << 1) + (0 << 2),
+        .tier = 3,
     },
     {
         .species = SPECIES_CKANAKO,
@@ -4744,6 +5108,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 0, 0, 32, 32},
         .nature = NATURE_CALM,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 0,
     },
     {
         .species = SPECIES_KANAKO,
@@ -4757,6 +5122,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 0, 0, 63, 1},
         .nature = NATURE_MODEST,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 1,
     },
     {
         .species = SPECIES_KANAKO,
@@ -4770,6 +5136,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {32, 0, 0, 32, 63, 0},
         .nature = NATURE_MODEST,
         .abilityFlags = 0 + (1 << 1) + (1 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_KANAKO,
@@ -4783,6 +5150,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {32, 0, 63, 0, 32, 0},
         .nature = NATURE_BOLD,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 3,
     },
     {
         .species = SPECIES_AKANAKO,
@@ -4796,6 +5164,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 32, 0, 0, 32, 0},
         .nature = NATURE_BRAVE,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 1,
     },
     {
         .species = SPECIES_AKANAKO,
@@ -4809,6 +5178,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 0, 0, 63, 1},
         .nature = NATURE_MODEST,
         .abilityFlags = 1 + (0 << 1) + (1 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_AKANAKO,
@@ -4822,6 +5192,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {0, 32, 0, 32, 63, 0},
         .nature = NATURE_RASH,
         .abilityFlags = 1 + (0 << 1) + (1 << 2),
+        .tier = 3,
     },
     {
         .species = SPECIES_DKANAKO,
@@ -4835,6 +5206,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 32, 0, 0, 32},
         .nature = NATURE_RELAXED,
         .abilityFlags = 1 + (0 << 1) + (0 << 2),
+        .tier = 1,
     },
     {
         .species = SPECIES_DKANAKO,
@@ -4848,6 +5220,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 63, 0, 0, 1},
         .nature = NATURE_IMPISH,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_DKANAKO,
@@ -4861,6 +5234,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 32, 0, 0, 0, 32},
         .nature = NATURE_CAREFUL,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 3,
     },
     {
         .species = SPECIES_CSUWAKO,
@@ -4874,6 +5248,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {32, 0, 0, 32, 63, 0},
         .nature = NATURE_MODEST,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 0,
     },
     {
         .species = SPECIES_SUWAKO,
@@ -4887,6 +5262,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 0, 63, 1, 0},
         .nature = NATURE_TIMID,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_SUWAKO,
@@ -4900,6 +5276,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {1, 0, 0, 63, 63, 0},
         .nature = NATURE_TIMID,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 3,
     },
     {
         .species = SPECIES_ASUWAKO,
@@ -4913,6 +5290,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 32, 0, 0, 0, 32},
         .nature = NATURE_CAREFUL,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_ASUWAKO,
@@ -4926,6 +5304,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {32, 63, 0, 32, 0, 0},
         .nature = NATURE_ADAMANT,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 3,
     },
     {
         .species = SPECIES_DSUWAKO,
@@ -4939,6 +5318,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {0, 32, 0, 32, 63, 0},
         .nature = NATURE_HASTY,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 1,
     },
     {
         .species = SPECIES_DSUWAKO,
@@ -4952,6 +5332,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 63, 1, 0, 0, 0},
         .nature = NATURE_ADAMANT,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_DSUWAKO,
@@ -4965,6 +5346,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 1, 0, 0, 63},
         .nature = NATURE_CAREFUL,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 3,
     },
     {
         .species = SPECIES_CREISEN_II,
@@ -4978,6 +5360,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {0, 63, 0, 63, 0, 1},
         .nature = NATURE_JOLLY,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 0,
     },
     {
         .species = SPECIES_REISEN_II,
@@ -4991,6 +5374,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {32, 63, 0, 32, 0, 0},
         .nature = NATURE_ADAMANT,
         .abilityFlags = 0 + (0 << 1) + (1 << 2),
+        .tier = 1,
     },
     {
         .species = SPECIES_REISEN_II,
@@ -5004,6 +5388,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {1, 63, 0, 63, 0, 0},
         .nature = NATURE_JOLLY,
         .abilityFlags = 1 + (1 << 1) + (0 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_REISEN_II,
@@ -5017,6 +5402,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {1, 63, 0, 63, 0, 0},
         .nature = NATURE_JOLLY,
         .abilityFlags = 1 + (1 << 1) + (0 << 2),
+        .tier = 3,
     },
     {
         .species = SPECIES_CTOYOHIME,
@@ -5030,6 +5416,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 0, 0, 63, 1},
         .nature = NATURE_QUIET,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 0,
     },
     {
         .species = SPECIES_TOYOHIME,
@@ -5043,6 +5430,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 1, 0, 63, 0},
         .nature = NATURE_MODEST,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_TOYOHIME,
@@ -5056,6 +5444,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 32, 0, 32, 0},
         .nature = NATURE_BOLD,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 3,
     },
     {
         .species = SPECIES_TTOYOHIME,
@@ -5069,6 +5458,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 0, 0, 63, 1},
         .nature = NATURE_QUIET,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 1,
     },
     {
         .species = SPECIES_TTOYOHIME,
@@ -5082,6 +5472,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 0, 0, 63, 1},
         .nature = NATURE_MODEST,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_TTOYOHIME,
@@ -5095,6 +5486,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 0, 0, 32, 32},
         .nature = NATURE_CALM,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 3,
     },
     {
         .species = SPECIES_CYORIHIME,
@@ -5108,6 +5500,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {0, 32, 0, 32, 63, 0},
         .nature = NATURE_NAIVE,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 0,
     },
     {
         .species = SPECIES_YORIHIME,
@@ -5121,6 +5514,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {0, 63, 0, 32, 32, 0},
         .nature = NATURE_LONELY,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_YORIHIME,
@@ -5134,6 +5528,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {0, 63, 0, 63, 1, 0},
         .nature = NATURE_NAUGHTY,
         .abilityFlags = 0 + (0 << 1) + (1 << 2),
+        .tier = 3,
     },
     {
         .species = SPECIES_SYORIHIME,
@@ -5147,6 +5542,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {0, 63, 0, 63, 0, 1},
         .nature = NATURE_JOLLY,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 1,
     },
     {
         .species = SPECIES_SYORIHIME,
@@ -5160,6 +5556,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {1, 0, 0, 63, 63, 0},
         .nature = NATURE_TIMID,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_SYORIHIME,
@@ -5173,6 +5570,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {32, 0, 0, 63, 32, 0},
         .nature = NATURE_TIMID,
         .abilityFlags = 0 + (0 << 1) + (1 << 2),
+        .tier = 3,
     },
     {
         .species = SPECIES_CIKU,
@@ -5186,6 +5584,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 0, 0, 63, 1},
         .nature = NATURE_QUIET,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 0,
     },
     {
         .species = SPECIES_IKU,
@@ -5199,6 +5598,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {32, 0, 0, 32, 63, 0},
         .nature = NATURE_MODEST,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 1,
     },
     {
         .species = SPECIES_IKU,
@@ -5212,6 +5612,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 0, 0, 63, 1},
         .nature = NATURE_MODEST,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_DIKU,
@@ -5225,6 +5626,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 1, 0, 0, 63},
         .nature = NATURE_CALM,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_DIKU,
@@ -5238,6 +5640,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 32, 0, 0, 32},
         .nature = NATURE_BOLD,
         .abilityFlags = 0 + (1 << 1) + (0 << 2),
+        .tier = 3,
     },
     {
         .species = SPECIES_TIKU,
@@ -5251,6 +5654,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 0, 0, 63, 1},
         .nature = NATURE_MODEST,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 1,
     },
     {
         .species = SPECIES_TIKU,
@@ -5264,6 +5668,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 32, 32, 0, 0, 0},
         .nature = NATURE_IMPISH,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_TIKU,
@@ -5277,6 +5682,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {1, 63, 0, 63, 0, 0},
         .nature = NATURE_ADAMANT,
         .abilityFlags = 0 + (1 << 1) + (0 << 2),
+        .tier = 3,
     },
     {
         .species = SPECIES_CTENSHI,
@@ -5290,6 +5696,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {32, 63, 0, 32, 0, 0},
         .nature = NATURE_ADAMANT,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 0,
     },
     {
         .species = SPECIES_TENSHI,
@@ -5303,6 +5710,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 63, 0, 1, 0, 0},
         .nature = NATURE_ADAMANT,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 1,
     },
     {
         .species = SPECIES_TENSHI,
@@ -5316,6 +5724,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 32, 0, 32, 0, 0},
         .nature = NATURE_IMPISH,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_ATENSHI,
@@ -5329,6 +5738,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {1, 63, 0, 63, 0, 0},
         .nature = NATURE_ADAMANT,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_ATENSHI,
@@ -5342,6 +5752,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {0, 63, 1, 63, 0, 0},
         .nature = NATURE_TIMID,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 3,
     },
     {
         .species = SPECIES_DTENSHI,
@@ -5355,6 +5766,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 32, 0, 0, 32},
         .nature = NATURE_IMPISH,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 1,
     },
     {
         .species = SPECIES_DTENSHI,
@@ -5368,6 +5780,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 1, 0, 0, 63},
         .nature = NATURE_CALM,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_CKISUME,
@@ -5381,6 +5794,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 63, 0, 0, 1},
         .nature = NATURE_BOLD,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 0,
     },
     {
         .species = SPECIES_KISUME,
@@ -5394,6 +5808,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 63, 0, 0, 1},
         .nature = NATURE_IMPISH,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 1,
     },
     {
         .species = SPECIES_KISUME,
@@ -5407,6 +5822,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 0, 0, 63, 1},
         .nature = NATURE_QUIET,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_KISUME,
@@ -5420,6 +5836,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 32, 0, 0, 32},
         .nature = NATURE_BOLD,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 3,
     },
     {
         .species = SPECIES_TKISUME,
@@ -5433,6 +5850,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 0, 0, 63, 1},
         .nature = NATURE_QUIET,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_TKISUME,
@@ -5446,6 +5864,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {1, 0, 0, 63, 63, 0},
         .nature = NATURE_MODEST,
         .abilityFlags = 1 + (0 << 1) + (1 << 2),
+        .tier = 3,
     },
     {
         .species = SPECIES_CYAMAME,
@@ -5459,6 +5878,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 32, 0, 0, 32},
         .nature = NATURE_RELAXED,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 0,
     },
     {
         .species = SPECIES_YAMAME,
@@ -5472,6 +5892,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 32, 0, 0, 0, 32},
         .nature = NATURE_CAREFUL,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_YAMAME,
@@ -5485,6 +5906,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 63, 0, 0, 0, 1},
         .nature = NATURE_ADAMANT,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 3,
     },
     {
         .species = SPECIES_SYAMAME,
@@ -5498,6 +5920,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {1, 63, 0, 63, 0, 0},
         .nature = NATURE_ADAMANT,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_SYAMAME,
@@ -5511,6 +5934,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {1, 63, 0, 63, 0, 0},
         .nature = NATURE_JOLLY,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 3,
     },
     {
         .species = SPECIES_TYAMAME,
@@ -5524,6 +5948,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 0, 1, 63, 0},
         .nature = NATURE_MODEST,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 1,
     },
     {
         .species = SPECIES_TYAMAME,
@@ -5537,6 +5962,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {1, 0, 0, 63, 63, 0},
         .nature = NATURE_MODEST,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_CPARSEE,
@@ -5550,6 +5976,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 32, 0, 32, 0},
         .nature = NATURE_BOLD,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 0,
     },
     {
         .species = SPECIES_PARSEE,
@@ -5563,6 +5990,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {32, 0, 0, 63, 32, 0},
         .nature = NATURE_TIMID,
         .abilityFlags = 0 + (1 << 1) + (0 << 2),
+        .tier = 1,
     },
     {
         .species = SPECIES_PARSEE,
@@ -5576,6 +6004,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {1, 0, 0, 63, 63, 0},
         .nature = NATURE_TIMID,
         .abilityFlags = 1 + (0 << 1) + (0 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_DPARSEE,
@@ -5589,6 +6018,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 63, 0, 0, 1},
         .nature = NATURE_BOLD,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 1,
     },
     {
         .species = SPECIES_DPARSEE,
@@ -5602,6 +6032,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 32, 0, 0, 32},
         .nature = NATURE_BOLD,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_TPARSEE,
@@ -5615,6 +6046,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 32, 0, 0, 32},
         .nature = NATURE_BOLD,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 1,
     },
     {
         .species = SPECIES_TPARSEE,
@@ -5628,6 +6060,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 1, 0, 0, 63},
         .nature = NATURE_CALM,
         .abilityFlags = 1 + (0 << 1) + (0 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_TPARSEE,
@@ -5641,6 +6074,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 0, 0, 63, 1},
         .nature = NATURE_MODEST,
         .abilityFlags = 1 + (0 << 1) + (0 << 2),
+        .tier = 3,
     },
     {
         .species = SPECIES_CYUUGI,
@@ -5654,6 +6088,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {1, 63, 0, 63, 0, 0},
         .nature = NATURE_JOLLY,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 0,
     },
     {
         .species = SPECIES_YUUGI,
@@ -5667,6 +6102,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 0, 1, 0, 63},
         .nature = NATURE_CAREFUL,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 1,
     },
     {
         .species = SPECIES_YUUGI,
@@ -5680,6 +6116,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {1, 63, 0, 63, 0, 0},
         .nature = NATURE_JOLLY,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_AYUUGI,
@@ -5693,6 +6130,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {1, 63, 0, 63, 0, 0},
         .nature = NATURE_ADAMANT,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_AYUUGI,
@@ -5706,6 +6144,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 63, 0, 0, 0, 1},
         .nature = NATURE_ADAMANT,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 3,
     },
     {
         .species = SPECIES_DYUUGI,
@@ -5719,6 +6158,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 0, 0, 63, 1},
         .nature = NATURE_MODEST,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 1,
     },
     {
         .species = SPECIES_DYUUGI,
@@ -5732,6 +6172,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 32, 0, 0, 32},
         .nature = NATURE_RELAXED,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_DYUUGI,
@@ -5745,6 +6186,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 32, 0, 0, 0, 32},
         .nature = NATURE_ADAMANT,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 3,
     },
     {
         .species = SPECIES_CSATORI,
@@ -5758,6 +6200,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 32, 0, 0, 32},
         .nature = NATURE_BOLD,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 0,
     },
     {
         .species = SPECIES_SATORI,
@@ -5771,6 +6214,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {1, 0, 0, 63, 63, 0},
         .nature = NATURE_TIMID,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 1,
     },
     {
         .species = SPECIES_SATORI,
@@ -5784,6 +6228,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {1, 0, 0, 63, 63, 0},
         .nature = NATURE_MODEST,
         .abilityFlags = 1 + (1 << 1) + (0 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_DSATORI,
@@ -5797,6 +6242,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {1, 0, 63, 0, 0, 63},
         .nature = NATURE_BOLD,
         .abilityFlags = 1 + (1 << 1) + (0 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_DSATORI,
@@ -5810,6 +6256,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 32, 0, 0, 32},
         .nature = NATURE_CALM,
         .abilityFlags = 1 + (1 << 1) + (0 << 2),
+        .tier = 3,
     },
     {
         .species = SPECIES_TSATORI,
@@ -5823,6 +6270,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 32, 0, 32, 0},
         .nature = NATURE_BOLD,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 1,
     },
     {
         .species = SPECIES_TSATORI,
@@ -5836,6 +6284,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {32, 0, 0, 32, 63, 0},
         .nature = NATURE_MODEST,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_TSATORI,
@@ -5849,6 +6298,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {0, 0, 0, 63, 63, 1},
         .nature = NATURE_MODEST,
         .abilityFlags = 1 + (1 << 1) + (0 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_TSATORI,
@@ -5862,6 +6312,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 32, 0, 0, 32},
         .nature = NATURE_BOLD,
         .abilityFlags = 1 + (1 << 1) + (0 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_TSATORI,
@@ -5875,6 +6326,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 1, 63, 0, 0},
         .nature = NATURE_TIMID,
         .abilityFlags = 1 + (1 << 1) + (0 << 2),
+        .tier = 3,
     },
     {
         .species = SPECIES_TSATORI,
@@ -5888,6 +6340,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {1, 0, 0, 63, 63, 0},
         .nature = NATURE_MODEST,
         .abilityFlags = 1 + (1 << 1) + (0 << 2),
+        .tier = 3,
     },
     {
         .species = SPECIES_TSATORI,
@@ -5901,6 +6354,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {0, 32, 0, 63, 32, 0},
         .nature = NATURE_NAIVE,
         .abilityFlags = 1 + (1 << 1) + (0 << 2),
+        .tier = 3,
     },
     {
         .species = SPECIES_CRIN,
@@ -5914,6 +6368,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {0, 32, 0, 63, 32, 0},
         .nature = NATURE_NAIVE,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 0,
     },
     {
         .species = SPECIES_RIN,
@@ -5927,6 +6382,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 63, 0, 0, 1},
         .nature = NATURE_IMPISH,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_RIN,
@@ -5940,6 +6396,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 32, 0, 0, 0, 32},
         .nature = NATURE_CAREFUL,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 3,
     },
     {
         .species = SPECIES_ARIN,
@@ -5953,6 +6410,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 0, 32, 0, 32},
         .nature = NATURE_CAREFUL,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 1,
     },
     {
         .species = SPECIES_ARIN,
@@ -5966,6 +6424,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {1, 0, 0, 63, 63, 0},
         .nature = NATURE_MODEST,
         .abilityFlags = 1 + (1 << 1) + (0 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_SRIN,
@@ -5979,6 +6438,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {1, 63, 0, 63, 0, 0},
         .nature = NATURE_ADAMANT,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_SRIN,
@@ -5992,6 +6452,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {1, 63, 0, 63, 0, 0},
         .nature = NATURE_JOLLY,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 3,
     },
     {
         .species = SPECIES_ZFAIRY,
@@ -6005,6 +6466,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {0, 1, 0, 63, 63, 0},
         .nature = NATURE_MODEST,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 1,
     },
     {
         .species = SPECIES_ZFAIRY,
@@ -6018,6 +6480,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {0, 1, 0, 63, 63, 0},
         .nature = NATURE_MODEST,
         .abilityFlags = 1 + (1 << 1) + (0 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_CUTSUHO,
@@ -6031,6 +6494,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {0, 1, 0, 63, 63, 0},
         .nature = NATURE_NAIVE,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 0,
     },
     {
         .species = SPECIES_UTSUHO,
@@ -6044,6 +6508,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {0, 1, 0, 63, 63, 0},
         .nature = NATURE_NAIVE,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 1,
     },
     {
         .species = SPECIES_UTSUHO,
@@ -6057,6 +6522,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 63, 0, 0, 1},
         .nature = NATURE_BOLD,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_UTSUHO,
@@ -6070,6 +6536,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {0, 32, 0, 63, 32, 0},
         .nature = NATURE_NAIVE,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 3,
     },
     {
         .species = SPECIES_AUTSUHO,
@@ -6083,6 +6550,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {1, 0, 0, 63, 63, 0},
         .nature = NATURE_MODEST,
         .abilityFlags = 1 + (0 << 1) + (0 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_AUTSUHO,
@@ -6096,6 +6564,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {0, 1, 0, 63, 63, 0},
         .nature = NATURE_HASTY,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 3,
     },
     {
         .species = SPECIES_SUTSUHO,
@@ -6109,6 +6578,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {32, 0, 0, 63, 32, 0},
         .nature = NATURE_TIMID,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_SUTSUHO,
@@ -6122,6 +6592,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {1, 0, 0, 63, 63, 0},
         .nature = NATURE_TIMID,
         .abilityFlags = 1 + (0 << 1) + (0 << 2),
+        .tier = 3,
     },
     {
         .species = SPECIES_CKOISHI,
@@ -6135,6 +6606,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 32, 32, 0, 0, 0},
         .nature = NATURE_BRAVE,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 0,
     },
     {
         .species = SPECIES_KOISHI,
@@ -6148,6 +6620,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 63, 0, 0, 0, 1},
         .nature = NATURE_ADAMANT,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 1,
     },
     {
         .species = SPECIES_KOISHI,
@@ -6161,6 +6634,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 32, 0, 0, 32},
         .nature = NATURE_IMPISH,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_AKOISHI,
@@ -6174,6 +6648,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {32, 0, 0, 32, 63, 0},
         .nature = NATURE_MODEST,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_AKOISHI,
@@ -6187,6 +6662,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {1, 0, 0, 63, 63, 0},
         .nature = NATURE_MODEST,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 3,
     },
     {
         .species = SPECIES_SKOISHI,
@@ -6200,6 +6676,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {1, 63, 0, 63, 0, 0},
         .nature = NATURE_JOLLY,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 1,
     },
     {
         .species = SPECIES_SKOISHI,
@@ -6213,6 +6690,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {0, 32, 0, 63, 32, 0},
         .nature = NATURE_NAIVE,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_SKOISHI,
@@ -6226,6 +6704,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {1, 63, 0, 63, 0, 0},
         .nature = NATURE_JOLLY,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 3,
     },
     {
         .species = SPECIES_CNAZRIN,
@@ -6239,6 +6718,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {0, 32, 0, 63, 32, 0},
         .nature = NATURE_NAIVE,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 0,
     },
     {
         .species = SPECIES_NAZRIN,
@@ -6252,6 +6732,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {0, 32, 0, 32, 63, 0},
         .nature = NATURE_RASH,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_NAZRIN,
@@ -6265,6 +6746,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {1, 63, 0, 63, 0, 0},
         .nature = NATURE_ADAMANT,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 3,
     },
     {
         .species = SPECIES_TNAZRIN,
@@ -6278,6 +6760,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {1, 0, 0, 63, 63, 0},
         .nature = NATURE_TIMID,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 1,
     },
     {
         .species = SPECIES_TNAZRIN,
@@ -6291,6 +6774,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {32, 0, 0, 32, 63, 0},
         .nature = NATURE_MODEST,
         .abilityFlags = 0 + (1 << 1) + (1 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_HNAZRIN,
@@ -6304,6 +6788,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 63, 0, 0, 0, 1},
         .nature = NATURE_ADAMANT,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 1,
     },
     {
         .species = SPECIES_HNAZRIN,
@@ -6317,6 +6802,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 32, 0, 0, 32},
         .nature = NATURE_IMPISH,
         .abilityFlags = 0 + (0 << 1) + (1 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_CKOGASA,
@@ -6330,6 +6816,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 0, 1, 63, 0},
         .nature = NATURE_MODEST,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 0,
     },
     {
         .species = SPECIES_KOGASA,
@@ -6343,6 +6830,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 1, 0, 0, 63, 0},
         .nature = NATURE_QUIET,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 1,
     },
     {
         .species = SPECIES_KOGASA,
@@ -6356,6 +6844,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {0, 32, 32, 0, 32, 31},
         .nature = NATURE_QUIET,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_SKOGASA,
@@ -6369,6 +6858,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {32, 0, 0, 63, 32, 0},
         .nature = NATURE_TIMID,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 1,
     },
     {
         .species = SPECIES_SKOGASA,
@@ -6382,6 +6872,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {32, 0, 0, 63, 32, 0},
         .nature = NATURE_TIMID,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_SKOGASA,
@@ -6395,6 +6886,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {1, 0, 0, 63, 63, 0},
         .nature = NATURE_TIMID,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 3,
     },
     {
         .species = SPECIES_TKOGASA,
@@ -6408,6 +6900,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 32, 0, 0, 32, 0},
         .nature = NATURE_QUIET,
         .abilityFlags = 1 + (1 << 1) + (0 << 2),
+        .tier = 1,
     },
     {
         .species = SPECIES_TKOGASA,
@@ -6421,6 +6914,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {1, 0, 0, 63, 63, 0},
         .nature = NATURE_RASH,
         .abilityFlags = 0 + (0 << 1) + (1 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_TKOGASA,
@@ -6434,6 +6928,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 0, 0, 32, 32},
         .nature = NATURE_QUIET,
         .abilityFlags = 0 + (0 << 1) + (1 << 2),
+        .tier = 3,
     },
     {
         .species = SPECIES_CICHIRIN,
@@ -6447,6 +6942,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 63, 0, 0, 0, 1},
         .nature = NATURE_ADAMANT,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 0,
     },
     {
         .species = SPECIES_ICHIRIN,
@@ -6460,6 +6956,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {1, 63, 0, 63, 0, 0},
         .nature = NATURE_ADAMANT,
         .abilityFlags = 1 + (1 << 1) + (0 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_ICHIRIN,
@@ -6473,6 +6970,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {32, 63, 32, 0, 0, 0},
         .nature = NATURE_ADAMANT,
         .abilityFlags = 1 + (1 << 1) + (0 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_ICHIRIN,
@@ -6486,6 +6984,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 63, 0, 0, 0, 1},
         .nature = NATURE_ADAMANT,
         .abilityFlags = 1 + (1 << 1) + (0 << 2),
+        .tier = 3,
     },
     {
         .species = SPECIES_DICHIRIN,
@@ -6499,6 +6998,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 63, 0, 0, 0, 1},
         .nature = NATURE_ADAMANT,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 1,
     },
     {
         .species = SPECIES_DICHIRIN,
@@ -6512,6 +7012,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 1, 0, 0, 0, 63},
         .nature = NATURE_CAREFUL,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_TICHIRIN,
@@ -6525,6 +7026,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 32, 0, 0, 32},
         .nature = NATURE_CALM,
         .abilityFlags = 0 + (1 << 1) + (1 << 2),
+        .tier = 1,
     },
     {
         .species = SPECIES_TICHIRIN,
@@ -6538,6 +7040,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {0, 63, 0, 32, 32, 0},
         .nature = NATURE_LONELY,
         .abilityFlags = 1 + (0 << 1) + (0 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_CMURASA,
@@ -6551,6 +7054,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 32, 0, 0, 32, 0},
         .nature = NATURE_BRAVE,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 0,
     },
     {
         .species = SPECIES_MURASA,
@@ -6564,6 +7068,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 63, 0, 0, 0, 1},
         .nature = NATURE_ADAMANT,
         .abilityFlags = 0 + (1 << 1) + (1 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_MURASA,
@@ -6577,6 +7082,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 32, 0, 0, 32},
         .nature = NATURE_CAREFUL,
         .abilityFlags = 0 + (1 << 1) + (1 << 2),
+        .tier = 3,
     },
     {
         .species = SPECIES_AMURASA,
@@ -6590,6 +7096,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 0, 0, 63, 1},
         .nature = NATURE_MODEST,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_AMURASA,
@@ -6603,6 +7110,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {32, 0, 0, 32, 63, 0},
         .nature = NATURE_MODEST,
         .abilityFlags = 1 + (0 << 1) + (0 << 2),
+        .tier = 3,
     },
     {
         .species = SPECIES_AMURASA,
@@ -6616,6 +7124,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {32, 0, 0, 32, 63, 0},
         .nature = NATURE_MODEST,
         .abilityFlags = 1 + (0 << 1) + (0 << 2),
+        .tier = 3,
     },
     {
         .species = SPECIES_DMURASA,
@@ -6629,6 +7138,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 0, 63, 1, 0},
         .nature = NATURE_TIMID,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 1,
     },
     {
         .species = SPECIES_DMURASA,
@@ -6642,6 +7152,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 32, 0, 0, 32},
         .nature = NATURE_CALM,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_DMURASA,
@@ -6655,6 +7166,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 0, 63, 1, 0},
         .nature = NATURE_TIMID,
         .abilityFlags = 0 + (1 << 1) + (1 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_CSHOU,
@@ -6668,6 +7180,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 0, 0, 63, 1},
         .nature = NATURE_MODEST,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 0,
     },
     {
         .species = SPECIES_SHOU,
@@ -6681,6 +7194,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {1, 0, 0, 63, 63, 0},
         .nature = NATURE_MODEST,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_SHOU,
@@ -6694,6 +7208,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {32, 0, 0, 32, 63, 0},
         .nature = NATURE_MODEST,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 3,
     },
     {
         .species = SPECIES_ASHOU,
@@ -6707,6 +7222,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {0, 32, 0, 32, 63, 0},
         .nature = NATURE_RASH,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 1,
     },
     {
         .species = SPECIES_ASHOU,
@@ -6720,6 +7236,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {1, 63, 63, 0, 0, 0},
         .nature = NATURE_ADAMANT,
         .abilityFlags = 1 + (0 << 1) + (1 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_ASHOU,
@@ -6733,6 +7250,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {1, 63, 0, 63, 0, 0},
         .nature = NATURE_ADAMANT,
         .abilityFlags = 1 + (0 << 1) + (1 << 2),
+        .tier = 3,
     },
     {
         .species = SPECIES_TSHOU,
@@ -6746,6 +7264,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {32, 0, 0, 63, 32, 0},
         .nature = NATURE_TIMID,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_TSHOU,
@@ -6759,6 +7278,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {1, 0, 0, 63, 63, 0},
         .nature = NATURE_TIMID,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 3,
     },
     {
         .species = SPECIES_CBYAKUREN,
@@ -6772,6 +7292,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 0, 32, 32, 0},
         .nature = NATURE_TIMID,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 0,
     },
     {
         .species = SPECIES_BYAKUREN,
@@ -6785,6 +7306,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 32, 0, 32, 0},
         .nature = NATURE_BOLD,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_BYAKUREN,
@@ -6798,6 +7320,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 0, 0, 63, 1},
         .nature = NATURE_MODEST,
         .abilityFlags = 1 + (1 << 1) + (0 << 2),
+        .tier = 3,
     },
     {
         .species = SPECIES_HBYAKUREN,
@@ -6811,6 +7334,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 32, 32, 0, 0, 0},
         .nature = NATURE_IMPISH,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 1,
     },
     {
         .species = SPECIES_HBYAKUREN,
@@ -6824,6 +7348,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {0, 63, 32, 0, 0, 32},
         .nature = NATURE_ADAMANT,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_TBYAKUREN,
@@ -6837,6 +7362,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 1, 0, 0, 63},
         .nature = NATURE_CAREFUL,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_TBYAKUREN,
@@ -6850,6 +7376,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {0, 63, 0, 63, 0, 1},
         .nature = NATURE_ADAMANT,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 3,
     },
     {
         .species = SPECIES_CNUE,
@@ -6863,6 +7390,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {0, 32, 0, 63, 32, 0},
         .nature = NATURE_NAIVE,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 0,
     },
     {
         .species = SPECIES_NUE,
@@ -6876,6 +7404,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 1, 63, 0, 0},
         .nature = NATURE_JOLLY,
         .abilityFlags = 1 + (1 << 1) + (0 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_NUE,
@@ -6889,6 +7418,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {1, 63, 0, 63, 0, 0},
         .nature = NATURE_JOLLY,
         .abilityFlags = 1 + (1 << 1) + (0 << 2),
+        .tier = 3,
     },
     {
         .species = SPECIES_ANUE,
@@ -6902,6 +7432,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {1, 63, 0, 63, 0, 0},
         .nature = NATURE_ADAMANT,
         .abilityFlags = 1 + (1 << 1) + (0 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_ANUE,
@@ -6915,6 +7446,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {1, 63, 0, 63, 0, 0},
         .nature = NATURE_JOLLY,
         .abilityFlags = 1 + (1 << 1) + (0 << 2),
+        .tier = 3,
     },
     {
         .species = SPECIES_TNUE,
@@ -6928,6 +7460,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 63, 0, 0, 1},
         .nature = NATURE_BOLD,
         .abilityFlags = 1 + (1 << 1) + (0 << 2),
+        .tier = 1,
     },
     {
         .species = SPECIES_TNUE,
@@ -6941,6 +7474,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {0, 32, 0, 63, 32, 0},
         .nature = NATURE_HASTY,
         .abilityFlags = 1 + (0 << 1) + (1 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_TNUE,
@@ -6954,6 +7488,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {0, 32, 0, 63, 32, 0},
         .nature = NATURE_NAIVE,
         .abilityFlags = 1 + (0 << 1) + (1 << 2),
+        .tier = 3,
     },
     {
         .species = SPECIES_TENSOKU,
@@ -6967,6 +7502,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 1, 0, 0, 63},
         .nature = NATURE_CAREFUL,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 1,
     },
     {
         .species = SPECIES_TENSOKU,
@@ -6980,6 +7516,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {1, 63, 0, 63, 0, 0},
         .nature = NATURE_JOLLY,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_TENSOKU,
@@ -6993,6 +7530,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 63, 0, 0, 0, 1},
         .nature = NATURE_ADAMANT,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 3,
     },
     {
         .species = SPECIES_SHANGHAI,
@@ -7006,6 +7544,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {1, 63, 0, 63, 0, 0},
         .nature = NATURE_ADAMANT,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 0,
     },
     {
         .species = SPECIES_HOURAI,
@@ -7019,6 +7558,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {1, 63, 0, 63, 0, 0},
         .nature = NATURE_JOLLY,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 0,
     },
     {
         .species = SPECIES_GOLIATH,
@@ -7032,6 +7572,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {1, 63, 0, 63, 0, 0},
         .nature = NATURE_JOLLY,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 1,
     },
     {
         .species = SPECIES_GOLIATH,
@@ -7045,6 +7586,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 63, 0, 0, 0, 1},
         .nature = NATURE_ADAMANT,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_GOLIATH,
@@ -7058,6 +7600,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 32, 0, 0, 32},
         .nature = NATURE_IMPISH,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_GOLIATH,
@@ -7071,6 +7614,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {32, 63, 0, 32, 0, 0},
         .nature = NATURE_ADAMANT,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 3,
     },
     {
         .species = SPECIES_NAMAZU,
@@ -7084,6 +7628,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {32, 63, 32, 0, 0, 0},
         .nature = NATURE_BRAVE,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 1,
     },
     {
         .species = SPECIES_NAMAZU,
@@ -7097,6 +7642,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {32, 0, 32, 0, 0, 63},
         .nature = NATURE_SASSY,
         .abilityFlags = 1 + (1 << 1) + (0 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_NAMAZU,
@@ -7110,6 +7656,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {32, 0, 63, 0, 0, 32},
         .nature = NATURE_RELAXED,
         .abilityFlags = 1 + (1 << 1) + (0 << 2),
+        .tier = 3,
     },
     {
         .species = SPECIES_CHATATE,
@@ -7123,6 +7670,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {32, 0, 0, 63, 32, 0},
         .nature = NATURE_TIMID,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 0,
     },
     {
         .species = SPECIES_HATATE,
@@ -7136,6 +7684,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {32, 0, 0, 63, 32, 0},
         .nature = NATURE_TIMID,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 1,
     },
     {
         .species = SPECIES_HATATE,
@@ -7149,6 +7698,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {1, 0, 0, 63, 63, 0},
         .nature = NATURE_MODEST,
         .abilityFlags = 1 + (1 << 1) + (0 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_DHATATE,
@@ -7162,6 +7712,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 32, 0, 0, 32},
         .nature = NATURE_CAREFUL,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 1,
     },
     {
         .species = SPECIES_DHATATE,
@@ -7175,6 +7726,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 32, 0, 0, 32},
         .nature = NATURE_BOLD,
         .abilityFlags = 1 + (1 << 1) + (0 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_THATATE,
@@ -7188,6 +7740,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 32, 0, 0, 32},
         .nature = NATURE_BOLD,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 1,
     },
     {
         .species = SPECIES_THATATE,
@@ -7201,6 +7754,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 63, 0, 0, 0, 1},
         .nature = NATURE_ADAMANT,
         .abilityFlags = 1 + (1 << 1) + (0 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_THATATE,
@@ -7214,6 +7768,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 0, 32, 32, 0},
         .nature = NATURE_MODEST,
         .abilityFlags = 1 + (1 << 1) + (0 << 2),
+        .tier = 3,
     },
     {
         .species = SPECIES_CSUNNY,
@@ -7227,6 +7782,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 0, 63, 1, 0},
         .nature = NATURE_TIMID,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 0,
     },
     {
         .species = SPECIES_SUNNY,
@@ -7240,6 +7796,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 32, 0, 0, 32},
         .nature = NATURE_BOLD,
         .abilityFlags = 1 + (1 << 1) + (0 << 2),
+        .tier = 1,
     },
     {
         .species = SPECIES_SUNNY,
@@ -7253,6 +7810,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 0, 63, 1, 0},
         .nature = NATURE_TIMID,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_SUNNY,
@@ -7266,6 +7824,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {1, 0, 0, 63, 63, 0},
         .nature = NATURE_MODEST,
         .abilityFlags = 0 + (0 << 1) + (1 << 2),
+        .tier = 3,
     },
     {
         .species = SPECIES_ASUNNY,
@@ -7279,6 +7838,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {1, 0, 0, 63, 63, 0},
         .nature = NATURE_TIMID,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 1,
     },
     {
         .species = SPECIES_ASUNNY,
@@ -7292,6 +7852,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {0, 32, 0, 63, 32, 0},
         .nature = NATURE_HASTY,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_ASUNNY,
@@ -7305,6 +7866,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {0, 32, 0, 63, 32, 0},
         .nature = NATURE_NAIVE,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 3,
     },
     {
         .species = SPECIES_DSUNNY,
@@ -7318,6 +7880,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 63, 0, 0, 1},
         .nature = NATURE_BOLD,
         .abilityFlags = 0 + (0 << 1) + (1 << 2),
+        .tier = 1,
     },
     {
         .species = SPECIES_DSUNNY,
@@ -7331,6 +7894,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 32, 0, 0, 32},
         .nature = NATURE_BOLD,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_DSUNNY,
@@ -7344,6 +7908,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 1, 0, 0, 63},
         .nature = NATURE_CALM,
         .abilityFlags = 1 + (1 << 1) + (0 << 2),
+        .tier = 3,
     },
     {
         .species = SPECIES_CLUNA,
@@ -7357,6 +7922,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {1, 0, 0, 63, 63, 0},
         .nature = NATURE_TIMID,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 0,
     },
     {
         .species = SPECIES_LUNA,
@@ -7370,6 +7936,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {32, 0, 0, 63, 32, 0},
         .nature = NATURE_TIMID,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_LUNA,
@@ -7383,6 +7950,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {1, 0, 0, 63, 63, 0},
         .nature = NATURE_TIMID,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 3,
     },
     {
         .species = SPECIES_ALUNA,
@@ -7396,6 +7964,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 32, 0, 0, 32},
         .nature = NATURE_BOLD,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 1,
     },
     {
         .species = SPECIES_ALUNA,
@@ -7409,6 +7978,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 0, 0, 63, 1},
         .nature = NATURE_MODEST,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_TLUNA,
@@ -7422,6 +7992,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 0, 0, 32, 32},
         .nature = NATURE_MODEST,
         .abilityFlags = 1 + (1 << 1) + (0 << 2),
+        .tier = 1,
     },
     {
         .species = SPECIES_TLUNA,
@@ -7435,6 +8006,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 32, 0, 0, 32},
         .nature = NATURE_CALM,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_TLUNA,
@@ -7448,6 +8020,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 63, 0, 0, 1},
         .nature = NATURE_BOLD,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 3,
     },
     {
         .species = SPECIES_CSTAR,
@@ -7461,6 +8034,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 32, 0, 0, 32},
         .nature = NATURE_CALM,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 0,
     },
     {
         .species = SPECIES_STAR,
@@ -7474,6 +8048,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 0, 0, 63, 1},
         .nature = NATURE_MODEST,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 1,
     },
     {
         .species = SPECIES_STAR,
@@ -7487,6 +8062,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 0, 0, 32, 32},
         .nature = NATURE_CALM,
         .abilityFlags = 1 + (1 << 1) + (0 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_ASTAR,
@@ -7500,6 +8076,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 1, 63, 0, 0, 0},
         .nature = NATURE_IMPISH,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 1,
     },
     {
         .species = SPECIES_ASTAR,
@@ -7513,6 +8090,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 63, 0, 1, 0, 0},
         .nature = NATURE_ADAMANT,
         .abilityFlags = 1 + (1 << 1) + (0 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_ASTAR,
@@ -7526,6 +8104,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 63, 1, 0, 0, 0},
         .nature = NATURE_ADAMANT,
         .abilityFlags = 1 + (1 << 1) + (0 << 2),
+        .tier = 3,
     },
     {
         .species = SPECIES_HSTAR,
@@ -7539,6 +8118,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 32, 0, 0, 32},
         .nature = NATURE_BOLD,
         .abilityFlags = 1 + (1 << 1) + (0 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_HSTAR,
@@ -7552,6 +8132,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 63, 0, 0, 1},
         .nature = NATURE_BOLD,
         .abilityFlags = 1 + (1 << 1) + (0 << 2),
+        .tier = 3,
     },
     {
         .species = SPECIES_RINNOSUKE,
@@ -7565,6 +8146,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 32, 32, 0, 0, 0},
         .nature = NATURE_IMPISH,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 1,
     },
     {
         .species = SPECIES_RINNOSUKE,
@@ -7578,6 +8160,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {0, 63, 1, 63, 0, 0},
         .nature = NATURE_JOLLY,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_RINNOSUKE,
@@ -7591,6 +8174,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 63, 0, 0, 0, 1},
         .nature = NATURE_ADAMANT,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_RINNOSUKE,
@@ -7604,6 +8188,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {32, 63, 0, 0, 32, 0},
         .nature = NATURE_BRAVE,
         .abilityFlags = 0 + (0 << 1) + (1 << 2),
+        .tier = 3,
     },
     {
         .species = SPECIES_RINNOSUKE,
@@ -7617,6 +8202,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 32, 0, 0, 32},
         .nature = NATURE_IMPISH,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 3,
     },
     {
         .species = SPECIES_CTOKIKO,
@@ -7630,6 +8216,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {1, 63, 0, 63, 0, 0},
         .nature = NATURE_JOLLY,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 0,
     },
     {
         .species = SPECIES_TOKIKO,
@@ -7643,6 +8230,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 63, 0, 0, 0, 1},
         .nature = NATURE_ADAMANT,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 1,
     },
     {
         .species = SPECIES_TOKIKO,
@@ -7656,6 +8244,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 63, 0, 0, 1},
         .nature = NATURE_IMPISH,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_ATOKIKO,
@@ -7669,6 +8258,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {1, 63, 0, 63, 0, 0},
         .nature = NATURE_JOLLY,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_ATOKIKO,
@@ -7682,6 +8272,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {1, 63, 0, 63, 0, 0},
         .nature = NATURE_ADAMANT,
         .abilityFlags = 0 + (1 << 1) + (0 << 2),
+        .tier = 3,
     },
     {
         .species = SPECIES_CKYOUKO,
@@ -7695,6 +8286,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 0, 0, 32, 32},
         .nature = NATURE_CALM,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 0,
     },
     {
         .species = SPECIES_KYOUKO,
@@ -7708,6 +8300,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 0, 0, 1, 63},
         .nature = NATURE_CALM,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 1,
     },
     {
         .species = SPECIES_KYOUKO,
@@ -7721,6 +8314,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 1, 0, 0, 63},
         .nature = NATURE_CALM,
         .abilityFlags = 0 + (1 << 1) + (1 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_KYOUKO,
@@ -7734,6 +8328,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 1, 0, 63, 0},
         .nature = NATURE_MODEST,
         .abilityFlags = 1 + (1 << 1) + (0 << 2),
+        .tier = 3,
     },
     {
         .species = SPECIES_TKYOUKO,
@@ -7747,6 +8342,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 32, 0, 0, 32},
         .nature = NATURE_BOLD,
         .abilityFlags = 1 + (1 << 1) + (0 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_TKYOUKO,
@@ -7760,6 +8356,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {1, 0, 0, 63, 63, 0},
         .nature = NATURE_TIMID,
         .abilityFlags = 1 + (1 << 1) + (0 << 2),
+        .tier = 3,
     },
     {
         .species = SPECIES_CYOSHIKA,
@@ -7773,6 +8370,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 32, 0, 0, 32},
         .nature = NATURE_IMPISH,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 0,
     },
     {
         .species = SPECIES_YOSHIKA,
@@ -7786,6 +8384,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 32, 0, 0, 32},
         .nature = NATURE_BOLD,
         .abilityFlags = 0 + (1 << 1) + (0 << 2),
+        .tier = 1,
     },
     {
         .species = SPECIES_YOSHIKA,
@@ -7799,6 +8398,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 32, 0, 0, 32},
         .nature = NATURE_BOLD,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_YOSHIKA,
@@ -7812,6 +8412,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 1, 0, 0, 63},
         .nature = NATURE_CAREFUL,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 3,
     },
     {
         .species = SPECIES_YOSHIKA,
@@ -7825,6 +8426,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 63, 0, 0, 1},
         .nature = NATURE_IMPISH,
         .abilityFlags = 0 + (1 << 1) + (1 << 2),
+        .tier = 3,
     },
     {
         .species = SPECIES_HYOSHIKA,
@@ -7838,6 +8440,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {0, 63, 0, 63, 0, 1},
         .nature = NATURE_JOLLY,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 1,
     },
     {
         .species = SPECIES_HYOSHIKA,
@@ -7851,6 +8454,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 1, 63, 0, 0},
         .nature = NATURE_JOLLY,
         .abilityFlags = 0 + (1 << 1) + (1 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_CSEIGA,
@@ -7864,6 +8468,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {0, 0, 1, 63, 63, 0},
         .nature = NATURE_TIMID,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 0,
     },
     {
         .species = SPECIES_SEIGA,
@@ -7877,6 +8482,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {1, 0, 0, 63, 63, 0},
         .nature = NATURE_TIMID,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_SEIGA,
@@ -7890,6 +8496,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {0, 0, 0, 63, 63, 1},
         .nature = NATURE_MODEST,
         .abilityFlags = 0 + (1 << 1) + (0 << 2),
+        .tier = 3,
     },
     {
         .species = SPECIES_SSEIGA,
@@ -7903,6 +8510,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {1, 0, 0, 63, 63, 0},
         .nature = NATURE_TIMID,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 1,
     },
     {
         .species = SPECIES_SSEIGA,
@@ -7916,6 +8524,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {0, 0, 0, 63, 63, 1},
         .nature = NATURE_MODEST,
         .abilityFlags = 1 + (1 << 1) + (0 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_CTOJIKO,
@@ -7929,6 +8538,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {0, 0, 0, 63, 63, 1},
         .nature = NATURE_TIMID,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 0,
     },
     {
         .species = SPECIES_TOJIKO,
@@ -7942,6 +8552,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {32, 0, 0, 63, 32, 0},
         .nature = NATURE_TIMID,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 1,
     },
     {
         .species = SPECIES_TOJIKO,
@@ -7955,6 +8566,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {32, 0, 0, 32, 63, 0},
         .nature = NATURE_MODEST,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_TOJIKO,
@@ -7968,6 +8580,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {1, 0, 0, 63, 63, 0},
         .nature = NATURE_MODEST,
         .abilityFlags = 1 + (1 << 1) + (0 << 2),
+        .tier = 3,
     },
     {
         .species = SPECIES_STOJIKO,
@@ -7981,6 +8594,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {1, 63, 0, 63, 0, 0},
         .nature = NATURE_TIMID,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_STOJIKO,
@@ -7994,6 +8608,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {32, 63, 0, 32, 0, 0},
         .nature = NATURE_ADAMANT,
         .abilityFlags = 1 + (1 << 1) + (0 << 2),
+        .tier = 3,
     },
     {
         .species = SPECIES_CFUTO,
@@ -8007,6 +8622,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 32, 0, 0, 32, 0},
         .nature = NATURE_NAUGHTY,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 0,
     },
     {
         .species = SPECIES_FUTO,
@@ -8020,6 +8636,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 63, 0, 1, 0},
         .nature = NATURE_BOLD,
         .abilityFlags = 1 + (0 << 1) + (1 << 2),
+        .tier = 1,
     },
     {
         .species = SPECIES_FUTO,
@@ -8033,6 +8650,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {0, 32, 0, 63, 32, 0},
         .nature = NATURE_NAIVE,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_FUTO,
@@ -8046,6 +8664,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {32, 63, 0, 0, 0, 32},
         .nature = NATURE_ADAMANT,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_FUTO,
@@ -8059,6 +8678,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 63, 1, 0, 0, 0},
         .nature = NATURE_ADAMANT,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 3,
     },
     {
         .species = SPECIES_AFUTO,
@@ -8072,6 +8692,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {0, 63, 0, 32, 32, 0},
         .nature = NATURE_NAUGHTY,
         .abilityFlags = 0 + (1 << 1) + (1 << 2),
+        .tier = 1,
     },
     {
         .species = SPECIES_AFUTO,
@@ -8085,6 +8706,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {32, 0, 0, 63, 32, 0},
         .nature = NATURE_TIMID,
         .abilityFlags = 1 + (0 << 1) + (1 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_AFUTO,
@@ -8098,6 +8720,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {1, 0, 0, 63, 63, 0},
         .nature = NATURE_MODEST,
         .abilityFlags = 1 + (0 << 1) + (1 << 2),
+        .tier = 3,
     },
     {
         .species = SPECIES_TFUTO,
@@ -8111,6 +8734,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {1, 63, 0, 63, 0, 0},
         .nature = NATURE_JOLLY,
         .abilityFlags = 0 + (1 << 1) + (0 << 2),
+        .tier = 1,
     },
     {
         .species = SPECIES_TFUTO,
@@ -8124,6 +8748,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {32, 0, 32, 63, 0, 0},
         .nature = NATURE_NAIVE,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_CMIKO,
@@ -8137,6 +8762,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {0, 32, 0, 63, 32, 0},
         .nature = NATURE_NAIVE,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 0,
     },
     {
         .species = SPECIES_MIKO,
@@ -8150,6 +8776,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {0, 32, 0, 63, 32, 0},
         .nature = NATURE_NAIVE,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 1,
     },
     {
         .species = SPECIES_MIKO,
@@ -8163,6 +8790,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {0, 32, 0, 63, 32, 0},
         .nature = NATURE_HASTY,
         .abilityFlags = 0 + (0 << 1) + (1 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_MIKO,
@@ -8176,6 +8804,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {32, 63, 0, 32, 0, 0},
         .nature = NATURE_ADAMANT,
         .abilityFlags = 0 + (0 << 1) + (1 << 2),
+        .tier = 3,
     },
     {
         .species = SPECIES_MIKO,
@@ -8189,6 +8818,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {0, 0, 32, 32, 63, 0},
         .nature = NATURE_MODEST,
         .abilityFlags = 0 + (0 << 1) + (1 << 2),
+        .tier = 3,
     },
     {
         .species = SPECIES_AMIKO,
@@ -8202,6 +8832,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {0, 63, 0, 63, 1, 0},
         .nature = NATURE_LONELY,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 1,
     },
     {
         .species = SPECIES_AMIKO,
@@ -8215,6 +8846,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {1, 63, 0, 63, 0, 0},
         .nature = NATURE_ADAMANT,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_DMIKO,
@@ -8228,6 +8860,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 32, 0, 0, 32},
         .nature = NATURE_CAREFUL,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 1,
     },
     {
         .species = SPECIES_DMIKO,
@@ -8241,6 +8874,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 63, 0, 0, 1},
         .nature = NATURE_BOLD,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_CMAMIZOU,
@@ -8254,6 +8888,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 0, 63, 0, 1},
         .nature = NATURE_TIMID,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 0,
     },
     {
         .species = SPECIES_MAMIZOU,
@@ -8267,6 +8902,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 0, 32, 0, 32},
         .nature = NATURE_TIMID,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_MAMIZOU,
@@ -8280,6 +8916,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {32, 32, 0, 63, 0, 0},
         .nature = NATURE_JOLLY,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_MAMIZOU,
@@ -8293,6 +8930,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 1, 63, 0, 0},
         .nature = NATURE_JOLLY,
         .abilityFlags = 0 + (1 << 1) + (1 << 2),
+        .tier = 3,
     },
     {
         .species = SPECIES_DMAMIZOU,
@@ -8306,6 +8944,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 32, 0, 0, 32},
         .nature = NATURE_BOLD,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 1,
     },
     {
         .species = SPECIES_DMAMIZOU,
@@ -8319,6 +8958,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {32, 63, 0, 32, 0, 0},
         .nature = NATURE_ADAMANT,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_DMAMIZOU,
@@ -8332,6 +8972,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 32, 0, 0, 32},
         .nature = NATURE_IMPISH,
         .abilityFlags = 1 + (1 << 1) + (0 << 2),
+        .tier = 3,
     },
     {
         .species = SPECIES_CKOSUZU,
@@ -8345,6 +8986,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {32, 32, 0, 63, 0, 0},
         .nature = NATURE_JOLLY,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 0,
     },
     {
         .species = SPECIES_KOSUZU,
@@ -8358,6 +9000,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 1, 63, 0, 0},
         .nature = NATURE_JOLLY,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 1,
     },
     {
         .species = SPECIES_KOSUZU,
@@ -8371,6 +9014,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {1, 63, 0, 63, 0, 0},
         .nature = NATURE_JOLLY,
         .abilityFlags = 1 + (0 << 1) + (0 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_JINYOU,
@@ -8384,6 +9028,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 0, 0, 63, 1},
         .nature = NATURE_MODEST,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_JINYOU,
@@ -8397,6 +9042,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {1, 0, 0, 63, 63, 0},
         .nature = NATURE_TIMID,
         .abilityFlags = 0 + (0 << 1) + (1 << 2),
+        .tier = 3,
     },
     {
         .species = SPECIES_CKOKORO,
@@ -8410,6 +9056,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {1, 63, 0, 63, 0, 0},
         .nature = NATURE_JOLLY,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 0,
     },
     {
         .species = SPECIES_KOKORO,
@@ -8423,6 +9070,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {0, 32, 0, 63, 32, 0},
         .nature = NATURE_NAIVE,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_KOKORO,
@@ -8436,6 +9084,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {0, 32, 0, 63, 32, 0},
         .nature = NATURE_NAIVE,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_KOKORO,
@@ -8449,6 +9098,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {1, 0, 0, 63, 63, 0},
         .nature = NATURE_TIMID,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 3,
     },
     {
         .species = SPECIES_KOKORO,
@@ -8462,6 +9112,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {1, 63, 0, 63, 0, 0},
         .nature = NATURE_JOLLY,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 3,
     },
     {
         .species = SPECIES_AKOKORO,
@@ -8475,6 +9126,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {1, 63, 0, 63, 0, 0},
         .nature = NATURE_JOLLY,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_AKOKORO,
@@ -8488,6 +9140,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {1, 63, 0, 63, 0, 0},
         .nature = NATURE_ADAMANT,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 3,
     },
     {
         .species = SPECIES_TKOKORO,
@@ -8501,6 +9154,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 63, 0, 0, 1},
         .nature = NATURE_BOLD,
         .abilityFlags = 1 + (1 << 1) + (0 << 2),
+        .tier = 1,
     },
     {
         .species = SPECIES_TKOKORO,
@@ -8514,6 +9168,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {1, 0, 0, 63, 63, 0},
         .nature = NATURE_MODEST,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_CWAKASAGIHIME,
@@ -8527,6 +9182,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 32, 0, 0, 32},
         .nature = NATURE_SASSY,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 0,
     },
     {
         .species = SPECIES_WAKASAGIHIME,
@@ -8540,6 +9196,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {32, 0, 0, 32, 63, 0},
         .nature = NATURE_MODEST,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 1,
     },
     {
         .species = SPECIES_WAKASAGIHIME,
@@ -8553,6 +9210,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 32, 0, 32, 0},
         .nature = NATURE_BOLD,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_DWAKASAGIHIME,
@@ -8566,6 +9224,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 32, 0, 0, 32},
         .nature = NATURE_CALM,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 1,
     },
     {
         .species = SPECIES_DWAKASAGIHIME,
@@ -8579,6 +9238,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 32, 0, 0, 32},
         .nature = NATURE_BOLD,
         .abilityFlags = 0 + (1 << 1) + (0 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_CSEKIBANKI,
@@ -8592,6 +9252,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 63, 1, 0, 0, 0},
         .nature = NATURE_ADAMANT,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 0,
     },
     {
         .species = SPECIES_SEKIBANKI,
@@ -8605,6 +9266,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {32, 63, 0, 32, 0, 0},
         .nature = NATURE_JOLLY,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 1,
     },
     {
         .species = SPECIES_SEKIBANKI,
@@ -8618,6 +9280,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 63, 0, 0, 0, 1},
         .nature = NATURE_ADAMANT,
         .abilityFlags = 1 + (0 << 1) + (1 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_SEKIBANKI,
@@ -8631,6 +9294,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 63, 0, 0, 0, 1},
         .nature = NATURE_ADAMANT,
         .abilityFlags = 1 + (0 << 1) + (1 << 2),
+        .tier = 3,
     },
     {
         .species = SPECIES_TSEKIBANKI,
@@ -8644,6 +9308,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 0, 63, 1, 0},
         .nature = NATURE_TIMID,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 1,
     },
     {
         .species = SPECIES_TSEKIBANKI,
@@ -8657,6 +9322,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {0, 32, 0, 63, 32, 0},
         .nature = NATURE_NAIVE,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_TSEKIBANKI,
@@ -8670,6 +9336,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {1, 0, 0, 63, 63, 0},
         .nature = NATURE_TIMID,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 3,
     },
     {
         .species = SPECIES_CKAGEROU,
@@ -8683,6 +9350,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 63, 0, 0, 0, 1},
         .nature = NATURE_ADAMANT,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 0,
     },
     {
         .species = SPECIES_KAGEROU,
@@ -8696,6 +9364,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 32, 0, 0, 0, 32},
         .nature = NATURE_CAREFUL,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 1,
     },
     {
         .species = SPECIES_KAGEROU,
@@ -8709,6 +9378,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 63, 1, 0, 0, 0},
         .nature = NATURE_ADAMANT,
         .abilityFlags = 1 + (1 << 1) + (0 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_HKAGEROU,
@@ -8722,6 +9392,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 1, 63, 0, 0, 0},
         .nature = NATURE_IMPISH,
         .abilityFlags = 1 + (1 << 1) + (0 << 2),
+        .tier = 1,
     },
     {
         .species = SPECIES_HKAGEROU,
@@ -8735,6 +9406,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {32, 63, 0, 32, 0, 0},
         .nature = NATURE_ADAMANT,
         .abilityFlags = 0 + (0 << 1) + (1 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_CBENBEN,
@@ -8748,6 +9420,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 32, 0, 0, 32},
         .nature = NATURE_BOLD,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 0,
     },
     {
         .species = SPECIES_BENBEN,
@@ -8761,6 +9434,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 0, 0, 32, 32},
         .nature = NATURE_CALM,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_BENBEN,
@@ -8774,6 +9448,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 0, 0, 63, 1},
         .nature = NATURE_MODEST,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 3,
     },
     {
         .species = SPECIES_CYATSUHASHI,
@@ -8787,6 +9462,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {0, 63, 0, 63, 1, 0},
         .nature = NATURE_NAIVE,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 0,
     },
     {
         .species = SPECIES_YATSUHASHI,
@@ -8800,6 +9476,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {0, 63, 0, 32, 32, 0},
         .nature = NATURE_LONELY,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 1,
     },
     {
         .species = SPECIES_YATSUHASHI,
@@ -8813,6 +9490,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {1, 0, 0, 63, 63, 0},
         .nature = NATURE_TIMID,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_YATSUHASHI,
@@ -8826,6 +9504,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {0, 32, 0, 63, 32, 0},
         .nature = NATURE_NAIVE,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 3,
     },
     {
         .species = SPECIES_CSEIJA,
@@ -8839,6 +9518,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {1, 63, 0, 63, 0, 0},
         .nature = NATURE_JOLLY,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 0,
     },
     {
         .species = SPECIES_SEIJA,
@@ -8852,6 +9532,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {1, 63, 0, 63, 0, 0},
         .nature = NATURE_JOLLY,
         .abilityFlags = 0 + (0 << 1) + (1 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_SEIJA,
@@ -8865,6 +9546,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {32, 63, 0, 32, 0, 0},
         .nature = NATURE_ADAMANT,
         .abilityFlags = 1 + (1 << 1) + (0 << 2),
+        .tier = 3,
     },
     {
         .species = SPECIES_DSEIJA,
@@ -8878,6 +9560,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 63, 1, 0, 0, 0},
         .nature = NATURE_ADAMANT,
         .abilityFlags = 0 + (0 << 1) + (1 << 2),
+        .tier = 1,
     },
     {
         .species = SPECIES_DSEIJA,
@@ -8891,6 +9574,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 63, 1, 0, 0, 0},
         .nature = NATURE_ADAMANT,
         .abilityFlags = 1 + (1 << 1) + (0 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_CSHINMYOUMARU,
@@ -8904,6 +9588,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 32, 0, 0, 32},
         .nature = NATURE_RELAXED,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 0,
     },
     {
         .species = SPECIES_SHINMYOUMARU,
@@ -8917,6 +9602,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {1, 63, 0, 63, 0, 0},
         .nature = NATURE_JOLLY,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 1,
     },
     {
         .species = SPECIES_SHINMYOUMARU,
@@ -8930,6 +9616,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {1, 0, 0, 63, 63, 0},
         .nature = NATURE_MODEST,
         .abilityFlags = 0 + (0 << 1) + (1 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_SHINMYOUMARU,
@@ -8943,6 +9630,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {0, 63, 0, 63, 1, 0},
         .nature = NATURE_NAIVE,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 3,
     },
     {
         .species = SPECIES_ASHINMYOUMARU,
@@ -8956,6 +9644,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {1, 63, 0, 63, 0, 0},
         .nature = NATURE_ADAMANT,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_ASHINMYOUMARU,
@@ -8969,6 +9658,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {1, 63, 0, 63, 0, 0},
         .nature = NATURE_JOLLY,
         .abilityFlags = 0 + (1 << 1) + (0 << 2),
+        .tier = 3,
     },
     {
         .species = SPECIES_CRAIKO,
@@ -8982,6 +9672,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {32, 0, 0, 32, 63, 0},
         .nature = NATURE_MODEST,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 0,
     },
     {
         .species = SPECIES_RAIKO,
@@ -8995,6 +9686,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {1, 63, 0, 63, 0, 0},
         .nature = NATURE_JOLLY,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 1,
     },
     {
         .species = SPECIES_RAIKO,
@@ -9008,6 +9700,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {0, 32, 0, 32, 63, 0},
         .nature = NATURE_RASH,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_RAIKO,
@@ -9021,6 +9714,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 32, 0, 32, 0},
         .nature = NATURE_RELAXED,
         .abilityFlags = 0 + (1 << 1) + (0 << 2),
+        .tier = 3,
     },
     {
         .species = SPECIES_ARAIKO,
@@ -9034,6 +9728,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 32, 0, 0, 32},
         .nature = NATURE_BOLD,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_ARAIKO,
@@ -9047,6 +9742,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {32, 0, 0, 32, 63, 0},
         .nature = NATURE_MODEST,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 3,
     },
     {
         .species = SPECIES_CKASEN,
@@ -9060,6 +9756,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 63, 0, 1, 0, 0},
         .nature = NATURE_ADAMANT,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 0,
     },
     {
         .species = SPECIES_KASEN,
@@ -9073,6 +9770,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {1, 63, 0, 63, 0, 0},
         .nature = NATURE_ADAMANT,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_KASEN,
@@ -9086,6 +9784,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 32, 0, 32, 0},
         .nature = NATURE_BOLD,
         .abilityFlags = 0 + (1 << 1) + (1 << 2),
+        .tier = 1,
     },
     {
         .species = SPECIES_KASEN,
@@ -9099,6 +9798,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 32, 0, 0, 32, 0},
         .nature = NATURE_BRAVE,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 3,
     },
     {
         .species = SPECIES_HKASEN,
@@ -9112,6 +9812,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {1, 63, 0, 63, 0, 0},
         .nature = NATURE_ADAMANT,
         .abilityFlags = 1 + (0 << 1) + (1 << 2),
+        .tier = 1,
     },
     {
         .species = SPECIES_HKASEN,
@@ -9125,6 +9826,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 32, 0, 32, 0},
         .nature = NATURE_BOLD,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_HKASEN,
@@ -9138,6 +9840,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 0, 0, 63, 1},
         .nature = NATURE_MODEST,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 3,
     },
     {
         .species = SPECIES_CSUMIREKO,
@@ -9151,6 +9854,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {1, 0, 0, 63, 63, 0},
         .nature = NATURE_TIMID,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 0,
     },
     {
         .species = SPECIES_SUMIREKO,
@@ -9164,6 +9868,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {32, 0, 0, 63, 32, 0},
         .nature = NATURE_TIMID,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 1,
     },
     {
         .species = SPECIES_SUMIREKO,
@@ -9177,6 +9882,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {1, 0, 0, 63, 63, 0},
         .nature = NATURE_MODEST,
         .abilityFlags = 0 + (1 << 1) + (1 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_SUMIREKO,
@@ -9190,6 +9896,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {1, 0, 0, 63, 63, 0},
         .nature = NATURE_TIMID,
         .abilityFlags = 0 + (1 << 1) + (0 << 2),
+        .tier = 3,
     },
     {
         .species = SPECIES_SSUMIREKO,
@@ -9203,6 +9910,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {1, 0, 0, 63, 63, 0},
         .nature = NATURE_TIMID,
         .abilityFlags = 0 + (1 << 1) + (1 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_SSUMIREKO,
@@ -9216,6 +9924,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {0, 1, 0, 63, 63, 0},
         .nature = NATURE_NAIVE,
         .abilityFlags = 0 + (1 << 1) + (1 << 2),
+        .tier = 3,
     },
     {
         .species = SPECIES_TSUMIREKO,
@@ -9229,6 +9938,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 32, 0, 32, 0},
         .nature = NATURE_BOLD,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 1,
     },
     {
         .species = SPECIES_TSUMIREKO,
@@ -9242,6 +9952,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 1, 0, 63, 0},
         .nature = NATURE_MODEST,
         .abilityFlags = 0 + (0 << 1) + (1 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_CSEIRAN,
@@ -9255,6 +9966,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {1, 63, 0, 63, 0, 0},
         .nature = NATURE_JOLLY,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 0,
     },
     {
         .species = SPECIES_SEIRAN,
@@ -9268,6 +9980,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {32, 32, 0, 63, 0, 0},
         .nature = NATURE_JOLLY,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 1,
     },
     {
         .species = SPECIES_SEIRAN,
@@ -9281,6 +9994,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {1, 63, 0, 63, 0, 0},
         .nature = NATURE_ADAMANT,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_SEIRAN,
@@ -9294,6 +10008,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {1, 63, 0, 63, 0, 0},
         .nature = NATURE_JOLLY,
         .abilityFlags = 0 + (0 << 1) + (1 << 2),
+        .tier = 3,
     },
     {
         .species = SPECIES_CRINGO,
@@ -9307,6 +10022,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 1, 0, 0, 63},
         .nature = NATURE_CAREFUL,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 0,
     },
     {
         .species = SPECIES_RINGO,
@@ -9320,6 +10036,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 1, 0, 0, 63},
         .nature = NATURE_CAREFUL,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 1,
     },
     {
         .species = SPECIES_RINGO,
@@ -9333,6 +10050,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 63, 1, 0, 0, 0},
         .nature = NATURE_ADAMANT,
         .abilityFlags = 1 + (0 << 1) + (0 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_RINGO,
@@ -9346,6 +10064,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {32, 0, 63, 0, 0, 32},
         .nature = NATURE_IMPISH,
         .abilityFlags = 0 + (1 << 1) + (0 << 2),
+        .tier = 3,
     },
     {
         .species = SPECIES_CDOREMY,
@@ -9359,6 +10078,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 32, 0, 0, 32},
         .nature = NATURE_BOLD,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 0,
     },
     {
         .species = SPECIES_DOREMY,
@@ -9372,6 +10092,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 32, 0, 0, 32},
         .nature = NATURE_BOLD,
         .abilityFlags = 1 + (1 << 1) + (0 << 2),
+        .tier = 1,
     },
     {
         .species = SPECIES_DOREMY,
@@ -9385,6 +10106,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 63, 0, 0, 1},
         .nature = NATURE_BOLD,
         .abilityFlags = 1 + (0 << 1) + (0 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_DOREMY,
@@ -9398,6 +10120,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 1, 0, 63, 0},
         .nature = NATURE_MODEST,
         .abilityFlags = 1 + (0 << 1) + (0 << 2),
+        .tier = 3,
     },
     {
         .species = SPECIES_CSAGUME,
@@ -9411,6 +10134,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {1, 0, 0, 63, 63, 0},
         .nature = NATURE_TIMID,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 0,
     },
     {
         .species = SPECIES_SAGUME,
@@ -9424,6 +10148,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {0, 32, 0, 63, 32, 0},
         .nature = NATURE_NAIVE,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 1,
     },
     {
         .species = SPECIES_SAGUME,
@@ -9437,6 +10162,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 1, 63, 0, 0},
         .nature = NATURE_TIMID,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_SAGUME,
@@ -9450,6 +10176,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {1, 0, 0, 63, 63, 0},
         .nature = NATURE_TIMID,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 3,
     },
     {
         .species = SPECIES_CCLOWNPIECE,
@@ -9463,6 +10190,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 0, 63, 1, 0},
         .nature = NATURE_TIMID,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 0,
     },
     {
         .species = SPECIES_CLOWNPIECE,
@@ -9476,6 +10204,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {0, 32, 0, 63, 32, 0},
         .nature = NATURE_NAIVE,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 1,
     },
     {
         .species = SPECIES_CLOWNPIECE,
@@ -9489,6 +10218,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 32, 32, 0, 0},
         .nature = NATURE_BOLD,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_CLOWNPIECE,
@@ -9502,6 +10232,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {1, 0, 0, 63, 63, 0},
         .nature = NATURE_TIMID,
         .abilityFlags = 0 + (0 << 1) + (1 << 2),
+        .tier = 3,
     },
     {
         .species = SPECIES_CJUNKO,
@@ -9515,6 +10246,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 32, 0, 0, 32, 0},
         .nature = NATURE_BRAVE,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 0,
     },
     {
         .species = SPECIES_JUNKO,
@@ -9528,6 +10260,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 0, 0, 32, 32},
         .nature = NATURE_MODEST,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_JUNKO,
@@ -9541,6 +10274,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 32, 32, 0, 0, 0},
         .nature = NATURE_ADAMANT,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_JUNKO,
@@ -9554,6 +10288,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 32, 0, 0, 32, 0},
         .nature = NATURE_QUIET,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 3,
     },
     {
         .species = SPECIES_CHECATIA,
@@ -9567,6 +10302,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 32, 0, 0, 32, 0},
         .nature = NATURE_BRAVE,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 0,
     },
     {
         .species = SPECIES_HECATIA,
@@ -9580,6 +10316,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 32, 0, 0, 32},
         .nature = NATURE_BOLD,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 1,
     },
     {
         .species = SPECIES_HECATIA,
@@ -9593,6 +10330,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 1, 63, 0, 0, 0},
         .nature = NATURE_CAREFUL,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_HECATIA,
@@ -9606,6 +10344,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {1, 0, 0, 63, 63, 0},
         .nature = NATURE_TIMID,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 3,
     },
     {
         .species = SPECIES_CJOON,
@@ -9619,6 +10358,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {1, 63, 0, 63, 0, 0},
         .nature = NATURE_ADAMANT,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 0,
     },
     {
         .species = SPECIES_JOON,
@@ -9632,6 +10372,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {1, 63, 0, 63, 0, 0},
         .nature = NATURE_ADAMANT,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_JOON,
@@ -9645,6 +10386,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {1, 63, 0, 63, 0, 0},
         .nature = NATURE_JOLLY,
         .abilityFlags = 1 + (0 << 1) + (1 << 2),
+        .tier = 3,
     },
     {
         .species = SPECIES_CSHION,
@@ -9658,6 +10400,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {1, 0, 0, 63, 63, 0},
         .nature = NATURE_TIMID,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 0,
     },
     {
         .species = SPECIES_SHION,
@@ -9671,6 +10414,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 1, 63, 0, 0},
         .nature = NATURE_JOLLY,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 1,
     },
     {
         .species = SPECIES_SHION,
@@ -9684,6 +10428,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {0, 1, 0, 63, 63, 0},
         .nature = NATURE_HASTY,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_CETERNITY,
@@ -9697,6 +10442,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {1, 0, 0, 63, 63, 0},
         .nature = NATURE_TIMID,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 0,
     },
     {
         .species = SPECIES_ETERNITY,
@@ -9710,6 +10456,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 1, 63, 0, 0},
         .nature = NATURE_TIMID,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 1,
     },
     {
         .species = SPECIES_ETERNITY,
@@ -9723,6 +10470,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {32, 0, 0, 32, 63, 0},
         .nature = NATURE_MODEST,
         .abilityFlags = 0 + (0 << 1) + (1 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_ETERNITY,
@@ -9736,6 +10484,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {1, 0, 0, 63, 63, 0},
         .nature = NATURE_TIMID,
         .abilityFlags = 1 + (1 << 1) + (0 << 2),
+        .tier = 3,
     },
     {
         .species = SPECIES_CNEMUNO,
@@ -9749,6 +10498,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 32, 32, 0, 0, 0},
         .nature = NATURE_IMPISH,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 0,
     },
     {
         .species = SPECIES_NEMUNO,
@@ -9762,6 +10512,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 1, 0, 63, 0, 0},
         .nature = NATURE_JOLLY,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 1,
     },
     {
         .species = SPECIES_NEMUNO,
@@ -9775,6 +10526,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {32, 63, 0, 32, 0, 0},
         .nature = NATURE_ADAMANT,
         .abilityFlags = 0 + (0 << 1) + (1 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_CAUNN,
@@ -9788,6 +10540,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 63, 0, 0, 1},
         .nature = NATURE_IMPISH,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 0,
     },
     {
         .species = SPECIES_AUNN,
@@ -9801,6 +10554,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 63, 0, 0, 1},
         .nature = NATURE_BOLD,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 1,
     },
     {
         .species = SPECIES_AUNN,
@@ -9814,6 +10568,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 32, 32, 0, 0, 0},
         .nature = NATURE_IMPISH,
         .abilityFlags = 0 + (0 << 1) + (1 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_CNARUMI,
@@ -9827,6 +10582,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 0, 0, 32, 32},
         .nature = NATURE_MODEST,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 0,
     },
     {
         .species = SPECIES_NARUMI,
@@ -9840,6 +10596,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 1, 0, 63, 0},
         .nature = NATURE_MODEST,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 1,
     },
     {
         .species = SPECIES_NARUMI,
@@ -9853,6 +10610,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 1, 0, 63, 0},
         .nature = NATURE_QUIET,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_NARUMI,
@@ -9866,6 +10624,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 63, 0, 0, 1},
         .nature = NATURE_BOLD,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 3,
     },
     {
         .species = SPECIES_ANARUMI,
@@ -9879,6 +10638,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 1, 0, 63, 0},
         .nature = NATURE_MODEST,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 1,
     },
     {
         .species = SPECIES_ANARUMI,
@@ -9892,6 +10652,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {32, 0, 32, 0, 63, 0},
         .nature = NATURE_BOLD,
         .abilityFlags = 0 + (0 << 1) + (1 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_ANARUMI,
@@ -9905,6 +10666,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {32, 0, 32, 0, 63, 0},
         .nature = NATURE_QUIET,
         .abilityFlags = 0 + (0 << 1) + (1 << 2),
+        .tier = 3,
     },
     {
         .species = SPECIES_CMAI_AND_SATONO,
@@ -9918,6 +10680,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 32, 32, 0, 0},
         .nature = NATURE_BOLD,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 0,
     },
     {
         .species = SPECIES_MAI_AND_SATONO,
@@ -9931,6 +10694,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 32, 32, 0, 0},
         .nature = NATURE_BOLD,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 1,
     },
     {
         .species = SPECIES_MAI_AND_SATONO,
@@ -9944,6 +10708,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {1, 0, 0, 63, 63, 0},
         .nature = NATURE_TIMID,
         .abilityFlags = 0 + (0 << 1) + (1 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_COKINA,
@@ -9957,6 +10722,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 63, 1, 0, 0, 0},
         .nature = NATURE_ADAMANT,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 0,
     },
     {
         .species = SPECIES_OKINA,
@@ -9970,6 +10736,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {32, 0, 0, 32, 63, 0},
         .nature = NATURE_MODEST,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 1,
     },
     {
         .species = SPECIES_OKINA,
@@ -9983,6 +10750,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 32, 0, 0, 0, 32},
         .nature = NATURE_CAREFUL,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_OKINA,
@@ -9996,6 +10764,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {1, 0, 0, 63, 63, 0},
         .nature = NATURE_TIMID,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 3,
     },
     {
         .species = SPECIES_OKINA,
@@ -10009,6 +10778,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {32, 63, 0, 0, 0, 32},
         .nature = NATURE_ADAMANT,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 3,
     },
     {
         .species = SPECIES_CEIKA,
@@ -10022,6 +10792,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {1, 0, 0, 63, 63, 0},
         .nature = NATURE_TIMID,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 0,
     },
     {
         .species = SPECIES_EIKA,
@@ -10035,6 +10806,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 0, 32, 0, 32},
         .nature = NATURE_CAREFUL,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 1,
     },
     {
         .species = SPECIES_EIKA,
@@ -10048,6 +10820,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {0, 1, 0, 63, 63, 0},
         .nature = NATURE_NAIVE,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_EIKA,
@@ -10061,6 +10834,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {1, 0, 0, 63, 63, 0},
         .nature = NATURE_TIMID,
         .abilityFlags = 0 + (1 << 1) + (1 << 2),
+        .tier = 3,
     },
     {
         .species = SPECIES_CURUMI,
@@ -10074,6 +10848,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 32, 0, 0, 0, 32},
         .nature = NATURE_SASSY,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 0,
     },
     {
         .species = SPECIES_URUMI,
@@ -10087,6 +10862,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {1, 63, 0, 63, 0, 0},
         .nature = NATURE_ADAMANT,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 1,
     },
     {
         .species = SPECIES_URUMI,
@@ -10100,6 +10876,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 63, 0, 0, 0, 1},
         .nature = NATURE_ADAMANT,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_URUMI,
@@ -10113,6 +10890,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {32, 32, 0, 0, 0, 63},
         .nature = NATURE_CAREFUL,
         .abilityFlags = 0 + (0 << 1) + (1 << 2),
+        .tier = 3,
     },
     {
         .species = SPECIES_CKUTAKA,
@@ -10126,6 +10904,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 32, 0, 0, 32, 0},
         .nature = NATURE_BRAVE,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 0,
     },
     {
         .species = SPECIES_KUTAKA,
@@ -10139,6 +10918,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 1, 0, 0, 63},
         .nature = NATURE_CALM,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 1,
     },
     {
         .species = SPECIES_KUTAKA,
@@ -10152,6 +10932,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {1, 63, 0, 63, 0, 0},
         .nature = NATURE_ADAMANT,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_KUTAKA,
@@ -10165,6 +10946,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {32, 0, 0, 63, 32, 0},
         .nature = NATURE_MODEST,
         .abilityFlags = 0 + (0 << 1) + (1 << 2),
+        .tier = 3,
     },
     {
         .species = SPECIES_KUTAKA,
@@ -10178,6 +10960,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 63, 0, 0, 1},
         .nature = NATURE_BOLD,
         .abilityFlags = 0 + (0 << 1) + (1 << 2),
+        .tier = 3,
     },
     {
         .species = SPECIES_CYACHIE,
@@ -10191,6 +10974,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 32, 0, 0, 32, 0},
         .nature = NATURE_QUIET,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 0,
     },
     {
         .species = SPECIES_YACHIE,
@@ -10204,6 +10988,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 63, 0, 0, 0, 1},
         .nature = NATURE_ADAMANT,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 1,
     },
     {
         .species = SPECIES_YACHIE,
@@ -10217,6 +11002,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 32, 0, 0, 32, 0},
         .nature = NATURE_QUIET,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_YACHIE,
@@ -10230,6 +11016,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 32, 0, 0, 32},
         .nature = NATURE_RELAXED,
         .abilityFlags = 1 + (1 << 1) + (0 << 2),
+        .tier = 3,
     },
     {
         .species = SPECIES_CMAYUMI,
@@ -10243,6 +11030,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {1, 63, 63, 0, 0, 0},
         .nature = NATURE_ADAMANT,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 0,
     },
     {
         .species = SPECIES_MAYUMI,
@@ -10256,6 +11044,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 1, 0, 0, 63},
         .nature = NATURE_CAREFUL,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 1,
     },
     {
         .species = SPECIES_MAYUMI,
@@ -10269,6 +11058,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {32, 63, 0, 32, 0, 0},
         .nature = NATURE_ADAMANT,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_CKEIKI,
@@ -10282,6 +11072,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 32, 0, 0, 32},
         .nature = NATURE_BOLD,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 0,
     },
     {
         .species = SPECIES_KEIKI,
@@ -10295,6 +11086,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 63, 0, 0, 1},
         .nature = NATURE_BOLD,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 1,
     },
     {
         .species = SPECIES_KEIKI,
@@ -10308,6 +11100,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {32, 0, 0, 0, 32, 63},
         .nature = NATURE_CALM,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_KEIKI,
@@ -10321,6 +11114,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 32, 0, 0, 32},
         .nature = NATURE_BOLD,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 3,
     },
     {
         .species = SPECIES_CSAKI,
@@ -10334,6 +11128,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {1, 63, 0, 63, 0, 0},
         .nature = NATURE_ADAMANT,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 0,
     },
     {
         .species = SPECIES_SAKI,
@@ -10347,6 +11142,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {1, 63, 0, 63, 0, 0},
         .nature = NATURE_ADAMANT,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 1,
     },
     {
         .species = SPECIES_SAKI,
@@ -10360,6 +11156,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {1, 63, 0, 63, 0, 0},
         .nature = NATURE_JOLLY,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_SAKI,
@@ -10373,6 +11170,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {32, 63, 0, 32, 0, 0},
         .nature = NATURE_ADAMANT,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 3,
     },
     {
         .species = SPECIES_CYUUMA,
@@ -10386,6 +11184,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 32, 0, 0, 32, 0},
         .nature = NATURE_BRAVE,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 0,
     },
     {
         .species = SPECIES_YUUMA,
@@ -10399,6 +11198,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 63, 0, 1, 0, 0},
         .nature = NATURE_ADAMANT,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 1,
     },
     {
         .species = SPECIES_YUUMA,
@@ -10412,6 +11212,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {1, 0, 0, 63, 63, 0},
         .nature = NATURE_MODEST,
         .abilityFlags = 0 + (1 << 1) + (0 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_YUUMA,
@@ -10425,6 +11226,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {1, 63, 0, 63, 0, 0},
         .nature = NATURE_ADAMANT,
         .abilityFlags = 1 + (0 << 1) + (1 << 2),
+        .tier = 3,
     },
     {
         .species = SPECIES_CMIKE,
@@ -10438,6 +11240,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {0, 63, 0, 63, 1, 0},
         .nature = NATURE_NAIVE,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 0,
     },
     {
         .species = SPECIES_MIKE,
@@ -10451,6 +11254,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {0, 32, 0, 63, 32, 0},
         .nature = NATURE_NAIVE,
         .abilityFlags = 0 + (0 << 1) + (1 << 2),
+        .tier = 1,
     },
     {
         .species = SPECIES_MIKE,
@@ -10464,6 +11268,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {1, 63, 0, 63, 0, 0},
         .nature = NATURE_ADAMANT,
         .abilityFlags = 0 + (1 << 1) + (1 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_MIKE,
@@ -10477,6 +11282,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {1, 63, 0, 63, 0, 0},
         .nature = NATURE_JOLLY,
         .abilityFlags = 1 + (0 << 1) + (0 << 2),
+        .tier = 3,
     },
     {
         .species = SPECIES_CTAKANE,
@@ -10490,6 +11296,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 32, 0, 0, 0, 32},
         .nature = NATURE_CAREFUL,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 0,
     },
     {
         .species = SPECIES_TAKANE,
@@ -10503,6 +11310,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 32, 0, 0, 32},
         .nature = NATURE_IMPISH,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 1,
     },
     {
         .species = SPECIES_TAKANE,
@@ -10516,6 +11324,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {1, 63, 0, 63, 0, 0},
         .nature = NATURE_ADAMANT,
         .abilityFlags = 1 + (0 << 1) + (0 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_TAKANE,
@@ -10529,6 +11338,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {32, 63, 0, 32, 0, 0},
         .nature = NATURE_ADAMANT,
         .abilityFlags = 0 + (0 << 1) + (1 << 2),
+        .tier = 3,
     },
     {
         .species = SPECIES_CSANNYO,
@@ -10542,6 +11352,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {32, 0, 0, 32, 63, 0},
         .nature = NATURE_MODEST,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 0,
     },
     {
         .species = SPECIES_SANNYO,
@@ -10555,6 +11366,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {0, 63, 0, 63, 0, 1},
         .nature = NATURE_JOLLY,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 1,
     },
     {
         .species = SPECIES_SANNYO,
@@ -10568,6 +11380,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {32, 0, 0, 32, 63, 0},
         .nature = NATURE_MODEST,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_SANNYO,
@@ -10581,6 +11394,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {1, 0, 0, 63, 63, 0},
         .nature = NATURE_TIMID,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 3,
     },
     {
         .species = SPECIES_CMISUMARU,
@@ -10594,6 +11408,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 32, 0, 0, 32},
         .nature = NATURE_SASSY,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 0,
     },
     {
         .species = SPECIES_MISUMARU,
@@ -10607,6 +11422,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 32, 0, 0, 32, 0},
         .nature = NATURE_HARDY,
         .abilityFlags = 0 + (1 << 1) + (0 << 2),
+        .tier = 1,
     },
     {
         .species = SPECIES_MISUMARU,
@@ -10620,6 +11436,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {0, 63, 0, 1, 63, 0},
         .nature = NATURE_HARDY,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_MISUMARU,
@@ -10633,6 +11450,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 32, 0, 0, 32},
         .nature = NATURE_CAREFUL,
         .abilityFlags = 0 + (0 << 1) + (1 << 2),
+        .tier = 3,
     },
     {
         .species = SPECIES_CTSUKASA,
@@ -10646,6 +11464,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {32, 63, 0, 32, 0, 0},
         .nature = NATURE_ADAMANT,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 0,
     },
     {
         .species = SPECIES_TSUKASA,
@@ -10659,6 +11478,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {32, 0, 0, 32, 63, 0},
         .nature = NATURE_MODEST,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 1,
     },
     {
         .species = SPECIES_TSUKASA,
@@ -10672,6 +11492,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 32, 0, 0, 32},
         .nature = NATURE_IMPISH,
         .abilityFlags = 1 + (1 << 1) + (0 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_TSUKASA,
@@ -10685,6 +11506,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 32, 0, 0, 0, 32},
         .nature = NATURE_CAREFUL,
         .abilityFlags = 1 + (1 << 1) + (0 << 2),
+        .tier = 3,
     },
     {
         .species = SPECIES_CMEGUMU,
@@ -10698,6 +11520,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 32, 0, 0, 32, 0},
         .nature = NATURE_BRAVE,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 0,
     },
     {
         .species = SPECIES_MEGUMU,
@@ -10711,6 +11534,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 0, 0, 32, 32},
         .nature = NATURE_CALM,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 1,
     },
     {
         .species = SPECIES_MEGUMU,
@@ -10724,6 +11548,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 32, 0, 0, 32},
         .nature = NATURE_CALM,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_MEGUMU,
@@ -10737,6 +11562,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 0, 0, 63, 1},
         .nature = NATURE_MODEST,
         .abilityFlags = 1 + (1 << 1) + (0 << 2),
+        .tier = 3,
     },
     {
         .species = SPECIES_CCHIMATA,
@@ -10750,6 +11576,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {32, 0, 0, 63, 32, 0},
         .nature = NATURE_TIMID,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 0,
     },
     {
         .species = SPECIES_CHIMATA,
@@ -10763,6 +11590,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {32, 0, 0, 32, 63, 0},
         .nature = NATURE_MODEST,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 1,
     },
     {
         .species = SPECIES_CHIMATA,
@@ -10776,6 +11604,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {1, 0, 0, 63, 63, 0},
         .nature = NATURE_MODEST,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_CMOMOYO,
@@ -10789,6 +11618,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 32, 32, 0, 0, 0},
         .nature = NATURE_IMPISH,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 0,
     },
     {
         .species = SPECIES_MOMOYO,
@@ -10802,6 +11632,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {32, 32, 0, 0, 0, 63},
         .nature = NATURE_CAREFUL,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 1,
     },
     {
         .species = SPECIES_MOMOYO,
@@ -10815,6 +11646,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {32, 63, 0, 0, 0, 32},
         .nature = NATURE_ADAMANT,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_MOMOYO,
@@ -10828,6 +11660,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 32, 0, 0, 32, 0},
         .nature = NATURE_BRAVE,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 3,
     },
     {
         .species = SPECIES_CMIYOI,
@@ -10841,6 +11674,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 1, 0, 63, 0},
         .nature = NATURE_MODEST,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 0,
     },
     {
         .species = SPECIES_MIYOI,
@@ -10854,6 +11688,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 32, 0, 0, 32},
         .nature = NATURE_BOLD,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 1,
     },
     {
         .species = SPECIES_MIYOI,
@@ -10867,6 +11702,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 0, 0, 32, 32},
         .nature = NATURE_CALM,
         .abilityFlags = 1 + (0 << 1) + (0 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_MIYOI,
@@ -10880,6 +11716,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 0, 63, 1, 0},
         .nature = NATURE_TIMID,
         .abilityFlags = 1 + (0 << 1) + (0 << 2),
+        .tier = 3,
     },
     {
         .species = SPECIES_CMIZUCHI,
@@ -10893,6 +11730,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 0, 32, 0, 32},
         .nature = NATURE_CALM,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 0,
     },
     {
         .species = SPECIES_MIZUCHI,
@@ -10906,6 +11744,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {1, 0, 0, 63, 63, 0},
         .nature = NATURE_MODEST,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 1,
     },
     {
         .species = SPECIES_MIZUCHI,
@@ -10919,6 +11758,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 0, 63, 0, 1},
         .nature = NATURE_TIMID,
         .abilityFlags = 0 + (0 << 1) + (1 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_MIZUCHI,
@@ -10932,6 +11772,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 32, 0, 0, 32},
         .nature = NATURE_CAREFUL,
         .abilityFlags = 0 + (0 << 1) + (1 << 2),
+        .tier = 3,
     },
     {
         .species = SPECIES_CBITEN,
@@ -10945,6 +11786,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {1, 63, 0, 63, 0, 0},
         .nature = NATURE_JOLLY,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 0,
     },
     {
         .species = SPECIES_BITEN,
@@ -10958,6 +11800,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 0, 32, 32, 0},
         .nature = NATURE_MODEST,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 1,
     },
     {
         .species = SPECIES_BITEN,
@@ -10971,6 +11814,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {0, 32, 0, 63, 32, 0},
         .nature = NATURE_NAIVE,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_BITEN,
@@ -10984,6 +11828,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {1, 63, 0, 63, 0, 0},
         .nature = NATURE_ADAMANT,
         .abilityFlags = 1 + (0 << 1) + (0 << 2),
+        .tier = 3,
     },
     {
         .species = SPECIES_BITEN,
@@ -10997,6 +11842,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {1, 63, 0, 63, 0, 0},
         .nature = NATURE_JOLLY,
         .abilityFlags = 0 + (1 << 1) + (0 << 2),
+        .tier = 3,
     },
     {
         .species = SPECIES_CENOKO,
@@ -11010,6 +11856,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 32, 32, 0, 0, 0},
         .nature = NATURE_IMPISH,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 0,
     },
     {
         .species = SPECIES_ENOKO,
@@ -11023,6 +11870,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 32, 32, 0, 0, 0},
         .nature = NATURE_IMPISH,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 1,
     },
     {
         .species = SPECIES_ENOKO,
@@ -11036,6 +11884,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 32, 0, 0, 32},
         .nature = NATURE_IMPISH,
         .abilityFlags = 0 + (0 << 1) + (1 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_ENOKO,
@@ -11049,6 +11898,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 63, 0, 0, 0, 1},
         .nature = NATURE_ADAMANT,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 3,
     },
     {
         .species = SPECIES_CCHIYARI,
@@ -11062,6 +11912,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {1, 0, 63, 0, 0, 63},
         .nature = NATURE_CALM,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 0,
     },
     {
         .species = SPECIES_CHIYARI,
@@ -11075,6 +11926,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {32, 0, 32, 0, 0, 63},
         .nature = NATURE_CALM,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 1,
     },
     {
         .species = SPECIES_CHIYARI,
@@ -11088,6 +11940,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 63, 1, 0, 0, 0},
         .nature = NATURE_ADAMANT,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 1,
     },
     {
         .species = SPECIES_CHIYARI,
@@ -11101,6 +11954,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {0, 63, 63, 0, 0, 1},
         .nature = NATURE_ADAMANT,
         .abilityFlags = 1 + (0 << 1) + (0 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_CHIYARI,
@@ -11114,6 +11968,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {1, 0, 63, 0, 0, 63},
         .nature = NATURE_IMPISH,
         .abilityFlags = 1 + (0 << 1) + (0 << 2),
+        .tier = 3,
     },
     {
         .species = SPECIES_CHISAMI,
@@ -11127,6 +11982,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {0, 32, 0, 63, 32, 0},
         .nature = NATURE_HASTY,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 0,
     },
     {
         .species = SPECIES_HISAMI,
@@ -11140,6 +11996,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {0, 63, 32, 32, 0, 0},
         .nature = NATURE_NAUGHTY,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 1,
     },
     {
         .species = SPECIES_HISAMI,
@@ -11153,6 +12010,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {1, 0, 0, 63, 63, 0},
         .nature = NATURE_MODEST,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_HISAMI,
@@ -11166,6 +12024,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {0, 32, 0, 63, 32, 0},
         .nature = NATURE_HASTY,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 3,
     },
     {
         .species = SPECIES_CZANMU,
@@ -11179,6 +12038,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 32, 0, 0, 32, 0},
         .nature = NATURE_BRAVE,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 0,
     },
     {
         .species = SPECIES_ZANMU,
@@ -11192,6 +12052,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {0, 32, 32, 0, 63, 0},
         .nature = NATURE_QUIET,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 1,
     },
     {
         .species = SPECIES_ZANMU,
@@ -11205,6 +12066,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 1, 0, 0, 63},
         .nature = NATURE_CAREFUL,
         .abilityFlags = 0 + (1 << 1) + (0 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_ZANMU,
@@ -11218,6 +12080,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {0, 0, 32, 0, 63, 32},
         .nature = NATURE_MODEST,
         .abilityFlags = 1 + (0 << 1) + (1 << 2),
+        .tier = 3,
     },
     {
         .species = SPECIES_CUBAME,
@@ -11231,6 +12094,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 32, 0, 0, 32, 0},
         .nature = NATURE_QUIET,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 0,
     },
     {
         .species = SPECIES_UBAME,
@@ -11244,6 +12108,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {32, 63, 0, 0, 0, 32},
         .nature = NATURE_BRAVE,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 1,
     },
     {
         .species = SPECIES_UBAME,
@@ -11257,6 +12122,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 1, 0, 63, 0},
         .nature = NATURE_MODEST,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_UBAME,
@@ -11270,6 +12136,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {32, 0, 32, 0, 63, 0},
         .nature = NATURE_MODEST,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 3,
     },
     {
         .species = SPECIES_CCHIMI,
@@ -11283,6 +12150,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {0, 32, 0, 63, 32, 0},
         .nature = NATURE_HASTY,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 0,
     },
     {
         .species = SPECIES_CHIMI,
@@ -11296,6 +12164,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {1, 63, 0, 63, 0, 0},
         .nature = NATURE_JOLLY,
         .abilityFlags = 0 + (1 << 1) + (1 << 2),
+        .tier = 1,
     },
     {
         .species = SPECIES_CHIMI,
@@ -11309,6 +12178,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {32, 63, 0, 32, 0, 0},
         .nature = NATURE_ADAMANT,
         .abilityFlags = 1 + (0 << 1) + (0 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_CHIMI,
@@ -11322,6 +12192,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {1, 63, 0, 63, 0, 0},
         .nature = NATURE_ADAMANT,
         .abilityFlags = 1 + (0 << 1) + (0 << 2),
+        .tier = 3,
     },
     {
         .species = SPECIES_CNAREKO,
@@ -11335,6 +12206,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 32, 0, 32, 0},
         .nature = NATURE_BOLD,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 0,
     },
     {
         .species = SPECIES_NAREKO,
@@ -11348,6 +12220,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 32, 0, 32, 0},
         .nature = NATURE_BOLD,
         .abilityFlags = 0 + (0 << 1) + (1 << 2),
+        .tier = 1,
     },
     {
         .species = SPECIES_NAREKO,
@@ -11361,6 +12234,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 32, 0, 0, 32},
         .nature = NATURE_BOLD,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_NAREKO,
@@ -11374,6 +12248,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 1, 0, 63, 0},
         .nature = NATURE_MODEST,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 3,
     },
     {
         .species = SPECIES_CYUIMAN,
@@ -11387,6 +12262,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 32, 0, 0, 32},
         .nature = NATURE_SASSY,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 0,
     },
     {
         .species = SPECIES_YUIMAN,
@@ -11400,6 +12276,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 1, 0, 63, 0},
         .nature = NATURE_MODEST,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 1,
     },
     {
         .species = SPECIES_YUIMAN,
@@ -11413,6 +12290,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 32, 0, 0, 32, 0},
         .nature = NATURE_QUIET,
         .abilityFlags = 0 + (0 << 1) + (1 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_YUIMAN,
@@ -11426,6 +12304,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 32, 0, 0, 32},
         .nature = NATURE_CAREFUL,
         .abilityFlags = 0 + (0 << 1) + (1 << 2),
+        .tier = 3,
     },
     {
         .species = SPECIES_CARIYA,
@@ -11439,6 +12318,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {0, 63, 0, 32, 32, 0},
         .nature = NATURE_LONELY,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 0,
     },
     {
         .species = SPECIES_ARIYA,
@@ -11452,6 +12332,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 1, 0, 0, 63},
         .nature = NATURE_CAREFUL,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 1,
     },
     {
         .species = SPECIES_ARIYA,
@@ -11465,6 +12346,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {0, 32, 0, 63, 32, 0},
         .nature = NATURE_NAIVE,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_ARIYA,
@@ -11478,6 +12360,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 32, 0, 0, 32, 0},
         .nature = NATURE_BRAVE,
         .abilityFlags = 1 + (1 << 1) + (0 << 2),
+        .tier = 3,
     },
     {
         .species = SPECIES_CNINA,
@@ -11491,6 +12374,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 0, 0, 32, 32},
         .nature = NATURE_CALM,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 0,
     },
     {
         .species = SPECIES_NINA,
@@ -11504,6 +12388,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 63, 0, 0, 1},
         .nature = NATURE_BOLD,
         .abilityFlags = 0 + (0 << 1) + (1 << 2),
+        .tier = 1,
     },
     {
         .species = SPECIES_NINA,
@@ -11517,6 +12402,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 32, 0, 0, 32},
         .nature = NATURE_CALM,
         .abilityFlags = 1 + (1 << 1) + (0 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_NINA,
@@ -11530,6 +12416,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {0, 1, 0, 63, 63, 0},
         .nature = NATURE_RASH,
         .abilityFlags = 1 + (1 << 1) + (0 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_NINA,
@@ -11543,6 +12430,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 32, 0, 0, 32},
         .nature = NATURE_CALM,
         .abilityFlags = 0 + (1 << 1) + (0 << 2),
+        .tier = 3,
     },
     {
         .species = SPECIES_CHAKUREI,
@@ -11556,6 +12444,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 32, 0, 0, 0, 32},
         .nature = NATURE_CAREFUL,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 0,
     },
     {
         .species = SPECIES_HAKUREI,
@@ -11569,6 +12458,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {1, 0, 0, 63, 63, 0},
         .nature = NATURE_TIMID,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 1,
     },
     {
         .species = SPECIES_HAKUREI,
@@ -11582,6 +12472,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {1, 63, 0, 63, 0, 0},
         .nature = NATURE_ADAMANT,
         .abilityFlags = 1 + (0 << 1) + (1 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_HAKUREI,
@@ -11595,6 +12486,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {0, 63, 0, 63, 1, 0},
         .nature = NATURE_LONELY,
         .abilityFlags = 0 + (0 << 1) + (1 << 2),
+        .tier = 3,
     },
     {
         .species = SPECIES_CKIRISAME,
@@ -11608,6 +12500,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {1, 0, 0, 63, 63, 0},
         .nature = NATURE_TIMID,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 0,
     },
     {
         .species = SPECIES_KIRISAME,
@@ -11621,6 +12514,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 32, 0, 32, 0},
         .nature = NATURE_BOLD,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 1,
     },
     {
         .species = SPECIES_KIRISAME,
@@ -11634,6 +12528,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {32, 0, 0, 32, 63, 0},
         .nature = NATURE_MODEST,
         .abilityFlags = 1 + (1 << 1) + (0 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_KIRISAME,
@@ -11647,6 +12542,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {1, 0, 0, 63, 63, 0},
         .nature = NATURE_TIMID,
         .abilityFlags = 1 + (1 << 1) + (0 << 2),
+        .tier = 3,
     },
     {
         .species = SPECIES_CSHINGYOKU,
@@ -11660,6 +12556,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 32, 0, 0, 32, 0},
         .nature = NATURE_BRAVE,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 0,
     },
     {
         .species = SPECIES_SHINGYOKUF,
@@ -11673,6 +12570,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 1, 0, 0, 63, 0},
         .nature = NATURE_QUIET,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 1,
     },
     {
         .species = SPECIES_SHINGYOKUF,
@@ -11686,6 +12584,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 32, 0, 0, 32},
         .nature = NATURE_CALM,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_SHINGYOKUF,
@@ -11699,6 +12598,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 63, 0, 0, 1},
         .nature = NATURE_BOLD,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 3,
     },
     {
         .species = SPECIES_SHINGYOKUM,
@@ -11712,6 +12612,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 1, 0, 0, 63, 0},
         .nature = NATURE_QUIET,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 1,
     },
     {
         .species = SPECIES_SHINGYOKUM,
@@ -11725,6 +12626,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 0, 0, 63, 1},
         .nature = NATURE_MODEST,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_SHINGYOKUM,
@@ -11738,6 +12640,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 32, 0, 0, 32},
         .nature = NATURE_BOLD,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 3,
     },
     {
         .species = SPECIES_SHINGYOKUO,
@@ -11751,6 +12654,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {0, 0, 1, 63, 63, 0},
         .nature = NATURE_TIMID,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 1,
     },
     {
         .species = SPECIES_SHINGYOKUO,
@@ -11764,6 +12668,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {0, 32, 0, 63, 32, 0},
         .nature = NATURE_HASTY,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_SHINGYOKUO,
@@ -11777,6 +12682,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {0, 32, 0, 63, 32, 0},
         .nature = NATURE_NAIVE,
         .abilityFlags = 0 + (0 << 1) + (1 << 2),
+        .tier = 3,
     },
     {
         .species = SPECIES_CMAGAN,
@@ -11790,6 +12696,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 63, 0, 0, 1},
         .nature = NATURE_BOLD,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 0,
     },
     {
         .species = SPECIES_MAGAN,
@@ -11803,6 +12710,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 32, 0, 0, 32},
         .nature = NATURE_BOLD,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 1,
     },
     {
         .species = SPECIES_MAGAN,
@@ -11816,6 +12724,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 32, 0, 32, 0},
         .nature = NATURE_QUIET,
         .abilityFlags = 0 + (0 << 1) + (1 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_CMIMA,
@@ -11829,6 +12738,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {32, 0, 0, 32, 63, 0},
         .nature = NATURE_MODEST,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 0,
     },
     {
         .species = SPECIES_MIMA,
@@ -11842,6 +12752,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {32, 63, 0, 0, 32, 0},
         .nature = NATURE_BRAVE,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 1,
     },
     {
         .species = SPECIES_MIMA,
@@ -11855,6 +12766,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 32, 0, 0, 32, 0},
         .nature = NATURE_QUIET,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_MIMA,
@@ -11868,6 +12780,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {1, 0, 0, 63, 63, 0},
         .nature = NATURE_MODEST,
         .abilityFlags = 0 + (1 << 1) + (0 << 2),
+        .tier = 3,
     },
     {
         .species = SPECIES_CELIS,
@@ -11881,6 +12794,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {0, 32, 0, 63, 32, 0},
         .nature = NATURE_NAIVE,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 0,
     },
     {
         .species = SPECIES_ELIS,
@@ -11894,6 +12808,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {0, 32, 0, 63, 32, 0},
         .nature = NATURE_TIMID,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 1,
     },
     {
         .species = SPECIES_ELIS,
@@ -11907,6 +12822,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {0, 32, 0, 32, 63, 0},
         .nature = NATURE_RASH,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_ELIS,
@@ -11920,6 +12836,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {0, 32, 0, 63, 32, 0},
         .nature = NATURE_NAIVE,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 3,
     },
     {
         .species = SPECIES_CKIKURI,
@@ -11933,6 +12850,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 32, 0, 0, 32},
         .nature = NATURE_BOLD,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 0,
     },
     {
         .species = SPECIES_KIKURI,
@@ -11946,6 +12864,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 32, 0, 0, 32, 0},
         .nature = NATURE_BRAVE,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 1,
     },
     {
         .species = SPECIES_KIKURI,
@@ -11959,6 +12878,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 32, 0, 0, 32},
         .nature = NATURE_BOLD,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_KIKURI,
@@ -11972,6 +12892,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 63, 0, 0, 1},
         .nature = NATURE_BOLD,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 3,
     },
     {
         .species = SPECIES_CKONNGARA,
@@ -11985,6 +12906,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 32, 0, 0, 0, 32},
         .nature = NATURE_CAREFUL,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 0,
     },
     {
         .species = SPECIES_KONNGARA,
@@ -11998,6 +12920,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 63, 0, 0, 1},
         .nature = NATURE_IMPISH,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 1,
     },
     {
         .species = SPECIES_KONNGARA,
@@ -12011,6 +12934,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {32, 63, 0, 32, 0, 0},
         .nature = NATURE_ADAMANT,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_KONNGARA,
@@ -12024,6 +12948,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 32, 0, 0, 32},
         .nature = NATURE_CAREFUL,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 3,
     },
     {
         .species = SPECIES_CSARIEL,
@@ -12037,6 +12962,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 0, 0, 1, 63},
         .nature = NATURE_CALM,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 0,
     },
     {
         .species = SPECIES_SARIEL,
@@ -12050,6 +12976,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 32, 0, 0, 32},
         .nature = NATURE_BOLD,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 1,
     },
     {
         .species = SPECIES_SARIEL,
@@ -12063,6 +12990,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 1, 0, 63, 0},
         .nature = NATURE_MODEST,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_SARIEL,
@@ -12076,6 +13004,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 32, 0, 0, 32},
         .nature = NATURE_CALM,
         .abilityFlags = 1 + (1 << 1) + (0 << 2),
+        .tier = 3,
     },
     {
         .species = SPECIES_SSARIEL,
@@ -12089,6 +13018,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 0, 32, 32, 0},
         .nature = NATURE_MODEST,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 1,
     },
     {
         .species = SPECIES_SSARIEL,
@@ -12102,6 +13032,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {32, 0, 0, 63, 32, 0},
         .nature = NATURE_TIMID,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_SSARIEL,
@@ -12115,6 +13046,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {1, 0, 0, 63, 63, 0},
         .nature = NATURE_MODEST,
         .abilityFlags = 1 + (1 << 1) + (0 << 2),
+        .tier = 3,
     },
     {
         .species = SPECIES_GENJI,
@@ -12128,6 +13060,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {1, 63, 0, 63, 0, 0},
         .nature = NATURE_JOLLY,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 1,
     },
     {
         .species = SPECIES_GENJI,
@@ -12141,6 +13074,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 32, 0, 0, 32},
         .nature = NATURE_IMPISH,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_GENJI,
@@ -12154,6 +13088,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 1, 0, 0, 63},
         .nature = NATURE_CAREFUL,
         .abilityFlags = 1 + (1 << 1) + (0 << 2),
+        .tier = 3,
     },
     {
         .species = SPECIES_CRIKA,
@@ -12167,6 +13102,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 32, 0, 32, 0},
         .nature = NATURE_MODEST,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 0,
     },
     {
         .species = SPECIES_RIKA,
@@ -12180,6 +13116,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 63, 0, 0, 1},
         .nature = NATURE_BOLD,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 1,
     },
     {
         .species = SPECIES_RIKA,
@@ -12193,6 +13130,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 0, 0, 63, 1},
         .nature = NATURE_MODEST,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_RIKA,
@@ -12206,6 +13144,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 0, 0, 63, 1},
         .nature = NATURE_MODEST,
         .abilityFlags = 1 + (0 << 1) + (1 << 2),
+        .tier = 3,
     },
     {
         .species = SPECIES_TRIKA,
@@ -12219,6 +13158,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 0, 0, 32, 32},
         .nature = NATURE_CALM,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 1,
     },
     {
         .species = SPECIES_TRIKA,
@@ -12232,6 +13172,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {1, 0, 0, 63, 63, 0},
         .nature = NATURE_TIMID,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_TRIKA,
@@ -12245,6 +13186,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {32, 0, 0, 32, 63, 0},
         .nature = NATURE_MODEST,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 3,
     },
     {
         .species = SPECIES_CMEIRA,
@@ -12258,6 +13200,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {1, 63, 0, 63, 0, 0},
         .nature = NATURE_ADAMANT,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 0,
     },
     {
         .species = SPECIES_MEIRA,
@@ -12271,6 +13214,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {32, 63, 0, 32, 0, 0},
         .nature = NATURE_ADAMANT,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 1,
     },
     {
         .species = SPECIES_MEIRA,
@@ -12284,6 +13228,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {1, 63, 0, 63, 0, 0},
         .nature = NATURE_ADAMANT,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_MEIRA,
@@ -12297,6 +13242,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {1, 63, 0, 63, 0, 0},
         .nature = NATURE_JOLLY,
         .abilityFlags = 0 + (0 << 1) + (1 << 2),
+        .tier = 3,
     },
     {
         .species = SPECIES_MAGIC_STONES,
@@ -12310,6 +13256,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 0, 0, 63, 1},
         .nature = NATURE_QUIET,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 1,
     },
     {
         .species = SPECIES_MAGIC_STONES,
@@ -12323,6 +13270,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 0, 0, 63, 1},
         .nature = NATURE_QUIET,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_MAGIC_STONES,
@@ -12336,6 +13284,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 32, 0, 0, 32},
         .nature = NATURE_BOLD,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 3,
     },
     {
         .species = SPECIES_CELLEN,
@@ -12349,6 +13298,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 0, 0, 32, 32},
         .nature = NATURE_SASSY,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 0,
     },
     {
         .species = SPECIES_ELLEN,
@@ -12362,6 +13312,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 63, 0, 1, 0},
         .nature = NATURE_BOLD,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 1,
     },
     {
         .species = SPECIES_ELLEN,
@@ -12375,6 +13326,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 0, 0, 32, 32},
         .nature = NATURE_CALM,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_ELLEN,
@@ -12388,6 +13340,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 0, 0, 63, 1},
         .nature = NATURE_MODEST,
         .abilityFlags = 1 + (0 << 1) + (1 << 2),
+        .tier = 3,
     },
     {
         .species = SPECIES_CKOTOHIME,
@@ -12401,6 +13354,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 1, 63, 0, 0},
         .nature = NATURE_TIMID,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 0,
     },
     {
         .species = SPECIES_KOTOHIME,
@@ -12414,6 +13368,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {1, 0, 0, 63, 63, 0},
         .nature = NATURE_MODEST,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 1,
     },
     {
         .species = SPECIES_KOTOHIME,
@@ -12427,6 +13382,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 1, 63, 0, 0},
         .nature = NATURE_TIMID,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_KOTOHIME,
@@ -12440,6 +13396,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {32, 0, 0, 63, 32, 0},
         .nature = NATURE_TIMID,
         .abilityFlags = 0 + (1 << 1) + (1 << 2),
+        .tier = 3,
     },
     {
         .species = SPECIES_CKANA,
@@ -12453,6 +13410,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 32, 0, 0, 32},
         .nature = NATURE_CALM,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 0,
     },
     {
         .species = SPECIES_KANA,
@@ -12466,6 +13424,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 32, 0, 0, 32},
         .nature = NATURE_CALM,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 1,
     },
     {
         .species = SPECIES_KANA,
@@ -12479,6 +13438,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 0, 32, 32, 0},
         .nature = NATURE_MODEST,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_KANA,
@@ -12492,6 +13452,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 63, 0, 0, 1},
         .nature = NATURE_BOLD,
         .abilityFlags = 1 + (0 << 1) + (0 << 2),
+        .tier = 3,
     },
     {
         .species = SPECIES_CRIKAKO,
@@ -12505,6 +13466,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {1, 0, 0, 63, 63, 0},
         .nature = NATURE_TIMID,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 0,
     },
     {
         .species = SPECIES_RIKAKO,
@@ -12518,6 +13480,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 0, 63, 1, 0},
         .nature = NATURE_TIMID,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 1,
     },
     {
         .species = SPECIES_RIKAKO,
@@ -12531,6 +13494,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {1, 0, 0, 63, 63, 0},
         .nature = NATURE_MILD,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_RIKAKO,
@@ -12544,6 +13508,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {1, 0, 0, 63, 63, 0},
         .nature = NATURE_TIMID,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 3,
     },
     {
         .species = SPECIES_CCHIYURI,
@@ -12557,6 +13522,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 32, 0, 0, 32},
         .nature = NATURE_RELAXED,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 0,
     },
     {
         .species = SPECIES_CHIYURI,
@@ -12570,6 +13536,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 1, 0, 0, 63},
         .nature = NATURE_CALM,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 1,
     },
     {
         .species = SPECIES_CHIYURI,
@@ -12583,6 +13550,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {1, 0, 0, 63, 63, 0},
         .nature = NATURE_MODEST,
         .abilityFlags = 0 + (1 << 1) + (0 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_CHIYURI,
@@ -12596,6 +13564,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 32, 0, 0, 32},
         .nature = NATURE_RELAXED,
         .abilityFlags = 1 + (0 << 1) + (0 << 2),
+        .tier = 3,
     },
     {
         .species = SPECIES_CYUMEMI,
@@ -12609,6 +13578,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {1, 0, 0, 63, 63, 0},
         .nature = NATURE_TIMID,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 0,
     },
     {
         .species = SPECIES_YUMEMI,
@@ -12622,6 +13592,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {32, 0, 0, 63, 32, 0},
         .nature = NATURE_TIMID,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 1,
     },
     {
         .species = SPECIES_YUMEMI,
@@ -12635,6 +13606,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {1, 0, 0, 63, 63, 0},
         .nature = NATURE_TIMID,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_YUMEMI,
@@ -12648,6 +13620,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {1, 0, 0, 63, 63, 0},
         .nature = NATURE_MODEST,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 3,
     },
     {
         .species = SPECIES_TYUMEMI,
@@ -12661,6 +13634,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 0, 32, 32, 0},
         .nature = NATURE_MODEST,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 1,
     },
     {
         .species = SPECIES_TYUMEMI,
@@ -12674,6 +13648,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 0, 1, 63, 0},
         .nature = NATURE_MODEST,
         .abilityFlags = 1 + (1 << 1) + (0 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_TYUMEMI,
@@ -12687,6 +13662,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {1, 0, 0, 63, 63, 0},
         .nature = NATURE_TIMID,
         .abilityFlags = 0 + (1 << 1) + (0 << 2),
+        .tier = 3,
     },
     {
         .species = SPECIES_RUUKOTO,
@@ -12700,6 +13676,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 32, 0, 0, 32, 0},
         .nature = NATURE_BRAVE,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 1,
     },
     {
         .species = SPECIES_RUUKOTO,
@@ -12713,6 +13690,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 32, 0, 0, 32},
         .nature = NATURE_CALM,
         .abilityFlags = 1 + (1 << 1) + (0 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_RUUKOTO,
@@ -12726,6 +13704,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 63, 0, 0, 1},
         .nature = NATURE_BOLD,
         .abilityFlags = 1 + (1 << 1) + (0 << 2),
+        .tier = 3,
     },
     {
         .species = SPECIES_MIMI_CHAN,
@@ -12739,6 +13718,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {0, 32, 0, 63, 32, 0},
         .nature = NATURE_NAIVE,
         .abilityFlags = 1 + (1 << 1) + (0 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_MIMI_CHAN,
@@ -12752,6 +13732,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {1, 63, 0, 63, 0, 0},
         .nature = NATURE_JOLLY,
         .abilityFlags = 1 + (1 << 1) + (0 << 2),
+        .tier = 3,
     },
     {
         .species = SPECIES_MIMI_CHAN,
@@ -12765,6 +13746,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {1, 63, 0, 63, 0, 0},
         .nature = NATURE_JOLLY,
         .abilityFlags = 1 + (1 << 1) + (0 << 2),
+        .tier = 3,
     },
     {
         .species = SPECIES_CORANGE,
@@ -12778,6 +13760,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {1, 63, 63, 0, 0, 0},
         .nature = NATURE_IMPISH,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 0,
     },
     {
         .species = SPECIES_ORANGE,
@@ -12791,6 +13774,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {1, 63, 63, 0, 0, 0},
         .nature = NATURE_ADAMANT,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 1,
     },
     {
         .species = SPECIES_ORANGE,
@@ -12804,6 +13788,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {1, 0, 63, 0, 0, 63},
         .nature = NATURE_IMPISH,
         .abilityFlags = 1 + (1 << 1) + (0 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_CKURUMI,
@@ -12817,6 +13802,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 0, 0, 32, 32},
         .nature = NATURE_CALM,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 0,
     },
     {
         .species = SPECIES_KURUMI,
@@ -12830,6 +13816,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {32, 0, 0, 32, 63, 0},
         .nature = NATURE_MODEST,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 1,
     },
     {
         .species = SPECIES_KURUMI,
@@ -12843,6 +13830,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 32, 0, 0, 32},
         .nature = NATURE_BOLD,
         .abilityFlags = 0 + (0 << 1) + (1 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_KURUMI,
@@ -12856,6 +13844,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 0, 32, 0, 32},
         .nature = NATURE_CALM,
         .abilityFlags = 0 + (0 << 1) + (1 << 2),
+        .tier = 3,
     },
     {
         .species = SPECIES_CELLY,
@@ -12869,6 +13858,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {1, 63, 0, 63, 0, 0},
         .nature = NATURE_JOLLY,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 0,
     },
     {
         .species = SPECIES_ELLY,
@@ -12882,6 +13872,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {32, 63, 0, 32, 0, 0},
         .nature = NATURE_ADAMANT,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 1,
     },
     {
         .species = SPECIES_ELLY,
@@ -12895,6 +13886,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {1, 63, 0, 63, 0, 0},
         .nature = NATURE_JOLLY,
         .abilityFlags = 0 + (1 << 1) + (1 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_ELLY,
@@ -12908,6 +13900,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {1, 63, 0, 63, 0, 0},
         .nature = NATURE_ADAMANT,
         .abilityFlags = 0 + (1 << 1) + (0 << 2),
+        .tier = 3,
     },
     {
         .species = SPECIES_CKAZAMI,
@@ -12921,6 +13914,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 0, 0, 63, 1},
         .nature = NATURE_MODEST,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 0,
     },
     {
         .species = SPECIES_KAZAMI,
@@ -12934,6 +13928,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 32, 0, 0, 32, 0},
         .nature = NATURE_BRAVE,
         .abilityFlags = 0 + (1 << 1) + (0 << 2),
+        .tier = 1,
     },
     {
         .species = SPECIES_KAZAMI,
@@ -12947,6 +13942,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 32, 0, 0, 32},
         .nature = NATURE_BOLD,
         .abilityFlags = 0 + (0 << 1) + (1 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_KAZAMI,
@@ -12960,6 +13956,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {1, 63, 0, 63, 0, 0},
         .nature = NATURE_ADAMANT,
         .abilityFlags = 1 + (0 << 1) + (0 << 2),
+        .tier = 3,
     },
     {
         .species = SPECIES_AKAZAMI,
@@ -12973,6 +13970,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {1, 0, 0, 63, 63, 0},
         .nature = NATURE_MODEST,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 1,
     },
     {
         .species = SPECIES_AKAZAMI,
@@ -12986,6 +13984,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {1, 63, 0, 63, 0, 0},
         .nature = NATURE_JOLLY,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_AKAZAMI,
@@ -12999,6 +13998,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {0, 63, 0, 63, 1, 0},
         .nature = NATURE_NAIVE,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 3,
     },
     {
         .species = SPECIES_CMUGETSU,
@@ -13012,6 +14012,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 32, 0, 0, 32},
         .nature = NATURE_RELAXED,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 0,
     },
     {
         .species = SPECIES_MUGETSU,
@@ -13025,6 +14026,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 0, 0, 63, 1},
         .nature = NATURE_MODEST,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 1,
     },
     {
         .species = SPECIES_MUGETSU,
@@ -13038,6 +14040,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {1, 0, 0, 63, 63, 0},
         .nature = NATURE_MODEST,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_MUGETSU,
@@ -13051,6 +14054,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 32, 0, 0, 32},
         .nature = NATURE_BOLD,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 3,
     },
     {
         .species = SPECIES_CGENGETSU,
@@ -13064,6 +14068,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {0, 1, 0, 63, 63, 0},
         .nature = NATURE_NAIVE,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 0,
     },
     {
         .species = SPECIES_GENGETSU,
@@ -13077,6 +14082,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {0, 32, 0, 63, 32, 0},
         .nature = NATURE_NAIVE,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 1,
     },
     {
         .species = SPECIES_GENGETSU,
@@ -13090,6 +14096,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {1, 0, 0, 63, 63, 0},
         .nature = NATURE_MODEST,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_GENGETSU,
@@ -13103,6 +14110,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {1, 0, 0, 63, 63, 0},
         .nature = NATURE_TIMID,
         .abilityFlags = 1 + (1 << 1) + (0 << 2),
+        .tier = 3,
     },
     {
         .species = SPECIES_CSARA,
@@ -13116,6 +14124,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 63, 0, 0, 0, 1},
         .nature = NATURE_ADAMANT,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 0,
     },
     {
         .species = SPECIES_SARA,
@@ -13129,6 +14138,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 63, 0, 0, 0, 1},
         .nature = NATURE_ADAMANT,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 1,
     },
     {
         .species = SPECIES_SARA,
@@ -13142,6 +14152,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {1, 63, 63, 0, 0, 0},
         .nature = NATURE_ADAMANT,
         .abilityFlags = 0 + (1 << 1) + (0 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_SARA,
@@ -13155,6 +14166,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {1, 63, 63, 0, 0, 0},
         .nature = NATURE_ADAMANT,
         .abilityFlags = 1 + (1 << 1) + (0 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_SARA,
@@ -13168,6 +14180,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {0, 32, 32, 0, 0, 63},
         .nature = NATURE_CAREFUL,
         .abilityFlags = 0 + (1 << 1) + (0 << 2),
+        .tier = 3,
     },
     {
         .species = SPECIES_CLOUISE,
@@ -13181,6 +14194,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 32, 0, 0, 32},
         .nature = NATURE_BOLD,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 0,
     },
     {
         .species = SPECIES_LOUISE,
@@ -13194,6 +14208,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 32, 0, 0, 32},
         .nature = NATURE_BOLD,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 1,
     },
     {
         .species = SPECIES_LOUISE,
@@ -13207,6 +14222,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 63, 0, 0, 1},
         .nature = NATURE_BOLD,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_LOUISE,
@@ -13220,6 +14236,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 0, 0, 63, 1},
         .nature = NATURE_MODEST,
         .abilityFlags = 0 + (1 << 1) + (1 << 2),
+        .tier = 3,
     },
     {
         .species = SPECIES_CARISU,
@@ -13233,6 +14250,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {32, 0, 0, 63, 32, 0},
         .nature = NATURE_TIMID,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 0,
     },
     {
         .species = SPECIES_ARISU,
@@ -13246,6 +14264,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 0, 32, 32, 0},
         .nature = NATURE_MODEST,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 1,
     },
     {
         .species = SPECIES_ARISU,
@@ -13259,6 +14278,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {32, 0, 0, 32, 63, 0},
         .nature = NATURE_TIMID,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_ARISU,
@@ -13272,6 +14292,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {1, 0, 0, 63, 63, 0},
         .nature = NATURE_MODEST,
         .abilityFlags = 0 + (0 << 1) + (1 << 2),
+        .tier = 3,
     },
     {
         .species = SPECIES_CYUKI,
@@ -13285,6 +14306,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {1, 0, 0, 63, 63, 0},
         .nature = NATURE_TIMID,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 0,
     },
     {
         .species = SPECIES_YUKI,
@@ -13298,6 +14320,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {1, 63, 0, 63, 0, 0},
         .nature = NATURE_JOLLY,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 1,
     },
     {
         .species = SPECIES_YUKI,
@@ -13311,6 +14334,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {1, 0, 0, 63, 63, 0},
         .nature = NATURE_TIMID,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_YUKI,
@@ -13324,6 +14348,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {0, 1, 0, 63, 63, 0},
         .nature = NATURE_HASTY,
         .abilityFlags = 1 + (0 << 1) + (0 << 2),
+        .tier = 3,
     },
     {
         .species = SPECIES_CMAI,
@@ -13337,6 +14362,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 0, 32, 32, 0},
         .nature = NATURE_MODEST,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 0,
     },
     {
         .species = SPECIES_MAI,
@@ -13350,6 +14376,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {32, 0, 0, 32, 63, 0},
         .nature = NATURE_MODEST,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 1,
     },
     {
         .species = SPECIES_MAI,
@@ -13363,6 +14390,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 63, 0, 0, 1},
         .nature = NATURE_BOLD,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_MAI,
@@ -13376,6 +14404,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {32, 0, 0, 63, 32, 0},
         .nature = NATURE_TIMID,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 3,
     },
     {
         .species = SPECIES_CYUMEKO,
@@ -13389,6 +14418,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 63, 0, 0, 0, 1},
         .nature = NATURE_ADAMANT,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 0,
     },
     {
         .species = SPECIES_YUMEKO,
@@ -13402,6 +14432,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 32, 0, 0, 32},
         .nature = NATURE_IMPISH,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 1,
     },
     {
         .species = SPECIES_YUMEKO,
@@ -13415,6 +14446,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 32, 0, 0, 32, 0},
         .nature = NATURE_BRAVE,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 1,
     },
     {
         .species = SPECIES_YUMEKO,
@@ -13428,6 +14460,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {1, 63, 63, 0, 0, 0},
         .nature = NATURE_ADAMANT,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_YUMEKO,
@@ -13441,6 +14474,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {32, 63, 0, 32, 0, 0},
         .nature = NATURE_JOLLY,
         .abilityFlags = 0 + (1 << 1) + (0 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_YUMEKO,
@@ -13454,6 +14488,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {32, 32, 0, 63, 0, 0},
         .nature = NATURE_JOLLY,
         .abilityFlags = 0 + (1 << 1) + (0 << 2),
+        .tier = 3,
     },
     {
         .species = SPECIES_YUMEKO,
@@ -13467,6 +14502,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {1, 63, 0, 63, 0, 0},
         .nature = NATURE_ADAMANT,
         .abilityFlags = 0 + (1 << 1) + (0 << 2),
+        .tier = 3,
     },
     {
         .species = SPECIES_CSHINKI,
@@ -13480,6 +14516,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 32, 0, 0, 32, 0},
         .nature = NATURE_BRAVE,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 0,
     },
     {
         .species = SPECIES_SHINKI,
@@ -13493,6 +14530,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 32, 0, 0, 32, 0},
         .nature = NATURE_QUIET,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 1,
     },
     {
         .species = SPECIES_SHINKI,
@@ -13506,6 +14544,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {32, 63, 0, 0, 0, 32},
         .nature = NATURE_ADAMANT,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_SHINKI,
@@ -13519,6 +14558,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 32, 0, 0, 32, 0},
         .nature = NATURE_NAUGHTY,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_SHINKI,
@@ -13532,6 +14572,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 32, 0, 0, 32},
         .nature = NATURE_BOLD,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 3,
     },
     {
         .species = SPECIES_ASHINKI,
@@ -13545,6 +14586,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {32, 0, 0, 63, 32, 0},
         .nature = NATURE_TIMID,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 1,
     },
     {
         .species = SPECIES_ASHINKI,
@@ -13558,6 +14600,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {0, 0, 0, 63, 63, 1},
         .nature = NATURE_TIMID,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_ASHINKI,
@@ -13571,6 +14614,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {0, 32, 0, 32, 63, 0},
         .nature = NATURE_RASH,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 3,
     },
     {
         .species = SPECIES_CSENDAI,
@@ -13584,6 +14628,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 63, 0, 0, 0, 1},
         .nature = NATURE_ADAMANT,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 0,
     },
     {
         .species = SPECIES_SENDAI,
@@ -13597,6 +14642,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 32, 0, 0, 0, 32},
         .nature = NATURE_ADAMANT,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 1,
     },
     {
         .species = SPECIES_SENDAI,
@@ -13610,6 +14656,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 32, 0, 0, 32},
         .nature = NATURE_CAREFUL,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_SENDAI,
@@ -13623,6 +14670,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {32, 32, 0, 0, 0, 63},
         .nature = NATURE_CAREFUL,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_SENDAI,
@@ -13636,6 +14684,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 32, 0, 0, 0, 32},
         .nature = NATURE_ADAMANT,
         .abilityFlags = 1 + (1 << 1) + (0 << 2),
+        .tier = 3,
     },
     {
         .species = SPECIES_SENDAI,
@@ -13649,6 +14698,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 1, 0, 0, 0, 63},
         .nature = NATURE_CAREFUL,
         .abilityFlags = 1 + (1 << 1) + (0 << 2),
+        .tier = 3,
     },
     {
         .species = SPECIES_CTENMA,
@@ -13662,6 +14712,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 32, 0, 0, 32},
         .nature = NATURE_BOLD,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 0,
     },
     {
         .species = SPECIES_TENMA,
@@ -13675,6 +14726,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 0, 0, 32, 32},
         .nature = NATURE_CALM,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 1,
     },
     {
         .species = SPECIES_TENMA,
@@ -13688,6 +14740,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 1, 0, 0, 63},
         .nature = NATURE_CAREFUL,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 1,
     },
     {
         .species = SPECIES_TENMA,
@@ -13701,6 +14754,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 0, 32, 32, 0},
         .nature = NATURE_TIMID,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 1,
     },
     {
         .species = SPECIES_TENMA,
@@ -13714,6 +14768,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {1, 0, 0, 63, 63, 0},
         .nature = NATURE_TIMID,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_TENMA,
@@ -13727,6 +14782,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 1, 0, 63, 0},
         .nature = NATURE_MODEST,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_TENMA,
@@ -13740,6 +14796,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 32, 0, 32, 0},
         .nature = NATURE_BOLD,
         .abilityFlags = 1 + (1 << 1) + (0 << 2),
+        .tier = 3,
     },
     {
         .species = SPECIES_TENMA,
@@ -13753,6 +14810,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 63, 0, 0, 1},
         .nature = NATURE_BOLD,
         .abilityFlags = 1 + (0 << 1) + (0 << 2),
+        .tier = 3,
     },
     {
         .species = SPECIES_CLAYLA,
@@ -13766,6 +14824,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {32, 0, 0, 0, 32, 63},
         .nature = NATURE_CAREFUL,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 0,
     },
     {
         .species = SPECIES_LAYLA,
@@ -13779,6 +14838,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 0, 0, 63, 1},
         .nature = NATURE_MODEST,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 1,
     },
     {
         .species = SPECIES_LAYLA,
@@ -13792,6 +14852,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 0, 0, 32, 32},
         .nature = NATURE_CAREFUL,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_LAYLA,
@@ -13805,6 +14866,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {1, 0, 0, 63, 63, 0},
         .nature = NATURE_TIMID,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 3,
     },
     {
         .species = SPECIES_DLAYLA,
@@ -13818,6 +14880,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {1, 0, 63, 0, 0, 63},
         .nature = NATURE_BOLD,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 1,
     },
     {
         .species = SPECIES_DLAYLA,
@@ -13831,6 +14894,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 1, 0, 63, 0},
         .nature = NATURE_MODEST,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_DLAYLA,
@@ -13844,6 +14908,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 63, 0, 0, 1},
         .nature = NATURE_BOLD,
         .abilityFlags = 0 + (1 << 1) + (0 << 2),
+        .tier = 3,
     },
     {
         .species = SPECIES_CYOUKI,
@@ -13857,6 +14922,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {1, 63, 0, 63, 0, 0},
         .nature = NATURE_JOLLY,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 0,
     },
     {
         .species = SPECIES_YOUKI,
@@ -13870,6 +14936,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 1, 0, 63, 0, 0},
         .nature = NATURE_JOLLY,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 1,
     },
     {
         .species = SPECIES_YOUKI,
@@ -13883,6 +14950,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {32, 63, 0, 32, 0, 0},
         .nature = NATURE_ADAMANT,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_YOUKI,
@@ -13896,6 +14964,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {0, 63, 0, 63, 0, 1},
         .nature = NATURE_JOLLY,
         .abilityFlags = 1 + (1 << 1) + (0 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_YOUKI,
@@ -13909,6 +14978,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {1, 63, 0, 63, 0, 0},
         .nature = NATURE_JOLLY,
         .abilityFlags = 1 + (1 << 1) + (0 << 2),
+        .tier = 3,
     },
     {
         .species = SPECIES_TORI,
@@ -13922,6 +14992,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {63, 0, 0, 32, 0, 32},
         .nature = NATURE_CALM,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 1,
     },
     {
         .species = SPECIES_TORI,
@@ -13935,6 +15006,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {1, 0, 0, 63, 63, 0},
         .nature = NATURE_MODEST,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 2,
     },
     {
         .species = SPECIES_TORI,
@@ -13948,5 +15020,6 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
         .evSpread = {1, 0, 0, 63, 63, 0},
         .nature = NATURE_TIMID,
         .abilityFlags = 1 + (1 << 1) + (1 << 2),
+        .tier = 3,
     },
 };
