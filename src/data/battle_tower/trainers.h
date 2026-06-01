@@ -3,7 +3,7 @@ static const struct BattleTowerTrainer sBattleTowerTrainers[] =
 	{
 		.trainerClass = FACILITY_CLASS_YOUNGSTER,
 		.name = _("Jeff"),
-		.greeting = _("fite me"),
+		.greeting = _("Shorts Alliance Member\nNo. 4, in attendance!"),
 		.victoryText = _("gg i win"),
 		.defeatText = _("wtf i lost"),
 		.monRoster = BattleTowerRosterAllMons,
@@ -83,7 +83,7 @@ static const struct BattleTowerTrainer sBattleTowerTrainers[] =
 	{
 		.trainerClass = FACILITY_CLASS_YOUNGSTER,
 		.name = _("Bradley"),
-		.greeting = _("fite me"),
+		.greeting = _("Shorts Alliance Member\nNo. 3, ready for battle!"),
 		.victoryText = _("gg i win"),
 		.defeatText = _("wtf i lost"),
 		.monRoster = BattleTowerRosterYoungsterBradley,
@@ -171,9 +171,9 @@ static const struct BattleTowerTrainer sBattleTowerTrainers[] =
 	{
 		.trainerClass = FACILITY_CLASS_PSYCHIC_M,
 		.name = _("Lorenzo"),
-		.greeting = _("fite me"),
-		.victoryText = _("gg i win"),
-		.defeatText = _("wtf i lost"),
+		.greeting = _("I'll read your mind...\nHuh, there's nothing there!"),
+		.victoryText = _("Ow, my head..."),
+		.defeatText = _("Clueless! Befuddled!\nBamboozled!"),
 		.monRoster = BattleTowerRosterPsychicLorenzo,
 	},
 	{
@@ -259,7 +259,7 @@ static const struct BattleTowerTrainer sBattleTowerTrainers[] =
 	{
 		.trainerClass = FACILITY_CLASS_YOUNGSTER,
 		.name = _("Cole"),
-		.greeting = _("fite me"),
+		.greeting = _("I'm second-in command of\nthe Shorts Alliance."),
 		.victoryText = _("gg i win"),
 		.defeatText = _("wtf i lost"),
 		.monRoster = BattleTowerRosterYoungsterCole,
@@ -563,7 +563,7 @@ static const struct BattleTowerTrainer sBattleTowerTrainers[] =
 	{
 		.trainerClass = FACILITY_CLASS_RUIN_MANIAC,
 		.name = _("Ein"),
-		.greeting = _("fite me"),
+		.greeting = _("I only use the finest\nPuppets to secure victory!"),
 		.victoryText = _("gg i win"),
 		.defeatText = _("wtf i lost"),
 		.monRoster = BattleTowerRosterRuinManiacEin,
@@ -595,7 +595,7 @@ static const struct BattleTowerTrainer sBattleTowerTrainers[] =
 	{
 		.trainerClass = FACILITY_CLASS_BLACK_BELT,
 		.name = _("Bret"),
-		.greeting = _("fite me"),
+		.greeting = _("Hwaah!\nWatch my muscle power!"),
 		.victoryText = _("gg i win"),
 		.defeatText = _("wtf i lost"),
 		.monRoster = BattleTowerRosterBlackBeltBret,
@@ -627,9 +627,9 @@ static const struct BattleTowerTrainer sBattleTowerTrainers[] =
 	{
 		.trainerClass = FACILITY_CLASS_BIKER,
 		.name = _("Damian"),
-		.greeting = _("fite me"),
-		.victoryText = _("gg i win"),
-		.defeatText = _("wtf i lost"),
+		.greeting = _("Heh.\nCan you even keep up?"),
+		.victoryText = _("Left in the dust..."),
+		.defeatText = _("I'm the coolest."),
 		.monRoster = BattleTowerRosterBikerDamian,
 	},
 	{
@@ -659,8 +659,8 @@ static const struct BattleTowerTrainer sBattleTowerTrainers[] =
 	{
 		.trainerClass = FACILITY_CLASS_YOUNGSTER,
 		.name = _("Zachery"),
-		.greeting = _("fite me"),
-		.victoryText = _("gg i win"),
+		.greeting = _("The Shorts Alliance manages\nshorts around the world.\pI am the leader, Zachery.\pFor your insolence, you will feel a\nworld of shorts!"),
+		.victoryText = _("WHAT!\nThis can't be!"),
 		.defeatText = _("wtf i lost"),
 		.monRoster = BattleTowerRosterAllMons,
 	},
@@ -747,7 +747,7 @@ static const struct BattleTowerTrainer sBattleTowerTrainers[] =
 	{
 		.trainerClass = FACILITY_CLASS_PKMN_BREEDER,
 		.name = _("Pamela"),
-		.greeting = _("fite me"),
+		.greeting = _("It's Monday."),
 		.victoryText = _("gg i win"),
 		.defeatText = _("wtf i lost"),
 		.monRoster = BattleTowerRosterAllMons,

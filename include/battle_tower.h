@@ -12,7 +12,7 @@ struct BattleTowerTrainer
     u8 trainerClass;
     u8 name[8];
     u8 teamFlags;
-    u8 greeting[120];
+    u8 greeting[160];
 	u8 victoryText[120];
 	u8 defeatText[120];
 	const u16* monRoster;

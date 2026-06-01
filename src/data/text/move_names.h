@@ -880,5 +880,8 @@ const u8 gMoveNamesAbridged[][15] = {
 	_("Vacuum Wave"),
 	_("Fall Kick"),
 	_("Recalibrate"),
+	_("Pyro Strike"),
+	_("Electroweb"),
+	_("Flash Cannon"),
 };
 

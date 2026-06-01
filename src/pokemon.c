@@ -1918,6 +1918,13 @@ s32 CalculateBaseDamage(struct BattlePokemon *attacker, struct BattlePokemon *de
         attack /= 4;
         spAttack /= 4;
     }
+	if (defenderAbility == ABILITY_CHROMATIC && type != attacker->type1 && type != attacker->type2)
+	{
+		defense *= 15;
+		defense /= 10;
+		defense *= 15;
+		defense /= 10;
+	}
     if (attacker->ability == ABILITY_HUSTLE)
         attack = (150 * attack) / 100;
     if (attacker->ability == ABILITY_GUTS && attacker->status1)
@@ -1947,6 +1954,10 @@ s32 CalculateBaseDamage(struct BattlePokemon *attacker, struct BattlePokemon *de
         gBattleMovePower = (150 * gBattleMovePower) / 100;
     }
     if (attacker->ability == ABILITY_TOXICOLOGIST && type == TYPE_POISON)
+    {
+        gBattleMovePower = (150 * gBattleMovePower) / 100;
+    }
+    if (attacker->ability == ABILITY_ELECTRICIAN && type == TYPE_ELECTRIC)
     {
         gBattleMovePower = (150 * gBattleMovePower) / 100;
     }

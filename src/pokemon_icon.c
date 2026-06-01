@@ -22,7 +22,10 @@ static void DestroyMonIconInternal(struct Sprite * sprite);
 const u16 gMonIconPalettes[][16] = {
     INCBIN_U16("graphics/pokemon/icon_palettes/icon_palette_0.gbapal"),
     INCBIN_U16("graphics/pokemon/icon_palettes/icon_palette_1.gbapal"),
-    INCBIN_U16("graphics/pokemon/icon_palettes/icon_palette_2.gbapal")
+    INCBIN_U16("graphics/pokemon/icon_palettes/icon_palette_2.gbapal"),
+    INCBIN_U16("graphics/pokemon/icon_palettes/icon_palette_3.gbapal"),
+    INCBIN_U16("graphics/pokemon/icon_palettes/icon_palette_4.gbapal"),
+    INCBIN_U16("graphics/pokemon/icon_palettes/icon_palette_5.gbapal"),
 };
 
 const u8 *const gMonIconTable[] = {
@@ -392,6 +395,7 @@ const u8 *const gMonIconTable[] = {
     [SPECIES_SAGUME] = gMonIcon_sagume_neutral,
     [SPECIES_CCLOWNPIECE] = gMonIcon_clownpiece_chibi,
     [SPECIES_CLOWNPIECE] = gMonIcon_clownpiece_neutral,
+	[SPECIES_DCLOWNPIECE] = gMonIcon_clownpiece_defense,
     [SPECIES_CJUNKO] = gMonIcon_junko_chibi,
     [SPECIES_JUNKO] = gMonIcon_junko_neutral,
     [SPECIES_CHECATIA] = gMonIcon_hecatia_chibi,
@@ -402,10 +406,13 @@ const u8 *const gMonIconTable[] = {
     [SPECIES_SHION] = gMonIcon_shion_neutral,
     [SPECIES_CETERNITY] = gMonIcon_eternity_chibi,
     [SPECIES_ETERNITY] = gMonIcon_eternity_neutral,
+    [SPECIES_AETERNITY] = gMonIcon_eternity_attack,
     [SPECIES_CNEMUNO] = gMonIcon_nemuno_chibi,
     [SPECIES_NEMUNO] = gMonIcon_nemuno_neutral,
+    [SPECIES_DNEMUNO] = gMonIcon_nemuno_defense,
     [SPECIES_CAUNN] = gMonIcon_aunn_chibi,
     [SPECIES_AUNN] = gMonIcon_aunn_neutral,
+    [SPECIES_TAUNN] = gMonIcon_aunn_technical,
     [SPECIES_CNARUMI] = gMonIcon_narumi_chibi,
     [SPECIES_NARUMI] = gMonIcon_narumi_neutral,
     [SPECIES_ANARUMI] = gMonIcon_narumi_attack,
@@ -413,12 +420,15 @@ const u8 *const gMonIconTable[] = {
     [SPECIES_MAI_AND_SATONO] = gMonIcon_dancers_neutral,
     [SPECIES_COKINA] = gMonIcon_okina_chibi,
     [SPECIES_OKINA] = gMonIcon_okina_neutral,
+    [SPECIES_DOKINA] = gMonIcon_okina_defense,
     [SPECIES_CEIKA] = gMonIcon_eika_chibi,
     [SPECIES_EIKA] = gMonIcon_eika_neutral,
+    [SPECIES_DEIKA] = gMonIcon_eika_defense,
     [SPECIES_CURUMI] = gMonIcon_urumi_chibi,
     [SPECIES_URUMI] = gMonIcon_urumi_neutral,
     [SPECIES_CKUTAKA] = gMonIcon_kutaka_chibi,
     [SPECIES_KUTAKA] = gMonIcon_kutaka_neutral,
+    [SPECIES_HKUTAKA] = gMonIcon_kutaka_helper,
     [SPECIES_CYACHIE] = gMonIcon_yachie_chibi,
     [SPECIES_YACHIE] = gMonIcon_yachie_neutral,
     [SPECIES_CMAYUMI] = gMonIcon_mayumi_chibi,
@@ -427,12 +437,14 @@ const u8 *const gMonIconTable[] = {
     [SPECIES_KEIKI] = gMonIcon_keiki_neutral,
     [SPECIES_CSAKI] = gMonIcon_saki_chibi,
     [SPECIES_SAKI] = gMonIcon_saki_neutral,
+    [SPECIES_SSAKI] = gMonIcon_saki_speed,
     [SPECIES_CYUUMA] = gMonIcon_yuuma_chibi,
     [SPECIES_YUUMA] = gMonIcon_yuuma_neutral,
     [SPECIES_CMIKE] = gMonIcon_mike_chibi,
     [SPECIES_MIKE] = gMonIcon_mike_neutral,
     [SPECIES_CTAKANE] = gMonIcon_takane_chibi,
     [SPECIES_TAKANE] = gMonIcon_takane_neutral,
+    [SPECIES_TTAKANE] = gMonIcon_takane_technical,
     [SPECIES_CSANNYO] = gMonIcon_sannyo_chibi,
     [SPECIES_SANNYO] = gMonIcon_sannyo_neutral,
     [SPECIES_CMISUMARU] = gMonIcon_misumaru_chibi,
@@ -441,6 +453,7 @@ const u8 *const gMonIconTable[] = {
     [SPECIES_TSUKASA] = gMonIcon_tsukasa_neutral,
     [SPECIES_CMEGUMU] = gMonIcon_megumu_chibi,
     [SPECIES_MEGUMU] = gMonIcon_megumu_neutral,
+    [SPECIES_TMEGUMU] = gMonIcon_megumu_technical,
     [SPECIES_CCHIMATA] = gMonIcon_chimata_chibi,
     [SPECIES_CHIMATA] = gMonIcon_chimata_neutral,
     [SPECIES_CMOMOYO] = gMonIcon_momoyo_chibi,
@@ -469,12 +482,14 @@ const u8 *const gMonIconTable[] = {
 	[SPECIES_YUIMAN] = gMonIcon_yuiman_neutral,
 	[SPECIES_CARIYA] = gMonIcon_ariya_chibi,
 	[SPECIES_ARIYA] = gMonIcon_ariya_neutral,
+    [SPECIES_DARIYA] = gMonIcon_ariya_defense,
 	[SPECIES_CNINA] = gMonIcon_nina_chibi,
 	[SPECIES_NINA] = gMonIcon_nina_neutral,
     [SPECIES_CHAKUREI] = gMonIcon_hakurei_chibi,
     [SPECIES_HAKUREI] = gMonIcon_hakurei_neutral,
     [SPECIES_CKIRISAME] = gMonIcon_kirisame_chibi,
     [SPECIES_KIRISAME] = gMonIcon_kirisame_neutral,
+    [SPECIES_TKIRISAME] = gMonIcon_kirisame_technical,
     [SPECIES_CSHINGYOKU] = gMonIcon_shingyoku_chibi,
     [SPECIES_SHINGYOKUF] = gMonIcon_shingyoku_female,
     [SPECIES_SHINGYOKUM] = gMonIcon_shingyoku_male,
@@ -496,15 +511,18 @@ const u8 *const gMonIconTable[] = {
     [SPECIES_CRIKA] = gMonIcon_rika_chibi,
     [SPECIES_RIKA] = gMonIcon_rika_neutral,
     [SPECIES_TRIKA] = gMonIcon_rika_technical,
+    [SPECIES_NOROIKO] = gMonIcon_noroiko_neutral,
     [SPECIES_CMEIRA] = gMonIcon_meira_chibi,
     [SPECIES_MEIRA] = gMonIcon_meira_neutral,
     [SPECIES_MAGIC_STONES] = gMonIcon_magicstones,
+    [SPECIES_MATENSHI] = gMonIcon_matenshi_neutral,
     [SPECIES_CELLEN] = gMonIcon_ellen_chibi,
     [SPECIES_ELLEN] = gMonIcon_ellen_neutral,
     [SPECIES_CKOTOHIME] = gMonIcon_kotohime_chibi,
     [SPECIES_KOTOHIME] = gMonIcon_kotohime_neutral,
     [SPECIES_CKANA] = gMonIcon_kana_chibi,
     [SPECIES_KANA] = gMonIcon_kana_neutral,
+    [SPECIES_AKANA] = gMonIcon_kana_attack,
     [SPECIES_CRIKAKO] = gMonIcon_rikako_chibi,
     [SPECIES_RIKAKO] = gMonIcon_rikako_neutral,
     [SPECIES_CCHIYURI] = gMonIcon_chiyuri_chibi,
@@ -520,13 +538,17 @@ const u8 *const gMonIconTable[] = {
     [SPECIES_KURUMI] = gMonIcon_kurumi_neutral,
     [SPECIES_CELLY] = gMonIcon_elly_chibi,
     [SPECIES_ELLY] = gMonIcon_elly_neutral,
+    [SPECIES_HIKARIKO] = gMonIcon_hikariko_neutral,
     [SPECIES_CKAZAMI] = gMonIcon_kazami_chibi,
     [SPECIES_KAZAMI] = gMonIcon_kazami_neutral,
     [SPECIES_AKAZAMI] = gMonIcon_kazami_attack,
     [SPECIES_CMUGETSU] = gMonIcon_mugetsu_chibi,
     [SPECIES_MUGETSU] = gMonIcon_mugetsu_neutral,
+    [SPECIES_HMUGETSU] = gMonIcon_mugetsu_helper,
     [SPECIES_CGENGETSU] = gMonIcon_gengetsu_chibi,
     [SPECIES_GENGETSU] = gMonIcon_gengetsu_neutral,
+    [SPECIES_AGENGETSU] = gMonIcon_gengetsu_attack,
+    [SPECIES_WAYOUSEI] = gMonIcon_wayousei_neutral,
     [SPECIES_CSARA] = gMonIcon_sara_chibi,
     [SPECIES_SARA] = gMonIcon_sara_neutral,
     [SPECIES_CLOUISE] = gMonIcon_louise_chibi,
@@ -537,8 +559,10 @@ const u8 *const gMonIconTable[] = {
     [SPECIES_YUKI] = gMonIcon_yuki_neutral,
     [SPECIES_CMAI] = gMonIcon_mai_chibi,
     [SPECIES_MAI] = gMonIcon_mai_neutral,
+    [SPECIES_AYANA] = gMonIcon_ayana_neutral,
     [SPECIES_CYUMEKO] = gMonIcon_yumeko_chibi,
     [SPECIES_YUMEKO] = gMonIcon_yumeko_neutral,
+    [SPECIES_TYUMEKO] = gMonIcon_yumeko_technical,
     [SPECIES_CSHINKI] = gMonIcon_shinki_chibi,
     [SPECIES_SHINKI] = gMonIcon_shinki_neutral,
     [SPECIES_ASHINKI] = gMonIcon_shinki_attack,
@@ -1032,6 +1056,7 @@ const u8 gMonIconPaletteIndices[] = {
     
     [SPECIES_CCLOWNPIECE] = 1,
     [SPECIES_CLOWNPIECE] = 1,
+	[SPECIES_DCLOWNPIECE] = 1,
     
     [SPECIES_CJUNKO] = 2,
     [SPECIES_JUNKO] = 2,
@@ -1047,9 +1072,11 @@ const u8 gMonIconPaletteIndices[] = {
     
     [SPECIES_CNEMUNO] = 2,
     [SPECIES_NEMUNO] = 2,
+	[SPECIES_DNEMUNO] = 2,
     
     [SPECIES_CAUNN] = 2,
     [SPECIES_AUNN] = 2,
+	[SPECIES_TAUNN] = 2,
     
     [SPECIES_CNARUMI] = 2,
     [SPECIES_NARUMI] = 2,
@@ -1057,15 +1084,18 @@ const u8 gMonIconPaletteIndices[] = {
     
     [SPECIES_COKINA] = 2,
     [SPECIES_OKINA] = 2,
+	[SPECIES_DOKINA] = 2,
     
     [SPECIES_CEIKA] = 1,
     [SPECIES_EIKA] = 1,
+	[SPECIES_DEIKA] = 1,
     
     [SPECIES_CURUMI] = 2,
     [SPECIES_URUMI] = 2,
     
     [SPECIES_CKUTAKA] = 2,
     [SPECIES_KUTAKA] = 2,
+	[SPECIES_HKUTAKA] = 2,
     
     [SPECIES_CYACHIE] = 1,
     [SPECIES_YACHIE] = 1,
@@ -1075,6 +1105,7 @@ const u8 gMonIconPaletteIndices[] = {
     
     [SPECIES_CSAKI] = 1,
     [SPECIES_SAKI] = 1,
+	[SPECIES_SSAKI] = 1,
     
     [SPECIES_CYUUMA] = 1,
     [SPECIES_YUUMA] = 1,
@@ -1093,6 +1124,7 @@ const u8 gMonIconPaletteIndices[] = {
     
     [SPECIES_CMEGUMU] = 1,
     [SPECIES_MEGUMU] = 1,
+	[SPECIES_TMEGUMU] = 1,
     
     [SPECIES_CCHIMATA] = 1,
     [SPECIES_CHIMATA] = 1,
@@ -1135,6 +1167,7 @@ const u8 gMonIconPaletteIndices[] = {
 	
 	[SPECIES_CARIYA] = 2,
 	[SPECIES_ARIYA] = 2,
+	[SPECIES_DARIYA] = 2,
 	
 	[SPECIES_CNINA] = 1,
 	[SPECIES_NINA] = 1,
@@ -1144,6 +1177,7 @@ const u8 gMonIconPaletteIndices[] = {
     
     [SPECIES_CKIRISAME] = 1,
     [SPECIES_KIRISAME] = 1,
+	[SPECIES_TKIRISAME] = 1,
     
     [SPECIES_CSHINGYOKU] = 0,
     [SPECIES_SHINGYOKUF] = 0,
@@ -1174,11 +1208,15 @@ const u8 gMonIconPaletteIndices[] = {
     [SPECIES_CRIKA] = 1,
     [SPECIES_RIKA] = 1,
     [SPECIES_TRIKA] = 0,
+	
+	[SPECIES_NOROIKO] = 1,
     
     [SPECIES_CMEIRA] = 1,
     [SPECIES_MEIRA] = 1,
     
     [SPECIES_MAGIC_STONES] = 0,
+	
+	[SPECIES_MATENSHI] = 1,
     
     [SPECIES_CELLEN] = 1,
     [SPECIES_ELLEN] = 1,
@@ -1188,6 +1226,7 @@ const u8 gMonIconPaletteIndices[] = {
     
     [SPECIES_CKANA] = 1,
     [SPECIES_KANA] = 1,
+	[SPECIES_AKANA] = 1,
     
     [SPECIES_CRIKAKO] = 1,
     [SPECIES_RIKAKO] = 1,
@@ -1211,6 +1250,8 @@ const u8 gMonIconPaletteIndices[] = {
     
     [SPECIES_CELLY] = 1,
     [SPECIES_ELLY] = 1,
+	
+	[SPECIES_HIKARIKO] = 4,
     
     [SPECIES_CKAZAMI] = 2,
     [SPECIES_KAZAMI] = 2,
@@ -1218,10 +1259,14 @@ const u8 gMonIconPaletteIndices[] = {
     
     [SPECIES_CMUGETSU] = 1,
     [SPECIES_MUGETSU] = 1,
+	[SPECIES_HMUGETSU] = 1,
     
     [SPECIES_CGENGETSU] = 1,
     [SPECIES_GENGETSU] = 1,
+	[SPECIES_AGENGETSU] = 1,
     
+	[SPECIES_WAYOUSEI] = 1,
+	
     [SPECIES_CSARA] = 0,
     [SPECIES_SARA] = 0,
     
@@ -1236,9 +1281,12 @@ const u8 gMonIconPaletteIndices[] = {
     
     [SPECIES_CMAI] = 1,
     [SPECIES_MAI] = 1,
+	
+	[SPECIES_AYANA] = 2,
     
     [SPECIES_CYUMEKO] = 1,
     [SPECIES_YUMEKO] = 1,
+	[SPECIES_TYUMEKO] = 1,
     
     [SPECIES_CSHINKI] = 1,
     [SPECIES_SHINKI] = 1,

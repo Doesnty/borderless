@@ -6435,7 +6435,7 @@ static const struct TrainerMonFullControl sParty_LeaderErika[] = {
         .gender = MON_FEMALE,
         .ability = 0, // Unnerve
         .ball = ITEM_POKE_BALL,
-        .moves = {MOVE_NEEDLE_ARM, MOVE_HAMMER_ARM, MOVE_SCARY_FACE, MOVE_MEGA_PUNCH},
+        .moves = {MOVE_NEEDLE_ARM, MOVE_HAMMER_ARM, MOVE_MEGA_PUNCH, 0},
     },
     {
         .iv = 10,
@@ -6537,7 +6537,7 @@ static const struct TrainerMonFullControl sParty_LeaderBlaine[] = {
         .gender = MON_MALE,
         .ability = 2, // Drought
         .ball = ITEM_POKE_BALL,
-        .moves = {MOVE_FIRE_BLAST, MOVE_SOLAR_BEAM, MOVE_EARTH_POWER, MOVE_NASTY_PLOT},
+        .moves = {MOVE_FLAMETHROWER, MOVE_SOLAR_BEAM, MOVE_EARTH_POWER, MOVE_NASTY_PLOT},
     },
     {
         .iv = 10,
@@ -7369,7 +7369,7 @@ static const struct TrainerMonFullControl sParty_RivalRoute22LateSquirtle[] = {
         .gender = MON_FEMALE,
         .ability = 2, // Drought
         .ball = ITEM_POKE_BALL,
-        .moves = {MOVE_FIRE_BLAST, MOVE_SOLAR_BEAM, MOVE_AIR_SLASH, MOVE_EARTH_POWER},
+        .moves = {MOVE_FLAMETHROWER, MOVE_SOLAR_BEAM, MOVE_AIR_SLASH, MOVE_EARTH_POWER},
     },
     {
         .iv = 12,

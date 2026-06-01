@@ -1852,6 +1852,11 @@ const u8 gclownpiecePokedexText[] = _(
     "Shrine. Reimu detests it, but tolerates\n"
     "her for the luxurious space heating.");
 
+const u8 gdclownpiecePokedexText[] = _(
+	"WIP"
+	""
+	"");
+
 const u8 gcjunkoPokedexText[] = _(
     "A divine spirit capable of purifying\n"
     "anything. Her purified spellcards are\n"
@@ -1902,6 +1907,11 @@ const u8 geternityPokedexText[] = _(
     "ancient god of night, but there's\n"
     "no good evidence for this theory.");
 
+const u8 gaeternityPokedexText[] = _(
+	"WIP"
+	""
+	"");
+
 const u8 gcnemunoPokedexText[] = _(
     "A mountain hag who lives alone on\n"
     "Youkai Mountain. Primitive even\n"
@@ -1912,6 +1922,11 @@ const u8 gnemunoPokedexText[] = _(
     "driving off trespassers, in reality she's\n"
     "helpful to genuinely lost humans.");
 
+const u8 gdnemunoPokedexText[] = _(
+	"WIP"
+	""
+	"");
+
 const u8 gcaunnPokedexText[] = _(
     "A polite komainu that guards\n"
     "shrines and temples.\n"
@@ -1921,6 +1936,11 @@ const u8 gaunnPokedexText[] = _(
     "Since komainus come in pairs, she\n"
     "can manifest with two bodies, but\n"
     "it makes her tire twice as quickly.");
+
+const u8 gtaunnPokedexText[] = _(
+	"WIP"
+	""
+	"");
 
 const u8 gcnarumiPokedexText[] = _(
     "A magician in the Forest of Magic\n"
@@ -1957,6 +1977,11 @@ const u8 gokinaPokedexText[] = _(
     "the four seasons, disability, hindrances,\n"
     "noh theatre, and others.");
 
+const u8 gdokinaPokedexText[] = _(
+	"WIP"
+	""
+	"");
+
 const u8 gceikaPokedexText[] = _(
     "The ghost of a stillborn child.\n"
     "She's a master at stacking stones.\n"
@@ -1966,6 +1991,11 @@ const u8 geikaPokedexText[] = _(
     "She's good at making tedious, pointless\n"
     "work into something enjoyable, which makes\n"
     "her very popular with children spirits.");
+
+const u8 gdeikaPokedexText[] = _(
+	"WIP"
+	""
+	"");
 
 const u8 gcurumiPokedexText[] = _(
     "An oni who domesticates the extinct\n"
@@ -1988,6 +2018,11 @@ const u8 gkutakaPokedexText[] = _(
     "source, but hasn't had much success.");
     // how is there so little lore for her
 
+const u8 ghkutakaPokedexText[] = _(
+	"WIP"
+	""
+	"");
+
 const u8 gcyachiePokedexText[] = _(
     "The Jidiao matriarch of the Kiketsu\n"
     "Family, one of the leading factions\n"
@@ -2007,11 +2042,6 @@ const u8 gmayumiPokedexText[] = _(
     "She's a proficient warrior and skilled\n"
     "general, but she hardly ever gets into\n"
     "battles where it matters these days.");
-    // this is kind of weird when you think about it
-    // she's like, 1 year old
-    // but it's not entirely fanfiction
-    // the animal spirits don't have bodies
-    // keiki could've just made a toaster to beat them
 
 const u8 gckeikiPokedexText[] = _(
     "A sculptor god, born from the wishes\n"
@@ -2032,6 +2062,11 @@ const u8 gsakiPokedexText[] = _(
     "A frank and straight-forward leader\n"
     "whose focus on raw strength makes\n"
     "her popular with her subordinates.");
+
+const u8 gssakiPokedexText[] = _(
+	"WIP"
+	""
+	"");
 
 const u8 gcyuumaPokedexText[] = _(
     "The taotie leader of the Gouyoku\n"
@@ -2062,6 +2097,11 @@ const u8 gtakanePokedexText[] = _(
     "The de-facto leader of the yamawaro,\n"
     "much as Nitori is for the kappa. They\n"
     "have something of a friendly rivalry.");
+
+const u8 gttakanePokedexText[] = _(
+	"WIP"
+	""
+	"");
 
 const u8 gcsannyoPokedexText[] = _(
     "A youkai who runs a gambling den for\n"
@@ -2103,6 +2143,11 @@ const u8 gmegumuPokedexText[] = _(
     "Created the Ability Cards as part of an\n"
     "elaborate business venture to exploit\n"
     "Gensokyo's lack of standardized currency.");
+
+const u8 gtmegumuPokedexText[] = _(
+	"WIP"
+	""
+	"");
 
 const u8 gcchimataPokedexText[] = _(
     "A destitute god of marketplaces.\n"
@@ -2244,6 +2289,11 @@ const u8 gariyaPokedexText[] = _(
     "the ability to reject all change.\n"
     "She is always alone in the end.");
 
+const u8 gdariyaPokedexText[] = _(
+	"WIP"
+	""
+	"");
+
 const u8 gcninaPokedexText[] = _(
     "A young mirage-creating shellfish.\n"
     "Very gullible."
@@ -2273,6 +2323,11 @@ const u8 gkirisamePokedexText[] = _(
     "Marisa before obtaining the Hakkero.\n"
     "Her magic is wild and unrefined,\n"
     "but just as destructive as ever.");
+
+const u8 gtkirisamePokedexText[] = _(
+	"WIP"
+	""
+	"");
 
 const u8 gcshingyokuPokedexText[] = _(
     "A being that guards the gates\n"
@@ -2379,6 +2434,11 @@ const u8 gtrikaPokedexText[] = _(
     "greatest creation, the floating Evil\n"
     "Eye Sigma, in fact qualifies as a tank.");
 
+const u8 gnoroikoPokedexText[] = _(
+	"WIP"
+	""
+	"");
+
 const u8 gcmeiraPokedexText[] = _(
     "A wandering samurai seeking\n"
     "the Hakurei clan's power.\n"
@@ -2393,6 +2453,11 @@ const u8 gmagic_stonesPokedexText[] = _(
     "A deadly magical weapon guarding the\n"
     "passage to Reimaden. It's unclear if\n"
     "they're sentient, or even alive.");
+
+const u8 gmatenshiPokedexText[] = _(
+	"WIP"
+	""
+	"");
 
 const u8 gcellenPokedexText[] = _(
     "A witch with eternal youth.\n"
@@ -2423,6 +2488,11 @@ const u8 gkanaPokedexText[] = _(
     "The people in the mansion she haunts\n"
     "don't fear her anymore, so she wants\n"
     "to move to the Hakurei Shrine.");
+
+const u8 gakanaPokedexText[] = _(
+	"WIP"
+	""
+	"");
 
 const u8 gcrikakoPokedexText[] = _(
     "A rare type of person that believes\n"
@@ -2499,6 +2569,11 @@ const u8 gellyPokedexText[] = _(
     "boomerang. Doesn't fight often since\n"
     "Kurumi defeats most intruders.");
 
+const u8 ghikarikoPokedexText[] = _(
+	"WIP"
+	""
+	"");
+
 const u8 gckazamiPokedexText[] = _(
     "A girl that spends most of her\n"
     "time sleeping in her mansion.\n"
@@ -2524,6 +2599,11 @@ const u8 gmugetsuPokedexText[] = _(
     "care for human life, and will kill\n"
     "any human entering their world.");
 
+const u8 ghmugetsuPokedexText[] = _(
+	"WIP"
+	""
+	"");
+
 const u8 gcgengetsuPokedexText[] = _(
     "The older dream world sister. Looks\n"
     "like an angel, but is still a demon.\n"
@@ -2533,6 +2613,16 @@ const u8 ggengetsuPokedexText[] = _(
     "Lives alone with Mugetsu. Hates foes that\n"
     "toy with her and will happily use her\n"
     "full power against such opponents.");
+
+const u8 gagengetsuPokedexText[] = _(
+	"WIP"
+	""
+	"");
+
+const u8 gwayouseiPokedexText[] = _(
+	"WIP"
+	""
+	"");
 
 const u8 gcsaraPokedexText[] = _(
     "Makai's gatekeeper. Not\n"
@@ -2584,6 +2674,11 @@ const u8 gmaiPokedexText[] = _(
     "only by her overconfidence. Considers\n"
     "Yuki a hindrance holding her back.");
 
+const u8 gayanaPokedexText[] = _(
+	"WIP"
+	""
+	"");
+
 const u8 gcyumekoPokedexText[] = _(
     "Shinki's maid. Polite towards her\n"
     "mistress, but not towards others.\n"
@@ -2593,6 +2688,11 @@ const u8 gyumekoPokedexText[] = _(
     "The strongest of Shinki's creations.\n"
     "She throws swords in battle as if\n"
     "they were mere knives.");
+
+const u8 gtyumekoPokedexText[] = _(
+	"WIP"
+	""
+	"");
 
 const u8 gcshinkiPokedexText[] = _(
     "The goddess of Makai. Created\n"

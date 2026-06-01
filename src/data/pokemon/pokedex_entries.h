@@ -2203,6 +2203,12 @@ const struct PokedexEntry gPokedexEntries[] =
         .description = gclownpiecePokedexText,
     },
 
+    [NATIONAL_DEX_DCLOWNPIECE] = 
+    {
+        .categoryName = _("Hell Fairy"),
+        .description = gdclownpiecePokedexText,
+    },
+
     [NATIONAL_DEX_CJUNKO] = 
     {
         .categoryName = _("Pure"),
@@ -2263,6 +2269,12 @@ const struct PokedexEntry gPokedexEntries[] =
         .description = geternityPokedexText,
     },
 
+    [NATIONAL_DEX_AETERNITY] = 
+    {
+        .categoryName = _("Insect Fairy"),
+        .description = gaeternityPokedexText,
+    },
+
     [NATIONAL_DEX_CNEMUNO] = 
     {
         .categoryName = _("Yamanba"),
@@ -2275,6 +2287,12 @@ const struct PokedexEntry gPokedexEntries[] =
         .description = gnemunoPokedexText,
     },
 
+    [NATIONAL_DEX_DNEMUNO] = 
+    {
+        .categoryName = _("Yamanba"),
+        .description = gdnemunoPokedexText,
+    },
+
     [NATIONAL_DEX_CAUNN] = 
     {
         .categoryName = _("Komainu"),
@@ -2285,6 +2303,12 @@ const struct PokedexEntry gPokedexEntries[] =
     {
         .categoryName = _("Komainu"),
         .description = gaunnPokedexText,
+    },
+
+    [NATIONAL_DEX_TAUNN] = 
+    {
+        .categoryName = _("Komainu Pair"),
+        .description = gtaunnPokedexText,
     },
 
     [NATIONAL_DEX_CNARUMI] = 
@@ -2329,6 +2353,12 @@ const struct PokedexEntry gPokedexEntries[] =
         .description = gokinaPokedexText,
     },
 
+    [NATIONAL_DEX_DOKINA] = 
+    {
+        .categoryName = _("Secret God"),
+        .description = gdokinaPokedexText,
+    },
+
     [NATIONAL_DEX_CEIKA] = 
     {
         .categoryName = _("Stillborn"),
@@ -2339,6 +2369,12 @@ const struct PokedexEntry gPokedexEntries[] =
     {
         .categoryName = _("Stillborn"),
         .description = geikaPokedexText,
+    },
+
+    [NATIONAL_DEX_DEIKA] = 
+    {
+        .categoryName = _("Stillborn"),
+        .description = gdeikaPokedexText,
     },
 
     [NATIONAL_DEX_CURUMI] = 
@@ -2363,6 +2399,12 @@ const struct PokedexEntry gPokedexEntries[] =
     {
         .categoryName = _("Chicken God"),
         .description = gkutakaPokedexText,
+    },
+
+    [NATIONAL_DEX_HKUTAKA] = 
+    {
+        .categoryName = _("Chicken God"),
+        .description = ghkutakaPokedexText,
     },
 
     [NATIONAL_DEX_CYACHIE] = 
@@ -2413,6 +2455,12 @@ const struct PokedexEntry gPokedexEntries[] =
         .description = gsakiPokedexText,
     },
 
+    [NATIONAL_DEX_SSAKI] = 
+    {
+        .categoryName = _("Pegasus"),
+        .description = gssakiPokedexText,
+    },
+
     [NATIONAL_DEX_CYUUMA] = 
     {
         .categoryName = _("Taotie"),
@@ -2447,6 +2495,12 @@ const struct PokedexEntry gPokedexEntries[] =
     {
         .categoryName = _("Yamawaro"),
         .description = gtakanePokedexText,
+    },
+
+    [NATIONAL_DEX_TTAKANE] = 
+    {
+        .categoryName = _("Yamawaro"),
+        .description = gttakanePokedexText,
     },
 
     [NATIONAL_DEX_CSANNYO] = 
@@ -2495,6 +2549,12 @@ const struct PokedexEntry gPokedexEntries[] =
     {
         .categoryName = _("Crow Tengu"),
         .description = gmegumuPokedexText,
+    },
+
+    [NATIONAL_DEX_TMEGUMU] = 
+    {
+        .categoryName = _("Crow Tengu"),
+        .description = gtmegumuPokedexText,
     },
 
     [NATIONAL_DEX_CCHIMATA] = 
@@ -2665,6 +2725,12 @@ const struct PokedexEntry gPokedexEntries[] =
 		.description = gariyaPokedexText,
 	},
 	
+	[NATIONAL_DEX_DARIYA] = 
+	{
+		.categoryName = _("Stone Goddess"),
+		.description = gdariyaPokedexText,
+	},
+	
 	[NATIONAL_DEX_CNINA] = 
 	{
 		.categoryName = _("Shen"),
@@ -2699,6 +2765,12 @@ const struct PokedexEntry gPokedexEntries[] =
     {
         .categoryName = _("Witch"),
         .description = gkirisamePokedexText,
+    },
+
+    [NATIONAL_DEX_TKIRISAME] = 
+    {
+        .categoryName = _("Witch"),
+        .description = gtkirisamePokedexText,
     },
 
     [NATIONAL_DEX_CSHINGYOKU] = 
@@ -2827,6 +2899,12 @@ const struct PokedexEntry gPokedexEntries[] =
         .description = gtrikaPokedexText,
     },
 
+    [NATIONAL_DEX_NOROIKO] = 
+    {
+        .categoryName = _("Curse"),
+        .description = gnoroikoPokedexText,
+    },
+
     [NATIONAL_DEX_CMEIRA] = 
     {
         .categoryName = _("Samurai"),
@@ -2843,6 +2921,12 @@ const struct PokedexEntry gPokedexEntries[] =
     {
         .categoryName = _("Construct"),
         .description = gmagic_stonesPokedexText,
+    },
+
+    [NATIONAL_DEX_MATENSHI] = 
+    {
+        .categoryName = _("Angel"),
+        .description = gmatenshiPokedexText,
     },
 
     [NATIONAL_DEX_CELLEN] = 
@@ -2879,6 +2963,12 @@ const struct PokedexEntry gPokedexEntries[] =
     {
         .categoryName = _("Poltergeist"),
         .description = gkanaPokedexText,
+    },
+
+    [NATIONAL_DEX_AKANA] = 
+    {
+        .categoryName = _("Poltergeist"),
+        .description = gakanaPokedexText,
     },
 
     [NATIONAL_DEX_CRIKAKO] = 
@@ -2971,6 +3061,12 @@ const struct PokedexEntry gPokedexEntries[] =
         .description = gellyPokedexText,
     },
 
+    [NATIONAL_DEX_HIKARIKO] = 
+    {
+        .categoryName = _("Colorful Fairy"),
+        .description = ghikarikoPokedexText,
+    },
+
     [NATIONAL_DEX_CKAZAMI] = 
     {
         .categoryName = _("Sleepy"),
@@ -3001,6 +3097,12 @@ const struct PokedexEntry gPokedexEntries[] =
         .description = gmugetsuPokedexText,
     },
 
+    [NATIONAL_DEX_HMUGETSU] = 
+    {
+        .categoryName = _("Demon"),
+        .description = ghmugetsuPokedexText,
+    },
+
     [NATIONAL_DEX_CGENGETSU] = 
     {
         .categoryName = _("Demon"),
@@ -3011,6 +3113,18 @@ const struct PokedexEntry gPokedexEntries[] =
     {
         .categoryName = _("Demon"),
         .description = ggengetsuPokedexText,
+    },
+
+    [NATIONAL_DEX_AGENGETSU] = 
+    {
+        .categoryName = _("Demon"),
+        .description = gagengetsuPokedexText,
+    },
+
+    [NATIONAL_DEX_WAYOUSEI] = 
+    {
+        .categoryName = _("Lightning Fairy"),
+        .description = gwayouseiPokedexText,
     },
 
     [NATIONAL_DEX_CSARA] = 
@@ -3073,6 +3187,12 @@ const struct PokedexEntry gPokedexEntries[] =
         .description = gmaiPokedexText,
     },
 
+    [NATIONAL_DEX_AYANA] = 
+    {
+        .categoryName = _("Demon Jester"),
+        .description = gayanaPokedexText,
+    },
+
     [NATIONAL_DEX_CYUMEKO] = 
     {
         .categoryName = _("Maid"),
@@ -3083,6 +3203,12 @@ const struct PokedexEntry gPokedexEntries[] =
     {
         .categoryName = _("Maid"),
         .description = gyumekoPokedexText,
+    },
+
+    [NATIONAL_DEX_TYUMEKO] = 
+    {
+        .categoryName = _("Maid"),
+        .description = gtyumekoPokedexText,
     },
 
     [NATIONAL_DEX_CSHINKI] = 

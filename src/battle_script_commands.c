@@ -1361,7 +1361,7 @@ static void atk01_accuracycheck(void)
         // check Thunder on sunny weather
         if (WEATHER_HAS_EFFECT && gBattleWeather & WEATHER_SUN_ANY && gBattleMoves[move].effect == EFFECT_THUNDER)
             moveAcc = 50;
-		if (targetAbility == ABILITY_WONDER_SKIN && gBattleMoves[move].moveClass == CLASS_STATUS && moveAcc > 50)
+		if (targetAbility == ABILITY_WONDER_GARB && gBattleMoves[move].moveClass == CLASS_STATUS && moveAcc > 50)
 			moveAcc = 50;
         calc = sAccuracyStageRatios[buff].dividend * moveAcc;
         calc /= sAccuracyStageRatios[buff].divisor;

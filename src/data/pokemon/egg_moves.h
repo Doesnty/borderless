@@ -160,7 +160,6 @@ static const u16 sCDaiyouseiEggMoveLearnset[] = {
     MOVE_ENCORE,
     MOVE_PERISH_SONG,
     MOVE_SILVER_WIND,
-    MOVE_HELPING_HAND,
     MOVE_MINIMIZE,
     MOVE_MEMENTO,
     MOVE_TELEPORT,
@@ -177,7 +176,6 @@ static const u16 sDaiyouseiEggMoveLearnset[] = {
     MOVE_ENCORE,
     MOVE_PERISH_SONG,
     MOVE_SILVER_WIND,
-    MOVE_HELPING_HAND,
     MOVE_MINIMIZE,
     MOVE_MEMENTO,
     MOVE_TELEPORT,
@@ -194,7 +192,6 @@ static const u16 sADaiyouseiEggMoveLearnset[] = {
     MOVE_ENCORE,
     MOVE_PERISH_SONG,
     MOVE_SILVER_WIND,
-    MOVE_HELPING_HAND,
     MOVE_MINIMIZE,
     MOVE_MEMENTO,
     MOVE_TELEPORT,
@@ -211,7 +208,6 @@ static const u16 sDDaiyouseiEggMoveLearnset[] = {
     MOVE_ENCORE,
     MOVE_PERISH_SONG,
     MOVE_SILVER_WIND,
-    MOVE_HELPING_HAND,
     MOVE_MINIMIZE,
     MOVE_MEMENTO,
     MOVE_TELEPORT,
@@ -794,6 +790,7 @@ static const u16 sCLilyWhiteEggMoveLearnset[] = {
     MOVE_FLAME_CHARGE,
     MOVE_BESTOW,
     MOVE_BLOSSOMING,
+    MOVE_CHARGE_BEAM,
     0
 };
 
@@ -807,6 +804,7 @@ static const u16 sLilyWhiteEggMoveLearnset[] = {
     MOVE_FLAME_CHARGE,
     MOVE_BESTOW,
     MOVE_BLOSSOMING,
+    MOVE_CHARGE_BEAM,
     0
 };
 
@@ -820,6 +818,7 @@ static const u16 sALilyWhiteEggMoveLearnset[] = {
     MOVE_FLAME_CHARGE,
     MOVE_BESTOW,
     MOVE_BLOSSOMING,
+    MOVE_CHARGE_BEAM,
     0
 };
 
@@ -833,6 +832,7 @@ static const u16 sHLilyWhiteEggMoveLearnset[] = {
     MOVE_FLAME_CHARGE,
     MOVE_BESTOW,
     MOVE_BLOSSOMING,
+    MOVE_CHARGE_BEAM,
     0
 };
 
@@ -845,7 +845,7 @@ static const u16 sCLilyBlackEggMoveLearnset[] = {
     MOVE_CAMOUFLAGE,
     MOVE_HEX,
     MOVE_HONE_CLAWS,
-	MOVE_FEINT,
+    MOVE_FEINT,
     0
 };
 
@@ -858,7 +858,7 @@ static const u16 sLilyBlackEggMoveLearnset[] = {
     MOVE_CAMOUFLAGE,
     MOVE_HEX,
     MOVE_HONE_CLAWS,
-	MOVE_FEINT,
+    MOVE_FEINT,
     0
 };
 
@@ -871,7 +871,7 @@ static const u16 sALilyBlackEggMoveLearnset[] = {
     MOVE_CAMOUFLAGE,
     MOVE_HEX,
     MOVE_HONE_CLAWS,
-	MOVE_FEINT,
+    MOVE_FEINT,
     0
 };
 
@@ -884,7 +884,7 @@ static const u16 sSLilyBlackEggMoveLearnset[] = {
     MOVE_CAMOUFLAGE,
     MOVE_HEX,
     MOVE_HONE_CLAWS,
-	MOVE_FEINT,
+    MOVE_FEINT,
     0
 };
 
@@ -2337,7 +2337,7 @@ static const u16 sCSuwakoEggMoveLearnset[] = {
     MOVE_ROCK_SLIDE,
     MOVE_DIZZY_PUNCH,
     MOVE_SCALD,
-	MOVE_CURSE,
+    MOVE_CURSE,
     0
 };
 
@@ -2348,7 +2348,7 @@ static const u16 sSuwakoEggMoveLearnset[] = {
     MOVE_ROCK_SLIDE,
     MOVE_DIZZY_PUNCH,
     MOVE_SCALD,
-	MOVE_CURSE,
+    MOVE_CURSE,
     0
 };
 
@@ -2359,7 +2359,7 @@ static const u16 sASuwakoEggMoveLearnset[] = {
     MOVE_ROCK_SLIDE,
     MOVE_DIZZY_PUNCH,
     MOVE_SCALD,
-	MOVE_CURSE,
+    MOVE_CURSE,
     0
 };
 
@@ -2370,7 +2370,7 @@ static const u16 sDSuwakoEggMoveLearnset[] = {
     MOVE_ROCK_SLIDE,
     MOVE_DIZZY_PUNCH,
     MOVE_SCALD,
-	MOVE_CURSE,
+    MOVE_CURSE,
     0
 };
 
@@ -3294,7 +3294,7 @@ static const u16 sTNueEggMoveLearnset[] = {
     0
 };
 
-static const u16 sTensokuEggMoveLearnset[] = {
+static const u16 sHisoutensokuEggMoveLearnset[] = {
     MOVE_REFRESH,
     MOVE_BODY_SLAM,
     MOVE_HARDEN,
@@ -4386,6 +4386,17 @@ static const u16 sClownpieceEggMoveLearnset[] = {
     0
 };
 
+static const u16 sDClownpieceEggMoveLearnset[] = {
+    MOVE_ACUPRESSURE,
+    MOVE_PAIN_SPLIT,
+    MOVE_FLARE_BLITZ,
+    MOVE_NASTY_PLOT,
+    MOVE_CONFUSE_RAY,
+    MOVE_GROUP_PRANK,
+    MOVE_REFRESH,
+    0
+};
+
 static const u16 sCJunkoEggMoveLearnset[] = {
     MOVE_SILVER_WIND,
     MOVE_CLEAR_SMOG,
@@ -4482,6 +4493,17 @@ static const u16 sEternityEggMoveLearnset[] = {
     0
 };
 
+static const u16 sAEternityEggMoveLearnset[] = {
+    MOVE_BLOSSOMING,
+    MOVE_BURN_POWDER,
+    MOVE_SUCKER_PUNCH,
+    MOVE_WEATHER_BALL,
+    MOVE_WORK_UP,
+    MOVE_COTTON_SPORE,
+    MOVE_MUD_SLAP,
+    0
+};
+
 static const u16 sCNemunoEggMoveLearnset[] = {
     MOVE_KNOCK_OFF,
     MOVE_OUTRAGE,
@@ -4502,6 +4524,16 @@ static const u16 sNemunoEggMoveLearnset[] = {
     0
 };
 
+static const u16 sDNemunoEggMoveLearnset[] = {
+    MOVE_KNOCK_OFF,
+    MOVE_OUTRAGE,
+    MOVE_RAGE,
+    MOVE_DAUNT,
+    MOVE_FURY_SWIPES,
+    MOVE_CROSS_CHOP,
+    0
+};
+
 static const u16 sCAunnEggMoveLearnset[] = {
     MOVE_BARRAGE,
     MOVE_RAPID_SPIN,
@@ -4510,7 +4542,8 @@ static const u16 sCAunnEggMoveLearnset[] = {
     MOVE_HEADBUTT,
     MOVE_SKULL_BASH,
     MOVE_BATON_PASS,
-    MOVE_SEISMIC_TOSS,
+    MOVE_THUNDER_FANG,
+    MOVE_FIRE_FANG,
     0
 };
 
@@ -4522,7 +4555,21 @@ static const u16 sAunnEggMoveLearnset[] = {
     MOVE_HEADBUTT,
     MOVE_SKULL_BASH,
     MOVE_BATON_PASS,
-    MOVE_SEISMIC_TOSS,
+    MOVE_THUNDER_FANG,
+    MOVE_FIRE_FANG,
+    0
+};
+
+static const u16 sTAunnEggMoveLearnset[] = {
+    MOVE_BARRAGE,
+    MOVE_RAPID_SPIN,
+    MOVE_ASSIST,
+    MOVE_BLOCK,
+    MOVE_HEADBUTT,
+    MOVE_SKULL_BASH,
+    MOVE_BATON_PASS,
+    MOVE_THUNDER_FANG,
+    MOVE_FIRE_FANG,
     0
 };
 
@@ -4598,6 +4645,16 @@ static const u16 sOkinaEggMoveLearnset[] = {
     0
 };
 
+static const u16 sDOkinaEggMoveLearnset[] = {
+    MOVE_SWAGGER,
+    MOVE_INGRAIN,
+    MOVE_MIMIC,
+    MOVE_IMPRISON,
+    MOVE_PROTECT,
+    MOVE_TRI_ATTACK,
+    0
+};
+
 static const u16 sCEikaEggMoveLearnset[] = {
     MOVE_TAKE_OVER,
     MOVE_SHRIEK,
@@ -4613,6 +4670,20 @@ static const u16 sCEikaEggMoveLearnset[] = {
 };
 
 static const u16 sEikaEggMoveLearnset[] = {
+    MOVE_TAKE_OVER,
+    MOVE_SHRIEK,
+    MOVE_SMILE,
+    MOVE_HEADBUTT,
+    MOVE_REFRESH,
+    MOVE_MEMENTO,
+    MOVE_ROCK_SLIDE,
+    MOVE_CLEAR_SMOG,
+    MOVE_TICKLE,
+    MOVE_CURSE,
+    0
+};
+
+static const u16 sDEikaEggMoveLearnset[] = {
     MOVE_TAKE_OVER,
     MOVE_SHRIEK,
     MOVE_SMILE,
@@ -4663,6 +4734,18 @@ static const u16 sCKutakaEggMoveLearnset[] = {
 };
 
 static const u16 sKutakaEggMoveLearnset[] = {
+    MOVE_COPYCAT,
+    MOVE_SCALD,
+    MOVE_AMNESIA,
+    MOVE_REFRESH,
+    MOVE_AQUA_RING,
+    MOVE_GALE,
+    MOVE_GALE_DANCE,
+    MOVE_FLARE_BLITZ,
+    0
+};
+
+static const u16 sHKutakaEggMoveLearnset[] = {
     MOVE_COPYCAT,
     MOVE_SCALD,
     MOVE_AMNESIA,
@@ -4754,6 +4837,15 @@ static const u16 sSakiEggMoveLearnset[] = {
     0
 };
 
+static const u16 sSSakiEggMoveLearnset[] = {
+    MOVE_BITE,
+    MOVE_HI_JUMP_KICK,
+    MOVE_SWAGGER,
+    MOVE_REVERSAL,
+    MOVE_FIRE_SPIN,
+    0
+};
+
 static const u16 sCYuumaEggMoveLearnset[] = {
     MOVE_BUBBLEBEAM,
     MOVE_OUTRAGE,
@@ -4763,7 +4855,7 @@ static const u16 sCYuumaEggMoveLearnset[] = {
     MOVE_TORMENT,
     MOVE_BOUNCE,
     MOVE_SLACK_OFF,
-	MOVE_WILD_HUNT,
+    MOVE_WILD_HUNT,
     0
 };
 
@@ -4776,7 +4868,7 @@ static const u16 sYuumaEggMoveLearnset[] = {
     MOVE_TORMENT,
     MOVE_BOUNCE,
     MOVE_SLACK_OFF,
-	MOVE_WILD_HUNT,
+    MOVE_WILD_HUNT,
     0
 };
 
@@ -4816,7 +4908,15 @@ static const u16 sTakaneEggMoveLearnset[] = {
     MOVE_REVENGE,
     MOVE_MAGIC_COAT,
     MOVE_SPLASHBACK,
-    MOVE_FISSURE,
+    0
+};
+
+static const u16 sTTakaneEggMoveLearnset[] = {
+    MOVE_NIGHT_SLASH,
+    MOVE_BESTOW,
+    MOVE_REVENGE,
+    MOVE_MAGIC_COAT,
+    MOVE_SPLASHBACK,
     0
 };
 
@@ -4891,6 +4991,7 @@ static const u16 sCMegumuEggMoveLearnset[] = {
     MOVE_FOCUS_ENERGY,
     MOVE_FORESIGHT,
     MOVE_SKILL_SWAP,
+    MOVE_RECALIBRATE,
     0
 };
 
@@ -4899,6 +5000,16 @@ static const u16 sMegumuEggMoveLearnset[] = {
     MOVE_FOCUS_ENERGY,
     MOVE_FORESIGHT,
     MOVE_SKILL_SWAP,
+    MOVE_RECALIBRATE,
+    0
+};
+
+static const u16 sTMegumuEggMoveLearnset[] = {
+    MOVE_PUNISHMENT,
+    MOVE_FOCUS_ENERGY,
+    MOVE_FORESIGHT,
+    MOVE_SKILL_SWAP,
+    MOVE_RECALIBRATE,
     0
 };
 
@@ -4928,8 +5039,8 @@ static const u16 sCMomoyoEggMoveLearnset[] = {
     MOVE_LEECH_LIFE,
     MOVE_DRAIN_PUNCH,
     MOVE_AGILITY,
-	MOVE_EARTH_POWER,
-	MOVE_SUPERPOWER,
+    MOVE_EARTH_POWER,
+    MOVE_SUPERPOWER,
     0
 };
 
@@ -4943,8 +5054,8 @@ static const u16 sMomoyoEggMoveLearnset[] = {
     MOVE_LEECH_LIFE,
     MOVE_DRAIN_PUNCH,
     MOVE_AGILITY,
-	MOVE_EARTH_POWER,
-	MOVE_SUPERPOWER,
+    MOVE_EARTH_POWER,
+    MOVE_SUPERPOWER,
     0
 };
 
@@ -5218,6 +5329,16 @@ static const u16 sAriyaEggMoveLearnset[] = {
     0
 };
 
+static const u16 sDAriyaEggMoveLearnset[] = {
+    MOVE_NIGHTMARE,
+    MOVE_MIRROR_SHOT,
+    MOVE_DISABLE,
+    MOVE_HEX,
+    MOVE_HAZE,
+    MOVE_REFRESH,
+    0
+};
+
 static const u16 sCNinaEggMoveLearnset[] = {
     MOVE_MOOD_SWING,
     MOVE_HYPNOSIS,
@@ -5282,6 +5403,17 @@ static const u16 sCKirisameEggMoveLearnset[] = {
 };
 
 static const u16 sKirisameEggMoveLearnset[] = {
+    MOVE_AGILITY,
+    MOVE_QUICK_ATTACK,
+    MOVE_FOCUS_ENERGY,
+    MOVE_POWER_WHIP,
+    MOVE_FLAME_CHARGE,
+    MOVE_SWEET_KISS,
+    MOVE_BARRIER,
+    0
+};
+
+static const u16 sTKirisameEggMoveLearnset[] = {
     MOVE_AGILITY,
     MOVE_QUICK_ATTACK,
     MOVE_FOCUS_ENERGY,
@@ -5490,7 +5622,7 @@ static const u16 sCRikaEggMoveLearnset[] = {
     MOVE_IRON_DEFENSE,
     MOVE_BOLT_STRIKE,
     MOVE_RECYCLE,
-	MOVE_SCREECH,
+    MOVE_SCREECH,
     0
 };
 
@@ -5500,7 +5632,7 @@ static const u16 sRikaEggMoveLearnset[] = {
     MOVE_IRON_DEFENSE,
     MOVE_BOLT_STRIKE,
     MOVE_RECYCLE,
-	MOVE_SCREECH,
+    MOVE_SCREECH,
     0
 };
 
@@ -5510,7 +5642,18 @@ static const u16 sTRikaEggMoveLearnset[] = {
     MOVE_IRON_DEFENSE,
     MOVE_BOLT_STRIKE,
     MOVE_RECYCLE,
-	MOVE_SCREECH,
+    MOVE_SCREECH,
+    0
+};
+
+static const u16 sNoroikoEggMoveLearnset[] = {
+    MOVE_CLEAR_SMOG,
+    MOVE_ZEN_HEADBUTT,
+    MOVE_SUCKER_PUNCH,
+    MOVE_FORCE_PALM,
+    MOVE_SHADOW_PUNCH,
+    MOVE_OMINOUS_WIND,
+    MOVE_HYPNOSIS,
     0
 };
 
@@ -5540,6 +5683,16 @@ static const u16 sMagicStonesEggMoveLearnset[] = {
     MOVE_SKILL_SWAP,
     MOVE_ROCK_SLIDE,
     MOVE_ROCK_WRECKER,
+    0
+};
+
+static const u16 sMatenshiEggMoveLearnset[] = {
+    MOVE_WISH,
+    MOVE_DISABLE,
+    MOVE_PUNISHMENT,
+    MOVE_MIST,
+    MOVE_PURSUIT,
+    MOVE_AMNESIA,
     0
 };
 
@@ -5603,6 +5756,17 @@ static const u16 sKanaEggMoveLearnset[] = {
     0
 };
 
+static const u16 sAKanaEggMoveLearnset[] = {
+    MOVE_PERFORMANCE,
+    MOVE_YAWN,
+    MOVE_MEMENTO,
+    MOVE_PAIN_SPLIT,
+    MOVE_HEX,
+    MOVE_NIGHT_DAZE,
+    MOVE_CURSE,
+    0
+};
+
 static const u16 sCRikakoEggMoveLearnset[] = {
     MOVE_SELF_DESTRUCT,
     MOVE_EXTREME_SPEED,
@@ -5631,7 +5795,7 @@ static const u16 sCChiyuriEggMoveLearnset[] = {
     MOVE_RECYCLE,
     MOVE_SWIFT,
     MOVE_SCALD,
-	MOVE_LOCK_ON,
+    MOVE_LOCK_ON,
     0
 };
 
@@ -5645,7 +5809,7 @@ static const u16 sChiyuriEggMoveLearnset[] = {
     MOVE_RECYCLE,
     MOVE_SWIFT,
     MOVE_SCALD,
-	MOVE_LOCK_ON,
+    MOVE_LOCK_ON,
     0
 };
 
@@ -5687,7 +5851,7 @@ static const u16 sRuukotoEggMoveLearnset[] = {
     MOVE_SCULPTURE,
     MOVE_DEBT_SPIRAL,
     MOVE_OVERHEAT,
-	MOVE_DOUBLE_TEAM,
+    MOVE_DOUBLE_TEAM,
     0
 };
 
@@ -5741,6 +5905,18 @@ static const u16 sEllyEggMoveLearnset[] = {
     0
 };
 
+static const u16 sHikarikoEggMoveLearnset[] = {
+    MOVE_SUCKER_PUNCH,
+    MOVE_FLAIL,
+    MOVE_PROTECT,
+    MOVE_MEMENTO,
+    MOVE_WISH,
+    MOVE_MAGIC_COAT,
+    MOVE_YAWN,
+    MOVE_NATURE_POWER,
+    0
+};
+
 static const u16 sCKazamiEggMoveLearnset[] = {
     MOVE_SNORE,
     MOVE_IMPRISON,
@@ -5789,6 +5965,15 @@ static const u16 sMugetsuEggMoveLearnset[] = {
     0
 };
 
+static const u16 sHMugetsuEggMoveLearnset[] = {
+    MOVE_CHARGE_BEAM,
+    MOVE_SCARY_FACE,
+    MOVE_SCULPTURE,
+    MOVE_BESTOW,
+    MOVE_INVOCATION,
+    0
+};
+
 static const u16 sCGengetsuEggMoveLearnset[] = {
     MOVE_ENCORE,
     MOVE_REVERSAL,
@@ -5806,6 +5991,27 @@ static const u16 sGengetsuEggMoveLearnset[] = {
     MOVE_PSYSHOT,
     MOVE_MEMENTO,
     MOVE_DOUBLE_TEAM,
+    0
+};
+
+static const u16 sAGengetsuEggMoveLearnset[] = {
+    MOVE_ENCORE,
+    MOVE_REVERSAL,
+    MOVE_FLAIL,
+    MOVE_PSYSHOT,
+    MOVE_MEMENTO,
+    MOVE_DOUBLE_TEAM,
+    0
+};
+
+static const u16 sWayouseiEggMoveLearnset[] = {
+    MOVE_THUNDER_FANG,
+    MOVE_AURA_SPHERE,
+    MOVE_BOLT_STRIKE,
+    MOVE_OVERDRIVE,
+    MOVE_ICE_BALL,
+    MOVE_WEATHER_BALL,
+    MOVE_BARRAGE,
     0
 };
 
@@ -5905,10 +6111,22 @@ static const u16 sMaiEggMoveLearnset[] = {
     0
 };
 
+static const u16 sAyanaEggMoveLearnset[] = {
+    MOVE_KNIFE_THROW,
+    MOVE_ICE_BALL,
+    MOVE_ERUPTION,
+    MOVE_BLACK_RIPPLE,
+    MOVE_CLEAR_SMOG,
+    MOVE_PAIN_SPLIT,
+    MOVE_BOUNCE,
+    MOVE_DAUNT,
+    MOVE_NEEDLE_ARM,
+    0
+};
+
 static const u16 sCYumekoEggMoveLearnset[] = {
     MOVE_KILLING_BITE,
     MOVE_PURSUIT,
-    MOVE_METEOR_MASH,
     MOVE_TORMENT,
     MOVE_SWAGGER,
     MOVE_HONE_CLAWS,
@@ -5918,7 +6136,15 @@ static const u16 sCYumekoEggMoveLearnset[] = {
 static const u16 sYumekoEggMoveLearnset[] = {
     MOVE_KILLING_BITE,
     MOVE_PURSUIT,
-    MOVE_METEOR_MASH,
+    MOVE_TORMENT,
+    MOVE_SWAGGER,
+    MOVE_HONE_CLAWS,
+    0
+};
+
+static const u16 sTYumekoEggMoveLearnset[] = {
+    MOVE_KILLING_BITE,
+    MOVE_PURSUIT,
     MOVE_TORMENT,
     MOVE_SWAGGER,
     MOVE_HONE_CLAWS,
@@ -6101,7 +6327,7 @@ static const u16 sXSendaiEggMoveLearnset[] = {
     0
 };
 
-static const u16 sTensokuGEggMoveLearnset[] = {
+static const u16 sHisoutensokuGEggMoveLearnset[] = {
     0
 };
 

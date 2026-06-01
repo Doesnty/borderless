@@ -3439,36 +3439,6 @@ u8 GetWhoStrikesFirst(u8 battler1, u8 battler2, bool8 ignoreChosenMoves)
         speedBattler2 = buffer;
     }
 
-    // quick claws
-    if (gBattleMons[battler1].item == ITEM_ENIGMA_BERRY)
-    {
-        holdEffect = gEnigmaBerries[battler1].holdEffect;
-        holdEffectParam = gEnigmaBerries[battler1].holdEffectParam;
-    }
-    else
-    {
-        holdEffect = ItemId_GetHoldEffect(gBattleMons[battler1].item);
-        holdEffectParam = ItemId_GetHoldEffectParam(gBattleMons[battler1].item);
-    }
-    if (holdEffect == HOLD_EFFECT_QUICK_CLAW && gRandomTurnNumber < (0xFFFF * holdEffectParam) / 100)
-        speedBattler1 = UINT_MAX;
-    else if (holdEffect == HOLD_EFFECT_LAGGING_TAIL)
-        speedBattler1 = 0;
-    if (gBattleMons[battler2].item == ITEM_ENIGMA_BERRY)
-    {
-        holdEffect = gEnigmaBerries[battler2].holdEffect;
-        holdEffectParam = gEnigmaBerries[battler2].holdEffectParam;
-    }
-    else
-    {
-        holdEffect = ItemId_GetHoldEffect(gBattleMons[battler2].item);
-        holdEffectParam = ItemId_GetHoldEffectParam(gBattleMons[battler2].item);
-    }
-    if (holdEffect == HOLD_EFFECT_QUICK_CLAW && gRandomTurnNumber < (0xFFFF * holdEffectParam) / 100)
-        speedBattler2 = UINT_MAX;
-    else if (holdEffect == HOLD_EFFECT_LAGGING_TAIL)
-        speedBattler2 = 0;
-
     if (ignoreChosenMoves)
     {
         moveBattler1 = MOVE_NONE;
@@ -3513,6 +3483,44 @@ u8 GetWhoStrikesFirst(u8 battler1, u8 battler2, bool8 ignoreChosenMoves)
 	if (gBattleMons[battler2].ability == ABILITY_TIME_CONTROL)
 		priorityBattler2++;
 	
+	priorityBattler1 *= 5;
+	priorityBattler2 *= 5;
+	
+	if (gBattleMons[battler1].ability == ABILITY_STALL)
+		priorityBattler1--;
+	if (gBattleMons[battler2].ability == ABILITY_STALL)
+		priorityBattler2--;
+	
+	// quick claws
+    if (gBattleMons[battler1].item == ITEM_ENIGMA_BERRY)
+    {
+        holdEffect = gEnigmaBerries[battler1].holdEffect;
+        holdEffectParam = gEnigmaBerries[battler1].holdEffectParam;
+    }
+    else
+    {
+        holdEffect = ItemId_GetHoldEffect(gBattleMons[battler1].item);
+        holdEffectParam = ItemId_GetHoldEffectParam(gBattleMons[battler1].item);
+    }
+    if (holdEffect == HOLD_EFFECT_QUICK_CLAW && gRandomTurnNumber < (0xFFFF * holdEffectParam) / 100)
+        priorityBattler1 += 3;
+    else if (holdEffect == HOLD_EFFECT_LAGGING_TAIL)
+        speedBattler1--;
+	
+    if (gBattleMons[battler2].item == ITEM_ENIGMA_BERRY)
+    {
+        holdEffect = gEnigmaBerries[battler2].holdEffect;
+        holdEffectParam = gEnigmaBerries[battler2].holdEffectParam;
+    }
+    else
+    {
+        holdEffect = ItemId_GetHoldEffect(gBattleMons[battler2].item);
+        holdEffectParam = ItemId_GetHoldEffectParam(gBattleMons[battler2].item);
+    }
+    if (holdEffect == HOLD_EFFECT_QUICK_CLAW && gRandomTurnNumber < (0xFFFF * holdEffectParam) / 100)
+        priorityBattler2 += 3;
+    else if (holdEffect == HOLD_EFFECT_LAGGING_TAIL)
+        priorityBattler2--;
     
     // both move priorities are different than 0
     if (priorityBattler1 != 0 || priorityBattler2 != 0)

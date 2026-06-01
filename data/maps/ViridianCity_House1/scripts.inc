@@ -33,6 +33,7 @@ ViridianCity_House1_EventScript_Cheat:
 	case 0, ViridianCity_House1_EventScript_GiveFirst200
 	case 1, ViridianCity_House1_EventScript_GivePast200
     case 2, ViridianCity_House1_EventScript_GiveTMs
+    case 3, ViridianCity_House1_EventScript_GiveNewStuff
 
 ViridianCity_House1_EventScript_GiveFirst200::
 	setvar VAR_TEMP_1, 0x1
@@ -61,6 +62,31 @@ loop3start:
     addvar VAR_TEMP_1, 0x1
     compare VAR_TEMP_1, ITEM_HM08
     goto_if_lt loop3start
+    release
+    end
+
+ViridianCity_House1_EventScript_GiveNewStuff::
+	givemon SPECIES_DCLOWNPIECE, 60, ITEM_NONE
+	givemon SPECIES_AETERNITY, 60, ITEM_NONE
+	givemon SPECIES_DNEMUNO, 60, ITEM_NONE
+	givemon SPECIES_TAUNN, 60, ITEM_NONE
+	givemon SPECIES_DOKINA, 60, ITEM_NONE
+	givemon SPECIES_DEIKA, 60, ITEM_NONE
+	givemon SPECIES_HKUTAKA, 60, ITEM_NONE
+	givemon SPECIES_SSAKI, 60, ITEM_NONE
+	givemon SPECIES_TTAKANE, 60, ITEM_NONE
+	givemon SPECIES_TMEGUMU, 60, ITEM_NONE
+	givemon SPECIES_DARIYA, 60, ITEM_NONE
+	givemon SPECIES_TKIRISAME, 60, ITEM_NONE
+	givemon SPECIES_AKANA, 60, ITEM_NONE
+	givemon SPECIES_HMUGETSU, 60, ITEM_NONE
+	givemon SPECIES_AGENGETSU, 60, ITEM_NONE
+	givemon SPECIES_TYUMEKO, 60, ITEM_NONE
+	givemon SPECIES_NOROIKO, 60, ITEM_NONE
+	givemon SPECIES_MATENSHI, 60, ITEM_NONE
+	givemon SPECIES_HIKARIKO, 60, ITEM_NONE
+	givemon SPECIES_WAYOUSEI, 60, ITEM_NONE
+	givemon SPECIES_AYANA, 60, ITEM_NONE
     release
     end
 	

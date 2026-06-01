@@ -190,6 +190,13 @@ static const struct PickupItem sPickupItemsRareMedicine[] =
 	{ ITEM_MAX_REVIVE, 250 },
 };
 
+static const struct PickupItem sPickupItemsPearls[] = 
+{
+	{ ITEM_PEARL, 75 },
+	{ ITEM_BIG_PEARL, 100 },
+	{ ITEM_NONE, 250 },
+};
+
 static const struct PickupItem * const sSpeciesPickupTables[] = 
 {
     [TOUHOU_NONE] = sPickupItemsNothing,
@@ -332,7 +339,7 @@ static const struct PickupItem * const sSpeciesPickupTables[] =
 	[TOUHOU_NAREKO] = sPickupItemsNothing,
 	[TOUHOU_YUIMAN] = sPickupItemsNothing,
 	[TOUHOU_ARIYA] = sPickupItemsNothing,
-	[TOUHOU_NINA] = sPickupItemsNothing,
+	[TOUHOU_NINA] = sPickupItemsPearls,
     [TOUHOU_SHINGYOKU] = sPickupItemsNothing,
     [TOUHOU_YUUGENMAGAN] = sPickupItemsNothing,
     [TOUHOU_MIMA] = sPickupItemsNothing,
@@ -371,4 +378,9 @@ static const struct PickupItem * const sSpeciesPickupTables[] =
     [TOUHOU_2HU] = sPickupItemsNothing,
     [TOUHOU_RENKO] = sPickupItemsNothing,
     [TOUHOU_MARIBEL] = sPickupItemsNothing,
+	[TOUHOU_NOROIKO] = sPickupItemsNothing,
+	[TOUHOU_MATENSHI] = sPickupItemsNothing,
+	[TOUHOU_HIKARIKO] = sPickupItemsNothing,
+	[TOUHOU_WAYOUSEI] = sPickupItemsNothing,
+	[TOUHOU_AYANA] = sPickupItemsNothing,
 };

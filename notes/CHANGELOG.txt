@@ -1,6 +1,26 @@
-v1.3.3
-New ability: Desperation, gives +50% Speed while at or below 1/3 HP.
- - For Elly, replacing Merciless.
+v Next
+Added 21 puppets:
+ Defense Clownpiece
+ Attack Eternity
+ Defense Nemuno
+ Technical Aunn
+ Defense Okina
+ Defense Eika
+ Helper Kutaka
+ Speed Saki
+ Technical Takane
+ Technical Megumu
+ Defense Ariya
+ Technical Kirisame
+ Attack Kana
+ Helper Mugetsu
+ Attack Gengetsu
+ Technical Yumeko
+ ...and 5 stand-alone, single-stage characters.
+Added 7 more abilities, mostly for the new puppets.
+ Regular Komachi gets Spirit Guide instead of Own Tempo.
+ Clownpiece gets Chaos Body as a secondary ability.
+ Elly gets Desperation instead of Merciless.
 
 Fixed the long-standing bug with Effort Gauge playing pre-fight music.
 Cleaned up one of Maribel's overworld sprites.
@@ -11,10 +31,23 @@ Keen Eye now negates the foe's bonuses to Evasion.
 Unaware now properly ignores the modifiers to Accuracy and Evasion.
 Patched an issue that allowed HP to be negative after evolving.
 
-Slight tweak to Lunasa's sprite (thanks Chirei).
+Certain chibis lost access to TM moves not intended for newly added puppets.
+Daiyousei no longer has Helping Hand in her tutor list.
+JKSanae now learns Muddy Water instead of Aqua Shower, and learns it earlier (and Gale Dance later).
+JKSanae now gets Energy Light by level instead of Giga Drain (both are still TMs).
+Chibi and Normal Sunny can no longer use the Fire Blast TM.
 Chibi and regular Tojiko now have Anger Point instead of Static.
 Raiko family's HA is now Maintenance instead of Static.
+Aunn now gets Seismic Toss by relearner instead of Calm Mind, and loses it as a tutor move.
+Aunn now gets Thunder Fang and Fire Fang by tutor.
+Saki now learns Jump Kick by level and Roost by relearner.
+Re-arranged Takane's level-up pool to have Fissure instead of Mirror Coat; cut Fissure tutor.
+Megumu now gets Recalibrate by tutor.
+Yumeko no longer learns Meteor Mash.
 TrMaribel can now use the Sandstorm TM.
+
+Slight tweak to Lunasa's sprite (thanks Chirei).
+Cut Scary Face from Erika's CYuuka since it just about never accomplishes anything.
 
 Some more weird stuff is hiding in the docs, again.
 Don't worry too much about it.
