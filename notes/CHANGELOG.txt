@@ -18,9 +18,11 @@ Added 21 puppets:
  Technical Yumeko
  ...and 5 stand-alone, single-stage characters.
 Added 7 more abilities, mostly for the new puppets.
+ Regular Keine gets Quick Chant instead of Guard Armor.
  Regular Komachi gets Spirit Guide instead of Own Tempo.
  Clownpiece gets Chaos Body as a secondary ability.
  Elly gets Desperation instead of Merciless.
+Added 2 moves: Pyro Strike and Flash Cannon.
 
 Fixed the long-standing bug with Effort Gauge playing pre-fight music.
 Cleaned up one of Maribel's overworld sprites.
@@ -30,12 +32,15 @@ Foresight no longer negates penalties to Evasion.
 Keen Eye now negates the foe's bonuses to Evasion.
 Unaware now properly ignores the modifiers to Accuracy and Evasion.
 Patched an issue that allowed HP to be negative after evolving.
+Fixed bug where Cataclysm's flinch chance was never checked.
 
 Certain chibis lost access to TM moves not intended for newly added puppets.
 Daiyousei no longer has Helping Hand in her tutor list.
+All Keine forms now get Skull Bash by relearner (replacing redundant Counter/Mirror Coat).
 JKSanae now learns Muddy Water instead of Aqua Shower, and learns it earlier (and Gale Dance later).
 JKSanae now gets Energy Light by level instead of Giga Drain (both are still TMs).
 Chibi and Normal Sunny can no longer use the Fire Blast TM.
+ASunny now learns Pyro Strike instead of Flare Blitz.
 Chibi and regular Tojiko now have Anger Point instead of Static.
 Raiko family's HA is now Maintenance instead of Static.
 Aunn now gets Seismic Toss by relearner instead of Calm Mind, and loses it as a tutor move.
@@ -43,6 +48,9 @@ Aunn now gets Thunder Fang and Fire Fang by tutor.
 Saki now learns Jump Kick by level and Roost by relearner.
 Re-arranged Takane's level-up pool to have Fissure instead of Mirror Coat; cut Fissure tutor.
 Megumu now gets Recalibrate by tutor.
+Rika family now gets Flash Cannon by level instead of Daunt; now gets Daunt by tutor.
+Chiyuri now gets Flash Cannon by tutor.
+Yuki now get Pyro Strike by tutor.
 Yumeko no longer learns Meteor Mash.
 TrMaribel can now use the Sandstorm TM.
 

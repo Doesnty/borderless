@@ -4178,6 +4178,8 @@ extern const u8 gFile_graphics_items_icons_babiri_berry_sheet[];
 extern const u8 gFile_graphics_items_icon_palettes_babiri_berry_palette[];
 extern const u8 gFile_graphics_items_icons_chilan_berry_sheet[];
 extern const u8 gFile_graphics_items_icon_palettes_chilan_berry_palette[];
+extern const u8 gFile_graphics_items_icons_power_herb_sheet[];
+extern const u8 gFile_graphics_items_icon_palettes_power_herb_palette[];
 
 // battle_anim_utility_funcs
 extern const u32 gFile_graphics_battle_anims_masks_curse_sheet[];

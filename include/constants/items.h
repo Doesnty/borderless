@@ -244,7 +244,7 @@
 #define ITEM_FLAME_ORB 238
 #define ITEM_HOPE_MASK 239
 #define ITEM_ZENER_CARDS 240
-#define ITEM_0F1 241
+#define ITEM_POWER_HERB 241
 #define ITEM_0F2 242
 #define ITEM_0F3 243
 #define ITEM_0F4 244

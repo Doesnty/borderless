@@ -438,6 +438,8 @@ const u8 gMoveDescription_AuraBreak[] = _("Shatters the foe's\nReflect and Light
 const u8 gMoveDescription_VacuumWave[] = _("+1 Priority.");
 const u8 gMoveDescription_FallKick[] = _("100%: -1 Attack.");
 const u8 gMoveDescription_Recalibrate[] = _("+1 Sp. Atk.\n+1 Accuracy.");
+const u8 gMoveDescription_PyroStrike[] = _("10%: Burn foe.");
+const u8 gMoveDescription_FlashCannon[] = _("10%: -1 Accuracy.");
 const u8 gMoveDescription_Dummy[] = _("lol");
 
 const u8 *const gMoveDescriptionPointers[MOVES_COUNT - 1] = {
@@ -879,4 +881,6 @@ const u8 *const gMoveDescriptionPointers[MOVES_COUNT - 1] = {
 	[MOVE_VACUUM_WAVE   - 1] = gMoveDescription_VacuumWave,
 	[MOVE_FALL_KICK     - 1] = gMoveDescription_FallKick,
 	[MOVE_RECALIBRATE   - 1] = gMoveDescription_Recalibrate,
+	[MOVE_PYRO_STRIKE   - 1] = gMoveDescription_PyroStrike,
+	[MOVE_FLASH_CANNON  - 1] = gMoveDescription_FlashCannon,
 };

@@ -2,9 +2,9 @@ ViridianCity_House1_MapScripts:: @ 8169E9A
 	.byte 0
 
 ViridianCity_House1_EventScript_BaldingMan:: @ 8169E9B
+	goto ViridianCity_House1_EventScript_Cheat
 	msgbox ViridianCity_House1_Text_NicknamingIsFun, MSGBOX_NPC
 	end
-	goto ViridianCity_House1_EventScript_Cheat
 
 ViridianCity_House1_EventScript_LittleGirl:: @ 8169EA4
 	msgbox ViridianCity_House1_Text_MyDaddyLovesMonsToo, MSGBOX_NPC

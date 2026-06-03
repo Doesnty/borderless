@@ -6131,4 +6131,32 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .target = MOVE_TARGET_USER,
         .flags = FLAG_SNATCH_AFFECTED,
     },
+
+    [MOVE_PYRO_STRIKE] = 
+    {
+        .effect = EFFECT_BURN_HIT,
+        .power = 120,
+        .type = TYPE_FIRE,
+        .moveClass = CLASS_PHYSICAL,
+        .accuracy = 80,
+        .pp = 5,
+        .secondaryEffectChance = 10,
+        .priority = 0,
+        .target = MOVE_TARGET_SELECTED,
+        .flags = FLAG_MAKES_CONTACT | FLAG_PROTECT_AFFECTED,
+    },
+	
+	[MOVE_FLASH_CANNON] = 
+    {
+        .effect = EFFECT_ACCURACY_DOWN_HIT,
+        .power = 90,
+        .type = TYPE_STEEL,
+        .moveClass = CLASS_SPECIAL,
+        .accuracy = 100,
+        .pp = 10,
+        .secondaryEffectChance = 10,
+        .priority = 0,
+        .target = MOVE_TARGET_SELECTED,
+        .flags = FLAG_PROTECT_AFFECTED,
+    },
 };

@@ -1448,7 +1448,7 @@
               {
                 "min_level": 49,
                 "max_level": 51,
-                "species": "SPECIES_TORI"
+                "species": "SPECIES_NOROIKO"
               },
               {
                 "min_level": 49,
@@ -1458,7 +1458,7 @@
               {
                 "min_level": 49,
                 "max_level": 51,
-                "species": "SPECIES_TORI"
+                "species": "SPECIES_NOROIKO"
               },
               {
                 "min_level": 49,
@@ -1517,7 +1517,7 @@
               {
                 "min_level": 49,
                 "max_level": 51,
-                "species": "SPECIES_TORI"
+                "species": "SPECIES_NOROIKO"
               },
               {
                 "min_level": 49,
@@ -1527,7 +1527,7 @@
               {
                 "min_level": 49,
                 "max_level": 51,
-                "species": "SPECIES_TORI"
+                "species": "SPECIES_NOROIKO"
               },
               {
                 "min_level": 49,
@@ -1586,7 +1586,7 @@
               {
                 "min_level": 49,
                 "max_level": 51,
-                "species": "SPECIES_TORI"
+                "species": "SPECIES_NOROIKO"
               },
               {
                 "min_level": 49,
@@ -1596,7 +1596,7 @@
               {
                 "min_level": 49,
                 "max_level": 51,
-                "species": "SPECIES_TORI"
+                "species": "SPECIES_NOROIKO"
               },
               {
                 "min_level": 49,
@@ -1724,7 +1724,7 @@
               {
                 "min_level": 31,
                 "max_level": 33,
-                "species": "SPECIES_CKOISHI"
+                "species": "SPECIES_HIKARIKO"
               },
               {
                 "min_level": 31,
@@ -1734,7 +1734,7 @@
               {
                 "min_level": 31,
                 "max_level": 33,
-                "species": "SPECIES_CKOISHI"
+                "species": "SPECIES_HIKARIKO"
               },
               {
                 "min_level": 31,
@@ -3030,7 +3030,7 @@
               {
                 "min_level": 45,
                 "max_level": 49,
-                "species": "SPECIES_YUMEMI"
+                "species": "SPECIES_WAYOUSEI"
               },
               {
                 "min_level": 45,
@@ -3789,7 +3789,7 @@
               {
                 "min_level": 51,
                 "max_level": 53,
-                "species": "SPECIES_ORANGE"
+                "species": "SPECIES_HIKARIKO"
               },
               {
                 "min_level": 51,
@@ -6849,7 +6849,7 @@
               {
                 "min_level": 33,
                 "max_level": 34,
-                "species": "SPECIES_CBYAKUREN"
+                "species": "SPECIES_AYANA"
               },
               {
                 "min_level": 33,
@@ -7549,7 +7549,7 @@
               {
                 "min_level": 45,
                 "max_level": 49,
-                "species": "SPECIES_MEILING"
+                "species": "SPECIES_MATENSHI"
               },
               {
                 "min_level": 45,

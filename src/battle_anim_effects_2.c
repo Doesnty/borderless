@@ -635,6 +635,32 @@ const struct SpriteTemplate gExplosionSpriteTemplate =
     .callback = AnimSpriteOnMonPos,
 };
 
+static const union AnimCmd sFlashCannonAnimCmds[] =
+{
+    ANIMCMD_FRAME(0, 2),
+    ANIMCMD_FRAME(4, 2),
+    ANIMCMD_FRAME(8, 2),
+    ANIMCMD_FRAME(12, 2),
+    ANIMCMD_FRAME(16, 2),
+    ANIMCMD_END,
+};
+
+static const union AnimCmd *const sFlashCannonAnimTable[] =
+{
+    sFlashCannonAnimCmds,
+};
+
+const struct SpriteTemplate gFlashCannonSpriteTemplate =    
+{
+    .tileTag = ANIM_TAG_EXPLOSION_5,
+    .paletteTag = ANIM_TAG_EXPLOSION_5,
+    .oam = &gOamData_AffineOff_ObjNormal_16x16,
+    .anims = sFlashCannonAnimTable,
+    .images = NULL,
+    .affineAnims = gDummySpriteAffineAnimTable,
+    .callback = AnimSpriteOnMonPos,
+};
+
 static const union AffineAnimCmd sSoftBoiledEggAffineAnimCmds1[] =
 {
     AFFINEANIMCMD_FRAME(0, 0, -8, 2),

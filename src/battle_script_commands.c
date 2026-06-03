@@ -2800,6 +2800,15 @@ void SetMoveEffect(bool8 primary, u8 certain)
                 else
                 {
                     gBattleMons[gEffectBattler].status2 |= (((Random()) % 0x4)) + 2;
+					if (gHitMarker & HITMARKER_IGNORE_SAFEGUARD)
+					{
+						gBattleCommunication[MULTISTRING_CHOOSER] = 1;
+						gHitMarker &= ~(HITMARKER_IGNORE_SAFEGUARD);
+					}
+					else
+					{
+						gBattleCommunication[MULTISTRING_CHOOSER] = 0;
+					}
                     BattleScriptPush(gBattlescriptCurrInstr + 1);
                     gBattlescriptCurrInstr = sMoveEffectBS_Ptrs[gBattleCommunication[MOVE_EFFECT_BYTE]];
                 }
@@ -10225,6 +10234,7 @@ static void sp28_salvage_armor_bank1(void);
 static void sp29_check_explosion_viability(void);
 static void sp2a_set_jump_kick_recoil(void);
 static void sp2b_abort_if_stasis_gaze(void);
+static void sb2c_quick_chant_power_herb(void);
 
 void (* const gBattleScriptingSpecialsTable[])(void) =
 {
@@ -10272,6 +10282,7 @@ void (* const gBattleScriptingSpecialsTable[])(void) =
 	sp29_check_explosion_viability,
 	sp2a_set_jump_kick_recoil,
 	sp2b_abort_if_stasis_gaze,
+	sb2c_quick_chant_power_herb,
 };
 
 static void atkF8_special(void)
@@ -11149,5 +11160,58 @@ static void sp2b_abort_if_stasis_gaze()
         RecordAbilityBattle(opposingbank, gBattleMons[opposingbank].ability);
 		gBattlescriptCurrInstr = BattleScript_StasisGazeActivates;
 		gBattleScripting.battler = opposingbank;
+	}
+}
+
+static void sb2c_quick_chant_power_herb()
+{
+	u8 effect = 0;
+	
+	if (gBattleMons[gBattlerAttacker].ability == ABILITY_QUICK_CHANT)
+	{
+		effect = 1;
+	}
+	else if (gBattleMons[gBattlerAttacker].item == ITEM_POWER_HERB)
+	{
+		effect = 2;
+	}
+	
+	if (effect)
+	{
+		switch (gCurrentMove)
+		{
+			case MOVE_SOLAR_BEAM:
+			case MOVE_SKULL_BASH:
+			case MOVE_SKY_ATTACK:
+			case MOVE_CATACLYSM:
+				BattleScriptPush(BattleScript_TwoTurnMovesSecondTurnImmediate);
+				break;
+			
+			case MOVE_BOUNCE:
+			case MOVE_FLY:
+			case MOVE_SHADOW_FORCE:
+			case MOVE_DIG:
+				BattleScriptPush(BattleScript_SecondTurnSemiInvulnerableImmediate);
+				break;
+			
+			case MOVE_GROUP_PRANK:
+				BattleScriptPush(BattleScript_GroupPrankSecondTurnImmediate);
+				break;
+		}
+		
+		if (effect == 1)
+		{
+			gBattlescriptCurrInstr = BattleScript_QuickChantActivates;
+		}
+		else if (effect == 2)
+		{
+			gBattlescriptCurrInstr = BattleScript_PowerHerbActivates;
+		}
+		else
+		{
+			// impossible
+			while (1)
+				;
+		}
 	}
 }

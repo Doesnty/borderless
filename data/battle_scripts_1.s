@@ -856,11 +856,15 @@ BattleScript_EffectRazorWind::
 
 BattleScript_TwoTurnMovesSecondTurn::
 	attackcanceler
+BattleScript_TwoTurnMovesSecondTurnImmediate::
 	setmoveeffect MOVE_EFFECT_CHARGING
 	setbyte sB_ANIM_TURN, 1
 	clearstatusfromeffect BS_ATTACKER
 	orword gHitMarker, HITMARKER_NO_PPDEDUCT
-	jumpifnotmove MOVE_SKY_ATTACK, BattleScript_HitFromAccCheck
+	jumpifmove MOVE_SKY_ATTACK, BattleScript_TwoTurnMoveSecondTurnFlinch
+	jumpifmove MOVE_CATACLYSM, BattleScript_TwoTurnMoveSecondTurnFlinch
+	goto BattleScript_HitFromAccCheck
+BattleScript_TwoTurnMoveSecondTurnFlinch:
 	setmoveeffect MOVE_EFFECT_FLINCH
 	goto BattleScript_HitFromAccCheck
 
@@ -1197,6 +1201,7 @@ BattleScript_EffectSkyAttack::
 	jumpifword CMP_COMMON_BITS, gHitMarker, HITMARKER_NO_ATTACKSTRING, BattleScript_TwoTurnMovesSecondTurn
 	setbyte sTWOTURN_STRINGID, 3
 	call BattleScriptFirstChargingTurn
+	special 0x2c
 	goto BattleScript_MoveEnd
 
 BattleScript_EffectCataclysm::
@@ -1965,6 +1970,7 @@ BattleScript_EffectSkullBash::
 	playanimation BS_ATTACKER, B_ANIM_STATS_CHANGE, sB_ANIM_ARG1
 	printfromtable gStatUpStringIds
 	waitmessage 0x40
+	special 0x2c
 BattleScript_SkullBashEnd::
 	goto BattleScript_MoveEnd
 
@@ -2083,6 +2089,7 @@ BattleScript_SolarbeamDecideTurn::
 	jumpifword CMP_COMMON_BITS, gHitMarker, HITMARKER_NO_ATTACKSTRING, BattleScript_TwoTurnMovesSecondTurn
 	setbyte sTWOTURN_STRINGID, 1
 	call BattleScriptFirstChargingTurn
+	special 0x2c
 	goto BattleScript_MoveEnd
 
 BattleScript_SolarbeamOnFirstTurn::
@@ -2187,10 +2194,12 @@ BattleScript_FlyFirstTurn::
 BattleScript_FirstTurnSemiInvulnerable::
 	call BattleScriptFirstChargingTurn
 	setsemiinvulnerablebit
+	special 0x2c
 	goto BattleScript_MoveEnd
 
 BattleScript_SecondTurnSemiInvulnerable::
 	attackcanceler
+BattleScript_SecondTurnSemiInvulnerableImmediate::
 	setmoveeffect MOVE_EFFECT_CHARGING
 	setbyte sB_ANIM_TURN, 1
 	clearstatusfromeffect BS_ATTACKER
@@ -4199,7 +4208,7 @@ BattleScript_MoveEffectWrap::
 
 BattleScript_MoveEffectConfusion::
 	chosenstatusanimation BS_EFFECT_BATTLER, 1, STATUS2_CONFUSION
-	printstring STRINGID_PKMNWASCONFUSED
+	printfromtable gGotConfusedStringIds
 	waitmessage 0x40
 	return
 
@@ -5921,11 +5930,13 @@ BattleScript_EffectGroupPrank::
 	jumpifword CMP_COMMON_BITS, gHitMarker, HITMARKER_NO_ATTACKSTRING, BattleScript_GroupPrankSecondTurn
 	setbyte sTWOTURN_STRINGID, 8
 	call BattleScriptFirstChargingTurn
+	special 0x2c
 	goto BattleScript_MoveEnd
 
 BattleScript_GroupPrankSecondTurn::
-	special 0x23
 	attackcanceler
+BattleScript_GroupPrankSecondTurnImmediate::
+	special 0x23
 	setmoveeffect MOVE_EFFECT_CHARGING
 	setbyte sB_ANIM_TURN, 1
 	clearstatusfromeffect BS_ATTACKER
@@ -6263,6 +6274,18 @@ BattleScript_EffectBlossoming::
 BattleScript_TwinSparkActivates::
 	printstring STRINGID_TWINSPARKACTIVATES
 	waitmessage 0x40
+	return
+
+BattleScript_QuickChantActivates::
+	printstring STRINGID_QUICKCHANTACTIVATES
+	waitmessage 0x40
+	return
+
+BattleScript_PowerHerbActivates::
+	playanimation BS_ATTACKER, B_ANIM_ITEM_EFFECT, NULL
+	printstring STRINGID_POWERHERBACTIVATES
+	waitmessage 0x40
+	removeitem BS_ATTACKER
 	return
 
 BattleScript_BlankCardActivates::

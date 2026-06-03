@@ -309,6 +309,11 @@ extern const u8 BattleScript_ItemToxicOrb[];
 extern const u8 BattleScript_ItemFlameOrb[];
 extern const u8 BattleScript_StasisGazeActivates[];
 extern const u8 BattleScript_StasisGazePreventsAbility[];
+extern const u8 BattleScript_TwoTurnMovesSecondTurnImmediate[];
+extern const u8 BattleScript_SecondTurnSemiInvulnerableImmediate[];
+extern const u8 BattleScript_GroupPrankSecondTurnImmediate[];
+extern const u8 BattleScript_QuickChantActivates[];
+extern const u8 BattleScript_PowerHerbActivates[];
 
 extern const u8 *const gBattleScriptsForMoveEffects[];
 extern const u8 *const gBattlescriptsForBallThrow[];

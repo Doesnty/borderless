@@ -848,3 +848,6 @@ const u32 gFile_graphics_items_icon_palettes_flame_orb_palette[] = INCBIN_U32("g
 
 const u32 gFile_graphics_items_icons_hope_mask_sheet[] = INCBIN_U32("graphics/items/icons/hope_mask.4bpp.lz");
 const u32 gFile_graphics_items_icon_palettes_hope_mask_palette[] = INCBIN_U32("graphics/items/icon_palettes/hope_mask.gbapal.lz");
+
+const u32 gFile_graphics_items_icons_power_herb_sheet[] = INCBIN_U32("graphics/items/icons/power_herb.4bpp.lz");
+const u32 gFile_graphics_items_icon_palettes_power_herb_palette[] = INCBIN_U32("graphics/items/icon_palettes/power_herb.gbapal.lz");

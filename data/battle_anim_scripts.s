@@ -485,6 +485,8 @@ gBattleAnims_Moves::
 	.4byte Move_VACUUM_WAVE
 	.4byte Move_FALL_KICK
 	.4byte Move_LOCK_ON
+	.4byte Move_PYRO_STRIKE
+	.4byte Move_FLASH_CANNON
 	.4byte Move_COUNT
 
 gBattleAnims_StatusConditions::
@@ -15156,3 +15158,99 @@ Move_FALL_KICK::
 	blendoff
 	end
 
+Move_PYRO_STRIKE::
+	loadspritegfx ANIM_TAG_SMALL_EMBER
+	loadspritegfx ANIM_TAG_ROUND_SHADOW
+	loadspritegfx ANIM_TAG_IMPACT
+	monbg ANIM_DEF_PARTNER
+	setalpha 12, 8
+
+	playsewithpan SE_M_FLAME_WHEEL, 192
+	createvisualtask AnimTask_BlendMonInAndOut, 3, ANIM_ATTACKER, 31, 8, 0, 3
+	createsprite gFlameChargeSpriteTemplate, ANIM_ATTACKER, 3, 48, -48, 12
+	createsprite gFlameChargeSpriteTemplate, ANIM_ATTACKER, 3, 48, 48, 12
+	createsprite gFlameChargeSpriteTemplate, ANIM_ATTACKER, 3, -48, 48, 12
+	createsprite gFlameChargeSpriteTemplate, ANIM_ATTACKER, 3, -48, -48, 12 
+	createsprite gFlameChargeSpriteTemplate, ANIM_ATTACKER, 3, 64, 0, 12 
+	createsprite gFlameChargeSpriteTemplate, ANIM_ATTACKER, 3, -64, 0, 12 
+	createsprite gFlameChargeSpriteTemplate, ANIM_ATTACKER, 3, 0, 64, 12 
+	createsprite gFlameChargeSpriteTemplate, ANIM_ATTACKER, 3, 0, -64, 12
+	delay 12
+	playsewithpan SE_M_FLAME_WHEEL, 192
+	createsprite gFlameChargeSpriteTemplate, ANIM_ATTACKER, 3, 48, -48, 12
+	createsprite gFlameChargeSpriteTemplate, ANIM_ATTACKER, 3, 48, 48, 12
+	createsprite gFlameChargeSpriteTemplate, ANIM_ATTACKER, 3, -48, 48, 12
+	createsprite gFlameChargeSpriteTemplate, ANIM_ATTACKER, 3, -48, -48, 12 
+	createsprite gFlameChargeSpriteTemplate, ANIM_ATTACKER, 3, 64, 0, 12 
+	createsprite gFlameChargeSpriteTemplate, ANIM_ATTACKER, 3, -64, 0, 12 
+	createsprite gFlameChargeSpriteTemplate, ANIM_ATTACKER, 3, 0, 64, 12 
+	createsprite gFlameChargeSpriteTemplate, ANIM_ATTACKER, 3, 0, -64, 12
+	delay 12
+	playsewithpan SE_M_FLAME_WHEEL, 192
+	createsprite gFlameChargeSpriteTemplate, ANIM_ATTACKER, 3, 48, -48, 12
+	createsprite gFlameChargeSpriteTemplate, ANIM_ATTACKER, 3, 48, 48, 12
+	createsprite gFlameChargeSpriteTemplate, ANIM_ATTACKER, 3, -48, 48, 12
+	createsprite gFlameChargeSpriteTemplate, ANIM_ATTACKER, 3, -48, -48, 12 
+	createsprite gFlameChargeSpriteTemplate, ANIM_ATTACKER, 3, 64, 0, 12 
+	createsprite gFlameChargeSpriteTemplate, ANIM_ATTACKER, 3, -64, 0, 12 
+	createsprite gFlameChargeSpriteTemplate, ANIM_ATTACKER, 3, 0, 64, 12 
+	createsprite gFlameChargeSpriteTemplate, ANIM_ATTACKER, 3, 0, -64, 12
+	waitforvisualfinish
+	
+	playsewithpan SE_M_SWAGGER, 192	
+	createsprite gFlyBallUpSpriteTemplate, ANIM_ATTACKER, 2, 0, 0, 13, 336
+	waitforvisualfinish
+	
+	playsewithpan SE_M_SWAGGER, 63
+	createsprite gBounceBallLandSpriteTemplate, ANIM_TARGET, 3
+	delay 7
+	createsprite gBasicHitSplatSpriteTemplate, ANIM_TARGET, 2, 0, 0, 1, 0
+	createvisualtask AnimTask_ShakeMon, 5, 1, 0, 5, 11, 1
+	playsewithpan SE_M_FLAME_WHEEL2, 63
+	call FireSpreadEffect
+	delay 7
+	waitforvisualfinish
+	clearmonbg ANIM_DEF_PARTNER
+	blendoff
+	end
+
+Move_FLASH_CANNON::
+	loadspritegfx ANIM_TAG_BLACK_BALL_2
+	loadspritegfx ANIM_TAG_EXPLOSION_5
+	
+	loopsewithpan SE_M_HARDEN, 192, 28, 2
+	createvisualtask AnimTask_MetallicShine, 5, 0, 0, 0
+	waitforvisualfinish
+	
+	playsewithpan SE_M_THUNDER_WAVE, 192
+	createsprite gZapCannonBallSpriteTemplate, ANIM_TARGET, 3, 10, 0, 0, 0, 30, 0
+	waitforvisualfinish
+	
+	createvisualtask AnimTask_ShakeMon2, 2, ANIM_TARGET, 4, 0, 5, 1
+	createsprite gSimplePaletteBlendSpriteTemplate, ANIM_ATTACKER, 2, 1, 1, 0, 15, RGB_WHITE
+	createsprite gFlashCannonSpriteTemplate, ANIM_ATTACKER, 2, 1, 1, 1, 0
+	playsewithpan SE_M_SELF_DESTRUCT, 192
+	delay 3
+	createsprite gFlashCannonSpriteTemplate, ANIM_ATTACKER, 2, 6,-7, 1, 0
+	createsprite gFlashCannonSpriteTemplate, ANIM_ATTACKER, 2,-6,-7, 1, 0
+	createsprite gFlashCannonSpriteTemplate, ANIM_ATTACKER, 2, 10, 1, 1, 0
+	createsprite gFlashCannonSpriteTemplate, ANIM_ATTACKER, 2, -10, 1, 1, 0
+	createsprite gFlashCannonSpriteTemplate, ANIM_ATTACKER, 2, 1, 8, 1, 0
+	playsewithpan SE_M_SELF_DESTRUCT, 192
+	delay 3
+	createsprite gFlashCannonSpriteTemplate, ANIM_ATTACKER, 2, 12,-12, 1, 0
+	createsprite gFlashCannonSpriteTemplate, ANIM_ATTACKER, 2,-12,-12, 1, 0
+	createsprite gFlashCannonSpriteTemplate, ANIM_ATTACKER, 2, 14,-2, 1, 0
+	createsprite gFlashCannonSpriteTemplate, ANIM_ATTACKER, 2,-14,-2, 1, 0
+	createsprite gFlashCannonSpriteTemplate, ANIM_ATTACKER, 2, 8, 5, 1, 0
+	createsprite gFlashCannonSpriteTemplate, ANIM_ATTACKER, 2, -8, 5, 1, 0
+	createsprite gFlashCannonSpriteTemplate, ANIM_ATTACKER, 2, 15, 10, 1, 0
+	createsprite gFlashCannonSpriteTemplate, ANIM_ATTACKER, 2, -15, 10, 1, 0
+	createsprite gFlashCannonSpriteTemplate, ANIM_ATTACKER, 2, 1, 14, 1, 0
+	createsprite gFlashCannonSpriteTemplate, ANIM_ATTACKER, 2, 1, -14, 1, 0
+	createsprite gFlashCannonSpriteTemplate, ANIM_ATTACKER, 2, 1, -14, 1, 0
+	playsewithpan SE_M_SELF_DESTRUCT, 192
+	
+	waitforvisualfinish
+	createsprite gSimplePaletteBlendSpriteTemplate, ANIM_ATTACKER, 2, 1, 1, 15, 0, RGB_WHITE
+	end

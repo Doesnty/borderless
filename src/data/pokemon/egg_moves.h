@@ -5623,6 +5623,7 @@ static const u16 sCRikaEggMoveLearnset[] = {
     MOVE_BOLT_STRIKE,
     MOVE_RECYCLE,
     MOVE_SCREECH,
+	MOVE_DAUNT,
     0
 };
 
@@ -5633,6 +5634,7 @@ static const u16 sRikaEggMoveLearnset[] = {
     MOVE_BOLT_STRIKE,
     MOVE_RECYCLE,
     MOVE_SCREECH,
+	MOVE_DAUNT,
     0
 };
 
@@ -5643,6 +5645,7 @@ static const u16 sTRikaEggMoveLearnset[] = {
     MOVE_BOLT_STRIKE,
     MOVE_RECYCLE,
     MOVE_SCREECH,
+	MOVE_DAUNT,
     0
 };
 
@@ -5796,6 +5799,7 @@ static const u16 sCChiyuriEggMoveLearnset[] = {
     MOVE_SWIFT,
     MOVE_SCALD,
     MOVE_LOCK_ON,
+	MOVE_FLASH_CANNON,
     0
 };
 
@@ -5810,6 +5814,7 @@ static const u16 sChiyuriEggMoveLearnset[] = {
     MOVE_SWIFT,
     MOVE_SCALD,
     MOVE_LOCK_ON,
+	MOVE_FLASH_CANNON,
     0
 };
 
@@ -6078,6 +6083,7 @@ static const u16 sCYukiEggMoveLearnset[] = {
     MOVE_FAKE_TEARS,
     MOVE_REVERSAL,
     MOVE_SCALD,
+	MOVE_PYRO_STRIKE,
     0
 };
 
@@ -6088,6 +6094,7 @@ static const u16 sYukiEggMoveLearnset[] = {
     MOVE_FAKE_TEARS,
     MOVE_REVERSAL,
     MOVE_SCALD,
+	MOVE_PYRO_STRIKE,
     0
 };
 

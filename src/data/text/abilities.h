@@ -193,6 +193,9 @@ static const u8 sDesperationDescription[] = _("+50% Speed when below 1/3 HP.");
 static const u8 sChromaticDescription[] = _("+50% Def/SDef vs non-same type moves.");
 static const u8 sElectricianDescription[] = _("+50% power on Electric moves.");
 static const u8 sStallDescription[] = _("Always moves last.");
+static const u8 sChaosBodyDescription[] = _("Confuses the foe on contact.");
+static const u8 sSpiritGuideDescription[] = _("Absorbs Ghost moves into Sp. Atk.");
+static const u8 sQuickChantDescription[] = _("2-turn moves charge instantly.");
 static const u8 sObsoleteDescription[] = _("Obsolete.");
 static const u8 sUnimplementedDescription[] = _("Unimplemented.");
 
@@ -393,9 +396,9 @@ const u8 *const gAbilityDescriptionPointers[ABILITIES_COUNT] =
 	[ABILITY_CHROMATIC] = sChromaticDescription,
 	[ABILITY_ELECTRICIAN] = sElectricianDescription,
 	[ABILITY_STALL] = sStallDescription,
-	[ABILITY_CHAOS_BODY] = sUnimplementedDescription,
-	[ABILITY_SPIRIT_GUIDE] = sUnimplementedDescription,
-	[ABILITY_QUICK_CHANT] = sUnimplementedDescription,
+	[ABILITY_CHAOS_BODY] = sChaosBodyDescription,
+	[ABILITY_SPIRIT_GUIDE] = sSpiritGuideDescription,
+	[ABILITY_QUICK_CHANT] = sQuickChantDescription,
 };
 
 const u8 gAbilityNames[ABILITIES_COUNT][ABILITY_NAME_LENGTH + 1] =
