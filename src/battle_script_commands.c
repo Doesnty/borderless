@@ -4920,6 +4920,14 @@ static void atk49_moveend(void)
 				(gCurrentMove != MOVE_U_TURN) &&
 				(gCurrentMove != MOVE_VOLT_SWITCH) &&
 				(gCurrentMove != MOVE_STRUGGLE) &&
+				// don't twin spark for 2-turn moves unless we are already charged
+				// this is to avoid stupid loops with power herb where the charge happens
+				!(!(gBattleMons[gBattlerAttacker].status2 & STATUS2_MULTIPLETURNS) &&
+					(gBattleMoves[gCurrentMove].effect == EFFECT_GROUP_PRANK ||
+					gBattleMoves[gCurrentMove].effect == EFFECT_SEMI_INVULNERABLE ||
+					gBattleMoves[gCurrentMove].effect == EFFECT_SOLARBEAM ||
+					gBattleMoves[gCurrentMove].effect == EFFECT_SKY_ATTACK ||
+					gBattleMoves[gCurrentMove].effect == EFFECT_SKULL_BASH)) &&
 				!(gBattleStruct->twinSparkTracker))
 			{
 				// do it again!
