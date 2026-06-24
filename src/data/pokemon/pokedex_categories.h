@@ -578,11 +578,12 @@ static const u16 sDexCategory_LOLK_Page2[] = {
 static const u16 sDexCategory_LOLK_Page3[] = {
 	SPECIES_CCLOWNPIECE,
 	SPECIES_CLOWNPIECE,
-	SPECIES_CHECATIA,
-	SPECIES_HECATIA,
+	SPECIES_DCLOWNPIECE,
 };
 
 static const u16 sDexCategory_LOLK_Page4[] = {
+	SPECIES_CHECATIA,
+	SPECIES_HECATIA,
 	SPECIES_CJUNKO,
 	SPECIES_JUNKO,
 };
@@ -590,54 +591,69 @@ static const u16 sDexCategory_LOLK_Page4[] = {
 static const u16 sDexCategory_HSIFS_Page1[] = {
 	SPECIES_CETERNITY,
 	SPECIES_ETERNITY,
-	SPECIES_CNEMUNO,
-	SPECIES_NEMUNO,
+	SPECIES_AETERNITY,
 };
 
 static const u16 sDexCategory_HSIFS_Page2[] = {
-	SPECIES_CAUNN,
-	SPECIES_AUNN,
+	SPECIES_CNEMUNO,
+	SPECIES_NEMUNO,
+	SPECIES_DNEMUNO,
 };
 
 static const u16 sDexCategory_HSIFS_Page3[] = {
+	SPECIES_CAUNN,
+	SPECIES_AUNN,
+	SPECIES_TAUNN,
+};
+
+static const u16 sDexCategory_HSIFS_Page4[] = {
 	SPECIES_CNARUMI,
 	SPECIES_NARUMI,
 	SPECIES_ANARUMI,
 };
 
-
-static const u16 sDexCategory_HSIFS_Page4[] = {
+static const u16 sDexCategory_HSIFS_Page5[] = {
 	SPECIES_CMAI_AND_SATONO,
 	SPECIES_MAI_AND_SATONO,
+};
+
+static const u16 sDexCategory_HSIFS_Page6[] = {
 	SPECIES_COKINA,
 	SPECIES_OKINA,
+	SPECIES_DOKINA,
 };
 
 static const u16 sDexCategory_WBAWC_Page1[] = {
 	SPECIES_CEIKA,
 	SPECIES_EIKA,
+	SPECIES_DEIKA,
+};
+
+static const u16 sDexCategory_WBAWC_Page2[] = {
 	SPECIES_CURUMI,
 	SPECIES_URUMI,
 };
 
-static const u16 sDexCategory_WBAWC_Page2[] = {
+static const u16 sDexCategory_WBAWC_Page3[] = {
 	SPECIES_CKUTAKA,
 	SPECIES_KUTAKA,
-};
-
-static const u16 sDexCategory_WBAWC_Page3[] = {
-	SPECIES_CYACHIE,
-	SPECIES_YACHIE,
-	SPECIES_CSAKI,
-	SPECIES_SAKI,
+	SPECIES_HKUTAKA,
 };
 
 static const u16 sDexCategory_WBAWC_Page4[] = {
+	SPECIES_CYACHIE,
+	SPECIES_YACHIE,
 	SPECIES_CYUUMA,
 	SPECIES_YUUMA,
 };
 
 static const u16 sDexCategory_WBAWC_Page5[] = {
+	SPECIES_CSAKI,
+	SPECIES_SAKI,
+	SPECIES_SSAKI,
+};
+
+static const u16 sDexCategory_WBAWC_Page6[] = {
 	SPECIES_CMAYUMI,
 	SPECIES_MAYUMI,
 	SPECIES_CKEIKI,
@@ -647,25 +663,33 @@ static const u16 sDexCategory_WBAWC_Page5[] = {
 static const u16 sDexCategory_UM_Page1[] = {
 	SPECIES_CMIKE,
 	SPECIES_MIKE,
-	SPECIES_CTAKANE,
-	SPECIES_TAKANE,
 };
 
 static const u16 sDexCategory_UM_Page2[] = {
+	SPECIES_CTAKANE,
+	SPECIES_TAKANE,
+	SPECIES_TTAKANE,
+};
+
+static const u16 sDexCategory_UM_Page3[] = {
 	SPECIES_CSANNYO,
 	SPECIES_SANNYO,
 	SPECIES_CMISUMARU,
 	SPECIES_MISUMARU,
 };
 
-static const u16 sDexCategory_UM_Page3[] = {
+static const u16 sDexCategory_UM_Page4[] = {
 	SPECIES_CTSUKASA,
 	SPECIES_TSUKASA,
-	SPECIES_CMEGUMU,
-	SPECIES_MEGUMU,
 };
 
-static const u16 sDexCategory_UM_Page4[] = {
+static const u16 sDexCategory_UM_Page5[] = {
+	SPECIES_CMEGUMU,
+	SPECIES_MEGUMU,
+	SPECIES_TMEGUMU,
+};
+
+static const u16 sDexCategory_UM_Page6[] = {
 	SPECIES_CCHIMATA,
 	SPECIES_CHIMATA,
 	SPECIES_CMOMOYO,
@@ -712,11 +736,15 @@ static const u16 sDexCategory_FW_Page3[] = {
 static const u16 sDexCategory_FW_Page4[] = {
 	SPECIES_CYUIMAN,
 	SPECIES_YUIMAN,
-	SPECIES_CARIYA,
-	SPECIES_ARIYA,
 };
 
 static const u16 sDexCategory_FW_Page5[] = {
+	SPECIES_CARIYA,
+	SPECIES_ARIYA,
+	SPECIES_DARIYA,
+};
+
+static const u16 sDexCategory_FW_Page6[] = {
 	SPECIES_CNINA,
 	SPECIES_NINA,
 };
@@ -904,14 +932,20 @@ static const u16 sDexCategory_SOEW_Page2[] = {
 };
 
 static const u16 sDexCategory_SOEW_Page3[] = {
+	SPECIES_NOROIKO,
 	SPECIES_CMEIRA,
 	SPECIES_MEIRA,
 };
 
 static const u16 sDexCategory_SOEW_Page4[] = {
 	SPECIES_MAGIC_STONES,
+	SPECIES_MATENSHI,
+};
+
+static const u16 sDexCategory_SOEW_Page5[] = {
 	SPECIES_CKIRISAME,
 	SPECIES_KIRISAME,
+	SPECIES_TKIRISAME,
 };
 
 
@@ -925,22 +959,26 @@ static const u16 sDexCategory_PODD_Page1[] = {
 static const u16 sDexCategory_PODD_Page2[] = {
 	SPECIES_CKANA,
 	SPECIES_KANA,
+	SPECIES_AKANA,
+};
+
+static const u16 sDexCategory_PODD_Page3[] = {
 	SPECIES_CRIKAKO,
 	SPECIES_RIKAKO,
 };
 
-static const u16 sDexCategory_PODD_Page3[] = {
+static const u16 sDexCategory_PODD_Page4[] = {
 	SPECIES_CCHIYURI,
 	SPECIES_CHIYURI,
 };
 
-static const u16 sDexCategory_PODD_Page4[] = {
+static const u16 sDexCategory_PODD_Page5[] = {
 	SPECIES_CYUMEMI,
 	SPECIES_YUMEMI,
 	SPECIES_TYUMEMI,
 };
 
-static const u16 sDexCategory_PODD_Page5[] = {
+static const u16 sDexCategory_PODD_Page6[] = {
 	SPECIES_RUUKOTO,
 	SPECIES_MIMI_CHAN,
 };
@@ -954,49 +992,64 @@ static const u16 sDexCategory_LLS_Page1[] = {
 static const u16 sDexCategory_LLS_Page2[] = {
 	SPECIES_CKURUMI,
 	SPECIES_KURUMI,
-	SPECIES_CELLY,
-	SPECIES_ELLY,
 };
 
 static const u16 sDexCategory_LLS_Page3[] = {
+	SPECIES_CELLY,
+	SPECIES_ELLY,
+	SPECIES_HIKARIKO,
+};
+
+static const u16 sDexCategory_LLS_Page4[] = {
 	SPECIES_CKAZAMI,
 	SPECIES_KAZAMI,
 	SPECIES_AKAZAMI,
 };
 
-static const u16 sDexCategory_LLS_Page4[] = {
+static const u16 sDexCategory_LLS_Page5[] = {
 	SPECIES_CMUGETSU,
 	SPECIES_MUGETSU,
+	SPECIES_HMUGETSU,
+};
+
+static const u16 sDexCategory_LLS_Page6[] = {
 	SPECIES_CGENGETSU,
 	SPECIES_GENGETSU,
+	SPECIES_AGENGETSU,
 };
 
 
 static const u16 sDexCategory_MS_Page1[] = {
 	SPECIES_CSARA,
 	SPECIES_SARA,
+	SPECIES_WAYOUSEI,
+};
+
+static const u16 sDexCategory_MS_Page2[] = {
 	SPECIES_CLOUISE,
 	SPECIES_LOUISE,
 };
 
-static const u16 sDexCategory_MS_Page2[] = {
+static const u16 sDexCategory_MS_Page3[] = {
 	SPECIES_CARISU,
 	SPECIES_ARISU,
 };
 
-static const u16 sDexCategory_MS_Page3[] = {
+static const u16 sDexCategory_MS_Page4[] = {
 	SPECIES_CYUKI,
 	SPECIES_YUKI,
 	SPECIES_CMAI,
 	SPECIES_MAI,
 };
 
-static const u16 sDexCategory_MS_Page4[] = {
+static const u16 sDexCategory_MS_Page5[] = {
+	SPECIES_AYANA,
 	SPECIES_CYUMEKO,
 	SPECIES_YUMEKO,
+	SPECIES_TYUMEKO,
 };
 
-static const u16 sDexCategory_MS_Page5[] = {
+static const u16 sDexCategory_MS_Page6[] = {
 	SPECIES_CSHINKI,
 	SPECIES_SHINKI,
 	SPECIES_ASHINKI,
@@ -1201,6 +1254,8 @@ static const struct PokedexCategoryPage sDexCategory_HSIFSPkmn[] = {
 	DEX_CATEGORY(HSIFS_Page2),
 	DEX_CATEGORY(HSIFS_Page3),
 	DEX_CATEGORY(HSIFS_Page4),
+	DEX_CATEGORY(HSIFS_Page5),
+	DEX_CATEGORY(HSIFS_Page6),
 };
 
 static const struct PokedexCategoryPage sDexCategory_WBAWCPkmn[] = {
@@ -1209,6 +1264,7 @@ static const struct PokedexCategoryPage sDexCategory_WBAWCPkmn[] = {
 	DEX_CATEGORY(WBAWC_Page3),
 	DEX_CATEGORY(WBAWC_Page4),
 	DEX_CATEGORY(WBAWC_Page5),
+	DEX_CATEGORY(WBAWC_Page6),
 };
 
 static const struct PokedexCategoryPage sDexCategory_UMPkmn[] = {
@@ -1216,6 +1272,8 @@ static const struct PokedexCategoryPage sDexCategory_UMPkmn[] = {
 	DEX_CATEGORY(UM_Page2),
 	DEX_CATEGORY(UM_Page3),
 	DEX_CATEGORY(UM_Page4),
+	DEX_CATEGORY(UM_Page5),
+	DEX_CATEGORY(UM_Page6),
 };
 
 static const struct PokedexCategoryPage sDexCategory_UDOALGPkmn[] = {
@@ -1231,6 +1289,7 @@ static const struct PokedexCategoryPage sDexCategory_FWPkmn[] = {
 	DEX_CATEGORY(FW_Page3),
 	DEX_CATEGORY(FW_Page4),
 	DEX_CATEGORY(FW_Page5),
+	DEX_CATEGORY(FW_Page6),
 };
 
 static const struct PokedexCategoryPage sDexCategory_FightersPkmn[] = {
@@ -1276,6 +1335,7 @@ static const struct PokedexCategoryPage sDexCategory_SOEWPkmn[] = {
 	DEX_CATEGORY(SOEW_Page2),
 	DEX_CATEGORY(SOEW_Page3),
 	DEX_CATEGORY(SOEW_Page4),
+	DEX_CATEGORY(SOEW_Page5),
 };
 
 static const struct PokedexCategoryPage sDexCategory_PODDPkmn[] = {
@@ -1284,6 +1344,7 @@ static const struct PokedexCategoryPage sDexCategory_PODDPkmn[] = {
 	DEX_CATEGORY(PODD_Page3),
 	DEX_CATEGORY(PODD_Page4),
 	DEX_CATEGORY(PODD_Page5),
+	DEX_CATEGORY(PODD_Page6),
 };
 
 static const struct PokedexCategoryPage sDexCategory_LLSPkmn[] = {
@@ -1291,6 +1352,8 @@ static const struct PokedexCategoryPage sDexCategory_LLSPkmn[] = {
 	DEX_CATEGORY(LLS_Page2),
 	DEX_CATEGORY(LLS_Page3),
 	DEX_CATEGORY(LLS_Page4),
+	DEX_CATEGORY(LLS_Page5),
+	DEX_CATEGORY(LLS_Page6),
 };
 
 static const struct PokedexCategoryPage sDexCategory_MSPkmn[] = {
@@ -1299,6 +1362,7 @@ static const struct PokedexCategoryPage sDexCategory_MSPkmn[] = {
 	DEX_CATEGORY(MS_Page3),
 	DEX_CATEGORY(MS_Page4),
 	DEX_CATEGORY(MS_Page5),
+	DEX_CATEGORY(MS_Page6),
 };
 
 static const struct PokedexCategoryPage sDexCategory_FanonPkmn[] = {

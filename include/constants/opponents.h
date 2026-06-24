@@ -50,7 +50,7 @@
 #define TRAINER_SWIMMING_TRIATHLETE_F             45
 #define TRAINER_DRAGON_TAMER                      46
 #define TRAINER_RS_BIRD_KEEPER                    47
-#define TRAINER_NINJA_BOY                         48
+#define TRAINER_NINJA_BOY_SHIRO                   48
 #define TRAINER_BATTLE_GIRL                       49
 #define TRAINER_PARASOL_LADY                      50
 #define TRAINER_RS_SWIMMER_F                      51

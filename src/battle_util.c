@@ -1034,8 +1034,8 @@ u8 DoBattlerEndTurnEffects(void)
                 ++gBattleStruct->turnEffectsTracker;
                 break;
             case ENDTURN_CHARGE:  // charge
-                if (gDisableStructs[gActiveBattler].chargeTimer && --gDisableStructs[gActiveBattler].chargeTimer == 0)
-                    gStatuses3[gActiveBattler] &= ~STATUS3_CHARGED_UP;
+                //if (gDisableStructs[gActiveBattler].chargeTimer && --gDisableStructs[gActiveBattler].chargeTimer == 0)
+                //    gStatuses3[gActiveBattler] &= ~STATUS3_CHARGED_UP;
                 ++gBattleStruct->turnEffectsTracker;
                 break;
             case ENDTURN_TAUNT:  // taunt
@@ -2912,6 +2912,22 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u8 ability, u8 special, u16 moveA
 					}
 				}
 				break;
+			case ABILITY_ELECTROWHEEL:
+                if (!(gMoveResultFlags & MOVE_RESULT_NO_EFFECT)
+                 && gBattleMons[gBattlerTarget].hp != 0
+                 && !gProtectStructs[gBattlerAttacker].confusionSelfDmg
+                 && TARGET_TURN_DAMAGED
+				 && !(gStatuses3[gBattlerTarget] & STATUS3_CHARGED_UP)
+                 && gBattleMons[gBattlerAttacker].ability != ABILITY_LONG_REACH
+                 && (gBattleMoves[moveArg].flags & FLAG_MAKES_CONTACT))
+				 {
+					gStatuses3[gBattlerTarget] |= STATUS3_CHARGED_UP;
+					
+					BattleScriptPushCursor();
+					gBattlescriptCurrInstr = BattleScript_Electrowheel;
+					++effect;
+				 }
+				 break;
             }
             break;
         case ABILITYEFFECT_IMMUNITY: // 5

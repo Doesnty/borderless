@@ -2575,6 +2575,111 @@ const struct MonCoords gMonBackPicCoords[] =
 		.size = 0x77,
 		.y_offset = 0,
 	},
+	[SPECIES_DCLOWNPIECE] = 
+	{
+		.size = 0x77,
+		.y_offset = 0
+	},
+	[SPECIES_AETERNITY] = 
+	{
+		.size = 0x77,
+		.y_offset = 0
+	},
+	[SPECIES_DNEMUNO] = 
+	{
+		.size = 0x77,
+		.y_offset = 0
+	},
+	[SPECIES_TAUNN] = 
+	{
+		.size = 0x77,
+		.y_offset = 0
+	},
+	[SPECIES_DOKINA] = 
+	{
+		.size = 0x77,
+		.y_offset = 0
+	},
+	[SPECIES_DEIKA] = 
+	{
+		.size = 0x77,
+		.y_offset = 0
+	},
+	[SPECIES_HKUTAKA] = 
+	{
+		.size = 0x77,
+		.y_offset = 0
+	},
+	[SPECIES_SSAKI] = 
+	{
+		.size = 0x77,
+		.y_offset = 0
+	},
+	[SPECIES_TTAKANE] = 
+	{
+		.size = 0x77,
+		.y_offset = 0
+	},
+	[SPECIES_TMEGUMU] = 
+	{
+		.size = 0x77,
+		.y_offset = 0
+	},
+	[SPECIES_DARIYA] = 
+	{
+		.size = 0x77,
+		.y_offset = 0
+	},
+	[SPECIES_TKIRISAME] = 
+	{
+		.size = 0x77,
+		.y_offset = 0
+	},
+	[SPECIES_AKANA] = 
+	{
+		.size = 0x77,
+		.y_offset = 0
+	},
+	[SPECIES_HMUGETSU] = 
+	{
+		.size = 0x77,
+		.y_offset = 0
+	},
+	[SPECIES_AGENGETSU] = 
+	{
+		.size = 0x77,
+		.y_offset = 0
+	},
+	[SPECIES_TYUMEKO] = 
+	{
+		.size = 0x77,
+		.y_offset = 0
+	},
+	[SPECIES_NOROIKO] = 
+	{
+		.size = 0x77,
+		.y_offset = 0
+	},
+	[SPECIES_MATENSHI] = 
+	{
+		.size = 0x77,
+		.y_offset = 0
+	},
+	[SPECIES_HIKARIKO] = 
+	{
+		.size = 0x77,
+		.y_offset = 0
+	},
+	[SPECIES_WAYOUSEI] = 
+	{
+		.size = 0x77,
+		.y_offset = 0
+	},
+	[SPECIES_AYANA] = 
+	{
+		.size = 0x77,
+		.y_offset = 0
+	},
     [SPECIES_EGG] =
     {
         .size = 0x36,

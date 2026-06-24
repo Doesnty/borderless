@@ -80,7 +80,7 @@ Route20_Text_NoraDefeat:: @ 8188119
     .string "My pearls were in them!$"
 
 Route20_Text_NoraPostBattle:: @ 8188139
-    .string "Will my pearls grow bigger inside\n"
+    .string "Will my pearls grow bigger with\n"
     .string "Mamizou?$"
 
 Route20_Text_MissyIntro:: @ 8188165

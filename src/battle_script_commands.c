@@ -4812,6 +4812,14 @@ static void atk49_moveend(void)
 			}
 			++gBattleScripting.atk49_state;
 			break;
+		case ATK49_CHARGE:
+			if ((gStatuses3[gBattlerAttacker] & STATUS3_CHARGED_UP)
+				&& gBattleMoves[gCurrentMove].type == TYPE_ELECTRIC)
+			{
+				gStatuses3[gBattlerAttacker] &= ~(STATUS3_CHARGED_UP);
+			}
+			++gBattleScripting.atk49_state;
+			break;
         case ATK49_NEXT_TARGET: // For moves hitting two opposing Pokemon.
             if (!(gHitMarker & HITMARKER_UNABLE_TO_USE_MOVE)
              && gBattleTypeFlags & BATTLE_TYPE_DOUBLE
@@ -4921,7 +4929,7 @@ static void atk49_moveend(void)
 				(gCurrentMove != MOVE_VOLT_SWITCH) &&
 				(gCurrentMove != MOVE_STRUGGLE) &&
 				// don't twin spark for 2-turn moves unless we are already charged
-				// this is to avoid stupid loops with power herb where the charge happens
+				// this is to avoid stupid loops with power herb where the charge happens second
 				!(!(gBattleMons[gBattlerAttacker].status2 & STATUS2_MULTIPLETURNS) &&
 					(gBattleMoves[gCurrentMove].effect == EFFECT_GROUP_PRANK ||
 					gBattleMoves[gCurrentMove].effect == EFFECT_SEMI_INVULNERABLE ||

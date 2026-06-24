@@ -130,7 +130,7 @@ static const u8 sCursedBodyDescription[] = _("Disables moves when attacked.");
 static const u8 sMotorDriveDescription[] = _("Absorbs Electric moves into HP.");
 static const u8 sStormDrainDescription[] = _("Absorbs Water moves into Sp. Atk.");
 static const u8 sMoldBreakerDescription[] = _("Attacks bypass foe's Ability.");
-static const u8 sJustifiedDescription[] = _("Boosts Attack when hit by Dark moves.");
+static const u8 sJustifiedDescription[] = _("Foe's Dark moves do half & raise Attack.");
 static const u8 sMoxieDescription[] = _("Boosts Attack on KO.");
 static const u8 sMagicGuardDescription[] = _("Ignores all passive damage.");
 static const u8 sSandRushDescription[] = _("Doubles Speed in sandstorm.");
@@ -196,6 +196,7 @@ static const u8 sStallDescription[] = _("Always moves last.");
 static const u8 sChaosBodyDescription[] = _("Confuses the foe on contact.");
 static const u8 sSpiritGuideDescription[] = _("Absorbs Ghost moves into Sp. Atk.");
 static const u8 sQuickChantDescription[] = _("2-turn moves charge instantly.");
+static const u8 sElectrowheelDescription[] = _("Contact powers up next Electric move.");
 static const u8 sObsoleteDescription[] = _("Obsolete.");
 static const u8 sUnimplementedDescription[] = _("Unimplemented.");
 
@@ -399,6 +400,7 @@ const u8 *const gAbilityDescriptionPointers[ABILITIES_COUNT] =
 	[ABILITY_CHAOS_BODY] = sChaosBodyDescription,
 	[ABILITY_SPIRIT_GUIDE] = sSpiritGuideDescription,
 	[ABILITY_QUICK_CHANT] = sQuickChantDescription,
+	[ABILITY_ELECTROWHEEL] = sElectrowheelDescription,
 };
 
 const u8 gAbilityNames[ABILITIES_COUNT][ABILITY_NAME_LENGTH + 1] =
@@ -601,4 +603,5 @@ const u8 gAbilityNames[ABILITIES_COUNT][ABILITY_NAME_LENGTH + 1] =
 	[ABILITY_CHAOS_BODY] = _("Chaos Body"),
 	[ABILITY_SPIRIT_GUIDE] = _("Spirit Guide"),
 	[ABILITY_QUICK_CHANT] = _("Quick Chant"),
+	[ABILITY_ELECTROWHEEL] = _("Electrowheel"),
 };

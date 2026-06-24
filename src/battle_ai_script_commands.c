@@ -124,7 +124,7 @@ static void Cmd_get_move_type_from_result(void);
 static void Cmd_get_move_power_from_result(void);
 static void Cmd_get_move_effect_from_result(void);
 static void Cmd_get_protect_count(void);
-static void Cmd_nullsub_52(void);
+static void Cmd_get_move_class_from_result(void);
 static void Cmd_nullsub_53(void);
 static void Cmd_nullsub_54(void);
 static void Cmd_nullsub_55(void);
@@ -228,7 +228,7 @@ static const BattleAICmdFunc sBattleAICmdTable[] =
     Cmd_get_move_power_from_result,       // 0x4F
     Cmd_get_move_effect_from_result,      // 0x50
     Cmd_get_protect_count,                // 0x51
-    Cmd_nullsub_52,                       // 0x52
+    Cmd_get_move_class_from_result,       // 0x52
     Cmd_nullsub_53,                       // 0x53
     Cmd_nullsub_54,                       // 0x54
     Cmd_nullsub_55,                       // 0x55
@@ -1856,8 +1856,11 @@ static void Cmd_get_protect_count(void)
     sAIScriptPtr += 2;
 }
 
-static void Cmd_nullsub_52(void)
+static void Cmd_get_move_class_from_result(void)
 {
+    AI_THINKING_STRUCT->funcResult = gBattleMoves[AI_THINKING_STRUCT->funcResult].moveClass;
+
+    sAIScriptPtr += 1;
 }
 
 static void Cmd_nullsub_53(void)

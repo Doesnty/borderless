@@ -26,9 +26,9 @@ const u8 gEnemyMonElevation[NUM_SPECIES] =
     
     [SPECIES_CDAIYOUSEI] = 4,
 	
+	[SPECIES_EIKA] = 3,
+	
 	[SPECIES_ENOKO] = 1,
-    
-    [SPECIES_HOURAI] = 8,
     
     [SPECIES_CELIS] = 6,
     
@@ -48,6 +48,8 @@ const u8 gEnemyMonElevation[NUM_SPECIES] =
 	[SPECIES_CHINA] = 2,
     [SPECIES_DHINA] = 3,
     [SPECIES_HINA] = 3,
+    
+    [SPECIES_HOURAI] = 8,
     
     [SPECIES_CICHIRIN] = 8,
     
@@ -95,6 +97,8 @@ const u8 gEnemyMonElevation[NUM_SPECIES] =
     [SPECIES_MAMIZOU] = 2,
     
     [SPECIES_SMARISA] = 7,
+	
+	[SPECIES_MATENSHI] = 3,
     
     [SPECIES_CMIMA] = 6,
     [SPECIES_MIMA] = 4,

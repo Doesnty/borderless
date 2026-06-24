@@ -51,6 +51,11 @@ VictoryRoad_3F_EventScript_Alexa:: @ 8161148
 	msgbox VictoryRoad_3F_Text_AlexaPostBattle, MSGBOX_AUTOCLOSE
 	end
 
+VictoryRoad_3F_EventScript_Shiro::
+	trainerbattle_single TRAINER_NINJA_BOY_SHIRO, VictoryRoad_3F_Text_ShiroIntro, VictoryRoad_3F_Text_ShiroDefeat
+	msgbox VictoryRoad_3F_Text_ShiroPostBattle, MSGBOX_AUTOCLOSE
+	end
+
 VictoryRoad_3F_EventScript_Ray:: @ 816115F
 	trainerbattle_double TRAINER_COOL_COUPLE_RAY_TYRA, VictoryRoad_3F_Text_RayIntro, VictoryRoad_3F_Text_RayDefeat, VictoryRoad_3F_Text_RayNotEnoughMons
 	msgbox VictoryRoad_3F_Text_RayPostBattle, MSGBOX_AUTOCLOSE

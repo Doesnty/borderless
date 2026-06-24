@@ -63,6 +63,7 @@ AI_CBM_CheckIfNegatesType::
 	if_equal ABILITY_STORM_DRAIN, CheckIfWaterAbsorbCancelsWater
 	if_equal ABILITY_FLASH_FIRE, CheckIfFlashFireCancelsFire
 	if_equal ABILITY_SAP_SIPPER, CheckIfFlashFireCancelsNature
+	if_equal ABILITY_SPIRIT_GUIDE, CheckIfSpiritGuideCancelsGhost
 	if_equal ABILITY_PLAY_GHOST, CheckIfWonderGuardCancelsMove
 	if_equal ABILITY_LEVITATE, CheckIfLevitateCancelsGroundMove
 	goto AI_CheckBadMove_CheckSoundproof
@@ -85,6 +86,11 @@ CheckIfFlashFireCancelsFire:: @ 81D9CC0
 CheckIfFlashFireCancelsNature::
 	get_curr_move_type
 	if_equal_ TYPE_NATURE, Score_Minus12
+	goto AI_CheckBadMove_CheckSoundproof
+
+CheckIfSpiritGuideCancelsGhost::
+	get_curr_move_type
+	if_equal_ TYPE_GHOST, Score_Minus12
 	goto AI_CheckBadMove_CheckSoundproof
 
 CheckIfWonderGuardCancelsMove:: @ 81D9CCD
@@ -224,6 +230,7 @@ AI_CheckBadMove_CheckEffect:: @ 81D9D27
 	if_effect EFFECT_WISH, AI_CBM_Wish
 	if_effect EFFECT_TAUNT, AI_CBM_Taunt
 	if_effect EFFECT_AEGIS_MERGE, AI_CBM_Ingrain
+	if_effect EFFECT_LOCK_ON, AI_CBM_LockOn
 	end
 
 AI_CBM_Sleep:: @ 81D9FB6
@@ -704,8 +711,11 @@ AI_CBM_Wish::
 AI_CBM_Taunt::
 	if_target_not_taunted AI_CBM_TauntEnd
 	goto Score_Minus10
-	
 AI_CBM_TauntEnd::
+	end
+
+AI_CBM_LockOn::
+	if_status3 AI_TARGET, STATUS3_ALWAYS_HITS, Score_Minus10
 	end
 
 Score_Minus1:: @ 81DA424
@@ -1015,8 +1025,8 @@ AI_CV_DefenseUp4:: @ 81DA8B4
 	get_move_power_from_result
 	if_equal 0, AI_CV_DefenseUp5
 	get_last_used_move AI_TARGET
-	get_move_type_from_result
-	if_not_in_bytes AI_CV_DefenseUp_PhysicalTypes, AI_CV_DefenseUp_ScoreDown2
+	get_move_class_from_result
+	if_not_equal 0, AI_CV_DefenseUp_ScoreDown2
 	if_random_less_than 60, AI_CV_DefenseUp_End
 
 AI_CV_DefenseUp5:: @ 81DA8D6
@@ -1027,18 +1037,6 @@ AI_CV_DefenseUp_ScoreDown2:: @ 81DA8DC
 
 AI_CV_DefenseUp_End:: @ 81DA8DE
 	end
-
-AI_CV_DefenseUp_PhysicalTypes:: @ 81DA8DF
-	.byte TYPE_NORMAL
-	.byte TYPE_FIGHTING
-	.byte TYPE_POISON
-	.byte TYPE_GROUND
-	.byte TYPE_FLYING
-	.byte TYPE_ROCK
-	.byte TYPE_BUG
-	.byte TYPE_GHOST
-	.byte TYPE_STEEL
-	.byte -1
 
 AI_CV_SpeedUp:: @ 81DA8E9
 	if_target_faster AI_CV_SpeedUp2
@@ -1095,8 +1093,8 @@ AI_CV_SpDefUp4:: @ 81DA96B
 	get_move_power_from_result
 	if_equal 0, AI_CV_SpDefUp5
 	get_last_used_move AI_TARGET
-	get_move_type_from_result
-	if_in_bytes AI_CV_SpDefUp_PhysicalTypes, AI_CV_SpDefUp_ScoreDown2
+	get_move_class_from_result
+	if_not_equal 1, AI_CV_SpDefUp_ScoreDown2
 	if_random_less_than 60, AI_CV_SpDefUp_End
 
 AI_CV_SpDefUp5:: @ 81DA98D
@@ -1107,18 +1105,6 @@ AI_CV_SpDefUp_ScoreDown2:: @ 81DA993
 
 AI_CV_SpDefUp_End:: @ 81DA995
 	end
-
-AI_CV_SpDefUp_PhysicalTypes:: @ 81DA996
-	.byte TYPE_NORMAL
-	.byte TYPE_FIGHTING
-	.byte TYPE_POISON
-	.byte TYPE_GROUND
-	.byte TYPE_FLYING
-	.byte TYPE_ROCK
-	.byte TYPE_BUG
-	.byte TYPE_GHOST
-	.byte TYPE_STEEL
-	.byte -1
 
 AI_CV_AccuracyUp:: @ 81DA9A0
 	if_stat_level_less_than AI_USER, STAT_ACC, 9, AI_CV_AccuracyUp2
@@ -1212,25 +1198,8 @@ AI_CV_AttackDown3:: @ 81DAAA7
 	score -2
 
 AI_CV_AttackDown4:: @ 81DAAB0
-	get_target_type1
-	if_in_bytes AI_CV_AttackDown_PhysicalTypeList, AI_CV_AttackDown_End
-	get_target_type2
-	if_in_bytes AI_CV_AttackDown_PhysicalTypeList, AI_CV_AttackDown_End
-	if_random_less_than 50, AI_CV_AttackDown_End
-	score -2
-
-AI_CV_AttackDown_End:: @ 81DAACE
+	@ removed logic to discourage if player was not a physical type
 	end
-
-@ Missing Poison, Flying, and Ghost for unknown reason
-AI_CV_AttackDown_PhysicalTypeList:: @ 81DAACF
-	.byte TYPE_NORMAL
-	.byte TYPE_FIGHTING
-	.byte TYPE_GROUND
-	.byte TYPE_ROCK
-	.byte TYPE_BUG
-	.byte TYPE_STEEL
-	.byte -1
 
 AI_CV_DefenseDown:: @ 81DAAD6
 	if_hp_less_than AI_USER, 70, AI_CV_DefenseDown2
@@ -1278,26 +1247,11 @@ AI_CV_SpAtkDown3:: @ 81DAB46
 	score -2
 
 AI_CV_SpAtkDown4:: @ 81DAB4F
-	get_target_type1
-	if_in_bytes AI_CV_SpAtkDown_SpecialTypeList, AI_CV_SpAtkDown_End
-	get_target_type2
-	if_in_bytes AI_CV_SpAtkDown_SpecialTypeList, AI_CV_SpAtkDown_End
 	if_random_less_than 50, AI_CV_SpAtkDown_End
 	score -2
 
 AI_CV_SpAtkDown_End:: @ 81DAB6D
 	end
-
-AI_CV_SpAtkDown_SpecialTypeList:: @ 81DAB6E
-	.byte TYPE_FIRE
-	.byte TYPE_WATER
-	.byte TYPE_GRASS
-	.byte TYPE_ELECTRIC
-	.byte TYPE_PSYCHIC
-	.byte TYPE_ICE
-	.byte TYPE_DRAGON
-	.byte TYPE_DARK
-	.byte -1
 
 AI_CV_SpDefDown:: @ 81DAB77
 	if_hp_less_than AI_USER, 70, AI_CV_SpDefDown2
@@ -1517,28 +1471,13 @@ AI_CV_Toxic_End:: @ 81DAE1A
 
 AI_CV_LightScreen:: @ 81DAE1B
 	if_hp_less_than AI_USER, 50, AI_CV_LightScreen_ScoreDown2
-	get_target_type1
-	if_in_bytes AI_CV_LightScreen_SpecialTypeList, AI_CV_LightScreen_End
-	get_target_type2
-	if_in_bytes AI_CV_LightScreen_SpecialTypeList, AI_CV_LightScreen_End
-	if_random_less_than 50, AI_CV_LightScreen_End
-
-AI_CV_LightScreen_ScoreDown2:: @ 81DAE3E
-	score -2
 
 AI_CV_LightScreen_End:: @ 81DAE40
 	end
 
-AI_CV_LightScreen_SpecialTypeList:: @ 81DAE41
-	.byte TYPE_FIRE
-	.byte TYPE_WATER
-	.byte TYPE_GRASS
-	.byte TYPE_ELECTRIC
-	.byte TYPE_PSYCHIC
-	.byte TYPE_ICE
-	.byte TYPE_DRAGON
-	.byte TYPE_DARK
-	.byte -1
+AI_CV_LightScreen_ScoreDown2:: @ 81DAE3E
+	score -2
+	end
 
 AI_CV_Rest:: @ 81DAE4A
 	if_target_faster AI_CV_Rest4
@@ -1576,6 +1515,10 @@ AI_CV_Rest_End:: @ 81DAEA9
 	end
 
 AI_CV_OneHitKO:: @ 81DAEAA
+	if_status3 AI_TARGET, STATUS3_ALWAYS_HITS, AI_CV_OneHitKO2
+	end
+AI_CV_OneHitKO2::
+	score +4
 	end
 
 AI_CV_SuperFang:: @ 81DAEAB
@@ -1652,29 +1595,13 @@ AI_CV_SwaggerHasPsychUp_End:
 
 AI_CV_Reflect:: @ 81DAF3C
 	if_hp_less_than AI_USER, 50, AI_CV_Reflect_ScoreDown2
-	get_target_type1
-	if_in_bytes AI_CV_Reflect_PhysicalTypeList, AI_CV_Reflect_End
-	get_target_type2
-	if_in_bytes AI_CV_Reflect_PhysicalTypeList, AI_CV_Reflect_End
-	if_random_less_than 50, AI_CV_Reflect_End
-
-AI_CV_Reflect_ScoreDown2:: @ 81DAF5F
-	score -2
-
+	@ removed logic to discourage if player was not a physical type
 AI_CV_Reflect_End:: @ 81DAF61
 	end
 
-AI_CV_Reflect_PhysicalTypeList:: @ 81DAF62
-	.byte TYPE_NORMAL
-	.byte TYPE_FIGHTING
-	.byte TYPE_FLYING
-	.byte TYPE_POISON
-	.byte TYPE_GROUND
-	.byte TYPE_ROCK
-	.byte TYPE_BUG
-	.byte TYPE_GHOST
-	.byte TYPE_STEEL
-	.byte -1
+AI_CV_Reflect_ScoreDown2:: @ 81DAF5F
+	score -2
+	end
 
 AI_CV_Poison:: @ 81DAF6C
 	if_hp_less_than AI_USER, 50, AI_CV_Poison_ScoreDown1
@@ -1813,8 +1740,8 @@ AI_CV_Counter3:: @ 81DB0D6
 
 AI_CV_Counter4:: @ 81DB0EC
 	get_last_used_move AI_TARGET
-	get_move_type_from_result
-	if_not_in_bytes AI_CV_Counter_PhysicalTypeList, AI_CV_Counter_ScoreDown1
+	get_move_class_from_result
+	if_not_equal 0, AI_CV_Counter_ScoreDown1
 	if_random_less_than 100, AI_CV_Counter_End
 	score +1
 	goto AI_CV_Counter_End
@@ -1825,10 +1752,6 @@ AI_CV_Counter5:: @ 81DB105
 	score +1
 
 AI_CV_Counter6:: @ 81DB112
-	get_target_type1
-	if_in_bytes AI_CV_Counter_PhysicalTypeList, AI_CV_Counter_End
-	get_target_type2
-	if_in_bytes AI_CV_Counter_PhysicalTypeList, AI_CV_Counter_End
 	if_random_less_than 50, AI_CV_Counter_End
 
 @ Improvement in Emerald
@@ -1844,18 +1767,6 @@ AI_CV_Counter_ScoreDown1:: @ 81DB12E
 
 AI_CV_Counter_End:: @ 81DB130
 	end
-
-AI_CV_Counter_PhysicalTypeList:: @ 81DB131
-	.byte TYPE_NORMAL
-	.byte TYPE_FIGHTING
-	.byte TYPE_FLYING
-	.byte TYPE_POISON
-	.byte TYPE_GROUND
-	.byte TYPE_ROCK
-	.byte TYPE_BUG
-	.byte TYPE_GHOST
-	.byte TYPE_STEEL
-	.byte -1
 
 AI_CV_Encore:: @ 81DB13B
 	if_any_move_disabled AI_TARGET, AI_CV_Encore2
@@ -2322,8 +2233,8 @@ AI_CV_MirrorCoat3:: @ 81DB5E1
 
 AI_CV_MirrorCoat4:: @ 81DB5F7
 	get_last_used_move AI_TARGET
-	get_move_type_from_result
-	if_not_in_bytes AI_CV_MirrorCoat_SpecialTypeList, AI_CV_MirrorCoat_ScoreDown1
+	get_move_class_from_result
+	if_not_equal 1, AI_CV_MirrorCoat_ScoreDown1
 	if_random_less_than 100, AI_CV_MirrorCoat_End
 	score +1
 	goto AI_CV_MirrorCoat_End
@@ -2334,11 +2245,7 @@ AI_CV_MirrorCoat5:: @ 81DB610
 	score +1
 
 AI_CV_MirrorCoat6:: @ 81DB61D
-	get_target_type1
-	if_in_bytes AI_CV_MirrorCoat_SpecialTypeList, AI_CV_MirrorCoat_End
-	get_target_type2
-	if_in_bytes AI_CV_MirrorCoat_SpecialTypeList, AI_CV_MirrorCoat_End
-	if_random_less_than 50, AI_CV_MirrorCoat_End
+	goto AI_CV_MirrorCoat_End
 
 @ Improvement in Emerald
 AI_CV_MirrorCoat_ScoreUp4:
@@ -2354,23 +2261,17 @@ AI_CV_MirrorCoat_ScoreDown1:: @ 81DB639
 AI_CV_MirrorCoat_End:: @ 81DB63B
 	end
 
-AI_CV_MirrorCoat_SpecialTypeList:: @ 81DB63C
-	.byte TYPE_FIRE
-	.byte TYPE_WATER
-	.byte TYPE_GRASS
-	.byte TYPE_ELECTRIC
-	.byte TYPE_PSYCHIC
-	.byte TYPE_ICE
-	.byte TYPE_DRAGON
-	.byte TYPE_DARK
-	.byte -1
-
 AI_CV_Solarbeam::
+	get_ability AI_USER
+	if_equal ABILITY_QUICK_CHANT, AI_CV_SolarbeamEnd
 	get_weather
 	if_not_equal AI_WEATHER_SUN, Score_Minus8
+AI_CV_SolarbeamEnd:
 	end
 
 AI_CV_ChargeUpMove:: @ 81DB645
+	get_ability AI_USER
+	if_equal ABILITY_QUICK_CHANT, AI_CV_ChargeUpMove_End
 	if_type_effectiveness AI_EFFECTIVENESS_x0_25, AI_CV_ChargeUpMove_ScoreDown2
 	if_type_effectiveness AI_EFFECTIVENESS_x0_5, AI_CV_ChargeUpMove_ScoreDown2
 	if_has_move_with_effect AI_TARGET, EFFECT_PROTECT, AI_CV_ChargeUpMove_ScoreDown2

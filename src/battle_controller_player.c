@@ -1439,7 +1439,6 @@ static void MoveSelectionDisplayMoveType(void)
 	{
 		u8 moveFlags = AI_TypeCalc(move, gBattleMons[1].type1, gBattleMons[1].type2, 0);
 		
-
 		if (IS_BATTLE_TYPE_GHOST_WITHOUT_SCOPE(gBattleTypeFlags))
 			txtPtr = StringCopy(gDisplayedStringBattle, gText_MoveUnknown);
 		else if (moveFlags & MOVE_RESULT_SUPER_EFFECTIVE)

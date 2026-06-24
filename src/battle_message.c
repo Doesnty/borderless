@@ -609,6 +609,7 @@ const u8 sText_AbilityFailedDueToStasisGaze[] = _("{B_SCR_ACTIVE_NAME_WITH_PREFI
 const u8 sText_PkmnConfusedBy[] = _("{B_SCR_ACTIVE_NAME_WITH_PREFIX}'s {B_SCR_ACTIVE_ABILITY}\nconfused {B_EFF_NAME_WITH_PREFIX}!");
 const u8 sText_QuickChantActivates[] = _("{B_ATK_NAME_WITH_PREFIX} became\nfully charged due to Quick Chant!");
 const u8 sText_PowerHerbActivates[] = _("{B_ATK_NAME_WITH_PREFIX} became\nfully charged due to its Power Herb!");
+const u8 sText_Electrowheel[] = _("{B_DEF_NAME_WITH_PREFIX}'s Electrowheel\nbegan charging power!");
 
 
 const u8 *const gBattleStringsTable[] = {
@@ -1083,6 +1084,7 @@ const u8 *const gBattleStringsTable[] = {
 	[STRINGID_PKMNCONFUSEDBY - 12]                = sText_PkmnConfusedBy,
 	[STRINGID_QUICKCHANTACTIVATES - 12]           = sText_QuickChantActivates,
 	[STRINGID_POWERHERBACTIVATES - 12]            = sText_PowerHerbActivates,
+	[STRINGID_ELECTROWHEEL - 12]                  = sText_Electrowheel,
 };
 
 const u16 gMissStringIds[] = {

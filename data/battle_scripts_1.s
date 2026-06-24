@@ -6336,6 +6336,11 @@ BattleScript_Berserk::
 	waitmessage 0x40
 	return
 
+BattleScript_Electrowheel::
+	printstring STRINGID_ELECTROWHEEL
+	waitmessage 0x40
+	return
+
 BattleScript_Devourer::
 	printstring STRINGID_DEVOURER
 	waitmessage 0x40

@@ -40,7 +40,9 @@ static bool8 ShouldSwitchIfWonderGuard(void)
         return FALSE;
     if (gBattleMons[GetBattlerAtPosition(B_POSITION_PLAYER_LEFT)].ability == ABILITY_PLAY_GHOST)
     {
-        // Check if Pokemon has a super effective move.
+        // Check if Pokemon has a super effective move (or mold breaker)
+		if (gBattleMons[gActiveBattler].ability == ABILITY_MOLD_BREAKER)
+			return FALSE;
         for (opposingBattler = GetBattlerAtPosition(B_POSITION_PLAYER_LEFT), i = 0; i < MAX_MON_MOVES; ++i)
         {
             move = gBattleMons[gActiveBattler].moves[i];
@@ -79,10 +81,32 @@ static bool8 ShouldSwitchIfWonderGuard(void)
     return FALSE; // There is not a single Pokemon in the party that has a super effective move against a mon with Wonder Guard.
 }
 
+static bool8 AbilityAbsorbsType(u8 ability, u8 type)
+{
+	switch (ability)
+	{
+		case ABILITY_VOLT_ABSORB:
+		case ABILITY_MOTOR_DRIVE:
+		case ABILITY_LIGHTNING_ROD:
+			return type == TYPE_ELECTRIC;
+		case ABILITY_WATER_ABSORB:
+		case ABILITY_STORM_DRAIN:
+			return type == TYPE_WATER;
+		case ABILITY_FLASH_FIRE:
+			return type == TYPE_FIRE;
+		case ABILITY_SAP_SIPPER:
+			return type == TYPE_NATURE;
+		case ABILITY_SPIRIT_GUIDE:
+			return type == TYPE_GHOST;
+	}
+	return FALSE;
+}
+
 static bool8 FindMonThatAbsorbsOpponentsMove(void)
 {
     u8 battlerIn1, battlerIn2;
     u8 absorbingTypeAbility;
+	u8 moveType;
     s32 i;
 
     if ((HasSuperEffectiveMoveAgainstOpponents(TRUE) && Random() % 3) 
@@ -104,19 +128,11 @@ static bool8 FindMonThatAbsorbsOpponentsMove(void)
         battlerIn1 = gActiveBattler;
         battlerIn2 = gActiveBattler;
     }
-    if (gBattleMoves[gLastLandedMoves[gActiveBattler]].type == TYPE_FIRE)
-        absorbingTypeAbility = ABILITY_FLASH_FIRE;
-    else if (gBattleMoves[gLastLandedMoves[gActiveBattler]].type == TYPE_WATER)
-        absorbingTypeAbility = ABILITY_WATER_ABSORB;
-    else if (gBattleMoves[gLastLandedMoves[gActiveBattler]].type == TYPE_ELECTRIC)
-        absorbingTypeAbility = ABILITY_VOLT_ABSORB;
-    else
-        return FALSE;
-    if (gBattleMons[gActiveBattler].ability == absorbingTypeAbility)
+	moveType = gBattleMoves[gLastLandedMoves[gActiveBattler]].type;
+    if (AbilityAbsorbsType(gBattleMons[gActiveBattler].ability, moveType))
         return FALSE;
     for (i = 0; i < PARTY_SIZE; ++i)
     {
-        u16 species;
         u8 monAbility;
 
         if ((GetMonData(&gEnemyParty[i], MON_DATA_HP) == 0)
@@ -127,12 +143,8 @@ static bool8 FindMonThatAbsorbsOpponentsMove(void)
          || (i == *(gBattleStruct->monToSwitchIntoId + battlerIn1))
          || (i == *(gBattleStruct->monToSwitchIntoId + battlerIn2)))
             continue;
-        species = GetMonData(&gEnemyParty[i], MON_DATA_SPECIES);
-        if (GetMonData(&gEnemyParty[i], MON_DATA_ABILITY_NUM) != ABILITY_NONE)
-            monAbility = gBaseStats[species].abilities[1];
-        else
-            monAbility = gBaseStats[species].abilities[0];
-        if (absorbingTypeAbility == monAbility && Random() & 1)
+		monAbility = GetMonAbility(&gEnemyParty[i]);
+        if (AbilityAbsorbsType(monAbility, moveType) && Random() & 1)
         {
             // we found a mon
             *(gBattleStruct->AI_monToSwitchIntoId + (GetBattlerPosition(gActiveBattler) >> 1)) = i;

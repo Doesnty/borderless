@@ -566,17 +566,17 @@ const struct Trainer gTrainers[] = {
         .partySize = NELEMS(sParty_RSBirdKeeper),
         .party = {.NoItemDefaultMoves = sParty_RSBirdKeeper}
     },
-    [TRAINER_NINJA_BOY] = {
-        .partyFlags = 0,
+    [TRAINER_NINJA_BOY_SHIRO] = {
+        .partyFlags = F_TRAINER_PARTY_FULL_CONTROL,
         .trainerClass = TRAINER_CLASS_NINJA_BOY,
-        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_SUSPICIOUS,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_COOL,
         .trainerPic = TRAINER_PIC_NINJA_BOY,
-        .trainerName = _(""),
+        .trainerName = _("Shiro"),
         .items = {}, //{},
         .doubleBattle = FALSE,
-        .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE,
-        .partySize = NELEMS(sParty_NinjaBoy),
-        .party = {.NoItemDefaultMoves = sParty_NinjaBoy}
+        .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_CHECK_VIABILITY | AI_SCRIPT_TRY_TO_FAINT,
+        .partySize = NELEMS(sParty_NinjaBoyShiro),
+        .party = {.FullControl = sParty_NinjaBoyShiro}
     },
     [TRAINER_BATTLE_GIRL] = {
         .partyFlags = 0,

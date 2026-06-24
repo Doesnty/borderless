@@ -17,12 +17,14 @@ Added 21 puppets:
  Attack Gengetsu
  Technical Yumeko
  ...and 5 stand-alone, single-stage characters.
-Added 7 more abilities, mostly for the new puppets.
+Added 8 more abilities, mostly for the new puppets.
  Regular Keine gets Quick Chant instead of Guard Armor.
  Regular Komachi gets Spirit Guide instead of Own Tempo.
  Clownpiece gets Chaos Body as a secondary ability.
+ Chimata gets Chromatic instead of Inner Power.
  Elly gets Desperation instead of Merciless.
 Added 2 moves: Pyro Strike and Flash Cannon.
+Added Power Herb.
 
 Fixed the long-standing bug with Effort Gauge playing pre-fight music.
 Cleaned up one of Maribel's overworld sprites.
@@ -33,10 +35,14 @@ Keen Eye now negates the foe's bonuses to Evasion.
 Unaware now properly ignores the modifiers to Accuracy and Evasion.
 Patched an issue that allowed HP to be negative after evolving.
 Fixed bug where Cataclysm's flinch chance was never checked.
+Twin Spark will not trigger on 2-turn moves if the user is not already charging (ex. if Power Herb activated).
+
+Justified now halves damage taken from Dark moves, in addition to its usual effect.
 
 Certain chibis lost access to TM moves not intended for newly added puppets.
 Daiyousei no longer has Helping Hand in her tutor list.
 All Keine forms now get Skull Bash by relearner (replacing redundant Counter/Mirror Coat).
+Aki Sisters now gets Aromatherapy by level instead of Absorb (to match the Shizuha changes).
 JKSanae now learns Muddy Water instead of Aqua Shower, and learns it earlier (and Gale Dance later).
 JKSanae now gets Energy Light by level instead of Giga Drain (both are still TMs).
 Chibi and Normal Sunny can no longer use the Fire Blast TM.
@@ -50,12 +56,20 @@ Re-arranged Takane's level-up pool to have Fissure instead of Mirror Coat; cut F
 Megumu now gets Recalibrate by tutor.
 Rika family now gets Flash Cannon by level instead of Daunt; now gets Daunt by tutor.
 Chiyuri now gets Flash Cannon by tutor.
+Adjusted Chibi Mugetsu's level-up moves; she now gets Charge Beam and Icy Wind instead of Mesmerism and Feint Attack.
 Yuki now get Pyro Strike by tutor.
 Yumeko no longer learns Meteor Mash.
 TrMaribel can now use the Sandstorm TM.
 
 Slight tweak to Lunasa's sprite (thanks Chirei).
 Cut Scary Face from Erika's CYuuka since it just about never accomplishes anything.
+Fixed some edge cases with AI switch logic.
+AI should now avoid using Lock-On consecutively.
+AI logic for Counter/Mirror Coat now checks your move's class instead of its type.
+Removed AI logic that checked your type when considering moves like Reflect, Light Screen, Iron Defense, etc.
+The gym trainers in Vermilion Gym now have actually edited text and give you extremely massive hints.
+Swimmer Nora's dialogue is less suggestive.
+Gave Juggler Gregory a friend.
 
 Some more weird stuff is hiding in the docs, again.
 Don't worry too much about it.

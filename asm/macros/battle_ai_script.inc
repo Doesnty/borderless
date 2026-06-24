@@ -479,8 +479,7 @@
 	.byte \battler
 	.endm
 
-	@ nullsub
-	.macro ai_52
+	.macro get_move_class_from_result
 	.byte 0x52
 	.endm
 

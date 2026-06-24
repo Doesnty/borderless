@@ -3141,7 +3141,7 @@ static const struct TrainerMonFullControl sParty_JugglerGregory[] = {
         .evs = {0, 30, 0, 30, 0, 0},
         .nature = NATURE_ADAMANT,
         .gender = MON_MALE,
-        .ability = 2, // Infiltrator
+        .ability = 0, // Hakurei Miko
         .ball = ITEM_POKE_BALL,
         .moves = {MOVE_HI_JUMP_KICK, MOVE_SOAR, MOVE_STEEL_FIST, MOVE_GALE_DANCE},
     },
@@ -5411,14 +5411,26 @@ static const struct TrainerMonFullControl sParty_CooltrainerRolando[] = {
     {
         .iv = 10,
         .lvl = 61,
-        .species = SPECIES_SKOISHI,
+        .species = SPECIES_AFLANDRE,
         .heldItem = 0,
-        .evs = {0, 30, 0, 30, 0, 0},
-        .nature = NATURE_NAIVE,
+        .evs = {0, 60, 0, 0, 0, 0},
+        .nature = NATURE_ADAMANT,
+        .gender = MON_MALE,
+        .ability = 0, // Hustle
+        .ball = ITEM_POKE_BALL,
+        .moves = {MOVE_GIGA_IMPACT, MOVE_SUPERPOWER, MOVE_FIRE_PUNCH, MOVE_SELF_DESTRUCT},
+    },
+    {
+        .iv = 10,
+        .lvl = 61,
+        .species = SPECIES_ORANGE,
+        .heldItem = 0,
+        .evs = {0, 30, 30, 0, 0, 0},
+        .nature = NATURE_ADAMANT,
         .gender = MON_MALE,
         .ability = 1, // Unaware
         .ball = ITEM_POKE_BALL,
-        .moves = {MOVE_DANMAKU, MOVE_AURA_SPHERE, MOVE_SHADOW_BALL, MOVE_SELF_DESTRUCT},
+        .moves = {MOVE_HI_JUMP_KICK, MOVE_ICE_PUNCH, MOVE_TOXIC, MOVE_REST},
     },
     {
         .iv = 10,
@@ -5431,18 +5443,6 @@ static const struct TrainerMonFullControl sParty_CooltrainerRolando[] = {
         .ability = 0, // Inner Power
         .ball = ITEM_POKE_BALL,
         .moves = {MOVE_GIGA_DRAIN, MOVE_SONICBOOM, MOVE_MANA_BURST, MOVE_SAND_TOMB},
-    },
-    {
-        .iv = 10,
-        .lvl = 61,
-        .species = SPECIES_AFLANDRE,
-        .heldItem = 0,
-        .evs = {0, 60, 0, 0, 0, 0},
-        .nature = NATURE_ADAMANT,
-        .gender = MON_MALE,
-        .ability = 0, // Hustle
-        .ball = ITEM_POKE_BALL,
-        .moves = {MOVE_GIGA_IMPACT, MOVE_SUPERPOWER, MOVE_FIRE_PUNCH, MOVE_SELF_DESTRUCT},
     },
     {
         .iv = 10,
@@ -5467,6 +5467,69 @@ static const struct TrainerMonFullControl sParty_CooltrainerRolando[] = {
         .ability = 2, // Swordmaster
         .ball = ITEM_POKE_BALL,
         .moves = {MOVE_PETAL_STORM, MOVE_EXTREME_SPEED, MOVE_SWORDS_DANCE, MOVE_BLADE_FLASH},
+    },
+};
+
+static const struct TrainerMonFullControl sParty_NinjaBoyShiro[] = {
+    {
+        .iv = 10,
+        .lvl = 62,
+        .species = SPECIES_TTAKANE,
+        .heldItem = 0,
+        .evs = {0, 0, 0, 30, 30, 0},
+        .nature = NATURE_TIMID,
+        .gender = MON_MALE,
+        .ability = 2, // Electrician
+        .ball = ITEM_POKE_BALL,
+        .moves = {MOVE_ENERGY_LIGHT, MOVE_FLASH_CANNON, MOVE_VOLT_SWITCH, MOVE_FLAMETHROWER},
+    },
+    {
+        .iv = 10,
+        .lvl = 62,
+        .species = SPECIES_SKOISHI,
+        .heldItem = 0,
+        .evs = {0, 30, 0, 30, 0, 0},
+        .nature = NATURE_NAIVE,
+        .gender = MON_MALE,
+        .ability = 1, // Unaware
+        .ball = ITEM_POKE_BALL,
+        .moves = {MOVE_DANMAKU, MOVE_AURA_SPHERE, MOVE_SHADOW_BALL, MOVE_SELF_DESTRUCT},
+    },
+    {
+        .iv = 10,
+        .lvl = 62,
+        .species = SPECIES_DSATORI,
+        .heldItem = 0,
+        .evs = {60, 0, 0, 0, 0, 0},
+        .nature = NATURE_BOLD,
+        .gender = MON_MALE,
+        .ability = 0, // Shadow Tag
+        .ball = ITEM_POKE_BALL,
+        .moves = {MOVE_COUNTER, MOVE_MIRROR_COAT, MOVE_DESTINY_BOND, 0},
+    },
+    {
+        .iv = 10,
+        .lvl = 63,
+        .species = SPECIES_DMAMIZOU,
+        .heldItem = 0,
+        .evs = {30, 0, 0, 30, 0, 0},
+        .nature = NATURE_JOLLY,
+        .gender = MON_MALE,
+        .ability = 0, // Protean
+        .ball = ITEM_POKE_BALL,
+        .moves = {MOVE_FOUL_PLAY, MOVE_TAKE_OVER, MOVE_EXPLOSION, MOVE_SURF},
+    },
+    {
+        .iv = 10,
+        .lvl = 63,
+        .species = SPECIES_NINA,
+        .heldItem = 0,
+        .evs = {30, 0, 0, 0, 0, 30},
+        .nature = NATURE_CALM,
+        .gender = MON_MALE,
+        .ability = 2, // Contrary
+        .ball = ITEM_POKE_BALL,
+        .moves = {MOVE_SHELL_SMASH, MOVE_RECOVER, MOVE_TOXIC, MOVE_WHIRLPOOL},
     },
 };
 
@@ -6382,7 +6445,7 @@ static const struct TrainerMonFullControl sParty_LeaderLtSurge[] = {
         .evs = {30, 0, 30, 0, 30, 30},
         .nature = NATURE_MODEST,
         .gender = MON_MALE,
-        .ability = 1, // Inner Power
+        .ability = 0, // Pickup
         .ball = ITEM_POKE_BALL,
         .moves = {MOVE_VOLT_SWITCH, MOVE_CHARGE_BEAM, MOVE_RAZOR_WIND, MOVE_THUNDER_WAVE},
     },

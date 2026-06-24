@@ -65,6 +65,17 @@ VictoryRoad_3F_Text_ColbyPostBattle:: @ 8174CBD
     .string "the Puppetry League.\p"
     .string "Don't let down your guard.$"
 
+VictoryRoad_3F_Text_ShiroIntro::
+    .string "Haha! It was worth it sitting\n"
+	.string "buried there for hours!$"
+
+VictoryRoad_3F_Text_ShiroDefeat::
+    .string "That's ridiculous!$"
+
+VictoryRoad_3F_Text_ShiroPostBattle::
+    .string "You're not out yet.\n"
+    .string "Don't get careless!$"
+
 VictoryRoad_3F_Text_RayIntro:: @ 8174D0C
     .string "RAY: Together, the two of us are\n"
     .string "destined for greatness!$"

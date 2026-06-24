@@ -51,7 +51,9 @@ VermilionCity_Gym_Text_TuckerDefeat:: @ 8194EA5
 VermilionCity_Gym_Text_TuckerPostBattle:: @ 8194EBD
     .string "It's not easy opening that door.\p"
     .string "Lt. Surge was always famous for\n"
-    .string "his cautious nature in the Army.$"
+    .string "his cautious nature in the Army.\p"
+	.string "Maybe it'll be easier to solve if\n"
+	.string "you try stepping on every tile?$"
 
 VermilionCity_Gym_Text_BailyIntro:: @ 8194F1F
     .string "I'm a lightweight, but I'm good\n"
@@ -63,8 +65,12 @@ VermilionCity_Gym_Text_BailyDefeat:: @ 8194F6F
 
 VermilionCity_Gym_Text_BailyPostBattle:: @ 8194F76
     .string "Okay, I'll talk!\p"
-    .string "Lt. Surge said he hid door\n"
-    .string "switches inside something.$"
+    .string "Lt. Surge said you can solve this\n"
+    .string "room's puzzle in 6 steps.\p"
+	.string "If the floor's a mess, you can reset\n"
+	.string "it by leaving the gym.\p"
+	.string "We'll open up any locked doors you've\n"
+	.string "already solved, don't worry.$"
 
 VermilionCity_Gym_Text_DwayneIntro:: @ 8194FBD
     .string "This is no place for kids!\n"
@@ -77,10 +83,14 @@ VermilionCity_Gym_Text_DwayneDefeat:: @ 8194FF1
 VermilionCity_Gym_Text_DwaynePostBattle:: @ 8195004
     .string "Lt. Surge installed the traps in\n"
     .string "the Gym himself.\p"
-    .string "He set up double locks everywhere.\n"
+    .string "He set up locks everywhere.\n"
     .string "Let me give you a hint.\p"
-    .string "When you open the first lock, the\n"
-    .string "second lock is right next to it.$"
+    .string "The doors all open when none of the\n"
+    .string "panels in the room are red.\p"
+	.string "Stepping on a panel toggles the\n"
+	.string "state of adjacent tiles.\p"
+	.string "I think for the first room,\n"
+	.string "the corner tiles are important?$"
 
 VermilionCity_Gym_Text_GymGuyAdvice:: @ 81950B4
     .string "Yo!\n"

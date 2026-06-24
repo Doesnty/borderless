@@ -6017,6 +6017,7 @@ static const u16 sWayouseiEggMoveLearnset[] = {
     MOVE_ICE_BALL,
     MOVE_WEATHER_BALL,
     MOVE_BARRAGE,
+	MOVE_MANA_CHARGE,
     0
 };
 
