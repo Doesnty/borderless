@@ -6078,7 +6078,7 @@ static const u16 sArisuEggMoveLearnset[] = {
 };
 
 static const u16 sCYukiEggMoveLearnset[] = {
-    MOVE_ERUPTION,
+    MOVE_SACRED_FIRE,
     MOVE_SHADOW_PUNCH,
     MOVE_BELLY_DRUM,
     MOVE_FAKE_TEARS,
@@ -6089,7 +6089,7 @@ static const u16 sCYukiEggMoveLearnset[] = {
 };
 
 static const u16 sYukiEggMoveLearnset[] = {
-    MOVE_ERUPTION,
+    MOVE_SACRED_FIRE,
     MOVE_SHADOW_PUNCH,
     MOVE_BELLY_DRUM,
     MOVE_FAKE_TEARS,
@@ -6103,9 +6103,9 @@ static const u16 sCMaiEggMoveLearnset[] = {
     MOVE_FAKE_OUT,
     MOVE_SPITE,
     MOVE_SWEET_KISS,
-    MOVE_LOVELY_KISS,
     MOVE_OMINOUS_WIND,
     MOVE_CURSE,
+    MOVE_NIGHT_SHADE,
     0
 };
 
@@ -6113,9 +6113,9 @@ static const u16 sMaiEggMoveLearnset[] = {
     MOVE_FAKE_OUT,
     MOVE_SPITE,
     MOVE_SWEET_KISS,
-    MOVE_LOVELY_KISS,
     MOVE_OMINOUS_WIND,
     MOVE_CURSE,
+    MOVE_NIGHT_SHADE,
     0
 };
 

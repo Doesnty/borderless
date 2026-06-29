@@ -1,4 +1,4 @@
-v Next
+v1.4.0
 Added 21 puppets:
  Defense Clownpiece
  Attack Eternity
@@ -42,6 +42,7 @@ Justified now halves damage taken from Dark moves, in addition to its usual effe
 Certain chibis lost access to TM moves not intended for newly added puppets.
 Daiyousei no longer has Helping Hand in her tutor list.
 All Keine forms now get Skull Bash by relearner (replacing redundant Counter/Mirror Coat).
+Adjusted Aya's movepool; Chibi Aya now has Heat Wave (as she was meant to all along), no longer learns Gust.
 Aki Sisters now gets Aromatherapy by level instead of Absorb (to match the Shizuha changes).
 JKSanae now learns Muddy Water instead of Aqua Shower, and learns it earlier (and Gale Dance later).
 JKSanae now gets Energy Light by level instead of Giga Drain (both are still TMs).
@@ -53,10 +54,11 @@ Aunn now gets Seismic Toss by relearner instead of Calm Mind, and loses it as a 
 Aunn now gets Thunder Fang and Fire Fang by tutor.
 Saki now learns Jump Kick by level and Roost by relearner.
 Re-arranged Takane's level-up pool to have Fissure instead of Mirror Coat; cut Fissure tutor.
-Megumu now gets Recalibrate by tutor.
+Adjusted Megumu's movepool; now gets Recalibrate by tutor and Mirror Shot by level, no longer learns Gust.
 Rika family now gets Flash Cannon by level instead of Daunt; now gets Daunt by tutor.
 Chiyuri now gets Flash Cannon by tutor.
 Adjusted Chibi Mugetsu's level-up moves; she now gets Charge Beam and Icy Wind instead of Mesmerism and Feint Attack.
+Shifted some moves around between Yuki and Mai's level-up and tutor movepools.
 Yuki now get Pyro Strike by tutor.
 Yumeko no longer learns Meteor Mash.
 TrMaribel can now use the Sandstorm TM.
@@ -70,6 +72,7 @@ Removed AI logic that checked your type when considering moves like Reflect, Lig
 The gym trainers in Vermilion Gym now have actually edited text and give you extremely massive hints.
 Swimmer Nora's dialogue is less suggestive.
 Gave Juggler Gregory a friend.
+The rival no longer lives in Indigo Plateau's lobby in postgame.
 
 Some more weird stuff is hiding in the docs, again.
 Don't worry too much about it.

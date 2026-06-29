@@ -184,7 +184,7 @@
 // Unused?
 #define FLAG_HIDE_FUCHSIA_CITY_GYM_GUARD                   0x0AF
 #define FLAG_ENTERED_ROUTE_13                              0x0B0
-#define FLAG_0x0B1               0x0B1
+#define FLAG_HIDE_INDIGO_PLATEAU_RIVAL                     0x0B1
 #define FLAG_0x0B2               0x0B2
 #define FLAG_0x0B3               0x0B3
 #define FLAG_0x0B4               0x0B4
