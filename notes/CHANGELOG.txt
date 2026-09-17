@@ -1,4 +1,38 @@
+v1.4.1
+New move: Baffle Powder, an inaccurate powder move that inflicts confusion.
+ - It replaces Confuse Ray for Eirin and Sannyo, and can be tutored by Kotohime.
+ - It replaces Psycho Shift for Eternity, which is now a tutor move for her.
+
+Eirin family now gets Psyshot by level instead of Psych Up.
+Hatate family's movepool adjusted; whole line now learns Recalibrate and Manashock.
+TMegumu can now learn Brick Break.
+DAriya now relearns Fire Punch instead of Endure.
+Orange can now learn Earthquake by TM.
+TYumeko can now learn Focus Blast by TM.
+Tori can now tutor Double Team.
+
+Corrected several movepool mistakes:
+AdMeiling now relearns Agility instead of (redundant) Endure.
+DWriggle can now TM Focus Punch.
+AdReisen can now TM Focus Blast (how did this go unnoticed!!)
+Sagume can now relearn Roost instead of Mist; Mist has moved to tutor moves.
+Yuuma can now TM Dark Pulse.
+Magic Stones now learns Manashock naturally and can tutor Luster Purge.
+Tenma can now learn Heat Wave via tutor.
+
+Text fixes for Justified and Motor Drive.
+Several status moves now check for absorption abilities before other fail conditions.
+AI now has rudimentary logic for using Trick Room.
+Adjusted Take Over animation.
+
+Added Ace Trainer Shannon and Ace Trainer Paul to the maingame.
+ - I feel there is a lack of interesting difficult fights in the game. This is a step towards fixing that.
+ - These two are both mandatory and similar in strength to Ace Trainer Mary (for when they appear).
+ - They are located in stretches with many easily-missed trainers, so they shouldn't disrupt the level curve too much.
+
 v1.4.0
+Saves from previous versions are not compatible!
+
 Added 21 puppets:
  Defense Clownpiece
  Attack Eternity
@@ -73,9 +107,6 @@ The gym trainers in Vermilion Gym now have actually edited text and give you ext
 Swimmer Nora's dialogue is less suggestive.
 Gave Juggler Gregory a friend.
 The rival no longer lives in Indigo Plateau's lobby in postgame.
-
-Some more weird stuff is hiding in the docs, again.
-Don't worry too much about it.
 
 
 v1.3.2

@@ -483,8 +483,7 @@
 	.byte 0x52
 	.endm
 
-	@ nullsub
-	.macro ai_53
+	.macro get_trick_room_duration
 	.byte 0x53
 	.endm
 

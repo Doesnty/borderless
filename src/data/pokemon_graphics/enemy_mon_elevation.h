@@ -116,7 +116,7 @@ const u8 gEnemyMonElevation[NUM_SPECIES] =
     [SPECIES_CNUE] = 7,
     [SPECIES_NUE] = 9,
 	
-	[SPECIES_COKINA] = 0,
+	[SPECIES_COKINA] = 1,
     
     [SPECIES_PARSEE] = 4,
     [SPECIES_DPARSEE] = 4,

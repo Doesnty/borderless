@@ -4350,6 +4350,7 @@ static const u16 sCSagumeEggMoveLearnset[] = {
     MOVE_CLEAR_SMOG,
     MOVE_COTTON_SPORE,
     MOVE_FORESIGHT,
+    MOVE_MIST,
     0
 };
 
@@ -4361,6 +4362,7 @@ static const u16 sSagumeEggMoveLearnset[] = {
     MOVE_CLEAR_SMOG,
     MOVE_COTTON_SPORE,
     MOVE_FORESIGHT,
+    MOVE_MIST,
     0
 };
 
@@ -4479,6 +4481,7 @@ static const u16 sCEternityEggMoveLearnset[] = {
     MOVE_WORK_UP,
     MOVE_COTTON_SPORE,
     MOVE_MUD_SLAP,
+    MOVE_BAFFLE_POWDER,
     0
 };
 
@@ -4490,6 +4493,7 @@ static const u16 sEternityEggMoveLearnset[] = {
     MOVE_WORK_UP,
     MOVE_COTTON_SPORE,
     MOVE_MUD_SLAP,
+    MOVE_BAFFLE_POWDER,
     0
 };
 
@@ -4501,6 +4505,7 @@ static const u16 sAEternityEggMoveLearnset[] = {
     MOVE_WORK_UP,
     MOVE_COTTON_SPORE,
     MOVE_MUD_SLAP,
+    MOVE_BAFFLE_POWDER,
     0
 };
 
@@ -5623,7 +5628,7 @@ static const u16 sCRikaEggMoveLearnset[] = {
     MOVE_BOLT_STRIKE,
     MOVE_RECYCLE,
     MOVE_SCREECH,
-	MOVE_DAUNT,
+    MOVE_DAUNT,
     0
 };
 
@@ -5634,7 +5639,7 @@ static const u16 sRikaEggMoveLearnset[] = {
     MOVE_BOLT_STRIKE,
     MOVE_RECYCLE,
     MOVE_SCREECH,
-	MOVE_DAUNT,
+    MOVE_DAUNT,
     0
 };
 
@@ -5645,7 +5650,7 @@ static const u16 sTRikaEggMoveLearnset[] = {
     MOVE_BOLT_STRIKE,
     MOVE_RECYCLE,
     MOVE_SCREECH,
-	MOVE_DAUNT,
+    MOVE_DAUNT,
     0
 };
 
@@ -5686,6 +5691,7 @@ static const u16 sMagicStonesEggMoveLearnset[] = {
     MOVE_SKILL_SWAP,
     MOVE_ROCK_SLIDE,
     MOVE_ROCK_WRECKER,
+    MOVE_LUSTER_PURGE,
     0
 };
 
@@ -5723,6 +5729,7 @@ static const u16 sCKotohimeEggMoveLearnset[] = {
     MOVE_MANA_SHIELD,
     MOVE_SCALD,
     MOVE_PUNISHMENT,
+    MOVE_BAFFLE_POWDER,
     0
 };
 
@@ -5734,6 +5741,7 @@ static const u16 sKotohimeEggMoveLearnset[] = {
     MOVE_MANA_SHIELD,
     MOVE_SCALD,
     MOVE_PUNISHMENT,
+    MOVE_BAFFLE_POWDER,
     0
 };
 
@@ -5799,7 +5807,6 @@ static const u16 sCChiyuriEggMoveLearnset[] = {
     MOVE_SWIFT,
     MOVE_SCALD,
     MOVE_LOCK_ON,
-	MOVE_FLASH_CANNON,
     0
 };
 
@@ -5814,7 +5821,6 @@ static const u16 sChiyuriEggMoveLearnset[] = {
     MOVE_SWIFT,
     MOVE_SCALD,
     MOVE_LOCK_ON,
-	MOVE_FLASH_CANNON,
     0
 };
 
@@ -6017,7 +6023,7 @@ static const u16 sWayouseiEggMoveLearnset[] = {
     MOVE_ICE_BALL,
     MOVE_WEATHER_BALL,
     MOVE_BARRAGE,
-	MOVE_MANA_CHARGE,
+    MOVE_MANA_CHARGE,
     0
 };
 
@@ -6084,7 +6090,7 @@ static const u16 sCYukiEggMoveLearnset[] = {
     MOVE_FAKE_TEARS,
     MOVE_REVERSAL,
     MOVE_SCALD,
-	MOVE_PYRO_STRIKE,
+    MOVE_PYRO_STRIKE,
     0
 };
 
@@ -6095,7 +6101,7 @@ static const u16 sYukiEggMoveLearnset[] = {
     MOVE_FAKE_TEARS,
     MOVE_REVERSAL,
     MOVE_SCALD,
-	MOVE_PYRO_STRIKE,
+    MOVE_PYRO_STRIKE,
     0
 };
 
@@ -6227,6 +6233,7 @@ static const u16 sCTenmaEggMoveLearnset[] = {
     MOVE_NIGHT_SLASH,
     MOVE_MUD_SHOT,
     MOVE_PUNISHMENT,
+    MOVE_HEAT_WAVE,
     0
 };
 
@@ -6239,6 +6246,7 @@ static const u16 sTenmaEggMoveLearnset[] = {
     MOVE_NIGHT_SLASH,
     MOVE_MUD_SHOT,
     MOVE_PUNISHMENT,
+    MOVE_HEAT_WAVE,
     0
 };
 
@@ -6292,6 +6300,7 @@ static const u16 sYoukiEggMoveLearnset[] = {
 
 static const u16 sToriEggMoveLearnset[] = {
     MOVE_SHRIEK,
+    MOVE_DOUBLE_TEAM,
     0
 };
 

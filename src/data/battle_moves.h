@@ -6159,4 +6159,18 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .target = MOVE_TARGET_SELECTED,
         .flags = FLAG_PROTECT_AFFECTED,
     },
+
+    [MOVE_BAFFLE_POWDER] = 
+    {
+        .effect = EFFECT_CONFUSE,
+        .power = 0,
+        .type = TYPE_NATURE,
+        .moveClass = CLASS_STATUS,
+        .accuracy = 75,
+        .pp = 30,
+        .secondaryEffectChance = 0,
+        .priority = 0,
+        .target = MOVE_TARGET_SELECTED,
+        .flags = FLAG_PROTECT_AFFECTED | FLAG_MAGICCOAT_AFFECTED,
+    },
 };

@@ -487,6 +487,7 @@ gBattleAnims_Moves::
 	.4byte Move_LOCK_ON
 	.4byte Move_PYRO_STRIKE
 	.4byte Move_FLASH_CANNON
+	.4byte Move_BAFFLE_POWDER
 	.4byte Move_COUNT
 
 gBattleAnims_StatusConditions::
@@ -14628,7 +14629,7 @@ Move_TAKE_OVER::
 	waitbgfadein
 	
 	playsewithpan SE_M_PSYBEAM, 192
-	createsprite gTakeOverSpriteTemplate, ANIM_ATTACKER, 2, 40, 10, -40, -10, 32, 0
+	createsprite gTakeOverSpriteTemplate, ANIM_ATTACKER, 2, 4, 30, -4, -30, 32, 0
 	waitforvisualfinish
 	
 	loopsewithpan SE_M_SUPERSONIC, 63, 10, 3
@@ -15253,4 +15254,33 @@ Move_FLASH_CANNON::
 	
 	waitforvisualfinish
 	createsprite gSimplePaletteBlendSpriteTemplate, ANIM_ATTACKER, 2, 1, 1, 15, 0, RGB_WHITE
+	end
+
+Move_BAFFLE_POWDER::
+	loadspritegfx ANIM_TAG_SLEEP_POWDER
+	setalpha 12, 8
+	delay 1
+	loopsewithpan SE_M_POISON_POWDER, 63, 10, 6
+	createvisualtask AnimTask_CycleSleepPowderPal, 5
+	createsprite gSleepPowderParticleSpriteTemplate, ANIM_TARGET, 2, -30, -22, 117, 80, 5, 1
+	createsprite gSleepPowderParticleSpriteTemplate, ANIM_TARGET, 2, 10, -22, 117, 80, -5, 1
+	createsprite gSleepPowderParticleSpriteTemplate, ANIM_TARGET, 2, -25, -22, 117, 112, 5, 3
+	delay 15
+	createsprite gSleepPowderParticleSpriteTemplate, ANIM_TARGET, 2, -5, -22, 117, 80, -5, 1
+	createsprite gSleepPowderParticleSpriteTemplate, ANIM_TARGET, 2, 5, -22, 117, 96, 5, 1
+	createsprite gSleepPowderParticleSpriteTemplate, ANIM_TARGET, 2, 0, -22, 117, 69, -5, 1
+	createsprite gSleepPowderParticleSpriteTemplate, ANIM_TARGET, 2, -15, -22, 117, 112, 5, 2
+	delay 30
+	createsprite gSleepPowderParticleSpriteTemplate, ANIM_TARGET, 2, -15, -22, 117, 112, 5, 2
+	createsprite gSleepPowderParticleSpriteTemplate, ANIM_TARGET, 2, 15, -22, 117, 80, -5, 1
+	createsprite gSleepPowderParticleSpriteTemplate, ANIM_TARGET, 2, -10, -22, 117, 96, 7, 2
+	createsprite gSleepPowderParticleSpriteTemplate, ANIM_TARGET, 2, -5, -22, 117, 90, -8, 0
+	delay 20
+	createsprite gSleepPowderParticleSpriteTemplate, ANIM_TARGET, 2, -10, -22, 117, 80, -5, 1
+	createsprite gSleepPowderParticleSpriteTemplate, ANIM_TARGET, 2, 0, -22, 117, 89, 5, 2
+	createsprite gSleepPowderParticleSpriteTemplate, ANIM_TARGET, 2, 20, -22, 117, 112, -8, 2
+	createsprite gSleepPowderParticleSpriteTemplate, ANIM_TARGET, 2, 5, -22, 117, 80, 5, 1
+	delay 120
+	setarg 7, 65535
+	waitforvisualfinish
 	end

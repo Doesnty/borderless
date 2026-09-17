@@ -30,6 +30,22 @@ Route18_Text_JacobPostBattle:: @ 818772C
     .string "This is my fave area for catching\n"
     .string "Puppets.$"
 
+Route18_Text_ShannonIntro::
+    .string "Whoa, whoa!\n"
+	.string "What's the rush?$"
+
+Route18_Text_ShannonDefeat::
+    .string "Couldn't keep up...$"
+
+Route18_Text_ShannonPostBattle::
+    .string "Some people seem like they're\n"
+	.string "just racing through life.\p"
+	.string "You should take it easy!$"
+
+Route18_Text_ShannonRematchIntro::
+    .string "Whoa, whoa!\n"
+	.string "So impatient!$"
+
 Route18_Text_RouteSign:: @ 8187757
     .string "ROUTE 18\n"
     .string "CELADON CITY - FUCHSIA CITY$"

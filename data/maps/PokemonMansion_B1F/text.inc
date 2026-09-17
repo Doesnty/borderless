@@ -20,6 +20,18 @@ PokemonMansion_B1F_Text_IvanPostBattle:: @ 817776A
     .string "I like it here.\n"
     .string "It's conducive to my studies.$"
 
+PokemonMansion_B1F_Text_PaulIntro::
+    .string "Looking for something?$"
+
+PokemonMansion_B1F_Text_PaulDefeat::
+    .string "I got outmaneuvered?$"
+
+PokemonMansion_B1F_Text_PaulPostBattle::
+    .string "Yeah, I dunno why, but Blaine hides\n"
+    .string "Secret Keys down here.\p"
+	.string "Couldn't he at least clean the\n"
+	.string "place up while he's at it?$"
+
 PokemonMansion_B1F_Text_MewtwoIsFarTooPowerful:: @ 8177798
     .string "Diary: Sept. 1\n"
     .string "Mewtwo is far too powerful.\p"

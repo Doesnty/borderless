@@ -2201,7 +2201,7 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u8 ability, u8 special, u16 moveA
                 switch (gLastUsedAbility)
                 {
                 case ABILITY_VOLT_ABSORB:
-                    if (moveType == TYPE_ELECTRIC && gBattleMons[battler].hp > 0)
+                    if (moveType == TYPE_ELECTRIC && gBattlerAttacker != gBattlerTarget && gBattleMons[battler].hp > 0)
                     {
                         if (gProtectStructs[gBattlerAttacker].notFirstStrike)
                             gBattlescriptCurrInstr = BattleScript_MoveHPDrain;
@@ -2293,7 +2293,7 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u8 ability, u8 special, u16 moveA
                     }
                     break;
                 case ABILITY_LIGHTNING_ROD:
-                    if (moveType == TYPE_ELECTRIC && gBattleMons[battler].hp > 0)
+                    if (moveType == TYPE_ELECTRIC && gBattlerAttacker != gBattlerTarget && gBattleMons[battler].hp > 0)
                     {
                         gBattleScripting.battler = gBattlerTarget;
                         if (gBattleMons[gBattlerTarget].statStages[STAT_SPATK] == 12 || gBattleMons[gBattlerAttacker].ability == ABILITY_STASIS_GAZE)
@@ -2317,7 +2317,7 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u8 ability, u8 special, u16 moveA
                     }
                     break;
                 case ABILITY_MOTOR_DRIVE:
-                    if (moveType == TYPE_ELECTRIC && gBattleMons[battler].hp > 0)
+                    if (moveType == TYPE_ELECTRIC && gBattlerAttacker != gBattlerTarget && gBattleMons[battler].hp > 0)
                     {
                         gBattleScripting.battler = gBattlerTarget;
                         if (gBattleMons[gBattlerTarget].statStages[STAT_SPEED] == 12 || gBattleMons[gBattlerAttacker].ability == ABILITY_STASIS_GAZE)
@@ -2341,7 +2341,7 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u8 ability, u8 special, u16 moveA
                     }
                     break;
                 case ABILITY_SAP_SIPPER:
-                    if (moveType == TYPE_NATURE && gBattleMons[battler].hp > 0)
+                    if (moveType == TYPE_NATURE && gBattlerAttacker != gBattlerTarget && gBattleMons[battler].hp > 0)
                     {
                         gBattleScripting.battler = gBattlerTarget;
                         if (gBattleMons[gBattlerTarget].statStages[STAT_ATK] == 12 || gBattleMons[gBattlerAttacker].ability == ABILITY_STASIS_GAZE)
@@ -2882,6 +2882,7 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u8 ability, u8 special, u16 moveA
 						
 						BattleScriptPushCursor();
 						gBattlescriptCurrInstr = BattleScript_Justified;
+                        gBattleScripting.battler = gBattlerTarget;
 						++effect;
 					}
 				}
@@ -2908,6 +2909,7 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u8 ability, u8 special, u16 moveA
 						
 						BattleScriptPushCursor();
 						gBattlescriptCurrInstr = BattleScript_Berserk;
+                        gBattleScripting.battler = gBattlerTarget;
 						++effect;
 					}
 				}
@@ -2925,6 +2927,7 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u8 ability, u8 special, u16 moveA
 					
 					BattleScriptPushCursor();
 					gBattlescriptCurrInstr = BattleScript_Electrowheel;
+                    gBattleScripting.battler = gBattlerTarget;
 					++effect;
 				 }
 				 break;

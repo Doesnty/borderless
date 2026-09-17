@@ -3757,6 +3757,37 @@ void AnimTask_CycleWaterGunPal(u8 taskId)
         DestroyAnimVisualTask(taskId);
 }
 
+void AnimTask_CycleSleepPowderPal(u8 taskId)
+{
+    struct Task* task = &gTasks[taskId];
+    
+    switch (task->data[0])
+    {
+    case 0:
+        task->data[8] = IndexOfSpritePaletteTag(ANIM_TAG_SLEEP_POWDER) * 16 + 256;
+        task->data[12] = IndexOfSpritePaletteTag(ANIM_TAG_SLEEP_POWDER) * 16 + 256;
+        task->data[0]++;
+        break;
+    case 1:
+        if (++task->data[9] >= 0)
+        {
+            task->data[9] = 0;
+            BlendPalette(task->data[8], 16, task->data[10], sMagicalLeafBlendColors[task->data[11]]);
+            BlendPalette(task->data[12], 16, task->data[10], sMagicalLeafBlendColors[task->data[11]]);
+            if (++task->data[10] == 17)
+            {
+                task->data[10] = 0;
+                if (++task->data[11] == 7)
+                    task->data[11] = 0;
+            }
+        }
+        break;
+    }
+
+    if (gBattleAnimArgs[7] == -1)
+        DestroyAnimVisualTask(taskId);
+}
+
 void AnimNeedleArmSpike(struct Sprite* sprite)
 {
     u8 a;

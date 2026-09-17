@@ -435,8 +435,19 @@ AI_CBM_Mist:: @ 81DA1CC
 AI_CBM_FocusEnergy:: @ 81DA1D7
 	if_status2 AI_USER, STATUS2_FOCUS_ENERGY, Score_Minus10
 	end
+	
+AI_CBM_BafflePowder::
+	get_target_type1
+	if_equal TYPE_NATURE, Score_Minus10
+	get_target_type2
+	if_equal TYPE_NATURE, Score_Minus10
+	get_ability AI_TARGET
+	if_equal ABILITY_WIDE_HAT, Score_Minus10
+	goto AI_CBM_ConfuseRejoin
 
 AI_CBM_Confuse:: @ 81DA1E2
+	if_move MOVE_BAFFLE_POWDER, AI_CBM_BafflePowder
+AI_CBM_ConfuseRejoin::
 	if_status2 AI_TARGET, STATUS2_SUBSTITUTE, Score_Minus10
 	if_status2 AI_TARGET, STATUS2_CONFUSION, Score_Minus5
 	get_ability AI_TARGET
@@ -892,6 +903,7 @@ AI_CheckViability:: @ 81DA445
 	if_effect EFFECT_CALM_MIND, AI_CV_SpDefUp
 	if_effect EFFECT_DRAGON_DANCE, AI_CV_DragonDance
 	if_effect EFFECT_MISHAGUJI, AI_CV_Mishaguji
+	if_effect EFFECT_TRICK_ROOM, AI_CV_TrickRoom
 	end
 
 AI_CV_Sleep:: @ 81DA71C
@@ -2737,6 +2749,19 @@ AI_CV_Mishaguji::
 AI_CV_MishagujiScoreDown::
 	score -1
 AI_CV_MishagujiEnd::
+	end
+
+AI_CV_TrickRoom::
+	get_trick_room_duration
+	if_equal 1, Score_Minus10
+	if_equal 0, AI_CV_TrickRoomNotUp
+	if_user_faster Score_Minus10
+	if_random_less_than 50, Score_Plus1
+	end
+
+AI_CV_TrickRoomNotUp:: @ trick room is not up
+	if_user_faster Score_Minus10
+	if_random_less_than 200, Score_Plus1
 	end
 
 AI_TryToFaint:: @ 81DBA6F

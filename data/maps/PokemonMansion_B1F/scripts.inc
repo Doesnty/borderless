@@ -29,3 +29,9 @@ PokemonMansion_B1F_EventScript_Ivan:: @ 8162340
 	trainerbattle_single TRAINER_SCIENTIST_IVAN, PokemonMansion_B1F_Text_IvanIntro, PokemonMansion_B1F_Text_IvanDefeat
 	msgbox PokemonMansion_B1F_Text_IvanPostBattle, MSGBOX_AUTOCLOSE
 	end
+
+PokemonMansion_B1F_EventScript_Paul::
+	trainerbattle_single TRAINER_COOLTRAINER_PAUL, PokemonMansion_B1F_Text_PaulIntro, PokemonMansion_B1F_Text_PaulDefeat
+	msgbox PokemonMansion_B1F_Text_PaulPostBattle, MSGBOX_AUTOCLOSE
+	end
+

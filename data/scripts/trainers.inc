@@ -1714,6 +1714,19 @@ Route18_EventScript_JacobRematch:: @ 81AB3FA
 	msgbox Route18_Text_JacobPostBattle, MSGBOX_AUTOCLOSE
 	end
 
+Route18_EventScript_Shannon::
+	trainerbattle_single TRAINER_COOLTRAINER_SHANNON, Route18_Text_ShannonIntro, Route18_Text_ShannonDefeat
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	compare VAR_RESULT, TRUE
+	goto_if_eq Route18_EventScript_ShannonRematch
+	msgbox Route18_Text_ShannonPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+Route18_EventScript_ShannonRematch:: @ 81AB3FA
+	trainerbattle_rematch TRAINER_COOLTRAINER_SHANNON, Route18_Text_ShannonRematchIntro, Route18_Text_ShannonDefeat
+	msgbox Route18_Text_ShannonPostBattle, MSGBOX_AUTOCLOSE
+	end
+
 Route19_EventScript_Richard:: @ 81AB411
 	trainerbattle_single TRAINER_SWIMMER_MALE_RICHARD, Route19_Text_RichardIntro, Route19_Text_RichardDefeat
 	specialvar VAR_RESULT, ShouldTryRematchBattle

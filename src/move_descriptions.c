@@ -77,9 +77,9 @@ const u8 gMoveDescription_LeechSeed[] = _("Absorbs 1/8 of the\nfoe's HP each tur
 const u8 gMoveDescription_Growth[] = _("+1 Attack.\n+1 Sp. Atk.\nIn strong sunlight,\ndouble the effects.");
 const u8 gMoveDescription_RazorLeaf[] = _("High critical rate.");
 const u8 gMoveDescription_SolarBeam[] = _("A 2-turn attack. In\nsunlight, instant.\nIn bad weather,\ndamage is halved.");
-const u8 gMoveDescription_PoisonPowder[] = _("Poison foe.");
-const u8 gMoveDescription_StunSpore[] = _("Paralyze foe.");
-const u8 gMoveDescription_SleepPowder[] = _("Inflicts sleep.");
+const u8 gMoveDescription_PoisonPowder[] = _("Poison foe.\nFails on Nature-\ntype Puppets.");
+const u8 gMoveDescription_StunSpore[] = _("Paralyze foe.\nFails on Nature-\ntype Puppets.");
+const u8 gMoveDescription_SleepPowder[] = _("Inflicts sleep.\nFails on Nature-\ntype Puppets.");
 const u8 gMoveDescription_PetalStorm[] = _("20%: +1 Attack.");
 const u8 gMoveDescription_Mesmerism[] = _("20%: Confuse foe.");
 const u8 gMoveDescription_DarkPulse[] = _("20%: Foe flinches.");
@@ -440,6 +440,7 @@ const u8 gMoveDescription_FallKick[] = _("100%: -1 Attack.");
 const u8 gMoveDescription_Recalibrate[] = _("+1 Sp. Atk.\n+1 Accuracy.");
 const u8 gMoveDescription_PyroStrike[] = _("10%: Burn foe.");
 const u8 gMoveDescription_FlashCannon[] = _("10%: -1 Accuracy.");
+const u8 gMoveDescription_BafflePowder[] = _("Confuses foe.\nFails on Nature-\ntype Puppets.");
 const u8 gMoveDescription_Dummy[] = _("lol");
 
 const u8 *const gMoveDescriptionPointers[MOVES_COUNT - 1] = {
@@ -883,4 +884,5 @@ const u8 *const gMoveDescriptionPointers[MOVES_COUNT - 1] = {
 	[MOVE_RECALIBRATE   - 1] = gMoveDescription_Recalibrate,
 	[MOVE_PYRO_STRIKE   - 1] = gMoveDescription_PyroStrike,
 	[MOVE_FLASH_CANNON  - 1] = gMoveDescription_FlashCannon,
+	[MOVE_BAFFLE_POWDER - 1] = gMoveDescription_BafflePowder,
 };
