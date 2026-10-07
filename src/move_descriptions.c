@@ -441,6 +441,9 @@ const u8 gMoveDescription_Recalibrate[] = _("+1 Sp. Atk.\n+1 Accuracy.");
 const u8 gMoveDescription_PyroStrike[] = _("10%: Burn foe.");
 const u8 gMoveDescription_FlashCannon[] = _("10%: -1 Accuracy.");
 const u8 gMoveDescription_BafflePowder[] = _("Confuses foe.\nFails on Nature-\ntype Puppets.");
+const u8 gMoveDescription_FrenzyPlant[] = _("User cannot move or\nswitch on the next\nturn.");
+const u8 gMoveDescription_BlastBurn[] = _("User cannot move or\nswitch on the next\nturn.");
+const u8 gMoveDescription_HydroCannon[] = _("User cannot move or\nswitch on the next\nturn.");
 const u8 gMoveDescription_Dummy[] = _("lol");
 
 const u8 *const gMoveDescriptionPointers[MOVES_COUNT - 1] = {
@@ -885,4 +888,7 @@ const u8 *const gMoveDescriptionPointers[MOVES_COUNT - 1] = {
 	[MOVE_PYRO_STRIKE   - 1] = gMoveDescription_PyroStrike,
 	[MOVE_FLASH_CANNON  - 1] = gMoveDescription_FlashCannon,
 	[MOVE_BAFFLE_POWDER - 1] = gMoveDescription_BafflePowder,
+	[MOVE_FRENZY_PLANT  - 1] = gMoveDescription_FrenzyPlant,
+	[MOVE_BLAST_BURN    - 1] = gMoveDescription_BlastBurn,
+	[MOVE_HYDRO_CANNON  - 1] = gMoveDescription_HydroCannon,
 };

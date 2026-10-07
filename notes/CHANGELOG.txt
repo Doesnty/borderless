@@ -1,3 +1,13 @@
+v1.4.2
+Re-implemented Frenzy Plant, Blast Burn, and Hydro Cannon.
+ - They function mostly as in Pokemon, as 150/100 recharge moves.
+ - Frenzy Plant is learned by regular Kaguya and all Minoriko forms.
+ - Blast Burn is learned by AKaguya, AFlandre, and SFlandre.
+ - Hydro Cannon is learned by DKaguya and all Nitori forms.
+ - Some other characters can also also tutor these moves.
+
+Certain moves no longer display as 2 power in the relearner interface.
+
 v1.4.1
 New move: Baffle Powder, an inaccurate powder move that inflicts confusion.
  - It replaces Confuse Ray for Eirin and Sannyo, and can be tutored by Kotohime.
@@ -29,6 +39,7 @@ Added Ace Trainer Shannon and Ace Trainer Paul to the maingame.
  - I feel there is a lack of interesting difficult fights in the game. This is a step towards fixing that.
  - These two are both mandatory and similar in strength to Ace Trainer Mary (for when they appear).
  - They are located in stretches with many easily-missed trainers, so they shouldn't disrupt the level curve too much.
+
 
 v1.4.0
 Saves from previous versions are not compatible!

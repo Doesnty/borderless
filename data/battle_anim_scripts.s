@@ -488,6 +488,9 @@ gBattleAnims_Moves::
 	.4byte Move_PYRO_STRIKE
 	.4byte Move_FLASH_CANNON
 	.4byte Move_BAFFLE_POWDER
+	.4byte Move_FRENZY_PLANT
+	.4byte Move_BLAST_BURN
+	.4byte Move_HYDRO_CANNON
 	.4byte Move_COUNT
 
 gBattleAnims_StatusConditions::

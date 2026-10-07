@@ -807,7 +807,7 @@ void BattleLoadSubstituteOrMonSpriteGfx(u8 battlerId, bool8 loadMonSprite)
         if (GetBattlerSide(battlerId) != B_SIDE_PLAYER)
             LZDecompressVram(gSubstituteDollGfx, gMonSpritesGfxPtr->sprites[position]);
         else
-            LZDecompressVram(gSubstituteDollTilemap, gMonSpritesGfxPtr->sprites[position]);
+            LZDecompressVram(gSubstituteDollBackGfx, gMonSpritesGfxPtr->sprites[position]);
         for (i = 1; i < 4; ++i)
         {
             u8 (*ptr)[4][0x800] = gMonSpritesGfxPtr->sprites[position];

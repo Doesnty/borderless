@@ -6221,7 +6221,7 @@ static const struct TrainerMonFullControl sParty_EliteFourLorelei[] = {
         .gender = MON_MALE,
         .ability = 0, // Natural Cure
         .ball = ITEM_POKE_BALL,
-        .moves = {MOVE_DAM_BREACH, MOVE_GIGA_DRAIN, MOVE_RECOVER, MOVE_COUNTER},
+        .moves = {MOVE_HYDRO_CANNON, MOVE_GIGA_DRAIN, MOVE_RECOVER, MOVE_COUNTER},
     },
     {
         .iv = 31,

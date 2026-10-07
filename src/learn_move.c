@@ -851,7 +851,7 @@ static void PrintMoveInfo(u16 move)
     u8 buffer[50];
     BlitMoveInfoIcon(2, gBattleMoves[move].type + 1, 1, 4);
 
-    if (gBattleMoves[move].power < 2)
+    if (gBattleMoves[move].power < 3)
     {
         PrintTextOnWindow(3, gText_ThreeHyphens, 1, 4, 0, 0);
     }

@@ -2832,6 +2832,7 @@ static const u16 sCUtsuhoEggMoveLearnset[] = {
     MOVE_LOCK_ON,
     MOVE_PURSUIT,
     MOVE_CORPSE_BLAZE,
+    MOVE_BLAST_BURN,
     0
 };
 
@@ -2845,6 +2846,7 @@ static const u16 sUtsuhoEggMoveLearnset[] = {
     MOVE_LOCK_ON,
     MOVE_PURSUIT,
     MOVE_CORPSE_BLAZE,
+    MOVE_BLAST_BURN,
     0
 };
 
@@ -2858,6 +2860,7 @@ static const u16 sAUtsuhoEggMoveLearnset[] = {
     MOVE_LOCK_ON,
     MOVE_PURSUIT,
     MOVE_CORPSE_BLAZE,
+    MOVE_BLAST_BURN,
     0
 };
 
@@ -2871,6 +2874,7 @@ static const u16 sSUtsuhoEggMoveLearnset[] = {
     MOVE_LOCK_ON,
     MOVE_PURSUIT,
     MOVE_CORPSE_BLAZE,
+    MOVE_BLAST_BURN,
     0
 };
 
@@ -5254,6 +5258,7 @@ static const u16 sCChimiEggMoveLearnset[] = {
     MOVE_SCARY_FACE,
     MOVE_SUCKER_PUNCH,
     MOVE_FIRE_FANG,
+    MOVE_FRENZY_PLANT,
     0
 };
 
@@ -5267,6 +5272,7 @@ static const u16 sChimiEggMoveLearnset[] = {
     MOVE_SCARY_FACE,
     MOVE_SUCKER_PUNCH,
     MOVE_FIRE_FANG,
+    MOVE_FRENZY_PLANT,
     0
 };
 
@@ -5321,6 +5327,7 @@ static const u16 sCAriyaEggMoveLearnset[] = {
     MOVE_HEX,
     MOVE_HAZE,
     MOVE_REFRESH,
+    MOVE_BLAST_BURN,
     0
 };
 
@@ -5331,6 +5338,7 @@ static const u16 sAriyaEggMoveLearnset[] = {
     MOVE_HEX,
     MOVE_HAZE,
     MOVE_REFRESH,
+    MOVE_BLAST_BURN,
     0
 };
 
@@ -5341,6 +5349,7 @@ static const u16 sDAriyaEggMoveLearnset[] = {
     MOVE_HEX,
     MOVE_HAZE,
     MOVE_REFRESH,
+    MOVE_BLAST_BURN,
     0
 };
 
@@ -5807,6 +5816,7 @@ static const u16 sCChiyuriEggMoveLearnset[] = {
     MOVE_SWIFT,
     MOVE_SCALD,
     MOVE_LOCK_ON,
+    MOVE_HYDRO_CANNON,
     0
 };
 
@@ -5821,6 +5831,7 @@ static const u16 sChiyuriEggMoveLearnset[] = {
     MOVE_SWIFT,
     MOVE_SCALD,
     MOVE_LOCK_ON,
+    MOVE_HYDRO_CANNON,
     0
 };
 
